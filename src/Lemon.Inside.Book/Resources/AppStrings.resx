@@ -297,14 +297,8 @@
   <data name="Chapter_Placeholder" xml:space="preserve">
     <value>This chapter is being written. Its pictures, lessons and narration will appear here soon.</value>
   </data>
-  <data name="Light_Intro" xml:space="preserve">
-    <value>A lamp hangs over a box on the floor. Move the lamp, make it bigger or smaller, and watch the box's shadow: a small lamp gives a sharp edge, a big one a soft, blurred one.</value>
-  </data>
   <data name="Light_DragHint" xml:space="preserve">
     <value>Drag the picture to look round; use the wheel to come closer.</value>
-  </data>
-  <data name="Light_Picture" xml:space="preserve">
-    <value>A square lamp over a floor with a box on it</value>
   </data>
   <data name="Light_Height" xml:space="preserve">
     <value>Lamp height</value>
@@ -318,19 +312,142 @@
   <data name="Light_Metres" xml:space="preserve">
     <value>{0} m</value>
   </data>
-  <data name="Light_Spike_Title" xml:space="preserve">
-    <value>Drawing test</value>
+  <data name="Light_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
   </data>
-  <data name="Light_Spike_Note" xml:space="preserve">
-    <value>For trying out how the picture is drawn: more samples make the soft shadow smoother, a higher resolution makes the picture sharper, and both make it slower.</value>
+  <data name="Light_Deeper" xml:space="preserve">
+    <value>A closer look</value>
   </data>
-  <data name="Light_Samples" xml:space="preserve">
-    <value>Samples on the lamp</value>
+  <data name="Light_Watts" xml:space="preserve">
+    <value>{0} W</value>
   </data>
-  <data name="Light_Resolution" xml:space="preserve">
-    <value>Picture resolution</value>
+  <data name="Light_Degrees" xml:space="preserve">
+    <value>{0}°</value>
   </data>
-  <data name="Light_Spin" xml:space="preserve">
-    <value>Turn by itself</value>
+  <data name="Light_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Light_Times" xml:space="preserve">
+    <value>{0}×</value>
+  </data>
+  <data name="Light_Brightness_Title" xml:space="preserve">
+    <value>How bright is a lamp?</value>
+  </data>
+  <data name="Light_Brightness_P1" xml:space="preserve">
+    <value>A lamp turns electricity into light. Double its power and twice as much light lands on the floor, yet the floor does not look twice as bright. Try it: the first few watts make a big difference, the last few hardly any.</value>
+  </data>
+  <data name="Light_Brightness_P2" xml:space="preserve">
+    <value>Our eyes, and the screens made for them, squeeze large amounts of light together. Keep turning it up and the floor under the lamp simply turns white: a screen cannot show anything brighter than its white.</value>
+  </data>
+  <data name="Light_Brightness_Deeper" xml:space="preserve">
+    <value>The picture adds light up as it really is, then bends it with the screen's curve (roughly the 1/2.2 power) just before it is shown. The chart shows that curve and where the floor under the lamp is on it.</value>
+  </data>
+  <data name="Light_Brightness_Power" xml:space="preserve">
+    <value>Lamp power</value>
+  </data>
+  <data name="Light_Brightness_Picture" xml:space="preserve">
+    <value>A small lamp over a floor, with a chart of how bright the light looks</value>
+  </data>
+  <data name="Light_Brightness_LightIn" xml:space="preserve">
+    <value>light on the floor →</value>
+  </data>
+  <data name="Light_Brightness_Looks" xml:space="preserve">
+    <value>how bright it looks</value>
+  </data>
+  <data name="Light_Brightness_White" xml:space="preserve">
+    <value>all white</value>
+  </data>
+  <data name="Light_Brightness_UnderLamp" xml:space="preserve">
+    <value>● the floor under the lamp</value>
+  </data>
+  <data name="Light_Tilt_Title" xml:space="preserve">
+    <value>Light at a slant</value>
+  </data>
+  <data name="Light_Tilt_P1" xml:space="preserve">
+    <value>Shine a torch straight down on a board, then tip the board. The beam has not changed, but it now lands on a longer patch, so every bit of the patch gets a smaller share of the light.</value>
+  </data>
+  <data name="Light_Tilt_P2" xml:space="preserve">
+    <value>At 60° the patch is twice as long, so it is half as bright. Tip it right over and the light just slides past. This is why sunlight warms the ground more at noon than in the evening, when it comes in low.</value>
+  </data>
+  <data name="Light_Tilt_Deeper" xml:space="preserve">
+    <value>Brightness = straight-on brightness × cos(angle). The patch is 1 / cos(angle) times as long.</value>
+  </data>
+  <data name="Light_Tilt_Angle" xml:space="preserve">
+    <value>Board tilt</value>
+  </data>
+  <data name="Light_Tilt_Picture" xml:space="preserve">
+    <value>A torch shining down on a tilting board, seen from the side</value>
+  </data>
+  <data name="Light_Tilt_FaceOn" xml:space="preserve">
+    <value>The patch, seen face on</value>
+  </data>
+  <data name="Light_Tilt_Readout" xml:space="preserve">
+    <value>{0}× as long · each bit gets {1}%</value>
+  </data>
+  <data name="Light_Distance_Title" xml:space="preserve">
+    <value>Further away, dimmer</value>
+  </data>
+  <data name="Light_Distance_P1" xml:space="preserve">
+    <value>A small lamp sends light out in every direction. Follow just the light that passes through one square a metre away. At 2 metres that same light covers 4 such squares, at 3 metres 9.</value>
+  </data>
+  <data name="Light_Distance_P2" xml:space="preserve">
+    <value>Spread over more squares, each square gets less: at twice the distance, a quarter of the light. Sound from a small speaker thins out the same way.</value>
+  </data>
+  <data name="Light_Distance_Deeper" xml:space="preserve">
+    <value>Brightness ∝ 1 / distance². This is the inverse-square law; it holds for a lamp that is small next to the distance.</value>
+  </data>
+  <data name="Light_Distance_Slider" xml:space="preserve">
+    <value>Distance from the lamp</value>
+  </data>
+  <data name="Light_Distance_Picture" xml:space="preserve">
+    <value>A lamp and the light through one square, spreading over more squares further away</value>
+  </data>
+  <data name="Light_Distance_Readout" xml:space="preserve">
+    <value>The light covers {0} squares · each gets {1}%</value>
+  </data>
+  <data name="Light_Angle_Title" xml:space="preserve">
+    <value>How big does it look?</value>
+  </data>
+  <data name="Light_Angle_P1" xml:space="preserve">
+    <value>A car down the road looks smaller than the same car parked next to you. What your eye takes in is not how long the car is but the angle between its two ends.</value>
+  </data>
+  <data name="Light_Angle_P2" xml:space="preserve">
+    <value>Draw a circle round your eye: the arc between the two lines, divided by the circle's radius, is that angle in radians. Twice as far, half the angle. For a patch instead of a line the same idea is the solid angle: how much of your view it fills.</value>
+  </data>
+  <data name="Light_Angle_Deeper" xml:space="preserve">
+    <value>Angle in radians = arc ÷ radius. A full turn is 2π ≈ 6.28 radians; far away, the angle ≈ size ÷ distance.</value>
+  </data>
+  <data name="Light_Angle_Slider" xml:space="preserve">
+    <value>Distance to the car</value>
+  </data>
+  <data name="Light_Angle_Picture" xml:space="preserve">
+    <value>From above: an eye, a car down the road and the angle between its ends</value>
+  </data>
+  <data name="Light_Angle_Eye" xml:space="preserve">
+    <value>eye</value>
+  </data>
+  <data name="Light_Angle_Arc" xml:space="preserve">
+    <value>arc ÷ radius = angle</value>
+  </data>
+  <data name="Light_Angle_View" xml:space="preserve">
+    <value>What the eye sees</value>
+  </data>
+  <data name="Light_Angle_Value" xml:space="preserve">
+    <value>{0}° = {1} radians</value>
+  </data>
+  <data name="Light_Shadow_Title" xml:space="preserve">
+    <value>Sharp and soft shadows</value>
+  </data>
+  <data name="Light_Shadow_P1" xml:space="preserve">
+    <value>A lamp hangs over a box. Stand anywhere on the floor and ask: how much of the lamp can I see past the box? Where it is all hidden, the shadow is full; where only part of it is hidden, the shadow is part dark.</value>
+  </data>
+  <data name="Light_Shadow_P2" xml:space="preserve">
+    <value>A small lamp is hidden all at once, so its shadow has a sharp edge. A big lamp, or a cloudy sky, is hidden a little at a time, so the edge fades gently. Raise the lamp, grow it, move it aside, and watch the edge.</value>
+  </data>
+  <data name="Light_Shadow_Deeper" xml:space="preserve">
+    <value>The fully dark part is the umbra, the soft edge the penumbra. The picture works out, for every point of the floor, how much of the lamp it can see.</value>
+  </data>
+  <data name="Light_Shadow_Picture" xml:space="preserve">
+    <value>A square lamp over a floor with a box on it</value>
   </data>
 </root>

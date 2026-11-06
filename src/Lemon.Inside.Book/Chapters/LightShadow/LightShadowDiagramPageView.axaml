@@ -5,17 +5,36 @@
                          xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
                          x:Class="Lemon.Inside.Book.Chapters.LightShadow.LightShadowDiagramPageView"
                          x:DataType="light:LightShadowDiagramPageViewModel">
-    <!-- Right page of the Light and shadow spread: the lamp over the floor, drawn on the CPU; drag to turn it. -->
+    <!-- A right page of the Light and shadow chapter: the spread's picture on a dark plate. -->
     <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
         <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
-            <light:LightShadowDiagram LightHeight="{Binding Light.LightHeight}"
-                                      LightSize="{Binding Light.LightSize}"
-                                      LightX="{Binding Light.LightX}"
-                                      Samples="{Binding Light.Samples}"
-                                      RenderScale="{Binding Light.RenderScale}"
-                                      Spin="{Binding Light.Spin}"
-                                      ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                      AutomationProperties.Name="{loc:Localize Light_Picture}" />
+            <ContentControl Content="{Binding Spread}">
+                <ContentControl.DataTemplates>
+                    <DataTemplate DataType="light:BrightnessSpread">
+                        <light:BrightnessScene Power="{Binding Power}"
+                                               ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                               AutomationProperties.Name="{loc:Localize Light_Brightness_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="light:TiltSpread">
+                        <light:TiltDiagram Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Light_Tilt_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="light:DistanceSpread">
+                        <light:DistanceScene Distance="{Binding Distance}"
+                                             ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                             AutomationProperties.Name="{loc:Localize Light_Distance_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="light:AngleSpread">
+                        <light:AngleDiagram Distance="{Binding Distance}" AutomationProperties.Name="{loc:Localize Light_Angle_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="light:ShadowSpread">
+                        <light:ShadowScene LightHeight="{Binding LightHeight}"
+                                           LightSize="{Binding LightSize}"
+                                           LightX="{Binding LightX}"
+                                           ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                           AutomationProperties.Name="{loc:Localize Light_Shadow_Picture}" />
+                    </DataTemplate>
+                </ContentControl.DataTemplates>
+            </ContentControl>
         </Border>
 
         <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />

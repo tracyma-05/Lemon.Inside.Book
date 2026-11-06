@@ -57,9 +57,12 @@ books). Plan and phases: `docs/ROADMAP.md`.
 - A page is a `PageViewModel` subclass plus a view in `Views/Pages`, mapped in `MainView.axaml`'s data templates.
 - The shell's `BookView` shows and turns pages.
 - Chapters live in `Chapters/<Topic>/` and are wired in `Contents/ChapterRegistry.cs`; Light and shadow
-  (`Chapters/LightShadow`) is the reference. The 3D pictures use the CPU renderer in `Controls/Scene` (mesh, square
-  lamp with soft shadows, software rasterizer, orbit camera); it runs on the browser's single thread, so keep its cost
-  in mind (`SceneBenchmark`, `BOOK_BENCH=1 dotnet test -c Release --filter SceneBenchmark`).
+  (`Chapters/LightShadow`) is the reference. A chapter takes `Spreads` spreads (`Chapter`, `BookContents.SpreadPage`);
+  each spread is a `LightSpread`-style view model whose controls and picture the chapter's two page views pick by type.
+- 3D pictures derive from `Controls/Scene/SceneView` (orbit camera, overlays via `Project`, light worked out coarse
+  while a slider moves and in full once it stops) and draw with the CPU renderer (mesh, square lamp with soft shadows,
+  software rasterizer). It runs on the browser's single thread: drawing costs per triangle, light per vertex × sample
+  (`SceneBenchmark`, `BOOK_BENCH=1 dotnet test -c Release --filter SceneBenchmark`).
 - After editing a `Narr_*` string, run `python -I scripts/narration/generate-narration.py` so the committed manifest
   (`assets/narration/narration.json`) matches; `NarrationManifestTests` checks it. The mp3s are not in git.
 - Every `Narr_*` key is a narration clip and must exist in both languages; walkthrough steps and clickable targets

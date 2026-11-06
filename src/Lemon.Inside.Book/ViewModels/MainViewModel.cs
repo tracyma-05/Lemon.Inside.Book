@@ -114,9 +114,11 @@ public sealed partial class MainViewModel : ObservableObject, IBookNavigator
 
         for (var i = 0; i < BookContents.Chapters.Count; i++)
         {
-            var (text, diagram) = ChapterRegistry.CreatePages(BookContents.Chapters[i], i + 1, pages.Count, navigator, services);
-            pages.Add(text);
-            pages.Add(diagram);
+            foreach (var (text, diagram) in ChapterRegistry.CreatePages(BookContents.Chapters[i], i + 1, pages.Count, navigator, services))
+            {
+                pages.Add(text);
+                pages.Add(diagram);
+            }
         }
 
         pages.Add(new CreditsPageViewModel(pages.Count, navigator));

@@ -297,14 +297,8 @@
   <data name="Chapter_Placeholder" xml:space="preserve">
     <value>这一章正在写，图、讲解和朗读很快就会出现在这里。</value>
   </data>
-  <data name="Light_Intro" xml:space="preserve">
-    <value>一盏灯挂在地上的盒子上方。移动灯、把它调大调小，看盒子的影子：小灯的影子边缘清楚，大灯的影子边缘模糊发虚。</value>
-  </data>
   <data name="Light_DragHint" xml:space="preserve">
     <value>拖动画面可以转着看，滚轮可以拉近。</value>
-  </data>
-  <data name="Light_Picture" xml:space="preserve">
-    <value>一盏方形灯照着地上的盒子</value>
   </data>
   <data name="Light_Height" xml:space="preserve">
     <value>灯的高度</value>
@@ -318,19 +312,142 @@
   <data name="Light_Metres" xml:space="preserve">
     <value>{0} 米</value>
   </data>
-  <data name="Light_Spike_Title" xml:space="preserve">
-    <value>绘制测试</value>
+  <data name="Light_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
   </data>
-  <data name="Light_Spike_Note" xml:space="preserve">
-    <value>用来试验画面怎么画：取样越多，软影子越平滑；分辨率越高，画面越清楚，但都会更慢。</value>
+  <data name="Light_Deeper" xml:space="preserve">
+    <value>深入一点</value>
   </data>
-  <data name="Light_Samples" xml:space="preserve">
-    <value>灯上的取样点</value>
+  <data name="Light_Watts" xml:space="preserve">
+    <value>{0} 瓦</value>
   </data>
-  <data name="Light_Resolution" xml:space="preserve">
-    <value>画面分辨率</value>
+  <data name="Light_Degrees" xml:space="preserve">
+    <value>{0}°</value>
   </data>
-  <data name="Light_Spin" xml:space="preserve">
-    <value>自动旋转</value>
+  <data name="Light_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Light_Times" xml:space="preserve">
+    <value>{0} 倍</value>
+  </data>
+  <data name="Light_Brightness_Title" xml:space="preserve">
+    <value>一盏灯有多亮？</value>
+  </data>
+  <data name="Light_Brightness_P1" xml:space="preserve">
+    <value>灯把电变成光。功率加倍，落到地板上的光也加倍，可地板看起来并没有亮一倍。试一试：开头几瓦变化很大，最后几瓦几乎看不出来。</value>
+  </data>
+  <data name="Light_Brightness_P2" xml:space="preserve">
+    <value>我们的眼睛，还有照着眼睛设计的屏幕，会把很多的光“压缩”在一起。一直调亮下去，灯下的地板干脆变成一片白：屏幕显示不出比它的白更亮的东西。</value>
+  </data>
+  <data name="Light_Brightness_Deeper" xml:space="preserve">
+    <value>画面先按真实的光量去加，显示之前再用屏幕的曲线（大约是 1/2.2 次方）弯一下。左下角的图就是这条曲线，蓝点是灯正下方的地板。</value>
+  </data>
+  <data name="Light_Brightness_Power" xml:space="preserve">
+    <value>灯的功率</value>
+  </data>
+  <data name="Light_Brightness_Picture" xml:space="preserve">
+    <value>一盏小灯照着地板，旁边是“看起来多亮”的曲线图</value>
+  </data>
+  <data name="Light_Brightness_LightIn" xml:space="preserve">
+    <value>落到地上的光 →</value>
+  </data>
+  <data name="Light_Brightness_Looks" xml:space="preserve">
+    <value>看起来多亮</value>
+  </data>
+  <data name="Light_Brightness_White" xml:space="preserve">
+    <value>全白</value>
+  </data>
+  <data name="Light_Brightness_UnderLamp" xml:space="preserve">
+    <value>● 灯正下方的地板</value>
+  </data>
+  <data name="Light_Tilt_Title" xml:space="preserve">
+    <value>斜着照，就暗了</value>
+  </data>
+  <data name="Light_Tilt_P1" xml:space="preserve">
+    <value>用手电筒垂直照一块木板，然后把木板斜过来。光束没有变，可它落在了一块更长的光斑上，光斑上每一小块分到的光就少了。</value>
+  </data>
+  <data name="Light_Tilt_P2" xml:space="preserve">
+    <value>斜到 60° 时，光斑长了一倍，亮度只剩一半。再斜下去，光就几乎擦边滑过去了。这也是为什么中午的太阳比傍晚斜照的太阳更能晒热地面。</value>
+  </data>
+  <data name="Light_Tilt_Deeper" xml:space="preserve">
+    <value>亮度 = 正对时的亮度 × cos(角度)；光斑的长度是原来的 1 / cos(角度) 倍。</value>
+  </data>
+  <data name="Light_Tilt_Angle" xml:space="preserve">
+    <value>木板倾斜角度</value>
+  </data>
+  <data name="Light_Tilt_Picture" xml:space="preserve">
+    <value>从侧面看：手电筒照着一块倾斜的木板</value>
+  </data>
+  <data name="Light_Tilt_FaceOn" xml:space="preserve">
+    <value>正面看光斑</value>
+  </data>
+  <data name="Light_Tilt_Readout" xml:space="preserve">
+    <value>长 {0} 倍 · 每一小块分到 {1}%</value>
+  </data>
+  <data name="Light_Distance_Title" xml:space="preserve">
+    <value>离得越远，越暗</value>
+  </data>
+  <data name="Light_Distance_P1" xml:space="preserve">
+    <value>一盏小灯向四面八方发光。只盯着穿过 1 米外一个小方格的那部分光：到 2 米远，同样的光铺满了 4 个方格；到 3 米远，铺满 9 个。</value>
+  </data>
+  <data name="Light_Distance_P2" xml:space="preserve">
+    <value>光摊到更多方格上，每个方格分到的就更少：距离加倍，只剩四分之一。小喇叭发出的声音也是这样越传越弱的。</value>
+  </data>
+  <data name="Light_Distance_Deeper" xml:space="preserve">
+    <value>亮度 ∝ 1 / 距离²，这叫“平方反比定律”。灯比距离小得多的时候，它才成立。</value>
+  </data>
+  <data name="Light_Distance_Slider" xml:space="preserve">
+    <value>离灯的距离</value>
+  </data>
+  <data name="Light_Distance_Picture" xml:space="preserve">
+    <value>一盏灯，穿过一个方格的光越远铺得越开</value>
+  </data>
+  <data name="Light_Distance_Readout" xml:space="preserve">
+    <value>这些光铺满 {0} 个方格 · 每格分到 {1}%</value>
+  </data>
+  <data name="Light_Angle_Title" xml:space="preserve">
+    <value>看起来有多大？</value>
+  </data>
+  <data name="Light_Angle_P1" xml:space="preserve">
+    <value>远处的汽车看起来比停在身边的同一辆车小。眼睛感受到的不是车有多长，而是车头和车尾之间张开的角度。</value>
+  </data>
+  <data name="Light_Angle_P2" xml:space="preserve">
+    <value>以眼睛为圆心画一个圆：两条视线之间的那段弧长，除以圆的半径，就是用“弧度”量的角度。远一倍，角度小一半。如果看的是一块面而不是一条线，同样的想法叫“立体角”：它占了你视野的多少。</value>
+  </data>
+  <data name="Light_Angle_Deeper" xml:space="preserve">
+    <value>弧度 = 弧长 ÷ 半径。转一整圈是 2π ≈ 6.28 弧度；离得很远时，角度 ≈ 大小 ÷ 距离。</value>
+  </data>
+  <data name="Light_Angle_Slider" xml:space="preserve">
+    <value>汽车的距离</value>
+  </data>
+  <data name="Light_Angle_Picture" xml:space="preserve">
+    <value>俯视：眼睛、远处的汽车和它两端之间的角度</value>
+  </data>
+  <data name="Light_Angle_Eye" xml:space="preserve">
+    <value>眼睛</value>
+  </data>
+  <data name="Light_Angle_Arc" xml:space="preserve">
+    <value>弧长 ÷ 半径 = 角度</value>
+  </data>
+  <data name="Light_Angle_View" xml:space="preserve">
+    <value>眼睛看到的</value>
+  </data>
+  <data name="Light_Angle_Value" xml:space="preserve">
+    <value>{0}° = {1} 弧度</value>
+  </data>
+  <data name="Light_Shadow_Title" xml:space="preserve">
+    <value>影子为什么有软有硬</value>
+  </data>
+  <data name="Light_Shadow_P1" xml:space="preserve">
+    <value>一盏灯挂在盒子上方。站在地板上任何一点问自己：越过盒子，我还能看到多少灯？灯被完全挡住的地方，影子最黑；只挡住一部分的地方，影子就半明半暗。</value>
+  </data>
+  <data name="Light_Shadow_P2" xml:space="preserve">
+    <value>小灯一下子就被挡住了，所以影子的边很清楚。大灯——或者阴天的整片天空——是一点一点被挡住的，所以影子的边慢慢变淡。把灯升高、调大、移到一边，看看影子的边怎么变。</value>
+  </data>
+  <data name="Light_Shadow_Deeper" xml:space="preserve">
+    <value>完全黑的部分叫“本影”，柔和的边叫“半影”。画面为地板上每一点算出它还能看到灯的多少。</value>
+  </data>
+  <data name="Light_Shadow_Picture" xml:space="preserve">
+    <value>一盏方形灯照着地上的盒子</value>
   </data>
 </root>

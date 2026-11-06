@@ -5,29 +5,29 @@ using Lemon.Inside.Book.ViewModels.Pages;
 namespace Lemon.Inside.Book.Contents;
 
 /// <summary>
-/// Builds each chapter's two pages: a written chapter's own page types, and placeholders for the rest. Writing a
-/// chapter means adding its case here.
+/// Builds each chapter's pages, a (text, picture) pair per spread: a written chapter's own page types, and
+/// placeholders for the rest. Writing a chapter means adding its case here.
 /// </summary>
 public static class ChapterRegistry
 {
     /// <summary>Slugs of the chapters that are written (not placeholders).</summary>
     public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow" };
 
-    public static (PageViewModel Text, PageViewModel Diagram) CreatePages(
+    public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
         Chapter chapter, int number, int textPage, IBookNavigator navigator, BookServices services)
     {
-        switch (chapter.Slug)
+        var pages = chapter.Slug switch
         {
-            case "Light-Shadow":
-            {
-                var light = new LightShadowViewModel();
-                return (new LightShadowTextPageViewModel(textPage, navigator, chapter, number, light),
-                    new LightShadowDiagramPageViewModel(textPage + 1, navigator, chapter, light));
-            }
+            "Light-Shadow" => LightShadowChapter.CreatePages(chapter, number, textPage, navigator),
+            _ => [(new ChapterTextPageViewModel(textPage, navigator, chapter, number),
+                new ChapterDiagramPageViewModel(textPage + 1, navigator, chapter))],
+        };
 
-            default:
-                return (new ChapterTextPageViewModel(textPage, navigator, chapter, number),
-                    new ChapterDiagramPageViewModel(textPage + 1, navigator, chapter));
+        if (pages.Count != chapter.Spreads)
+        {
+            throw new InvalidOperationException($"Chapter '{chapter.Slug}' says {chapter.Spreads} spreads but has {pages.Count}.");
         }
+
+        return pages;
     }
 }

@@ -1,7 +1,9 @@
 using System.Numerics;
+using Avalonia.Controls;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.LightShadow;
+using Lemon.Inside.Book.Contents;
 using Lemon.Inside.Book.Controls.Scene;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
@@ -62,21 +64,81 @@ public sealed class LightShadowTests
         Assert.Equal(0, corner);
     }
 
+    [Fact]
+    public void TheSpreads_SayWhatTheirPicturesShow()
+    {
+        var light = new LightShadowViewModel();
+        Assert.Equal(5, light.Spreads.Count);
+
+        light.Tilt.Tilt = 60;
+        Assert.Equal(2, light.Tilt.PatchLength, 6);
+        light.Distance.Distance = 2;
+        Assert.Contains("25", light.Distance.BrightnessText);
+        light.Angle.Distance = 10;
+        var near = light.Angle.Radians;
+        light.Angle.Distance = 20;
+        Assert.InRange(near / light.Angle.Radians, 1.9, 2.0); // twice as far, about half the angle
+    }
+
+    [Fact]
+    public void EverySpreadsWords_AreInBothLanguages()
+    {
+        foreach (var keys in BothLanguages())
+        {
+            foreach (var key in new LightShadowViewModel().Spreads.SelectMany(s => s.TextKeys))
+            {
+                Assert.Contains(key, keys);
+            }
+        }
+    }
+
+    [Fact]
+    public void TwiceTheLight_LooksLessThanTwiceAsBright_AndTooMuchIsWhite()
+    {
+        Assert.True(BrightnessScene.Looks(0.2) / BrightnessScene.Looks(0.1) < 1.5);
+        Assert.Equal(1, BrightnessScene.Looks(3), 6);
+    }
+
     [AvaloniaFact]
-    public void TheSpread_DrawsThePicture_AndDraggingTurnsTheCamera()
+    public void EverySpread_DrawsItsPicture()
     {
         var (window, model) = OpenAt("Light-Shadow");
-        var diagram = window.GetVisualDescendants().OfType<LightShadowDiagram>().Single();
-        Assert.True(diagram.PictureSize.Width > 10);
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
+        Type[] pictures = [typeof(BrightnessScene), typeof(TiltDiagram), typeof(DistanceScene), typeof(AngleDiagram), typeof(ShadowScene)];
+        for (var s = 0; s < pictures.Length; s++)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, s));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Control>().First(c => c.GetType() == pictures[s] && c.IsEffectivelyVisible);
+            Assert.True(picture.Bounds.Width > 100, pictures[s].Name);
+            Snapshot(window, $"light-shadow-{s + 1}");
+        }
 
-        var yaw = diagram.Camera.Yaw;
-        diagram.Camera.Drag(40, 0);
-        Assert.NotEqual(yaw, diagram.Camera.Yaw);
+        window.Close();
+    }
 
-        var light = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[TextPageOf("Light-Shadow")]).Light;
-        light.LightSize = 1.5;
+    [AvaloniaFact]
+    public void MovingASlider_DrawsCoarseLightFirst_AndDraggingTurnsTheCamera()
+    {
+        var (window, model) = OpenAt("Light-Shadow");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
+        model.GoToPage(BookContents.SpreadPage(chapter, 4));
         Frames(5);
-        Snapshot(window, "light-shadow");
+        var scene = window.GetVisualDescendants().OfType<ShadowScene>().First(c => c.IsEffectivelyVisible);
+        Assert.True(scene.PictureSize.Width > 10);
+
+        var yaw = scene.Camera.Yaw;
+        scene.Camera.Drag(40, 0);
+        Assert.NotEqual(yaw, scene.Camera.Yaw);
+
+        var page = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 4)]);
+        page.Light.Shadow.LightSize = 1.5;
+        Frames(2);
+        Assert.True(scene.IsCoarse);
+        scene.Settle();
+        Frames(2);
+        Assert.False(scene.IsCoarse);
+        Snapshot(window, "light-shadow-5-big-lamp");
         window.Close();
     }
 

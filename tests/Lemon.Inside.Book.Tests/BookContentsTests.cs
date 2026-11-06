@@ -12,7 +12,7 @@ namespace Lemon.Inside.Book.Tests;
 public class BookContentsTests
 {
     [Fact]
-    public void AllThirtySixTopics_AreChapters_Once()
+    public void EveryTopic_IsAChapter_Once()
     {
         Assert.Equal(3, BookContents.Chapters.Count);
         Assert.Equal(BookContents.Chapters.Count, BookContents.Chapters.Select(c => c.Slug).Distinct().Count());
@@ -48,10 +48,15 @@ public class BookContentsTests
 
         for (var i = 0; i < BookContents.Chapters.Count; i++)
         {
-            var text = Assert.IsAssignableFrom<ChapterTextPageViewModel>(pages[BookContents.ChapterPage(i)]);
-            var diagram = Assert.IsAssignableFrom<ChapterDiagramPageViewModel>(pages[BookContents.ChapterPage(i) + 1]);
-            Assert.Same(BookContents.Chapters[i], text.Chapter);
-            Assert.Same(BookContents.Chapters[i], diagram.Chapter);
+            for (var s = 0; s < BookContents.Chapters[i].Spreads; s++)
+            {
+                var page = BookContents.SpreadPage(i, s);
+                var text = Assert.IsAssignableFrom<ChapterTextPageViewModel>(pages[page]);
+                var diagram = Assert.IsAssignableFrom<ChapterDiagramPageViewModel>(pages[page + 1]);
+                Assert.Same(BookContents.Chapters[i], text.Chapter);
+                Assert.Same(BookContents.Chapters[i], diagram.Chapter);
+                Assert.Equal(page, SpreadLayout.LeftPage(SpreadLayout.SpreadOf(page), BookContents.PageCount));
+            }
         }
     }
 
