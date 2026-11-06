@@ -450,4 +450,121 @@
   <data name="Light_Shadow_Picture" xml:space="preserve">
     <value>A square lamp over a floor with a box on it</value>
   </data>
+  <data name="Light_Sky_Title" xml:space="preserve">
+    <value>What a spot on the floor sees</value>
+  </data>
+  <data name="Light_Sky_P1" xml:space="preserve">
+    <value>Put your eye on a spot of the floor and look up: you see a half-sphere of sky. The lamp is one patch of it. Now press that half-sphere flat onto the floor, like a dome squashed into a circle: the lamp's patch lands somewhere in the circle.</value>
+  </data>
+  <data name="Light_Sky_P2" xml:space="preserve">
+    <value>The share of the circle the lamp covers is the share of light the spot gets. A low lamp squashes thin near the rim — that is the slant of spread 2 — and a far lamp shrinks — that is the distance of spread 3. One picture holds both.</value>
+  </data>
+  <data name="Light_Sky_Deeper" xml:space="preserve">
+    <value>Light received ∝ the patch's size on the sky (its solid angle) × cos(how far from overhead). Pressing the dome flat does that multiplication for you.</value>
+  </data>
+  <data name="Light_Sky_Elevation" xml:space="preserve">
+    <value>Lamp above the horizon</value>
+  </data>
+  <data name="Light_Sky_Distance" xml:space="preserve">
+    <value>Lamp distance</value>
+  </data>
+  <data name="Light_Sky_Share" xml:space="preserve">
+    <value>The lamp covers {0}% of the circle</value>
+  </data>
+  <data name="Light_Sky_Picture" xml:space="preserve">
+    <value>A spot on the floor, the half-sphere of sky over it, and a lamp pressed onto both</value>
+  </data>
+  <data name="Light_Sky_Spot" xml:space="preserve">
+    <value>spot</value>
+  </data>
+  <data name="Light_Sky_Readout" xml:space="preserve">
+    <value>The lamp covers {0}% of the circle: that share of a whole sky's light</value>
+  </data>
+  <data name="Light_Radiance_Title" xml:space="preserve">
+    <value>Why a wall looks as bright from far away</value>
+  </data>
+  <data name="Light_Radiance_P1" xml:space="preserve">
+    <value>Walk away from a lit wall and it does not get dimmer. Odd, since each bit of it now sends you less light. But each speck of your eye now takes in more of the wall: twice as far, four times as much wall, each part a quarter as bright to you.</value>
+  </data>
+  <data name="Light_Radiance_P2" xml:space="preserve">
+    <value>Turn the panel away and the same thing happens: the eye takes in more of it, and a matte surface sends less light off at a slant, by just as much. What stays the same is how bright the surface looks — its radiance — which is what eyes and cameras measure.</value>
+  </data>
+  <data name="Light_Radiance_Deeper" xml:space="preserve">
+    <value>Area seen ∝ distance² / cos, light from each bit ∝ cos / distance²: the product is 1. A surface that holds this at every angle is called Lambertian.</value>
+  </data>
+  <data name="Light_Radiance_Distance" xml:space="preserve">
+    <value>Eye distance</value>
+  </data>
+  <data name="Light_Radiance_Tilt" xml:space="preserve">
+    <value>Panel turned away</value>
+  </data>
+  <data name="Light_Radiance_Picture" xml:space="preserve">
+    <value>From the side: an eye's narrow cone of view meeting a glowing panel</value>
+  </data>
+  <data name="Light_Radiance_Panel" xml:space="preserve">
+    <value>glowing panel</value>
+  </data>
+  <data name="Light_Radiance_Area" xml:space="preserve">
+    <value>Panel taken in: {0}×</value>
+  </data>
+  <data name="Light_Radiance_PerBit" xml:space="preserve">
+    <value>Light from each bit that reaches the eye: {0}×</value>
+  </data>
+  <data name="Light_Radiance_Total" xml:space="preserve">
+    <value>Brightness seen: {0}×</value>
+  </data>
+  <data name="Light_Reflection_Title" xml:space="preserve">
+    <value>Mirrors, gloss and matte</value>
+  </data>
+  <data name="Light_Reflection_P1" xml:space="preserve">
+    <value>Light that lands on a surface leaves it again, but where it goes depends on the surface. A mirror sends it all on in one direction, as a ball bounces off a wall. A matte surface, like paper, scatters it every way.</value>
+  </data>
+  <data name="Light_Reflection_P2" xml:space="preserve">
+    <value>Most things are in between: glossy paint, a polished table. Move the eye: on a mirror you see the lamp only from one place; on paper the spot looks about the same from everywhere; on gloss you see a bright highlight that follows you.</value>
+  </data>
+  <data name="Light_Reflection_Deeper" xml:space="preserve">
+    <value>The shape over the surface shows how much light leaves in each direction. For a matte surface it is a circle (cos of the angle from straight up); for a mirror, a single spike at the mirror angle.</value>
+  </data>
+  <data name="Light_Reflection_Light" xml:space="preserve">
+    <value>Light comes in at</value>
+  </data>
+  <data name="Light_Reflection_Roughness" xml:space="preserve">
+    <value>Mirror → matte</value>
+  </data>
+  <data name="Light_Reflection_Eye" xml:space="preserve">
+    <value>Eye looks from</value>
+  </data>
+  <data name="Light_Reflection_Picture" xml:space="preserve">
+    <value>From the side: light landing on a surface and the shape of the light leaving it</value>
+  </data>
+  <data name="Light_Bounce_Title" xml:space="preserve">
+    <value>Colour, and light that bounces</value>
+  </data>
+  <data name="Light_Bounce_P1" xml:space="preserve">
+    <value>A red wall is red because it gives back mostly red light and keeps the rest. White gives back all colours. With no bounces, only what the lamp reaches is lit, and the box's shadow side is pitch black.</value>
+  </data>
+  <data name="Light_Bounce_P2" xml:space="preserve">
+    <value>Add a bounce: everything lit now lights everything else. The floor near the wall turns faintly red, and shadows fill in. A second and third bounce add less each time. This is why rooms are never as dark in the shade as the lamp alone would make them.</value>
+  </data>
+  <data name="Light_Bounce_Deeper" xml:space="preserve">
+    <value>Each bounce passes light between every pair of points: how much one sends, times how squarely the two face each other, over the distance squared. Computer graphics calls this radiosity, or global illumination.</value>
+  </data>
+  <data name="Light_Bounce_Count" xml:space="preserve">
+    <value>Bounces</value>
+  </data>
+  <data name="Light_Bounce_Wall" xml:space="preserve">
+    <value>Wall colour</value>
+  </data>
+  <data name="Light_Bounce_Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Light_Bounce_Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Light_Bounce_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Light_Bounce_Picture" xml:space="preserve">
+    <value>A lamp over a white floor and box beside a coloured wall</value>
+  </data>
 </root>

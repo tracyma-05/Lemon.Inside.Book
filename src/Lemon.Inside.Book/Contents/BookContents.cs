@@ -8,7 +8,7 @@ public static class BookContents
 {
     public static IReadOnlyList<Chapter> Chapters { get; } =
     [
-        new("Light-Shadow", Volume.Light, Spreads: 5),
+        new("Light-Shadow", Volume.Light, Spreads: 9),
 
         new("Gears", Volume.Machines),
         new("Watch", Volume.Machines),

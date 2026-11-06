@@ -1,6 +1,7 @@
 using System.Globalization;
 using Avalonia;
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Lemon.Book.Shell.Infrastructures.Localization;
 
 namespace Lemon.Inside.Book.Controls.Scene;
@@ -8,15 +9,19 @@ namespace Lemon.Inside.Book.Controls.Scene;
 /// <summary>Labels for the pictures: a localized string drawn at a point, anchored by fractions of its size.</summary>
 public static class DiagramText
 {
-    public static readonly IBrush Ink = new SolidColorBrush(Color.FromRgb(0xE6, 0xEA, 0xF2));
-    public static readonly IBrush Faint = new SolidColorBrush(Color.FromArgb(0xB0, 0xE6, 0xEA, 0xF2));
-    public static readonly IBrush Gold = new SolidColorBrush(Color.FromRgb(0xF2, 0xC9, 0x4C));
-    public static readonly IBrush Cyan = new SolidColorBrush(Color.FromRgb(0x6F, 0xD8, 0xFF));
+    public static readonly IImmutableBrush Ink = new ImmutableSolidColorBrush(Color.FromRgb(0xE6, 0xEA, 0xF2));
+    public static readonly IImmutableBrush Faint = new ImmutableSolidColorBrush(Color.FromArgb(0xB0, 0xE6, 0xEA, 0xF2));
+    public static readonly IImmutableBrush Gold = new ImmutableSolidColorBrush(Color.FromRgb(0xF2, 0xC9, 0x4C));
+    public static readonly IImmutableBrush Cyan = new ImmutableSolidColorBrush(Color.FromRgb(0x6F, 0xD8, 0xFF));
 
     /// <summary>The string with this key in the reader's language.</summary>
     public static string Get(string key) => LocalizationService.Instance.GetString(key);
 
     public static string Format(string key, params object[] args) => LocalizationService.Instance.Format(key, args);
+
+    /// <summary>An arrow head at <paramref name="to"/>, pointing the way from <paramref name="from"/>.</summary>
+    public static void DrawArrowAlong(DrawingContext context, Point from, Point to, IBrush brush, double size = 10) =>
+        Space.SpaceDrawing.DrawArrowHead(context, brush, to, to - from, size);
 
     /// <summary>
     /// Draws <paramref name="text"/> with its anchor (<paramref name="ax"/>, <paramref name="ay"/>: 0 = left/top,

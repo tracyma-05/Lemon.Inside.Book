@@ -35,6 +35,19 @@ public sealed class SceneBenchmark(ITestOutputHelper output)
             output.WriteLine($"light {samples}x{samples} samples, {mesh.VertexCount} vertices: {watch.Elapsed.TotalMilliseconds / runs:0.0} ms");
         }
 
+        // The bounce spread's scene: floor, wall and box, about 1,100 vertices.
+        var room = new SceneMesh();
+        room.AddQuad(new Vector3(-1.5f, 0, 2), new Vector3(3.5f, 0, 0), new Vector3(0, 0, -4), 22, new Vector3(0.8f));
+        room.AddQuad(new Vector3(-1.5f, 0, -2), new Vector3(0, 2.4f, 0), new Vector3(0, 0, 4), 18, new Vector3(0.75f, 0.1f, 0.08f));
+        room.AddBox(new Box(new Vector3(0.1f, 0, -0.35f), new Vector3(0.8f, 0.7f, 0.35f)), 6, new Vector3(0.8f));
+        var lit = Enumerable.Repeat(new Vector3(1), room.VertexCount).ToArray();
+        foreach (var (bounces, stride) in new[] { (1, 1), (2, 1), (3, 1), (3, 4) })
+        {
+            var watch = Stopwatch.StartNew();
+            Radiosity.Bounce(room, lit, bounces, stride);
+            output.WriteLine($"radiosity {bounces} bounces, stride {stride}, {room.VertexCount} vertices: {watch.Elapsed.TotalMilliseconds:0.0} ms");
+        }
+
         var radiance = Enumerable.Repeat(new Vector3(0.3f), mesh.VertexCount).ToArray();
         var camera = new OrbitCamera();
         foreach (var (w, h) in new[] { (320, 240), (640, 480), (1280, 960) })

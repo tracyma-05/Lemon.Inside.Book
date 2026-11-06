@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -17,14 +18,14 @@ public sealed class AngleDiagram : Control
     /// <summary>The furthest the slider goes, so the scale stays the same while the car moves.</summary>
     public const double MaxDistance = 40;
 
-    private static readonly IBrush Plate = new SolidColorBrush(Color.FromRgb(0x10, 0x16, 0x22));
-    private static readonly IBrush RoadBrush = new SolidColorBrush(Color.FromRgb(0x24, 0x2B, 0x38));
-    private static readonly IBrush CarBrush = new SolidColorBrush(Color.FromRgb(0xD9, 0x5D, 0x4B));
-    private static readonly IBrush WedgeBrush = new SolidColorBrush(Color.FromArgb(0x22, 0x6F, 0xD8, 0xFF));
-    private static readonly IPen SightPen = new Pen(DiagramText.Cyan, 1.5);
-    private static readonly IPen ArcPen = new Pen(DiagramText.Gold, 3);
-    private static readonly IPen CirclePen = new Pen(DiagramText.Faint, 1, new DashStyle([3, 4], 0));
-    private static readonly IBrush PanelBrush = new SolidColorBrush(Color.FromArgb(0xC0, 0x05, 0x08, 0x0E));
+    private static readonly IImmutableBrush Plate = new ImmutableSolidColorBrush(Color.FromRgb(0x10, 0x16, 0x22));
+    private static readonly IImmutableBrush RoadBrush = new ImmutableSolidColorBrush(Color.FromRgb(0x24, 0x2B, 0x38));
+    private static readonly IImmutableBrush CarBrush = new ImmutableSolidColorBrush(Color.FromRgb(0xD9, 0x5D, 0x4B));
+    private static readonly IImmutableBrush WedgeBrush = new ImmutableSolidColorBrush(Color.FromArgb(0x22, 0x6F, 0xD8, 0xFF));
+    private static readonly IPen SightPen = new ImmutablePen(DiagramText.Cyan, 1.5);
+    private static readonly IPen ArcPen = new ImmutablePen(DiagramText.Gold, 3);
+    private static readonly IPen CirclePen = new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([3, 4], 0));
+    private static readonly IImmutableBrush PanelBrush = new ImmutableSolidColorBrush(Color.FromArgb(0xC0, 0x05, 0x08, 0x0E));
 
     static AngleDiagram()
     {

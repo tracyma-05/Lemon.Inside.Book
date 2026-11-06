@@ -31,9 +31,18 @@ public sealed class LightShadowViewModel : IChapterContent
 
     public AngleSpread Angle { get; } = new();
 
+    public SkySpread Sky { get; } = new();
+
+    public RadianceSpread Radiance { get; } = new();
+
+    public ReflectionSpread Reflection { get; } = new();
+
     public ShadowSpread Shadow { get; } = new();
 
-    public IReadOnlyList<LightSpread> Spreads => [Brightness, Tilt, Distance, Angle, Shadow];
+    public BounceSpread Bounce { get; } = new();
+
+    /// <summary>The spreads in reading order.</summary>
+    public IReadOnlyList<LightSpread> Spreads => [Brightness, Tilt, Distance, Angle, Sky, Radiance, Reflection, Shadow, Bounce];
 
     /// <summary>A page of the chapter came on screen.</summary>
     public void ViewAttached() => _views++;

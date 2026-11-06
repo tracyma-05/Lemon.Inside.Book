@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -16,19 +17,17 @@ public sealed class TiltDiagram : Control
 
     private const int Rays = 7;
 
-    private static readonly IBrush Plate = new LinearGradientBrush
-    {
-        StartPoint = new RelativePoint(0, 0, RelativeUnit.Relative),
-        EndPoint = new RelativePoint(0, 1, RelativeUnit.Relative),
-        GradientStops = { new GradientStop(Color.FromRgb(0x14, 0x1B, 0x2A), 0), new GradientStop(Color.FromRgb(0x08, 0x0B, 0x12), 1) },
-    };
+    private static readonly IImmutableBrush Plate = new ImmutableLinearGradientBrush(
+        [new ImmutableGradientStop(0, Color.FromRgb(0x14, 0x1B, 0x2A)), new ImmutableGradientStop(1, Color.FromRgb(0x08, 0x0B, 0x12))],
+        startPoint: new RelativePoint(0, 0, RelativeUnit.Relative),
+        endPoint: new RelativePoint(0, 1, RelativeUnit.Relative));
 
-    private static readonly IBrush TorchBrush = new SolidColorBrush(Color.FromRgb(0x5A, 0x63, 0x75));
-    private static readonly IBrush BeamBrush = new SolidColorBrush(Color.FromArgb(0x26, 0xF2, 0xC9, 0x4C));
-    private static readonly IPen RayPen = new Pen(new SolidColorBrush(Color.FromArgb(0xC0, 0xF2, 0xC9, 0x4C)), 1.5);
-    private static readonly IPen BoardPen = new Pen(new SolidColorBrush(Color.FromRgb(0x9A, 0x86, 0x6A)), 8, lineCap: PenLineCap.Round);
-    private static readonly IPen GuidePen = new Pen(DiagramText.Faint, 1, new DashStyle([4, 4], 0));
-    private static readonly IPen OutlinePen = new Pen(DiagramText.Faint, 1.2, new DashStyle([4, 3], 0));
+    private static readonly IImmutableBrush TorchBrush = new ImmutableSolidColorBrush(Color.FromRgb(0x5A, 0x63, 0x75));
+    private static readonly IImmutableBrush BeamBrush = new ImmutableSolidColorBrush(Color.FromArgb(0x26, 0xF2, 0xC9, 0x4C));
+    private static readonly IPen RayPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xC0, 0xF2, 0xC9, 0x4C)), 1.5);
+    private static readonly IPen BoardPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x9A, 0x86, 0x6A)), 8, lineCap: PenLineCap.Round);
+    private static readonly IPen GuidePen = new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([4, 4], 0));
+    private static readonly IPen OutlinePen = new ImmutablePen(DiagramText.Faint, 1.2, new ImmutableDashStyle([4, 3], 0));
 
     static TiltDiagram()
     {

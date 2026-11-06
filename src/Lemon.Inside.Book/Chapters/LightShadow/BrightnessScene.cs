@@ -1,6 +1,7 @@
 using System.Numerics;
 using Avalonia;
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -20,11 +21,11 @@ public sealed class BrightnessScene : SceneView
     private const float LampHeight = 1.6f;
     private const float LampSize = 0.16f;
 
-    private static readonly IPen AxisPen = new Pen(DiagramText.Faint, 1);
-    private static readonly IPen CurvePen = new Pen(DiagramText.Gold, 2);
-    private static readonly IPen CordPen = new Pen(new SolidColorBrush(Color.FromRgb(0x70, 0x78, 0x88)), 1.5);
-    private static readonly IBrush ClipBrush = new SolidColorBrush(Color.FromArgb(0x30, 0xFF, 0xFF, 0xFF));
-    private static readonly IBrush PanelBrush = new SolidColorBrush(Color.FromArgb(0xB0, 0x08, 0x0B, 0x12));
+    private static readonly IPen AxisPen = new ImmutablePen(DiagramText.Faint, 1);
+    private static readonly IPen CurvePen = new ImmutablePen(DiagramText.Gold, 2);
+    private static readonly IPen CordPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x70, 0x78, 0x88)), 1.5);
+    private static readonly IImmutableBrush ClipBrush = new ImmutableSolidColorBrush(Color.FromArgb(0x30, 0xFF, 0xFF, 0xFF));
+    private static readonly IImmutableBrush PanelBrush = new ImmutableSolidColorBrush(Color.FromArgb(0xB0, 0x08, 0x0B, 0x12));
 
     private readonly AreaLight _lamp = new() { Center = new Vector3(0, LampHeight, 0), Size = LampSize };
     private readonly int _lampFirstVertex;

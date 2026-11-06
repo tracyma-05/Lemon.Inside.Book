@@ -98,7 +98,7 @@ public sealed partial class AngleSpread() : LightSpread("Angle")
         Radians.ToString("0.000", CultureInfo.CurrentCulture));
 }
 
-/// <summary>5. Sharp and soft shadows: a square lamp over a box.</summary>
+/// <summary>8. Sharp and soft shadows: a square lamp over a box.</summary>
 public sealed partial class ShadowSpread() : LightSpread("Shadow")
 {
     [ObservableProperty]
@@ -118,4 +118,93 @@ public sealed partial class ShadowSpread() : LightSpread("Shadow")
     public string LightSizeText => Metres(LightSize);
 
     public string LightXText => Metres(LightX);
+}
+
+/// <summary>5. What a spot on the floor sees: a half-sky, and the lamp as a patch of it.</summary>
+public sealed partial class SkySpread() : LightSpread("Sky")
+{
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(ElevationText), nameof(ShareText))]
+    private double _elevation = 50;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(DistanceText), nameof(ShareText))]
+    private double _distance = 2.5;
+
+    public string ElevationText => LocalizationService.Instance.Format("Light_Degrees", Elevation.ToString("0", CultureInfo.CurrentCulture));
+
+    public string DistanceText => Metres(Distance);
+
+    public string ShareText => LocalizationService.Instance.Format(
+        "Light_Sky_Share", (SkyScene.FloorShare(Elevation, Distance) * 100).ToString("0.0", CultureInfo.CurrentCulture));
+}
+
+/// <summary>6. Why a glowing panel looks as bright near or far, straight on or slanted (radiance).</summary>
+public sealed partial class RadianceSpread() : LightSpread("Radiance")
+{
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(DistanceText))]
+    private double _distance = 2;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(TiltText))]
+    private double _tilt;
+
+    public string DistanceText => Metres(Distance);
+
+    public string TiltText => LocalizationService.Instance.Format("Light_Degrees", Tilt.ToString("0", CultureInfo.CurrentCulture));
+}
+
+/// <summary>7. Mirror, glossy and matte: where the light goes after it lands.</summary>
+public sealed partial class ReflectionSpread() : LightSpread("Reflection")
+{
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(LightAngleText))]
+    private double _lightAngle = 40;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(RoughnessText))]
+    private double _roughness = 0.3;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(EyeAngleText))]
+    private double _eyeAngle = 40;
+
+    public string LightAngleText => LocalizationService.Instance.Format("Light_Degrees", LightAngle.ToString("0", CultureInfo.CurrentCulture));
+
+    public string RoughnessText => Percent(Roughness);
+
+    public string EyeAngleText => LocalizationService.Instance.Format("Light_Degrees", EyeAngle.ToString("0", CultureInfo.CurrentCulture));
+}
+
+/// <summary>9. Colour and bounces: a coloured wall tints the floor once light bounces.</summary>
+public sealed partial class BounceSpread() : LightSpread("Bounce")
+{
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(BouncesText))]
+    private int _bounces;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsRed), nameof(IsGreen), nameof(IsBlue))]
+    private WallColor _wall = WallColor.Red;
+
+    public string BouncesText => Bounces.ToString(CultureInfo.CurrentCulture);
+
+    public bool IsRed
+    {
+        get => Wall == WallColor.Red;
+        set { if (value) Wall = WallColor.Red; }
+    }
+
+    public bool IsGreen
+    {
+        get => Wall == WallColor.Green;
+        set { if (value) Wall = WallColor.Green; }
+    }
+
+    public bool IsBlue
+    {
+        get => Wall == WallColor.Blue;
+        set { if (value) Wall = WallColor.Blue; }
+    }
 }

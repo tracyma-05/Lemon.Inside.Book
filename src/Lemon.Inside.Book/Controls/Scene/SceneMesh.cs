@@ -13,6 +13,7 @@ public sealed class SceneMesh
     private readonly List<Vector3> _normals = [];
     private readonly List<Vector3> _albedo = [];
     private readonly List<Vector3> _emission = [];
+    private readonly List<float> _areas = [];
     private readonly List<int> _indices = [];
 
     public int VertexCount => _positions.Count;
@@ -25,11 +26,17 @@ public sealed class SceneMesh
 
     public IReadOnlyList<Vector3> Emission => _emission;
 
+    /// <summary>The share of its surface each vertex stands for (m²), for light passed between surfaces.</summary>
+    public IReadOnlyList<float> Areas => _areas;
+
     /// <summary>Three vertex indices per triangle.</summary>
     public IReadOnlyList<int> Indices => _indices;
 
     /// <summary>Moves one vertex (a part that moves, such as a lamp, keeps its triangles).</summary>
     public void SetPosition(int vertex, Vector3 position) => _positions[vertex] = position;
+
+    /// <summary>Repaints one vertex (a wall that changes colour).</summary>
+    public void SetAlbedo(int vertex, Vector3 albedo) => _albedo[vertex] = albedo;
 
     /// <summary>
     /// A parallelogram from <paramref name="origin"/> spanned by <paramref name="u"/> and <paramref name="v"/>, cut
@@ -40,6 +47,7 @@ public sealed class SceneMesh
         var normal = Vector3.Normalize(Vector3.Cross(u, v));
         var first = _positions.Count;
         var n = Math.Max(1, divisions);
+        var cell = Vector3.Cross(u, v).Length() / (n * n);
         for (var j = 0; j <= n; j++)
         {
             for (var i = 0; i <= n; i++)
@@ -48,6 +56,8 @@ public sealed class SceneMesh
                 _normals.Add(normal);
                 _albedo.Add(albedo);
                 _emission.Add(emission);
+                // A vertex on an edge stands for half a cell, on a corner a quarter.
+                _areas.Add(cell * (i == 0 || i == n ? 0.5f : 1) * (j == 0 || j == n ? 0.5f : 1));
             }
         }
 

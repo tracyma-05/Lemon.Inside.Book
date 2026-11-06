@@ -450,4 +450,121 @@
   <data name="Light_Shadow_Picture" xml:space="preserve">
     <value>一盏方形灯照着地上的盒子</value>
   </data>
+  <data name="Light_Sky_Title" xml:space="preserve">
+    <value>地板上的一点“看见”了什么</value>
+  </data>
+  <data name="Light_Sky_P1" xml:space="preserve">
+    <value>把眼睛贴在地板上的一点，向上看：你看到的是半个球那样的天空，灯是其中的一块。再把这半个球压扁到地面上，变成一个圆：灯的那一块也落进了圆里。</value>
+  </data>
+  <data name="Light_Sky_P2" xml:space="preserve">
+    <value>灯在圆里占了多大一块，这一点就分到多少光。灯低的时候，它被压扁在圆的边上——这就是第 2 节的“斜着照”；灯远的时候，它缩小了——这就是第 3 节的“离得远”。一张图把两件事都装下了。</value>
+  </data>
+  <data name="Light_Sky_Deeper" xml:space="preserve">
+    <value>收到的光 ∝ 灯在天上占的大小（立体角）× cos（离头顶的角度）。把半球压扁，正好替你做了这个乘法。</value>
+  </data>
+  <data name="Light_Sky_Elevation" xml:space="preserve">
+    <value>灯离地平线的高度角</value>
+  </data>
+  <data name="Light_Sky_Distance" xml:space="preserve">
+    <value>灯的距离</value>
+  </data>
+  <data name="Light_Sky_Share" xml:space="preserve">
+    <value>灯占了圆的 {0}%</value>
+  </data>
+  <data name="Light_Sky_Picture" xml:space="preserve">
+    <value>地板上的一点、它上方的半球天空，以及灯投在半球和地面圆上的样子</value>
+  </data>
+  <data name="Light_Sky_Spot" xml:space="preserve">
+    <value>这一点</value>
+  </data>
+  <data name="Light_Sky_Readout" xml:space="preserve">
+    <value>灯占了圆的 {0}%：相当于整片天空亮光的这么多</value>
+  </data>
+  <data name="Light_Radiance_Title" xml:space="preserve">
+    <value>为什么墙远看近看一样亮</value>
+  </data>
+  <data name="Light_Radiance_P1" xml:space="preserve">
+    <value>从一面被照亮的墙前走开，墙并不会变暗。奇怪，墙上每一小块送到你眼里的光明明变少了。可是你眼睛里每一个感光点，现在收进了更多的墙：远一倍，看到的墙多四倍，每一块却只剩四分之一。</value>
+  </data>
+  <data name="Light_Radiance_P2" xml:space="preserve">
+    <value>把板转开也一样：眼睛看进去的面积变大，而毛面的东西斜着发出的光也正好少了这么多。不变的是表面“看起来多亮”——它的辐亮度，也就是眼睛和相机测量的东西。</value>
+  </data>
+  <data name="Light_Radiance_Deeper" xml:space="preserve">
+    <value>看到的面积 ∝ 距离² / cos，每一块送来的光 ∝ cos / 距离²：两者相乘等于 1。在每个角度都这样的表面，叫“朗伯面”。</value>
+  </data>
+  <data name="Light_Radiance_Distance" xml:space="preserve">
+    <value>眼睛的距离</value>
+  </data>
+  <data name="Light_Radiance_Tilt" xml:space="preserve">
+    <value>板转开的角度</value>
+  </data>
+  <data name="Light_Radiance_Picture" xml:space="preserve">
+    <value>侧视：眼睛窄窄的视锥照到一块发光的板</value>
+  </data>
+  <data name="Light_Radiance_Panel" xml:space="preserve">
+    <value>发光的板</value>
+  </data>
+  <data name="Light_Radiance_Area" xml:space="preserve">
+    <value>看进去的面积：{0} 倍</value>
+  </data>
+  <data name="Light_Radiance_PerBit" xml:space="preserve">
+    <value>每一块送到眼睛的光：{0} 倍</value>
+  </data>
+  <data name="Light_Radiance_Total" xml:space="preserve">
+    <value>看起来的亮度：{0} 倍</value>
+  </data>
+  <data name="Light_Reflection_Title" xml:space="preserve">
+    <value>镜面、光滑面和毛面</value>
+  </data>
+  <data name="Light_Reflection_P1" xml:space="preserve">
+    <value>光落到表面上，又会离开，可它往哪儿走，要看表面是什么样的。镜子把光全部朝一个方向送出去，就像球从墙上弹回来；毛面的东西，比如纸，把光撒向四面八方。</value>
+  </data>
+  <data name="Light_Reflection_P2" xml:space="preserve">
+    <value>大多数东西介于两者之间：有光泽的油漆、擦亮的桌面。移动眼睛试试：镜子只有在一个位置才看得到灯；纸从哪儿看都差不多亮；光滑面上有一块跟着你走的亮斑。</value>
+  </data>
+  <data name="Light_Reflection_Deeper" xml:space="preserve">
+    <value>表面上方的形状表示光往每个方向走了多少。毛面是一个圆（离正上方角度的 cos）；镜面是镜像方向上的一根尖刺。</value>
+  </data>
+  <data name="Light_Reflection_Light" xml:space="preserve">
+    <value>光照进来的角度</value>
+  </data>
+  <data name="Light_Reflection_Roughness" xml:space="preserve">
+    <value>镜面 → 毛面</value>
+  </data>
+  <data name="Light_Reflection_Eye" xml:space="preserve">
+    <value>眼睛看的角度</value>
+  </data>
+  <data name="Light_Reflection_Picture" xml:space="preserve">
+    <value>侧视：光落到表面上，以及离开时的光的形状</value>
+  </data>
+  <data name="Light_Bounce_Title" xml:space="preserve">
+    <value>颜色，还有反弹的光</value>
+  </data>
+  <data name="Light_Bounce_P1" xml:space="preserve">
+    <value>红墙之所以是红的，是因为它把大部分红光送回来，别的颜色留下了。白色把所有颜色都送回来。没有反弹的时候，只有灯照得到的地方是亮的，盒子背光的一面一片漆黑。</value>
+  </data>
+  <data name="Light_Bounce_P2" xml:space="preserve">
+    <value>加一次反弹：被照亮的东西又去照亮别的东西。靠墙的地板泛起淡淡的红色，影子也被填亮了一些。第二次、第三次反弹，每次加得越来越少。所以房间里背光的地方，从来不会像只有灯照时那么黑。</value>
+  </data>
+  <data name="Light_Bounce_Deeper" xml:space="preserve">
+    <value>每一次反弹，都在每两点之间传一次光：一点送出的光 × 两点彼此正对的程度 ÷ 距离²。计算机图形学把这叫“辐射度”，或者“全局光照”。</value>
+  </data>
+  <data name="Light_Bounce_Count" xml:space="preserve">
+    <value>反弹次数</value>
+  </data>
+  <data name="Light_Bounce_Wall" xml:space="preserve">
+    <value>墙的颜色</value>
+  </data>
+  <data name="Light_Bounce_Red" xml:space="preserve">
+    <value>红</value>
+  </data>
+  <data name="Light_Bounce_Green" xml:space="preserve">
+    <value>绿</value>
+  </data>
+  <data name="Light_Bounce_Blue" xml:space="preserve">
+    <value>蓝</value>
+  </data>
+  <data name="Light_Bounce_Picture" xml:space="preserve">
+    <value>一盏灯照着白地板和白盒子，旁边是一面彩色的墙</value>
+  </data>
 </root>

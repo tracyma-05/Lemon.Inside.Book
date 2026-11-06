@@ -95,6 +95,80 @@
                                 <SelectableTextBlock Classes="note" Text="{Binding AngleText}" />
                             </StackPanel>
                         </DataTemplate>
+                        <DataTemplate DataType="light:SkySpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding ElevationText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Sky_Elevation}" />
+                                </DockPanel>
+                                <Slider Minimum="5" Maximum="90" Value="{Binding Elevation}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Light_Sky_Elevation}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DistanceText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Sky_Distance}" />
+                                </DockPanel>
+                                <Slider Minimum="1.6" Maximum="5" Value="{Binding Distance}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Light_Sky_Distance}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ShareText}" />
+                                <SelectableTextBlock Classes="note" Text="{loc:Localize Light_DragHint}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="light:RadianceSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DistanceText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Radiance_Distance}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="6" Value="{Binding Distance}" SmallChange="0.1" LargeChange="1"
+                                        AutomationProperties.Name="{loc:Localize Light_Radiance_Distance}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding TiltText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Radiance_Tilt}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="80" Value="{Binding Tilt}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Light_Radiance_Tilt}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="light:ReflectionSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding LightAngleText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Reflection_Light}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="80" Value="{Binding LightAngle}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Light_Reflection_Light}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding RoughnessText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Reflection_Roughness}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Roughness}" SmallChange="0.02" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Light_Reflection_Roughness}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding EyeAngleText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Reflection_Eye}" />
+                                </DockPanel>
+                                <Slider Minimum="-80" Maximum="80" Value="{Binding EyeAngle}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Light_Reflection_Eye}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="light:BounceSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BouncesText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Light_Bounce_Count}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="3" Value="{Binding Bounces}" SmallChange="1" LargeChange="1"
+                                        IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Light_Bounce_Count}" />
+                                <SelectableTextBlock Classes="caption" Margin="0,10,0,2" Text="{loc:Localize Light_Bounce_Wall}" />
+                                <WrapPanel>
+                                    <RadioButton Classes="chip" GroupName="LightWall" IsChecked="{Binding IsRed}" Content="{loc:Localize Light_Bounce_Red}" />
+                                    <RadioButton Classes="chip" GroupName="LightWall" IsChecked="{Binding IsGreen}" Content="{loc:Localize Light_Bounce_Green}" />
+                                    <RadioButton Classes="chip" GroupName="LightWall" IsChecked="{Binding IsBlue}" Content="{loc:Localize Light_Bounce_Blue}" />
+                                </WrapPanel>
+                                <SelectableTextBlock Classes="note" Text="{loc:Localize Light_DragHint}" />
+                            </StackPanel>
+                        </DataTemplate>
                         <DataTemplate DataType="light:ShadowSpread">
                             <StackPanel>
                                 <DockPanel Margin="0,12,0,2">

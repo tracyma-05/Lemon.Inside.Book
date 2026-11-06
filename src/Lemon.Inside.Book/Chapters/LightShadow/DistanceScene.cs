@@ -1,6 +1,7 @@
 using System.Numerics;
 using Avalonia;
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -18,10 +19,10 @@ public sealed class DistanceScene : SceneView
     private const float Square = 0.5f;
 
     private static readonly Vector3 Lamp = new(-2.2f, 1.2f, 0);
-    private static readonly IPen EdgePen = new Pen(new SolidColorBrush(Color.FromArgb(0xB0, 0xF2, 0xC9, 0x4C)), 1.2);
-    private static readonly IPen GridPen = new Pen(new SolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 1);
-    private static readonly IPen GhostPen = new Pen(new SolidColorBrush(Color.FromArgb(0x40, 0xE6, 0xEA, 0xF2)), 1, new DashStyle([3, 4], 0));
-    private static readonly IPen AxisPen = new Pen(new SolidColorBrush(Color.FromArgb(0x60, 0xE6, 0xEA, 0xF2)), 1);
+    private static readonly IPen EdgePen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xB0, 0xF2, 0xC9, 0x4C)), 1.2);
+    private static readonly IPen GridPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 1);
+    private static readonly IPen GhostPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x40, 0xE6, 0xEA, 0xF2)), 1, new ImmutableDashStyle([3, 4], 0));
+    private static readonly IPen AxisPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x60, 0xE6, 0xEA, 0xF2)), 1);
 
     static DistanceScene()
     {

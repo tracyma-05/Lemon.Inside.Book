@@ -68,7 +68,7 @@ public sealed class LightShadowTests
     public void TheSpreads_SayWhatTheirPicturesShow()
     {
         var light = new LightShadowViewModel();
-        Assert.Equal(5, light.Spreads.Count);
+        Assert.Equal(BookContents.Chapters.Single(c => c.Slug == "Light-Shadow").Spreads, light.Spreads.Count);
 
         light.Tilt.Tilt = 60;
         Assert.Equal(2, light.Tilt.PatchLength, 6);
@@ -99,12 +99,58 @@ public sealed class LightShadowTests
         Assert.Equal(1, BrightnessScene.Looks(3), 6);
     }
 
+    [Fact]
+    public void AGlowingPanel_LooksAsBright_NearOrFar_StraightOnOrSlanted()
+    {
+        foreach (var (d, tilt) in new[] { (1.0, 0.0), (3.0, 0.0), (2.0, 60.0), (5.0, 75.0) })
+        {
+            Assert.Equal(1, RadianceDiagram.AreaSeen(d, tilt) * RadianceDiagram.LightPerBit(d, tilt), 9);
+        }
+    }
+
+    [Fact]
+    public void TheLampsShareOfTheCircle_FallsWithDistance_AndWithSlant()
+    {
+        var overhead = SkyScene.FloorShare(90, 2);
+        Assert.True(SkyScene.FloorShare(90, 4) < overhead / 3.5); // about a quarter at twice the distance
+        Assert.True(SkyScene.FloorShare(30, 2) < overhead * 0.6);  // about sin 30° = half, low over the horizon
+        Assert.InRange(overhead, 0.05, 0.15);
+    }
+
+    [Fact]
+    public void AMirror_SendsLightOneWay_AndMatteEveryWay()
+    {
+        Assert.Equal(1, ReflectionDiagram.Leaving(40, 40, 0), 6);
+        Assert.True(ReflectionDiagram.Leaving(0, 40, 0) < 1e-3);
+        Assert.Equal(1, ReflectionDiagram.Leaving(0, 40, 1), 6);
+        Assert.Equal(0.5, ReflectionDiagram.Leaving(60, 10, 1), 6);
+    }
+
+    [Fact]
+    public void ABounce_TintsTheWhiteFloor_WithTheWallsColour()
+    {
+        var mesh = new SceneMesh();
+        mesh.AddQuad(new Vector3(0, 0, 1), new Vector3(2, 0, 0), new Vector3(0, 0, -2), 8, new Vector3(0.8f));               // white floor
+        mesh.AddQuad(new Vector3(0, 0, -1), new Vector3(0, 2, 0), new Vector3(0, 0, 2), 8, new Vector3(0.8f, 0.1f, 0.1f)); // red wall at x = 0
+        const int floorVertices = 81;
+        var lit = Enumerable.Range(0, mesh.VertexCount).Select(i => i >= floorVertices ? new Vector3(1) : Vector3.Zero).ToArray();
+        var once = Radiosity.Bounce(mesh, lit, 1);
+
+        var floorByWall = once[(4 * 9) + 1];
+        Assert.True(floorByWall.X > 4 * floorByWall.Y, floorByWall.ToString());
+        Assert.Equal(lit[100], once[100]); // the wall gets nothing back from a floor that was dark
+    }
+
     [AvaloniaFact]
     public void EverySpread_DrawsItsPicture()
     {
         var (window, model) = OpenAt("Light-Shadow");
         var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
-        Type[] pictures = [typeof(BrightnessScene), typeof(TiltDiagram), typeof(DistanceScene), typeof(AngleDiagram), typeof(ShadowScene)];
+        Type[] pictures =
+        [
+            typeof(BrightnessScene), typeof(TiltDiagram), typeof(DistanceScene), typeof(AngleDiagram), typeof(SkyScene),
+            typeof(RadianceDiagram), typeof(ReflectionDiagram), typeof(ShadowScene), typeof(BounceScene),
+        ];
         for (var s = 0; s < pictures.Length; s++)
         {
             model.GoToPage(BookContents.SpreadPage(chapter, s));
@@ -114,6 +160,13 @@ public sealed class LightShadowTests
             Snapshot(window, $"light-shadow-{s + 1}");
         }
 
+        // The last spread again, with two bounces worked out in full.
+        var last = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, pictures.Length - 1)]);
+        last.Light.Bounce.Bounces = 2;
+        Frames(2);
+        window.GetVisualDescendants().OfType<BounceScene>().First(c => c.IsEffectivelyVisible).Settle();
+        Frames(2);
+        Snapshot(window, "light-shadow-9-two-bounces");
         window.Close();
     }
 
@@ -122,7 +175,8 @@ public sealed class LightShadowTests
     {
         var (window, model) = OpenAt("Light-Shadow");
         var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
-        model.GoToPage(BookContents.SpreadPage(chapter, 4));
+        var shadow = new LightShadowViewModel().Spreads.ToList().FindIndex(s => s is ShadowSpread);
+        model.GoToPage(BookContents.SpreadPage(chapter, shadow));
         Frames(5);
         var scene = window.GetVisualDescendants().OfType<ShadowScene>().First(c => c.IsEffectivelyVisible);
         Assert.True(scene.PictureSize.Width > 10);
@@ -131,14 +185,14 @@ public sealed class LightShadowTests
         scene.Camera.Drag(40, 0);
         Assert.NotEqual(yaw, scene.Camera.Yaw);
 
-        var page = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 4)]);
+        var page = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, shadow)]);
         page.Light.Shadow.LightSize = 1.5;
         Frames(2);
         Assert.True(scene.IsCoarse);
         scene.Settle();
         Frames(2);
         Assert.False(scene.IsCoarse);
-        Snapshot(window, "light-shadow-5-big-lamp");
+        Snapshot(window, "light-shadow-8-big-lamp");
         window.Close();
     }
 
