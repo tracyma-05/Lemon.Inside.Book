@@ -1,0 +1,40 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:gears="using:Lemon.Inside.Book.Chapters.Gears"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Gears.GearsDiagramPageView"
+                         x:DataType="gears:GearsDiagramPageViewModel">
+    <!-- A right page of the Gears chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <ContentControl Content="{Binding Spread}">
+                <ContentControl.DataTemplates>
+                    <DataTemplate DataType="gears:RatioSpread">
+                        <gears:RatioDiagram DriverTeeth="{Binding DriverTeeth}" DrivenTeeth="{Binding DrivenTeeth}"
+                                            AutomationProperties.Name="{loc:Localize Gears_Ratio_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="gears:TorqueSpread">
+                        <gears:TorqueDiagram DrivenTeeth="{Binding DrivenTeeth}" AutomationProperties.Name="{loc:Localize Gears_Torque_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="gears:InvoluteSpread">
+                        <gears:InvoluteDiagram Unwound="{Binding Unwound}" AutomationProperties.Name="{loc:Localize Gears_Involute_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="gears:MeshSpread">
+                        <gears:MeshDiagram PressureAngle="{Binding PressureAngle}" Speed="{Binding Speed}"
+                                           AutomationProperties.Name="{loc:Localize Gears_Mesh_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="gears:TrainSpread">
+                        <gears:TrainDiagram Steps="{Binding Steps}" AutomationProperties.Name="{loc:Localize Gears_Train_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="gears:PlanetarySpread">
+                        <gears:PlanetaryDiagram SunTeeth="{Binding SunTeeth}" Held="{Binding Held}"
+                                                AutomationProperties.Name="{loc:Localize Gears_Planet_Picture}" />
+                    </DataTemplate>
+                </ContentControl.DataTemplates>
+            </ContentControl>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

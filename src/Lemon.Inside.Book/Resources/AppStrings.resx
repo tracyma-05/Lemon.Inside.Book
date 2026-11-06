@@ -567,4 +567,232 @@
   <data name="Light_Bounce_Picture" xml:space="preserve">
     <value>A lamp over a white floor and box beside a coloured wall</value>
   </data>
+  <data name="Gears_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Gears_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Gears_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Gears_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Gears_TeethCount" xml:space="preserve">
+    <value>{0} teeth</value>
+  </data>
+  <data name="Gears_Turns" xml:space="preserve">
+    <value>{0} turns</value>
+  </data>
+  <data name="Gears_Ratio_Title" xml:space="preserve">
+    <value>Wheels that turn each other</value>
+  </data>
+  <data name="Gears_Ratio_P1" xml:space="preserve">
+    <value>Press two wheels together and turn one: the other turns the opposite way. Where they touch, both rims move the same distance, so the small wheel has to spin round more times to keep up with the big one.</value>
+  </data>
+  <data name="Gears_Ratio_P2" xml:space="preserve">
+    <value>Smooth wheels slip once the load gets heavy. Teeth stop that: each tooth pushes into a gap on the other wheel, so the two can never slide past each other, and counting teeth tells you exactly how their speeds compare.</value>
+  </data>
+  <data name="Gears_Ratio_Deeper" xml:space="preserve">
+    <value>Turns of the driven gear = turns of the driving gear × driving teeth ÷ driven teeth. The dashed circles are the rolling circles (pitch circles): the two smooth wheels that the gears behave like.</value>
+  </data>
+  <data name="Gears_Ratio_Driver" xml:space="preserve">
+    <value>Teeth on the gold (driving) gear</value>
+  </data>
+  <data name="Gears_Ratio_Driven" xml:space="preserve">
+    <value>Teeth on the grey (driven) gear</value>
+  </data>
+  <data name="Gears_Ratio_Readout" xml:space="preserve">
+    <value>For each turn of the gold gear, the grey one turns {0} times.</value>
+  </data>
+  <data name="Gears_Ratio_Picture" xml:space="preserve">
+    <value>Two gears in mesh: the gold one drives the grey one</value>
+  </data>
+  <data name="Gears_Ratio_Circles" xml:space="preserve">
+    <value>Dashed: the rolling circles</value>
+  </data>
+  <data name="Gears_Torque_Title" xml:space="preserve">
+    <value>Slower, but stronger</value>
+  </data>
+  <data name="Gears_Torque_P1" xml:space="preserve">
+    <value>Gears cannot make something out of nothing. When a small gear drives a big one, the big gear turns slower, and in return it turns harder. The teeth push on each other equally hard, but the big gear feels that push further from its centre, like a longer spanner.</value>
+  </data>
+  <data name="Gears_Torque_P2" xml:space="preserve">
+    <value>That is how a hand crank lifts a heavy load: a small gear turns a big drum gear, trading speed for force. Run it the other way round and you trade force for speed, which is what a bicycle does when its big front sprocket spins the small back one fast.</value>
+  </data>
+  <data name="Gears_Torque_Deeper" xml:space="preserve">
+    <value>Turning force (torque) = push × distance from the centre. With 3 times as many teeth, the drum turns 3 times slower and 3 times harder: speed × turning force stays the same, apart from what friction takes.</value>
+  </data>
+  <data name="Gears_Torque_Driven" xml:space="preserve">
+    <value>Teeth on the drum gear</value>
+  </data>
+  <data name="Gears_Torque_Readout" xml:space="preserve">
+    <value>The drum turns at {0} times the crank's speed, with {1} times its turning force.</value>
+  </data>
+  <data name="Gears_Torque_Picture" xml:space="preserve">
+    <value>A hand crank on a small gear turns a big gear with a drum that lifts a weight</value>
+  </data>
+  <data name="Gears_Torque_Hand" xml:space="preserve">
+    <value>your hand</value>
+  </data>
+  <data name="Gears_Torque_Load" xml:space="preserve">
+    <value>load</value>
+  </data>
+  <data name="Gears_Torque_Speed" xml:space="preserve">
+    <value>speed</value>
+  </data>
+  <data name="Gears_Torque_Force" xml:space="preserve">
+    <value>turning force</value>
+  </data>
+  <data name="Gears_Torque_Crank" xml:space="preserve">
+    <value>crank</value>
+  </data>
+  <data name="Gears_Torque_Drum" xml:space="preserve">
+    <value>drum</value>
+  </data>
+  <data name="Gears_Involute_Title" xml:space="preserve">
+    <value>The shape of a tooth</value>
+  </data>
+  <data name="Gears_Involute_P1" xml:space="preserve">
+    <value>Wind a string round a can, tie a pencil to its end and unwind it, keeping the string tight. The pencil draws a curve that spirals away from the can. Good gear teeth have exactly this curve on both sides. It is called an involute.</value>
+  </data>
+  <data name="Gears_Involute_P2" xml:space="preserve">
+    <value>Why that curve? The tight string always meets the curve at a right angle. So when two such teeth press on each other, the push always runs along one straight line, at one angle, however far the gears have turned. The gears turn smoothly, without tugging or rattling.</value>
+  </data>
+  <data name="Gears_Involute_Deeper" xml:space="preserve">
+    <value>The can is the gear's base circle. The string that has come off is as long as the arc of the can it came off, so the pencil moves away steadily as you unwind.</value>
+  </data>
+  <data name="Gears_Involute_Unwind" xml:space="preserve">
+    <value>Unwind the string</value>
+  </data>
+  <data name="Gears_Involute_Picture" xml:space="preserve">
+    <value>A string unwound from a can; its end draws the curve of a gear tooth</value>
+  </data>
+  <data name="Gears_Involute_Can" xml:space="preserve">
+    <value>can</value>
+  </data>
+  <data name="Gears_Involute_String" xml:space="preserve">
+    <value>string</value>
+  </data>
+  <data name="Gears_Involute_Pencil" xml:space="preserve">
+    <value>pencil</value>
+  </data>
+  <data name="Gears_Involute_Ghost" xml:space="preserve">
+    <value>Faint: a gear whose tooth has this curve as its side</value>
+  </data>
+  <data name="Gears_Mesh_Title" xml:space="preserve">
+    <value>Where the teeth touch</value>
+  </data>
+  <data name="Gears_Mesh_P1" xml:space="preserve">
+    <value>Watch the gold dots: they mark where teeth are touching. Each one slides along the same slanted line, from where a pair of teeth first meet to where they let go. Before one pair lets go, the next pair has already met, so the push never stops.</value>
+  </data>
+  <data name="Gears_Mesh_P2" xml:space="preserve">
+    <value>The slant of that line is the pressure angle. A bigger angle makes teeth stubbier and stronger but pushes the gears apart harder; a smaller one is gentler but the teeth are thinner. Most gears today use 20°.</value>
+  </data>
+  <data name="Gears_Mesh_Deeper" xml:space="preserve">
+    <value>The line of action touches both base circles. It crosses the line between the centres at the pitch point, where the two rolling circles meet, and the push between the teeth always points along it.</value>
+  </data>
+  <data name="Gears_Mesh_Angle" xml:space="preserve">
+    <value>Pressure angle</value>
+  </data>
+  <data name="Gears_Mesh_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Gears_Mesh_Readout" xml:space="preserve">
+    <value>On average {0} pairs of teeth are touching.</value>
+  </data>
+  <data name="Gears_Mesh_Picture" xml:space="preserve">
+    <value>Two gears turning slowly, with the line of action and the points where teeth touch</value>
+  </data>
+  <data name="Gears_Mesh_Line" xml:space="preserve">
+    <value>line of action</value>
+  </data>
+  <data name="Gears_Mesh_Pitch" xml:space="preserve">
+    <value>pitch point</value>
+  </data>
+  <data name="Gears_Train_Title" xml:space="preserve">
+    <value>Gears in a row</value>
+  </data>
+  <data name="Gears_Train_P1" xml:space="preserve">
+    <value>One pair of gears can only slow things down so far before the big gear gets enormous. Instead, fix a small gear to the big one's axle and let it drive the next big gear. Each step multiplies the slowing.</value>
+  </data>
+  <data name="Gears_Train_P2" xml:space="preserve">
+    <value>Here every step turns the speed down 3 times. Two steps make 9, three make 27, four make 81. A clock uses steps like these to turn one fast shaft into a second hand, a minute hand and an hour hand.</value>
+  </data>
+  <data name="Gears_Train_Deeper" xml:space="preserve">
+    <value>Total ratio = ratio of step 1 × ratio of step 2 × … A small gear and a big gear on one axle (a compound gear) turn together, at the same speed.</value>
+  </data>
+  <data name="Gears_Train_Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="Gears_Train_Readout" xml:space="preserve">
+    <value>The last gear turns once for every {0} turns of the first.</value>
+  </data>
+  <data name="Gears_Train_Picture" xml:space="preserve">
+    <value>A gear train: small gears on the same axles as big ones, each driving the next</value>
+  </data>
+  <data name="Gears_Train_In" xml:space="preserve">
+    <value>In: {0} turns</value>
+  </data>
+  <data name="Gears_Train_Out" xml:space="preserve">
+    <value>Out: {0} turns</value>
+  </data>
+  <data name="Gears_Train_InLabel" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Gears_Planet_Title" xml:space="preserve">
+    <value>Gears inside a gear</value>
+  </data>
+  <data name="Gears_Planet_P1" xml:space="preserve">
+    <value>A sun gear sits in the middle, planet gears roll round it, and a ring with teeth on the inside holds them all. A frame, the carrier (the triangle), holds the planets' axles. Hold one of the three parts still, turn another, and the third comes out at a new speed.</value>
+  </data>
+  <data name="Gears_Planet_P2" xml:space="preserve">
+    <value>Hold the ring and the carrier creeps round slowly: a big reduction in a small space. Hold the carrier instead and the ring turns backwards. Car gearboxes, electric screwdrivers and bicycle hub gears switch between these just by braking different parts.</value>
+  </data>
+  <data name="Gears_Planet_Deeper" xml:space="preserve">
+    <value>Sun teeth × sun turns + ring teeth × ring turns = (sun teeth + ring teeth) × carrier turns. The part held makes 0 turns, and the other two follow from that.</value>
+  </data>
+  <data name="Gears_Planet_Hold" xml:space="preserve">
+    <value>Hold still</value>
+  </data>
+  <data name="Gears_Planet_Ring" xml:space="preserve">
+    <value>Ring</value>
+  </data>
+  <data name="Gears_Planet_Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Gears_Planet_Carrier" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="Gears_Planet_RingName" xml:space="preserve">
+    <value>ring</value>
+  </data>
+  <data name="Gears_Planet_SunName" xml:space="preserve">
+    <value>sun</value>
+  </data>
+  <data name="Gears_Planet_CarrierName" xml:space="preserve">
+    <value>carrier</value>
+  </data>
+  <data name="Gears_Planet_SunTeeth" xml:space="preserve">
+    <value>Teeth on the sun</value>
+  </data>
+  <data name="Gears_Planet_Readout" xml:space="preserve">
+    <value>Turn the {0} once and the {1} turns {2} times.</value>
+  </data>
+  <data name="Gears_Planet_ReadoutBack" xml:space="preserve">
+    <value>Turn the {0} once and the {1} turns {2} times, backwards.</value>
+  </data>
+  <data name="Gears_Planet_Picture" xml:space="preserve">
+    <value>A planetary gear set: a sun, three planets on a carrier, and a ring</value>
+  </data>
+  <data name="Gears_Planet_HeldLabel" xml:space="preserve">
+    <value>held</value>
+  </data>
+  <data name="Gears_Planet_InLabel" xml:space="preserve">
+    <value>Turned by hand: {0}</value>
+  </data>
+  <data name="Gears_Planet_OutLabel" xml:space="preserve">
+    <value>Comes out: {0}</value>
+  </data>
 </root>

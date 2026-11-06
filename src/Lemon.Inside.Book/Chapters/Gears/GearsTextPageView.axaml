@@ -1,0 +1,145 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:gears="using:Lemon.Inside.Book.Chapters.Gears"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Gears.GearsTextPageView"
+                              x:DataType="gears:GearsTextPageViewModel">
+    <!-- A left page of the Gears chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="gears:RatioSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DriverText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Ratio_Driver}" />
+                                </DockPanel>
+                                <Slider Minimum="8" Maximum="30" Value="{Binding DriverTeeth}" SmallChange="1" LargeChange="4" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Gears_Ratio_Driver}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DrivenText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Ratio_Driven}" />
+                                </DockPanel>
+                                <Slider Minimum="8" Maximum="60" Value="{Binding DrivenTeeth}" SmallChange="1" LargeChange="6" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Gears_Ratio_Driven}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="gears:TorqueSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DrivenText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Torque_Driven}" />
+                                </DockPanel>
+                                <Slider Minimum="12" Maximum="60" Value="{Binding DrivenTeeth}" SmallChange="1" LargeChange="6" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Gears_Torque_Driven}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="gears:InvoluteSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding UnwoundText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Involute_Unwind}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="240" Value="{Binding Unwound}" SmallChange="1" LargeChange="15"
+                                        AutomationProperties.Name="{loc:Localize Gears_Involute_Unwind}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="gears:MeshSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PressureText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Mesh_Angle}" />
+                                </DockPanel>
+                                <Slider Minimum="14" Maximum="30" Value="{Binding PressureAngle}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Gears_Mesh_Angle}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Mesh_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Speed}" SmallChange="0.05" LargeChange="0.25"
+                                        AutomationProperties.Name="{loc:Localize Gears_Mesh_Speed}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding PairsText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="gears:TrainSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding StepsText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Train_Steps}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="4" Value="{Binding Steps}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Gears_Train_Steps}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="gears:PlanetarySpread">
+                            <StackPanel>
+                                <SelectableTextBlock Classes="caption" Margin="0,10,0,2" Text="{loc:Localize Gears_Planet_Hold}" />
+                                <WrapPanel>
+                                    <RadioButton Classes="chip" GroupName="GearsHeld" IsChecked="{Binding IsRingHeld}" Content="{loc:Localize Gears_Planet_Ring}" />
+                                    <RadioButton Classes="chip" GroupName="GearsHeld" IsChecked="{Binding IsSunHeld}" Content="{loc:Localize Gears_Planet_Sun}" />
+                                    <RadioButton Classes="chip" GroupName="GearsHeld" IsChecked="{Binding IsCarrierHeld}" Content="{loc:Localize Gears_Planet_Carrier}" />
+                                </WrapPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SunText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Gears_Planet_SunTeeth}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="4" Value="{Binding SunStep}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Gears_Planet_SunTeeth}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

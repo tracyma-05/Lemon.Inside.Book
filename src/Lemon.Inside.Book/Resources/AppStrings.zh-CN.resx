@@ -567,4 +567,232 @@
   <data name="Light_Bounce_Picture" xml:space="preserve">
     <value>一盏灯照着白地板和白盒子，旁边是一面彩色的墙</value>
   </data>
+  <data name="Gears_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Gears_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Gears_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Gears_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Gears_TeethCount" xml:space="preserve">
+    <value>{0} 个齿</value>
+  </data>
+  <data name="Gears_Turns" xml:space="preserve">
+    <value>{0} 圈</value>
+  </data>
+  <data name="Gears_Ratio_Title" xml:space="preserve">
+    <value>互相带着转的轮子</value>
+  </data>
+  <data name="Gears_Ratio_P1" xml:space="preserve">
+    <value>把两个轮子挤在一起，转动其中一个，另一个就会反着转。在它们接触的地方，两个轮子的边走过的路一样长，所以小轮子得多转几圈，才跟得上大轮子。</value>
+  </data>
+  <data name="Gears_Ratio_P2" xml:space="preserve">
+    <value>光滑的轮子一吃力就会打滑。齿就是为了不打滑：每个齿都推进对面轮子的齿缝里，两个轮子再也滑不开；数一数齿，就能准确知道它们转得一快一慢差多少。</value>
+  </data>
+  <data name="Gears_Ratio_Deeper" xml:space="preserve">
+    <value>从动轮转的圈数 = 主动轮转的圈数 × 主动轮齿数 ÷ 从动轮齿数。虚线圆是“滚动圆”（节圆）：两个齿轮转起来，就像这两个光滑的轮子在互相滚动。</value>
+  </data>
+  <data name="Gears_Ratio_Driver" xml:space="preserve">
+    <value>金色主动轮的齿数</value>
+  </data>
+  <data name="Gears_Ratio_Driven" xml:space="preserve">
+    <value>灰色从动轮的齿数</value>
+  </data>
+  <data name="Gears_Ratio_Readout" xml:space="preserve">
+    <value>金色齿轮每转一圈，灰色齿轮转 {0} 圈。</value>
+  </data>
+  <data name="Gears_Ratio_Picture" xml:space="preserve">
+    <value>两个啮合的齿轮：金色的带着灰色的转</value>
+  </data>
+  <data name="Gears_Ratio_Circles" xml:space="preserve">
+    <value>虚线：滚动圆</value>
+  </data>
+  <data name="Gears_Torque_Title" xml:space="preserve">
+    <value>慢一点，力气大一点</value>
+  </data>
+  <data name="Gears_Torque_P1" xml:space="preserve">
+    <value>齿轮不能凭空变出东西。小齿轮带大齿轮时，大齿轮转得慢了，作为交换，它转起来更有劲。两边的齿互相推的力一样大，可这股力作用在离大齿轮中心更远的地方，就像用了一把更长的扳手。</value>
+  </data>
+  <data name="Gears_Torque_P2" xml:space="preserve">
+    <value>手摇绞车就是这样提起重物的：小齿轮带动装着绞盘的大齿轮，用速度换来力气。反过来用，就是用力气换速度：自行车前面的大牙盘带着后面的小飞轮飞快地转。</value>
+  </data>
+  <data name="Gears_Torque_Deeper" xml:space="preserve">
+    <value>转动的力（扭矩）= 推力 × 到中心的距离。齿数多 3 倍，绞盘就慢 3 倍、劲大 3 倍：速度 × 扭矩不变（除去摩擦损耗的那一点）。</value>
+  </data>
+  <data name="Gears_Torque_Driven" xml:space="preserve">
+    <value>绞盘齿轮的齿数</value>
+  </data>
+  <data name="Gears_Torque_Readout" xml:space="preserve">
+    <value>绞盘的转速是摇把的 {0} 倍，扭矩是摇把的 {1} 倍。</value>
+  </data>
+  <data name="Gears_Torque_Picture" xml:space="preserve">
+    <value>摇把带小齿轮，小齿轮带着装绞盘的大齿轮，把重物提起来</value>
+  </data>
+  <data name="Gears_Torque_Hand" xml:space="preserve">
+    <value>你的手</value>
+  </data>
+  <data name="Gears_Torque_Load" xml:space="preserve">
+    <value>重物</value>
+  </data>
+  <data name="Gears_Torque_Speed" xml:space="preserve">
+    <value>转速</value>
+  </data>
+  <data name="Gears_Torque_Force" xml:space="preserve">
+    <value>扭矩</value>
+  </data>
+  <data name="Gears_Torque_Crank" xml:space="preserve">
+    <value>摇把</value>
+  </data>
+  <data name="Gears_Torque_Drum" xml:space="preserve">
+    <value>绞盘</value>
+  </data>
+  <data name="Gears_Involute_Title" xml:space="preserve">
+    <value>齿的形状</value>
+  </data>
+  <data name="Gears_Involute_P1" xml:space="preserve">
+    <value>把一根线绕在罐头上，线头绑一支铅笔，拉紧线往外放。铅笔会画出一条绕着罐头向外展开的曲线。好的齿轮，每个齿的两侧正是这条曲线，它叫“渐开线”。</value>
+  </data>
+  <data name="Gears_Involute_P2" xml:space="preserve">
+    <value>为什么是这条曲线？拉紧的线总是和它画出的曲线成直角。所以两个这样的齿互相推的时候，推力总沿着同一条直线、同一个方向，不管齿轮转到哪里。齿轮就转得平稳，不会一顿一顿地发抖。</value>
+  </data>
+  <data name="Gears_Involute_Deeper" xml:space="preserve">
+    <value>罐头就是齿轮的“基圆”。放出来的线有多长，就等于它从罐头上绕下来的那段弧有多长，所以越往外放，铅笔离得越远。</value>
+  </data>
+  <data name="Gears_Involute_Unwind" xml:space="preserve">
+    <value>放线</value>
+  </data>
+  <data name="Gears_Involute_Picture" xml:space="preserve">
+    <value>从罐头上放出的线，线头画出齿轮齿的曲线</value>
+  </data>
+  <data name="Gears_Involute_Can" xml:space="preserve">
+    <value>罐头</value>
+  </data>
+  <data name="Gears_Involute_String" xml:space="preserve">
+    <value>线</value>
+  </data>
+  <data name="Gears_Involute_Pencil" xml:space="preserve">
+    <value>铅笔</value>
+  </data>
+  <data name="Gears_Involute_Ghost" xml:space="preserve">
+    <value>淡色：齿的侧面正是这条曲线的齿轮</value>
+  </data>
+  <data name="Gears_Mesh_Title" xml:space="preserve">
+    <value>齿在哪里相碰</value>
+  </data>
+  <data name="Gears_Mesh_P1" xml:space="preserve">
+    <value>看金色的点：它们标出齿和齿相碰的地方。每个点都沿着同一条斜线滑动，从一对齿刚碰上，到它们分开。前一对还没分开，下一对就已经碰上了，所以推力从不间断。</value>
+  </data>
+  <data name="Gears_Mesh_P2" xml:space="preserve">
+    <value>这条线斜多少，叫“压力角”。角度大，齿又短又壮，可也更用力地把两个齿轮往外推；角度小，推得温和些，可齿就细了。现在的齿轮大多用 20°。</value>
+  </data>
+  <data name="Gears_Mesh_Deeper" xml:space="preserve">
+    <value>这条“啮合线”同时贴着两个基圆，在两圆心连线上与之相交的那一点叫“节点”，正是两个滚动圆相切的地方。齿间的推力始终沿着这条线。</value>
+  </data>
+  <data name="Gears_Mesh_Angle" xml:space="preserve">
+    <value>压力角</value>
+  </data>
+  <data name="Gears_Mesh_Speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="Gears_Mesh_Readout" xml:space="preserve">
+    <value>平均有 {0} 对齿同时接触。</value>
+  </data>
+  <data name="Gears_Mesh_Picture" xml:space="preserve">
+    <value>两个慢慢转动的齿轮，画出啮合线和齿相碰的点</value>
+  </data>
+  <data name="Gears_Mesh_Line" xml:space="preserve">
+    <value>啮合线</value>
+  </data>
+  <data name="Gears_Mesh_Pitch" xml:space="preserve">
+    <value>节点</value>
+  </data>
+  <data name="Gears_Train_Title" xml:space="preserve">
+    <value>一串齿轮</value>
+  </data>
+  <data name="Gears_Train_P1" xml:space="preserve">
+    <value>一对齿轮能减速的倍数有限，再多大齿轮就大得离谱了。办法是：在大齿轮的轴上再装一个小齿轮，让它去带下一个大齿轮。每多一级，减速的倍数就再乘一次。</value>
+  </data>
+  <data name="Gears_Train_P2" xml:space="preserve">
+    <value>这里每一级都把转速降到三分之一。两级就是 9 倍，三级 27 倍，四级 81 倍。钟表就是用这样一级一级的齿轮，把一根转得快的轴变成秒针、分针和时针。</value>
+  </data>
+  <data name="Gears_Train_Deeper" xml:space="preserve">
+    <value>总传动比 = 第一级的传动比 × 第二级的传动比 × …… 装在同一根轴上的小齿轮和大齿轮（叫“复合齿轮”）一起转，转速相同。</value>
+  </data>
+  <data name="Gears_Train_Steps" xml:space="preserve">
+    <value>级数</value>
+  </data>
+  <data name="Gears_Train_Readout" xml:space="preserve">
+    <value>第一个齿轮转 {0} 圈，最后一个才转一圈。</value>
+  </data>
+  <data name="Gears_Train_Picture" xml:space="preserve">
+    <value>齿轮系：小齿轮和大齿轮同轴，一级带一级</value>
+  </data>
+  <data name="Gears_Train_In" xml:space="preserve">
+    <value>输入：{0} 圈</value>
+  </data>
+  <data name="Gears_Train_Out" xml:space="preserve">
+    <value>输出：{0} 圈</value>
+  </data>
+  <data name="Gears_Train_InLabel" xml:space="preserve">
+    <value>输入</value>
+  </data>
+  <data name="Gears_Planet_Title" xml:space="preserve">
+    <value>齿轮里的齿轮</value>
+  </data>
+  <data name="Gears_Planet_P1" xml:space="preserve">
+    <value>中间是“太阳轮”，几个“行星轮”绕着它滚，外面一圈内侧带齿的“齿圈”把它们围住。一个架子（“行星架”，图中的三角形）托着行星轮的轴。把三样中的一样固定住，转动另一样，第三样就以新的速度转出来。</value>
+  </data>
+  <data name="Gears_Planet_P2" xml:space="preserve">
+    <value>固定齿圈，行星架就慢慢地转：小小的空间里减速很多。改成固定行星架，齿圈就倒着转。汽车自动变速箱、电动螺丝刀、自行车的内变速花鼓，就是靠刹住不同的部件来换挡的。</value>
+  </data>
+  <data name="Gears_Planet_Deeper" xml:space="preserve">
+    <value>太阳轮齿数 × 太阳轮圈数 + 齿圈齿数 × 齿圈圈数 = （太阳轮齿数 + 齿圈齿数）× 行星架圈数。被固定的部件转 0 圈，另外两个就由这个式子决定。</value>
+  </data>
+  <data name="Gears_Planet_Hold" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="Gears_Planet_Ring" xml:space="preserve">
+    <value>齿圈</value>
+  </data>
+  <data name="Gears_Planet_Sun" xml:space="preserve">
+    <value>太阳轮</value>
+  </data>
+  <data name="Gears_Planet_Carrier" xml:space="preserve">
+    <value>行星架</value>
+  </data>
+  <data name="Gears_Planet_RingName" xml:space="preserve">
+    <value>齿圈</value>
+  </data>
+  <data name="Gears_Planet_SunName" xml:space="preserve">
+    <value>太阳轮</value>
+  </data>
+  <data name="Gears_Planet_CarrierName" xml:space="preserve">
+    <value>行星架</value>
+  </data>
+  <data name="Gears_Planet_SunTeeth" xml:space="preserve">
+    <value>太阳轮的齿数</value>
+  </data>
+  <data name="Gears_Planet_Readout" xml:space="preserve">
+    <value>{0}转一圈，{1}转 {2} 圈。</value>
+  </data>
+  <data name="Gears_Planet_ReadoutBack" xml:space="preserve">
+    <value>{0}转一圈，{1}倒着转 {2} 圈。</value>
+  </data>
+  <data name="Gears_Planet_Picture" xml:space="preserve">
+    <value>行星齿轮：太阳轮、行星架上的三个行星轮和齿圈</value>
+  </data>
+  <data name="Gears_Planet_HeldLabel" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="Gears_Planet_InLabel" xml:space="preserve">
+    <value>手转：{0}</value>
+  </data>
+  <data name="Gears_Planet_OutLabel" xml:space="preserve">
+    <value>输出：{0}</value>
+  </data>
 </root>

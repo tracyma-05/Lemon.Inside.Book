@@ -9,6 +9,7 @@
              xmlns:pageViews="using:Lemon.Inside.Book.Views.Pages"
              xmlns:controls="using:Lemon.Book.Shell.Controls"
              xmlns:light="using:Lemon.Inside.Book.Chapters.LightShadow"
+             xmlns:gears="using:Lemon.Inside.Book.Chapters.Gears"
              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
              x:Class="Lemon.Inside.Book.Views.MainView"
@@ -22,6 +23,8 @@
     <UserControl.DataTemplates>
         <DataTemplate DataType="light:LightShadowTextPageViewModel"><light:LightShadowTextPageView /></DataTemplate>
         <DataTemplate DataType="light:LightShadowDiagramPageViewModel"><light:LightShadowDiagramPageView /></DataTemplate>
+        <DataTemplate DataType="gears:GearsTextPageViewModel"><gears:GearsTextPageView /></DataTemplate>
+        <DataTemplate DataType="gears:GearsDiagramPageViewModel"><gears:GearsDiagramPageView /></DataTemplate>
         <DataTemplate DataType="pages:CoverPageViewModel"><pageViews:CoverPageView /></DataTemplate>
         <DataTemplate DataType="pages:HowToUsePageViewModel"><pageViews:HowToUsePageView /></DataTemplate>
         <DataTemplate DataType="pages:TitlePageViewModel"><pageViews:TitlePageView /></DataTemplate>
