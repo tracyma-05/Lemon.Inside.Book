@@ -1,4 +1,5 @@
 using Lemon.Book.Shell.Controls.Explore;
+using Lemon.Book.Shell.Explore.Narration;
 using Lemon.Book.Shell.Infrastructures.Localization;
 using Lemon.Book.Shell.ViewModels.Pages;
 using Lemon.Inside.Book.Contents;
@@ -10,9 +11,9 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 public static class LightShadowChapter
 {
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
-        Chapter chapter, int number, int textPage, IBookNavigator navigator)
+        Chapter chapter, int number, int textPage, IBookNavigator navigator, INarrationService narration)
     {
-        var light = new LightShadowViewModel();
+        var light = new LightShadowViewModel(narration);
         var pages = new List<(PageViewModel, PageViewModel)>();
         for (var i = 0; i < light.Spreads.Count; i++)
         {

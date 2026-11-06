@@ -1044,4 +1044,463 @@
   <data name="Watch_Layer_Dial" xml:space="preserve">
     <value>表盘与指针</value>
   </data>
+  <data name="Narr_Common_Right" xml:space="preserve">
+    <value>答对了！</value>
+  </data>
+  <data name="Narr_Common_Wrong" xml:space="preserve">
+    <value>不太对哦，我们来看看答案。</value>
+  </data>
+  <data name="Narr_Common_Nice" xml:space="preserve">
+    <value>很好，就是这样！</value>
+  </data>
+  <data name="Narr_Common_Reveal" xml:space="preserve">
+    <value>时间到啦，我们来看看正确答案。</value>
+  </data>
+  <data name="Narr_Common_MoveOn" xml:space="preserve">
+    <value>我们先接着往下看，等会儿可以再试一试。</value>
+  </data>
+  <data name="Narr_Light_Brightness_01" xml:space="preserve">
+    <value>灯开得很小，地上只有一小片暗暗的光。</value>
+  </data>
+  <data name="Narr_Light_Brightness_02" xml:space="preserve">
+    <value>功率加倍，落到地上的光多了一倍，亮了很多。</value>
+  </data>
+  <data name="Narr_Light_Brightness_03" xml:space="preserve">
+    <value>再加到八倍。光又多了好多，可地面看上去没亮多少。</value>
+  </data>
+  <data name="Narr_Light_Brightness_04" xml:space="preserve">
+    <value>那么，落到地上的光多一倍，地面看起来会亮一倍吗？</value>
+  </data>
+  <data name="Narr_Light_Brightness_05" xml:space="preserve">
+    <value>轮到你了：把灯开到最大，看看灯下会怎样。</value>
+  </data>
+  <data name="Light_Brightness_Quiz1" xml:space="preserve">
+    <value>会，正好亮一倍</value>
+  </data>
+  <data name="Light_Brightness_Quiz2" xml:space="preserve">
+    <value>不会，亮得不到一倍</value>
+  </data>
+  <data name="Light_Brightness_Quiz3" xml:space="preserve">
+    <value>不会，亮得超过一倍</value>
+  </data>
+  <data name="Narr_Light_Tilt_01" xml:space="preserve">
+    <value>光束垂直照下来，板上亮的那块正好和光束一样宽。</value>
+  </data>
+  <data name="Narr_Light_Tilt_02" xml:space="preserve">
+    <value>把板斜过来。同一束光落在更长的一块上，每一处分到的就少了。</value>
+  </data>
+  <data name="Narr_Light_Tilt_03" xml:space="preserve">
+    <value>轮到你了：把板斜到六十度，看看亮的那块变成多长。</value>
+  </data>
+  <data name="Narr_Light_Tilt_04" xml:space="preserve">
+    <value>亮的那块现在长了一倍。每一处有多亮？</value>
+  </data>
+  <data name="Light_Tilt_Quiz1" xml:space="preserve">
+    <value>亮一倍</value>
+  </data>
+  <data name="Light_Tilt_Quiz2" xml:space="preserve">
+    <value>一样亮</value>
+  </data>
+  <data name="Light_Tilt_Quiz3" xml:space="preserve">
+    <value>只有一半亮</value>
+  </data>
+  <data name="Narr_Light_Distance_01" xml:space="preserve">
+    <value>跟着穿过一个方格的光走，这个方格离灯一米。</value>
+  </data>
+  <data name="Narr_Light_Distance_02" xml:space="preserve">
+    <value>到两米远，这些光铺满四个方格，每格只分到四分之一。</value>
+  </data>
+  <data name="Narr_Light_Distance_03" xml:space="preserve">
+    <value>到三米远，它铺满九个方格。</value>
+  </data>
+  <data name="Narr_Light_Distance_04" xml:space="preserve">
+    <value>那么在三米远，每个方格分到的光是一米时的多少？</value>
+  </data>
+  <data name="Light_Distance_Quiz1" xml:space="preserve">
+    <value>九分之一</value>
+  </data>
+  <data name="Light_Distance_Quiz2" xml:space="preserve">
+    <value>三分之一</value>
+  </data>
+  <data name="Light_Distance_Quiz3" xml:space="preserve">
+    <value>一样多</value>
+  </data>
+  <data name="Narr_Light_Angle_01" xml:space="preserve">
+    <value>车离得近，在你眼里车头车尾隔得很开，夹角很大。</value>
+  </data>
+  <data name="Narr_Light_Angle_02" xml:space="preserve">
+    <value>远一倍，车头车尾之间的夹角就只剩大约一半。</value>
+  </data>
+  <data name="Narr_Light_Angle_03" xml:space="preserve">
+    <value>轮到你了：把车挪到二十米远，看看夹角变得多小。</value>
+  </data>
+  <data name="Narr_Light_Angle_04" xml:space="preserve">
+    <value>东西看起来多大，就是这个夹角。换成一块面，比如一盏灯，就是它占了你视野的多少。</value>
+  </data>
+  <data name="Narr_Light_Sky_01" xml:space="preserve">
+    <value>站在地上的一个点抬头看：头顶是一个半球形的天，灯就在正上方。</value>
+  </data>
+  <data name="Narr_Light_Sky_02" xml:space="preserve">
+    <value>把这个半球压扁成一个圆。灯占的那一块，就是这个点得到的光的份额。</value>
+  </data>
+  <data name="Narr_Light_Sky_03" xml:space="preserve">
+    <value>把灯放低。它那一块挤到圆边上，变得又扁又窄，份额也小了。</value>
+  </data>
+  <data name="Narr_Light_Sky_04" xml:space="preserve">
+    <value>轮到你了：把灯挪远，看看那一块怎么缩小。</value>
+  </data>
+  <data name="Narr_Light_Sky_05" xml:space="preserve">
+    <value>哪盏灯给这个点的光更多？</value>
+  </data>
+  <data name="Light_Sky_Quiz1" xml:space="preserve">
+    <value>又远又低的灯</value>
+  </data>
+  <data name="Light_Sky_Quiz2" xml:space="preserve">
+    <value>又近又在正上方的灯</value>
+  </data>
+  <data name="Light_Sky_Quiz3" xml:space="preserve">
+    <value>两盏一样</value>
+  </data>
+  <data name="Narr_Light_Radiance_01" xml:space="preserve">
+    <value>一块发光的板，正对着眼睛，离两米远。</value>
+  </data>
+  <data name="Narr_Light_Radiance_02" xml:space="preserve">
+    <value>退到四米。每一小块送来的光少了，可眼睛看进去的板多了四倍，所以看起来一样亮。</value>
+  </data>
+  <data name="Narr_Light_Radiance_03" xml:space="preserve">
+    <value>轮到你了：把板转斜，看看它是不是变暗了。</value>
+  </data>
+  <data name="Narr_Light_Radiance_04" xml:space="preserve">
+    <value>你从一面亮着的墙前退到两倍远。它看起来有多亮？</value>
+  </data>
+  <data name="Light_Radiance_Quiz1" xml:space="preserve">
+    <value>一样亮</value>
+  </data>
+  <data name="Light_Radiance_Quiz2" xml:space="preserve">
+    <value>四分之一亮</value>
+  </data>
+  <data name="Light_Radiance_Quiz3" xml:space="preserve">
+    <value>一半亮</value>
+  </data>
+  <data name="Narr_Light_Reflection_01" xml:space="preserve">
+    <value>一面完美的镜子：光怎么斜着进来，就怎么斜着出去，全都朝一个方向。</value>
+  </data>
+  <data name="Narr_Light_Reflection_02" xml:space="preserve">
+    <value>眼睛离开那个方向，镜子就一点光也不给它。</value>
+  </data>
+  <data name="Narr_Light_Reflection_03" xml:space="preserve">
+    <value>把表面变成完全哑光，像纸一样。光向四面八方散开，眼睛在哪儿都能看到那个亮点。</value>
+  </data>
+  <data name="Narr_Light_Reflection_04" xml:space="preserve">
+    <value>轮到你了：把粗糙度调到中间，像有光泽的油漆。</value>
+  </data>
+  <data name="Narr_Light_Reflection_05" xml:space="preserve">
+    <value>哪种表面上有一块亮光，会跟着你移动？</value>
+  </data>
+  <data name="Light_Reflection_Quiz1" xml:space="preserve">
+    <value>镜子</value>
+  </data>
+  <data name="Light_Reflection_Quiz2" xml:space="preserve">
+    <value>纸</value>
+  </data>
+  <data name="Light_Reflection_Quiz3" xml:space="preserve">
+    <value>有光泽的油漆</value>
+  </data>
+  <data name="Narr_Light_Shadow_01" xml:space="preserve">
+    <value>一盏很小的灯照着一个盒子。地上每个点要么看得见整盏灯，要么完全看不见，所以影子的边很清楚。</value>
+  </data>
+  <data name="Narr_Light_Shadow_02" xml:space="preserve">
+    <value>把灯变大。在影子边上，灯一部分被挡住、一部分没有，影子就慢慢淡开。</value>
+  </data>
+  <data name="Narr_Light_Shadow_03" xml:space="preserve">
+    <value>轮到你了：把灯升到最高，看看那道柔和的边。</value>
+  </data>
+  <data name="Narr_Light_Shadow_04" xml:space="preserve">
+    <value>为什么阴天的影子特别柔和？</value>
+  </data>
+  <data name="Light_Shadow_Quiz1" xml:space="preserve">
+    <value>太阳离得更远</value>
+  </data>
+  <data name="Light_Shadow_Quiz2" xml:space="preserve">
+    <value>整个亮着的天空就是一盏巨大的灯</value>
+  </data>
+  <data name="Light_Shadow_Quiz3" xml:space="preserve">
+    <value>云让地面变暗了</value>
+  </data>
+  <data name="Narr_Light_Bounce_01" xml:space="preserve">
+    <value>没有反弹：只有灯照到的地方亮，盒子背面一片漆黑。</value>
+  </data>
+  <data name="Narr_Light_Bounce_02" xml:space="preserve">
+    <value>反弹一次。被照亮的表面互相照亮，红墙边的地面染上了一点红。</value>
+  </data>
+  <data name="Narr_Light_Bounce_03" xml:space="preserve">
+    <value>轮到你了：把墙刷成蓝色，看看地上的颜色怎么变。</value>
+  </data>
+  <data name="Narr_Light_Bounce_04" xml:space="preserve">
+    <value>反弹三次。每一次加上的光都比上一次少，影子也被填亮了。</value>
+  </data>
+  <data name="Narr_Light_Bounce_05" xml:space="preserve">
+    <value>为什么屋里背光的地方从来不会漆黑一片？</value>
+  </data>
+  <data name="Light_Bounce_Quiz1" xml:space="preserve">
+    <value>光从墙上反弹进去</value>
+  </data>
+  <data name="Light_Bounce_Quiz2" xml:space="preserve">
+    <value>影子会漏一点光</value>
+  </data>
+  <data name="Light_Bounce_Quiz3" xml:space="preserve">
+    <value>光会拐弯绕过去</value>
+  </data>
+  <data name="Narr_Gears_Ratio_01" xml:space="preserve">
+    <value>两个齿数一样的齿轮：转得一样快，方向相反。</value>
+  </data>
+  <data name="Narr_Gears_Ratio_02" xml:space="preserve">
+    <value>让右边的齿轮多一倍齿。小齿轮转两圈，它才转一圈。</value>
+  </data>
+  <data name="Narr_Gears_Ratio_03" xml:space="preserve">
+    <value>轮到你了：让从动轮的齿数是主动轮的三倍。</value>
+  </data>
+  <data name="Narr_Gears_Ratio_04" xml:space="preserve">
+    <value>十个齿的齿轮带动三十个齿的齿轮。小齿轮转一圈，大齿轮转多少？</value>
+  </data>
+  <data name="Gears_Ratio_Quiz1" xml:space="preserve">
+    <value>三圈</value>
+  </data>
+  <data name="Gears_Ratio_Quiz2" xml:space="preserve">
+    <value>一圈</value>
+  </data>
+  <data name="Gears_Ratio_Quiz3" xml:space="preserve">
+    <value>三分之一圈</value>
+  </data>
+  <data name="Narr_Gears_Torque_01" xml:space="preserve">
+    <value>摇柄转动小齿轮，小齿轮再带动卷筒上的大齿轮。</value>
+  </data>
+  <data name="Narr_Gears_Torque_02" xml:space="preserve">
+    <value>把卷筒的齿轮换大。卷筒转得更慢了。</value>
+  </data>
+  <data name="Narr_Gears_Torque_03" xml:space="preserve">
+    <value>卷筒现在比摇柄转得慢。它换来了什么？</value>
+  </data>
+  <data name="Narr_Gears_Torque_04" xml:space="preserve">
+    <value>慢但有力，或者快但没劲：齿轮只是拿一样换另一样，从来不会凭空变出能量。</value>
+  </data>
+  <data name="Gears_Torque_Quiz1" xml:space="preserve">
+    <value>转得更有劲，能吊起更重的东西</value>
+  </data>
+  <data name="Gears_Torque_Quiz2" xml:space="preserve">
+    <value>什么也没有，能量白白损失了</value>
+  </data>
+  <data name="Gears_Torque_Quiz3" xml:space="preserve">
+    <value>它会倒着转</value>
+  </data>
+  <data name="Narr_Gears_Involute_01" xml:space="preserve">
+    <value>一根线绕在罐子上，线头系着一支铅笔。</value>
+  </data>
+  <data name="Narr_Gears_Involute_02" xml:space="preserve">
+    <value>轮到你了：把线至少放开半圈，看看铅笔画出的曲线。</value>
+  </data>
+  <data name="Narr_Gears_Involute_03" xml:space="preserve">
+    <value>绷紧的线总是和这条曲线成直角。好的齿轮，齿的两侧就是这条曲线。</value>
+  </data>
+  <data name="Narr_Gears_Involute_04" xml:space="preserve">
+    <value>齿形是这条曲线，两个齿就总是沿着同一条直线互相推，齿轮转起来才平稳。</value>
+  </data>
+  <data name="Narr_Gears_Mesh_01" xml:space="preserve">
+    <value>齿轮慢慢地转。看那个金色的点，那是两个齿碰在一起的地方。</value>
+  </data>
+  <data name="Narr_Gears_Mesh_02" xml:space="preserve">
+    <value>这个点沿着一条斜线滑动，从两个齿碰上，到它们分开。</value>
+  </data>
+  <data name="Narr_Gears_Mesh_03" xml:space="preserve">
+    <value>转快一点。前一对齿还没分开，下一对就已经碰上了，所以推力从不中断。</value>
+  </data>
+  <data name="Narr_Gears_Mesh_04" xml:space="preserve">
+    <value>轮到你了：把压力角调大，看看齿形。</value>
+  </data>
+  <data name="Narr_Gears_Mesh_05" xml:space="preserve">
+    <value>压力角调大，齿会怎样？</value>
+  </data>
+  <data name="Gears_Mesh_Quiz1" xml:space="preserve">
+    <value>更细、更柔和</value>
+  </data>
+  <data name="Gears_Mesh_Quiz2" xml:space="preserve">
+    <value>更短粗、更结实</value>
+  </data>
+  <data name="Gears_Mesh_Quiz3" xml:space="preserve">
+    <value>形状完全不变</value>
+  </data>
+  <data name="Narr_Gears_Train_01" xml:space="preserve">
+    <value>一级：小齿轮带动大齿轮，速度慢了三倍。</value>
+  </data>
+  <data name="Narr_Gears_Train_02" xml:space="preserve">
+    <value>两级：固定在大齿轮轴上的小齿轮，再带动下一个大齿轮。三乘三，慢了九倍。</value>
+  </data>
+  <data name="Narr_Gears_Train_03" xml:space="preserve">
+    <value>三级的话，最后一个齿轮慢了多少倍？</value>
+  </data>
+  <data name="Narr_Gears_Train_04" xml:space="preserve">
+    <value>轮到你了：加上第四级，看看最后一个齿轮爬得多慢。</value>
+  </data>
+  <data name="Gears_Train_Quiz1" xml:space="preserve">
+    <value>九倍</value>
+  </data>
+  <data name="Gears_Train_Quiz2" xml:space="preserve">
+    <value>二十七倍</value>
+  </data>
+  <data name="Gears_Train_Quiz3" xml:space="preserve">
+    <value>六倍</value>
+  </data>
+  <data name="Narr_Gears_Planet_01" xml:space="preserve">
+    <value>齿圈被固定住。转动太阳轮，行星轮绕着它滚，带着行星架慢慢转。</value>
+  </data>
+  <data name="Narr_Gears_Planet_02" xml:space="preserve">
+    <value>在很小的空间里就能大大减速，没有一个齿轮伸到外面。</value>
+  </data>
+  <data name="Narr_Gears_Planet_03" xml:space="preserve">
+    <value>轮到你了：改成固定行星架，看看齿圈往哪边转。</value>
+  </data>
+  <data name="Narr_Gears_Planet_04" xml:space="preserve">
+    <value>现在固定太阳轮。同样这几个齿轮，又给出另一种速度。</value>
+  </data>
+  <data name="Narr_Gears_Planet_05" xml:space="preserve">
+    <value>这样的变速箱怎样换挡？</value>
+  </data>
+  <data name="Gears_Planet_Quiz1" xml:space="preserve">
+    <value>固定另一个部件</value>
+  </data>
+  <data name="Gears_Planet_Quiz2" xml:space="preserve">
+    <value>把齿轮全换掉</value>
+  </data>
+  <data name="Gears_Planet_Quiz3" xml:space="preserve">
+    <value>把输入转得更快</value>
+  </data>
+  <data name="Narr_Watch_Spring_01" xml:space="preserve">
+    <value>发条快松完了，松松地贴在条盒壁上。</value>
+  </data>
+  <data name="Narr_Watch_Spring_02" xml:space="preserve">
+    <value>轮到你了：像拧表冠一样，把发条上满。</value>
+  </data>
+  <data name="Narr_Watch_Spring_03" xml:space="preserve">
+    <value>发条紧紧缠在条轴上，推着条盒转动，条盒上的齿带着整只表走大约四十个小时。</value>
+  </data>
+  <data name="Narr_Watch_Spring_04" xml:space="preserve">
+    <value>机械表的能量从哪里来？</value>
+  </data>
+  <data name="Watch_Spring_Quiz1" xml:space="preserve">
+    <value>一颗小电池</value>
+  </data>
+  <data name="Watch_Spring_Quiz2" xml:space="preserve">
+    <value>上紧的发条</value>
+  </data>
+  <data name="Watch_Spring_Quiz3" xml:space="preserve">
+    <value>照在表盘上的光</value>
+  </data>
+  <data name="Narr_Watch_Hands_01" xml:space="preserve">
+    <value>按真实速度，秒针一圈圈地走，别的指针好像不动。</value>
+  </data>
+  <data name="Narr_Watch_Hands_02" xml:space="preserve">
+    <value>快六十倍：分针现在一分钟走一圈。</value>
+  </data>
+  <data name="Narr_Watch_Hands_03" xml:space="preserve">
+    <value>轮到你了：把时间调到最快，看看时针怎么走。</value>
+  </data>
+  <data name="Narr_Watch_Hands_04" xml:space="preserve">
+    <value>哪根指针不是装在走时轮系上的？</value>
+  </data>
+  <data name="Watch_Hands_Quiz1" xml:space="preserve">
+    <value>秒针</value>
+  </data>
+  <data name="Watch_Hands_Quiz2" xml:space="preserve">
+    <value>分针</value>
+  </data>
+  <data name="Watch_Hands_Quiz3" xml:space="preserve">
+    <value>时针</value>
+  </data>
+  <data name="Narr_Watch_Escape_01" xml:space="preserve">
+    <value>慢动作：擒纵叉用一颗红宝石把擒纵轮卡住。</value>
+  </data>
+  <data name="Narr_Watch_Escape_02" xml:space="preserve">
+    <value>摆轮摆过中间，把擒纵叉拨到另一边。一颗宝石松开，擒纵轮跳一下，另一颗宝石又把它卡住。嘀。</value>
+  </data>
+  <data name="Narr_Watch_Escape_03" xml:space="preserve">
+    <value>齿滑过宝石时，顺手推了擒纵叉一下，这一下又传给了摆轮。</value>
+  </data>
+  <data name="Narr_Watch_Escape_04" xml:space="preserve">
+    <value>轮到你了：把慢动作调快，看嘀嗒变密。</value>
+  </data>
+  <data name="Narr_Watch_Escape_05" xml:space="preserve">
+    <value>是什么让摆轮一小时又一小时地摆下去？</value>
+  </data>
+  <data name="Watch_Escape_Quiz1" xml:space="preserve">
+    <value>擒纵轮每拍给的一下小推力</value>
+  </data>
+  <data name="Watch_Escape_Quiz2" xml:space="preserve">
+    <value>指针的重量</value>
+  </data>
+  <data name="Watch_Escape_Quiz3" xml:space="preserve">
+    <value>表盘下面的电池</value>
+  </data>
+  <data name="Narr_Watch_Balance_01" xml:space="preserve">
+    <value>摆轮大幅地来回摆动，每秒大约两次半。</value>
+  </data>
+  <data name="Narr_Watch_Balance_02" xml:space="preserve">
+    <value>现在摆幅小多了，就像发条快松完的时候。</value>
+  </data>
+  <data name="Narr_Watch_Balance_03" xml:space="preserve">
+    <value>摆幅变小了，表会走慢吗？</value>
+  </data>
+  <data name="Narr_Watch_Balance_04" xml:space="preserve">
+    <value>轮到你了：把游丝调硬一点，看看表每天快多少。</value>
+  </data>
+  <data name="Narr_Watch_Balance_05" xml:space="preserve">
+    <value>游丝差一点点，一天就差好几分钟，所以制表师调它时格外小心。</value>
+  </data>
+  <data name="Watch_Balance_Quiz1" xml:space="preserve">
+    <value>会，慢很多</value>
+  </data>
+  <data name="Watch_Balance_Quiz2" xml:space="preserve">
+    <value>不会，每次摆动用的时间一样</value>
+  </data>
+  <data name="Watch_Balance_Quiz3" xml:space="preserve">
+    <value>不会，反而走快</value>
+  </data>
+  <data name="Narr_Watch_Rotor_01" xml:space="preserve">
+    <value>手腕一动，沉沉的自动陀就摆起来，总是垂向下方。</value>
+  </data>
+  <data name="Narr_Watch_Rotor_02" xml:space="preserve">
+    <value>有了换向轮，往哪边摆都在给发条上弦。</value>
+  </data>
+  <data name="Narr_Watch_Rotor_03" xml:space="preserve">
+    <value>轮到你了：去掉换向轮，看看上弦怎样。</value>
+  </data>
+  <data name="Narr_Watch_Rotor_04" xml:space="preserve">
+    <value>没有换向轮会怎样？</value>
+  </data>
+  <data name="Narr_Watch_Rotor_05" xml:space="preserve">
+    <value>把它装回去。发条上满之后，条盒里会打滑，发条不会被拧断。</value>
+  </data>
+  <data name="Watch_Rotor_Quiz1" xml:space="preserve">
+    <value>上弦快一倍</value>
+  </data>
+  <data name="Watch_Rotor_Quiz2" xml:space="preserve">
+    <value>发条会断</value>
+  </data>
+  <data name="Watch_Rotor_Quiz3" xml:space="preserve">
+    <value>只有往一边摆才上弦</value>
+  </data>
+  <data name="Narr_Watch_Movement_01" xml:space="preserve">
+    <value>整个机芯装在一起。从这里只能看到表盘和指针。</value>
+  </data>
+  <data name="Narr_Watch_Movement_02" xml:space="preserve">
+    <value>把它一层层拉开：主夹板、条盒、走时轮系、擒纵与摆轮、跨轮系，还有表盘。</value>
+  </data>
+  <data name="Narr_Watch_Movement_03" xml:space="preserve">
+    <value>表盘藏起来了，可以看到下面的轮子。</value>
+  </data>
+  <data name="Narr_Watch_Movement_04" xml:space="preserve">
+    <value>轮到你了：把跨轮系也藏起来。</value>
+  </data>
+  <data name="Narr_Watch_Movement_05" xml:space="preserve">
+    <value>能量从底下的发条出发，一层层往上，一直送到顶上的指针。</value>
+  </data>
 </root>

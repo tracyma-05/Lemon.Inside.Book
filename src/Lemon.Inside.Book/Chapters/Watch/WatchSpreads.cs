@@ -4,28 +4,9 @@ using Lemon.Book.Shell.Infrastructures.Localization;
 
 namespace Lemon.Inside.Book.Chapters.Watch;
 
-/// <summary>
-/// One spread of the mechanical watch chapter: its title, two paragraphs, a closer look, and the settings its picture
-/// uses. The strings are <c>Watch_&lt;Key&gt;_Title</c>, <c>_P1</c>, <c>_P2</c> and <c>_Deeper</c>.
-/// </summary>
-public abstract class WatchSpread(string key) : ObservableObject
+/// <summary>One spread of the chapter (see <see cref="Spread"/>); the strings start <c>Watch_</c>.</summary>
+public abstract class WatchSpread(string key) : Spread("Watch", key)
 {
-    protected static ILocalizationService Text => LocalizationService.Instance;
-
-    public string Key { get; } = key;
-
-    public string Title => Text.GetString($"Watch_{Key}_Title");
-
-    public IReadOnlyList<string> Paragraphs => [Text.GetString($"Watch_{Key}_P1"), Text.GetString($"Watch_{Key}_P2")];
-
-    public string Deeper => Text.GetString($"Watch_{Key}_Deeper");
-
-    /// <summary>Every key the spread's own words use (for the localization tests).</summary>
-    public IEnumerable<string> TextKeys => new[] { "_Title", "_P1", "_P2", "_Deeper" }.Select(s => $"Watch_{Key}{s}");
-
-    /// <summary>The reader's language changed: every worded value is said again.</summary>
-    internal void OnLanguageChanged() => OnPropertyChanged(string.Empty);
-
     protected static string Number(double value, string format = "0") => value.ToString(format, CultureInfo.CurrentCulture);
 }
 
@@ -139,9 +120,15 @@ public sealed partial class MovementSpread() : WatchSpread("Movement")
 
     public bool IsShown(MovementLayer layer) => (Hidden & (1 << (int)layer)) == 0;
 
-    public void Show(MovementLayer layer, bool shown)
-    {
+    public void Show(MovementLayer layer, bool shown) =>
         Hidden = shown ? Hidden & ~(1 << (int)layer) : Hidden | (1 << (int)layer);
-        OnPropertyChanged($"Show{layer}");
+
+    // Whoever changes the hidden layers (a tick box, or the walkthrough), every tick box follows.
+    partial void OnHiddenChanged(int value)
+    {
+        foreach (var layer in Enum.GetValues<MovementLayer>())
+        {
+            OnPropertyChanged($"Show{layer}");
+        }
     }
 }

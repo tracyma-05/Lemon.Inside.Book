@@ -1044,4 +1044,463 @@
   <data name="Watch_Layer_Dial" xml:space="preserve">
     <value>Dial and hands</value>
   </data>
+  <data name="Narr_Common_Right" xml:space="preserve">
+    <value>That's right!</value>
+  </data>
+  <data name="Narr_Common_Wrong" xml:space="preserve">
+    <value>Not quite. Let's look at the answer.</value>
+  </data>
+  <data name="Narr_Common_Nice" xml:space="preserve">
+    <value>Nicely done!</value>
+  </data>
+  <data name="Narr_Common_Reveal" xml:space="preserve">
+    <value>Time's up! Here's the right answer.</value>
+  </data>
+  <data name="Narr_Common_MoveOn" xml:space="preserve">
+    <value>Let's keep going. You can try it again later.</value>
+  </data>
+  <data name="Narr_Light_Brightness_01" xml:space="preserve">
+    <value>Here the lamp is turned down low, and only a dim pool of light reaches the floor.</value>
+  </data>
+  <data name="Narr_Light_Brightness_02" xml:space="preserve">
+    <value>Double the power. Twice as much light lands on the floor, and the pool brightens a lot.</value>
+  </data>
+  <data name="Narr_Light_Brightness_03" xml:space="preserve">
+    <value>Now it is eight times that. More light again, yet the floor hardly looks brighter than before.</value>
+  </data>
+  <data name="Narr_Light_Brightness_04" xml:space="preserve">
+    <value>So when twice as much light reaches the floor, does the floor look twice as bright?</value>
+  </data>
+  <data name="Narr_Light_Brightness_05" xml:space="preserve">
+    <value>Your turn: turn the lamp all the way up and watch what happens under it.</value>
+  </data>
+  <data name="Light_Brightness_Quiz1" xml:space="preserve">
+    <value>Yes, exactly twice</value>
+  </data>
+  <data name="Light_Brightness_Quiz2" xml:space="preserve">
+    <value>No, less than twice</value>
+  </data>
+  <data name="Light_Brightness_Quiz3" xml:space="preserve">
+    <value>No, more than twice</value>
+  </data>
+  <data name="Narr_Light_Tilt_01" xml:space="preserve">
+    <value>The beam comes straight down, so the lit patch on the board is just as wide as the beam.</value>
+  </data>
+  <data name="Narr_Light_Tilt_02" xml:space="preserve">
+    <value>Tip the board. The same beam now lands on a longer patch, so each part of it gets less.</value>
+  </data>
+  <data name="Narr_Light_Tilt_03" xml:space="preserve">
+    <value>Your turn: tip the board to sixty degrees and read how long the patch gets.</value>
+  </data>
+  <data name="Narr_Light_Tilt_04" xml:space="preserve">
+    <value>The patch is now twice as long. How bright is each bit of it?</value>
+  </data>
+  <data name="Light_Tilt_Quiz1" xml:space="preserve">
+    <value>Twice as bright</value>
+  </data>
+  <data name="Light_Tilt_Quiz2" xml:space="preserve">
+    <value>Just as bright</value>
+  </data>
+  <data name="Light_Tilt_Quiz3" xml:space="preserve">
+    <value>Half as bright</value>
+  </data>
+  <data name="Narr_Light_Distance_01" xml:space="preserve">
+    <value>Follow the light that goes through one square, one metre from the lamp.</value>
+  </data>
+  <data name="Narr_Light_Distance_02" xml:space="preserve">
+    <value>At two metres that same light spreads over four squares, so each one gets a quarter.</value>
+  </data>
+  <data name="Narr_Light_Distance_03" xml:space="preserve">
+    <value>At three metres it covers nine squares.</value>
+  </data>
+  <data name="Narr_Light_Distance_04" xml:space="preserve">
+    <value>So at three metres, how much light does each square get, compared with one metre?</value>
+  </data>
+  <data name="Light_Distance_Quiz1" xml:space="preserve">
+    <value>A ninth</value>
+  </data>
+  <data name="Light_Distance_Quiz2" xml:space="preserve">
+    <value>A third</value>
+  </data>
+  <data name="Light_Distance_Quiz3" xml:space="preserve">
+    <value>Just as much</value>
+  </data>
+  <data name="Narr_Light_Angle_01" xml:space="preserve">
+    <value>The car is close, so in your view its two ends are far apart: a wide angle.</value>
+  </data>
+  <data name="Narr_Light_Angle_02" xml:space="preserve">
+    <value>Twice as far away, and the angle between its ends is about half as big.</value>
+  </data>
+  <data name="Narr_Light_Angle_03" xml:space="preserve">
+    <value>Your turn: move the car twenty metres away and see how small the angle gets.</value>
+  </data>
+  <data name="Narr_Light_Angle_04" xml:space="preserve">
+    <value>How big something looks is this angle. For a patch, like a lamp, it is how much of your view it fills.</value>
+  </data>
+  <data name="Narr_Light_Sky_01" xml:space="preserve">
+    <value>Stand on one spot of the floor and look up: a dome of sky, with the lamp right overhead.</value>
+  </data>
+  <data name="Narr_Light_Sky_02" xml:space="preserve">
+    <value>Press the dome flat into a circle. The lamp's patch is the share of light this spot gets.</value>
+  </data>
+  <data name="Narr_Light_Sky_03" xml:space="preserve">
+    <value>Bring the lamp down low. Its patch squashes thin near the rim, and the share drops.</value>
+  </data>
+  <data name="Narr_Light_Sky_04" xml:space="preserve">
+    <value>Your turn: move the lamp further away and watch its patch shrink.</value>
+  </data>
+  <data name="Narr_Light_Sky_05" xml:space="preserve">
+    <value>Which lamp gives this spot more light?</value>
+  </data>
+  <data name="Light_Sky_Quiz1" xml:space="preserve">
+    <value>A far lamp, low in the sky</value>
+  </data>
+  <data name="Light_Sky_Quiz2" xml:space="preserve">
+    <value>A near lamp, straight overhead</value>
+  </data>
+  <data name="Light_Sky_Quiz3" xml:space="preserve">
+    <value>Both give the same</value>
+  </data>
+  <data name="Narr_Light_Radiance_01" xml:space="preserve">
+    <value>A glowing panel, straight in front of the eye, two metres away.</value>
+  </data>
+  <data name="Narr_Light_Radiance_02" xml:space="preserve">
+    <value>Step back to four metres. Each bit sends you less, but you take in four times as much of the panel, so it looks just as bright.</value>
+  </data>
+  <data name="Narr_Light_Radiance_03" xml:space="preserve">
+    <value>Your turn: turn the panel away at a slant, and check whether it looks darker.</value>
+  </data>
+  <data name="Narr_Light_Radiance_04" xml:space="preserve">
+    <value>You walk twice as far away from a lit wall. How bright does it look?</value>
+  </data>
+  <data name="Light_Radiance_Quiz1" xml:space="preserve">
+    <value>Just as bright</value>
+  </data>
+  <data name="Light_Radiance_Quiz2" xml:space="preserve">
+    <value>A quarter as bright</value>
+  </data>
+  <data name="Light_Radiance_Quiz3" xml:space="preserve">
+    <value>Half as bright</value>
+  </data>
+  <data name="Narr_Light_Reflection_01" xml:space="preserve">
+    <value>A perfect mirror: the light leaves at the same angle it came in, all in one direction.</value>
+  </data>
+  <data name="Narr_Light_Reflection_02" xml:space="preserve">
+    <value>Move the eye away from that direction, and the mirror sends it nothing at all.</value>
+  </data>
+  <data name="Narr_Light_Reflection_03" xml:space="preserve">
+    <value>Now make the surface fully matte, like paper. The light scatters every way, so the eye sees the spot from anywhere.</value>
+  </data>
+  <data name="Narr_Light_Reflection_04" xml:space="preserve">
+    <value>Your turn: set the roughness in between, like glossy paint.</value>
+  </data>
+  <data name="Narr_Light_Reflection_05" xml:space="preserve">
+    <value>Which surface shows a bright highlight that moves when you move?</value>
+  </data>
+  <data name="Light_Reflection_Quiz1" xml:space="preserve">
+    <value>A mirror</value>
+  </data>
+  <data name="Light_Reflection_Quiz2" xml:space="preserve">
+    <value>Paper</value>
+  </data>
+  <data name="Light_Reflection_Quiz3" xml:space="preserve">
+    <value>Glossy paint</value>
+  </data>
+  <data name="Narr_Light_Shadow_01" xml:space="preserve">
+    <value>A tiny lamp over a box. Each spot of the floor sees all of it or none of it, so the shadow's edge is sharp.</value>
+  </data>
+  <data name="Narr_Light_Shadow_02" xml:space="preserve">
+    <value>Make the lamp big. Near the edge, part of the lamp is hidden and part is not, so the shadow fades gently.</value>
+  </data>
+  <data name="Narr_Light_Shadow_03" xml:space="preserve">
+    <value>Your turn: raise the lamp as high as it goes and watch the soft edge.</value>
+  </data>
+  <data name="Narr_Light_Shadow_04" xml:space="preserve">
+    <value>Why are shadows so soft on a cloudy day?</value>
+  </data>
+  <data name="Light_Shadow_Quiz1" xml:space="preserve">
+    <value>The sun is further away</value>
+  </data>
+  <data name="Light_Shadow_Quiz2" xml:space="preserve">
+    <value>The whole bright sky is one huge lamp</value>
+  </data>
+  <data name="Light_Shadow_Quiz3" xml:space="preserve">
+    <value>Clouds make the ground darker</value>
+  </data>
+  <data name="Narr_Light_Bounce_01" xml:space="preserve">
+    <value>No bounces: only what the lamp reaches is lit, and the box's far side is pitch black.</value>
+  </data>
+  <data name="Narr_Light_Bounce_02" xml:space="preserve">
+    <value>One bounce. Lit surfaces light each other, and the floor by the red wall picks up a red glow.</value>
+  </data>
+  <data name="Narr_Light_Bounce_03" xml:space="preserve">
+    <value>Your turn: paint the wall blue and watch the glow on the floor change.</value>
+  </data>
+  <data name="Narr_Light_Bounce_04" xml:space="preserve">
+    <value>Three bounces. Each one adds less than the last, and the shadows fill in.</value>
+  </data>
+  <data name="Narr_Light_Bounce_05" xml:space="preserve">
+    <value>Why is the shade in a room never pitch black?</value>
+  </data>
+  <data name="Light_Bounce_Quiz1" xml:space="preserve">
+    <value>Light bounces off the walls into it</value>
+  </data>
+  <data name="Light_Bounce_Quiz2" xml:space="preserve">
+    <value>Shadows leak a little light</value>
+  </data>
+  <data name="Light_Bounce_Quiz3" xml:space="preserve">
+    <value>Light bends round corners</value>
+  </data>
+  <data name="Narr_Gears_Ratio_01" xml:space="preserve">
+    <value>Two gears with the same number of teeth: they turn at the same speed, in opposite directions.</value>
+  </data>
+  <data name="Narr_Gears_Ratio_02" xml:space="preserve">
+    <value>Give the right gear twice the teeth. Now it turns once for every two turns of the small one.</value>
+  </data>
+  <data name="Narr_Gears_Ratio_03" xml:space="preserve">
+    <value>Your turn: give the driven gear three times as many teeth as the driver.</value>
+  </data>
+  <data name="Narr_Gears_Ratio_04" xml:space="preserve">
+    <value>A ten-tooth gear drives a thirty-tooth gear. One turn of the small gear turns the big one how far?</value>
+  </data>
+  <data name="Gears_Ratio_Quiz1" xml:space="preserve">
+    <value>Three turns</value>
+  </data>
+  <data name="Gears_Ratio_Quiz2" xml:space="preserve">
+    <value>One turn</value>
+  </data>
+  <data name="Gears_Ratio_Quiz3" xml:space="preserve">
+    <value>A third of a turn</value>
+  </data>
+  <data name="Narr_Gears_Torque_01" xml:space="preserve">
+    <value>The crank turns a small gear, and the small gear turns the drum's big gear.</value>
+  </data>
+  <data name="Narr_Gears_Torque_02" xml:space="preserve">
+    <value>Make the drum's gear bigger. The drum turns more slowly.</value>
+  </data>
+  <data name="Narr_Gears_Torque_03" xml:space="preserve">
+    <value>The drum now turns more slowly than the crank. What does it get in return?</value>
+  </data>
+  <data name="Narr_Gears_Torque_04" xml:space="preserve">
+    <value>Slower but stronger, or faster but weaker: gears trade one for the other, but never make energy from nothing.</value>
+  </data>
+  <data name="Gears_Torque_Quiz1" xml:space="preserve">
+    <value>It turns harder, so it lifts more</value>
+  </data>
+  <data name="Gears_Torque_Quiz2" xml:space="preserve">
+    <value>Nothing: the energy is lost</value>
+  </data>
+  <data name="Gears_Torque_Quiz3" xml:space="preserve">
+    <value>It turns the other way</value>
+  </data>
+  <data name="Narr_Gears_Involute_01" xml:space="preserve">
+    <value>A string wound round a can, with a pencil tied to its end.</value>
+  </data>
+  <data name="Narr_Gears_Involute_02" xml:space="preserve">
+    <value>Your turn: unwind the string at least halfway round and watch the curve the pencil draws.</value>
+  </data>
+  <data name="Narr_Gears_Involute_03" xml:space="preserve">
+    <value>The tight string always meets the curve at a right angle. That is the curve on both sides of a good gear tooth.</value>
+  </data>
+  <data name="Narr_Gears_Involute_04" xml:space="preserve">
+    <value>With this shape, two teeth always push along one straight line, so the gears turn smoothly.</value>
+  </data>
+  <data name="Narr_Gears_Mesh_01" xml:space="preserve">
+    <value>The gears turn slowly. Watch the gold dot where two teeth touch.</value>
+  </data>
+  <data name="Narr_Gears_Mesh_02" xml:space="preserve">
+    <value>The dot slides along one slanted line, from where the teeth meet to where they let go.</value>
+  </data>
+  <data name="Narr_Gears_Mesh_03" xml:space="preserve">
+    <value>Speed it up. Before one pair lets go, the next pair has already met, so the push never stops.</value>
+  </data>
+  <data name="Narr_Gears_Mesh_04" xml:space="preserve">
+    <value>Your turn: make the pressure angle bigger and look at the teeth.</value>
+  </data>
+  <data name="Narr_Gears_Mesh_05" xml:space="preserve">
+    <value>What does a bigger pressure angle give the teeth?</value>
+  </data>
+  <data name="Gears_Mesh_Quiz1" xml:space="preserve">
+    <value>Thinner and gentler</value>
+  </data>
+  <data name="Gears_Mesh_Quiz2" xml:space="preserve">
+    <value>Stubbier and stronger</value>
+  </data>
+  <data name="Gears_Mesh_Quiz3" xml:space="preserve">
+    <value>Exactly the same shape</value>
+  </data>
+  <data name="Narr_Gears_Train_01" xml:space="preserve">
+    <value>One step: a small gear drives a big one, and the speed drops three times.</value>
+  </data>
+  <data name="Narr_Gears_Train_02" xml:space="preserve">
+    <value>Two steps: a small gear fixed to the big one drives the next big gear. Three times three is nine.</value>
+  </data>
+  <data name="Narr_Gears_Train_03" xml:space="preserve">
+    <value>With three steps, how many times slower is the last gear?</value>
+  </data>
+  <data name="Narr_Gears_Train_04" xml:space="preserve">
+    <value>Your turn: add a fourth step and see how slowly the last gear creeps.</value>
+  </data>
+  <data name="Gears_Train_Quiz1" xml:space="preserve">
+    <value>Nine times</value>
+  </data>
+  <data name="Gears_Train_Quiz2" xml:space="preserve">
+    <value>Twenty-seven times</value>
+  </data>
+  <data name="Gears_Train_Quiz3" xml:space="preserve">
+    <value>Six times</value>
+  </data>
+  <data name="Narr_Gears_Planet_01" xml:space="preserve">
+    <value>The ring is held still. Turn the sun, and the planets roll round it, taking the carrier slowly with them.</value>
+  </data>
+  <data name="Narr_Gears_Planet_02" xml:space="preserve">
+    <value>That is a big slowing in a small space, with no gear sticking out to the side.</value>
+  </data>
+  <data name="Narr_Gears_Planet_03" xml:space="preserve">
+    <value>Your turn: hold the carrier instead, and watch which way the ring turns.</value>
+  </data>
+  <data name="Narr_Gears_Planet_04" xml:space="preserve">
+    <value>Now the sun is held. The same gears give yet another speed.</value>
+  </data>
+  <data name="Narr_Gears_Planet_05" xml:space="preserve">
+    <value>How does a gearbox like this change its speed?</value>
+  </data>
+  <data name="Gears_Planet_Quiz1" xml:space="preserve">
+    <value>By holding a different part still</value>
+  </data>
+  <data name="Gears_Planet_Quiz2" xml:space="preserve">
+    <value>By swapping all its gears</value>
+  </data>
+  <data name="Gears_Planet_Quiz3" xml:space="preserve">
+    <value>By turning the input faster</value>
+  </data>
+  <data name="Narr_Watch_Spring_01" xml:space="preserve">
+    <value>The mainspring has almost run down. It lies loose against the barrel wall.</value>
+  </data>
+  <data name="Narr_Watch_Spring_02" xml:space="preserve">
+    <value>Your turn: wind the spring all the way up, as the crown would.</value>
+  </data>
+  <data name="Narr_Watch_Spring_03" xml:space="preserve">
+    <value>Wound tight round the arbor, the spring pushes the barrel round, and the barrel's teeth drive the watch for about forty hours.</value>
+  </data>
+  <data name="Narr_Watch_Spring_04" xml:space="preserve">
+    <value>Where does a mechanical watch get its energy?</value>
+  </data>
+  <data name="Watch_Spring_Quiz1" xml:space="preserve">
+    <value>A tiny battery</value>
+  </data>
+  <data name="Watch_Spring_Quiz2" xml:space="preserve">
+    <value>A wound-up spring</value>
+  </data>
+  <data name="Watch_Spring_Quiz3" xml:space="preserve">
+    <value>The light on its dial</value>
+  </data>
+  <data name="Narr_Watch_Hands_01" xml:space="preserve">
+    <value>At real speed, the seconds hand sweeps round, and the other hands seem to stand still.</value>
+  </data>
+  <data name="Narr_Watch_Hands_02" xml:space="preserve">
+    <value>Sixty times faster: the minute hand now goes round once a minute.</value>
+  </data>
+  <data name="Narr_Watch_Hands_03" xml:space="preserve">
+    <value>Your turn: speed time up as far as it goes and watch the hour hand move.</value>
+  </data>
+  <data name="Narr_Watch_Hands_04" xml:space="preserve">
+    <value>Which hand is not carried by the going train itself?</value>
+  </data>
+  <data name="Watch_Hands_Quiz1" xml:space="preserve">
+    <value>The seconds hand</value>
+  </data>
+  <data name="Watch_Hands_Quiz2" xml:space="preserve">
+    <value>The minute hand</value>
+  </data>
+  <data name="Watch_Hands_Quiz3" xml:space="preserve">
+    <value>The hour hand</value>
+  </data>
+  <data name="Narr_Watch_Escape_01" xml:space="preserve">
+    <value>In slow motion: the lever holds the escape wheel still with one red stone.</value>
+  </data>
+  <data name="Narr_Watch_Escape_02" xml:space="preserve">
+    <value>The balance swings past the middle and flicks the lever across. One stone lets go, the wheel jumps, the other stone catches it. Tick.</value>
+  </data>
+  <data name="Narr_Watch_Escape_03" xml:space="preserve">
+    <value>As the tooth slips past the stone, it gives the lever a small push, and the lever passes it on to the balance.</value>
+  </data>
+  <data name="Narr_Watch_Escape_04" xml:space="preserve">
+    <value>Your turn: speed the slow motion up and watch the ticks come faster.</value>
+  </data>
+  <data name="Narr_Watch_Escape_05" xml:space="preserve">
+    <value>What keeps the balance swinging, hour after hour?</value>
+  </data>
+  <data name="Watch_Escape_Quiz1" xml:space="preserve">
+    <value>A small push from the escape wheel each beat</value>
+  </data>
+  <data name="Watch_Escape_Quiz2" xml:space="preserve">
+    <value>The weight of the hands</value>
+  </data>
+  <data name="Watch_Escape_Quiz3" xml:space="preserve">
+    <value>A battery under the dial</value>
+  </data>
+  <data name="Narr_Watch_Balance_01" xml:space="preserve">
+    <value>The balance swings wide, to and fro, about two and a half times a second.</value>
+  </data>
+  <data name="Narr_Watch_Balance_02" xml:space="preserve">
+    <value>Now the swing is much narrower, as when the spring is nearly run down.</value>
+  </data>
+  <data name="Narr_Watch_Balance_03" xml:space="preserve">
+    <value>The swing got narrower. Does the watch slow down?</value>
+  </data>
+  <data name="Narr_Watch_Balance_04" xml:space="preserve">
+    <value>Your turn: make the hairspring a little stiffer and read how much the watch gains a day.</value>
+  </data>
+  <data name="Narr_Watch_Balance_05" xml:space="preserve">
+    <value>A tiny change in the spring is minutes a day, which is why watchmakers adjust it so carefully.</value>
+  </data>
+  <data name="Watch_Balance_Quiz1" xml:space="preserve">
+    <value>Yes, a lot</value>
+  </data>
+  <data name="Watch_Balance_Quiz2" xml:space="preserve">
+    <value>No: each swing still takes the same time</value>
+  </data>
+  <data name="Watch_Balance_Quiz3" xml:space="preserve">
+    <value>No, it speeds up</value>
+  </data>
+  <data name="Narr_Watch_Rotor_01" xml:space="preserve">
+    <value>The wrist moves, and the heavy rotor swings so that it keeps hanging down.</value>
+  </data>
+  <data name="Narr_Watch_Rotor_02" xml:space="preserve">
+    <value>With the reverser, both directions of swing wind the mainspring.</value>
+  </data>
+  <data name="Narr_Watch_Rotor_03" xml:space="preserve">
+    <value>Your turn: take the reverser out and watch the winding.</value>
+  </data>
+  <data name="Narr_Watch_Rotor_04" xml:space="preserve">
+    <value>Without the reverser, what happens?</value>
+  </data>
+  <data name="Narr_Watch_Rotor_05" xml:space="preserve">
+    <value>Put it back. And once the spring is full, the barrel lets it slip instead of breaking it.</value>
+  </data>
+  <data name="Watch_Rotor_Quiz1" xml:space="preserve">
+    <value>It winds twice as fast</value>
+  </data>
+  <data name="Watch_Rotor_Quiz2" xml:space="preserve">
+    <value>The spring breaks</value>
+  </data>
+  <data name="Watch_Rotor_Quiz3" xml:space="preserve">
+    <value>Only one way of swinging winds the spring</value>
+  </data>
+  <data name="Narr_Watch_Movement_01" xml:space="preserve">
+    <value>The whole movement, put together. From here you only see the dial and hands.</value>
+  </data>
+  <data name="Narr_Watch_Movement_02" xml:space="preserve">
+    <value>Pull it apart into layers: the main plate, the barrel, the going train, the escapement and balance, the motion works and the dial.</value>
+  </data>
+  <data name="Narr_Watch_Movement_03" xml:space="preserve">
+    <value>The dial is hidden now, so you can see the wheels under it.</value>
+  </data>
+  <data name="Narr_Watch_Movement_04" xml:space="preserve">
+    <value>Your turn: hide the motion works too.</value>
+  </data>
+  <data name="Narr_Watch_Movement_05" xml:space="preserve">
+    <value>Energy flows from the spring at the bottom, up through each layer, to the hands at the top.</value>
+  </data>
 </root>

@@ -8,31 +8,47 @@
     <!-- A right page of the mechanical watch chapter: the spread's moving picture on a dark plate. -->
     <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
         <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
-            <ContentControl Content="{Binding Spread}">
-                <ContentControl.DataTemplates>
-                    <DataTemplate DataType="watch:SpringSpread">
-                        <watch:SpringDiagram Wound="{Binding Wound}" AutomationProperties.Name="{loc:Localize Watch_Spring_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="watch:HandsSpread">
-                        <watch:HandsDiagram Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="watch:EscapementSpread">
-                        <watch:EscapementDiagram SlowMotion="{Binding SlowMotion}" AutomationProperties.Name="{loc:Localize Watch_Escape_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="watch:BalanceSpread">
-                        <watch:BalanceDiagram Stiffness="{Binding Stiffness}" Amplitude="{Binding Amplitude}"
-                                              AutomationProperties.Name="{loc:Localize Watch_Balance_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="watch:RotorSpread">
-                        <watch:RotorDiagram Activity="{Binding Activity}" Reverser="{Binding Reverser}"
-                                            AutomationProperties.Name="{loc:Localize Watch_Rotor_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="watch:MovementSpread">
-                        <watch:MovementDiagram Explode="{Binding Explode}" Hidden="{Binding Hidden}"
-                                               AutomationProperties.Name="{loc:Localize Watch_Movement_Picture}" />
-                    </DataTemplate>
-                </ContentControl.DataTemplates>
-            </ContentControl>
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="watch:SpringSpread">
+                            <watch:SpringDiagram Wound="{Binding Wound}" AutomationProperties.Name="{loc:Localize Watch_Spring_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:HandsSpread">
+                            <watch:HandsDiagram Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:EscapementSpread">
+                            <watch:EscapementDiagram SlowMotion="{Binding SlowMotion}" AutomationProperties.Name="{loc:Localize Watch_Escape_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:BalanceSpread">
+                            <watch:BalanceDiagram Stiffness="{Binding Stiffness}" Amplitude="{Binding Amplitude}"
+                                                  AutomationProperties.Name="{loc:Localize Watch_Balance_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:RotorSpread">
+                            <watch:RotorDiagram Activity="{Binding Activity}" Reverser="{Binding Reverser}"
+                                                AutomationProperties.Name="{loc:Localize Watch_Rotor_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:MovementSpread">
+                            <watch:MovementDiagram Explode="{Binding Explode}" Hidden="{Binding Hidden}"
+                                                   AutomationProperties.Name="{loc:Localize Watch_Movement_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
         </Border>
 
         <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />

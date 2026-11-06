@@ -1,12 +1,2492 @@
 {
  "en": {
-  "clips": {},
+  "clips": {
+   "Narr_Common_MoveOn": {
+    "duration": 3.168,
+    "hash": "7f92fcf16bdadd37",
+    "sentences": [
+     [
+      0.05,
+      1.262,
+      "Let's keep going."
+     ],
+     [
+      1.262,
+      3.097,
+      "You can try it again later."
+     ]
+    ]
+   },
+   "Narr_Common_Nice": {
+    "duration": 1.392,
+    "hash": "a3569dde74fd8612",
+    "sentences": [
+     [
+      0.05,
+      1.333,
+      "Nicely done!"
+     ]
+    ]
+   },
+   "Narr_Common_Reveal": {
+    "duration": 2.952,
+    "hash": "06e6be56b7074765",
+    "sentences": [
+     [
+      0.05,
+      1.208,
+      "Time's up!"
+     ],
+     [
+      1.208,
+      2.903,
+      "Here's the right answer."
+     ]
+    ]
+   },
+   "Narr_Common_Right": {
+    "duration": 1.32,
+    "hash": "24bca8c4c340ebc6",
+    "sentences": [
+     [
+      0.05,
+      1.25,
+      "That's right!"
+     ]
+    ]
+   },
+   "Narr_Common_Wrong": {
+    "duration": 3.096,
+    "hash": "b923348234623eba",
+    "sentences": [
+     [
+      0.05,
+      1.375,
+      "Not quite."
+     ],
+     [
+      1.375,
+      3.028,
+      "Let's look at the answer."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_01": {
+    "duration": 4.68,
+    "hash": "95975c9c883975ce",
+    "sentences": [
+     [
+      0.05,
+      4.611,
+      "A string wound round a can, with a pencil tied to its end."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_02": {
+    "duration": 6.384,
+    "hash": "b30bd7f8ded6926b",
+    "sentences": [
+     [
+      0.05,
+      6.333,
+      "Your turn: unwind the string at least halfway round and watch the curve the pencil draws."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_03": {
+    "duration": 7.368,
+    "hash": "84e33ed07237f517",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "The tight string always meets the curve at a right angle."
+     ],
+     [
+      3.889,
+      7.306,
+      "That is the curve on both sides of a good gear tooth."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_04": {
+    "duration": 6.504,
+    "hash": "bb91ecfaa288c95c",
+    "sentences": [
+     [
+      0.05,
+      6.431,
+      "With this shape, two teeth always push along one straight line, so the gears turn smoothly."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_01": {
+    "duration": 5.136,
+    "hash": "77a02ebdf7562928",
+    "sentences": [
+     [
+      0.05,
+      2.111,
+      "The gears turn slowly."
+     ],
+     [
+      2.111,
+      5.083,
+      "Watch the gold dot where two teeth touch."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_02": {
+    "duration": 5.928,
+    "hash": "22d6a3c78a94eb86",
+    "sentences": [
+     [
+      0.05,
+      5.861,
+      "The dot slides along one slanted line, from where the teeth meet to where they let go."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_03": {
+    "duration": 7.752,
+    "hash": "9d67acf314de0660",
+    "sentences": [
+     [
+      0.05,
+      1.25,
+      "Speed it up."
+     ],
+     [
+      1.25,
+      7.681,
+      "Before one pair lets go, the next pair has already met, so the push never stops."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_04": {
+    "duration": 4.704,
+    "hash": "3ccbb22020c04599",
+    "sentences": [
+     [
+      0.05,
+      4.653,
+      "Your turn: make the pressure angle bigger and look at the teeth."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_05": {
+    "duration": 2.832,
+    "hash": "594d6e8ebfdee7a5",
+    "sentences": [
+     [
+      0.05,
+      2.778,
+      "What does a bigger pressure angle give the teeth?"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_01": {
+    "duration": 8.208,
+    "hash": "f792be9444df3c23",
+    "sentences": [
+     [
+      0.05,
+      1.958,
+      "The ring is held still."
+     ],
+     [
+      1.958,
+      8.139,
+      "Turn the sun, and the planets roll round it, taking the carrier slowly with them."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_02": {
+    "duration": 5.496,
+    "hash": "68e4710f5500d208",
+    "sentences": [
+     [
+      0.05,
+      5.444,
+      "That is a big slowing in a small space, with no gear sticking out to the side."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_03": {
+    "duration": 5.592,
+    "hash": "3f32ed4192e9000b",
+    "sentences": [
+     [
+      0.05,
+      5.528,
+      "Your turn: hold the carrier instead, and watch which way the ring turns."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_04": {
+    "duration": 4.704,
+    "hash": "c0afb4326f65acb1",
+    "sentences": [
+     [
+      0.05,
+      1.861,
+      "Now the sun is held."
+     ],
+     [
+      1.861,
+      4.639,
+      "The same gears give yet another speed."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_05": {
+    "duration": 3.192,
+    "hash": "beb103fe5ee1f7b2",
+    "sentences": [
+     [
+      0.05,
+      3.125,
+      "How does a gearbox like this change its speed?"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_01": {
+    "duration": 6.624,
+    "hash": "beab28abc39e7a7e",
+    "sentences": [
+     [
+      0.05,
+      6.569,
+      "Two gears with the same number of teeth: they turn at the same speed, in opposite directions."
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_02": {
+    "duration": 7.152,
+    "hash": "a7ee3303e93bf762",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "Give the right gear twice the teeth."
+     ],
+     [
+      2.722,
+      7.083,
+      "Now it turns once for every two turns of the small one."
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_03": {
+    "duration": 5.808,
+    "hash": "31d39d1e16ef165b",
+    "sentences": [
+     [
+      0.05,
+      5.75,
+      "Your turn: give the driven gear three times as many teeth as the driver."
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_04": {
+    "duration": 6.984,
+    "hash": "fd8c1d4b1e51893b",
+    "sentences": [
+     [
+      0.05,
+      3.292,
+      "A ten-tooth gear drives a thirty-tooth gear."
+     ],
+     [
+      3.292,
+      6.917,
+      "One turn of the small gear turns the big one how far?"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_01": {
+    "duration": 4.944,
+    "hash": "05aff503dcd3c876",
+    "sentences": [
+     [
+      0.05,
+      4.875,
+      "The crank turns a small gear, and the small gear turns the drum's big gear."
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_02": {
+    "duration": 4.248,
+    "hash": "61c1fff5ff378ce0",
+    "sentences": [
+     [
+      0.05,
+      1.889,
+      "Make the drum's gear bigger."
+     ],
+     [
+      1.889,
+      4.181,
+      "The drum turns more slowly."
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_03": {
+    "duration": 5.472,
+    "hash": "f70cc7b7e6935e28",
+    "sentences": [
+     [
+      0.05,
+      3.681,
+      "The drum now turns more slowly than the crank."
+     ],
+     [
+      3.681,
+      5.417,
+      "What does it get in return?"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_04": {
+    "duration": 9.12,
+    "hash": "cd4cd48ad4743769",
+    "sentences": [
+     [
+      0.05,
+      9.069,
+      "Slower but stronger, or faster but weaker: gears trade one for the other, but never make energy from nothing."
+     ]
+    ]
+   },
+   "Narr_Gears_Train_01": {
+    "duration": 5.856,
+    "hash": "78e83bdacf644666",
+    "sentences": [
+     [
+      0.05,
+      5.806,
+      "One step: a small gear drives a big one, and the speed drops three times."
+     ]
+    ]
+   },
+   "Narr_Gears_Train_02": {
+    "duration": 8.304,
+    "hash": "e8a38f4ca6685c1e",
+    "sentences": [
+     [
+      0.05,
+      5.569,
+      "Two steps: a small gear fixed to the big one drives the next big gear."
+     ],
+     [
+      5.569,
+      8.25,
+      "Three times three is nine."
+     ]
+    ]
+   },
+   "Narr_Gears_Train_03": {
+    "duration": 4.608,
+    "hash": "465ce92e3e105a83",
+    "sentences": [
+     [
+      0.05,
+      4.542,
+      "With three steps, how many times slower is the last gear?"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_04": {
+    "duration": 5.856,
+    "hash": "185efcbab8f74509",
+    "sentences": [
+     [
+      0.05,
+      5.792,
+      "Your turn: add a fourth step and see how slowly the last gear creeps."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_01": {
+    "duration": 6.072,
+    "hash": "9783db7e41fa496f",
+    "sentences": [
+     [
+      0.05,
+      6.014,
+      "The car is close, so in your view its two ends are far apart: a wide angle."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_02": {
+    "duration": 5.04,
+    "hash": "d05edc4894301ee6",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "Twice as far away, and the angle between its ends is about half as big."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_03": {
+    "duration": 5.76,
+    "hash": "2833a967ae6ed4ce",
+    "sentences": [
+     [
+      0.05,
+      5.694,
+      "Your turn: move the car twenty metres away and see how small the angle gets."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_04": {
+    "duration": 7.344,
+    "hash": "ed105ff8959ae300",
+    "sentences": [
+     [
+      0.05,
+      2.847,
+      "How big something looks is this angle."
+     ],
+     [
+      2.847,
+      7.292,
+      "For a patch, like a lamp, it is how much of your view it fills."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_01": {
+    "duration": 6.936,
+    "hash": "bc0a029d7eb40595",
+    "sentences": [
+     [
+      0.05,
+      6.875,
+      "No bounces: only what the lamp reaches is lit, and the box's far side is pitch black."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_02": {
+    "duration": 7.272,
+    "hash": "7fde0cd4619aff8b",
+    "sentences": [
+     [
+      0.05,
+      1.375,
+      "One bounce."
+     ],
+     [
+      1.375,
+      7.208,
+      "Lit surfaces light each other, and the floor by the red wall picks up a red glow."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_03": {
+    "duration": 5.52,
+    "hash": "b8508b41e88b2719",
+    "sentences": [
+     [
+      0.05,
+      5.458,
+      "Your turn: paint the wall blue and watch the glow on the floor change."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_04": {
+    "duration": 6.288,
+    "hash": "3659d525bb2c8229",
+    "sentences": [
+     [
+      0.05,
+      1.528,
+      "Three bounces."
+     ],
+     [
+      1.528,
+      6.236,
+      "Each one adds less than the last, and the shadows fill in."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_05": {
+    "duration": 3.528,
+    "hash": "0d77bba2754cf662",
+    "sentences": [
+     [
+      0.05,
+      3.458,
+      "Why is the shade in a room never pitch black?"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_01": {
+    "duration": 5.976,
+    "hash": "1a92463df03e6a80",
+    "sentences": [
+     [
+      0.05,
+      5.917,
+      "Here the lamp is turned down low, and only a dim pool of light reaches the floor."
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_02": {
+    "duration": 6.048,
+    "hash": "a3788339f2b04594",
+    "sentences": [
+     [
+      0.05,
+      1.264,
+      "Double the power."
+     ],
+     [
+      1.264,
+      5.986,
+      "Twice as much light lands on the floor, and the pool brightens a lot."
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_03": {
+    "duration": 7.176,
+    "hash": "2a8b1aca0d23fa59",
+    "sentences": [
+     [
+      0.05,
+      2.264,
+      "Now it is eight times that."
+     ],
+     [
+      2.264,
+      7.111,
+      "More light again, yet the floor hardly looks brighter than before."
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_04": {
+    "duration": 5.688,
+    "hash": "a5736696f51540da",
+    "sentences": [
+     [
+      0.05,
+      5.639,
+      "So when twice as much light reaches the floor, does the floor look twice as bright?"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_05": {
+    "duration": 4.776,
+    "hash": "a47ef24110e44b31",
+    "sentences": [
+     [
+      0.05,
+      4.747,
+      "Your turn: turn the lamp all the way up and watch what happens under it."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_01": {
+    "duration": 4.584,
+    "hash": "17e857097a2e064a",
+    "sentences": [
+     [
+      0.05,
+      4.528,
+      "Follow the light that goes through one square, one metre from the lamp."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_02": {
+    "duration": 6.24,
+    "hash": "b991fda19aeba9e0",
+    "sentences": [
+     [
+      0.05,
+      6.181,
+      "At two metres that same light spreads over four squares, so each one gets a quarter."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_03": {
+    "duration": 3.384,
+    "hash": "4cc7b54910cad5d0",
+    "sentences": [
+     [
+      0.05,
+      3.333,
+      "At three metres it covers nine squares."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_04": {
+    "duration": 6.264,
+    "hash": "3bfffa2c0a1a48c2",
+    "sentences": [
+     [
+      0.05,
+      6.208,
+      "So at three metres, how much light does each square get, compared with one metre?"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_01": {
+    "duration": 4.992,
+    "hash": "1071962e8fd0f1fb",
+    "sentences": [
+     [
+      0.05,
+      4.931,
+      "A glowing panel, straight in front of the eye, two metres away."
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_02": {
+    "duration": 8.736,
+    "hash": "bbe1d0526b0d8258",
+    "sentences": [
+     [
+      0.05,
+      2.278,
+      "Step back to four metres."
+     ],
+     [
+      2.278,
+      8.667,
+      "Each bit sends you less, but you take in four times as much of the panel, so it looks just as bright."
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_03": {
+    "duration": 5.4,
+    "hash": "f53ab33406a42d56",
+    "sentences": [
+     [
+      0.05,
+      5.333,
+      "Your turn: turn the panel away at a slant, and check whether it looks darker."
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_04": {
+    "duration": 4.944,
+    "hash": "cf531af3b9de70ee",
+    "sentences": [
+     [
+      0.05,
+      3.222,
+      "You walk twice as far away from a lit wall."
+     ],
+     [
+      3.222,
+      4.875,
+      "How bright does it look?"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_01": {
+    "duration": 6.528,
+    "hash": "2e1c9e95452f2c27",
+    "sentences": [
+     [
+      0.05,
+      6.472,
+      "A perfect mirror: the light leaves at the same angle it came in, all in one direction."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_02": {
+    "duration": 5.016,
+    "hash": "2bee72cf6eefa60a",
+    "sentences": [
+     [
+      0.05,
+      4.944,
+      "Move the eye away from that direction, and the mirror sends it nothing at all."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_03": {
+    "duration": 8.928,
+    "hash": "b792839958a0badd",
+    "sentences": [
+     [
+      0.05,
+      3.597,
+      "Now make the surface fully matte, like paper."
+     ],
+     [
+      3.597,
+      8.861,
+      "The light scatters every way, so the eye sees the spot from anywhere."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_04": {
+    "duration": 4.872,
+    "hash": "e60d6248a033ef64",
+    "sentences": [
+     [
+      0.05,
+      4.819,
+      "Your turn: set the roughness in between, like glossy paint."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_05": {
+    "duration": 4.488,
+    "hash": "a1cd4e84c25e1679",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "Which surface shows a bright highlight that moves when you move?"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_01": {
+    "duration": 7.752,
+    "hash": "fd1ae521b985d7ef",
+    "sentences": [
+     [
+      0.05,
+      2.361,
+      "A tiny lamp over a box."
+     ],
+     [
+      2.361,
+      7.694,
+      "Each spot of the floor sees all of it or none of it, so the shadow's edge is sharp."
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_02": {
+    "duration": 7.56,
+    "hash": "e9c82c57f91caf12",
+    "sentences": [
+     [
+      0.05,
+      1.667,
+      "Make the lamp big."
+     ],
+     [
+      1.667,
+      7.5,
+      "Near the edge, part of the lamp is hidden and part is not, so the shadow fades gently."
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_03": {
+    "duration": 5.592,
+    "hash": "955e323adf7e938d",
+    "sentences": [
+     [
+      0.05,
+      5.542,
+      "Your turn: raise the lamp as high as it goes and watch the soft edge."
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_04": {
+    "duration": 3.696,
+    "hash": "0181d887ca763a7a",
+    "sentences": [
+     [
+      0.05,
+      3.639,
+      "Why are shadows so soft on a cloudy day?"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_01": {
+    "duration": 7.176,
+    "hash": "8b9ce0d0273a7ca2",
+    "sentences": [
+     [
+      0.05,
+      7.111,
+      "Stand on one spot of the floor and look up: a dome of sky, with the lamp right overhead."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_02": {
+    "duration": 6.648,
+    "hash": "eba4c658152e7fbf",
+    "sentences": [
+     [
+      0.05,
+      2.778,
+      "Press the dome flat into a circle."
+     ],
+     [
+      2.778,
+      6.583,
+      "The lamp's patch is the share of light this spot gets."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_03": {
+    "duration": 6.36,
+    "hash": "9eea4b2d03ee039f",
+    "sentences": [
+     [
+      0.05,
+      1.917,
+      "Bring the lamp down low."
+     ],
+     [
+      1.917,
+      6.306,
+      "Its patch squashes thin near the rim, and the share drops."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_04": {
+    "duration": 5.28,
+    "hash": "5799212022b49833",
+    "sentences": [
+     [
+      0.05,
+      5.222,
+      "Your turn: move the lamp further away and watch its patch shrink."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_05": {
+    "duration": 2.736,
+    "hash": "a530dacf18414d11",
+    "sentences": [
+     [
+      0.05,
+      2.667,
+      "Which lamp gives this spot more light?"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_01": {
+    "duration": 5.664,
+    "hash": "f28f7f62fb81c98e",
+    "sentences": [
+     [
+      0.05,
+      5.597,
+      "The beam comes straight down, so the lit patch on the board is just as wide as the beam."
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_02": {
+    "duration": 6.432,
+    "hash": "f4fdd43beff0ffe9",
+    "sentences": [
+     [
+      0.05,
+      1.222,
+      "Tip the board."
+     ],
+     [
+      1.222,
+      6.361,
+      "The same beam now lands on a longer patch, so each part of it gets less."
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_03": {
+    "duration": 5.76,
+    "hash": "acad89b273818cf9",
+    "sentences": [
+     [
+      0.05,
+      5.694,
+      "Your turn: tip the board to sixty degrees and read how long the patch gets."
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_04": {
+    "duration": 5.088,
+    "hash": "591169a4ea6b02a4",
+    "sentences": [
+     [
+      0.05,
+      2.597,
+      "The patch is now twice as long."
+     ],
+     [
+      2.597,
+      5.014,
+      "How bright is each bit of it?"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_01": {
+    "duration": 6.456,
+    "hash": "da5f7a0c7f651281",
+    "sentences": [
+     [
+      0.05,
+      6.389,
+      "The balance swings wide, to and fro, about two and a half times a second."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_02": {
+    "duration": 5.376,
+    "hash": "922cdcd0755c6ccb",
+    "sentences": [
+     [
+      0.05,
+      5.319,
+      "Now the swing is much narrower, as when the spring is nearly run down."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_03": {
+    "duration": 3.96,
+    "hash": "df2027c440c0c377",
+    "sentences": [
+     [
+      0.05,
+      1.931,
+      "The swing got narrower."
+     ],
+     [
+      1.931,
+      3.903,
+      "Does the watch slow down?"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_04": {
+    "duration": 6.0,
+    "hash": "dbe04e5178695b72",
+    "sentences": [
+     [
+      0.05,
+      5.969,
+      "Your turn: make the hairspring a little stiffer and read how much the watch gains a day."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_05": {
+    "duration": 6.624,
+    "hash": "9fe1b50f11c6eb82",
+    "sentences": [
+     [
+      0.05,
+      6.556,
+      "A tiny change in the spring is minutes a day, which is why watchmakers adjust it so carefully."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_01": {
+    "duration": 5.808,
+    "hash": "0f53d73e6ac0e3eb",
+    "sentences": [
+     [
+      0.05,
+      5.75,
+      "In slow motion: the lever holds the escape wheel still with one red stone."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_02": {
+    "duration": 10.344,
+    "hash": "ba99eada26910273",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "The balance swings past the middle and flicks the lever across."
+     ],
+     [
+      4.472,
+      9.444,
+      "One stone lets go, the wheel jumps, the other stone catches it."
+     ],
+     [
+      9.444,
+      10.292,
+      "Tick."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_03": {
+    "duration": 7.344,
+    "hash": "2c5f09c987465b12",
+    "sentences": [
+     [
+      0.05,
+      7.292,
+      "As the tooth slips past the stone, it gives the lever a small push, and the lever passes it on to the balance."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_04": {
+    "duration": 5.328,
+    "hash": "ca40bf3a310fedbd",
+    "sentences": [
+     [
+      0.05,
+      5.278,
+      "Your turn: speed the slow motion up and watch the ticks come faster."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_05": {
+    "duration": 3.864,
+    "hash": "86203307cc20e379",
+    "sentences": [
+     [
+      0.05,
+      3.806,
+      "What keeps the balance swinging, hour after hour?"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_01": {
+    "duration": 6.264,
+    "hash": "f8c1598f39cbfbaf",
+    "sentences": [
+     [
+      0.05,
+      6.208,
+      "At real speed, the seconds hand sweeps round, and the other hands seem to stand still."
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_02": {
+    "duration": 5.352,
+    "hash": "38e9d6523ba641e9",
+    "sentences": [
+     [
+      0.05,
+      5.292,
+      "Sixty times faster: the minute hand now goes round once a minute."
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_03": {
+    "duration": 5.592,
+    "hash": "33ef01d3cd0fb3fc",
+    "sentences": [
+     [
+      0.05,
+      5.528,
+      "Your turn: speed time up as far as it goes and watch the hour hand move."
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_04": {
+    "duration": 3.744,
+    "hash": "d20e29cc708c68d8",
+    "sentences": [
+     [
+      0.05,
+      3.681,
+      "Which hand is not carried by the going train itself?"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_01": {
+    "duration": 6.36,
+    "hash": "b4220a04f23b54fb",
+    "sentences": [
+     [
+      0.05,
+      2.764,
+      "The whole movement, put together."
+     ],
+     [
+      2.764,
+      6.306,
+      "From here you only see the dial and hands."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_02": {
+    "duration": 9.456,
+    "hash": "c24f4743b776d566",
+    "sentences": [
+     [
+      0.05,
+      9.389,
+      "Pull it apart into layers: the main plate, the barrel, the going train, the escapement and balance, the motion works and the dial."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_03": {
+    "duration": 3.744,
+    "hash": "181e8935e3eb8ff3",
+    "sentences": [
+     [
+      0.05,
+      3.681,
+      "The dial is hidden now, so you can see the wheels under it."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_04": {
+    "duration": 3.216,
+    "hash": "4cdaaa4b5bf490b4",
+    "sentences": [
+     [
+      0.05,
+      3.153,
+      "Your turn: hide the motion works too."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_05": {
+    "duration": 6.384,
+    "hash": "48e8bb9bdc322b8b",
+    "sentences": [
+     [
+      0.05,
+      6.319,
+      "Energy flows from the spring at the bottom, up through each layer, to the hands at the top."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_01": {
+    "duration": 4.68,
+    "hash": "cdb12e4963284316",
+    "sentences": [
+     [
+      0.05,
+      4.625,
+      "The wrist moves, and the heavy rotor swings so that it keeps hanging down."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_02": {
+    "duration": 4.728,
+    "hash": "7a811411ec6cfa06",
+    "sentences": [
+     [
+      0.05,
+      4.667,
+      "With the reverser, both directions of swing wind the mainspring."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_03": {
+    "duration": 4.08,
+    "hash": "22a0b97f16f0b82d",
+    "sentences": [
+     [
+      0.05,
+      4.014,
+      "Your turn: take the reverser out and watch the winding."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_04": {
+    "duration": 2.952,
+    "hash": "3d365dc7df5b15ae",
+    "sentences": [
+     [
+      0.05,
+      2.889,
+      "Without the reverser, what happens?"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_05": {
+    "duration": 6.48,
+    "hash": "0e30f1c81331f526",
+    "sentences": [
+     [
+      0.05,
+      1.194,
+      "Put it back."
+     ],
+     [
+      1.194,
+      6.417,
+      "And once the spring is full, the barrel lets it slip instead of breaking it."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_01": {
+    "duration": 5.304,
+    "hash": "751e48bc6faac3de",
+    "sentences": [
+     [
+      0.05,
+      2.611,
+      "The mainspring has almost run down."
+     ],
+     [
+      2.611,
+      5.236,
+      "It lies loose against the barrel wall."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_02": {
+    "duration": 5.016,
+    "hash": "f09cb4c3c0584379",
+    "sentences": [
+     [
+      0.05,
+      4.971,
+      "Your turn: wind the spring all the way up, as the crown would."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_03": {
+    "duration": 8.328,
+    "hash": "dd28d69dd9e87cdf",
+    "sentences": [
+     [
+      0.05,
+      8.264,
+      "Wound tight round the arbor, the spring pushes the barrel round, and the barrel's teeth drive the watch for about forty hours."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_04": {
+    "duration": 3.024,
+    "hash": "014eed7e363ace6d",
+    "sentences": [
+     [
+      0.05,
+      2.958,
+      "Where does a mechanical watch get its energy?"
+     ]
+    ]
+   }
+  },
   "pitch": "+0Hz",
   "rate": "-10%",
   "voice": "en-US-AvaMultilingualNeural"
  },
  "zh-CN": {
-  "clips": {},
+  "clips": {
+   "Narr_Common_MoveOn": {
+    "duration": 4.272,
+    "hash": "627bdfb155c9e33c",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "我们先接着往下看，等会儿可以再试一试。"
+     ]
+    ]
+   },
+   "Narr_Common_Nice": {
+    "duration": 2.376,
+    "hash": "8ac596bbd1628573",
+    "sentences": [
+     [
+      0.1,
+      2.369,
+      "很好，就是这样！"
+     ]
+    ]
+   },
+   "Narr_Common_Reveal": {
+    "duration": 3.672,
+    "hash": "e2684c143770257f",
+    "sentences": [
+     [
+      0.1,
+      3.661,
+      "时间到啦，我们来看看正确答案。"
+     ]
+    ]
+   },
+   "Narr_Common_Right": {
+    "duration": 1.536,
+    "hash": "28c3c881b0335aaf",
+    "sentences": [
+     [
+      0.1,
+      1.536,
+      "答对了！"
+     ]
+    ]
+   },
+   "Narr_Common_Wrong": {
+    "duration": 3.144,
+    "hash": "9f77d81a53bfc063",
+    "sentences": [
+     [
+      0.1,
+      3.133,
+      "不太对哦，我们来看看答案。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_01": {
+    "duration": 4.512,
+    "hash": "7e7e9c654d331f15",
+    "sentences": [
+     [
+      0.1,
+      4.508,
+      "一根线绕在罐子上，线头系着一支铅笔。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_02": {
+    "duration": 6.072,
+    "hash": "60aa39bea5887a64",
+    "sentences": [
+     [
+      0.1,
+      6.064,
+      "轮到你了：把线至少放开半圈，看看铅笔画出的曲线。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_03": {
+    "duration": 8.088,
+    "hash": "8f263f5a6ea94a62",
+    "sentences": [
+     [
+      0.1,
+      3.967,
+      "绷紧的线总是和这条曲线成直角。"
+     ],
+     [
+      3.917,
+      8.028,
+      "好的齿轮，齿的两侧就是这条曲线。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_04": {
+    "duration": 8.376,
+    "hash": "6d445c8df5edba30",
+    "sentences": [
+     [
+      0.1,
+      8.369,
+      "齿形是这条曲线，两个齿就总是沿着同一条直线互相推，齿轮转起来才平稳。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_01": {
+    "duration": 6.912,
+    "hash": "e9d641270aab3eb4",
+    "sentences": [
+     [
+      0.1,
+      2.161,
+      "齿轮慢慢地转。"
+     ],
+     [
+      2.111,
+      6.861,
+      "看那个金色的点，那是两个齿碰在一起的地方。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_02": {
+    "duration": 6.024,
+    "hash": "8fc09e5206e903d8",
+    "sentences": [
+     [
+      0.1,
+      6.008,
+      "这个点沿着一条斜线滑动，从两个齿碰上，到它们分开。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_03": {
+    "duration": 8.496,
+    "hash": "48caea15db83b181",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "转快一点。"
+     ],
+     [
+      1.708,
+      8.431,
+      "前一对齿还没分开，下一对就已经碰上了，所以推力从不中断。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_04": {
+    "duration": 4.416,
+    "hash": "0707206c9e7ee77e",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "轮到你了：把压力角调大，看看齿形。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_05": {
+    "duration": 3.072,
+    "hash": "320b993c99f9c8b9",
+    "sentences": [
+     [
+      0.1,
+      3.064,
+      "压力角调大，齿会怎样？"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_01": {
+    "duration": 8.184,
+    "hash": "d9b2707661a47b5b",
+    "sentences": [
+     [
+      0.1,
+      2.3,
+      "齿圈被固定住。"
+     ],
+     [
+      2.25,
+      8.125,
+      "转动太阳轮，行星轮绕着它滚，带着行星架慢慢转。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_02": {
+    "duration": 6.072,
+    "hash": "31a4484ca43efdea",
+    "sentences": [
+     [
+      0.1,
+      6.064,
+      "在很小的空间里就能大大减速，没有一个齿轮伸到外面。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_03": {
+    "duration": 5.592,
+    "hash": "8fa1c7e639e83019",
+    "sentences": [
+     [
+      0.1,
+      5.578,
+      "轮到你了：改成固定行星架，看看齿圈往哪边转。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_04": {
+    "duration": 6.264,
+    "hash": "0af52d09895220bd",
+    "sentences": [
+     [
+      0.1,
+      2.453,
+      "现在固定太阳轮。"
+     ],
+     [
+      2.403,
+      6.194,
+      "同样这几个齿轮，又给出另一种速度。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_05": {
+    "duration": 3.024,
+    "hash": "36923f411e24c4d4",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "这样的变速箱怎样换挡？"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_01": {
+    "duration": 5.064,
+    "hash": "2f77dfff8fa54c1a",
+    "sentences": [
+     [
+      0.1,
+      5.05,
+      "两个齿数一样的齿轮：转得一样快，方向相反。"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_02": {
+    "duration": 6.648,
+    "hash": "59b7892246a12251",
+    "sentences": [
+     [
+      0.1,
+      3.189,
+      "让右边的齿轮多一倍齿。"
+     ],
+     [
+      3.139,
+      6.583,
+      "小齿轮转两圈，它才转一圈。"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_03": {
+    "duration": 5.136,
+    "hash": "2eec5ff22e65efce",
+    "sentences": [
+     [
+      0.1,
+      5.119,
+      "轮到你了：让从动轮的齿数是主动轮的三倍。"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_04": {
+    "duration": 7.704,
+    "hash": "fc4ed56c46a72605",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "十个齿的齿轮带动三十个齿的齿轮。"
+     ],
+     [
+      3.972,
+      7.653,
+      "小齿轮转一圈，大齿轮转多少？"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_01": {
+    "duration": 5.88,
+    "hash": "a2e7c4466684bc6f",
+    "sentences": [
+     [
+      0.1,
+      5.869,
+      "摇柄转动小齿轮，小齿轮再带动卷筒上的大齿轮。"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_02": {
+    "duration": 4.68,
+    "hash": "c0a178fb8589d4bb",
+    "sentences": [
+     [
+      0.1,
+      2.508,
+      "把卷筒的齿轮换大。"
+     ],
+     [
+      2.458,
+      4.611,
+      "卷筒转得更慢了。"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_03": {
+    "duration": 4.728,
+    "hash": "cb55cf2d3467bb64",
+    "sentences": [
+     [
+      0.1,
+      2.953,
+      "卷筒现在比摇柄转得慢。"
+     ],
+     [
+      2.903,
+      4.667,
+      "它换来了什么？"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_04": {
+    "duration": 8.064,
+    "hash": "dbd706ede4f70563",
+    "sentences": [
+     [
+      0.1,
+      8.064,
+      "慢但有力，或者快但没劲：齿轮只是拿一样换另一样，从来不会凭空变出能量。"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_01": {
+    "duration": 5.04,
+    "hash": "9612f82dd376a6ea",
+    "sentences": [
+     [
+      0.1,
+      5.022,
+      "一级：小齿轮带动大齿轮，速度慢了三倍。"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_02": {
+    "duration": 9.0,
+    "hash": "5dee8b5b19e54c69",
+    "sentences": [
+     [
+      0.1,
+      6.356,
+      "两级：固定在大齿轮轴上的小齿轮，再带动下一个大齿轮。"
+     ],
+     [
+      6.306,
+      8.944,
+      "三乘三，慢了九倍。"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_03": {
+    "duration": 4.248,
+    "hash": "03d0487465a67f8d",
+    "sentences": [
+     [
+      0.1,
+      4.244,
+      "三级的话，最后一个齿轮慢了多少倍？"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_04": {
+    "duration": 5.928,
+    "hash": "7802569ef7486fa4",
+    "sentences": [
+     [
+      0.1,
+      5.911,
+      "轮到你了：加上第四级，看看最后一个齿轮爬得多慢。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_01": {
+    "duration": 5.904,
+    "hash": "a3b75d06c1b00c73",
+    "sentences": [
+     [
+      0.1,
+      5.883,
+      "车离得近，在你眼里车头车尾隔得很开，夹角很大。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_02": {
+    "duration": 5.424,
+    "hash": "8f758044aa06c19d",
+    "sentences": [
+     [
+      0.1,
+      5.411,
+      "远一倍，车头车尾之间的夹角就只剩大约一半。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_03": {
+    "duration": 5.64,
+    "hash": "50431a4a1692cf43",
+    "sentences": [
+     [
+      0.1,
+      5.633,
+      "轮到你了：把车挪到二十米远，看看夹角变得多小。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_04": {
+    "duration": 9.072,
+    "hash": "70fa024cc0a03455",
+    "sentences": [
+     [
+      0.1,
+      3.689,
+      "东西看起来多大，就是这个夹角。"
+     ],
+     [
+      3.639,
+      9.014,
+      "换成一块面，比如一盏灯，就是它占了你视野的多少。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_01": {
+    "duration": 5.832,
+    "hash": "781b555ac1134028",
+    "sentences": [
+     [
+      0.1,
+      5.828,
+      "没有反弹：只有灯照到的地方亮，盒子背面一片漆黑。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_02": {
+    "duration": 7.728,
+    "hash": "92c8cd72dc86ad05",
+    "sentences": [
+     [
+      0.1,
+      1.772,
+      "反弹一次。"
+     ],
+     [
+      1.722,
+      7.667,
+      "被照亮的表面互相照亮，红墙边的地面染上了一点红。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_03": {
+    "duration": 5.544,
+    "hash": "f549b875d501fe67",
+    "sentences": [
+     [
+      0.1,
+      5.522,
+      "轮到你了：把墙刷成蓝色，看看地上的颜色怎么变。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_04": {
+    "duration": 6.984,
+    "hash": "a33443f66662dfad",
+    "sentences": [
+     [
+      0.1,
+      1.883,
+      "反弹三次。"
+     ],
+     [
+      1.833,
+      6.931,
+      "每一次加上的光都比上一次少，影子也被填亮了。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_05": {
+    "duration": 4.416,
+    "hash": "296d0fbf9791b57f",
+    "sentences": [
+     [
+      0.1,
+      4.397,
+      "为什么屋里背光的地方从来不会漆黑一片？"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_01": {
+    "duration": 4.344,
+    "hash": "469259f2f0a5499e",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "灯开得很小，地上只有一小片暗暗的光。"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_02": {
+    "duration": 4.992,
+    "hash": "ff426b9c0d994b96",
+    "sentences": [
+     [
+      0.1,
+      4.981,
+      "功率加倍，落到地上的光多了一倍，亮了很多。"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_03": {
+    "duration": 6.456,
+    "hash": "21f996b0ac1b823f",
+    "sentences": [
+     [
+      0.1,
+      1.939,
+      "再加到八倍。"
+     ],
+     [
+      1.889,
+      6.403,
+      "光又多了好多，可地面看上去没亮多少。"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_04": {
+    "duration": 5.448,
+    "hash": "a1202fdb0d33ea90",
+    "sentences": [
+     [
+      0.1,
+      5.439,
+      "那么，落到地上的光多一倍，地面看起来会亮一倍吗？"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_05": {
+    "duration": 4.968,
+    "hash": "03b125b89c140bfb",
+    "sentences": [
+     [
+      0.1,
+      4.967,
+      "轮到你了：把灯开到最大，看看灯下会怎样。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_01": {
+    "duration": 5.04,
+    "hash": "f13eab3107d91cd7",
+    "sentences": [
+     [
+      0.1,
+      5.036,
+      "跟着穿过一个方格的光走，这个方格离灯一米。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_02": {
+    "duration": 6.216,
+    "hash": "636d4db69edda402",
+    "sentences": [
+     [
+      0.1,
+      6.203,
+      "到两米远，这些光铺满四个方格，每格只分到四分之一。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_03": {
+    "duration": 3.432,
+    "hash": "f5e324971f24d13e",
+    "sentences": [
+     [
+      0.1,
+      3.425,
+      "到三米远，它铺满九个方格。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_04": {
+    "duration": 5.376,
+    "hash": "a7d62499ee6e43cb",
+    "sentences": [
+     [
+      0.1,
+      5.356,
+      "那么在三米远，每个方格分到的光是一米时的多少？"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_01": {
+    "duration": 4.584,
+    "hash": "e4c0cb5440ebd8ee",
+    "sentences": [
+     [
+      0.1,
+      4.564,
+      "一块发光的板，正对着眼睛，离两米远。"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_02": {
+    "duration": 8.76,
+    "hash": "15360c503697bc02",
+    "sentences": [
+     [
+      0.1,
+      1.8,
+      "退到四米。"
+     ],
+     [
+      1.75,
+      8.694,
+      "每一小块送来的光少了，可眼睛看进去的板多了四倍，所以看起来一样亮。"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_03": {
+    "duration": 4.824,
+    "hash": "3f95c76d01d0768d",
+    "sentences": [
+     [
+      0.1,
+      4.814,
+      "轮到你了：把板转斜，看看它是不是变暗了。"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_04": {
+    "duration": 6.072,
+    "hash": "5582e00ec2ca75aa",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "你从一面亮着的墙前退到两倍远。"
+     ],
+     [
+      3.931,
+      6.014,
+      "它看起来有多亮？"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_01": {
+    "duration": 7.272,
+    "hash": "bb64eff5ddcf445c",
+    "sentences": [
+     [
+      0.1,
+      7.272,
+      "一面完美的镜子：光怎么斜着进来，就怎么斜着出去，全都朝一个方向。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_02": {
+    "duration": 4.968,
+    "hash": "5f19d32d7fa47ca0",
+    "sentences": [
+     [
+      0.1,
+      4.967,
+      "眼睛离开那个方向，镜子就一点光也不给它。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_03": {
+    "duration": 9.096,
+    "hash": "02db3e2433db373a",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "把表面变成完全哑光，像纸一样。"
+     ],
+     [
+      3.931,
+      9.042,
+      "光向四面八方散开，眼睛在哪儿都能看到那个亮点。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_04": {
+    "duration": 5.4,
+    "hash": "a7edad1c9edd27d9",
+    "sentences": [
+     [
+      0.1,
+      5.397,
+      "轮到你了：把粗糙度调到中间，像有光泽的油漆。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_05": {
+    "duration": 4.104,
+    "hash": "893fed74761238a9",
+    "sentences": [
+     [
+      0.1,
+      4.106,
+      "哪种表面上有一块亮光，会跟着你移动？"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_01": {
+    "duration": 10.776,
+    "hash": "1f821d65bd69d8c1",
+    "sentences": [
+     [
+      0.1,
+      3.161,
+      "一盏很小的灯照着一个盒子。"
+     ],
+     [
+      3.111,
+      10.722,
+      "地上每个点要么看得见整盏灯，要么完全看不见，所以影子的边很清楚。"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_02": {
+    "duration": 8.376,
+    "hash": "0f31a953f9294308",
+    "sentences": [
+     [
+      0.1,
+      1.703,
+      "把灯变大。"
+     ],
+     [
+      1.653,
+      8.306,
+      "在影子边上，灯一部分被挡住、一部分没有，影子就慢慢淡开。"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_03": {
+    "duration": 5.04,
+    "hash": "ff35dd421ba7637e",
+    "sentences": [
+     [
+      0.1,
+      5.036,
+      "轮到你了：把灯升到最高，看看那道柔和的边。"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_04": {
+    "duration": 3.024,
+    "hash": "d2b509eb1ef22954",
+    "sentences": [
+     [
+      0.1,
+      3.022,
+      "为什么阴天的影子特别柔和？"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_01": {
+    "duration": 7.248,
+    "hash": "fb8d1bff1afc0079",
+    "sentences": [
+     [
+      0.1,
+      7.244,
+      "站在地上的一个点抬头看：头顶是一个半球形的天，灯就在正上方。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_02": {
+    "duration": 7.776,
+    "hash": "563ea7642fc49661",
+    "sentences": [
+     [
+      0.1,
+      3.244,
+      "把这个半球压扁成一个圆。"
+     ],
+     [
+      3.194,
+      7.722,
+      "灯占的那一块，就是这个点得到的光的份额。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_03": {
+    "duration": 7.08,
+    "hash": "76c897f040b0ebcb",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "把灯放低。"
+     ],
+     [
+      1.708,
+      7.028,
+      "它那一块挤到圆边上，变得又扁又窄，份额也小了。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_04": {
+    "duration": 4.848,
+    "hash": "85e29ebf25f8bdd0",
+    "sentences": [
+     [
+      0.1,
+      4.828,
+      "轮到你了：把灯挪远，看看那一块怎么缩小。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_05": {
+    "duration": 3.072,
+    "hash": "329428079e02d7b3",
+    "sentences": [
+     [
+      0.1,
+      3.064,
+      "哪盏灯给这个点的光更多？"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_01": {
+    "duration": 5.808,
+    "hash": "024adb5df62fa7c1",
+    "sentences": [
+     [
+      0.1,
+      5.8,
+      "光束垂直照下来，板上亮的那块正好和光束一样宽。"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_02": {
+    "duration": 7.128,
+    "hash": "61a05d45ace18cf7",
+    "sentences": [
+     [
+      0.1,
+      1.925,
+      "把板斜过来。"
+     ],
+     [
+      1.875,
+      7.069,
+      "同一束光落在更长的一块上，每一处分到的就少了。"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_03": {
+    "duration": 5.952,
+    "hash": "4295545e846e4aae",
+    "sentences": [
+     [
+      0.1,
+      5.953,
+      "轮到你了：把板斜到六十度，看看亮的那块变成多长。"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_04": {
+    "duration": 4.92,
+    "hash": "bfa5cf32704f4773",
+    "sentences": [
+     [
+      0.1,
+      2.981,
+      "亮的那块现在长了一倍。"
+     ],
+     [
+      2.931,
+      4.861,
+      "每一处有多亮？"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_01": {
+    "duration": 4.584,
+    "hash": "499c7ffeb01e732f",
+    "sentences": [
+     [
+      0.1,
+      4.578,
+      "摆轮大幅地来回摆动，每秒大约两次半。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_02": {
+    "duration": 4.632,
+    "hash": "61bc110ea9897113",
+    "sentences": [
+     [
+      0.1,
+      4.633,
+      "现在摆幅小多了，就像发条快松完的时候。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_03": {
+    "duration": 3.264,
+    "hash": "a6e791e3babe30d7",
+    "sentences": [
+     [
+      0.1,
+      3.258,
+      "摆幅变小了，表会走慢吗？"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_04": {
+    "duration": 5.28,
+    "hash": "15fc913a9d673d56",
+    "sentences": [
+     [
+      0.1,
+      5.258,
+      "轮到你了：把游丝调硬一点，看看表每天快多少。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_05": {
+    "duration": 7.584,
+    "hash": "1ff48a56c981881c",
+    "sentences": [
+     [
+      0.1,
+      7.564,
+      "游丝差一点点，一天就差好几分钟，所以制表师调它时格外小心。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_01": {
+    "duration": 5.592,
+    "hash": "063b3b5d003b4fe1",
+    "sentences": [
+     [
+      0.1,
+      5.578,
+      "慢动作：擒纵叉用一颗红宝石把擒纵轮卡住。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_02": {
+    "duration": 11.616,
+    "hash": "f0a8b775f851f147",
+    "sentences": [
+     [
+      0.1,
+      4.342,
+      "摆轮摆过中间，把擒纵叉拨到另一边。"
+     ],
+     [
+      4.292,
+      10.514,
+      "一颗宝石松开，擒纵轮跳一下，另一颗宝石又把它卡住。"
+     ],
+     [
+      10.514,
+      11.556,
+      "嘀。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_03": {
+    "duration": 6.792,
+    "hash": "b5ca49ffc7d34f8d",
+    "sentences": [
+     [
+      0.1,
+      6.786,
+      "齿滑过宝石时，顺手推了擒纵叉一下，这一下又传给了摆轮。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_04": {
+    "duration": 4.608,
+    "hash": "df8a8e4f1c424350",
+    "sentences": [
+     [
+      0.1,
+      4.606,
+      "轮到你了：把慢动作调快，看嘀嗒变密。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_05": {
+    "duration": 4.416,
+    "hash": "a2d7bd765cac3340",
+    "sentences": [
+     [
+      0.1,
+      4.397,
+      "是什么让摆轮一小时又一小时地摆下去？"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_01": {
+    "duration": 5.64,
+    "hash": "bb8b12a61f30db4e",
+    "sentences": [
+     [
+      0.1,
+      5.619,
+      "按真实速度，秒针一圈圈地走，别的指针好像不动。"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_02": {
+    "duration": 4.104,
+    "hash": "d56711a8778edfc6",
+    "sentences": [
+     [
+      0.1,
+      4.106,
+      "快六十倍：分针现在一分钟走一圈。"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_03": {
+    "duration": 5.184,
+    "hash": "e68a1812af4f8523",
+    "sentences": [
+     [
+      0.1,
+      5.175,
+      "轮到你了：把时间调到最快，看看时针怎么走。"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_04": {
+    "duration": 3.864,
+    "hash": "1eccffefe6badee9",
+    "sentences": [
+     [
+      0.1,
+      3.856,
+      "哪根指针不是装在走时轮系上的？"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_01": {
+    "duration": 5.952,
+    "hash": "bbb22afcc1abc8f9",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "整个机芯装在一起。"
+     ],
+     [
+      2.514,
+      5.889,
+      "从这里只能看到表盘和指针。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_02": {
+    "duration": 9.0,
+    "hash": "90299bd973e8774c",
+    "sentences": [
+     [
+      0.1,
+      8.994,
+      "把它一层层拉开：主夹板、条盒、走时轮系、擒纵与摆轮、跨轮系，还有表盘。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_03": {
+    "duration": 3.912,
+    "hash": "8945e2b8a10ff5fb",
+    "sentences": [
+     [
+      0.1,
+      3.911,
+      "表盘藏起来了，可以看到下面的轮子。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_04": {
+    "duration": 3.504,
+    "hash": "5d146f2df691e513",
+    "sentences": [
+     [
+      0.1,
+      3.494,
+      "轮到你了：把跨轮系也藏起来。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_05": {
+    "duration": 6.528,
+    "hash": "9ce92c999714d4a0",
+    "sentences": [
+     [
+      0.1,
+      6.508,
+      "能量从底下的发条出发，一层层往上，一直送到顶上的指针。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_01": {
+    "duration": 5.736,
+    "hash": "70d4a1797b2e5065",
+    "sentences": [
+     [
+      0.1,
+      5.731,
+      "手腕一动，沉沉的自动陀就摆起来，总是垂向下方。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_02": {
+    "duration": 4.656,
+    "hash": "0f2eb0ba29590eb3",
+    "sentences": [
+     [
+      0.1,
+      4.647,
+      "有了换向轮，往哪边摆都在给发条上弦。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_03": {
+    "duration": 4.632,
+    "hash": "18ca283c99585508",
+    "sentences": [
+     [
+      0.1,
+      4.633,
+      "轮到你了：去掉换向轮，看看上弦怎样。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_04": {
+    "duration": 2.4,
+    "hash": "0a6af113a6b1b0c8",
+    "sentences": [
+     [
+      0.1,
+      2.383,
+      "没有换向轮会怎样？"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_05": {
+    "duration": 7.248,
+    "hash": "f012ad34f8e4295d",
+    "sentences": [
+     [
+      0.1,
+      1.869,
+      "把它装回去。"
+     ],
+     [
+      1.819,
+      7.181,
+      "发条上满之后，条盒里会打滑，发条不会被拧断。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_01": {
+    "duration": 4.608,
+    "hash": "a9aec5da0b69b2f8",
+    "sentences": [
+     [
+      0.1,
+      4.606,
+      "发条快松完了，松松地贴在条盒壁上。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_02": {
+    "duration": 4.536,
+    "hash": "ace089e6461d2335",
+    "sentences": [
+     [
+      0.1,
+      4.522,
+      "轮到你了：像拧表冠一样，把发条上满。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_03": {
+    "duration": 8.952,
+    "hash": "f80337c405562683",
+    "sentences": [
+     [
+      0.1,
+      8.953,
+      "发条紧紧缠在条轴上，推着条盒转动，条盒上的齿带着整只表走大约四十个小时。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_04": {
+    "duration": 3.048,
+    "hash": "ecc76d833cfc93b1",
+    "sentences": [
+     [
+      0.1,
+      3.036,
+      "机械表的能量从哪里来？"
+     ]
+    ]
+   }
+  },
   "pitch": "+0Hz",
   "rate": "-10%",
   "voice": "zh-CN-XiaoxiaoNeural"

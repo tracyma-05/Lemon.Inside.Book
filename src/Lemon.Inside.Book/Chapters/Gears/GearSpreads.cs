@@ -5,28 +5,9 @@ using Lemon.Inside.Book.Controls.Mechanics;
 
 namespace Lemon.Inside.Book.Chapters.Gears;
 
-/// <summary>
-/// One spread of the Gears chapter: its title, two paragraphs, a closer look, and the settings its picture uses. The
-/// strings are <c>Gears_&lt;Key&gt;_Title</c>, <c>_P1</c>, <c>_P2</c> and <c>_Deeper</c>.
-/// </summary>
-public abstract class GearSpread(string key) : ObservableObject
+/// <summary>One spread of the chapter (see <see cref="Spread"/>); the strings start <c>Gears_</c>.</summary>
+public abstract class GearSpread(string key) : Spread("Gears", key)
 {
-    protected static ILocalizationService Text => LocalizationService.Instance;
-
-    public string Key { get; } = key;
-
-    public string Title => Text.GetString($"Gears_{Key}_Title");
-
-    public IReadOnlyList<string> Paragraphs => [Text.GetString($"Gears_{Key}_P1"), Text.GetString($"Gears_{Key}_P2")];
-
-    public string Deeper => Text.GetString($"Gears_{Key}_Deeper");
-
-    /// <summary>Every key the spread's own words use (for the localization tests).</summary>
-    public IEnumerable<string> TextKeys => new[] { "_Title", "_P1", "_P2", "_Deeper" }.Select(s => $"Gears_{Key}{s}");
-
-    /// <summary>The reader's language changed: every worded value is said again.</summary>
-    internal void OnLanguageChanged() => OnPropertyChanged(string.Empty);
-
     protected static string Teeth(int teeth) => Text.Format("Gears_TeethCount", teeth);
 
     protected static string Number(double value, string format = "0.00") => value.ToString(format, CultureInfo.CurrentCulture);

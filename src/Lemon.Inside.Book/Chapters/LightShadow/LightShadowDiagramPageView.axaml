@@ -8,51 +8,67 @@
     <!-- A right page of the Light and shadow chapter: the spread's picture on a dark plate. -->
     <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
         <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
-            <ContentControl Content="{Binding Spread}">
-                <ContentControl.DataTemplates>
-                    <DataTemplate DataType="light:BrightnessSpread">
-                        <light:BrightnessScene Power="{Binding Power}"
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="light:BrightnessSpread">
+                            <light:BrightnessScene Power="{Binding Power}"
+                                                   ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                                   AutomationProperties.Name="{loc:Localize Light_Brightness_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:TiltSpread">
+                            <light:TiltDiagram Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Light_Tilt_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:DistanceSpread">
+                            <light:DistanceScene Distance="{Binding Distance}"
+                                                 ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                                 AutomationProperties.Name="{loc:Localize Light_Distance_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:AngleSpread">
+                            <light:AngleDiagram Distance="{Binding Distance}" AutomationProperties.Name="{loc:Localize Light_Angle_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:SkySpread">
+                            <light:SkyScene Elevation="{Binding Elevation}" Distance="{Binding Distance}"
+                                            ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                            AutomationProperties.Name="{loc:Localize Light_Sky_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:RadianceSpread">
+                            <light:RadianceDiagram Distance="{Binding Distance}" Tilt="{Binding Tilt}"
+                                                   AutomationProperties.Name="{loc:Localize Light_Radiance_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:ReflectionSpread">
+                            <light:ReflectionDiagram LightAngle="{Binding LightAngle}" Roughness="{Binding Roughness}" EyeAngle="{Binding EyeAngle}"
+                                                     AutomationProperties.Name="{loc:Localize Light_Reflection_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:BounceSpread">
+                            <light:BounceScene Bounces="{Binding Bounces}" Wall="{Binding Wall}"
                                                ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                               AutomationProperties.Name="{loc:Localize Light_Brightness_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:TiltSpread">
-                        <light:TiltDiagram Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Light_Tilt_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:DistanceSpread">
-                        <light:DistanceScene Distance="{Binding Distance}"
-                                             ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                             AutomationProperties.Name="{loc:Localize Light_Distance_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:AngleSpread">
-                        <light:AngleDiagram Distance="{Binding Distance}" AutomationProperties.Name="{loc:Localize Light_Angle_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:SkySpread">
-                        <light:SkyScene Elevation="{Binding Elevation}" Distance="{Binding Distance}"
-                                        ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                        AutomationProperties.Name="{loc:Localize Light_Sky_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:RadianceSpread">
-                        <light:RadianceDiagram Distance="{Binding Distance}" Tilt="{Binding Tilt}"
-                                               AutomationProperties.Name="{loc:Localize Light_Radiance_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:ReflectionSpread">
-                        <light:ReflectionDiagram LightAngle="{Binding LightAngle}" Roughness="{Binding Roughness}" EyeAngle="{Binding EyeAngle}"
-                                                 AutomationProperties.Name="{loc:Localize Light_Reflection_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:BounceSpread">
-                        <light:BounceScene Bounces="{Binding Bounces}" Wall="{Binding Wall}"
-                                           ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                           AutomationProperties.Name="{loc:Localize Light_Bounce_Picture}" />
-                    </DataTemplate>
-                    <DataTemplate DataType="light:ShadowSpread">
-                        <light:ShadowScene LightHeight="{Binding LightHeight}"
-                                           LightSize="{Binding LightSize}"
-                                           LightX="{Binding LightX}"
-                                           ToolTip.Tip="{loc:Localize Light_DragHint}"
-                                           AutomationProperties.Name="{loc:Localize Light_Shadow_Picture}" />
-                    </DataTemplate>
-                </ContentControl.DataTemplates>
-            </ContentControl>
+                                               AutomationProperties.Name="{loc:Localize Light_Bounce_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="light:ShadowSpread">
+                            <light:ShadowScene LightHeight="{Binding LightHeight}"
+                                               LightSize="{Binding LightSize}"
+                                               LightX="{Binding LightX}"
+                                               ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                               AutomationProperties.Name="{loc:Localize Light_Shadow_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
         </Border>
 
         <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />

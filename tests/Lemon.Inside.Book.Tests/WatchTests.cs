@@ -179,7 +179,8 @@ public sealed class WatchTests
                 Frames(1);
             }
 
-            Assert.Equal(2 * escapement.SlowMotion, escapement.Time - start, 9);
+            // The clock's elapsed time is a TimeSpan, so either end can round by one 100 ns tick.
+            Assert.Equal(2 * escapement.SlowMotion, escapement.Time - start, 6);
             Snapshot(window, "watch-3-stepped");
         }
         finally

@@ -20,9 +20,9 @@ public static class ChapterRegistry
     {
         var pages = chapter.Slug switch
         {
-            "Light-Shadow" => LightShadowChapter.CreatePages(chapter, number, textPage, navigator),
-            "Gears" => GearsChapter.CreatePages(chapter, number, textPage, navigator),
-            "Watch" => WatchChapter.CreatePages(chapter, number, textPage, navigator),
+            "Light-Shadow" => LightShadowChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
+            "Gears" => GearsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
+            "Watch" => WatchChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             _ => [(new ChapterTextPageViewModel(textPage, navigator, chapter, number),
                 new ChapterDiagramPageViewModel(textPage + 1, navigator, chapter))],
         };

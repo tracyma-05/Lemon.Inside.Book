@@ -1,4 +1,5 @@
 using Lemon.Book.Shell.Controls.Explore;
+using Lemon.Book.Shell.Explore.Narration;
 using Lemon.Book.Shell.Infrastructures.Localization;
 using Lemon.Book.Shell.ViewModels.Pages;
 using Lemon.Inside.Book.Contents;
@@ -10,9 +11,9 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 public static class GearsChapter
 {
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
-        Chapter chapter, int number, int textPage, IBookNavigator navigator)
+        Chapter chapter, int number, int textPage, IBookNavigator navigator, INarrationService narration)
     {
-        var gears = new GearsViewModel();
+        var gears = new GearsViewModel(narration);
         var pages = new List<(PageViewModel, PageViewModel)>();
         for (var i = 0; i < gears.Spreads.Count; i++)
         {

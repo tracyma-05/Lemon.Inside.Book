@@ -1,4 +1,5 @@
 using Lemon.Book.Shell.Controls.Explore;
+using Lemon.Book.Shell.Explore.Narration;
 using Lemon.Book.Shell.Infrastructures.Localization;
 using Lemon.Book.Shell.ViewModels.Pages;
 using Lemon.Inside.Book.Contents;
@@ -10,9 +11,9 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 public static class WatchChapter
 {
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
-        Chapter chapter, int number, int textPage, IBookNavigator navigator)
+        Chapter chapter, int number, int textPage, IBookNavigator navigator, INarrationService narration)
     {
-        var watch = new WatchViewModel();
+        var watch = new WatchViewModel(narration);
         var pages = new List<(PageViewModel, PageViewModel)>();
         for (var i = 0; i < watch.Spreads.Count; i++)
         {

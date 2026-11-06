@@ -1,5 +1,4 @@
-using Lemon.Book.Shell.Controls.Explore;
-using Lemon.Book.Shell.Infrastructures.Localization;
+using Lemon.Book.Shell.Explore.Narration;
 
 namespace Lemon.Inside.Book.Chapters.Gears;
 
@@ -7,21 +6,10 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 /// The Gears chapter: its spreads, in reading order, each with the settings of its own picture. One instance serves
 /// every page of the chapter.
 /// </summary>
-public sealed class GearsViewModel : IChapterContent
+public sealed class GearsViewModel : SpreadChapter
 {
-    private int _views;
-
-    public GearsViewModel()
-    {
-        // Values are worded in the reader's language: say them again when it changes.
-        LocalizationService.Instance.PropertyChanged += (_, _) =>
-        {
-            foreach (var spread in Spreads)
-            {
-                spread.OnLanguageChanged();
-            }
-        };
-    }
+    /// <param name="narration">The book's narration channel; null (tests) gives a silent one.</param>
+    public GearsViewModel(INarrationService? narration = null) => Attach(narration);
 
     public RatioSpread Ratio { get; } = new();
 
@@ -38,9 +26,5 @@ public sealed class GearsViewModel : IChapterContent
     /// <summary>The spreads in reading order.</summary>
     public IReadOnlyList<GearSpread> Spreads => [Ratio, Torque, Involute, Mesh, Train, Planetary];
 
-    /// <summary>A page of the chapter came on screen.</summary>
-    public void ViewAttached() => _views++;
-
-    /// <summary>A page of the chapter left the screen.</summary>
-    public void ViewDetached() => _views = Math.Max(0, _views - 1);
+    public override IReadOnlyList<Spread> AllSpreads => Spreads;
 }
