@@ -1,0 +1,198 @@
+using System.Globalization;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Headless.XUnit;
+using Avalonia.Media;
+using Avalonia.Styling;
+using Avalonia.VisualTree;
+using Lemon.Book.Shell.Contents;
+using Lemon.Book.Shell.Controls;
+using Lemon.Book.Shell.Explore.Lessons;
+using Lemon.Book.Shell.Infrastructures.Localization;
+using Lemon.Book.Shell.Infrastructures.Settings;
+using Lemon.Book.Shell.Infrastructures.Theming;
+using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
+using Lemon.Inside.Book.Explore.Lessons;
+using Lemon.Inside.Book.Infrastructures.Settings;
+using Lemon.Inside.Book.ViewModels;
+using Lemon.Inside.Book.ViewModels.Pages;
+using Xunit;
+using static Lemon.Inside.Book.Tests.ChapterTestKit;
+
+namespace Lemon.Inside.Book.Tests;
+
+/// <summary>Bookmarks, reading progress, the light and dark themes, and the book's own reading features.</summary>
+public sealed class ReadingFeaturesTests
+{
+    [AvaloniaFact]
+    public void Bookmarks_AreToggled_Listed_AndSaved()
+    {
+        var store = new MemorySettingsStore();
+        var model = new MainViewModel(store);
+        var page = TextPageOf("Gears");
+        model.GoToPage(page);
+
+        model.Bookmarks.ToggleCurrentCommand.Execute(null);
+        Assert.True(model.Bookmarks.IsCurrentMarked);
+        Assert.Contains(page, model.Bookmarks.MarkedPages);
+        var entry = Assert.Single(model.Bookmarks.Items);
+        Assert.Contains(LocalizationService.Instance.GetString(BookContents.Chapters.First(c => c.Slug == "Gears").TitleKey), entry.Caption);
+
+        model.GoToPage(0);
+        Assert.False(model.Bookmarks.IsCurrentMarked);
+        entry.OpenCommand.Execute(null);
+        Assert.Equal(page, model.PageIndex);
+
+        // Saved: a new book on the same device has it.
+        var reopened = new MainViewModel(store);
+        Assert.Contains(page, reopened.Bookmarks.MarkedPages);
+        reopened.Bookmarks.Items[0].RemoveCommand.Execute(null);
+        Assert.Empty(new MainViewModel(store).Bookmarks.Items);
+    }
+
+    [Fact]
+    public void BrokenOrOutOfRangeBookmarks_AreDropped()
+    {
+        var store = new MemorySettingsStore();
+        store.Set(Bookmarks.SettingKey, "[{\"Page\":5,\"Added\":\"2026-10-22T00:00:00Z\"},{\"Page\":99999,\"Added\":\"2026-10-22T00:00:00Z\"}]");
+        Assert.Equal([5], new Bookmarks(store).Items.Select(b => b.Page));
+
+        store.Set(Bookmarks.SettingKey, "not json");
+        Assert.Empty(new Bookmarks(store).Items);
+    }
+
+    [AvaloniaFact]
+    public void Progress_CountsOpenedChapters()
+    {
+        var store = new MemorySettingsStore();
+        var model = new MainViewModel(store);
+        var entry = ContentsEntryFor(model, "Gears");
+        Assert.Equal(string.Empty, entry.ProgressText);
+
+        model.GoToPage(TextPageOf("Gears"));
+        Assert.Equal(LocalizationService.Instance.GetString("Progress_Opened"), entry.ProgressText);
+
+
+        // Saved, and cleared from the settings.
+        var reopened = new MainViewModel(store);
+        Assert.Equal(1, BookServices.Create(store).Progress.Summary().Opened);
+        reopened.Settings.ClearProgressCommand.Execute(null);
+        Assert.Equal(string.Empty, ContentsEntryFor(reopened, "Gears").ProgressText);
+        Assert.Equal(default, new ReadingProgress(store).For("Gears") with { WalkthroughCount = 0 });
+    }
+
+    [AvaloniaFact]
+    public void TheTheme_SwitchesThePaper_AndTheAccentFollowsTheChoice()
+    {
+        var store = new MemorySettingsStore();
+        var settings = new SettingsViewModel(BookServices.Create(store));
+        var app = Application.Current!;
+        try
+        {
+            settings.IsDarkTheme = true;
+            Assert.Equal(ThemeVariant.Dark, app.RequestedThemeVariant);
+            Assert.Equal(nameof(BookThemeMode.Dark), store.Get(BookTheme.ThemeSetting));
+
+            settings.Accents.First(a => a.Color.Id == "Pine").IsSelected = true;
+            Assert.True(app.TryFindResource("AccentBrush", ThemeVariant.Dark, out var accent));
+            Assert.Equal(BookTheme.Accents.First(a => a.Id == "Pine").OnDark, ((ISolidColorBrush)accent!).Color);
+            Assert.Equal("Pine", BookTheme.LoadAccent(store).Id);
+
+            // 护眼: its own green paper, on top of the light theme.
+            settings.IsEyeCareTheme = true;
+            Assert.Equal(BookTheme.EyeCare, app.RequestedThemeVariant);
+            Assert.Equal(nameof(BookThemeMode.EyeCare), store.Get(BookTheme.ThemeSetting));
+            Assert.False(settings.IsDarkTheme);
+            Assert.True(app.TryFindResource("BookPaperBrush", BookTheme.EyeCare, out var paper));
+            Assert.True(app.TryFindResource("BookPaperBrush", ThemeVariant.Light, out var lightPaper));
+            Assert.NotEqual(((ISolidColorBrush)lightPaper!).Color, ((ISolidColorBrush)paper!).Color);
+            Assert.True(app.TryFindResource("AccentBrush", BookTheme.EyeCare, out _));
+        }
+        finally
+        {
+            BookTheme.Apply(app, BookThemeMode.Light, BookTheme.DefaultAccent);
+        }
+    }
+
+    [AvaloniaFact]
+    public void TheBook_Renders_InLightDarkAndEyeCare_WithARibbonOnABookmarkedPage()
+    {
+        var localization = LocalizationService.Instance;
+        var original = localization.CurrentCulture;
+        localization.SetCulture(CultureInfo.GetCultureInfo("zh-CN"));
+        var app = Application.Current!;
+        try
+        {
+            var (window, model) = OpenAt("Gears");
+            model.Bookmarks.ToggleCurrentCommand.Execute(null);
+                Frames(10);
+            Assert.Contains(TextPageOf("Gears"), window.FindDescendantOfType<BookView>()!.BookmarkedPages!);
+            Snapshot(window, "gears-bookmarked-light-zh");
+
+            BookTheme.Apply(app, BookThemeMode.Dark, BookTheme.Accents.First(a => a.Id == "Indigo"));
+            Frames(10);
+            Snapshot(window, "gears-bookmarked-dark-zh");
+
+            model.GoToPage(BookContents.ContentsPage(Volume.Light));
+            Frames(10);
+            Snapshot(window, "contents-dark-zh");
+
+            var bookmarks = window.GetVisualDescendants().OfType<Button>().First(b => b.Name == "BookmarksButton");
+            bookmarks.Flyout!.ShowAt(bookmarks);
+            Frames(5);
+            Snapshot(window, "bookmarks-dark-zh");
+            bookmarks.Flyout.Hide();
+
+            var settingsButton = window.GetVisualDescendants().OfType<Button>().First(b => b.Name == "SettingsButton");
+            settingsButton.Flyout!.ShowAt(settingsButton);
+            Frames(5);
+            Snapshot(window, "settings-dark-zh");
+            settingsButton.Flyout.Hide();
+
+            BookTheme.Apply(app, BookThemeMode.EyeCare, BookTheme.DefaultAccent);
+            Frames(10);
+            Snapshot(window, "contents-eyecare-zh");
+            settingsButton.Flyout!.ShowAt(settingsButton);
+            Frames(5);
+            Snapshot(window, "settings-eyecare-zh");
+            settingsButton.Flyout.Hide();
+            window.Close();
+        }
+        finally
+        {
+            BookTheme.Apply(app, BookThemeMode.Light, BookTheme.DefaultAccent);
+            localization.SetCulture(original);
+        }
+    }
+
+    [AvaloniaFact]
+    public void OpeningTheBook_AddsNoBookmark()
+    {
+        var store = new MemorySettingsStore();
+        store.Set(SettingKeys.PageIndex, TextPageOf("Gears").ToString(CultureInfo.InvariantCulture));
+        var model = new MainViewModel(store);
+        var window = new Window { Width = 1300, Height = 860, Content = new Views.MainView { DataContext = model } };
+        window.Show();
+        Frames(10);
+        window.Close();
+
+        Assert.Null(store.Get(Bookmarks.SettingKey));
+    }
+
+    private static ContentsEntry ContentsEntryFor(MainViewModel model, string slug) =>
+        model.Pages.OfType<ContentsPageViewModel>().SelectMany(p => p.Entries)
+            .First(e => e.PageIndex == TextPageOf(slug));
+
+    private static void FinishWalkthrough(LessonPlayer lesson)
+    {
+        lesson.Start();
+        for (var guard = 0; guard < 400 && lesson.State != LessonState.Done; guard++)
+        {
+            lesson.NextCommand.Execute(null);
+        }
+
+        Assert.Equal(LessonState.Done, lesson.State);
+        lesson.Stop();
+    }
+}

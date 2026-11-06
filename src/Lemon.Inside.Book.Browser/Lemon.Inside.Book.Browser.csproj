@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+
+  <!-- Web head: Avalonia on WebAssembly, served as an installable, offline-capable PWA (see wwwroot). -->
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-browser</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Lemon.Inside.Book.Browser</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!--
+      Compile to WebAssembly ahead of time. Interpreted, the diagrams' per-pixel renderers (globes, skies, planet
+      textures) cannot keep up with the frame rate and the whole tab stutters. Costs a longer publish and a larger
+      download; the IL left behind after AOT is stripped to win some of that back.
+    -->
+    <RunAOTCompilation>true</RunAOTCompilation>
+    <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      The browser has no system fonts to fall back on, so the book carries its own CJK font. These are the full
+      Noto Sans SC files; subsetting them to the characters the book uses is on the roadmap.
+    -->
+    <AvaloniaResource Include="Assets\Fonts\*.otf" />
+  </ItemGroup>
+
+  <!--
+    The splash's download sizes (the shell's download-progress.js): each boot file's size, raw and Brotli, keyed by its
+    path under _framework/, so the splash can show the whole download's size and the time left. Only the files the
+    boot manifest (inside dotnet.js) names, not stale ones an earlier publish left in the folder.
+  -->
+  <UsingTask TaskName="WriteDownloadSizes" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Framework Required="true" />
+      <OutputFile Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        var root = new System.IO.DirectoryInfo(Framework);
+        var dotnetJs = System.IO.File.ReadAllText(System.IO.Path.Combine(root.FullName, "dotnet.js"));
+        var start = dotnetJs.IndexOf("/*json-start*/");
+        var end = dotnetJs.IndexOf("/*json-end*/");
+        var boot = start >= 0 && end > start ? dotnetJs.Substring(start, end - start) : "";
+        var names = new System.Collections.Generic.HashSet<string>();
+        foreach (System.Text.RegularExpressions.Match match in System.Text.RegularExpressions.Regex.Matches(boot, "\"name\"\\s*:\\s*\"([^\"]+)\""))
+            names.Add(match.Groups[1].Value);
+
+        var entries = new System.Collections.Generic.List<string>();
+        foreach (var file in root.EnumerateFiles("*", System.IO.SearchOption.AllDirectories))
+        {
+            if (!names.Contains(file.Name) || (file.Extension != ".wasm" && file.Extension != ".dat"))
+                continue;
+            var brotli = new System.IO.FileInfo(file.FullName + ".br");
+            var path = file.FullName.Substring(root.FullName.Length + 1).Replace(System.IO.Path.DirectorySeparatorChar, '/');
+            entries.Add("\"" + path + "\":[" + file.Length + "," + (brotli.Exists ? brotli.Length : file.Length) + "]");
+        }
+        entries.Sort(System.StringComparer.Ordinal);
+        System.IO.File.WriteAllText(OutputFile, "{" + string.Join(",", entries) + "}\n");
+        Log.LogMessage(MessageImportance.Normal, "Download sizes: " + entries.Count + " files");
+      ]]></Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="WriteDownloadSizes" AfterTargets="Publish">
+    <WriteDownloadSizes Framework="$(PublishDir)wwwroot\_framework" OutputFile="$(PublishDir)wwwroot\download-sizes.json" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Browser" />
+    <!-- The shell's web pieces, and its scripts at _content/Lemon.Book.Shell.Browser/. -->
+    <PackageReference Include="Lemon.Book.Shell.Browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lemon.Inside.Book\Lemon.Inside.Book.csproj" />
+  </ItemGroup>
+
+</Project>

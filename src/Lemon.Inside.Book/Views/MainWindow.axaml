@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Lemon.Inside.Book.ViewModels"
+        xmlns:views="using:Lemon.Inside.Book.Views"
+        xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+        x:Class="Lemon.Inside.Book.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Title="{loc:Localize App_Title}"
+        Icon="/Assets/book.ico"
+        Width="1280" Height="820"
+        MinWidth="480" MinHeight="420"
+        WindowStartupLocation="CenterScreen"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="44"
+        WindowDecorations="BorderOnly"
+        Background="#2A1D15">
+    <!--
+        The book's dark toolbar is the title bar (see MainView): one bar instead of the system's on top of the book's.
+        F11 reads full screen; the window remembers its size, place and whether it was maximized.
+    -->
+    <views:MainView x:Name="View" />
+</Window>

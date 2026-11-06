@@ -1,0 +1,31 @@
+using Avalonia;
+using Avalonia.Headless;
+using Lemon.Inside.Book;
+using Lemon.Inside.Book.Tests;
+using System.Runtime.CompilerServices;
+using Xunit;
+
+[assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
+
+// Sequential on purpose: the headless platform does not like parallel start-up, and several tests change
+// process-wide state (the current culture, LocalizationService.Instance).
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
+
+namespace Lemon.Inside.Book.Tests;
+
+/// <summary>
+/// Headless host for <c>[AvaloniaFact]</c> tests. Uses the real <see cref="App"/>, so the book's styles load;
+/// the headless platform has no desktop lifetime, so App opens no window of its own. Skia rendering (rather
+/// than headless drawing) lets a test capture a frame.
+/// </summary>
+public static class TestAppBuilder
+{
+    public static AppBuilder BuildAvaloniaApp() =>
+        AppBuilder.Configure<App>()
+            .UseSkia()
+            .UseHeadless(new AvaloniaHeadlessPlatformOptions { UseHeadlessDrawing = false });
+
+    /// <summary>The shell knows this book (its strings, languages and page count) before any test touches it.</summary>
+    [ModuleInitializer]
+    internal static void ConfigureShell() => App.ConfigureShell();
+}

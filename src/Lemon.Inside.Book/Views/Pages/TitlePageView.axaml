@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:pages="using:Lemon.Inside.Book.ViewModels.Pages"
+             xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+             x:Class="Lemon.Inside.Book.Views.Pages.TitlePageView"
+             x:DataType="pages:TitlePageViewModel">
+    <Grid RowDefinitions="*,Auto,Auto,*,Auto" Margin="56,48">
+        <SelectableTextBlock Grid.Row="1" Classes="pageTitle" FontSize="40" TextAlignment="Center" Text="{loc:Localize Book_Title}" />
+        <SelectableTextBlock Grid.Row="2" Classes="body" TextAlignment="Center" Text="{loc:Localize Book_Subtitle}" />
+        <StackPanel Grid.Row="4" Spacing="4">
+            <Rectangle Height="1" Fill="{DynamicResource RuleBrush}" Margin="0,0,0,10" />
+            <TextBlock Classes="folio" TextAlignment="Center" Text="{loc:Localize Title_Edition}" />
+            <TextBlock Classes="folio" TextAlignment="Center" Text="{loc:Localize Title_License}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

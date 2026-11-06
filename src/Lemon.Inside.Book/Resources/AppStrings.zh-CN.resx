@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="App_Title" xml:space="preserve">
+    <value>看见原理</value>
+  </data>
+  <data name="BackCover_Text" xml:space="preserve">
+    <value>拆开看看，弄懂原理，再装回去。</value>
+  </data>
+  <data name="Book_Subtitle" xml:space="preserve">
+    <value>从里面看明白万物：光、齿轮与机器</value>
+  </data>
+  <data name="Book_Title" xml:space="preserve">
+    <value>看见原理</value>
+  </data>
+  <data name="Bookmarks_Tip" xml:space="preserve">
+    <value>给这一页加书签，或翻到加过书签的页</value>
+  </data>
+  <data name="Chapter_Number" xml:space="preserve">
+    <value>第 {0} 章</value>
+  </data>
+  <data name="Contents_Title" xml:space="preserve">
+    <value>目录</value>
+  </data>
+  <data name="Cover_Tagline" xml:space="preserve">
+    <value>能转、能拖、能拆开的图</value>
+  </data>
+  <data name="Credits_Code" xml:space="preserve">
+    <value>代码：MIT 许可证。</value>
+  </data>
+  <data name="Credits_Fonts" xml:space="preserve">
+    <value>字体：Noto Sans SC，SIL 开放字体许可证 1.1。</value>
+  </data>
+  <data name="Credits_Narration" xml:space="preserve">
+    <value>朗读：使用开源许可的语音合成模型生成，详见 THIRD-PARTY-NOTICES.md。</value>
+  </data>
+  <data name="Credits_Title" xml:space="preserve">
+    <value>致谢</value>
+  </data>
+  <data name="Diagram_Placeholder" xml:space="preserve">
+    <value>互动图即将到来</value>
+  </data>
+  <data name="Explore_ClickHint" xml:space="preserve">
+    <value>点一下画面里的东西，听听它是什么</value>
+  </data>
+  <data name="HowTo_Contents" xml:space="preserve">
+    <value>找不到看到哪儿了？点上方的“目录”就能回到目录页。</value>
+  </data>
+  <data name="HowTo_Explore" xml:space="preserve">
+    <value>每个道理占两页：左边读，右边试。拖动画面可以转着看，点一点图里的东西就知道它是什么。</value>
+  </data>
+  <data name="HowTo_Listen" xml:space="preserve">
+    <value>每一课都可以朗读。随时可以在上方切换中文和英文。</value>
+  </data>
+  <data name="HowTo_Title" xml:space="preserve">
+    <value>怎样读这本书</value>
+  </data>
+  <data name="HowTo_Turn" xml:space="preserve">
+    <value>翻页：拖动书页外侧的边缘，或者点一下它，也可以按键盘上的左右方向键。</value>
+  </data>
+  <data name="Lesson_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Lesson_Listen" xml:space="preserve">
+    <value>再听一遍</value>
+  </data>
+  <data name="Lesson_Start" xml:space="preserve">
+    <value>听讲解</value>
+  </data>
+  <data name="Lesson_Start_Tooltip" xml:space="preserve">
+    <value>播放这个视图的语音讲解（带字幕）</value>
+  </data>
+  <data name="Notes_Export_FileName" xml:space="preserve">
+    <value>看见原理-笔记-{0}.md</value>
+  </data>
+  <data name="Notes_Export_Title" xml:space="preserve">
+    <value>看见原理 · 笔记</value>
+  </data>
+  <data name="Notes_Tip" xml:space="preserve">
+    <value>在这一页写笔记、查看全部笔记、导出</value>
+  </data>
+  <data name="Page_Caption_BackCover" xml:space="preserve">
+    <value>封底</value>
+  </data>
+  <data name="Page_Caption_Chapter" xml:space="preserve">
+    <value>第 {0} 章 · {1}</value>
+  </data>
+  <data name="Page_Caption_Contents" xml:space="preserve">
+    <value>目录 · {0}</value>
+  </data>
+  <data name="Page_Caption_Cover" xml:space="preserve">
+    <value>封面</value>
+  </data>
+  <data name="Page_Caption_Diagram" xml:space="preserve">
+    <value>{0} · 图</value>
+  </data>
+  <data name="Page_Caption_HowToUse" xml:space="preserve">
+    <value>使用说明</value>
+  </data>
+  <data name="Page_Caption_Title" xml:space="preserve">
+    <value>扉页</value>
+  </data>
+  <data name="Progress_Complete" xml:space="preserve">
+    <value>✓ 已完成</value>
+  </data>
+  <data name="Progress_Opened" xml:space="preserve">
+    <value>已读</value>
+  </data>
+  <data name="Progress_Walkthroughs" xml:space="preserve">
+    <value>讲解 {0}/{1}</value>
+  </data>
+  <data name="Settings_Accent" xml:space="preserve">
+    <value>强调色</value>
+  </data>
+  <data name="Settings_AnimatesTurns" xml:space="preserve">
+    <value>翻页动画</value>
+  </data>
+  <data name="Settings_AnimatesTurns_Note" xml:space="preserve">
+    <value>关闭后直接换页，适合不喜欢动态效果的读者。</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Settings_Language_Chinese" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="Settings_Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Narration" xml:space="preserve">
+    <value>讲解</value>
+  </data>
+  <data name="Settings_Narration_Note" xml:space="preserve">
+    <value>关闭朗读后，讲解仍会按阅读速度显示字幕。</value>
+  </data>
+  <data name="Settings_Progress" xml:space="preserve">
+    <value>阅读进度</value>
+  </data>
+  <data name="Settings_Progress_Clear" xml:space="preserve">
+    <value>清除阅读进度</value>
+  </data>
+  <data name="Settings_Progress_Note" xml:space="preserve">
+    <value>进度显示在目录里。清除进度不会删除书签。</value>
+  </data>
+  <data name="Settings_Progress_Summary" xml:space="preserve">
+    <value>已打开 {0} 章，其中 {1} 章的讲解全部听完。</value>
+  </data>
+  <data name="Settings_Reading" xml:space="preserve">
+    <value>阅读</value>
+  </data>
+  <data name="Settings_Saved" xml:space="preserve">
+    <value>修改立即生效，并保存在这台设备上。</value>
+  </data>
+  <data name="Settings_SpeakOnClick" xml:space="preserve">
+    <value>点击画面里的东西时朗读说明</value>
+  </data>
+  <data name="Settings_Subtitles" xml:space="preserve">
+    <value>显示字幕</value>
+  </data>
+  <data name="Settings_Theme_Dark" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="Settings_Theme_EyeCare" xml:space="preserve">
+    <value>护眼</value>
+  </data>
+  <data name="Settings_Theme_Light" xml:space="preserve">
+    <value>浅色</value>
+  </data>
+  <data name="Settings_Theme_System" xml:space="preserve">
+    <value>跟随系统</value>
+  </data>
+  <data name="Settings_Tip" xml:space="preserve">
+    <value>语言、主题、观察地点、讲解和翻页</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings_Voice" xml:space="preserve">
+    <value>朗读讲解</value>
+  </data>
+  <data name="Settings_Volume" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="Text_AddToNotes" xml:space="preserve">
+    <value>加入笔记</value>
+  </data>
+  <data name="Text_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Text_SelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="Title_Edition" xml:space="preserve">
+    <value>第一版（编写中）</value>
+  </data>
+  <data name="Title_License" xml:space="preserve">
+    <value>基于 MIT 许可证免费开源。</value>
+  </data>
+  <data name="Toolbar_Contents" xml:space="preserve">
+    <value>目录</value>
+  </data>
+  <data name="Toolbar_Next" xml:space="preserve">
+    <value>下一页</value>
+  </data>
+  <data name="Toolbar_Previous" xml:space="preserve">
+    <value>上一页</value>
+  </data>
+  <data name="Update_Banner_Download" xml:space="preserve">
+    <value>探索之书 {0} 已发布。下载后关闭本程序，再覆盖安装。</value>
+  </data>
+  <data name="Update_Banner_Install" xml:space="preserve">
+    <value>探索之书 {0} 已发布，「更新并重启」只需几秒钟。</value>
+  </data>
+  <data name="Update_Check" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="Update_CheckOnStartup" xml:space="preserve">
+    <value>打开时检查更新</value>
+  </data>
+  <data name="Update_Feed_Caption" xml:space="preserve">
+    <value>更新地址</value>
+  </data>
+  <data name="Update_Feed_Help" xml:space="preserve">
+    <value>github:owner/repo 读取该仓库最新的 GitHub Release；其他 https 地址按更新清单读取（格式见 docs/UPDATES.md）。填 off 关闭更新。</value>
+  </data>
+  <data name="Update_Feed_Placeholder" xml:space="preserve">
+    <value>github:owner/repo，或 https://…/latest.json</value>
+  </data>
+  <data name="Update_Feed_Reset" xml:space="preserve">
+    <value>恢复默认地址</value>
+  </data>
+  <data name="Update_Feed_Save" xml:space="preserve">
+    <value>使用这个地址</value>
+  </data>
+  <data name="Update_Later" xml:space="preserve">
+    <value>稍后</value>
+  </data>
+  <data name="Update_ReleasePage" xml:space="preserve">
+    <value>打开发布页面</value>
+  </data>
+  <data name="Update_Title" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="Update_Version" xml:space="preserve">
+    <value>当前版本 {0}</value>
+  </data>
+  <data name="Update_WhatsNew" xml:space="preserve">
+    <value>更新内容</value>
+  </data>
+  <data name="Volume_Part" xml:space="preserve">
+    <value>第 {0} 部分</value>
+  </data>
+  <data name="Window_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Window_Maximize" xml:space="preserve">
+    <value>最大化 / 还原</value>
+  </data>
+  <data name="Window_Minimize" xml:space="preserve">
+    <value>最小化</value>
+  </data>
+  <data name="Settings_Speed" xml:space="preserve">
+    <value>朗读语速</value>
+  </data>
+  <data name="Credits_Inspiration" xml:space="preserve">
+    <value>灵感来自 Bartosz Ciechanowski 的交互文章（ciechanow.ski）；本书文字与图均为原创。</value>
+  </data>
+  <data name="Volume_Light" xml:space="preserve">
+    <value>光</value>
+  </data>
+  <data name="Volume_Machines" xml:space="preserve">
+    <value>机械</value>
+  </data>
+  <data name="Chapter_Light_Shadow" xml:space="preserve">
+    <value>光与影</value>
+  </data>
+  <data name="Chapter_Gears" xml:space="preserve">
+    <value>齿轮</value>
+  </data>
+  <data name="Chapter_Watch" xml:space="preserve">
+    <value>机械表</value>
+  </data>
+  <data name="Chapter_Placeholder" xml:space="preserve">
+    <value>这一章正在写，图、讲解和朗读很快就会出现在这里。</value>
+  </data>
+  <data name="Light_Intro" xml:space="preserve">
+    <value>一盏灯挂在地上的盒子上方。移动灯、把它调大调小，看盒子的影子：小灯的影子边缘清楚，大灯的影子边缘模糊发虚。</value>
+  </data>
+  <data name="Light_DragHint" xml:space="preserve">
+    <value>拖动画面可以转着看，滚轮可以拉近。</value>
+  </data>
+  <data name="Light_Picture" xml:space="preserve">
+    <value>一盏方形灯照着地上的盒子</value>
+  </data>
+  <data name="Light_Height" xml:space="preserve">
+    <value>灯的高度</value>
+  </data>
+  <data name="Light_Size" xml:space="preserve">
+    <value>灯的大小</value>
+  </data>
+  <data name="Light_Position" xml:space="preserve">
+    <value>灯往旁边移</value>
+  </data>
+  <data name="Light_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Light_Spike_Title" xml:space="preserve">
+    <value>绘制测试</value>
+  </data>
+  <data name="Light_Spike_Note" xml:space="preserve">
+    <value>用来试验画面怎么画：取样越多，软影子越平滑；分辨率越高，画面越清楚，但都会更慢。</value>
+  </data>
+  <data name="Light_Samples" xml:space="preserve">
+    <value>灯上的取样点</value>
+  </data>
+  <data name="Light_Resolution" xml:space="preserve">
+    <value>画面分辨率</value>
+  </data>
+  <data name="Light_Spin" xml:space="preserve">
+    <value>自动旋转</value>
+  </data>
+</root>

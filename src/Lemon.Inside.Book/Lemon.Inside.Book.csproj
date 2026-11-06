@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Everything the desktop and browser heads share: the book, its pages, localization and settings. -->
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Lemon.Inside.Book</RootNamespace>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <!-- The sphere renderer and starfield copy pixel rows straight into bitmap memory. -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Native AOT and trimming: every build warns about anything that would break them. -->
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Lemon.Inside.Book.Tests" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!--
+      Where this build looks for updates (read by the shell's UpdateFeed): github:owner/repo, the address of a JSON
+      manifest, or off. A Release build updates from this repository's GitHub Releases unless told otherwise (the
+      release workflow passes github:<the repository it runs in>, so a fork updates from itself); a Debug build has none.
+    -->
+    <UpdateFeed Condition="'$(UpdateFeed)' == '' and '$(Configuration)' == 'Release'">github:tracyma-05/Lemon.Inside.Book</UpdateFeed>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="UpdateFeed" Value="$(UpdateFeed)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" Exclude="Assets\Maps\**" />
+    <!-- Narration timings, written by scripts/narration/generate-narration.py; the audio itself ships separately. -->
+    <EmbeddedResource Include="..\..\assets\narration\narration.json" LogicalName="Lemon.Inside.Book.Narration.Manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="AvaloniaUI.DiagnosticsSupport">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <!-- The shell every Lemon book shares: the book and its page turn, narration, lessons, settings and updates. -->
+    <PackageReference Include="Lemon.Book.Shell" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppStrings.resx">
+      <LogicalName>Lemon.Inside.Book.Resources.AppStrings.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppStrings.zh-CN.resx">
+      <LogicalName>Lemon.Inside.Book.Resources.AppStrings.zh-CN.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

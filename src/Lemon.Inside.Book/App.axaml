@@ -1,0 +1,37 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Lemon.Inside.Book.App"
+             RequestedThemeVariant="Light">
+
+    <!--
+        Paper and ink, the three themes, the cover, the toolbar and page typography are the look every Lemon book
+        shares: Lemon.Book.Shell's Styles/Book.axaml. Here only this book's.
+    -->
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://Lemon.Book.Shell/Styles/Book.axaml" />
+
+        <!-- Page typography -->
+        <Style Selector=":is(TextBlock).chapterNumber">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Foreground" Value="{DynamicResource FaintInkBrush}" />
+            <Setter Property="Margin" Value="0,18,0,0" />
+        </Style>
+
+        <!-- Table of contents -->
+        <Style Selector="Button.contentsEntry">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Padding" Value="10,7" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+            <Setter Property="FontSize" Value="17" />
+        </Style>
+        <Style Selector="Button.contentsEntry:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource AccentFaintBrush}" />
+        </Style>
+
+    </Application.Styles>
+</Application>

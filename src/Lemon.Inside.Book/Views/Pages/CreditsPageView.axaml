@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:pages="using:Lemon.Inside.Book.ViewModels.Pages"
+             xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+             x:Class="Lemon.Inside.Book.Views.Pages.CreditsPageView"
+             x:DataType="pages:CreditsPageViewModel">
+    <Grid RowDefinitions="Auto,*,Auto" Margin="56,44,56,20">
+        <SelectableTextBlock Classes="pageTitle" Text="{loc:Localize Credits_Title}" />
+        <StackPanel Grid.Row="1" Spacing="12">
+            <SelectableTextBlock Classes="body" Text="{loc:Localize Credits_Code}" />
+            <SelectableTextBlock Classes="body" Text="{loc:Localize Credits_Inspiration}" />
+            <SelectableTextBlock Classes="body" Text="{loc:Localize Credits_Fonts}" />
+            <SelectableTextBlock Classes="body" Text="{loc:Localize Credits_Narration}" />
+        </StackPanel>
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</UserControl>

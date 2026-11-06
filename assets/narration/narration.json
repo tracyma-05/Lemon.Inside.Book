@@ -1,0 +1,14 @@
+{
+ "en": {
+  "clips": {},
+  "pitch": "+0Hz",
+  "rate": "-10%",
+  "voice": "en-US-AvaMultilingualNeural"
+ },
+ "zh-CN": {
+  "clips": {},
+  "pitch": "+0Hz",
+  "rate": "-10%",
+  "voice": "zh-CN-XiaoxiaoNeural"
+ }
+}

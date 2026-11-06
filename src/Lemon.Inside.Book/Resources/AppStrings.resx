@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="App_Title" xml:space="preserve">
+    <value>Inside Book</value>
+  </data>
+  <data name="BackCover_Text" xml:space="preserve">
+    <value>Take it apart, see how it works, put it back.</value>
+  </data>
+  <data name="Book_Subtitle" xml:space="preserve">
+    <value>How things work, seen from the inside: light, gears and machines</value>
+  </data>
+  <data name="Book_Title" xml:space="preserve">
+    <value>The Inside Book</value>
+  </data>
+  <data name="Bookmarks_Tip" xml:space="preserve">
+    <value>Bookmark this page, or turn to a bookmarked one</value>
+  </data>
+  <data name="Chapter_Number" xml:space="preserve">
+    <value>Chapter {0}</value>
+  </data>
+  <data name="Contents_Title" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="Cover_Tagline" xml:space="preserve">
+    <value>Pictures you can turn, drag and take apart</value>
+  </data>
+  <data name="Credits_Code" xml:space="preserve">
+    <value>Code: MIT licence.</value>
+  </data>
+  <data name="Credits_Fonts" xml:space="preserve">
+    <value>Fonts: Noto Sans SC, SIL Open Font License 1.1.</value>
+  </data>
+  <data name="Credits_Narration" xml:space="preserve">
+    <value>Narration: generated with an openly licensed text-to-speech model; see THIRD-PARTY-NOTICES.md.</value>
+  </data>
+  <data name="Credits_Title" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="Diagram_Placeholder" xml:space="preserve">
+    <value>Interactive picture coming soon</value>
+  </data>
+  <data name="Explore_ClickHint" xml:space="preserve">
+    <value>Click anything in the picture to hear what it is</value>
+  </data>
+  <data name="HowTo_Contents" xml:space="preserve">
+    <value>Lost your place? The Contents button takes you back to the table of contents.</value>
+  </data>
+  <data name="HowTo_Explore" xml:space="preserve">
+    <value>Each idea is one spread: read on the left, try it on the right. Drag a picture to turn it, and click anything in it to find out what it is.</value>
+  </data>
+  <data name="HowTo_Listen" xml:space="preserve">
+    <value>Every lesson can be read aloud. Switch between English and Chinese at the top at any time.</value>
+  </data>
+  <data name="HowTo_Title" xml:space="preserve">
+    <value>How to read this book</value>
+  </data>
+  <data name="HowTo_Turn" xml:space="preserve">
+    <value>Turn a page: drag the outer edge of a page, click it, or press the left and right arrow keys.</value>
+  </data>
+  <data name="Lesson_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Lesson_Listen" xml:space="preserve">
+    <value>Listen again</value>
+  </data>
+  <data name="Lesson_Start" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="Lesson_Start_Tooltip" xml:space="preserve">
+    <value>A spoken walkthrough of this view, with subtitles</value>
+  </data>
+  <data name="Notes_Export_FileName" xml:space="preserve">
+    <value>Inside-Book-notes-{0}.md</value>
+  </data>
+  <data name="Notes_Export_Title" xml:space="preserve">
+    <value>Inside Book · Notes</value>
+  </data>
+  <data name="Notes_Tip" xml:space="preserve">
+    <value>Write a note on this page, see your notes, export them</value>
+  </data>
+  <data name="Page_Caption_BackCover" xml:space="preserve">
+    <value>Back cover</value>
+  </data>
+  <data name="Page_Caption_Chapter" xml:space="preserve">
+    <value>Chapter {0} · {1}</value>
+  </data>
+  <data name="Page_Caption_Contents" xml:space="preserve">
+    <value>Contents · {0}</value>
+  </data>
+  <data name="Page_Caption_Cover" xml:space="preserve">
+    <value>Cover</value>
+  </data>
+  <data name="Page_Caption_Diagram" xml:space="preserve">
+    <value>{0} · picture</value>
+  </data>
+  <data name="Page_Caption_HowToUse" xml:space="preserve">
+    <value>How to use this book</value>
+  </data>
+  <data name="Page_Caption_Title" xml:space="preserve">
+    <value>Title page</value>
+  </data>
+  <data name="Progress_Complete" xml:space="preserve">
+    <value>✓ Done</value>
+  </data>
+  <data name="Progress_Opened" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Progress_Walkthroughs" xml:space="preserve">
+    <value>Walkthroughs {0}/{1}</value>
+  </data>
+  <data name="Settings_Accent" xml:space="preserve">
+    <value>Accent colour</value>
+  </data>
+  <data name="Settings_AnimatesTurns" xml:space="preserve">
+    <value>Animate page turns</value>
+  </data>
+  <data name="Settings_AnimatesTurns_Note" xml:space="preserve">
+    <value>Off: pages change at once, for readers who prefer less motion.</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_Language_Chinese" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="Settings_Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Narration" xml:space="preserve">
+    <value>Narration</value>
+  </data>
+  <data name="Settings_Narration_Note" xml:space="preserve">
+    <value>With reading aloud off, walkthroughs still run with subtitles at a reading pace.</value>
+  </data>
+  <data name="Settings_Progress" xml:space="preserve">
+    <value>Reading progress</value>
+  </data>
+  <data name="Settings_Progress_Clear" xml:space="preserve">
+    <value>Clear reading progress</value>
+  </data>
+  <data name="Settings_Progress_Note" xml:space="preserve">
+    <value>Shown in the table of contents. Clearing it keeps your bookmarks.</value>
+  </data>
+  <data name="Settings_Progress_Summary" xml:space="preserve">
+    <value>{0} chapters opened, {1} with every walkthrough heard.</value>
+  </data>
+  <data name="Settings_Reading" xml:space="preserve">
+    <value>Reading</value>
+  </data>
+  <data name="Settings_Saved" xml:space="preserve">
+    <value>Changes take effect at once and are saved on this device.</value>
+  </data>
+  <data name="Settings_SpeakOnClick" xml:space="preserve">
+    <value>Read out what you click in a picture</value>
+  </data>
+  <data name="Settings_Subtitles" xml:space="preserve">
+    <value>Show subtitles</value>
+  </data>
+  <data name="Settings_Theme_Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Settings_Theme_EyeCare" xml:space="preserve">
+    <value>Eye care</value>
+  </data>
+  <data name="Settings_Theme_Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Settings_Theme_System" xml:space="preserve">
+    <value>Follow system</value>
+  </data>
+  <data name="Settings_Tip" xml:space="preserve">
+    <value>Language, theme, observer location, narration and page turning</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings_Voice" xml:space="preserve">
+    <value>Read aloud</value>
+  </data>
+  <data name="Settings_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Text_AddToNotes" xml:space="preserve">
+    <value>Add to notes</value>
+  </data>
+  <data name="Text_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Text_SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="Title_Edition" xml:space="preserve">
+    <value>First edition, still being written</value>
+  </data>
+  <data name="Title_License" xml:space="preserve">
+    <value>Free and open source under the MIT licence.</value>
+  </data>
+  <data name="Toolbar_Contents" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="Toolbar_Next" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="Toolbar_Previous" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="Update_Banner_Download" xml:space="preserve">
+    <value>Version {0} of the book is available. Download it, close the book and install it over this copy.</value>
+  </data>
+  <data name="Update_Banner_Install" xml:space="preserve">
+    <value>Version {0} of the book is available. Update and restart takes a few seconds.</value>
+  </data>
+  <data name="Update_Check" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="Update_CheckOnStartup" xml:space="preserve">
+    <value>Check for updates when the book opens</value>
+  </data>
+  <data name="Update_Feed_Caption" xml:space="preserve">
+    <value>Update address</value>
+  </data>
+  <data name="Update_Feed_Help" xml:space="preserve">
+    <value>github:owner/repo reads the repository's latest GitHub Release; any other https address is read as an update manifest (see docs/UPDATES.md). "off" turns updates off.</value>
+  </data>
+  <data name="Update_Feed_Placeholder" xml:space="preserve">
+    <value>github:owner/repo, or https://…/latest.json</value>
+  </data>
+  <data name="Update_Feed_Reset" xml:space="preserve">
+    <value>Restore the default</value>
+  </data>
+  <data name="Update_Feed_Save" xml:space="preserve">
+    <value>Use this address</value>
+  </data>
+  <data name="Update_Later" xml:space="preserve">
+    <value>Later</value>
+  </data>
+  <data name="Update_ReleasePage" xml:space="preserve">
+    <value>Open the release page</value>
+  </data>
+  <data name="Update_Title" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="Update_Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Update_WhatsNew" xml:space="preserve">
+    <value>What's new</value>
+  </data>
+  <data name="Volume_Part" xml:space="preserve">
+    <value>Part {0}</value>
+  </data>
+  <data name="Window_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Window_Maximize" xml:space="preserve">
+    <value>Maximize / restore</value>
+  </data>
+  <data name="Window_Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="Settings_Speed" xml:space="preserve">
+    <value>Reading speed</value>
+  </data>
+  <data name="Credits_Inspiration" xml:space="preserve">
+    <value>Inspired by Bartosz Ciechanowski's interactive articles at ciechanow.ski; the text and pictures here are our own.</value>
+  </data>
+  <data name="Volume_Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Volume_Machines" xml:space="preserve">
+    <value>Machines</value>
+  </data>
+  <data name="Chapter_Light_Shadow" xml:space="preserve">
+    <value>Light and shadow</value>
+  </data>
+  <data name="Chapter_Gears" xml:space="preserve">
+    <value>Gears</value>
+  </data>
+  <data name="Chapter_Watch" xml:space="preserve">
+    <value>The mechanical watch</value>
+  </data>
+  <data name="Chapter_Placeholder" xml:space="preserve">
+    <value>This chapter is being written. Its pictures, lessons and narration will appear here soon.</value>
+  </data>
+  <data name="Light_Intro" xml:space="preserve">
+    <value>A lamp hangs over a box on the floor. Move the lamp, make it bigger or smaller, and watch the box's shadow: a small lamp gives a sharp edge, a big one a soft, blurred one.</value>
+  </data>
+  <data name="Light_DragHint" xml:space="preserve">
+    <value>Drag the picture to look round; use the wheel to come closer.</value>
+  </data>
+  <data name="Light_Picture" xml:space="preserve">
+    <value>A square lamp over a floor with a box on it</value>
+  </data>
+  <data name="Light_Height" xml:space="preserve">
+    <value>Lamp height</value>
+  </data>
+  <data name="Light_Size" xml:space="preserve">
+    <value>Lamp size</value>
+  </data>
+  <data name="Light_Position" xml:space="preserve">
+    <value>Lamp to the side</value>
+  </data>
+  <data name="Light_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Light_Spike_Title" xml:space="preserve">
+    <value>Drawing test</value>
+  </data>
+  <data name="Light_Spike_Note" xml:space="preserve">
+    <value>For trying out how the picture is drawn: more samples make the soft shadow smoother, a higher resolution makes the picture sharper, and both make it slower.</value>
+  </data>
+  <data name="Light_Samples" xml:space="preserve">
+    <value>Samples on the lamp</value>
+  </data>
+  <data name="Light_Resolution" xml:space="preserve">
+    <value>Picture resolution</value>
+  </data>
+  <data name="Light_Spin" xml:space="preserve">
+    <value>Turn by itself</value>
+  </data>
+</root>

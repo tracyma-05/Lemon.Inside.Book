@@ -1,0 +1,23 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:light="using:Lemon.Inside.Book.Chapters.LightShadow"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.LightShadow.LightShadowDiagramPageView"
+                         x:DataType="light:LightShadowDiagramPageViewModel">
+    <!-- Right page of the Light and shadow spread: the lamp over the floor, drawn on the CPU; drag to turn it. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <light:LightShadowDiagram LightHeight="{Binding Light.LightHeight}"
+                                      LightSize="{Binding Light.LightSize}"
+                                      LightX="{Binding Light.LightX}"
+                                      Samples="{Binding Light.Samples}"
+                                      RenderScale="{Binding Light.RenderScale}"
+                                      Spin="{Binding Light.Spin}"
+                                      ToolTip.Tip="{loc:Localize Light_DragHint}"
+                                      AutomationProperties.Name="{loc:Localize Light_Picture}" />
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>
