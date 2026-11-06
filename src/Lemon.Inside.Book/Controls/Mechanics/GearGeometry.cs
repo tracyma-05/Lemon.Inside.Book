@@ -1,6 +1,6 @@
 using Avalonia;
 
-namespace Lemon.Inside.Book.Chapters.Gears;
+namespace Lemon.Inside.Book.Controls.Mechanics;
 
 /// <summary>
 /// The shape and motion of involute spur gears, in units of the module (the tooth size: a gear of z teeth has a

@@ -5,10 +5,10 @@ using Avalonia.Media.Immutable;
 using Lemon.Book.Shell.Infrastructures.Localization;
 using Lemon.Book.Shell.Infrastructures.Timing;
 
-namespace Lemon.Inside.Book.Chapters.Gears;
+namespace Lemon.Inside.Book.Controls.Mechanics;
 
 /// <summary>
-/// The base of the Gears chapter's pictures: flat drawings on a dark plate, moving on the book's clock (so a video
+/// The base of the moving machine pictures (gears, the watch): flat drawings on a dark plate, moving on the book's clock (so a video
 /// export steps them frame by frame). Gears are drawn from <see cref="GearGeometry"/> outlines in units of the module,
 /// with y up, at a centre and scale on screen.
 /// </summary>

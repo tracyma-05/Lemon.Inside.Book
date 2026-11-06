@@ -11,7 +11,7 @@ public static class BookContents
         new("Light-Shadow", Volume.Light, Spreads: 9),
 
         new("Gears", Volume.Machines, Spreads: 6),
-        new("Watch", Volume.Machines),
+        new("Watch", Volume.Machines, Spreads: 6),
     ];
 
     public static IReadOnlyList<Volume> Volumes { get; } = Enum.GetValues<Volume>();

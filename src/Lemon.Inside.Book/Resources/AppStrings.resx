@@ -795,4 +795,253 @@
   <data name="Gears_Planet_OutLabel" xml:space="preserve">
     <value>Comes out: {0}</value>
   </data>
+  <data name="Watch_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Watch_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Watch_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Watch_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Watch_Times" xml:space="preserve">
+    <value>{0}×</value>
+  </data>
+  <data name="Watch_Spring_Title" xml:space="preserve">
+    <value>Stored up in a spring</value>
+  </data>
+  <data name="Watch_Spring_P1" xml:space="preserve">
+    <value>A mechanical watch has no battery. Its energy is a long, thin strip of steel, the mainspring, coiled up inside a little drum called the barrel. Turning the crown winds the spring tight round the arbor in the middle.</value>
+  </data>
+  <data name="Watch_Spring_P2" xml:space="preserve">
+    <value>Left alone, the spring tries to uncoil and pushes the barrel round. The barrel has teeth on its rim, and they drive all the other wheels. A full spring keeps a watch like this one going for about 40 hours.</value>
+  </data>
+  <data name="Watch_Spring_Deeper" xml:space="preserve">
+    <value>The spring pulls hardest when it is full and less as it runs down. On its own that would make the watch run fast, then slow; the part on the next pages that lets the energy out a little at a time is what keeps the rate steady.</value>
+  </data>
+  <data name="Watch_Spring_Wind" xml:space="preserve">
+    <value>How far it is wound</value>
+  </data>
+  <data name="Watch_Spring_Readout" xml:space="preserve">
+    <value>Enough for about {0} hours: the barrel can still turn {1} times.</value>
+  </data>
+  <data name="Watch_Spring_Picture" xml:space="preserve">
+    <value>The mainspring coiled in its barrel, seen from above, with gauges for its pull and the hours left</value>
+  </data>
+  <data name="Watch_Spring_Arbor" xml:space="preserve">
+    <value>arbor</value>
+  </data>
+  <data name="Watch_Spring_Barrel" xml:space="preserve">
+    <value>barrel</value>
+  </data>
+  <data name="Watch_Spring_Pull" xml:space="preserve">
+    <value>pull</value>
+  </data>
+  <data name="Watch_Spring_Hours" xml:space="preserve">
+    <value>{0} h left</value>
+  </data>
+  <data name="Watch_Hands_Title" xml:space="preserve">
+    <value>From one spring to three hands</value>
+  </data>
+  <data name="Watch_Hands_P1" xml:space="preserve">
+    <value>Between the barrel and the hands is a row of wheels, the going train. Each big wheel drives a small pinion on the next axle, so each axle turns faster than the one before. The centre wheel turns once an hour and carries the minute hand; the fourth wheel turns once a minute and carries the seconds hand.</value>
+  </data>
+  <data name="Watch_Hands_P2" xml:space="preserve">
+    <value>The hour hand is not on this train at all. Under the dial, a few more small wheels slow the minute hand down twelve times, so the hour hand goes once round while the minute hand goes round twelve times.</value>
+  </data>
+  <data name="Watch_Hands_Deeper" xml:space="preserve">
+    <value>Barrel 80 teeth → centre pinion 10: the barrel turns once every 8 hours. Centre 64 → 8, third 60 → 8, fourth 80 → 8: 8 × 7.5 × 10 = 600 turns of the escape wheel an hour.</value>
+  </data>
+  <data name="Watch_Hands_Speed" xml:space="preserve">
+    <value>How fast time runs</value>
+  </data>
+  <data name="Watch_Hands_Picture" xml:space="preserve">
+    <value>A watch dial and, below, the row of wheels from the barrel to the escape wheel</value>
+  </data>
+  <data name="Watch_Train_Barrel" xml:space="preserve">
+    <value>barrel</value>
+  </data>
+  <data name="Watch_Train_BarrelSpeed" xml:space="preserve">
+    <value>once in 8 hours</value>
+  </data>
+  <data name="Watch_Train_Centre" xml:space="preserve">
+    <value>centre wheel</value>
+  </data>
+  <data name="Watch_Train_CentreSpeed" xml:space="preserve">
+    <value>once an hour: minute hand</value>
+  </data>
+  <data name="Watch_Train_Third" xml:space="preserve">
+    <value>third wheel</value>
+  </data>
+  <data name="Watch_Train_ThirdSpeed" xml:space="preserve">
+    <value>8 times an hour</value>
+  </data>
+  <data name="Watch_Train_Fourth" xml:space="preserve">
+    <value>fourth wheel</value>
+  </data>
+  <data name="Watch_Train_FourthSpeed" xml:space="preserve">
+    <value>once a minute: seconds hand</value>
+  </data>
+  <data name="Watch_Train_Escape" xml:space="preserve">
+    <value>escape wheel</value>
+  </data>
+  <data name="Watch_Train_EscapeSpeed" xml:space="preserve">
+    <value>10 times a minute</value>
+  </data>
+  <data name="Watch_Escape_Title" xml:space="preserve">
+    <value>Tick, tock</value>
+  </data>
+  <data name="Watch_Escape_P1" xml:space="preserve">
+    <value>Left to itself, the spring would whirl the wheels round and run down in seconds. The escapement stops that. A lever with two red stones holds the escape wheel still; each time the balance swings past the middle, it flicks the lever across, one stone lets go, the wheel jumps half a tooth, and the other stone catches it. That jump is the tick you hear.</value>
+  </data>
+  <data name="Watch_Escape_P2" xml:space="preserve">
+    <value>The wheel does not just get let go: as it slips past a stone, its tooth gives the lever a small push, and the lever passes it on to the balance. That push, once a beat, keeps the balance swinging for as long as the spring lasts.</value>
+  </data>
+  <data name="Watch_Escape_Deeper" xml:space="preserve">
+    <value>Two beats per tooth, 15 teeth per turn, 10 turns a minute: 300 beats a minute, 18,000 an hour. The balance is free for most of each swing and touches the lever only near the middle, which is why this kind is called a detached lever escapement.</value>
+  </data>
+  <data name="Watch_Escape_SlowSlider" xml:space="preserve">
+    <value>Slow motion</value>
+  </data>
+  <data name="Watch_Escape_Slow" xml:space="preserve">
+    <value>{0}× slower than life</value>
+  </data>
+  <data name="Watch_Escape_Readout" xml:space="preserve">
+    <value>{0} beats an hour: {1} a second.</value>
+  </data>
+  <data name="Watch_Escape_Picture" xml:space="preserve">
+    <value>The lever escapement in slow motion: balance, lever with two stones, escape wheel</value>
+  </data>
+  <data name="Watch_Escape_Balance" xml:space="preserve">
+    <value>balance</value>
+  </data>
+  <data name="Watch_Escape_Lever" xml:space="preserve">
+    <value>lever</value>
+  </data>
+  <data name="Watch_Escape_Wheel" xml:space="preserve">
+    <value>escape wheel</value>
+  </data>
+  <data name="Watch_Escape_Tick" xml:space="preserve">
+    <value>tick</value>
+  </data>
+  <data name="Watch_Escape_Tock" xml:space="preserve">
+    <value>tock</value>
+  </data>
+  <data name="Watch_Balance_Title" xml:space="preserve">
+    <value>The heartbeat</value>
+  </data>
+  <data name="Watch_Balance_P1" xml:space="preserve">
+    <value>What sets the pace is the balance: a little wheel on a hair-thin spiral spring. Turn it and the spring pulls it back; it overshoots, the spring pulls the other way, and it swings to and fro like a swing in a playground, two and a half times a second.</value>
+  </data>
+  <data name="Watch_Balance_P2" xml:space="preserve">
+    <value>The trick is that a wide swing and a narrow swing take the same time: a wider swing just moves faster. So as the spring runs down and the pushes get weaker, the watch keeps its rate. A stiffer hairspring, though, speeds it up, and a few tenths of a percent is minutes a day.</value>
+  </data>
+  <data name="Watch_Balance_Deeper" xml:space="preserve">
+    <value>Swings a second = √(spring stiffness ÷ heaviness of the wheel) ÷ 2π. The swing's width is not in it. Watchmakers adjust the rate by changing how much of the hairspring is free to bend.</value>
+  </data>
+  <data name="Watch_Balance_Stiffness" xml:space="preserve">
+    <value>Hairspring stiffness</value>
+  </data>
+  <data name="Watch_Balance_Amplitude" xml:space="preserve">
+    <value>How wide it swings</value>
+  </data>
+  <data name="Watch_Balance_Readout" xml:space="preserve">
+    <value>{0} swings a second ({1} beats an hour).</value>
+  </data>
+  <data name="Watch_Balance_Gains" xml:space="preserve">
+    <value>The watch would gain {0} minutes a day.</value>
+  </data>
+  <data name="Watch_Balance_Loses" xml:space="preserve">
+    <value>The watch would lose {0} minutes a day.</value>
+  </data>
+  <data name="Watch_Balance_OnTime" xml:space="preserve">
+    <value>The watch keeps time.</value>
+  </data>
+  <data name="Watch_Balance_Picture" xml:space="preserve">
+    <value>The balance wheel and its hairspring swinging, with a trace of its angle over time</value>
+  </data>
+  <data name="Watch_Balance_Trace" xml:space="preserve">
+    <value>The balance's angle over time</value>
+  </data>
+  <data name="Watch_Balance_OneSecond" xml:space="preserve">
+    <value>1 second</value>
+  </data>
+  <data name="Watch_Balance_Slower" xml:space="preserve">
+    <value>{0}× slower than life</value>
+  </data>
+  <data name="Watch_Rotor_Title" xml:space="preserve">
+    <value>Wound by the wrist</value>
+  </data>
+  <data name="Watch_Rotor_P1" xml:space="preserve">
+    <value>An automatic watch winds itself. Behind the movement hangs a heavy half-moon, the rotor, free to swing on the centre. Every time the wrist moves, gravity keeps the rotor hanging down while the watch turns round it, and that swinging winds the mainspring.</value>
+  </data>
+  <data name="Watch_Rotor_P2" xml:space="preserve">
+    <value>The rotor swings both ways, but the spring only winds one way. A reverser, a pair of one-way clutches, turns both directions into winding. Once the spring is full, a slipping spring in the barrel lets it slide instead of breaking.</value>
+  </data>
+  <data name="Watch_Rotor_Deeper" xml:space="preserve">
+    <value>Without the reverser only half the swings count. Try it: with a lazy wrist, the watch then uses its spring faster than the rotor can fill it.</value>
+  </data>
+  <data name="Watch_Rotor_Activity" xml:space="preserve">
+    <value>How lively the wrist is</value>
+  </data>
+  <data name="Watch_Rotor_Reverser" xml:space="preserve">
+    <value>Reverser: both ways wind</value>
+  </data>
+  <data name="Watch_Rotor_Picture" xml:space="preserve">
+    <value>The back of an automatic watch: a swinging rotor winds the mainspring</value>
+  </data>
+  <data name="Watch_Rotor_Rotor" xml:space="preserve">
+    <value>rotor</value>
+  </data>
+  <data name="Watch_Rotor_Wheel" xml:space="preserve">
+    <value>winding wheel</value>
+  </data>
+  <data name="Watch_Rotor_Reserve" xml:space="preserve">
+    <value>Mainspring: {0}%</value>
+  </data>
+  <data name="Watch_Rotor_Full" xml:space="preserve">
+    <value>full: slipping</value>
+  </data>
+  <data name="Watch_Movement_Title" xml:space="preserve">
+    <value>The whole movement</value>
+  </data>
+  <data name="Watch_Movement_P1" xml:space="preserve">
+    <value>Here is everything together, pulled apart so you can see each layer. At the bottom, the main plate holds every axle in tiny ruby bearings. Above it, the barrel with its spring, the going train, then the escapement and balance.</value>
+  </data>
+  <data name="Watch_Movement_P2" xml:space="preserve">
+    <value>On top sit the motion works, the small wheels that make the hour hand, and then the dial and hands. Hide the layers one by one and follow the energy from the spring at the bottom up to the hands at the top.</value>
+  </data>
+  <data name="Watch_Movement_Deeper" xml:space="preserve">
+    <value>Real movements spread these parts out side by side under bridges rather than stacking them, so the watch stays thin. Rubies are used for bearings because they are very hard and very smooth, so the steel pivots hardly wear.</value>
+  </data>
+  <data name="Watch_Movement_Explode" xml:space="preserve">
+    <value>Pull the layers apart</value>
+  </data>
+  <data name="Watch_Movement_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Watch_Movement_Picture" xml:space="preserve">
+    <value>The watch movement taken apart into layers, seen from the side and above</value>
+  </data>
+  <data name="Watch_Layer_Plate" xml:space="preserve">
+    <value>Main plate</value>
+  </data>
+  <data name="Watch_Layer_Barrel" xml:space="preserve">
+    <value>Barrel</value>
+  </data>
+  <data name="Watch_Layer_Train" xml:space="preserve">
+    <value>Going train</value>
+  </data>
+  <data name="Watch_Layer_Escapement" xml:space="preserve">
+    <value>Escapement and balance</value>
+  </data>
+  <data name="Watch_Layer_MotionWorks" xml:space="preserve">
+    <value>Motion works</value>
+  </data>
+  <data name="Watch_Layer_Dial" xml:space="preserve">
+    <value>Dial and hands</value>
+  </data>
 </root>

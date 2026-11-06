@@ -1,6 +1,7 @@
 using Lemon.Book.Shell.ViewModels.Pages;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.LightShadow;
+using Lemon.Inside.Book.Chapters.Watch;
 using Lemon.Inside.Book.ViewModels.Pages;
 
 namespace Lemon.Inside.Book.Contents;
@@ -12,7 +13,7 @@ namespace Lemon.Inside.Book.Contents;
 public static class ChapterRegistry
 {
     /// <summary>Slugs of the chapters that are written (not placeholders).</summary>
-    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears" };
+    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch" };
 
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
         Chapter chapter, int number, int textPage, IBookNavigator navigator, BookServices services)
@@ -21,6 +22,7 @@ public static class ChapterRegistry
         {
             "Light-Shadow" => LightShadowChapter.CreatePages(chapter, number, textPage, navigator),
             "Gears" => GearsChapter.CreatePages(chapter, number, textPage, navigator),
+            "Watch" => WatchChapter.CreatePages(chapter, number, textPage, navigator),
             _ => [(new ChapterTextPageViewModel(textPage, navigator, chapter, number),
                 new ChapterDiagramPageViewModel(textPage + 1, navigator, chapter))],
         };

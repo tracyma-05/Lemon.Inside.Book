@@ -1,0 +1,142 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:watch="using:Lemon.Inside.Book.Chapters.Watch"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Watch.WatchTextPageView"
+                              x:DataType="watch:WatchTextPageViewModel">
+    <!-- A left page of the mechanical watch chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="watch:SpringSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding WoundText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Spring_Wind}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Wound}" SmallChange="0.02" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Watch_Spring_Wind}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:HandsSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Hands_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="3" Value="{Binding SpeedStep}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Watch_Hands_Speed}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:EscapementSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SlowText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Escape_SlowSlider}" />
+                                </DockPanel>
+                                <Slider Minimum="0.02" Maximum="0.5" Value="{Binding SlowMotion}" SmallChange="0.01" LargeChange="0.05"
+                                        AutomationProperties.Name="{loc:Localize Watch_Escape_SlowSlider}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding BeatsText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:BalanceSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding StiffnessText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Balance_Stiffness}" />
+                                </DockPanel>
+                                <Slider Minimum="0.8" Maximum="1.25" Value="{Binding Stiffness}" SmallChange="0.005" LargeChange="0.05"
+                                        AutomationProperties.Name="{loc:Localize Watch_Balance_Stiffness}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding AmplitudeText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Balance_Amplitude}" />
+                                </DockPanel>
+                                <Slider Minimum="120" Maximum="300" Value="{Binding Amplitude}" SmallChange="5" LargeChange="30"
+                                        AutomationProperties.Name="{loc:Localize Watch_Balance_Amplitude}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ErrorText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:RotorSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding ActivityText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Rotor_Activity}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Activity}" SmallChange="0.05" LargeChange="0.2"
+                                        AutomationProperties.Name="{loc:Localize Watch_Rotor_Activity}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Reverser}" Content="{loc:Localize Watch_Rotor_Reverser}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="watch:MovementSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding ExplodeText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Watch_Movement_Explode}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Explode}" SmallChange="0.02" LargeChange="0.2"
+                                        AutomationProperties.Name="{loc:Localize Watch_Movement_Explode}" />
+                                <SelectableTextBlock Classes="caption" Margin="0,10,0,2" Text="{loc:Localize Watch_Movement_Show}" />
+                                <WrapPanel>
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowDial}" Content="{loc:Localize Watch_Layer_Dial}" />
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowMotionWorks}" Content="{loc:Localize Watch_Layer_MotionWorks}" />
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowEscapement}" Content="{loc:Localize Watch_Layer_Escapement}" />
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowTrain}" Content="{loc:Localize Watch_Layer_Train}" />
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowBarrel}" Content="{loc:Localize Watch_Layer_Barrel}" />
+                                    <CheckBox Margin="0,0,12,0" IsChecked="{Binding ShowPlate}" Content="{loc:Localize Watch_Layer_Plate}" />
+                                </WrapPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

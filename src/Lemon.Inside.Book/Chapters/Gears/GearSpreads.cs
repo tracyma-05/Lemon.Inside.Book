@@ -1,6 +1,7 @@
 using System.Globalization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Lemon.Book.Shell.Infrastructures.Localization;
+using Lemon.Inside.Book.Controls.Mechanics;
 
 namespace Lemon.Inside.Book.Chapters.Gears;
 

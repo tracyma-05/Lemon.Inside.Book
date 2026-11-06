@@ -1,9 +1,10 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
+using Avalonia;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls.Mechanics;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 

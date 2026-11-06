@@ -795,4 +795,253 @@
   <data name="Gears_Planet_OutLabel" xml:space="preserve">
     <value>输出：{0}</value>
   </data>
+  <data name="Watch_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Watch_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Watch_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Watch_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Watch_Times" xml:space="preserve">
+    <value>{0} 倍</value>
+  </data>
+  <data name="Watch_Spring_Title" xml:space="preserve">
+    <value>储存在发条里</value>
+  </data>
+  <data name="Watch_Spring_P1" xml:space="preserve">
+    <value>机械表里没有电池。它的能量来自一条又长又薄的钢带，叫“发条”，盘在一个叫“条盒”的小鼓里。转动表冠，就把发条一圈圈紧紧绕在中间的“条轴”上。</value>
+  </data>
+  <data name="Watch_Spring_P2" xml:space="preserve">
+    <value>放开不管，发条就想松开，推着条盒转。条盒边上有齿，带动后面所有的轮子。上满一次发条，像这样的表大约能走 40 个小时。</value>
+  </data>
+  <data name="Watch_Spring_Deeper" xml:space="preserve">
+    <value>发条上满时拉力最大，越松越弱。光靠它，表会先走快、后走慢；后面几节讲的那个“一点一点放出能量”的机构，才让走时保持稳定。</value>
+  </data>
+  <data name="Watch_Spring_Wind" xml:space="preserve">
+    <value>发条上紧了多少</value>
+  </data>
+  <data name="Watch_Spring_Readout" xml:space="preserve">
+    <value>还能走大约 {0} 小时：条盒还能再转 {1} 圈。</value>
+  </data>
+  <data name="Watch_Spring_Picture" xml:space="preserve">
+    <value>从上面看条盒里盘着的发条，旁边是拉力和剩余小时的刻度</value>
+  </data>
+  <data name="Watch_Spring_Arbor" xml:space="preserve">
+    <value>条轴</value>
+  </data>
+  <data name="Watch_Spring_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Watch_Spring_Pull" xml:space="preserve">
+    <value>拉力</value>
+  </data>
+  <data name="Watch_Spring_Hours" xml:space="preserve">
+    <value>剩 {0} 小时</value>
+  </data>
+  <data name="Watch_Hands_Title" xml:space="preserve">
+    <value>从一根发条到三根指针</value>
+  </data>
+  <data name="Watch_Hands_P1" xml:space="preserve">
+    <value>条盒和指针之间是一串轮子，叫“走时轮系”。每个大轮带动下一根轴上的小齿轮，所以一根轴比一根轴转得快。中心轮一小时转一圈，带着分针；四轮一分钟转一圈，带着秒针。</value>
+  </data>
+  <data name="Watch_Hands_P2" xml:space="preserve">
+    <value>时针根本不在这串轮子上。表盘下面还有几个小轮子，把分针的转速再降 12 倍：分针转 12 圈，时针才转一圈。</value>
+  </data>
+  <data name="Watch_Hands_Deeper" xml:space="preserve">
+    <value>条盒 80 齿 → 中心轮小齿轮 10 齿：条盒 8 小时转一圈。中心轮 64 → 8、三轮 60 → 8、四轮 80 → 8：擒纵轮每小时转 8 × 7.5 × 10 = 600 圈。</value>
+  </data>
+  <data name="Watch_Hands_Speed" xml:space="preserve">
+    <value>时间走多快</value>
+  </data>
+  <data name="Watch_Hands_Picture" xml:space="preserve">
+    <value>表盘，下面是从条盒到擒纵轮的一串轮子</value>
+  </data>
+  <data name="Watch_Train_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Watch_Train_BarrelSpeed" xml:space="preserve">
+    <value>8 小时一圈</value>
+  </data>
+  <data name="Watch_Train_Centre" xml:space="preserve">
+    <value>中心轮</value>
+  </data>
+  <data name="Watch_Train_CentreSpeed" xml:space="preserve">
+    <value>一小时一圈：分针</value>
+  </data>
+  <data name="Watch_Train_Third" xml:space="preserve">
+    <value>三轮</value>
+  </data>
+  <data name="Watch_Train_ThirdSpeed" xml:space="preserve">
+    <value>一小时 8 圈</value>
+  </data>
+  <data name="Watch_Train_Fourth" xml:space="preserve">
+    <value>四轮</value>
+  </data>
+  <data name="Watch_Train_FourthSpeed" xml:space="preserve">
+    <value>一分钟一圈：秒针</value>
+  </data>
+  <data name="Watch_Train_Escape" xml:space="preserve">
+    <value>擒纵轮</value>
+  </data>
+  <data name="Watch_Train_EscapeSpeed" xml:space="preserve">
+    <value>一分钟 10 圈</value>
+  </data>
+  <data name="Watch_Escape_Title" xml:space="preserve">
+    <value>嘀，嗒</value>
+  </data>
+  <data name="Watch_Escape_P1" xml:space="preserve">
+    <value>如果没人管，发条会让轮子飞转，几秒钟就松完了。擒纵机构就是来管住它的。一根带两颗红宝石的“擒纵叉”卡住擒纵轮；摆轮每次摆过中间，就把擒纵叉拨到另一边：一颗宝石松开，擒纵轮跳过半个齿，另一颗宝石又把它卡住。这一跳，就是你听到的“嘀嗒”。</value>
+  </data>
+  <data name="Watch_Escape_P2" xml:space="preserve">
+    <value>擒纵轮也不是白白被放走：它的齿滑过宝石时，会推擒纵叉一下，擒纵叉再把这一下传给摆轮。每拍一次的小小推力，让摆轮在发条用完之前一直摆下去。</value>
+  </data>
+  <data name="Watch_Escape_Deeper" xml:space="preserve">
+    <value>每个齿两拍，一圈 15 个齿，一分钟 10 圈：一分钟 300 拍，一小时 18,000 拍。摆轮大部分时间自由摆动，只在经过中间时碰一下擒纵叉，所以这种叫“自由式杠杆擒纵”。</value>
+  </data>
+  <data name="Watch_Escape_SlowSlider" xml:space="preserve">
+    <value>慢动作</value>
+  </data>
+  <data name="Watch_Escape_Slow" xml:space="preserve">
+    <value>比实际慢 {0} 倍</value>
+  </data>
+  <data name="Watch_Escape_Readout" xml:space="preserve">
+    <value>每小时 {0} 拍：每秒 {1} 拍。</value>
+  </data>
+  <data name="Watch_Escape_Picture" xml:space="preserve">
+    <value>慢动作的杠杆擒纵：摆轮、带两颗宝石的擒纵叉、擒纵轮</value>
+  </data>
+  <data name="Watch_Escape_Balance" xml:space="preserve">
+    <value>摆轮</value>
+  </data>
+  <data name="Watch_Escape_Lever" xml:space="preserve">
+    <value>擒纵叉</value>
+  </data>
+  <data name="Watch_Escape_Wheel" xml:space="preserve">
+    <value>擒纵轮</value>
+  </data>
+  <data name="Watch_Escape_Tick" xml:space="preserve">
+    <value>嘀</value>
+  </data>
+  <data name="Watch_Escape_Tock" xml:space="preserve">
+    <value>嗒</value>
+  </data>
+  <data name="Watch_Balance_Title" xml:space="preserve">
+    <value>表的心跳</value>
+  </data>
+  <data name="Watch_Balance_P1" xml:space="preserve">
+    <value>决定快慢的是“摆轮”：一个小轮子，连着一根细得像头发的螺旋弹簧，叫“游丝”。把它转开，游丝就把它拉回来；它冲过了头，游丝又往回拉，于是它像荡秋千一样来回摆，每秒两次半。</value>
+  </data>
+  <data name="Watch_Balance_P2" xml:space="preserve">
+    <value>妙处在于：摆得宽、摆得窄，用的时间一样，摆得宽只是动得更快。所以发条越来越松、推力越来越弱，表的快慢也不变。但游丝硬一点，它就摆得快一点；差千分之几，一天就差好几分钟。</value>
+  </data>
+  <data name="Watch_Balance_Deeper" xml:space="preserve">
+    <value>每秒摆动次数 = √(游丝硬度 ÷ 摆轮的转动惯量) ÷ 2π，里面没有摆幅。钟表师调快慢，就是改变游丝能自由弯曲的那一段的长短。</value>
+  </data>
+  <data name="Watch_Balance_Stiffness" xml:space="preserve">
+    <value>游丝硬度</value>
+  </data>
+  <data name="Watch_Balance_Amplitude" xml:space="preserve">
+    <value>摆幅</value>
+  </data>
+  <data name="Watch_Balance_Readout" xml:space="preserve">
+    <value>每秒摆 {0} 次（每小时 {1} 拍）。</value>
+  </data>
+  <data name="Watch_Balance_Gains" xml:space="preserve">
+    <value>这块表每天会快 {0} 分钟。</value>
+  </data>
+  <data name="Watch_Balance_Loses" xml:space="preserve">
+    <value>这块表每天会慢 {0} 分钟。</value>
+  </data>
+  <data name="Watch_Balance_OnTime" xml:space="preserve">
+    <value>这块表走得准。</value>
+  </data>
+  <data name="Watch_Balance_Picture" xml:space="preserve">
+    <value>摆轮和游丝来回摆动，下方是摆角随时间的曲线</value>
+  </data>
+  <data name="Watch_Balance_Trace" xml:space="preserve">
+    <value>摆角随时间变化</value>
+  </data>
+  <data name="Watch_Balance_OneSecond" xml:space="preserve">
+    <value>1 秒</value>
+  </data>
+  <data name="Watch_Balance_Slower" xml:space="preserve">
+    <value>比实际慢 {0} 倍</value>
+  </data>
+  <data name="Watch_Rotor_Title" xml:space="preserve">
+    <value>手腕来上发条</value>
+  </data>
+  <data name="Watch_Rotor_P1" xml:space="preserve">
+    <value>自动表会自己上发条。机芯背面挂着一块沉甸甸的半月形重锤，叫“自动陀”，绕着中心随便转。手腕一动，重力让自动陀始终往下垂，表却绕着它转，这一来一回的摆动就给发条上了劲。</value>
+  </data>
+  <data name="Watch_Rotor_P2" xml:space="preserve">
+    <value>自动陀两个方向都会摆，可发条只能朝一个方向上紧。“换向轮”（一对单向离合器）把两个方向的摆动都变成上紧。发条满了，条盒里有一段会打滑，让它滑过去，而不会被拉断。</value>
+  </data>
+  <data name="Watch_Rotor_Deeper" xml:space="preserve">
+    <value>没有换向轮，只有一半的摆动有用。试试看：手腕动得少时，表用掉发条的速度就会比自动陀上紧的速度还快。</value>
+  </data>
+  <data name="Watch_Rotor_Activity" xml:space="preserve">
+    <value>手腕动得多少</value>
+  </data>
+  <data name="Watch_Rotor_Reverser" xml:space="preserve">
+    <value>换向轮：两个方向都上紧</value>
+  </data>
+  <data name="Watch_Rotor_Picture" xml:space="preserve">
+    <value>自动表的背面：摆动的自动陀给发条上紧</value>
+  </data>
+  <data name="Watch_Rotor_Rotor" xml:space="preserve">
+    <value>自动陀</value>
+  </data>
+  <data name="Watch_Rotor_Wheel" xml:space="preserve">
+    <value>上条轮</value>
+  </data>
+  <data name="Watch_Rotor_Reserve" xml:space="preserve">
+    <value>发条：{0}%</value>
+  </data>
+  <data name="Watch_Rotor_Full" xml:space="preserve">
+    <value>满了：打滑</value>
+  </data>
+  <data name="Watch_Movement_Title" xml:space="preserve">
+    <value>整个机芯</value>
+  </data>
+  <data name="Watch_Movement_P1" xml:space="preserve">
+    <value>这里把所有零件放在一起，再一层层拉开，好让你看清每一层。最下面是“主夹板”，每根轴都装在它上面的小红宝石轴承里。往上是装着发条的条盒、走时轮系，然后是擒纵机构和摆轮。</value>
+  </data>
+  <data name="Watch_Movement_P2" xml:space="preserve">
+    <value>再往上是“跨轮系”，就是让时针转起来的那几个小轮子，最上面是表盘和指针。一层层把它们藏起来，顺着能量从最下面的发条一路找到最上面的指针。</value>
+  </data>
+  <data name="Watch_Movement_Deeper" xml:space="preserve">
+    <value>真正的机芯会把这些零件并排装在几块“夹板”下，而不是一层层摞起来，这样表才薄。轴承用红宝石，是因为它又硬又光滑，钢轴尖在里面几乎不磨损。</value>
+  </data>
+  <data name="Watch_Movement_Explode" xml:space="preserve">
+    <value>把各层拉开</value>
+  </data>
+  <data name="Watch_Movement_Show" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="Watch_Movement_Picture" xml:space="preserve">
+    <value>从斜上方看，表的机芯被拆成一层一层</value>
+  </data>
+  <data name="Watch_Layer_Plate" xml:space="preserve">
+    <value>主夹板</value>
+  </data>
+  <data name="Watch_Layer_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Watch_Layer_Train" xml:space="preserve">
+    <value>走时轮系</value>
+  </data>
+  <data name="Watch_Layer_Escapement" xml:space="preserve">
+    <value>擒纵与摆轮</value>
+  </data>
+  <data name="Watch_Layer_MotionWorks" xml:space="preserve">
+    <value>跨轮系</value>
+  </data>
+  <data name="Watch_Layer_Dial" xml:space="preserve">
+    <value>表盘与指针</value>
+  </data>
 </root>

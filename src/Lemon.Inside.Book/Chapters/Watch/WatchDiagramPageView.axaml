@@ -1,0 +1,40 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:watch="using:Lemon.Inside.Book.Chapters.Watch"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Watch.WatchDiagramPageView"
+                         x:DataType="watch:WatchDiagramPageViewModel">
+    <!-- A right page of the mechanical watch chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <ContentControl Content="{Binding Spread}">
+                <ContentControl.DataTemplates>
+                    <DataTemplate DataType="watch:SpringSpread">
+                        <watch:SpringDiagram Wound="{Binding Wound}" AutomationProperties.Name="{loc:Localize Watch_Spring_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="watch:HandsSpread">
+                        <watch:HandsDiagram Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="watch:EscapementSpread">
+                        <watch:EscapementDiagram SlowMotion="{Binding SlowMotion}" AutomationProperties.Name="{loc:Localize Watch_Escape_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="watch:BalanceSpread">
+                        <watch:BalanceDiagram Stiffness="{Binding Stiffness}" Amplitude="{Binding Amplitude}"
+                                              AutomationProperties.Name="{loc:Localize Watch_Balance_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="watch:RotorSpread">
+                        <watch:RotorDiagram Activity="{Binding Activity}" Reverser="{Binding Reverser}"
+                                            AutomationProperties.Name="{loc:Localize Watch_Rotor_Picture}" />
+                    </DataTemplate>
+                    <DataTemplate DataType="watch:MovementSpread">
+                        <watch:MovementDiagram Explode="{Binding Explode}" Hidden="{Binding Hidden}"
+                                               AutomationProperties.Name="{loc:Localize Watch_Movement_Picture}" />
+                    </DataTemplate>
+                </ContentControl.DataTemplates>
+            </ContentControl>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

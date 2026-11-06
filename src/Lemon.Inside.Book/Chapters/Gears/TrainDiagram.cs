@@ -1,5 +1,6 @@
-using Avalonia;
 using Avalonia.Media;
+using Avalonia;
+using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.Gears;
