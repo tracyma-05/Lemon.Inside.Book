@@ -160,4 +160,49 @@ public sealed class SoftwareRasterizer
 
         return table;
     }
+
+    /// <summary>Each sRGB byte's light in linear terms (0 to 1), to average pixels the way light adds up.</summary>
+    private static readonly float[] Linear = BuildLinear();
+
+    private static float[] BuildLinear()
+    {
+        var table = new float[256];
+        for (var i = 0; i < 256; i++)
+        {
+            var s = i / 255.0;
+            table[i] = (float)(s <= 0.04045 ? s / 12.92 : Math.Pow((s + 0.055) / 1.055, 2.4));
+        }
+
+        return table;
+    }
+
+    /// <summary>
+    /// Shrinks the picture by half each way into <paramref name="target"/> (<see cref="Width"/>/2 × <see cref="Height"/>/2
+    /// pixels): each pixel is the average of four, so slanted edges come out smooth instead of stepped. The four are
+    /// averaged as light (not as screen values), so an edge between bright and dark is not drawn too dark.
+    /// </summary>
+    public void Downsample2x(int[] target)
+    {
+        var width = Width / 2;
+        var height = Height / 2;
+        var scale = ToneSteps - 1;
+        for (var y = 0; y < height; y++)
+        {
+            var top = 2 * y * Width;
+            var bottom = top + Width;
+            var row = y * width;
+            for (var x = 0; x < width; x++)
+            {
+                int a = Pixels[top + (2 * x)], b = Pixels[top + (2 * x) + 1], c = Pixels[bottom + (2 * x)], d = Pixels[bottom + (2 * x) + 1];
+                target[row + x] = unchecked((int)0xFF000000)
+                    | (Average(a, b, c, d, 16, scale) << 16) | (Average(a, b, c, d, 8, scale) << 8) | Average(a, b, c, d, 0, scale);
+            }
+        }
+    }
+
+    private static int Average(int a, int b, int c, int d, int shift, int scale)
+    {
+        var sum = Linear[(a >> shift) & 0xFF] + Linear[(b >> shift) & 0xFF] + Linear[(c >> shift) & 0xFF] + Linear[(d >> shift) & 0xFF];
+        return Gamma[(int)(sum * 0.25f * scale)];
+    }
 }

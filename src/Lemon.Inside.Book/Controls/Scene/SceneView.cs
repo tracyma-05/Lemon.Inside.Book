@@ -39,6 +39,12 @@ public abstract class SceneView : Control
     private double _lightMs;
     private double _rasterMs;
 
+    /// <summary>Something moved lately (a drag, the wheel, a slider): drawn plain until it has been still a moment.</summary>
+    private bool _moving;
+    private double _movedAt;
+    private int[] _sharp = [];
+    private PixelSize _pictureSize;
+
     protected SceneView()
     {
         ClipToBounds = true;
@@ -65,8 +71,11 @@ public abstract class SceneView : Control
     protected ((byte R, byte G, byte B) Top, (byte R, byte G, byte B) Bottom) Sky { get; set; } =
         ((0x14, 0x1B, 0x2A), (0x08, 0x0B, 0x12));
 
-    /// <summary>The last frame's picture size in pixels.</summary>
-    internal PixelSize PictureSize => new(Raster.Width, Raster.Height);
+    /// <summary>The last frame's picture size in screen pixels.</summary>
+    internal PixelSize PictureSize => _pictureSize;
+
+    /// <summary>Whether the last frame was drawn smooth (four samples per pixel), as it is once nothing moves.</summary>
+    internal bool IsSharp { get; private set; }
 
     /// <summary>Whether the light on screen is the coarse, quick one (the full one follows shortly).</summary>
     internal bool IsCoarse => _refinePending;
@@ -88,6 +97,14 @@ public abstract class SceneView : Control
         _lightDirty = true;
         _refinePending = true;
         _changedAt = _clock.Elapsed.TotalSeconds;
+        Moved();
+    }
+
+    /// <summary>The picture is changing: draw it quickly now, smooth once it has been still a moment.</summary>
+    private void Moved()
+    {
+        _moving = true;
+        _movedAt = _clock.Elapsed.TotalSeconds;
         InvalidateVisual();
     }
 
@@ -97,6 +114,7 @@ public abstract class SceneView : Control
         _radiance = ComputeRadiance(coarse: false);
         _lightDirty = false;
         _refinePending = false;
+        _moving = false;
         InvalidateVisual();
     }
 
@@ -152,9 +170,15 @@ public abstract class SceneView : Control
             return;
         }
 
-        if (_refinePending && !_lightDirty && _clock.Elapsed.TotalSeconds - _changedAt >= RefineDelaySeconds)
+        var now = _clock.Elapsed.TotalSeconds;
+        if (_refinePending && !_lightDirty && now - _changedAt >= RefineDelaySeconds)
         {
             Settle();
+        }
+        else if (_moving && _dragFrom is null && now - _movedAt >= RefineDelaySeconds)
+        {
+            _moving = false;
+            InvalidateVisual();
         }
 
         Tick(_clock.Elapsed.TotalSeconds);
@@ -190,7 +214,7 @@ public abstract class SceneView : Control
         Camera.Drag(at.X - from.X, at.Y - from.Y);
         _dragFrom = at;
         e.Handled = true;
-        InvalidateVisual();
+        Moved();
     }
 
     protected override void OnPointerReleased(PointerReleasedEventArgs e)
@@ -212,7 +236,7 @@ public abstract class SceneView : Control
         base.OnPointerWheelChanged(e);
         Camera.Distance *= Math.Pow(0.9, e.Delta.Y);
         e.Handled = true;
-        InvalidateVisual();
+        Moved();
     }
 
     #endregion
@@ -241,17 +265,34 @@ public abstract class SceneView : Control
         var width = Math.Max(2, (int)(bounds.Width * factor));
         var height = Math.Max(2, (int)(bounds.Height * factor));
 
+        // Still: drawn at twice the size each way and shrunk, four samples a pixel, so edges are smooth. Moving: plain.
+        var sharp = !_moving && _dragFrom is null;
+        var samples = sharp ? 2 : 1;
         var watch = Stopwatch.StartNew();
-        Raster.Resize(width, height);
+        Raster.Resize(width * samples, height * samples);
         Raster.Clear(Sky.Top, Sky.Bottom);
         Raster.Draw(Mesh, _radiance, Camera.ViewProjection(bounds.Width / bounds.Height));
+        var pixels = Raster.Pixels;
+        if (sharp)
+        {
+            if (_sharp.Length != width * height)
+            {
+                _sharp = new int[width * height];
+            }
+
+            Raster.Downsample2x(_sharp);
+            pixels = _sharp;
+        }
+
         if (_bitmap is null || _bitmap.PixelSize.Width != width || _bitmap.PixelSize.Height != height)
         {
             _bitmap?.Dispose();
             _bitmap = new WriteableBitmap(new PixelSize(width, height), new Avalonia.Vector(96, 96), PixelFormat.Bgra8888, AlphaFormat.Premul);
         }
 
-        SpaceDrawing.WritePixels(_bitmap, Raster.Pixels, width, height);
+        SpaceDrawing.WritePixels(_bitmap, pixels, width, height);
+        IsSharp = sharp;
+        _pictureSize = new PixelSize(width, height);
         _rasterMs = (_rasterMs * 0.8) + (watch.Elapsed.TotalMilliseconds * 0.2);
         SpaceDrawing.DrawSmooth(context, _bitmap, bounds);
 
@@ -265,8 +306,8 @@ public abstract class SceneView : Control
     private void DrawStats(DrawingContext context, int width, int height)
     {
         var text = string.Format(
-            CultureInfo.InvariantCulture, "{0}×{1} px · raster {2:0.0} ms · light {3:0} ms{4}",
-            width, height, _rasterMs, _lightMs, _refinePending ? " (coarse)" : string.Empty);
+            CultureInfo.InvariantCulture, "{0}×{1} px{5} · raster {2:0.0} ms · light {3:0} ms{4}",
+            width, height, _rasterMs, _lightMs, _refinePending ? " (coarse)" : string.Empty, IsSharp ? " ×4" : string.Empty);
         var formatted = new FormattedText(text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, Typeface.Default, 11, Brushes.White);
         context.FillRectangle(new SolidColorBrush(Color.FromArgb(0x99, 0, 0, 0)), new Rect(8, 8, formatted.Width + 12, formatted.Height + 6), 4);
         context.DrawText(formatted, new Point(14, 11));

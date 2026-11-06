@@ -48,6 +48,28 @@ public sealed class LightShadowTests
     }
 
     [Fact]
+    public void Shrinking_GivesASlantedEdge_InBetweenShades()
+    {
+        // A white triangle on black, drawn at twice the size and shrunk: pixels on its slanted edge are part covered.
+        var mesh = new SceneMesh();
+        mesh.AddQuad(new Vector3(-1, 0, 1), new Vector3(2, 0, 0), new Vector3(0, 0, -2), 1, Vector3.One);
+        var raster = new SoftwareRasterizer();
+        raster.Resize(128, 96);
+        raster.Clear((0, 0, 0), (0, 0, 0));
+        var camera = new OrbitCamera { Target = Vector3.Zero, Pitch = 60, Yaw = 20, Distance = 5 };
+        raster.Draw(mesh, Enumerable.Repeat(new Vector3(1f), mesh.VertexCount).ToArray(), camera.ViewProjection(128 / 96.0));
+        var small = new int[64 * 48];
+        raster.Downsample2x(small);
+
+        var shades = small.Select(p => p & 0xFF).ToHashSet();
+        Assert.Contains(0, shades);
+        Assert.Contains(255, shades);
+        Assert.Contains(shades, v => v is > 20 and < 235);
+        // Half covered looks like half the light (about 188 on screen), not like half the screen value (128).
+        Assert.Contains(shades, v => v is > 170 and < 205);
+    }
+
+    [Fact]
     public void TheRasterizer_DrawsAQuadInFrontOfTheCamera()
     {
         var mesh = new SceneMesh();
@@ -189,9 +211,11 @@ public sealed class LightShadowTests
         page.Light.Shadow.LightSize = 1.5;
         Frames(2);
         Assert.True(scene.IsCoarse);
+        Assert.False(scene.IsSharp); // plain while it changes
         scene.Settle();
         Frames(2);
         Assert.False(scene.IsCoarse);
+        Assert.True(scene.IsSharp); // smooth once still
         Snapshot(window, "light-shadow-8-big-lamp");
         window.Close();
     }

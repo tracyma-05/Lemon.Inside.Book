@@ -67,6 +67,16 @@ public sealed class SceneBenchmark(ITestOutputHelper output)
             }
 
             output.WriteLine($"raster {w}x{h}: {watch.Elapsed.TotalMilliseconds / runs:0.0} ms");
+
+            // The smooth picture: the same frame shrunk by half each way.
+            var small = new int[w / 2 * (h / 2)];
+            watch.Restart();
+            for (var i = 0; i < runs; i++)
+            {
+                raster.Downsample2x(small);
+            }
+
+            output.WriteLine($"  shrink to {w / 2}x{h / 2}: {watch.Elapsed.TotalMilliseconds / runs:0.0} ms");
         }
     }
 }
