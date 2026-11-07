@@ -16,6 +16,7 @@ public static class BookContents
         new("Boats", Volume.Machines, Spreads: 6),
         new("Car", Volume.Machines, Spreads: 6),
         new("Locks", Volume.Machines, Spreads: 6),
+        new("Lifting", Volume.Machines, Spreads: 6),
     ];
 
     public static IReadOnlyList<Volume> Volumes { get; } = Enum.GetValues<Volume>();

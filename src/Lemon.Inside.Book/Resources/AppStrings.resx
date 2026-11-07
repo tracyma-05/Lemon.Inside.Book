@@ -4206,4 +4206,538 @@
   <data name="Narr_Locks_Dials_Part_Shackle" xml:space="preserve">
     <value>The U-shaped loop. Once the bar drops, a spring pushes it up.</value>
   </data>
+  <data name="Chapter_Lifting" xml:space="preserve">
+    <value>Lifting heavy things</value>
+  </data>
+  <data name="Lifting_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Lifting_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Lifting_Kg" xml:space="preserve">
+    <value>{0} kg</value>
+  </data>
+  <data name="Lifting_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Lifting_Centimetres" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Lifting_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Lifting_Times" xml:space="preserve">
+    <value>{0}×</value>
+  </data>
+  <data name="Lifting_Up" xml:space="preserve">
+    <value>↑ {0} cm</value>
+  </data>
+  <data name="Lifting_Down" xml:space="preserve">
+    <value>↓ {0} cm</value>
+  </data>
+  <data name="Lifting_Pulled" xml:space="preserve">
+    <value>{0} cm of rope pulled</value>
+  </data>
+  <data name="Lifting_Seesaw_Title" xml:space="preserve">
+    <value>A long arm for a short one</value>
+  </data>
+  <data name="Lifting_Seesaw_P1" xml:space="preserve">
+    <value>A lever is the simplest machine of all: a stiff bar that turns about a pivot. Put a heavy stone on one end and press on the other. If the pivot stands nearer the stone, the stone's side of the bar is short and yours is long, and a small push on the long side holds up a heavy load on the short one.</value>
+  </data>
+  <data name="Lifting_Seesaw_P2" xml:space="preserve">
+    <value>There is a price. As the bar turns, the long end sweeps through a bigger arc than the short end. If your arm is four times as long as the stone's, you push with a quarter of the force, but your hand has to travel four times as far. The work you do, force times distance, is the same as the work done on the stone: a lever trades force for distance, it never makes work out of nothing.</value>
+  </data>
+  <data name="Lifting_Seesaw_Deeper" xml:space="preserve">
+    <value>Your push times the length of your arm equals the load times the length of its arm: that balance is the law of the lever. Scissors, a bottle opener, a wheelbarrow and the bones of your forearm are all levers. A wheelbarrow puts the pivot at one end and the load in the middle; your forearm does the opposite, giving away force so that your hand can move fast.</value>
+  </data>
+  <data name="Lifting_Seesaw_Pivot" xml:space="preserve">
+    <value>Pivot's distance from the stone</value>
+  </data>
+  <data name="Lifting_Seesaw_Push" xml:space="preserve">
+    <value>Press the long end down</value>
+  </data>
+  <data name="Lifting_Seesaw_Readout" xml:space="preserve">
+    <value>You push with {0}. Your hand moves {1} times as far as the stone, which is up {2} cm.</value>
+  </data>
+  <data name="Lifting_Seesaw_Picture" xml:space="preserve">
+    <value>A long bar on a pivot, a stone on its short end and a hand pressing the long end</value>
+  </data>
+  <data name="Lifting_Seesaw_Rule" xml:space="preserve">
+    <value>push × your arm = stone × its arm</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_01" xml:space="preserve">
+    <value>This stone weighs two hundred kilograms: far too much to lift with your hands.</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_02" xml:space="preserve">
+    <value>Lay a long bar over a pivot, with the stone on one end. With the pivot in the middle, you must push as hard as the stone weighs.</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_03" xml:space="preserve">
+    <value>Your turn: slide the pivot toward the stone until you need to push no harder than fifty kilograms.</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_04" xml:space="preserve">
+    <value>Now press down. The stone rises, but your hand travels four times as far. You pay for the easier push with distance.</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_05" xml:space="preserve">
+    <value>If the pivot stood right in the middle of the bar, how hard would you have to push?</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz1" xml:space="preserve">
+    <value>Half the stone's weight: one hundred kilograms</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz2" xml:space="preserve">
+    <value>Just as hard as the stone weighs: two hundred kilograms</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz3" xml:space="preserve">
+    <value>Twice the stone's weight</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Stone" xml:space="preserve">
+    <value>Stone</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Stone" xml:space="preserve">
+    <value>The load: two hundred kilograms resting on the short end of the bar.</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Pivot" xml:space="preserve">
+    <value>Pivot</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Pivot" xml:space="preserve">
+    <value>The point the bar turns about. Moving it changes the trade between force and distance.</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Bar" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Bar" xml:space="preserve">
+    <value>A stiff bar that passes your push on to the stone. If it bent, part of your push would go into bending it.</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Hand" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Hand" xml:space="preserve">
+    <value>Where you push. The farther it is from the pivot, the less force you need, and the farther it moves.</value>
+  </data>
+  <data name="Lifting_Pulley_Title" xml:space="preserve">
+    <value>One wheel, one rope</value>
+  </data>
+  <data name="Lifting_Pulley_P1" xml:space="preserve">
+    <value>A pulley is a wheel with a groove for a rope. Hang one from a beam, put the rope over it, tie a bucket to one end and pull the other. Pulling down is easier than lifting up, because you can lean your weight on the rope, but you still pull exactly as hard as the bucket weighs, and the bucket rises exactly as far as you pull. A fixed pulley only turns the force round.</value>
+  </data>
+  <data name="Lifting_Pulley_P2" xml:space="preserve">
+    <value>Now hang the pulley on the bucket instead. Tie one end of the rope to the beam, run it down under the wheel and back up to your hand. The bucket now hangs from two strands, and each carries half its weight, so you pull with half the force. But to lift the bucket one metre, both strands must get a metre shorter, so two metres of rope pass through your hands.</value>
+  </data>
+  <data name="Lifting_Pulley_Deeper" xml:space="preserve">
+    <value>A rope pulls equally along its whole length when the wheel turns freely, so each strand that holds the load carries the same share of it. Count the strands holding the load and you have the ratio: one strand, no gain; two strands, half the force and twice the rope. Cranes and sailing boats use both kinds: moving pulleys to multiply force, fixed ones to lead the rope to where someone can pull it.</value>
+  </data>
+  <data name="Lifting_Pulley_Moving" xml:space="preserve">
+    <value>Hang the bucket from a moving pulley</value>
+  </data>
+  <data name="Lifting_Pulley_Pull" xml:space="preserve">
+    <value>Rope pulled</value>
+  </data>
+  <data name="Lifting_Pulley_Readout" xml:space="preserve">
+    <value>You pull with {0}. The bucket is up {1} cm for {2} cm of rope.</value>
+  </data>
+  <data name="Lifting_Pulley_Picture" xml:space="preserve">
+    <value>A bucket lifted by a rope over a pulley, either hanging from a beam or riding on the bucket</value>
+  </data>
+  <data name="Lifting_Pulley_FixedLabel" xml:space="preserve">
+    <value>Fixed pulley: it only turns the pull round</value>
+  </data>
+  <data name="Lifting_Pulley_MovingLabel" xml:space="preserve">
+    <value>Moving pulley: two strands share the bucket</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_01" xml:space="preserve">
+    <value>This wheel hangs from the beam. The rope runs over it, from the bucket to your hand.</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_02" xml:space="preserve">
+    <value>Pull a metre of rope down, and the bucket rises a metre. You pull with all of its forty kilograms.</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_03" xml:space="preserve">
+    <value>Your turn: hang the bucket from a moving pulley instead.</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_04" xml:space="preserve">
+    <value>Now two strands share the bucket. You pull with twenty kilograms, but two metres of rope lift it only one metre.</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_05" xml:space="preserve">
+    <value>Why does the moving pulley halve the pull?</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz1" xml:space="preserve">
+    <value>Two strands of rope share the bucket's weight</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz2" xml:space="preserve">
+    <value>The wheel spins twice as fast</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz3" xml:space="preserve">
+    <value>The rope stretches and pulls back</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Wheel" xml:space="preserve">
+    <value>Pulley</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Wheel" xml:space="preserve">
+    <value>A grooved wheel that turns as the rope runs over it, so the rope does not rub.</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Rope" xml:space="preserve">
+    <value>Rope</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Rope" xml:space="preserve">
+    <value>It pulls with the same force all along its length, so each strand holding the bucket carries an equal share.</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Bucket" xml:space="preserve">
+    <value>Bucket</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Bucket" xml:space="preserve">
+    <value>Forty kilograms of sand to be lifted.</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Hand" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Hand" xml:space="preserve">
+    <value>Where you pull. Compare how hard you pull with how far your hand goes.</value>
+  </data>
+  <data name="Lifting_Tackle_Title" xml:space="preserve">
+    <value>Block and tackle</value>
+  </data>
+  <data name="Lifting_Tackle_P1" xml:space="preserve">
+    <value>Join several pulleys and you get a block and tackle: a fixed block of wheels at the top, a moving block at the bottom, and a single rope wound back and forth between them. Each run of rope between the blocks is a strand, and every strand helps to hold the load. With four strands, each carries a quarter of the engine, and you pull with a quarter of its weight.</value>
+  </data>
+  <data name="Lifting_Tackle_P2" xml:space="preserve">
+    <value>As before, you pay in rope. For the engine to rise one metre, all four strands must each get a metre shorter, so four metres of rope pass through your hands. Real wheels also rub on their axles: each wheel the rope runs round keeps back a little of the pull, so with many strands you pull a bit harder than the simple count says.</value>
+  </data>
+  <data name="Lifting_Tackle_Deeper" xml:space="preserve">
+    <value>In this picture the wheels are drawn side by side so that every strand shows; in a real block they sit on one axle, one behind another. If each wheel passes on 95 percent of the pull, four strands give not four times the force but about three and a half times. With many wheels the losses add up, which is why big cranes use wheels that turn on ball bearings.</value>
+  </data>
+  <data name="Lifting_Tackle_Strands" xml:space="preserve">
+    <value>Strands holding the load</value>
+  </data>
+  <data name="Lifting_Tackle_Friction" xml:space="preserve">
+    <value>Real wheels (they rub a little)</value>
+  </data>
+  <data name="Lifting_Tackle_Pull" xml:space="preserve">
+    <value>Rope pulled</value>
+  </data>
+  <data name="Lifting_Tackle_Readout" xml:space="preserve">
+    <value>You pull with {0}; {1} m of rope for every metre the engine rises. It is up {2} cm.</value>
+  </data>
+  <data name="Lifting_Tackle_Picture" xml:space="preserve">
+    <value>A block and tackle lifting an engine, its wheels drawn side by side so each strand shows</value>
+  </data>
+  <data name="Lifting_Tackle_SideBySide" xml:space="preserve">
+    <value>Wheels drawn side by side; in a real block they share one axle</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_01" xml:space="preserve">
+    <value>This engine weighs three hundred kilograms. One rope over one wheel would need all of that from your hands.</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_02" xml:space="preserve">
+    <value>Add a moving block, and two strands now hold the engine.</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_03" xml:space="preserve">
+    <value>Your turn: wind the rope round more wheels until four strands hold the engine.</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_04" xml:space="preserve">
+    <value>Real wheels rub a little. Each one keeps back some of the pull, so the strands nearest your hand carry more.</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_05" xml:space="preserve">
+    <value>With six strands, how much rope do you pull to lift the engine one metre?</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz1" xml:space="preserve">
+    <value>One metre</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz2" xml:space="preserve">
+    <value>A sixth of a metre</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz3" xml:space="preserve">
+    <value>Six metres</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Load" xml:space="preserve">
+    <value>Engine</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Load" xml:space="preserve">
+    <value>Three hundred kilograms hanging from the bottom block.</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Strands" xml:space="preserve">
+    <value>Strands</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Strands" xml:space="preserve">
+    <value>The runs of rope between the blocks. The more strands hold the load, the less each must carry.</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Blocks" xml:space="preserve">
+    <value>Blocks</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Blocks" xml:space="preserve">
+    <value>The fixed block hangs from the beam and holds the top wheels; the moving block below carries the load.</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Hand" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Hand" xml:space="preserve">
+    <value>Where you pull. Each strand you add makes your pull smaller and the rope you pull longer.</value>
+  </data>
+  <data name="Lifting_Winch_Title" xml:space="preserve">
+    <value>Crank, drum and worm</value>
+  </data>
+  <data name="Lifting_Winch_P1" xml:space="preserve">
+    <value>A winch is a lever that never runs out of room. The rope winds onto a small drum, and you turn the drum with a crank. Your hand goes round a big circle while the rope winds round a small one: with a crank six times as long as the drum's radius, you hold the load with a sixth of its weight, and you can keep turning for as long as there is rope.</value>
+  </data>
+  <data name="Lifting_Winch_P2" xml:space="preserve">
+    <value>Let go of the crank, though, and nothing stops the load from falling and spinning the handle round. A worm fixes this: a screw that turns a toothed wheel on the drum, one tooth for each turn of the screw. It multiplies your force many times over and, because its thread slopes so gently, the load cannot turn it backwards. The load stays wherever you leave it.</value>
+  </data>
+  <data name="Lifting_Winch_Deeper" xml:space="preserve">
+    <value>A worm holds its load because of friction: the thread slopes so gently that pushing on it from the wheel's side only presses it harder against the teeth. The same friction costs you something: in this winch more than half of your work turns into heat in the thread. Wasted effort in return for a load that holds itself: that is why worms turn up in winches, gates and the tuning pegs of guitars.</value>
+  </data>
+  <data name="Lifting_Winch_Handle" xml:space="preserve">
+    <value>Crank length</value>
+  </data>
+  <data name="Lifting_Winch_Worm" xml:space="preserve">
+    <value>Turn the drum through a worm</value>
+  </data>
+  <data name="Lifting_Winch_LetGo" xml:space="preserve">
+    <value>Let go of the handle</value>
+  </data>
+  <data name="Lifting_Winch_Readout" xml:space="preserve">
+    <value>You push with {0}; {1} turns of the handle wind up a metre.</value>
+  </data>
+  <data name="Lifting_Winch_Holding" xml:space="preserve">
+    <value>Your hand holds it.</value>
+  </data>
+  <data name="Lifting_Winch_Stays" xml:space="preserve">
+    <value>Let go: the load stays where it is.</value>
+  </data>
+  <data name="Lifting_Winch_Falls" xml:space="preserve">
+    <value>Let go: the load falls and spins the handle!</value>
+  </data>
+  <data name="Lifting_Winch_WormLabel" xml:space="preserve">
+    <value>worm</value>
+  </data>
+  <data name="Lifting_Winch_Turns" xml:space="preserve">
+    <value>{0} turns of the handle per metre</value>
+  </data>
+  <data name="Lifting_Winch_Picture" xml:space="preserve">
+    <value>A hand winch from the side: a crank turning a drum, straight or through a worm, and a load on the rope</value>
+  </data>
+  <data name="Narr_Lifting_Winch_01" xml:space="preserve">
+    <value>The rope winds onto this small drum. Turning the drum lifts the load.</value>
+  </data>
+  <data name="Narr_Lifting_Winch_02" xml:space="preserve">
+    <value>The crank is six times as long as the drum's radius, so you push with about a sixth of the load's weight.</value>
+  </data>
+  <data name="Narr_Lifting_Winch_03" xml:space="preserve">
+    <value>Your turn: let go of the handle and see what the load does.</value>
+  </data>
+  <data name="Narr_Lifting_Winch_04" xml:space="preserve">
+    <value>Now the crank turns a worm, and the worm turns a toothed wheel on the drum. Let go, and the load stays where it is.</value>
+  </data>
+  <data name="Narr_Lifting_Winch_05" xml:space="preserve">
+    <value>Why can't the load turn the worm backwards?</value>
+  </data>
+  <data name="Lifting_Winch_Quiz1" xml:space="preserve">
+    <value>Its thread slopes so gently that friction holds it</value>
+  </data>
+  <data name="Lifting_Winch_Quiz2" xml:space="preserve">
+    <value>The worm is heavier than the load</value>
+  </data>
+  <data name="Lifting_Winch_Quiz3" xml:space="preserve">
+    <value>The rope is tied to the worm</value>
+  </data>
+  <data name="Lifting_Winch_Part_Handle" xml:space="preserve">
+    <value>Crank</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Handle" xml:space="preserve">
+    <value>The crank you turn. The longer it is, the less you push, and the bigger the circle your hand goes round.</value>
+  </data>
+  <data name="Lifting_Winch_Part_Drum" xml:space="preserve">
+    <value>Drum</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Drum" xml:space="preserve">
+    <value>The rope winds onto it. The smaller the drum, the less rope each turn takes in, and the easier it turns.</value>
+  </data>
+  <data name="Lifting_Winch_Part_Rope" xml:space="preserve">
+    <value>Rope</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Rope" xml:space="preserve">
+    <value>It carries the whole load, from the hook up to the drum.</value>
+  </data>
+  <data name="Lifting_Winch_Part_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Load" xml:space="preserve">
+    <value>A hundred kilograms on the hook.</value>
+  </data>
+  <data name="Lifting_Jack_Title" xml:space="preserve">
+    <value>Pushing with oil</value>
+  </data>
+  <data name="Lifting_Jack_P1" xml:space="preserve">
+    <value>A hydraulic jack lifts a car with a pump and some oil. Oil hardly squeezes at all, and when you push on it, the pressure spreads equally through all of it. The pump is a narrow piston; the ram that lifts the car is a wide one. The same pressure pushes on every square centimetre of both, so a ram with sixteen times the area gets sixteen times the force.</value>
+  </data>
+  <data name="Lifting_Jack_P2" xml:space="preserve">
+    <value>Again, you pay in distance. The oil the narrow pump pushes out spreads under the wide ram in a thin layer, so each stroke lifts the car only a little. Two ball valves make the pumping work: one lets oil from the tank into the pump as you raise the handle, the other lets it out to the ram as you press down, and neither lets it flow back.</value>
+  </data>
+  <data name="Lifting_Jack_Deeper" xml:space="preserve">
+    <value>With the ram four times as wide as the pump, its face has sixteen times the area; the handle is another lever, six to one. Together they let a press of about ten kilograms hold up a thousand. To lower the car, a release screw opens a path from the ram back to the tank. A car's brakes work the same way: a narrow piston under the pedal, wide ones at the wheels.</value>
+  </data>
+  <data name="Lifting_Jack_Ram" xml:space="preserve">
+    <value>How many times wider the ram is</value>
+  </data>
+  <data name="Lifting_Jack_Strokes" xml:space="preserve">
+    <value>Pump strokes</value>
+  </data>
+  <data name="Lifting_Jack_Readout" xml:space="preserve">
+    <value>You press with {0}; each stroke lifts the car {1} mm. It is up {2} mm.</value>
+  </data>
+  <data name="Lifting_Jack_Picture" xml:space="preserve">
+    <value>A hydraulic jack cut open: an oil tank, a narrow pump with its handle, a wide ram under a car, and two ball valves</value>
+  </data>
+  <data name="Lifting_Jack_Tank" xml:space="preserve">
+    <value>oil tank</value>
+  </data>
+  <data name="Lifting_Jack_Area" xml:space="preserve">
+    <value>The ram's face is {0} times the pump's</value>
+  </data>
+  <data name="Lifting_Jack_Up" xml:space="preserve">
+    <value>Car up {0} mm</value>
+  </data>
+  <data name="Narr_Lifting_Jack_01" xml:space="preserve">
+    <value>The jack is full of oil. Oil hardly squeezes, so a push on it is passed everywhere at once.</value>
+  </data>
+  <data name="Narr_Lifting_Jack_02" xml:space="preserve">
+    <value>Press the handle, and the narrow pump piston pushes on the oil.</value>
+  </data>
+  <data name="Narr_Lifting_Jack_03" xml:space="preserve">
+    <value>The same pressure pushes on the wide ram. Its face has sixteen times the area, so it pushes sixteen times as hard.</value>
+  </data>
+  <data name="Narr_Lifting_Jack_04" xml:space="preserve">
+    <value>Your turn: pump until the car is a centimetre up.</value>
+  </data>
+  <data name="Narr_Lifting_Jack_05" xml:space="preserve">
+    <value>What are the two little ball valves for?</value>
+  </data>
+  <data name="Lifting_Jack_Quiz1" xml:space="preserve">
+    <value>They keep the oil cool</value>
+  </data>
+  <data name="Lifting_Jack_Quiz2" xml:space="preserve">
+    <value>They let oil flow only one way, so the ram cannot sink back while you raise the handle</value>
+  </data>
+  <data name="Lifting_Jack_Quiz3" xml:space="preserve">
+    <value>They measure the pressure</value>
+  </data>
+  <data name="Lifting_Jack_Part_Pump" xml:space="preserve">
+    <value>Pump</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Pump" xml:space="preserve">
+    <value>The narrow piston the handle drives. A small force on a small area makes a high pressure.</value>
+  </data>
+  <data name="Lifting_Jack_Part_Ram" xml:space="preserve">
+    <value>Ram</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Ram" xml:space="preserve">
+    <value>The wide piston under the car. The same pressure over a big area makes a big force.</value>
+  </data>
+  <data name="Lifting_Jack_Part_Oil" xml:space="preserve">
+    <value>Oil</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Oil" xml:space="preserve">
+    <value>It fills the pump, the ram and the passage between them, and passes the pressure on.</value>
+  </data>
+  <data name="Lifting_Jack_Part_Valves" xml:space="preserve">
+    <value>Valves</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Valves" xml:space="preserve">
+    <value>Balls on seats. Oil can push them open one way, but flowing back presses them shut.</value>
+  </data>
+  <data name="Lifting_Elevator_Title" xml:space="preserve">
+    <value>The lift and its counterweight</value>
+  </data>
+  <data name="Lifting_Elevator_P1" xml:space="preserve">
+    <value>A lift car hangs from steel ropes that run over a grooved wheel at the top of the shaft, turned by a motor. If the ropes held nothing else, the motor would have to hold the whole car and everyone in it, and lift all of that every time the car went up.</value>
+  </data>
+  <data name="Lifting_Elevator_P2" xml:space="preserve">
+    <value>So the other ends of the ropes carry a counterweight, as heavy as the empty car plus about half a full load. Now the motor only holds the difference between the two sides. With the car half full they balance, and whether it is empty or full, the difference is never much more than half a load. Going up full or coming down empty, the counterweight does most of the work.</value>
+  </data>
+  <data name="Lifting_Elevator_Deeper" xml:space="preserve">
+    <value>In most lifts the motor does not wind the ropes up at all: they simply lie over the wheel and are gripped by friction in its grooves. In this lift that grip holds as long as one side is not more than about two and a half times as heavy as the other, and the counterweight makes sure of it. If either side comes to rest on the buffers at the bottom of the shaft, the ropes go slack, slip on the wheel, and nothing more is dragged upward.</value>
+  </data>
+  <data name="Lifting_Elevator_Riders" xml:space="preserve">
+    <value>Riders (75 kg each)</value>
+  </data>
+  <data name="Lifting_Elevator_Counter" xml:space="preserve">
+    <value>Hang a counterweight on the ropes</value>
+  </data>
+  <data name="Lifting_Elevator_Readout" xml:space="preserve">
+    <value>The motor holds {0} (with no counterweight it would be {1}).</value>
+  </data>
+  <data name="Lifting_Elevator_CarHeavier" xml:space="preserve">
+    <value>The car's side is heavier.</value>
+  </data>
+  <data name="Lifting_Elevator_WeightHeavier" xml:space="preserve">
+    <value>The counterweight's side is heavier.</value>
+  </data>
+  <data name="Lifting_Elevator_Even" xml:space="preserve">
+    <value>The two sides balance.</value>
+  </data>
+  <data name="Lifting_Elevator_Motor" xml:space="preserve">
+    <value>motor</value>
+  </data>
+  <data name="Lifting_Elevator_NoWeight" xml:space="preserve">
+    <value>no counterweight</value>
+  </data>
+  <data name="Lifting_Elevator_Bar" xml:space="preserve">
+    <value>The motor holds {0}</value>
+  </data>
+  <data name="Lifting_Elevator_Picture" xml:space="preserve">
+    <value>A lift shaft cut open: a motor-driven wheel at the top, the car on one side of its ropes and the counterweight on the other</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_01" xml:space="preserve">
+    <value>This lift car weighs twelve hundred kilograms empty.</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_02" xml:space="preserve">
+    <value>Its ropes run over this grooved wheel, turned by the motor. With nothing on the other side, the motor holds the whole car.</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_03" xml:space="preserve">
+    <value>Your turn: hang a counterweight on the other ends of the ropes.</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_04" xml:space="preserve">
+    <value>With six riders aboard, the two sides weigh the same. The motor only has to get them moving.</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_05" xml:space="preserve">
+    <value>Why is the counterweight as heavy as the car plus about half a full load?</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz1" xml:space="preserve">
+    <value>So that the car can never fall</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz2" xml:space="preserve">
+    <value>So that the motor can be switched off between floors</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz3" xml:space="preserve">
+    <value>So the two sides never differ by much more than half a load, empty or full</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Car" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Car" xml:space="preserve">
+    <value>The car and its riders, hanging on one side of the wheel.</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Weight" xml:space="preserve">
+    <value>Counterweight</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Weight" xml:space="preserve">
+    <value>Stacked iron, as heavy as the empty car plus about half a full load.</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Sheave" xml:space="preserve">
+    <value>Drive wheel</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Sheave" xml:space="preserve">
+    <value>The grooved wheel the motor turns. The ropes are not wound on it; they are gripped by friction.</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Ropes" xml:space="preserve">
+    <value>Ropes</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Ropes" xml:space="preserve">
+    <value>Several steel ropes side by side, each strong enough to hold the car on its own.</value>
+  </data>
+  <data name="Lifting_Seesaw_WorkStone" xml:space="preserve">
+    <value>Stone: {0} × {1} cm up</value>
+  </data>
+  <data name="Lifting_Seesaw_WorkHand" xml:space="preserve">
+    <value>Hand: {0} × {1} cm down</value>
+  </data>
+  <data name="Lifting_Elevator_Alone" xml:space="preserve">
+    <value>With nothing on the other side, the motor holds the whole {0}.</value>
+  </data>
 </root>

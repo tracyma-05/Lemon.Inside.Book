@@ -4206,4 +4206,538 @@
   <data name="Narr_Locks_Dials_Part_Shackle" xml:space="preserve">
     <value>U 形的锁环。横杆一落下，弹簧就把它顶起来。</value>
   </data>
+  <data name="Chapter_Lifting" xml:space="preserve">
+    <value>起重</value>
+  </data>
+  <data name="Lifting_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Lifting_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Lifting_Kg" xml:space="preserve">
+    <value>{0} 千克</value>
+  </data>
+  <data name="Lifting_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Lifting_Centimetres" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Lifting_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Lifting_Times" xml:space="preserve">
+    <value>{0} 倍</value>
+  </data>
+  <data name="Lifting_Up" xml:space="preserve">
+    <value>↑ {0} 厘米</value>
+  </data>
+  <data name="Lifting_Down" xml:space="preserve">
+    <value>↓ {0} 厘米</value>
+  </data>
+  <data name="Lifting_Pulled" xml:space="preserve">
+    <value>拉过 {0} 厘米绳子</value>
+  </data>
+  <data name="Lifting_Seesaw_Title" xml:space="preserve">
+    <value>用长臂换力气</value>
+  </data>
+  <data name="Lifting_Seesaw_P1" xml:space="preserve">
+    <value>杠杆是最简单的机械：一根硬棒，绕着一个支点转。把一块重石头放在一头，在另一头往下压。支点离石头越近，石头那一边的棒就越短，你这一边就越长；在长的一边轻轻一压，就能托起短的一边上的重物。</value>
+  </data>
+  <data name="Lifting_Seesaw_P2" xml:space="preserve">
+    <value>不过要付出代价。棒转动时，长的一头划过的弧比短的一头大。如果你这边的臂长是石头那边的四倍，你只需用四分之一的力，可手要走四倍的路。你做的功（力乘以距离）和石头得到的功一样多：杠杆只是拿距离换力气，从不凭空变出功来。</value>
+  </data>
+  <data name="Lifting_Seesaw_Deeper" xml:space="preserve">
+    <value>你的推力乘以你这边的臂长，等于重物乘以它那边的臂长：这个平衡就是杠杆原理。剪刀、开瓶器、独轮车，还有你的前臂骨，都是杠杆。独轮车把支点放在一头、重物放在中间；前臂正好相反，它舍掉力气，换来手的快速移动。</value>
+  </data>
+  <data name="Lifting_Seesaw_Pivot" xml:space="preserve">
+    <value>支点离石头多远</value>
+  </data>
+  <data name="Lifting_Seesaw_Push" xml:space="preserve">
+    <value>把长的一头压下去</value>
+  </data>
+  <data name="Lifting_Seesaw_Readout" xml:space="preserve">
+    <value>你要用 {0} 的力。手走的路是石头的 {1} 倍，石头已抬高 {2} 厘米。</value>
+  </data>
+  <data name="Lifting_Seesaw_Picture" xml:space="preserve">
+    <value>支点上的一根长棒，短的一头放着石头，一只手按住长的一头</value>
+  </data>
+  <data name="Lifting_Seesaw_Rule" xml:space="preserve">
+    <value>推力 × 你的臂长 = 石头 × 它的臂长</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_01" xml:space="preserve">
+    <value>这块石头重两百千克，光靠双手根本搬不动。</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_02" xml:space="preserve">
+    <value>把一根长棒架在支点上，石头放在一头。支点在正中间时，你要用和石头一样重的力。</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_03" xml:space="preserve">
+    <value>轮到你了：把支点往石头那边挪，直到只需要五十千克的力。</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_04" xml:space="preserve">
+    <value>现在往下压。石头抬起来了，可你的手走了四倍远。省下的力气，是用距离换来的。</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_05" xml:space="preserve">
+    <value>如果支点正好在棒的中间，你要用多大的力？</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz1" xml:space="preserve">
+    <value>石头重量的一半：一百千克</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz2" xml:space="preserve">
+    <value>和石头一样重：两百千克</value>
+  </data>
+  <data name="Lifting_Seesaw_Quiz3" xml:space="preserve">
+    <value>石头重量的两倍</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Stone" xml:space="preserve">
+    <value>石头</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Stone" xml:space="preserve">
+    <value>要抬的重物：两百千克，压在棒短的一头。</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Pivot" xml:space="preserve">
+    <value>支点</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Pivot" xml:space="preserve">
+    <value>棒绕着转的那个点。挪动它，就改变了力气和距离之间的交换。</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Bar" xml:space="preserve">
+    <value>棒</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Bar" xml:space="preserve">
+    <value>一根硬棒，把你的推力传给石头。如果它会弯，你的一部分力气就花在把它压弯上了。</value>
+  </data>
+  <data name="Lifting_Seesaw_Part_Hand" xml:space="preserve">
+    <value>手</value>
+  </data>
+  <data name="Narr_Lifting_Seesaw_Part_Hand" xml:space="preserve">
+    <value>你用力的地方。离支点越远，需要的力越小，手走的路也越长。</value>
+  </data>
+  <data name="Lifting_Pulley_Title" xml:space="preserve">
+    <value>一个滑轮</value>
+  </data>
+  <data name="Lifting_Pulley_P1" xml:space="preserve">
+    <value>滑轮就是一个带槽、能让绳子绕过去的轮子。把它挂在横梁上，绳子从上面绕过，一头拴住水桶，你拉另一头。往下拉比往上提省劲，因为可以把身体的重量压上去；但你用的力仍然和水桶一样重，水桶升高的距离也正好等于你拉过的绳长。定滑轮只是改变了力的方向。</value>
+  </data>
+  <data name="Lifting_Pulley_P2" xml:space="preserve">
+    <value>现在把滑轮挂到水桶上。绳子一头拴在横梁上，往下绕过轮子底下，再回到你手里。这时水桶挂在两段绳子上，每段只承担一半的重量，你只需要一半的力。可要把水桶提高一米，两段绳子都得各缩短一米，于是有两米绳子从你手里拉过。</value>
+  </data>
+  <data name="Lifting_Pulley_Deeper" xml:space="preserve">
+    <value>轮子转得灵活时，一根绳子上处处的拉力都一样，所以托着重物的每一段绳子分担的力也一样。数一数有几段绳子托着重物，就知道省了几倍力：一段，不省力；两段，力减半、绳子要拉两倍长。起重机和帆船两种滑轮都用：动滑轮用来省力，定滑轮把绳子引到方便拉的地方。</value>
+  </data>
+  <data name="Lifting_Pulley_Moving" xml:space="preserve">
+    <value>把水桶挂在动滑轮上</value>
+  </data>
+  <data name="Lifting_Pulley_Pull" xml:space="preserve">
+    <value>拉过的绳子</value>
+  </data>
+  <data name="Lifting_Pulley_Readout" xml:space="preserve">
+    <value>你用 {0} 的力。拉了 {2} 厘米绳子，水桶升高 {1} 厘米。</value>
+  </data>
+  <data name="Lifting_Pulley_Picture" xml:space="preserve">
+    <value>用绳子和滑轮提水桶，滑轮或挂在横梁上，或挂在水桶上</value>
+  </data>
+  <data name="Lifting_Pulley_FixedLabel" xml:space="preserve">
+    <value>定滑轮：只改变拉力的方向</value>
+  </data>
+  <data name="Lifting_Pulley_MovingLabel" xml:space="preserve">
+    <value>动滑轮：两段绳子分担水桶</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_01" xml:space="preserve">
+    <value>这个轮子挂在横梁上。绳子从它上面绕过，一头是水桶，一头在你手里。</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_02" xml:space="preserve">
+    <value>往下拉一米绳子，水桶就升高一米。你要用足四十千克的力。</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_03" xml:space="preserve">
+    <value>轮到你了：改用动滑轮来挂水桶。</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_04" xml:space="preserve">
+    <value>现在两段绳子一起托着水桶。你只用二十千克的力，可拉两米绳子，水桶才升高一米。</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_05" xml:space="preserve">
+    <value>为什么动滑轮能省一半的力？</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz1" xml:space="preserve">
+    <value>两段绳子分担了水桶的重量</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz2" xml:space="preserve">
+    <value>轮子转得快了一倍</value>
+  </data>
+  <data name="Lifting_Pulley_Quiz3" xml:space="preserve">
+    <value>绳子被拉长后会往回拉</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Wheel" xml:space="preserve">
+    <value>滑轮</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Wheel" xml:space="preserve">
+    <value>一个带槽的轮子，绳子经过时它跟着转，绳子就不会被磨。</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Rope" xml:space="preserve">
+    <value>绳子</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Rope" xml:space="preserve">
+    <value>整根绳子上的拉力处处相同，所以托着水桶的每一段分担得一样多。</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Bucket" xml:space="preserve">
+    <value>水桶</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Bucket" xml:space="preserve">
+    <value>一桶要提上去的沙子，重四十千克。</value>
+  </data>
+  <data name="Lifting_Pulley_Part_Hand" xml:space="preserve">
+    <value>手</value>
+  </data>
+  <data name="Narr_Lifting_Pulley_Part_Hand" xml:space="preserve">
+    <value>你拉绳子的地方。比一比你用了多大的力，手又走了多远。</value>
+  </data>
+  <data name="Lifting_Tackle_Title" xml:space="preserve">
+    <value>滑轮组</value>
+  </data>
+  <data name="Lifting_Tackle_P1" xml:space="preserve">
+    <value>把几个滑轮组合起来，就成了滑轮组：上面是固定的一组轮子，下面是能动的一组，一根绳子在两组之间来回绕。两组之间的每一段绳子叫一股，每一股都帮着托住重物。有四股时，每股承担发动机的四分之一，你只要用它重量的四分之一去拉。</value>
+  </data>
+  <data name="Lifting_Tackle_P2" xml:space="preserve">
+    <value>代价还是绳子。发动机要升高一米，四股绳子都得各缩短一米，于是有四米绳子从你手里拉过。真实的轮子还会和轴摩擦：绳子每绕过一个轮子，就被扣下一点拉力，所以股数多了以后，你用的力会比简单算出来的稍大一些。</value>
+  </data>
+  <data name="Lifting_Tackle_Deeper" xml:space="preserve">
+    <value>图里把轮子并排画开，好让每一股绳子都看得见；真实的滑轮组里，它们一个挨一个装在同一根轴上。如果每个轮子只传过百分之九十五的拉力，四股绳子省的不是四倍力，而是大约三倍半。轮子越多，损失叠得越多，所以大型起重机的轮子都装着滚珠轴承。</value>
+  </data>
+  <data name="Lifting_Tackle_Strands" xml:space="preserve">
+    <value>托住重物的绳股数</value>
+  </data>
+  <data name="Lifting_Tackle_Friction" xml:space="preserve">
+    <value>真实的轮子（有一点摩擦）</value>
+  </data>
+  <data name="Lifting_Tackle_Pull" xml:space="preserve">
+    <value>拉过的绳子</value>
+  </data>
+  <data name="Lifting_Tackle_Readout" xml:space="preserve">
+    <value>你用 {0} 的力；发动机每升高一米，要拉 {1} 米绳子。现在升高了 {2} 厘米。</value>
+  </data>
+  <data name="Lifting_Tackle_Picture" xml:space="preserve">
+    <value>用滑轮组吊起一台发动机，轮子并排画开，每股绳子都看得见</value>
+  </data>
+  <data name="Lifting_Tackle_SideBySide" xml:space="preserve">
+    <value>轮子并排画开；真实的滑轮组里它们共用一根轴</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_01" xml:space="preserve">
+    <value>这台发动机重三百千克。用一个轮子一根绳，就得全靠你的手拉住这么重。</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_02" xml:space="preserve">
+    <value>加上一个动滑轮组，现在有两股绳子托着发动机。</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_03" xml:space="preserve">
+    <value>轮到你了：让绳子绕过更多轮子，直到有四股托住发动机。</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_04" xml:space="preserve">
+    <value>真实的轮子会有点摩擦。每个轮子都扣下一些拉力，所以离你的手越近的绳股，受的力越大。</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_05" xml:space="preserve">
+    <value>有六股绳子时，要把发动机提高一米，你得拉多少绳子？</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz1" xml:space="preserve">
+    <value>一米</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz2" xml:space="preserve">
+    <value>六分之一米</value>
+  </data>
+  <data name="Lifting_Tackle_Quiz3" xml:space="preserve">
+    <value>六米</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Load" xml:space="preserve">
+    <value>发动机</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Load" xml:space="preserve">
+    <value>三百千克，挂在下面那组滑轮上。</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Strands" xml:space="preserve">
+    <value>绳股</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Strands" xml:space="preserve">
+    <value>两组滑轮之间的一段段绳子。托住重物的股数越多，每股承担得越少。</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Blocks" xml:space="preserve">
+    <value>滑轮组</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Blocks" xml:space="preserve">
+    <value>上面的定滑轮组挂在横梁上；下面的动滑轮组吊着重物。</value>
+  </data>
+  <data name="Lifting_Tackle_Part_Hand" xml:space="preserve">
+    <value>手</value>
+  </data>
+  <data name="Narr_Lifting_Tackle_Part_Hand" xml:space="preserve">
+    <value>你拉绳子的地方。每多一股绳，你的力就小一些，要拉的绳子就长一些。</value>
+  </data>
+  <data name="Lifting_Winch_Title" xml:space="preserve">
+    <value>绞盘与蜗杆</value>
+  </data>
+  <data name="Lifting_Winch_P1" xml:space="preserve">
+    <value>绞盘是一根永远转不到头的杠杆。绳子缠在一个小鼓筒上，你用摇把转动鼓筒。手绕的是大圈，绳子绕的是小圈：摇把长度是鼓筒半径的六倍，你只需用重物六分之一的力就能拉住它，而且只要绳子够长，就能一直摇下去。</value>
+  </data>
+  <data name="Lifting_Winch_P2" xml:space="preserve">
+    <value>可一松开摇把，就没有什么能挡住重物往下掉，它还会带着摇把飞转。蜗杆能解决这个问题：它是一根螺杆，带动鼓筒上的一个齿轮，螺杆每转一圈，齿轮转过一个齿。它把你的力放大许多倍；又因为螺纹很平缓，重物没法倒过来带动它。你在哪里停手，重物就停在哪里。</value>
+  </data>
+  <data name="Lifting_Winch_Deeper" xml:space="preserve">
+    <value>蜗杆能锁住重物，靠的是摩擦：螺纹斜得太缓，从齿轮那边推它，只会把它更紧地压在齿上。同样的摩擦也让你吃亏：在这个绞盘里，你一多半的力气都变成了螺纹里的热。用白费的力气换一个能自己停住的重物，所以绞盘、闸门和吉他的弦钮里都用蜗杆。</value>
+  </data>
+  <data name="Lifting_Winch_Handle" xml:space="preserve">
+    <value>摇把长度</value>
+  </data>
+  <data name="Lifting_Winch_Worm" xml:space="preserve">
+    <value>通过蜗杆转动鼓筒</value>
+  </data>
+  <data name="Lifting_Winch_LetGo" xml:space="preserve">
+    <value>松开摇把</value>
+  </data>
+  <data name="Lifting_Winch_Readout" xml:space="preserve">
+    <value>你用 {0} 的力；摇 {1} 圈才能绕上一米绳子。</value>
+  </data>
+  <data name="Lifting_Winch_Holding" xml:space="preserve">
+    <value>你的手拉住了它。</value>
+  </data>
+  <data name="Lifting_Winch_Stays" xml:space="preserve">
+    <value>松手了：重物停在原处。</value>
+  </data>
+  <data name="Lifting_Winch_Falls" xml:space="preserve">
+    <value>松手了：重物往下掉，摇把飞转！</value>
+  </data>
+  <data name="Lifting_Winch_WormLabel" xml:space="preserve">
+    <value>蜗杆</value>
+  </data>
+  <data name="Lifting_Winch_Turns" xml:space="preserve">
+    <value>每米绳子要摇 {0} 圈</value>
+  </data>
+  <data name="Lifting_Winch_Picture" xml:space="preserve">
+    <value>侧面看一台手摇绞盘：摇把直接或通过蜗杆转动鼓筒，绳子上挂着重物</value>
+  </data>
+  <data name="Narr_Lifting_Winch_01" xml:space="preserve">
+    <value>绳子缠在这个小鼓筒上。转动鼓筒，重物就升起来。</value>
+  </data>
+  <data name="Narr_Lifting_Winch_02" xml:space="preserve">
+    <value>摇把的长度是鼓筒半径的六倍，所以你只用大约重物六分之一的力。</value>
+  </data>
+  <data name="Narr_Lifting_Winch_03" xml:space="preserve">
+    <value>轮到你了：松开摇把，看看重物会怎样。</value>
+  </data>
+  <data name="Narr_Lifting_Winch_04" xml:space="preserve">
+    <value>现在摇把转的是蜗杆，蜗杆再带动鼓筒上的齿轮。松开手，重物也停在原处。</value>
+  </data>
+  <data name="Narr_Lifting_Winch_05" xml:space="preserve">
+    <value>为什么重物没法倒过来带动蜗杆？</value>
+  </data>
+  <data name="Lifting_Winch_Quiz1" xml:space="preserve">
+    <value>螺纹太平缓，摩擦把它卡住了</value>
+  </data>
+  <data name="Lifting_Winch_Quiz2" xml:space="preserve">
+    <value>蜗杆比重物还重</value>
+  </data>
+  <data name="Lifting_Winch_Quiz3" xml:space="preserve">
+    <value>绳子拴在蜗杆上</value>
+  </data>
+  <data name="Lifting_Winch_Part_Handle" xml:space="preserve">
+    <value>摇把</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Handle" xml:space="preserve">
+    <value>你转动的摇把。它越长，你用的力越小，手绕的圈也越大。</value>
+  </data>
+  <data name="Lifting_Winch_Part_Drum" xml:space="preserve">
+    <value>鼓筒</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Drum" xml:space="preserve">
+    <value>绳子缠在它上面。鼓筒越细，每圈收进的绳子越少，转起来也越省力。</value>
+  </data>
+  <data name="Lifting_Winch_Part_Rope" xml:space="preserve">
+    <value>绳子</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Rope" xml:space="preserve">
+    <value>从吊钩到鼓筒，它承担着整个重物。</value>
+  </data>
+  <data name="Lifting_Winch_Part_Load" xml:space="preserve">
+    <value>重物</value>
+  </data>
+  <data name="Narr_Lifting_Winch_Part_Load" xml:space="preserve">
+    <value>挂在吊钩上的一百千克。</value>
+  </data>
+  <data name="Lifting_Jack_Title" xml:space="preserve">
+    <value>用油来推</value>
+  </data>
+  <data name="Lifting_Jack_P1" xml:space="preserve">
+    <value>液压千斤顶靠一个泵和一些油把汽车顶起来。油几乎压不缩，你推它一下，压强就均匀地传遍整个油里。泵是一个细活塞，顶起汽车的顶杆是一个粗活塞。同样的压强推着两个活塞的每一平方厘米，所以面积大十六倍的顶杆，得到的力也大十六倍。</value>
+  </data>
+  <data name="Lifting_Jack_P2" xml:space="preserve">
+    <value>代价依然是距离。细泵压出来的油，铺到粗顶杆下面只有薄薄一层，所以每压一下，汽车只升高一点点。两个球阀让抽压能一下一下地进行：抬起手柄时，一个让油从油箱流进泵里；压下手柄时，另一个让油流向顶杆；两个都不让油倒流。</value>
+  </data>
+  <data name="Lifting_Jack_Deeper" xml:space="preserve">
+    <value>顶杆比泵粗四倍时，它的端面面积就是十六倍；手柄本身又是一根六比一的杠杆。两者合起来，按下大约十千克的力就能托住一吨。要把车放下来，拧开泄压螺钉，让油从顶杆流回油箱。汽车的刹车也是同样的道理：踏板下是细活塞，车轮那边是粗活塞。</value>
+  </data>
+  <data name="Lifting_Jack_Ram" xml:space="preserve">
+    <value>顶杆比泵粗几倍</value>
+  </data>
+  <data name="Lifting_Jack_Strokes" xml:space="preserve">
+    <value>压了几下</value>
+  </data>
+  <data name="Lifting_Jack_Readout" xml:space="preserve">
+    <value>你用 {0} 的力；每压一下，汽车升高 {1} 毫米。现在升高了 {2} 毫米。</value>
+  </data>
+  <data name="Lifting_Jack_Picture" xml:space="preserve">
+    <value>剖开的液压千斤顶：油箱、带手柄的细泵、托着汽车的粗顶杆，还有两个球阀</value>
+  </data>
+  <data name="Lifting_Jack_Tank" xml:space="preserve">
+    <value>油箱</value>
+  </data>
+  <data name="Lifting_Jack_Area" xml:space="preserve">
+    <value>顶杆端面是泵的 {0} 倍</value>
+  </data>
+  <data name="Lifting_Jack_Up" xml:space="preserve">
+    <value>汽车升高 {0} 毫米</value>
+  </data>
+  <data name="Narr_Lifting_Jack_01" xml:space="preserve">
+    <value>千斤顶里装满了油。油几乎压不缩，推它一下，力就同时传到各处。</value>
+  </data>
+  <data name="Narr_Lifting_Jack_02" xml:space="preserve">
+    <value>按下手柄，细细的泵活塞就推向油。</value>
+  </data>
+  <data name="Narr_Lifting_Jack_03" xml:space="preserve">
+    <value>同样的压强推着粗顶杆。它的端面面积大十六倍，推力也就大十六倍。</value>
+  </data>
+  <data name="Narr_Lifting_Jack_04" xml:space="preserve">
+    <value>轮到你了：一直压，直到汽车升高一厘米。</value>
+  </data>
+  <data name="Narr_Lifting_Jack_05" xml:space="preserve">
+    <value>那两个小球阀是做什么用的？</value>
+  </data>
+  <data name="Lifting_Jack_Quiz1" xml:space="preserve">
+    <value>让油保持凉爽</value>
+  </data>
+  <data name="Lifting_Jack_Quiz2" xml:space="preserve">
+    <value>只让油朝一个方向流，抬手柄时顶杆就不会落回去</value>
+  </data>
+  <data name="Lifting_Jack_Quiz3" xml:space="preserve">
+    <value>测量压强</value>
+  </data>
+  <data name="Lifting_Jack_Part_Pump" xml:space="preserve">
+    <value>泵</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Pump" xml:space="preserve">
+    <value>手柄带动的细活塞。小小的力压在小小的面积上，就产生很高的压强。</value>
+  </data>
+  <data name="Lifting_Jack_Part_Ram" xml:space="preserve">
+    <value>顶杆</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Ram" xml:space="preserve">
+    <value>托着汽车的粗活塞。同样的压强作用在大面积上，就成了很大的力。</value>
+  </data>
+  <data name="Lifting_Jack_Part_Oil" xml:space="preserve">
+    <value>油</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Oil" xml:space="preserve">
+    <value>它充满泵、顶杆和两者之间的通道，把压强传过去。</value>
+  </data>
+  <data name="Lifting_Jack_Part_Valves" xml:space="preserve">
+    <value>单向阀</value>
+  </data>
+  <data name="Narr_Lifting_Jack_Part_Valves" xml:space="preserve">
+    <value>压在阀座上的小球。油从一边能把它顶开，想倒流时反而把它压紧。</value>
+  </data>
+  <data name="Lifting_Elevator_Title" xml:space="preserve">
+    <value>电梯与配重</value>
+  </data>
+  <data name="Lifting_Elevator_P1" xml:space="preserve">
+    <value>电梯的轿厢挂在几根钢丝绳上，绳子绕过井道顶上一个带槽的轮子，轮子由电动机带动。如果绳子另一头什么也不挂，电动机就得拉住整个轿厢和里面所有的人，每次上行都要把这些全部提上去。</value>
+  </data>
+  <data name="Lifting_Elevator_P2" xml:space="preserve">
+    <value>所以绳子的另一头挂着配重，它的重量等于空轿厢加上大约半个满载。这样电动机只需要拉住两边的差。轿厢半满时两边正好平衡；不论空着还是满载，两边相差也不会比半个满载多多少。满载上行或空载下行时，大部分力气都由配重出了。</value>
+  </data>
+  <data name="Lifting_Elevator_Deeper" xml:space="preserve">
+    <value>大多数电梯的电动机根本不卷绳子：绳子只是搭在轮子上，靠槽里的摩擦力咬住。在这部电梯里，只要一边不超过另一边的大约两倍半，就咬得住，而配重保证了这一点。如果有一边落到井道底部的缓冲器上，绳子就松了，在轮子上打滑，再也拉不动什么。</value>
+  </data>
+  <data name="Lifting_Elevator_Riders" xml:space="preserve">
+    <value>乘客（每人 75 千克）</value>
+  </data>
+  <data name="Lifting_Elevator_Counter" xml:space="preserve">
+    <value>在绳子另一头挂上配重</value>
+  </data>
+  <data name="Lifting_Elevator_Readout" xml:space="preserve">
+    <value>电动机要拉住 {0}（没有配重时是 {1}）。</value>
+  </data>
+  <data name="Lifting_Elevator_CarHeavier" xml:space="preserve">
+    <value>轿厢那边更重。</value>
+  </data>
+  <data name="Lifting_Elevator_WeightHeavier" xml:space="preserve">
+    <value>配重那边更重。</value>
+  </data>
+  <data name="Lifting_Elevator_Even" xml:space="preserve">
+    <value>两边正好平衡。</value>
+  </data>
+  <data name="Lifting_Elevator_Motor" xml:space="preserve">
+    <value>电动机</value>
+  </data>
+  <data name="Lifting_Elevator_NoWeight" xml:space="preserve">
+    <value>没有配重</value>
+  </data>
+  <data name="Lifting_Elevator_Bar" xml:space="preserve">
+    <value>电动机拉住 {0}</value>
+  </data>
+  <data name="Lifting_Elevator_Picture" xml:space="preserve">
+    <value>剖开的电梯井道：顶上是电动机带动的轮子，绳子一边挂轿厢，一边挂配重</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_01" xml:space="preserve">
+    <value>这个电梯轿厢空着就重一千二百千克。</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_02" xml:space="preserve">
+    <value>它的钢丝绳绕过这个带槽的轮子，轮子由电动机带动。另一边什么都不挂时，电动机要拉住整个轿厢。</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_03" xml:space="preserve">
+    <value>轮到你了：在绳子的另一头挂上配重。</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_04" xml:space="preserve">
+    <value>轿厢里有六位乘客时，两边一样重。电动机只要让它们动起来就行了。</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_05" xml:space="preserve">
+    <value>为什么配重要等于轿厢加上大约半个满载？</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz1" xml:space="preserve">
+    <value>这样轿厢就永远不会掉下去</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz2" xml:space="preserve">
+    <value>这样电动机在楼层之间可以关掉</value>
+  </data>
+  <data name="Lifting_Elevator_Quiz3" xml:space="preserve">
+    <value>这样无论空载还是满载，两边相差都不会比半个满载多多少</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Car" xml:space="preserve">
+    <value>轿厢</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Car" xml:space="preserve">
+    <value>轿厢和里面的乘客，挂在轮子的一边。</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Weight" xml:space="preserve">
+    <value>配重</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Weight" xml:space="preserve">
+    <value>叠起来的铁块，重量等于空轿厢加上大约半个满载。</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Sheave" xml:space="preserve">
+    <value>曳引轮</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Sheave" xml:space="preserve">
+    <value>电动机带动的带槽轮子。绳子并没有缠在上面，是靠摩擦力被咬住的。</value>
+  </data>
+  <data name="Lifting_Elevator_Part_Ropes" xml:space="preserve">
+    <value>钢丝绳</value>
+  </data>
+  <data name="Narr_Lifting_Elevator_Part_Ropes" xml:space="preserve">
+    <value>几根并排的钢丝绳，每一根单独都足以吊住轿厢。</value>
+  </data>
+  <data name="Lifting_Seesaw_WorkStone" xml:space="preserve">
+    <value>石头：{0} × 升高 {1} 厘米</value>
+  </data>
+  <data name="Lifting_Seesaw_WorkHand" xml:space="preserve">
+    <value>手：{0} × 压下 {1} 厘米</value>
+  </data>
+  <data name="Lifting_Elevator_Alone" xml:space="preserve">
+    <value>另一边什么都不挂，电动机要拉住整整 {0}。</value>
+  </data>
 </root>

@@ -2882,6 +2882,730 @@
      ]
     ]
    },
+   "Narr_Lifting_Elevator_01": {
+    "duration": 3.888,
+    "hash": "4d36cc23f940ab72",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "This lift car weighs twelve hundred kilograms empty."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_02": {
+    "duration": 8.496,
+    "hash": "ac2161dfbe291459",
+    "sentences": [
+     [
+      0.05,
+      4.514,
+      "Its ropes run over this grooved wheel, turned by the motor."
+     ],
+     [
+      4.514,
+      8.444,
+      "With nothing on the other side, the motor holds the whole car."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_03": {
+    "duration": 4.344,
+    "hash": "95b9f586ead65d13",
+    "sentences": [
+     [
+      0.05,
+      4.278,
+      "Your turn: hang a counterweight on the other ends of the ropes."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_04": {
+    "duration": 6.72,
+    "hash": "4bd364fe7354b055",
+    "sentences": [
+     [
+      0.05,
+      4.25,
+      "With six riders aboard, the two sides weigh the same."
+     ],
+     [
+      4.25,
+      6.667,
+      "The motor only has to get them moving."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_05": {
+    "duration": 4.632,
+    "hash": "f7c02b7edb3bfaf1",
+    "sentences": [
+     [
+      0.05,
+      4.569,
+      "Why is the counterweight as heavy as the car plus about half a full load?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Car": {
+    "duration": 4.104,
+    "hash": "2e2df2abd0617918",
+    "sentences": [
+     [
+      0.05,
+      4.056,
+      "The car and its riders, hanging on one side of the wheel."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Ropes": {
+    "duration": 6.24,
+    "hash": "5cd4d0ff1ac60ec1",
+    "sentences": [
+     [
+      0.05,
+      6.181,
+      "Several steel ropes side by side, each strong enough to hold the car on its own."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Sheave": {
+    "duration": 7.176,
+    "hash": "fd877836c97fa35a",
+    "sentences": [
+     [
+      0.05,
+      2.639,
+      "The grooved wheel the motor turns."
+     ],
+     [
+      2.639,
+      7.125,
+      "The ropes are not wound on it; they are gripped by friction."
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Weight": {
+    "duration": 5.184,
+    "hash": "0fa78ecb205e80ac",
+    "sentences": [
+     [
+      0.05,
+      5.125,
+      "Stacked iron, as heavy as the empty car plus about half a full load."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_01": {
+    "duration": 7.272,
+    "hash": "dbdebfddd11ad9b8",
+    "sentences": [
+     [
+      0.05,
+      2.097,
+      "The jack is full of oil."
+     ],
+     [
+      2.097,
+      7.222,
+      "Oil hardly squeezes, so a push on it is passed everywhere at once."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_02": {
+    "duration": 4.44,
+    "hash": "71c32ce926f52fa1",
+    "sentences": [
+     [
+      0.05,
+      4.389,
+      "Press the handle, and the narrow pump piston pushes on the oil."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_03": {
+    "duration": 8.112,
+    "hash": "4d0fa5cf9e4c3868",
+    "sentences": [
+     [
+      0.05,
+      2.806,
+      "The same pressure pushes on the wide ram."
+     ],
+     [
+      2.806,
+      8.056,
+      "Its face has sixteen times the area, so it pushes sixteen times as hard."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_04": {
+    "duration": 3.984,
+    "hash": "91f3b90584c1eb4e",
+    "sentences": [
+     [
+      0.05,
+      3.943,
+      "Your turn: pump until the car is a centimetre up."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_05": {
+    "duration": 2.4,
+    "hash": "cb28c6f6f0a46e49",
+    "sentences": [
+     [
+      0.05,
+      2.36,
+      "What are the two little ball valves for?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Oil": {
+    "duration": 6.168,
+    "hash": "675871a4183c466a",
+    "sentences": [
+     [
+      0.05,
+      6.111,
+      "It fills the pump, the ram and the passage between them, and passes the pressure on."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Pump": {
+    "duration": 6.528,
+    "hash": "30291717401b9f69",
+    "sentences": [
+     [
+      0.05,
+      2.542,
+      "The narrow piston the handle drives."
+     ],
+     [
+      2.542,
+      6.472,
+      "A small force on a small area makes a high pressure."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Ram": {
+    "duration": 6.504,
+    "hash": "118f2062ba38e66f",
+    "sentences": [
+     [
+      0.05,
+      2.264,
+      "The wide piston under the car."
+     ],
+     [
+      2.264,
+      6.444,
+      "The same pressure over a big area makes a big force."
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Valves": {
+    "duration": 6.528,
+    "hash": "a9bc3dbff312d6be",
+    "sentences": [
+     [
+      0.05,
+      1.569,
+      "Balls on seats."
+     ],
+     [
+      1.569,
+      6.458,
+      "Oil can push them open one way, but flowing back presses them shut."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_01": {
+    "duration": 5.664,
+    "hash": "bfdac3f371f0373f",
+    "sentences": [
+     [
+      0.05,
+      2.069,
+      "This wheel hangs from the beam."
+     ],
+     [
+      2.069,
+      5.597,
+      "The rope runs over it, from the bucket to your hand."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_02": {
+    "duration": 7.68,
+    "hash": "ecbb0620e2171f75",
+    "sentences": [
+     [
+      0.05,
+      4.389,
+      "Pull a metre of rope down, and the bucket rises a metre."
+     ],
+     [
+      4.389,
+      7.625,
+      "You pull with all of its forty kilograms."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_03": {
+    "duration": 4.488,
+    "hash": "a5b9a69f502bc0ff",
+    "sentences": [
+     [
+      0.05,
+      4.443,
+      "Your turn: hang the bucket from a moving pulley instead."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_04": {
+    "duration": 7.968,
+    "hash": "00b4f25b633d17a7",
+    "sentences": [
+     [
+      0.05,
+      2.528,
+      "Now two strands share the bucket."
+     ],
+     [
+      2.528,
+      7.917,
+      "You pull with twenty kilograms, but two metres of rope lift it only one metre."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_05": {
+    "duration": 2.664,
+    "hash": "46fddfb425737e6d",
+    "sentences": [
+     [
+      0.05,
+      2.597,
+      "Why does the moving pulley halve the pull?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Bucket": {
+    "duration": 3.288,
+    "hash": "31f46bfbca150789",
+    "sentences": [
+     [
+      0.05,
+      3.222,
+      "Forty kilograms of sand to be lifted."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Hand": {
+    "duration": 5.136,
+    "hash": "693ea9c431b9b925",
+    "sentences": [
+     [
+      0.05,
+      1.264,
+      "Where you pull."
+     ],
+     [
+      1.264,
+      5.069,
+      "Compare how hard you pull with how far your hand goes."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Rope": {
+    "duration": 7.584,
+    "hash": "c0e5760bfb6fba30",
+    "sentences": [
+     [
+      0.05,
+      7.514,
+      "It pulls with the same force all along its length, so each strand holding the bucket carries an equal share."
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Wheel": {
+    "duration": 4.848,
+    "hash": "f3d3db75aaef532d",
+    "sentences": [
+     [
+      0.05,
+      4.792,
+      "A grooved wheel that turns as the rope runs over it, so the rope does not rub."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_01": {
+    "duration": 5.712,
+    "hash": "d143db5df529994f",
+    "sentences": [
+     [
+      0.05,
+      5.653,
+      "This stone weighs two hundred kilograms: far too much to lift with your hands."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_02": {
+    "duration": 8.832,
+    "hash": "c050dc052aa4ce39",
+    "sentences": [
+     [
+      0.05,
+      4.389,
+      "Lay a long bar over a pivot, with the stone on one end."
+     ],
+     [
+      4.389,
+      8.764,
+      "With the pivot in the middle, you must push as hard as the stone weighs."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_03": {
+    "duration": 6.648,
+    "hash": "89a36705a1196ba7",
+    "sentences": [
+     [
+      0.05,
+      6.596,
+      "Your turn: slide the pivot toward the stone until you need to push no harder than fifty kilograms."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_04": {
+    "duration": 8.928,
+    "hash": "796160aceb971514",
+    "sentences": [
+     [
+      0.05,
+      1.597,
+      "Now press down."
+     ],
+     [
+      1.597,
+      6.069,
+      "The stone rises, but your hand travels four times as far."
+     ],
+     [
+      6.069,
+      8.875,
+      "You pay for the easier push with distance."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_05": {
+    "duration": 4.872,
+    "hash": "1ef5d105c46d9354",
+    "sentences": [
+     [
+      0.05,
+      4.806,
+      "If the pivot stood right in the middle of the bar, how hard would you have to push?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Bar": {
+    "duration": 6.912,
+    "hash": "83ac8610788fceda",
+    "sentences": [
+     [
+      0.05,
+      3.431,
+      "A stiff bar that passes your push on to the stone."
+     ],
+     [
+      3.431,
+      6.861,
+      "If it bent, part of your push would go into bending it."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Hand": {
+    "duration": 6.744,
+    "hash": "3e6e101a2b9b11d2",
+    "sentences": [
+     [
+      0.05,
+      1.485,
+      "Where you push."
+     ],
+     [
+      1.485,
+      6.681,
+      "The farther it is from the pivot, the less force you need, and the farther it moves."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Pivot": {
+    "duration": 6.24,
+    "hash": "287ada69c0448832",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "The point the bar turns about."
+     ],
+     [
+      2.389,
+      6.181,
+      "Moving it changes the trade between force and distance."
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Stone": {
+    "duration": 4.944,
+    "hash": "11dac57f614ad84a",
+    "sentences": [
+     [
+      0.05,
+      4.875,
+      "The load: two hundred kilograms resting on the short end of the bar."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_01": {
+    "duration": 7.488,
+    "hash": "5ad6817fbd615040",
+    "sentences": [
+     [
+      0.05,
+      3.403,
+      "This engine weighs three hundred kilograms."
+     ],
+     [
+      3.403,
+      7.431,
+      "One rope over one wheel would need all of that from your hands."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_02": {
+    "duration": 4.56,
+    "hash": "7bfbbb594bbfe907",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "Add a moving block, and two strands now hold the engine."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_03": {
+    "duration": 5.52,
+    "hash": "9fbf0219edd83479",
+    "sentences": [
+     [
+      0.05,
+      5.458,
+      "Your turn: wind the rope round more wheels until four strands hold the engine."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_04": {
+    "duration": 7.584,
+    "hash": "9293e855f7fdfb9d",
+    "sentences": [
+     [
+      0.05,
+      1.831,
+      "Real wheels rub a little."
+     ],
+     [
+      1.831,
+      7.514,
+      "Each one keeps back some of the pull, so the strands nearest your hand carry more."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_05": {
+    "duration": 4.992,
+    "hash": "065a6f1d2ee3cde4",
+    "sentences": [
+     [
+      0.05,
+      4.931,
+      "With six strands, how much rope do you pull to lift the engine one metre?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Blocks": {
+    "duration": 6.816,
+    "hash": "31f5430e0eac360e",
+    "sentences": [
+     [
+      0.05,
+      6.764,
+      "The fixed block hangs from the beam and holds the top wheels; the moving block below carries the load."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Hand": {
+    "duration": 5.88,
+    "hash": "23de2fff96609c47",
+    "sentences": [
+     [
+      0.05,
+      1.264,
+      "Where you pull."
+     ],
+     [
+      1.264,
+      5.806,
+      "Each strand you add makes your pull smaller and the rope you pull longer."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Load": {
+    "duration": 3.672,
+    "hash": "b670ef3d7e6d27c8",
+    "sentences": [
+     [
+      0.05,
+      3.611,
+      "Three hundred kilograms hanging from the bottom block."
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Strands": {
+    "duration": 6.768,
+    "hash": "f89b37533fa1d3d4",
+    "sentences": [
+     [
+      0.05,
+      2.403,
+      "The runs of rope between the blocks."
+     ],
+     [
+      2.403,
+      6.708,
+      "The more strands hold the load, the less each must carry."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_01": {
+    "duration": 4.944,
+    "hash": "8b9871b831c7708a",
+    "sentences": [
+     [
+      0.05,
+      2.625,
+      "The rope winds onto this small drum."
+     ],
+     [
+      2.625,
+      4.875,
+      "Turning the drum lifts the load."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_02": {
+    "duration": 6.456,
+    "hash": "03dba2dac6742f84",
+    "sentences": [
+     [
+      0.05,
+      6.403,
+      "The crank is six times as long as the drum's radius, so you push with about a sixth of the load's weight."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_03": {
+    "duration": 4.416,
+    "hash": "a1737b9bae577f99",
+    "sentences": [
+     [
+      0.05,
+      4.347,
+      "Your turn: let go of the handle and see what the load does."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_04": {
+    "duration": 8.28,
+    "hash": "4f2ed41af1c60310",
+    "sentences": [
+     [
+      0.05,
+      5.319,
+      "Now the crank turns a worm, and the worm turns a toothed wheel on the drum."
+     ],
+     [
+      5.319,
+      8.222,
+      "Let go, and the load stays where it is."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_05": {
+    "duration": 2.904,
+    "hash": "bfc53419bed23dd0",
+    "sentences": [
+     [
+      0.05,
+      2.833,
+      "Why can't the load turn the worm backwards?"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Drum": {
+    "duration": 7.608,
+    "hash": "5bbf02a4edd67dfb",
+    "sentences": [
+     [
+      0.05,
+      1.903,
+      "The rope winds onto it."
+     ],
+     [
+      1.903,
+      7.542,
+      "The smaller the drum, the less rope each turn takes in, and the easier it turns."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Handle": {
+    "duration": 7.056,
+    "hash": "295783ddfa0e1c4f",
+    "sentences": [
+     [
+      0.05,
+      1.722,
+      "The crank you turn."
+     ],
+     [
+      1.722,
+      6.986,
+      "The longer it is, the less you push, and the bigger the circle your hand goes round."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Load": {
+    "duration": 2.472,
+    "hash": "a2279f528e329c9e",
+    "sentences": [
+     [
+      0.05,
+      2.417,
+      "A hundred kilograms on the hook."
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Rope": {
+    "duration": 3.48,
+    "hash": "5b35e9e99937ebdc",
+    "sentences": [
+     [
+      0.05,
+      3.417,
+      "It carries the whole load, from the hook up to the drum."
+     ]
+    ]
+   },
    "Narr_Light_Angle_01": {
     "duration": 6.072,
     "hash": "9783db7e41fa496f",
@@ -8072,6 +8796,730 @@
       2.764,
       6.292,
       "中间每多一级，它就再慢三倍。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_01": {
+    "duration": 4.584,
+    "hash": "742fdace22c480f0",
+    "sentences": [
+     [
+      0.1,
+      4.564,
+      "这个电梯轿厢空着就重一千二百千克。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_02": {
+    "duration": 10.656,
+    "hash": "8ca2ffebff368c82",
+    "sentences": [
+     [
+      0.1,
+      5.717,
+      "它的钢丝绳绕过这个带槽的轮子，轮子由电动机带动。"
+     ],
+     [
+      5.667,
+      10.583,
+      "另一边什么都不挂时，电动机要拉住整个轿厢。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_03": {
+    "duration": 4.176,
+    "hash": "0ad3c266473d5ead",
+    "sentences": [
+     [
+      0.1,
+      4.161,
+      "轮到你了：在绳子的另一头挂上配重。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_04": {
+    "duration": 7.512,
+    "hash": "d8bedd679dc7efdc",
+    "sentences": [
+     [
+      0.1,
+      4.161,
+      "轿厢里有六位乘客时，两边一样重。"
+     ],
+     [
+      4.111,
+      7.458,
+      "电动机只要让它们动起来就行了。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_05": {
+    "duration": 4.464,
+    "hash": "cbfd6d1e2a8eef38",
+    "sentences": [
+     [
+      0.1,
+      4.453,
+      "为什么配重要等于轿厢加上大约半个满载？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Car": {
+    "duration": 4.104,
+    "hash": "96ef256580395693",
+    "sentences": [
+     [
+      0.1,
+      4.106,
+      "轿厢和里面的乘客，挂在轮子的一边。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Ropes": {
+    "duration": 5.328,
+    "hash": "b41b1d551a2730d5",
+    "sentences": [
+     [
+      0.1,
+      5.328,
+      "几根并排的钢丝绳，每一根单独都足以吊住轿厢。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Sheave": {
+    "duration": 7.536,
+    "hash": "a435839612e3c75b",
+    "sentences": [
+     [
+      0.1,
+      2.953,
+      "电动机带动的带槽轮子。"
+     ],
+     [
+      2.903,
+      7.472,
+      "绳子并没有缠在上面，是靠摩擦力被咬住的。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Elevator_Part_Weight": {
+    "duration": 5.76,
+    "hash": "b02b0c739947231f",
+    "sentences": [
+     [
+      0.1,
+      5.758,
+      "叠起来的铁块，重量等于空轿厢加上大约半个满载。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_01": {
+    "duration": 7.944,
+    "hash": "8c2ee52f648bfe0f",
+    "sentences": [
+     [
+      0.1,
+      2.592,
+      "千斤顶里装满了油。"
+     ],
+     [
+      2.542,
+      7.889,
+      "油几乎压不缩，推它一下，力就同时传到各处。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_02": {
+    "duration": 4.488,
+    "hash": "7a775453860c1ea7",
+    "sentences": [
+     [
+      0.1,
+      4.481,
+      "按下手柄，细细的泵活塞就推向油。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_03": {
+    "duration": 8.04,
+    "hash": "19fe5cfe61469498",
+    "sentences": [
+     [
+      0.1,
+      3.175,
+      "同样的压强推着粗顶杆。"
+     ],
+     [
+      3.125,
+      7.972,
+      "它的端面面积大十六倍，推力也就大十六倍。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_04": {
+    "duration": 4.8,
+    "hash": "7b4dc76092bff89d",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "轮到你了：一直压，直到汽车升高一厘米。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_05": {
+    "duration": 3.264,
+    "hash": "3f4ff40b76fd208a",
+    "sentences": [
+     [
+      0.1,
+      3.258,
+      "那两个小球阀是做什么用的？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Oil": {
+    "duration": 6.024,
+    "hash": "9009563dc8ea8238",
+    "sentences": [
+     [
+      0.1,
+      6.022,
+      "它充满泵、顶杆和两者之间的通道，把压强传过去。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Pump": {
+    "duration": 8.16,
+    "hash": "7af33d8d1664a2b0",
+    "sentences": [
+     [
+      0.1,
+      2.661,
+      "手柄带动的细活塞。"
+     ],
+     [
+      2.611,
+      8.097,
+      "小小的力压在小小的面积上，就产生很高的压强。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Ram": {
+    "duration": 7.584,
+    "hash": "f6d5dfcd15305f87",
+    "sentences": [
+     [
+      0.1,
+      2.536,
+      "托着汽车的粗活塞。"
+     ],
+     [
+      2.486,
+      7.528,
+      "同样的压强作用在大面积上，就成了很大的力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Jack_Part_Valves": {
+    "duration": 7.608,
+    "hash": "ac0424a0bdd001e4",
+    "sentences": [
+     [
+      0.1,
+      2.619,
+      "压在阀座上的小球。"
+     ],
+     [
+      2.569,
+      7.556,
+      "油从一边能把它顶开，想倒流时反而把它压紧。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_01": {
+    "duration": 7.968,
+    "hash": "a647962cbdb81fbc",
+    "sentences": [
+     [
+      0.1,
+      2.703,
+      "这个轮子挂在横梁上。"
+     ],
+     [
+      2.653,
+      7.903,
+      "绳子从它上面绕过，一头是水桶，一头在你手里。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_02": {
+    "duration": 6.744,
+    "hash": "d0ba54390ed4a759",
+    "sentences": [
+     [
+      0.1,
+      4.161,
+      "往下拉一米绳子，水桶就升高一米。"
+     ],
+     [
+      4.111,
+      6.694,
+      "你要用足四十千克的力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_03": {
+    "duration": 3.984,
+    "hash": "b675d17b69107db9",
+    "sentences": [
+     [
+      0.1,
+      3.967,
+      "轮到你了：改用动滑轮来挂水桶。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_04": {
+    "duration": 9.432,
+    "hash": "98727973459186f7",
+    "sentences": [
+     [
+      0.1,
+      3.606,
+      "现在两段绳子一起托着水桶。"
+     ],
+     [
+      3.556,
+      9.361,
+      "你只用二十千克的力，可拉两米绳子，水桶才升高一米。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_05": {
+    "duration": 3.168,
+    "hash": "afb088b230aab0a9",
+    "sentences": [
+     [
+      0.1,
+      3.161,
+      "为什么动滑轮能省一半的力？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Bucket": {
+    "duration": 4.032,
+    "hash": "193e56093055f452",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "一桶要提上去的沙子，重四十千克。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Hand": {
+    "duration": 6.384,
+    "hash": "122f9e3b961170bb",
+    "sentences": [
+     [
+      0.1,
+      2.189,
+      "你拉绳子的地方。"
+     ],
+     [
+      2.139,
+      6.319,
+      "比一比你用了多大的力，手又走了多远。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Rope": {
+    "duration": 7.272,
+    "hash": "13c42de9b5e64b89",
+    "sentences": [
+     [
+      0.1,
+      7.258,
+      "整根绳子上的拉力处处相同，所以托着水桶的每一段分担得一样多。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Pulley_Part_Wheel": {
+    "duration": 6.216,
+    "hash": "d2046aa7c00e9763",
+    "sentences": [
+     [
+      0.1,
+      6.217,
+      "一个带槽的轮子，绳子经过时它跟着转，绳子就不会被磨。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_01": {
+    "duration": 5.352,
+    "hash": "454c4da511203630",
+    "sentences": [
+     [
+      0.1,
+      5.342,
+      "这块石头重两百千克，光靠双手根本搬不动。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_02": {
+    "duration": 9.264,
+    "hash": "797103c60c0a7b70",
+    "sentences": [
+     [
+      0.1,
+      4.675,
+      "把一根长棒架在支点上，石头放在一头。"
+     ],
+     [
+      4.625,
+      9.194,
+      "支点在正中间时，你要用和石头一样重的力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_03": {
+    "duration": 6.168,
+    "hash": "95bc25308f2fb41d",
+    "sentences": [
+     [
+      0.1,
+      6.161,
+      "轮到你了：把支点往石头那边挪，直到只需要五十千克的力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_04": {
+    "duration": 9.744,
+    "hash": "b304ed838efedf95",
+    "sentences": [
+     [
+      0.1,
+      1.994,
+      "现在往下压。"
+     ],
+     [
+      1.944,
+      6.222,
+      "石头抬起来了，可你的手走了四倍远。"
+     ],
+     [
+      6.222,
+      9.694,
+      "省下的力气，是用距离换来的。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_05": {
+    "duration": 4.584,
+    "hash": "7739be5fc6e7f1c9",
+    "sentences": [
+     [
+      0.1,
+      4.564,
+      "如果支点正好在棒的中间，你要用多大的力？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Bar": {
+    "duration": 9.048,
+    "hash": "1dbbae2fb9ae4a12",
+    "sentences": [
+     [
+      0.1,
+      3.828,
+      "一根硬棒，把你的推力传给石头。"
+     ],
+     [
+      3.778,
+      8.986,
+      "如果它会弯，你的一部分力气就花在把它压弯上了。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Hand": {
+    "duration": 7.032,
+    "hash": "7166d8be0fb6d4bf",
+    "sentences": [
+     [
+      0.1,
+      1.967,
+      "你用力的地方。"
+     ],
+     [
+      1.917,
+      6.972,
+      "离支点越远，需要的力越小，手走的路也越长。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Pivot": {
+    "duration": 6.936,
+    "hash": "1081dbfbc9e1bec2",
+    "sentences": [
+     [
+      0.1,
+      2.356,
+      "棒绕着转的那个点。"
+     ],
+     [
+      2.306,
+      6.875,
+      "挪动它，就改变了力气和距离之间的交换。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Seesaw_Part_Stone": {
+    "duration": 4.944,
+    "hash": "6a50333368e1cfc3",
+    "sentences": [
+     [
+      0.1,
+      4.925,
+      "要抬的重物：两百千克，压在棒短的一头。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_01": {
+    "duration": 7.992,
+    "hash": "43a6d0289a1a97ca",
+    "sentences": [
+     [
+      0.1,
+      3.231,
+      "这台发动机重三百千克。"
+     ],
+     [
+      3.181,
+      7.931,
+      "用一个轮子一根绳，就得全靠你的手拉住这么重。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_02": {
+    "duration": 5.376,
+    "hash": "6dec75b72a7bdee7",
+    "sentences": [
+     [
+      0.1,
+      5.369,
+      "加上一个动滑轮组，现在有两股绳子托着发动机。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_03": {
+    "duration": 6.408,
+    "hash": "6ad460fd6fd63ff9",
+    "sentences": [
+     [
+      0.1,
+      6.397,
+      "轮到你了：让绳子绕过更多轮子，直到有四股托住发动机。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_04": {
+    "duration": 9.96,
+    "hash": "6036615b50eb53d3",
+    "sentences": [
+     [
+      0.1,
+      3.078,
+      "真实的轮子会有点摩擦。"
+     ],
+     [
+      3.028,
+      9.903,
+      "每个轮子都扣下一些拉力，所以离你的手越近的绳股，受的力越大。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_05": {
+    "duration": 5.904,
+    "hash": "e485957d6351affb",
+    "sentences": [
+     [
+      0.1,
+      5.897,
+      "有六股绳子时，要把发动机提高一米，你得拉多少绳子？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Blocks": {
+    "duration": 6.336,
+    "hash": "160e9c9ecfb1c707",
+    "sentences": [
+     [
+      0.1,
+      6.328,
+      "上面的定滑轮组挂在横梁上；下面的动滑轮组吊着重物。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Hand": {
+    "duration": 7.608,
+    "hash": "5575dec40addfff9",
+    "sentences": [
+     [
+      0.1,
+      2.189,
+      "你拉绳子的地方。"
+     ],
+     [
+      2.139,
+      7.556,
+      "每多一股绳，你的力就小一些，要拉的绳子就长一些。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Load": {
+    "duration": 4.008,
+    "hash": "e2e4a5dcc50ad665",
+    "sentences": [
+     [
+      0.1,
+      4.008,
+      "三百千克，挂在下面那组滑轮上。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Tackle_Part_Strands": {
+    "duration": 7.632,
+    "hash": "b01f0b8b83e0bc58",
+    "sentences": [
+     [
+      0.1,
+      3.258,
+      "两组滑轮之间的一段段绳子。"
+     ],
+     [
+      3.208,
+      7.569,
+      "托住重物的股数越多，每股承担得越少。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_01": {
+    "duration": 6.072,
+    "hash": "d1673ac3e7ef2c32",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "绳子缠在这个小鼓筒上。"
+     ],
+     [
+      2.958,
+      6.0,
+      "转动鼓筒，重物就升起来。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_02": {
+    "duration": 7.128,
+    "hash": "987da26b63c969a1",
+    "sentences": [
+     [
+      0.1,
+      7.106,
+      "摇把的长度是鼓筒半径的六倍，所以你只用大约重物六分之一的力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_03": {
+    "duration": 4.44,
+    "hash": "26928ffc818e8959",
+    "sentences": [
+     [
+      0.1,
+      4.439,
+      "轮到你了：松开摇把，看看重物会怎样。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_04": {
+    "duration": 8.76,
+    "hash": "c35874649ccd7f1f",
+    "sentences": [
+     [
+      0.1,
+      5.453,
+      "现在摇把转的是蜗杆，蜗杆再带动鼓筒上的齿轮。"
+     ],
+     [
+      5.403,
+      8.694,
+      "松开手，重物也停在原处。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_05": {
+    "duration": 3.744,
+    "hash": "75f21cda6ec141a6",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "为什么重物没法倒过来带动蜗杆？"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Drum": {
+    "duration": 8.208,
+    "hash": "343fa4f5bfe3aa05",
+    "sentences": [
+     [
+      0.1,
+      2.397,
+      "绳子缠在它上面。"
+     ],
+     [
+      2.347,
+      8.153,
+      "鼓筒越细，每圈收进的绳子越少，转起来也越省力。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Handle": {
+    "duration": 6.528,
+    "hash": "0d1cca89d28ebd7a",
+    "sentences": [
+     [
+      0.1,
+      1.981,
+      "你转动的摇把。"
+     ],
+     [
+      1.931,
+      6.458,
+      "它越长，你用的力越小，手绕的圈也越大。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Load": {
+    "duration": 2.928,
+    "hash": "2d3dc5f2f9ec4a2a",
+    "sentences": [
+     [
+      0.1,
+      2.911,
+      "挂在吊钩上的一百千克。"
+     ]
+    ]
+   },
+   "Narr_Lifting_Winch_Part_Rope": {
+    "duration": 4.008,
+    "hash": "0c208c2ecb8655d8",
+    "sentences": [
+     [
+      0.1,
+      4.008,
+      "从吊钩到鼓筒，它承担着整个重物。"
      ]
     ]
    },
