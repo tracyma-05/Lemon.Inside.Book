@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:plumbing="using:Lemon.Inside.Book.Chapters.Plumbing"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Plumbing.PlumbingDiagramPageView"
+                         x:DataType="plumbing:PlumbingDiagramPageViewModel">
+    <!-- A right page of the Plumbing chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="plumbing:TowerSpread">
+                            <plumbing:TowerDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Surface="{Binding Surface}" TapHeight="{Binding TapHeight}" AutomationProperties.Name="{loc:Localize Plumbing_Tower_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="plumbing:TapSpread">
+                            <plumbing:TapDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Turns="{Binding Turns}" Worn="{Binding Worn}" AutomationProperties.Name="{loc:Localize Plumbing_Tap_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="plumbing:SiphonSpread">
+                            <plumbing:SiphonDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Primed="{Binding Primed}" Outlet="{Binding Outlet}" AutomationProperties.Name="{loc:Localize Plumbing_Siphon_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="plumbing:CisternSpread">
+                            <plumbing:CisternDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Set="{Binding Set}" Flushing="{Binding Flushing}" AutomationProperties.Name="{loc:Localize Plumbing_Cistern_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="plumbing:TrapSpread">
+                            <plumbing:TrapDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Suction="{Binding Suction}" Vent="{Binding Vent}" AutomationProperties.Name="{loc:Localize Plumbing_Trap_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="plumbing:PumpSpread">
+                            <plumbing:PumpDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Depth="{Binding Depth}" Down="{Binding Down}" AutomationProperties.Name="{loc:Localize Plumbing_Pump_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

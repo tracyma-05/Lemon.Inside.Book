@@ -14,7 +14,7 @@ public class BookContentsTests
     [Fact]
     public void EveryTopic_IsAChapter_Once()
     {
-        Assert.Equal(8, BookContents.Chapters.Count);
+        Assert.Equal(9, BookContents.Chapters.Count);
         Assert.Equal(BookContents.Chapters.Count, BookContents.Chapters.Select(c => c.Slug).Distinct().Count());
     }
 

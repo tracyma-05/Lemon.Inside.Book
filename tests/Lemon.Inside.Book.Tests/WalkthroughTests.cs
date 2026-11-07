@@ -7,6 +7,7 @@ using Lemon.Inside.Book.Chapters.Bicycle;
 using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Chapters.Car;
 using Lemon.Inside.Book.Chapters.Lifting;
+using Lemon.Inside.Book.Chapters.Plumbing;
 using Lemon.Inside.Book.Chapters.Locks;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.LightShadow;
@@ -31,6 +32,7 @@ public sealed class WalkthroughTests
         .. new CarViewModel(narration).AllSpreads,
         .. new LocksViewModel(narration).AllSpreads,
         .. new LiftingViewModel(narration).AllSpreads,
+        .. new PlumbingViewModel(narration).AllSpreads,
     ];
 
     [Fact]
@@ -108,6 +110,7 @@ public sealed class WalkthroughTests
     [InlineData("Car")]
     [InlineData("Locks")]
     [InlineData("Lifting")]
+    [InlineData("Plumbing")]
     public void EveryRing_SitsOnAPartThePictureDrew(string slug)
     {
         var (window, model) = OpenAt(slug);
@@ -155,6 +158,7 @@ public sealed class WalkthroughTests
     [InlineData("Car")]
     [InlineData("Locks")]
     [InlineData("Lifting")]
+    [InlineData("Plumbing")]
     public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
     {
         var (window, model) = OpenAt(slug);

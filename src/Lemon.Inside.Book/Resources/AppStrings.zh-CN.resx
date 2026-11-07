@@ -4740,4 +4740,577 @@
   <data name="Lifting_Elevator_Alone" xml:space="preserve">
     <value>另一边什么都不挂，电动机要拉住整整 {0}。</value>
   </data>
+  <data name="Chapter_Plumbing" xml:space="preserve">
+    <value>水管里的水</value>
+  </data>
+  <data name="Plumbing_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Plumbing_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Plumbing_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Plumbing_Centimetres" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Plumbing_Bar" xml:space="preserve">
+    <value>{0} 巴</value>
+  </data>
+  <data name="Plumbing_Speed" xml:space="preserve">
+    <value>{0} 米/秒</value>
+  </data>
+  <data name="Plumbing_LitresPerMinute" xml:space="preserve">
+    <value>每分钟 {0} 升</value>
+  </data>
+  <data name="Plumbing_Turns" xml:space="preserve">
+    <value>{0} 圈</value>
+  </data>
+  <data name="Plumbing_AirPushes" xml:space="preserve">
+    <value>空气往下压</value>
+  </data>
+  <data name="Plumbing_Tower_Title" xml:space="preserve">
+    <value>高度就是压强</value>
+  </data>
+  <data name="Plumbing_Tower_P1" xml:space="preserve">
+    <value>水很重，一桶水都不好提。把水堆高，底下的水就要承担上面所有水的重量，所以越深，水推得越用力。每深十米，压强大约增加一巴，差不多相当于整个大气层压在我们身上的力。</value>
+  </data>
+  <data name="Plumbing_Tower_P2" xml:space="preserve">
+    <value>水塔就是利用这一点。它把一大箱水高高地举在城镇上方，再用管道连到每户人家。水龙头的压强只取决于水塔里的水面比它高多少，和中间管道的形状、长短都没有关系。一楼的龙头水压很足；高楼顶层附近的龙头水压就小；比水塔水面还高的龙头，一滴水也出不来。</value>
+  </data>
+  <data name="Plumbing_Tower_Deeper" xml:space="preserve">
+    <value>用管道连通的水，不管在哪儿，都会停在同一个高度：往弯成 U 形的水管里倒水，两头的水面一样高。这就是那条虚线的意义。比城镇水压所能到达的高度还高的大楼，会在地下室装水泵、在楼顶放水箱，由自家的水箱从上面给顶层供水。很多城镇在夜里电价便宜时把水泵上水塔，白天再让它一直往下流。</value>
+  </data>
+  <data name="Plumbing_Tower_Surface" xml:space="preserve">
+    <value>水塔水面的高度</value>
+  </data>
+  <data name="Plumbing_Tower_TapHeight" xml:space="preserve">
+    <value>水龙头的高度</value>
+  </data>
+  <data name="Plumbing_Tower_Readout" xml:space="preserve">
+    <value>水塔的水面比龙头高 {0}：压强 {1}，水流出龙头最快可达 {2}。</value>
+  </data>
+  <data name="Plumbing_Tower_Dry" xml:space="preserve">
+    <value>龙头和水塔水面一样高，或者更高：一滴水也流不出来。</value>
+  </data>
+  <data name="Plumbing_Tower_Picture" xml:space="preserve">
+    <value>水塔和一栋高楼由地下的管道相连，楼里的立管上有一个水龙头</value>
+  </data>
+  <data name="Plumbing_Tower_Level" xml:space="preserve">
+    <value>水塔的水面</value>
+  </data>
+  <data name="Plumbing_Tower_NoWater" xml:space="preserve">
+    <value>没有水</value>
+  </data>
+  <data name="Plumbing_Tower_Rule" xml:space="preserve">
+    <value>每高 10 米，大约 1 巴</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_01" xml:space="preserve">
+    <value>这座水塔把水举在离地三十米高的地方。</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_02" xml:space="preserve">
+    <value>一根管道从水箱往下，穿过街道底下，再沿着大楼往上。不管它怎么弯，都把水塔的压强送到每一个龙头。</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_03" xml:space="preserve">
+    <value>轮到你了：把龙头挪到离地二十四米的地方。</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_04" xml:space="preserve">
+    <value>到了这里，龙头和水塔的水面一样高。没有东西把水推出来，所以一滴也没有。</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_05" xml:space="preserve">
+    <value>为什么水塔要建得那么高，或者建在山上？</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz1" xml:space="preserve">
+    <value>让水在风里保持凉爽</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz2" xml:space="preserve">
+    <value>因为水面的高度决定了下面每个龙头的压强</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz3" xml:space="preserve">
+    <value>让人从远处就能看到水</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Tank" xml:space="preserve">
+    <value>水箱</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Tank" xml:space="preserve">
+    <value>高高举起的大水箱。决定压强的是水面的高度，不是水有多少。</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Pipe" xml:space="preserve">
+    <value>管道</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Pipe" xml:space="preserve">
+    <value>把水箱和龙头连起来。水不流动时，管道的弯曲和长短都不改变压强。</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Tap" xml:space="preserve">
+    <value>水龙头</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Tap" xml:space="preserve">
+    <value>龙头越低，上方的水就越高，水冲出来就越猛。</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Level" xml:space="preserve">
+    <value>水面线</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Level" xml:space="preserve">
+    <value>水塔水面所在的高度。比这条线高的龙头，都得不到水塔的水。</value>
+  </data>
+  <data name="Plumbing_Tap_Title" xml:space="preserve">
+    <value>水龙头里面</value>
+  </data>
+  <data name="Plumbing_Tap_P1" xml:space="preserve">
+    <value>老式水龙头的手柄下面是一根螺杆。转动手柄，这根叫阀杆的杆子就在螺纹孔里往上或往下旋。阀杆末端有一块橡胶垫圈，垫圈下面是一个圆孔，叫阀座，阀座底下就是带着压强等候的水。</value>
+  </data>
+  <data name="Plumbing_Tap_P2" xml:space="preserve">
+    <value>拧紧时，垫圈压在阀座上，水过不去。转动手柄，垫圈就抬起一点，水从它们之间那一圈缝隙里挤过去，绕过垫圈，从出水口流出。螺纹把手的一大圈转动变成很小、很精确的抬升，还能把垫圈牢牢压住，顶住水的推力。</value>
+  </data>
+  <data name="Plumbing_Tap_Deeper" xml:space="preserve">
+    <value>水经过的缝隙是一个圆环：阀座的周长乘以抬起的高度。抬起的高度一旦达到阀座宽度的四分之一，这个圆环就和孔本身一样大了，再往上抬也没有用；所以起作用的只是前一两圈，后面的都不算数。滴水的龙头，通常是垫圈变硬或者破了，再也封不严。很多新式龙头改用两片带孔的陶瓷片，扳手柄转四分之一圈，孔就对上了。</value>
+  </data>
+  <data name="Plumbing_Tap_Turns" xml:space="preserve">
+    <value>手柄转了几圈</value>
+  </data>
+  <data name="Plumbing_Tap_Worn" xml:space="preserve">
+    <value>换成磨损的垫圈</value>
+  </data>
+  <data name="Plumbing_Tap_Shut" xml:space="preserve">
+    <value>垫圈压在阀座上：龙头关着。</value>
+  </data>
+  <data name="Plumbing_Tap_Drips" xml:space="preserve">
+    <value>磨损的垫圈封不住阀座：龙头在滴水。</value>
+  </data>
+  <data name="Plumbing_Tap_Readout" xml:space="preserve">
+    <value>垫圈离开阀座 {0} 毫米，龙头出水 {1}。</value>
+  </data>
+  <data name="Plumbing_Tap_Picture" xml:space="preserve">
+    <value>剖开的螺旋式水龙头：手柄、带螺纹的阀杆、阀座上方的橡胶垫圈，还有一个流量表</value>
+  </data>
+  <data name="Plumbing_Tap_SeatLabel" xml:space="preserve">
+    <value>阀座，12 毫米</value>
+  </data>
+  <data name="Plumbing_Tap_LiftLabel" xml:space="preserve">
+    <value>垫圈抬起 {0} 毫米</value>
+  </data>
+  <data name="Plumbing_Tap_Rule" xml:space="preserve">
+    <value>抬起阀座宽度的四分之一，就全开了</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_01" xml:space="preserve">
+    <value>垫圈下面是阀座，一个圆孔，水从下面往上顶着。</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_02" xml:space="preserve">
+    <value>转动手柄，阀杆就往上旋。转半圈，垫圈抬起还不到一毫米，水已经流出来了。</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_03" xml:space="preserve">
+    <value>轮到你了：把龙头拧开，直到水流得最快。</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_04" xml:space="preserve">
+    <value>现在龙头关上了，可这块垫圈磨坏了。它封不住阀座，龙头就一直滴水。</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_05" xml:space="preserve">
+    <value>龙头已经拧开两圈，再拧第三圈，会怎么样？</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz1" xml:space="preserve">
+    <value>水多一倍</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz2" xml:space="preserve">
+    <value>水多一半</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz3" xml:space="preserve">
+    <value>几乎不多：垫圈早就让开了</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Handle" xml:space="preserve">
+    <value>手柄</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Handle" xml:space="preserve">
+    <value>手转一整圈，垫圈只抬起一毫米半。</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Spindle" xml:space="preserve">
+    <value>阀杆</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Spindle" xml:space="preserve">
+    <value>带螺纹的杆子。螺纹把转动变成抬升，也把垫圈牢牢压住。</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Washer" xml:space="preserve">
+    <value>垫圈</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Washer" xml:space="preserve">
+    <value>一片橡胶圆片。压在阀座上就能封住；磨坏了就会滴水。</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Seat" xml:space="preserve">
+    <value>阀座</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Seat" xml:space="preserve">
+    <value>垫圈要盖住的圆孔，下面是带压的水。</value>
+  </data>
+  <data name="Plumbing_Siphon_Title" xml:space="preserve">
+    <value>往上爬的水</value>
+  </data>
+  <data name="Plumbing_Siphon_P1" xml:space="preserve">
+    <value>虹吸不用水泵，就能把水箱里的水从箱沿上引出去。先把一根软管灌满水，一头放进水箱，另一头越过箱沿往下垂，低于水箱的水面。管里的水从低的那头流出来，后面的水就跟着爬进管子、翻过最高点，只要管口一直放得低，水就一直流。</value>
+  </data>
+  <data name="Plumbing_Siphon_P2" xml:space="preserve">
+    <value>管子里并没有什么东西在“吸”。是空气压着水箱的水面，把水推上短的那一段；在低的那头，长管段里的水更重，占了上风。最高点两边的水，就像滑轮两边挂着的两个重物：长的那一段水往下落，把短的那一段拉上来。把管口举得比水箱水面还高，这个平衡就倒过来，水就停了。</value>
+  </data>
+  <data name="Plumbing_Siphon_Deeper" xml:space="preserve">
+    <value>流得快不快，看的是落差：从水箱水面到管口有多高，和最高点有多高无关。不过最高点也不能太高。超过大约十米，空气就推不动水了：顶上的压强低到连冷水都会沸腾成水蒸气，水柱就断了。灌满空气的管子什么也做不了，所以虹吸开始之前，得先把管子灌满水。</value>
+  </data>
+  <data name="Plumbing_Siphon_Primed" xml:space="preserve">
+    <value>把软管灌满水</value>
+  </data>
+  <data name="Plumbing_Siphon_Outlet" xml:space="preserve">
+    <value>管口的高度</value>
+  </data>
+  <data name="Plumbing_Siphon_Empty" xml:space="preserve">
+    <value>软管里全是空气：水翻不过最高点。</value>
+  </data>
+  <data name="Plumbing_Siphon_Readout" xml:space="preserve">
+    <value>管口比水箱水面低 {0}；水从管口流出，最快可达 {1}。</value>
+  </data>
+  <data name="Plumbing_Siphon_Stops" xml:space="preserve">
+    <value>管口不比水箱水面低：虹吸停了。</value>
+  </data>
+  <data name="Plumbing_Siphon_Picture" xml:space="preserve">
+    <value>桌上的水箱，一根软管从箱里翻过最高点，垂到地上的水桶里</value>
+  </data>
+  <data name="Plumbing_Siphon_StoppedLabel" xml:space="preserve">
+    <value>水流回去了</value>
+  </data>
+  <data name="Plumbing_Siphon_AirLabel" xml:space="preserve">
+    <value>管里是空气</value>
+  </data>
+  <data name="Plumbing_Siphon_Surface" xml:space="preserve">
+    <value>水箱水面</value>
+  </data>
+  <data name="Plumbing_Siphon_Below" xml:space="preserve">
+    <value>低 {0} 米</value>
+  </data>
+  <data name="Plumbing_Siphon_Above" xml:space="preserve">
+    <value>高 {0} 米</value>
+  </data>
+  <data name="Plumbing_Siphon_Rule" xml:space="preserve">
+    <value>管口比水箱水面低，就会一直流</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_01" xml:space="preserve">
+    <value>这个水箱放在桌上。我们想把水弄进水桶，又不把水箱倒过来。</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_02" xml:space="preserve">
+    <value>一根软管从水箱翻过箱沿，垂到水桶里。现在管里全是空气，管里的水只停在和水箱一样的高度。</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_03" xml:space="preserve">
+    <value>轮到你了：把软管灌满水。</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_04" xml:space="preserve">
+    <value>现在把管口举得比水箱水面还高。长的那段不再更重了，水就停了。</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_05" xml:space="preserve">
+    <value>是什么把水推上短的那一段、翻过最高点的？</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz1" xml:space="preserve">
+    <value>软管把它吸上去</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz2" xml:space="preserve">
+    <value>压在水箱水面上的空气</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz3" xml:space="preserve">
+    <value>水本来就有的速度</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Tank" xml:space="preserve">
+    <value>水箱</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Tank" xml:space="preserve">
+    <value>空气处处压在它的水面上，把水推进软管。</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Hose" xml:space="preserve">
+    <value>软管</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Hose" xml:space="preserve">
+    <value>管里必须灌满水。里面一有空气，水链就断了，虹吸也就停了。</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Crest" xml:space="preserve">
+    <value>最高点</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Crest" xml:space="preserve">
+    <value>软管最高的地方。它可以比水箱高，但不能超过大约十米。</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Outlet" xml:space="preserve">
+    <value>管口</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Outlet" xml:space="preserve">
+    <value>它比水箱水面低得越多，水流出来就越快。</value>
+  </data>
+  <data name="Plumbing_Cistern_Title" xml:space="preserve">
+    <value>会自己关水的浮球</value>
+  </data>
+  <data name="Plumbing_Cistern_P1" xml:space="preserve">
+    <value>马桶后面有一个水箱，它会自己灌满水，然后停下，用不着谁看着。水从顶上的一个阀门进来。阀门上连着一根杆，杆的另一头是一个空心浮球，漂在水面上。</value>
+  </data>
+  <data name="Plumbing_Cistern_P2" xml:space="preserve">
+    <value>水位低的时候，浮球垂下来，杆子让阀门开着。水箱越灌越满，浮球随着上升，把杆子抬起来，杆子一点点把阀门压紧。到了设定的水位，阀门关上，水就停了。一冲水，水从箱底的一块活门哗地流走；浮球落下，阀门打开，一切又从头开始。</value>
+  </data>
+  <data name="Plumbing_Cistern_Deeper" xml:space="preserve">
+    <value>这就是反馈：灌水的结果，也就是水位，反过来控制着灌水的阀门。水越接近设定的位置，阀门放进来的水就越少，所以水位是慢慢到达的，不会冲过头。溢流管是为了防止阀门坏了或者设得太高：那时水会从管子流走，而不是漫到地上。用测量结果来操纵改变它的东西，房间的恒温器、汽车的定速巡航用的都是同一个道理。</value>
+  </data>
+  <data name="Plumbing_Cistern_Set" xml:space="preserve">
+    <value>浮球在什么水位关阀</value>
+  </data>
+  <data name="Plumbing_Cistern_Flush" xml:space="preserve">
+    <value>按住冲水手柄</value>
+  </data>
+  <data name="Plumbing_Cistern_Spills" xml:space="preserve">
+    <value>浮球设得比溢流管还高：阀门永远关不上，水一直从溢流管流走。</value>
+  </data>
+  <data name="Plumbing_Cistern_Readout" xml:space="preserve">
+    <value>水深 {0} 时，浮球把阀门关上，比溢流管低 {1}。</value>
+  </data>
+  <data name="Plumbing_Cistern_Flushing" xml:space="preserve">
+    <value>冲水放出去的水，比阀门放进来的快得多。</value>
+  </data>
+  <data name="Plumbing_Cistern_Picture" xml:space="preserve">
+    <value>剖开的马桶水箱：进水阀和杆子上的浮球、冲水活门和手柄，还有溢流管</value>
+  </data>
+  <data name="Plumbing_Cistern_OverflowLabel" xml:space="preserve">
+    <value>溢流口</value>
+  </data>
+  <data name="Plumbing_Cistern_SetLabel" xml:space="preserve">
+    <value>{0} 厘米处关阀</value>
+  </data>
+  <data name="Plumbing_Cistern_ValveLabel" xml:space="preserve">
+    <value>阀门开 {0}%</value>
+  </data>
+  <data name="Plumbing_Cistern_Rule" xml:space="preserve">
+    <value>水位自己操纵着灌水的阀门</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_01" xml:space="preserve">
+    <value>这个浮球漂在水面上。它是空心的，所以能浮起来。</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_02" xml:space="preserve">
+    <value>它的杆子操纵着进水阀。水到了设定的位置，浮球升起，阀门就关上了。</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_03" xml:space="preserve">
+    <value>轮到你了：按住冲水手柄，看着浮球。</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_04" xml:space="preserve">
+    <value>现在浮球设得太高，比溢流管还高。阀门永远关不上，水一直从管子流走。</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_05" xml:space="preserve">
+    <value>水箱满了以后，是什么把水关掉的？</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz1" xml:space="preserve">
+    <value>被水托起的浮球把阀门压上</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz2" xml:space="preserve">
+    <value>阀门里的定时器</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz3" xml:space="preserve">
+    <value>水的重量把活门压紧</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Float" xml:space="preserve">
+    <value>浮球</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Float" xml:space="preserve">
+    <value>漂在水面上的空心球，把水箱有多满告诉阀门。</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Valve" xml:space="preserve">
+    <value>进水阀</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Valve" xml:space="preserve">
+    <value>水从这里进来。水每升高一厘米，浮球的杆子就把它再压紧一点。</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Overflow" xml:space="preserve">
+    <value>溢流管</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Overflow" xml:space="preserve">
+    <value>顶上开口的管子。阀门要是关不上，水就从这里流走，不会漫到地上。</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Flush" xml:space="preserve">
+    <value>冲水装置</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Flush" xml:space="preserve">
+    <value>手柄提起箱底的活门，水哗地流走，比进来的快得多。</value>
+  </data>
+  <data name="Plumbing_Trap_Title" xml:space="preserve">
+    <value>水槽下的弯管</value>
+  </data>
+  <data name="Plumbing_Trap_P1" xml:space="preserve">
+    <value>看看水槽底下，管子并不是直直往下走的：它先往下弯成一个 U 形，再往上拐，才接到下水道。U 形底部总是留着一些水。这一截水像个塞子，挡在房间和充满臭气的下水道之间，不让臭气从下水口冒上来。</value>
+  </data>
+  <data name="Plumbing_Trap_P2" xml:space="preserve">
+    <value>水一直站到弯管流进下水道的那道边沿。比弯管内壁最低点高出的那一截水就是水封，有几厘米深。每次用水槽，新水就把旧水推过边沿，水封也就换了新的。只要它还有一点深度，下水道里的空气就一个气泡也过不来。</value>
+  </data>
+  <data name="Plumbing_Trap_Deeper" xml:space="preserve">
+    <value>当同一条下水道下游的马桶冲水时，那一大股水会拖着后面的空气一起走，让管里的压强变低。这个吸力把水封靠水槽那一边的水往下拉；靠下水道那一边的水却没法跟着升高，因为一升高就溢走了。吸力一旦达到水封的深度，存水弯就被吸空，你会听到咕噜一声。所以下水道都有一根通到屋顶的通气管：让外面的空气进入下水道，吸力就建立不起来。</value>
+  </data>
+  <data name="Plumbing_Trap_Suction" xml:space="preserve">
+    <value>下水道里的吸力（厘米水柱）</value>
+  </data>
+  <data name="Plumbing_Trap_Vent" xml:space="preserve">
+    <value>打开通气管</value>
+  </data>
+  <data name="Plumbing_Trap_Broken" xml:space="preserve">
+    <value>水封被破坏了：下水道的空气冒进房间。</value>
+  </data>
+  <data name="Plumbing_Trap_Readout" xml:space="preserve">
+    <value>水槽那一边的水降了 {0}；还有 {1} 的水封挡着下水道的空气。</value>
+  </data>
+  <data name="Plumbing_Trap_Picture" xml:space="preserve">
+    <value>剖开的水槽 U 形弯管，在下水口和下水道之间存着水，下水道上还竖着一根通气管</value>
+  </data>
+  <data name="Plumbing_Trap_SuctionLabel" xml:space="preserve">
+    <value>吸力 {0} 厘米</value>
+  </data>
+  <data name="Plumbing_Trap_Sewer" xml:space="preserve">
+    <value>通往污水管</value>
+  </data>
+  <data name="Plumbing_Trap_VentOpen" xml:space="preserve">
+    <value>通气管，通向屋外</value>
+  </data>
+  <data name="Plumbing_Trap_VentShut" xml:space="preserve">
+    <value>通气管被堵住</value>
+  </data>
+  <data name="Plumbing_Trap_BrokenLabel" xml:space="preserve">
+    <value>水封破了！</value>
+  </data>
+  <data name="Plumbing_Trap_SealLabel" xml:space="preserve">
+    <value>水封 {0} 厘米</value>
+  </data>
+  <data name="Plumbing_Trap_Rule" xml:space="preserve">
+    <value>只要还剩一点水封，下水道的空气就过不来</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_01" xml:space="preserve">
+    <value>弯管里的这截水就是水封：房间和下水道之间隔着五厘米。</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_02" xml:space="preserve">
+    <value>下游的马桶一冲水，就把空气也一起拖走了。水封靠水槽那一边的水被往下拉。</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_03" xml:space="preserve">
+    <value>轮到你了：把吸力加大，直到水封被破坏。</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_04" xml:space="preserve">
+    <value>打开通气管。外面的空气改从这里进入下水道，吸力几乎没了，水封也就保住了。</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_05" xml:space="preserve">
+    <value>为什么水槽下面的管子要先往下弯、再往上拐？</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz1" xml:space="preserve">
+    <value>让水流得慢一点</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz2" xml:space="preserve">
+    <value>接住掉进去的戒指</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz3" xml:space="preserve">
+    <value>存住一截水，挡住下水道的空气</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Seal" xml:space="preserve">
+    <value>水封</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Seal" xml:space="preserve">
+    <value>弯管里存着的水。空气要想过去，得先把它一直压到弯管的最低处。</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Sink" xml:space="preserve">
+    <value>水槽</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Sink" xml:space="preserve">
+    <value>每次放水，新的水都把水封重新灌满。</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Drain" xml:space="preserve">
+    <value>下水管</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Drain" xml:space="preserve">
+    <value>它通向污水管，里面全是那里的空气。水在管里冲过去时，会拖着空气，形成吸力。</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Vent" xml:space="preserve">
+    <value>通气管</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Vent" xml:space="preserve">
+    <value>一直通到屋顶的管子。它让外面的空气进入下水道，吸力就吸不空存水弯。</value>
+  </data>
+  <data name="Plumbing_Pump_Title" xml:space="preserve">
+    <value>水泵为什么吸不上来</value>
+  </data>
+  <data name="Plumbing_Pump_P1" xml:space="preserve">
+    <value>老式手压泵装在井口上。压动手柄，活塞就在缸里往上走，井里的水跟着活塞沿管子升上来。看起来像是水泵把水吸上来的。其实不是：活塞只是把管子里水面上方的空气抽走了。</value>
+  </data>
+  <data name="Plumbing_Pump_P2" xml:space="preserve">
+    <value>真正把水抬上来的，是压在管子外面井水水面上的空气。管子里往下压的空气少了，外面的空气就把水推进管子。两个球阀保证每一次抬上来的水不会滑回去。但空气的推力是有限的：它只能托住大约 10.3 米高的水柱。井水比这还深，不管你压得多用力，水都会停在管子里。</value>
+  </data>
+  <data name="Plumbing_Pump_Deeper" xml:space="preserve">
+    <value>实际的水泵还到不了这个高度，大约只有七八米，因为密封多少会漏一点，而且水柱顶端压强很低，水会开始沸腾冒泡。所以深井都把泵放到水里：用一根长长的杆子从手柄往下带动，或者干脆把电动泵沉在水下。泵在下面，是从下往上推水，推就没有这个限制。同样的十米也限制着虹吸。四百年前，它曾难住了造水泵的人；为了解释它，人们发现了空气是有重量的。</value>
+  </data>
+  <data name="Plumbing_Pump_Depth" xml:space="preserve">
+    <value>井水有多深</value>
+  </data>
+  <data name="Plumbing_Pump_Down" xml:space="preserve">
+    <value>把泵放到井水里</value>
+  </data>
+  <data name="Plumbing_Pump_Pushes" xml:space="preserve">
+    <value>泵在下面往上推，水从 {0} 深的地方上来，流出泵口。</value>
+  </data>
+  <data name="Plumbing_Pump_Readout" xml:space="preserve">
+    <value>井水在 {0} 深处：空气把它一直推上来，从泵口流出。</value>
+  </data>
+  <data name="Plumbing_Pump_Fails" xml:space="preserve">
+    <value>水只沿管子升了 {0}：空气推不了更高，压得再用力也没用。</value>
+  </data>
+  <data name="Plumbing_Pump_Picture" xml:space="preserve">
+    <value>装着手压泵的井：缸和活塞、两个球阀、通到水里的管子，还有压在井水水面上的空气箭头</value>
+  </data>
+  <data name="Plumbing_Pump_LimitLabel" xml:space="preserve">
+    <value>比井水水面高 10.3 米</value>
+  </data>
+  <data name="Plumbing_Pump_EmptyLabel" xml:space="preserve">
+    <value>几乎是空的：再没有东西往上推</value>
+  </data>
+  <data name="Plumbing_Pump_DownLabel" xml:space="preserve">
+    <value>泵在水下</value>
+  </data>
+  <data name="Plumbing_Pump_Rule" xml:space="preserve">
+    <value>是外面的空气把水推上管子</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_01" xml:space="preserve">
+    <value>压动手柄，活塞就在缸里往上走，把管子里水面上方的空气抽走。</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_02" xml:space="preserve">
+    <value>外面的空气一直压着井水的水面，把水推上管子。</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_03" xml:space="preserve">
+    <value>轮到你了：把井加深，超过十一米。</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_04" xml:space="preserve">
+    <value>所以深井都把泵放到水里。它从下面往上推，推就没有这个限制。</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_05" xml:space="preserve">
+    <value>为什么装在上面的泵，抽不上十米以下的水？</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz1" xml:space="preserve">
+    <value>外面的空气只能把水推这么高</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz2" xml:space="preserve">
+    <value>管子会被撑破</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz3" xml:space="preserve">
+    <value>活塞会重得提不动</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Piston" xml:space="preserve">
+    <value>活塞</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Piston" xml:space="preserve">
+    <value>它沿着缸往上走，在水面上方留出一个几乎没有空气的空间。</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Valves" xml:space="preserve">
+    <value>单向阀</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Valves" xml:space="preserve">
+    <value>压在阀座上的两个小球，一个在缸底，一个在活塞里。它们让水往上走，却不让它往回流。</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Pipe" xml:space="preserve">
+    <value>水管</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Pipe" xml:space="preserve">
+    <value>它一直伸到井水里。管里的水，最多只能比井水高出大约十米。</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Water" xml:space="preserve">
+    <value>井水</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Water" xml:space="preserve">
+    <value>空气压在它的水面上。把水推上管子的，是这个压力，不是水泵。</value>
+  </data>
 </root>

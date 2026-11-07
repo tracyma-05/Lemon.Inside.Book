@@ -4,6 +4,7 @@ using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Chapters.Car;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.Lifting;
+using Lemon.Inside.Book.Chapters.Plumbing;
 using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Locks;
 using Lemon.Inside.Book.Chapters.Watch;
@@ -18,7 +19,7 @@ namespace Lemon.Inside.Book.Contents;
 public static class ChapterRegistry
 {
     /// <summary>Slugs of the chapters that are written (not placeholders).</summary>
-    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting" };
+    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting", "Plumbing" };
 
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
         Chapter chapter, int number, int textPage, IBookNavigator navigator, BookServices services)
@@ -28,6 +29,7 @@ public static class ChapterRegistry
             "Light-Shadow" => LightShadowChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Gears" => GearsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Lifting" => LiftingChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
+            "Plumbing" => PlumbingChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Locks" => LocksChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Car" => CarChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Boats" => BoatsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),

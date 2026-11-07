@@ -5301,6 +5301,740 @@
      ]
     ]
    },
+   "Narr_Plumbing_Cistern_01": {
+    "duration": 4.512,
+    "hash": "c99ff867ecef92d9",
+    "sentences": [
+     [
+      0.05,
+      2.097,
+      "This float rides on the water."
+     ],
+     [
+      2.097,
+      4.458,
+      "It is hollow, so it floats."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_02": {
+    "duration": 7.224,
+    "hash": "d1e0fdc83d997562",
+    "sentences": [
+     [
+      0.05,
+      2.431,
+      "Its arm works the inlet valve."
+     ],
+     [
+      2.431,
+      7.167,
+      "With the water at its mark, the float is up and the valve is shut."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_03": {
+    "duration": 4.56,
+    "hash": "ef84434fc27dde69",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "Your turn: hold the flush lever down, and watch the float."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_04": {
+    "duration": 9.024,
+    "hash": "2e9431faf512c510",
+    "sentences": [
+     [
+      0.05,
+      4.264,
+      "Now the float is set too high, above the overflow."
+     ],
+     [
+      4.264,
+      8.958,
+      "The valve never shuts, and the water runs away down the pipe."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_05": {
+    "duration": 3.0,
+    "hash": "56d66f5d31ba4e37",
+    "sentences": [
+     [
+      0.05,
+      2.943,
+      "What turns the water off when the tank is full?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Float": {
+    "duration": 5.712,
+    "hash": "cca833d3e4d8069b",
+    "sentences": [
+     [
+      0.05,
+      5.653,
+      "A hollow ball that rides on the water and tells the valve how full the tank is."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Flush": {
+    "duration": 6.528,
+    "hash": "4e2110b62e44ae22",
+    "sentences": [
+     [
+      0.05,
+      6.458,
+      "The lever lifts a flap in the floor of the tank, and the water rushes out much faster than it came in."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Overflow": {
+    "duration": 7.32,
+    "hash": "d2b18d06fc3a2d39",
+    "sentences": [
+     [
+      0.05,
+      2.25,
+      "A pipe open at its top."
+     ],
+     [
+      2.25,
+      7.264,
+      "If the valve does not shut, the water goes down it instead of over the floor."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Valve": {
+    "duration": 7.416,
+    "hash": "d719a5156b89ad1f",
+    "sentences": [
+     [
+      0.05,
+      1.806,
+      "Where the water comes in."
+     ],
+     [
+      1.806,
+      7.361,
+      "The float's arm pushes it shut a little more for every centimetre the water rises."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_01": {
+    "duration": 6.144,
+    "hash": "a4730d1100455f3f",
+    "sentences": [
+     [
+      0.05,
+      6.083,
+      "Pumping draws this piston up its cylinder, taking the air away from above the water in the pipe."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_02": {
+    "duration": 5.304,
+    "hash": "9c8b6a6872819b4d",
+    "sentences": [
+     [
+      0.05,
+      5.236,
+      "The air outside keeps pressing on the well's water, and pushes it up the pipe."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_03": {
+    "duration": 4.896,
+    "hash": "43e4cc8080843d38",
+    "sentences": [
+     [
+      0.05,
+      4.86,
+      "Your turn: make the well deeper, more than eleven metres."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_04": {
+    "duration": 7.32,
+    "hash": "80c250fc450a90c1",
+    "sentences": [
+     [
+      0.05,
+      3.139,
+      "So deep wells put the pump down at the water."
+     ],
+     [
+      3.139,
+      7.25,
+      "It pushes from below, and pushing has no such limit."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_05": {
+    "duration": 4.704,
+    "hash": "723c7af8f93895db",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "Why can a pump at the top not lift water more than about ten metres?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Pipe": {
+    "duration": 7.176,
+    "hash": "50502e5cc214a56a",
+    "sentences": [
+     [
+      0.05,
+      2.653,
+      "It reaches down into the well's water."
+     ],
+     [
+      2.653,
+      7.125,
+      "The water in it can stand no more than about ten metres above the well."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Piston": {
+    "duration": 5.856,
+    "hash": "19079428da49e747",
+    "sentences": [
+     [
+      0.05,
+      5.806,
+      "Moving up its cylinder, it leaves room with almost no air in it above the water."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Valves": {
+    "duration": 7.608,
+    "hash": "9eea40056f150106",
+    "sentences": [
+     [
+      0.05,
+      4.528,
+      "Two balls on seats, one under the cylinder and one in the piston."
+     ],
+     [
+      4.528,
+      7.542,
+      "They let water up but never back down."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Water": {
+    "duration": 7.152,
+    "hash": "9f59462e7dc82fbc",
+    "sentences": [
+     [
+      0.05,
+      2.569,
+      "The air presses on its surface."
+     ],
+     [
+      2.569,
+      7.097,
+      "That push, not the pump, is what drives the water up the pipe."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_01": {
+    "duration": 5.664,
+    "hash": "52520d4acdc8fba3",
+    "sentences": [
+     [
+      0.05,
+      2.233,
+      "This tank stands on a table."
+     ],
+     [
+      2.233,
+      5.611,
+      "We want its water in the bucket, without tipping it."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_02": {
+    "duration": 9.72,
+    "hash": "820625d72a4ac20c",
+    "sentences": [
+     [
+      0.05,
+      4.319,
+      "A hose runs from the tank over the edge and down to the bucket."
+     ],
+     [
+      4.319,
+      9.667,
+      "Right now it is full of air, and the water inside stops at the tank's own level."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_03": {
+    "duration": 3.024,
+    "hash": "9bbb7bb99c4aa622",
+    "sentences": [
+     [
+      0.05,
+      2.958,
+      "Your turn: fill the hose with water."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_04": {
+    "duration": 7.536,
+    "hash": "39f03a346a83a1cf",
+    "sentences": [
+     [
+      0.05,
+      3.111,
+      "Now lift the end above the tank's water."
+     ],
+     [
+      3.111,
+      7.472,
+      "The long leg is no longer the heavier one, and the water stops."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_05": {
+    "duration": 4.344,
+    "hash": "ac3cf59c8b979095",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "What pushes the water up the short leg and over the crest?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Crest": {
+    "duration": 6.336,
+    "hash": "7ee609893f56224e",
+    "sentences": [
+     [
+      0.05,
+      2.181,
+      "The highest point of the hose."
+     ],
+     [
+      2.181,
+      6.278,
+      "It can be above the tank, but not more than about ten metres."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Hose": {
+    "duration": 6.024,
+    "hash": "3011a8816effce11",
+    "sentences": [
+     [
+      0.05,
+      2.125,
+      "It must be full of water."
+     ],
+     [
+      2.125,
+      5.972,
+      "Air in it breaks the chain of water, and the siphon stops."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Outlet": {
+    "duration": 5.04,
+    "hash": "ece525c61632416e",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "The lower it is below the tank's water, the faster the water comes out."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Tank": {
+    "duration": 5.28,
+    "hash": "a6e3d5560f30eead",
+    "sentences": [
+     [
+      0.05,
+      5.208,
+      "The air presses on its water everywhere, and pushes it into the hose."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_01": {
+    "duration": 5.472,
+    "hash": "98944ea212f4a19b",
+    "sentences": [
+     [
+      0.05,
+      5.417,
+      "Under the washer is the seat, a round hole with water pressing up from below."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_02": {
+    "duration": 8.544,
+    "hash": "7267e03f60783dfe",
+    "sentences": [
+     [
+      0.05,
+      2.694,
+      "Turning the handle screws the spindle up."
+     ],
+     [
+      2.694,
+      8.472,
+      "Half a turn lifts the washer less than a millimetre, and water already runs."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_03": {
+    "duration": 5.136,
+    "hash": "13894c8f27a3f933",
+    "sentences": [
+     [
+      0.05,
+      5.069,
+      "Your turn: open the tap until the water runs as fast as it can."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_04": {
+    "duration": 7.224,
+    "hash": "c77d2905b6bc7f63",
+    "sentences": [
+     [
+      0.05,
+      3.75,
+      "Now the tap is shut, but this washer is worn."
+     ],
+     [
+      3.75,
+      7.153,
+      "It cannot seal the seat, and the tap drips."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_05": {
+    "duration": 4.488,
+    "hash": "7096fc26f757d5a8",
+    "sentences": [
+     [
+      0.05,
+      4.417,
+      "With the tap open two turns, what does a third turn give you?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Handle": {
+    "duration": 5.16,
+    "hash": "cd73f928f8b8fe88",
+    "sentences": [
+     [
+      0.05,
+      5.111,
+      "A whole turn of your hand lifts the washer only a millimetre and a half."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Seat": {
+    "duration": 4.848,
+    "hash": "dde8ebfe612316b6",
+    "sentences": [
+     [
+      0.05,
+      4.778,
+      "The round hole the washer closes, with water under pressure below it."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Spindle": {
+    "duration": 6.936,
+    "hash": "f056216056b39645",
+    "sentences": [
+     [
+      0.05,
+      1.583,
+      "A threaded rod."
+     ],
+     [
+      1.583,
+      6.875,
+      "Its thread turns turning into lifting, and holds the washer firmly down."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Washer": {
+    "duration": 6.456,
+    "hash": "1c12eb4ce77bd692",
+    "sentences": [
+     [
+      0.05,
+      1.472,
+      "A disc of rubber."
+     ],
+     [
+      1.472,
+      6.403,
+      "Pressed onto the seat it seals it; once it is worn, it drips."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_01": {
+    "duration": 4.488,
+    "hash": "1e938f88a3b75883",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "This tower holds its water thirty metres above the ground."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_02": {
+    "duration": 9.096,
+    "hash": "f62039836c020d37",
+    "sentences": [
+     [
+      0.05,
+      4.208,
+      "A pipe runs down from the tank, under the street and up through the building."
+     ],
+     [
+      4.208,
+      9.053,
+      "Whatever its shape, it carries the tower's pressure to every tap."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_03": {
+    "duration": 4.536,
+    "hash": "c6893b70bd5a8ada",
+    "sentences": [
+     [
+      0.05,
+      4.486,
+      "Your turn: move the tap up to twenty-four metres above the ground."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_04": {
+    "duration": 7.536,
+    "hash": "dbb0964928015851",
+    "sentences": [
+     [
+      0.05,
+      3.472,
+      "Up here the tap is level with the tower's water."
+     ],
+     [
+      3.472,
+      7.472,
+      "Nothing pushes the water out, so nothing comes."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_05": {
+    "duration": 4.44,
+    "hash": "5ed3bb5a32c0e5ad",
+    "sentences": [
+     [
+      0.05,
+      4.389,
+      "Why are water towers built so tall, or on hills?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Level": {
+    "duration": 6.864,
+    "hash": "6906783ca4aa16f4",
+    "sentences": [
+     [
+      0.05,
+      2.667,
+      "The height the tower's water stands at."
+     ],
+     [
+      2.667,
+      6.792,
+      "No tap above this line can get water from the tower."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Pipe": {
+    "duration": 7.32,
+    "hash": "7964dba2681d0069",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "It joins the tank to the taps."
+     ],
+     [
+      2.389,
+      7.25,
+      "Its bends and its length do not change the pressure of still water."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Tank": {
+    "duration": 6.888,
+    "hash": "07713c7907712f21",
+    "sentences": [
+     [
+      0.05,
+      2.125,
+      "A big tank held up high."
+     ],
+     [
+      2.125,
+      6.819,
+      "The height of its water, not how much there is, sets the pressure."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Tap": {
+    "duration": 5.952,
+    "hash": "bc43db05cae7305c",
+    "sentences": [
+     [
+      0.05,
+      5.889,
+      "The lower the tap, the more water stands above it, and the harder the water comes out."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_01": {
+    "duration": 6.216,
+    "hash": "33b107db4ca68f1b",
+    "sentences": [
+     [
+      0.05,
+      6.153,
+      "This water in the bend is the seal: five centimetres of it between the room and the drain."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_02": {
+    "duration": 7.68,
+    "hash": "1d07ef53ba0b69f0",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "A toilet flushing further down the drain pulls the air along with it."
+     ],
+     [
+      4.431,
+      7.611,
+      "The sink side of the seal is pulled down."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_03": {
+    "duration": 4.32,
+    "hash": "0508d7dc3dcad228",
+    "sentences": [
+     [
+      0.05,
+      4.25,
+      "Your turn: make the suction strong enough to break the seal."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_04": {
+    "duration": 8.496,
+    "hash": "e274e29430d9a7ac",
+    "sentences": [
+     [
+      0.05,
+      1.319,
+      "Open the vent."
+     ],
+     [
+      1.319,
+      8.431,
+      "Outside air flows into the drain instead, the suction almost vanishes, and the seal holds."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_05": {
+    "duration": 3.744,
+    "hash": "58f7f3ffd5025b83",
+    "sentences": [
+     [
+      0.05,
+      3.681,
+      "Why does the pipe under a sink bend down and up again?"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Drain": {
+    "duration": 7.344,
+    "hash": "117b9f84ee5c3041",
+    "sentences": [
+     [
+      0.05,
+      3.306,
+      "It leads to the sewer and is full of its air."
+     ],
+     [
+      3.306,
+      7.303,
+      "Water rushing along it can pull that air and make suction."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Seal": {
+    "duration": 6.624,
+    "hash": "e41c9ed33aae1661",
+    "sentences": [
+     [
+      0.05,
+      2.153,
+      "The water standing in the bend."
+     ],
+     [
+      2.153,
+      6.556,
+      "Air can only get past by pushing it all the way down to the bend's dip."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Sink": {
+    "duration": 4.248,
+    "hash": "7bb411c427d2200a",
+    "sentences": [
+     [
+      0.05,
+      4.181,
+      "Every time it empties, fresh water refills the seal."
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Vent": {
+    "duration": 6.672,
+    "hash": "4e8734640b2df458",
+    "sentences": [
+     [
+      0.05,
+      1.833,
+      "A pipe up through the roof."
+     ],
+     [
+      1.833,
+      6.611,
+      "It lets outside air into the drain so the suction cannot empty the trap."
+     ]
+    ]
+   },
    "Narr_Watch_Balance_01": {
     "duration": 6.456,
     "hash": "da5f7a0c7f651281",
@@ -11185,6 +11919,740 @@
       0.1,
       5.161,
       "把每摞弹子往下压，让弹子总是贴着钥匙走。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_01": {
+    "duration": 6.144,
+    "hash": "97b3f04bfccc847f",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "这个浮球漂在水面上。"
+     ],
+     [
+      2.958,
+      6.083,
+      "它是空心的，所以能浮起来。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_02": {
+    "duration": 8.232,
+    "hash": "1d844569f9b5a706",
+    "sentences": [
+     [
+      0.1,
+      3.189,
+      "它的杆子操纵着进水阀。"
+     ],
+     [
+      3.139,
+      8.181,
+      "水到了设定的位置，浮球升起，阀门就关上了。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_03": {
+    "duration": 4.536,
+    "hash": "c1af75ddd874563a",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "轮到你了：按住冲水手柄，看着浮球。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_04": {
+    "duration": 8.592,
+    "hash": "3912c0b70791a08d",
+    "sentences": [
+     [
+      0.1,
+      4.3,
+      "现在浮球设得太高，比溢流管还高。"
+     ],
+     [
+      4.25,
+      8.528,
+      "阀门永远关不上，水一直从管子流走。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_05": {
+    "duration": 4.248,
+    "hash": "3355011ba813598e",
+    "sentences": [
+     [
+      0.1,
+      4.244,
+      "水箱满了以后，是什么把水关掉的？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Float": {
+    "duration": 5.448,
+    "hash": "36f18606958b4c5f",
+    "sentences": [
+     [
+      0.1,
+      5.439,
+      "漂在水面上的空心球，把水箱有多满告诉阀门。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Flush": {
+    "duration": 5.832,
+    "hash": "e5b0fd43bb5f6fdb",
+    "sentences": [
+     [
+      0.1,
+      5.828,
+      "手柄提起箱底的活门，水哗地流走，比进来的快得多。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Overflow": {
+    "duration": 7.632,
+    "hash": "edb567e5e982149c",
+    "sentences": [
+     [
+      0.1,
+      2.3,
+      "顶上开口的管子。"
+     ],
+     [
+      2.25,
+      7.569,
+      "阀门要是关不上，水就从这里流走，不会漫到地上。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Cistern_Part_Valve": {
+    "duration": 7.536,
+    "hash": "ee6b44618417fec5",
+    "sentences": [
+     [
+      0.1,
+      2.106,
+      "水从这里进来。"
+     ],
+     [
+      2.056,
+      7.472,
+      "水每升高一厘米，浮球的杆子就把它再压紧一点。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_01": {
+    "duration": 7.272,
+    "hash": "764402f4d3c08186",
+    "sentences": [
+     [
+      0.1,
+      7.258,
+      "压动手柄，活塞就在缸里往上走，把管子里水面上方的空气抽走。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_02": {
+    "duration": 5.568,
+    "hash": "960cb09320851eeb",
+    "sentences": [
+     [
+      0.1,
+      5.55,
+      "外面的空气一直压着井水的水面，把水推上管子。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_03": {
+    "duration": 4.2,
+    "hash": "a1d876a249a0b2cb",
+    "sentences": [
+     [
+      0.1,
+      4.189,
+      "轮到你了：把井加深，超过十一米。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_04": {
+    "duration": 7.512,
+    "hash": "85f4b8e61760c0c2",
+    "sentences": [
+     [
+      0.1,
+      3.481,
+      "所以深井都把泵放到水里。"
+     ],
+     [
+      3.431,
+      7.444,
+      "它从下面往上推，推就没有这个限制。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_05": {
+    "duration": 4.608,
+    "hash": "af8cee28ecc50b37",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "为什么装在上面的泵，抽不上十米以下的水？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Pipe": {
+    "duration": 7.32,
+    "hash": "d68a0bb22ac0405e",
+    "sentences": [
+     [
+      0.1,
+      2.522,
+      "它一直伸到井水里。"
+     ],
+     [
+      2.472,
+      7.264,
+      "管里的水，最多只能比井水高出大约十米。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Piston": {
+    "duration": 6.456,
+    "hash": "fcb018d267784103",
+    "sentences": [
+     [
+      0.1,
+      6.453,
+      "它沿着缸往上走，在水面上方留出一个几乎没有空气的空间。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Valves": {
+    "duration": 9.528,
+    "hash": "84671d1f401966cf",
+    "sentences": [
+     [
+      0.1,
+      5.647,
+      "压在阀座上的两个小球，一个在缸底，一个在活塞里。"
+     ],
+     [
+      5.597,
+      9.458,
+      "它们让水往上走，却不让它往回流。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Pump_Part_Water": {
+    "duration": 7.416,
+    "hash": "74861d639a8854a0",
+    "sentences": [
+     [
+      0.1,
+      2.786,
+      "空气压在它的水面上。"
+     ],
+     [
+      2.736,
+      7.361,
+      "把水推上管子的，是这个压力，不是水泵。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_01": {
+    "duration": 6.888,
+    "hash": "2186f40305e37bf8",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "这个水箱放在桌上。"
+     ],
+     [
+      2.514,
+      6.833,
+      "我们想把水弄进水桶，又不把水箱倒过来。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_02": {
+    "duration": 10.992,
+    "hash": "f2818b6622f61f92",
+    "sentences": [
+     [
+      0.1,
+      4.911,
+      "一根软管从水箱翻过箱沿，垂到水桶里。"
+     ],
+     [
+      4.861,
+      10.931,
+      "现在管里全是空气，管里的水只停在和水箱一样的高度。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_03": {
+    "duration": 3.288,
+    "hash": "7710fa2d734aacb4",
+    "sentences": [
+     [
+      0.1,
+      3.286,
+      "轮到你了：把软管灌满水。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_04": {
+    "duration": 7.992,
+    "hash": "11dfce0ae50b5ee5",
+    "sentences": [
+     [
+      0.1,
+      4.286,
+      "现在把管口举得比水箱水面还高。"
+     ],
+     [
+      4.236,
+      7.931,
+      "长的那段不再更重了，水就停了。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_05": {
+    "duration": 5.016,
+    "hash": "8bc55b3e15b1ffe2",
+    "sentences": [
+     [
+      0.1,
+      5.008,
+      "是什么把水推上短的那一段、翻过最高点的？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Crest": {
+    "duration": 6.648,
+    "hash": "d2f24de8fa828873",
+    "sentences": [
+     [
+      0.1,
+      2.3,
+      "软管最高的地方。"
+     ],
+     [
+      2.25,
+      6.583,
+      "它可以比水箱高，但不能超过大约十米。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Hose": {
+    "duration": 7.248,
+    "hash": "50abee9e79c63e2f",
+    "sentences": [
+     [
+      0.1,
+      2.494,
+      "管里必须灌满水。"
+     ],
+     [
+      2.444,
+      7.194,
+      "里面一有空气，水链就断了，虹吸也就停了。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Outlet": {
+    "duration": 4.824,
+    "hash": "91c8930a493be826",
+    "sentences": [
+     [
+      0.1,
+      4.814,
+      "它比水箱水面低得越多，水流出来就越快。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Siphon_Part_Tank": {
+    "duration": 5.016,
+    "hash": "ebd58e495b70cf86",
+    "sentences": [
+     [
+      0.1,
+      4.994,
+      "空气处处压在它的水面上，把水推进软管。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_01": {
+    "duration": 5.52,
+    "hash": "ea0d36f7e20d5293",
+    "sentences": [
+     [
+      0.1,
+      5.508,
+      "垫圈下面是阀座，一个圆孔，水从下面往上顶着。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_02": {
+    "duration": 8.856,
+    "hash": "a59f0ceb97393b8f",
+    "sentences": [
+     [
+      0.1,
+      3.439,
+      "转动手柄，阀杆就往上旋。"
+     ],
+     [
+      3.389,
+      8.806,
+      "转半圈，垫圈抬起还不到一毫米，水已经流出来了。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_03": {
+    "duration": 4.848,
+    "hash": "7a0c1d14c0d4bab7",
+    "sentences": [
+     [
+      0.1,
+      4.842,
+      "轮到你了：把龙头拧开，直到水流得最快。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_04": {
+    "duration": 8.184,
+    "hash": "c2e8bd19de01c1ae",
+    "sentences": [
+     [
+      0.1,
+      4.217,
+      "现在龙头关上了，可这块垫圈磨坏了。"
+     ],
+     [
+      4.167,
+      8.125,
+      "它封不住阀座，龙头就一直滴水。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_05": {
+    "duration": 5.112,
+    "hash": "3f87b37b204247ac",
+    "sentences": [
+     [
+      0.1,
+      5.092,
+      "龙头已经拧开两圈，再拧第三圈，会怎么样？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Handle": {
+    "duration": 4.416,
+    "hash": "fa5936af37beb293",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "手转一整圈，垫圈只抬起一毫米半。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Seat": {
+    "duration": 4.344,
+    "hash": "1bdfd2ee368ceb82",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "垫圈要盖住的圆孔，下面是带压的水。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Spindle": {
+    "duration": 6.816,
+    "hash": "a9fd677722afa802",
+    "sentences": [
+     [
+      0.1,
+      2.078,
+      "带螺纹的杆子。"
+     ],
+     [
+      2.028,
+      6.764,
+      "螺纹把转动变成抬升，也把垫圈牢牢压住。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tap_Part_Washer": {
+    "duration": 6.744,
+    "hash": "fc4c25ce51e0423e",
+    "sentences": [
+     [
+      0.1,
+      2.286,
+      "一片橡胶圆片。"
+     ],
+     [
+      2.236,
+      6.681,
+      "压在阀座上就能封住；磨坏了就会滴水。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_01": {
+    "duration": 4.512,
+    "hash": "2b2270742f757d65",
+    "sentences": [
+     [
+      0.1,
+      4.494,
+      "这座水塔把水举在离地三十米高的地方。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_02": {
+    "duration": 11.304,
+    "hash": "67ff00d2e56e6456",
+    "sentences": [
+     [
+      0.1,
+      6.147,
+      "一根管道从水箱往下，穿过街道底下，再沿着大楼往上。"
+     ],
+     [
+      6.097,
+      11.236,
+      "不管它怎么弯，都把水塔的压强送到每一个龙头。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_03": {
+    "duration": 4.872,
+    "hash": "88df530ef1dd1000",
+    "sentences": [
+     [
+      0.1,
+      4.869,
+      "轮到你了：把龙头挪到离地二十四米的地方。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_04": {
+    "duration": 8.712,
+    "hash": "f16e187ad3dff8a7",
+    "sentences": [
+     [
+      0.1,
+      4.286,
+      "到了这里，龙头和水塔的水面一样高。"
+     ],
+     [
+      4.236,
+      8.653,
+      "没有东西把水推出来，所以一滴也没有。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_05": {
+    "duration": 4.392,
+    "hash": "7c7710fe0c7ce88c",
+    "sentences": [
+     [
+      0.1,
+      4.369,
+      "为什么水塔要建得那么高，或者建在山上？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Level": {
+    "duration": 7.128,
+    "hash": "37b95d77f396cf21",
+    "sentences": [
+     [
+      0.1,
+      2.856,
+      "水塔水面所在的高度。"
+     ],
+     [
+      2.806,
+      7.056,
+      "比这条线高的龙头，都得不到水塔的水。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Pipe": {
+    "duration": 8.112,
+    "hash": "dfa3ef5ccfcdd74f",
+    "sentences": [
+     [
+      0.1,
+      2.786,
+      "把水箱和龙头连起来。"
+     ],
+     [
+      2.736,
+      8.042,
+      "水不流动时，管道的弯曲和长短都不改变压强。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Tank": {
+    "duration": 6.888,
+    "hash": "018e096b7b6f6b4a",
+    "sentences": [
+     [
+      0.1,
+      2.508,
+      "高高举起的大水箱。"
+     ],
+     [
+      2.458,
+      6.819,
+      "决定压强的是水面的高度，不是水有多少。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Tower_Part_Tap": {
+    "duration": 5.424,
+    "hash": "c907b7690cb1b176",
+    "sentences": [
+     [
+      0.1,
+      5.425,
+      "龙头越低，上方的水就越高，水冲出来就越猛。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_01": {
+    "duration": 6.624,
+    "hash": "1e96d623171fe0bb",
+    "sentences": [
+     [
+      0.1,
+      6.606,
+      "弯管里的这截水就是水封：房间和下水道之间隔着五厘米。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_02": {
+    "duration": 8.832,
+    "hash": "59ed263d08338bad",
+    "sentences": [
+     [
+      0.1,
+      4.842,
+      "下游的马桶一冲水，就把空气也一起拖走了。"
+     ],
+     [
+      4.792,
+      8.778,
+      "水封靠水槽那一边的水被往下拉。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_03": {
+    "duration": 4.944,
+    "hash": "d7d584224e83721a",
+    "sentences": [
+     [
+      0.1,
+      4.939,
+      "轮到你了：把吸力加大，直到水封被破坏。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_04": {
+    "duration": 8.952,
+    "hash": "456019027b77aeef",
+    "sentences": [
+     [
+      0.1,
+      1.994,
+      "打开通气管。"
+     ],
+     [
+      1.944,
+      8.903,
+      "外面的空气改从这里进入下水道，吸力几乎没了，水封也就保住了。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_05": {
+    "duration": 5.088,
+    "hash": "e28ec4d3a59d1807",
+    "sentences": [
+     [
+      0.1,
+      5.078,
+      "为什么水槽下面的管子要先往下弯、再往上拐？"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Drain": {
+    "duration": 9.216,
+    "hash": "90ecccbc864a3e76",
+    "sentences": [
+     [
+      0.1,
+      4.175,
+      "它通向污水管，里面全是那里的空气。"
+     ],
+     [
+      4.125,
+      9.153,
+      "水在管里冲过去时，会拖着空气，形成吸力。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Seal": {
+    "duration": 7.464,
+    "hash": "919741a8c7006e1b",
+    "sentences": [
+     [
+      0.1,
+      2.342,
+      "弯管里存着的水。"
+     ],
+     [
+      2.292,
+      7.403,
+      "空气要想过去，得先把它一直压到弯管的最低处。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Sink": {
+    "duration": 4.608,
+    "hash": "b6a0ca967753f442",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "每次放水，新的水都把水封重新灌满。"
+     ]
+    ]
+   },
+   "Narr_Plumbing_Trap_Part_Vent": {
+    "duration": 8.136,
+    "hash": "87ab966fc17ef2ff",
+    "sentences": [
+     [
+      0.1,
+      2.619,
+      "一直通到屋顶的管子。"
+     ],
+     [
+      2.569,
+      8.083,
+      "它让外面的空气进入下水道，吸力就吸不空存水弯。"
      ]
     ]
    },

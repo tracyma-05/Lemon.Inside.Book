@@ -4740,4 +4740,577 @@
   <data name="Lifting_Elevator_Alone" xml:space="preserve">
     <value>With nothing on the other side, the motor holds the whole {0}.</value>
   </data>
+  <data name="Chapter_Plumbing" xml:space="preserve">
+    <value>Water in pipes</value>
+  </data>
+  <data name="Plumbing_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Plumbing_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Plumbing_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Plumbing_Centimetres" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Plumbing_Bar" xml:space="preserve">
+    <value>{0} bar</value>
+  </data>
+  <data name="Plumbing_Speed" xml:space="preserve">
+    <value>{0} m/s</value>
+  </data>
+  <data name="Plumbing_LitresPerMinute" xml:space="preserve">
+    <value>{0} L/min</value>
+  </data>
+  <data name="Plumbing_Turns" xml:space="preserve">
+    <value>{0} turns</value>
+  </data>
+  <data name="Plumbing_AirPushes" xml:space="preserve">
+    <value>the air presses down</value>
+  </data>
+  <data name="Plumbing_Tower_Title" xml:space="preserve">
+    <value>Height is pressure</value>
+  </data>
+  <data name="Plumbing_Tower_P1" xml:space="preserve">
+    <value>Water is heavy: a bucket of it is hard to carry. Pile water up and the bottom layers carry the weight of everything above them, so the deeper you go, the harder the water pushes. Every ten metres of depth adds about one bar, roughly the push of the whole atmosphere on top of us.</value>
+  </data>
+  <data name="Plumbing_Tower_P2" xml:space="preserve">
+    <value>A water tower uses this. It holds a tank of water high above the town, joined by pipes to every house. The pressure at a tap depends only on how far the tower's water stands above it, not on the shape or length of the pipes on the way. A tap on the ground floor gets plenty; a tap near the top of a tall building gets little, and one higher than the tower's water gets none at all.</value>
+  </data>
+  <data name="Plumbing_Tower_Deeper" xml:space="preserve">
+    <value>Water joined by pipes settles at one level, wherever it is: pour water into a garden hose bent into a U and both ends fill to the same height. That is why the dashed line matters. Tall buildings that rise above their town's water pressure keep pumps in the basement and tanks on the roof, so their own tank can feed the top floors from just above them. Many towns pump water up into towers at night, when electricity is cheap, and let it flow down all day.</value>
+  </data>
+  <data name="Plumbing_Tower_Surface" xml:space="preserve">
+    <value>Height of the tower's water</value>
+  </data>
+  <data name="Plumbing_Tower_TapHeight" xml:space="preserve">
+    <value>Height of the tap</value>
+  </data>
+  <data name="Plumbing_Tower_Readout" xml:space="preserve">
+    <value>The tower's water stands {0} above the tap: {1} of pressure, and water can leave the tap at up to {2}.</value>
+  </data>
+  <data name="Plumbing_Tower_Dry" xml:space="preserve">
+    <value>The tap is as high as the tower's water, or higher: nothing comes out.</value>
+  </data>
+  <data name="Plumbing_Tower_Picture" xml:space="preserve">
+    <value>A water tower and a tall building joined by a pipe under the ground, with a tap on the building's riser</value>
+  </data>
+  <data name="Plumbing_Tower_Level" xml:space="preserve">
+    <value>the tower's water level</value>
+  </data>
+  <data name="Plumbing_Tower_NoWater" xml:space="preserve">
+    <value>no water</value>
+  </data>
+  <data name="Plumbing_Tower_Rule" xml:space="preserve">
+    <value>about 1 bar for every 10 m of height</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_01" xml:space="preserve">
+    <value>This tower holds its water thirty metres above the ground.</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_02" xml:space="preserve">
+    <value>A pipe runs down from the tank, under the street and up through the building. Whatever its shape, it carries the tower's pressure to every tap.</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_03" xml:space="preserve">
+    <value>Your turn: move the tap up to twenty-four metres above the ground.</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_04" xml:space="preserve">
+    <value>Up here the tap is level with the tower's water. Nothing pushes the water out, so nothing comes.</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_05" xml:space="preserve">
+    <value>Why are water towers built so tall, or on hills?</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz1" xml:space="preserve">
+    <value>To keep the water cool in the wind</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz2" xml:space="preserve">
+    <value>Because the height of their water sets the pressure at every tap below</value>
+  </data>
+  <data name="Plumbing_Tower_Quiz3" xml:space="preserve">
+    <value>So that the water can be seen from far away</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Tank" xml:space="preserve">
+    <value>Tank</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Tank" xml:space="preserve">
+    <value>A big tank held up high. The height of its water, not how much there is, sets the pressure.</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Pipe" xml:space="preserve">
+    <value>Pipe</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Pipe" xml:space="preserve">
+    <value>It joins the tank to the taps. Its bends and its length do not change the pressure of still water.</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Tap" xml:space="preserve">
+    <value>Tap</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Tap" xml:space="preserve">
+    <value>The lower the tap, the more water stands above it, and the harder the water comes out.</value>
+  </data>
+  <data name="Plumbing_Tower_Part_Level" xml:space="preserve">
+    <value>Water level</value>
+  </data>
+  <data name="Narr_Plumbing_Tower_Part_Level" xml:space="preserve">
+    <value>The height the tower's water stands at. No tap above this line can get water from the tower.</value>
+  </data>
+  <data name="Plumbing_Tap_Title" xml:space="preserve">
+    <value>Inside a tap</value>
+  </data>
+  <data name="Plumbing_Tap_P1" xml:space="preserve">
+    <value>Under the handle of an old-style tap is a screw. Turning the handle winds a rod, the spindle, up or down through a threaded hole. On the spindle's end sits a rubber washer, and below the washer is a round hole, the seat, with water under pressure waiting beneath it.</value>
+  </data>
+  <data name="Plumbing_Tap_P2" xml:space="preserve">
+    <value>Screwed down, the washer presses on the seat and the water cannot pass. Turn the handle and the washer lifts a little; water squeezes through the ring-shaped gap between them, round the washer and out of the spout. The thread turns a big movement of your hand into a tiny, precise lift, and holds the washer down against the water's push.</value>
+  </data>
+  <data name="Plumbing_Tap_Deeper" xml:space="preserve">
+    <value>The gap the water passes through is a ring: the seat's rim times the lift. Once the lift reaches a quarter of the seat's width, that ring is as big as the hole itself, and lifting further changes nothing; that is why the first turn or two matter and the rest do not. A dripping tap usually has a hardened or torn washer that no longer seals. Many newer taps use two ceramic discs with holes instead, which line up as you turn a lever a quarter of a turn.</value>
+  </data>
+  <data name="Plumbing_Tap_Turns" xml:space="preserve">
+    <value>Turns of the handle</value>
+  </data>
+  <data name="Plumbing_Tap_Worn" xml:space="preserve">
+    <value>Use a worn washer</value>
+  </data>
+  <data name="Plumbing_Tap_Shut" xml:space="preserve">
+    <value>The washer is down on its seat: the tap is shut.</value>
+  </data>
+  <data name="Plumbing_Tap_Drips" xml:space="preserve">
+    <value>The worn washer cannot close the seat: the tap drips.</value>
+  </data>
+  <data name="Plumbing_Tap_Readout" xml:space="preserve">
+    <value>The washer is {0} mm off its seat, and the tap gives {1}.</value>
+  </data>
+  <data name="Plumbing_Tap_Picture" xml:space="preserve">
+    <value>A screw-down tap cut in half: the handle, the threaded spindle, the rubber washer above the seat, and a gauge of the flow</value>
+  </data>
+  <data name="Plumbing_Tap_SeatLabel" xml:space="preserve">
+    <value>seat, 12 mm</value>
+  </data>
+  <data name="Plumbing_Tap_LiftLabel" xml:space="preserve">
+    <value>washer up {0} mm</value>
+  </data>
+  <data name="Plumbing_Tap_Rule" xml:space="preserve">
+    <value>fully open once the lift is a quarter of the seat's width</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_01" xml:space="preserve">
+    <value>Under the washer is the seat, a round hole with water pressing up from below.</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_02" xml:space="preserve">
+    <value>Turning the handle screws the spindle up. Half a turn lifts the washer less than a millimetre, and water already runs.</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_03" xml:space="preserve">
+    <value>Your turn: open the tap until the water runs as fast as it can.</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_04" xml:space="preserve">
+    <value>Now the tap is shut, but this washer is worn. It cannot seal the seat, and the tap drips.</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_05" xml:space="preserve">
+    <value>With the tap open two turns, what does a third turn give you?</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz1" xml:space="preserve">
+    <value>Twice as much water</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz2" xml:space="preserve">
+    <value>Half as much again</value>
+  </data>
+  <data name="Plumbing_Tap_Quiz3" xml:space="preserve">
+    <value>Hardly any more: the washer is already out of the way</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Handle" xml:space="preserve">
+    <value>Handle</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Handle" xml:space="preserve">
+    <value>A whole turn of your hand lifts the washer only a millimetre and a half.</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Spindle" xml:space="preserve">
+    <value>Spindle</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Spindle" xml:space="preserve">
+    <value>A threaded rod. Its thread turns turning into lifting, and holds the washer firmly down.</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Washer" xml:space="preserve">
+    <value>Washer</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Washer" xml:space="preserve">
+    <value>A disc of rubber. Pressed onto the seat it seals it; once it is worn, it drips.</value>
+  </data>
+  <data name="Plumbing_Tap_Part_Seat" xml:space="preserve">
+    <value>Seat</value>
+  </data>
+  <data name="Narr_Plumbing_Tap_Part_Seat" xml:space="preserve">
+    <value>The round hole the washer closes, with water under pressure below it.</value>
+  </data>
+  <data name="Plumbing_Siphon_Title" xml:space="preserve">
+    <value>Water that climbs</value>
+  </data>
+  <data name="Plumbing_Siphon_P1" xml:space="preserve">
+    <value>A siphon empties a tank over its rim without a pump. Fill a hose with water, put one end in the tank and lead the other over the edge and down, lower than the tank's water. The water in the hose runs out of the low end, and more climbs up into the hose behind it, over the crest, for as long as the end stays low.</value>
+  </data>
+  <data name="Plumbing_Siphon_P2" xml:space="preserve">
+    <value>Nothing in the hose pulls. The air presses on the tank's water and pushes it up the short leg; at the low end, the water's weight in the long leg wins. The two sides of the crest are like two weights on a rope over a pulley: the longer column falls and drags the shorter one up. Raise the end above the tank's water and the balance turns, and the flow stops.</value>
+  </data>
+  <data name="Plumbing_Siphon_Deeper" xml:space="preserve">
+    <value>The faster flow comes from a bigger drop: from the tank's surface down to the hose's end, not from the height of the crest. But the crest cannot be too high. Above about ten metres the air cannot push water up any further: the pressure at the top falls so low that the water there boils into vapour even when it is cold, and the column breaks. A hose full of air does nothing, which is why a siphon has to be filled before it starts.</value>
+  </data>
+  <data name="Plumbing_Siphon_Primed" xml:space="preserve">
+    <value>Fill the hose with water</value>
+  </data>
+  <data name="Plumbing_Siphon_Outlet" xml:space="preserve">
+    <value>Height of the hose's end</value>
+  </data>
+  <data name="Plumbing_Siphon_Empty" xml:space="preserve">
+    <value>The hose is full of air: nothing flows over the crest.</value>
+  </data>
+  <data name="Plumbing_Siphon_Readout" xml:space="preserve">
+    <value>The hose's end is {0} below the tank's water; water leaves it at up to {1}.</value>
+  </data>
+  <data name="Plumbing_Siphon_Stops" xml:space="preserve">
+    <value>The hose's end is not below the tank's water: the siphon stops.</value>
+  </data>
+  <data name="Plumbing_Siphon_Picture" xml:space="preserve">
+    <value>A tank on a table and a hose running from it over a crest down to a bucket on the floor</value>
+  </data>
+  <data name="Plumbing_Siphon_StoppedLabel" xml:space="preserve">
+    <value>the water ran back</value>
+  </data>
+  <data name="Plumbing_Siphon_AirLabel" xml:space="preserve">
+    <value>air in the hose</value>
+  </data>
+  <data name="Plumbing_Siphon_Surface" xml:space="preserve">
+    <value>tank's water</value>
+  </data>
+  <data name="Plumbing_Siphon_Below" xml:space="preserve">
+    <value>{0} m lower</value>
+  </data>
+  <data name="Plumbing_Siphon_Above" xml:space="preserve">
+    <value>{0} m higher</value>
+  </data>
+  <data name="Plumbing_Siphon_Rule" xml:space="preserve">
+    <value>it runs while the end is lower than the tank's water</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_01" xml:space="preserve">
+    <value>This tank stands on a table. We want its water in the bucket, without tipping it.</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_02" xml:space="preserve">
+    <value>A hose runs from the tank over the edge and down to the bucket. Right now it is full of air, and the water inside stops at the tank's own level.</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_03" xml:space="preserve">
+    <value>Your turn: fill the hose with water.</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_04" xml:space="preserve">
+    <value>Now lift the end above the tank's water. The long leg is no longer the heavier one, and the water stops.</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_05" xml:space="preserve">
+    <value>What pushes the water up the short leg and over the crest?</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz1" xml:space="preserve">
+    <value>The hose sucks it up</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz2" xml:space="preserve">
+    <value>The air pressing down on the tank's water</value>
+  </data>
+  <data name="Plumbing_Siphon_Quiz3" xml:space="preserve">
+    <value>The speed the water already has</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Tank" xml:space="preserve">
+    <value>Tank</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Tank" xml:space="preserve">
+    <value>The air presses on its water everywhere, and pushes it into the hose.</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Hose" xml:space="preserve">
+    <value>Hose</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Hose" xml:space="preserve">
+    <value>It must be full of water. Air in it breaks the chain of water, and the siphon stops.</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Crest" xml:space="preserve">
+    <value>Crest</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Crest" xml:space="preserve">
+    <value>The highest point of the hose. It can be above the tank, but not more than about ten metres.</value>
+  </data>
+  <data name="Plumbing_Siphon_Part_Outlet" xml:space="preserve">
+    <value>Outlet</value>
+  </data>
+  <data name="Narr_Plumbing_Siphon_Part_Outlet" xml:space="preserve">
+    <value>The lower it is below the tank's water, the faster the water comes out.</value>
+  </data>
+  <data name="Plumbing_Cistern_Title" xml:space="preserve">
+    <value>The float that turns itself off</value>
+  </data>
+  <data name="Plumbing_Cistern_P1" xml:space="preserve">
+    <value>Behind a toilet is a tank that fills itself, then stops, with nobody watching. The water comes in through a valve at the top. On the valve is an arm, and on the end of the arm a hollow float that rides on the water.</value>
+  </data>
+  <data name="Plumbing_Cistern_P2" xml:space="preserve">
+    <value>While the water is low, the float hangs down and the arm holds the valve open. As the tank fills, the float rises and tips the arm, which pushes the valve slowly shut. At the level it is set for, the valve closes and the water stops. Flush, and the water rushes out through a flap in the floor; the float drops, the valve opens, and the whole thing starts again.</value>
+  </data>
+  <data name="Plumbing_Cistern_Deeper" xml:space="preserve">
+    <value>This is feedback: the result of the filling, the water's level, works the valve that does the filling. The nearer the water gets to its mark, the less the valve lets in, so it slows as it arrives instead of overshooting. The overflow pipe is there in case the valve fails or is set too high: the water then runs away down the pipe instead of over the floor. The same idea, a measurement steering the thing that changes it, runs a room's thermostat and a car's cruise control.</value>
+  </data>
+  <data name="Plumbing_Cistern_Set" xml:space="preserve">
+    <value>Level the float shuts the valve at</value>
+  </data>
+  <data name="Plumbing_Cistern_Flush" xml:space="preserve">
+    <value>Hold the flush lever down</value>
+  </data>
+  <data name="Plumbing_Cistern_Spills" xml:space="preserve">
+    <value>The float is set above the overflow: the valve never shuts, and water runs away down the overflow pipe.</value>
+  </data>
+  <data name="Plumbing_Cistern_Readout" xml:space="preserve">
+    <value>The float shuts the valve when the water is {0} deep, {1} below the overflow.</value>
+  </data>
+  <data name="Plumbing_Cistern_Flushing" xml:space="preserve">
+    <value>The flush lets water out much faster than the valve lets it in.</value>
+  </data>
+  <data name="Plumbing_Cistern_Picture" xml:space="preserve">
+    <value>A toilet cistern cut open: the inlet valve with its float on an arm, the flush flap and lever, and the overflow pipe</value>
+  </data>
+  <data name="Plumbing_Cistern_OverflowLabel" xml:space="preserve">
+    <value>overflow</value>
+  </data>
+  <data name="Plumbing_Cistern_SetLabel" xml:space="preserve">
+    <value>shuts at {0} cm</value>
+  </data>
+  <data name="Plumbing_Cistern_ValveLabel" xml:space="preserve">
+    <value>valve {0}% open</value>
+  </data>
+  <data name="Plumbing_Cistern_Rule" xml:space="preserve">
+    <value>the water's own level works the valve that fills it</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_01" xml:space="preserve">
+    <value>This float rides on the water. It is hollow, so it floats.</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_02" xml:space="preserve">
+    <value>Its arm works the inlet valve. With the water at its mark, the float is up and the valve is shut.</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_03" xml:space="preserve">
+    <value>Your turn: hold the flush lever down, and watch the float.</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_04" xml:space="preserve">
+    <value>Now the float is set too high, above the overflow. The valve never shuts, and the water runs away down the pipe.</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_05" xml:space="preserve">
+    <value>What turns the water off when the tank is full?</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz1" xml:space="preserve">
+    <value>The float, lifted by the water, pushes the valve shut</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz2" xml:space="preserve">
+    <value>A timer inside the valve</value>
+  </data>
+  <data name="Plumbing_Cistern_Quiz3" xml:space="preserve">
+    <value>The weight of the water presses the flap shut</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Float" xml:space="preserve">
+    <value>Float</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Float" xml:space="preserve">
+    <value>A hollow ball that rides on the water and tells the valve how full the tank is.</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Valve" xml:space="preserve">
+    <value>Inlet valve</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Valve" xml:space="preserve">
+    <value>Where the water comes in. The float's arm pushes it shut a little more for every centimetre the water rises.</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Overflow" xml:space="preserve">
+    <value>Overflow pipe</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Overflow" xml:space="preserve">
+    <value>A pipe open at its top. If the valve does not shut, the water goes down it instead of over the floor.</value>
+  </data>
+  <data name="Plumbing_Cistern_Part_Flush" xml:space="preserve">
+    <value>Flush</value>
+  </data>
+  <data name="Narr_Plumbing_Cistern_Part_Flush" xml:space="preserve">
+    <value>The lever lifts a flap in the floor of the tank, and the water rushes out much faster than it came in.</value>
+  </data>
+  <data name="Plumbing_Trap_Title" xml:space="preserve">
+    <value>The bend under the sink</value>
+  </data>
+  <data name="Plumbing_Trap_P1" xml:space="preserve">
+    <value>Look under a sink and the pipe does not go straight down: it dips into a U and comes up again before it joins the drain. Water always stays in the bottom of that U. It is a plug of water between your room and the drain, which is full of smelly air, and it stops that air coming up through the plughole.</value>
+  </data>
+  <data name="Plumbing_Trap_P2" xml:space="preserve">
+    <value>The water stands up to the lip where the bend spills into the drain. The part of it above the bend's lowest top edge is the seal, a few centimetres deep. Each time you use the sink, fresh water pushes the old water over the lip, and the seal is renewed. As long as it stays deeper than zero, no bubble of drain air can get past.</value>
+  </data>
+  <data name="Plumbing_Trap_Deeper" xml:space="preserve">
+    <value>When a toilet flushes further along the same drain, its rush of water drags the air behind it and lowers the pressure in the pipe. That suction pulls the sink side of the seal down; the drain side cannot rise to match, because it just spills away. If the suction is as deep as the seal, the trap is sucked empty and you hear it gurgle. That is why drains have vent pipes running up through the roof: they let outside air into the drain, so the suction never builds.</value>
+  </data>
+  <data name="Plumbing_Trap_Suction" xml:space="preserve">
+    <value>Suction in the drain (cm of water)</value>
+  </data>
+  <data name="Plumbing_Trap_Vent" xml:space="preserve">
+    <value>Open the vent pipe</value>
+  </data>
+  <data name="Plumbing_Trap_Broken" xml:space="preserve">
+    <value>The seal is broken: air from the drain bubbles up into the room.</value>
+  </data>
+  <data name="Plumbing_Trap_Readout" xml:space="preserve">
+    <value>The sink side has dropped {0}; {1} of seal still blocks the drain air.</value>
+  </data>
+  <data name="Plumbing_Trap_Picture" xml:space="preserve">
+    <value>A sink's U-bend cut open, holding water between the plughole and the drain, with a vent pipe rising from the drain</value>
+  </data>
+  <data name="Plumbing_Trap_SuctionLabel" xml:space="preserve">
+    <value>suction {0} cm</value>
+  </data>
+  <data name="Plumbing_Trap_Sewer" xml:space="preserve">
+    <value>to the sewer</value>
+  </data>
+  <data name="Plumbing_Trap_VentOpen" xml:space="preserve">
+    <value>vent, open to the sky</value>
+  </data>
+  <data name="Plumbing_Trap_VentShut" xml:space="preserve">
+    <value>vent capped</value>
+  </data>
+  <data name="Plumbing_Trap_BrokenLabel" xml:space="preserve">
+    <value>seal broken!</value>
+  </data>
+  <data name="Plumbing_Trap_SealLabel" xml:space="preserve">
+    <value>seal {0} cm</value>
+  </data>
+  <data name="Plumbing_Trap_Rule" xml:space="preserve">
+    <value>as long as some seal is left, drain air cannot pass</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_01" xml:space="preserve">
+    <value>This water in the bend is the seal: five centimetres of it between the room and the drain.</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_02" xml:space="preserve">
+    <value>A toilet flushing further down the drain pulls the air along with it. The sink side of the seal is pulled down.</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_03" xml:space="preserve">
+    <value>Your turn: make the suction strong enough to break the seal.</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_04" xml:space="preserve">
+    <value>Open the vent. Outside air flows into the drain instead, the suction almost vanishes, and the seal holds.</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_05" xml:space="preserve">
+    <value>Why does the pipe under a sink bend down and up again?</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz1" xml:space="preserve">
+    <value>To slow the water down</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz2" xml:space="preserve">
+    <value>To catch rings that fall in</value>
+  </data>
+  <data name="Plumbing_Trap_Quiz3" xml:space="preserve">
+    <value>To keep a plug of water that stops drain air coming up</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Seal" xml:space="preserve">
+    <value>Seal</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Seal" xml:space="preserve">
+    <value>The water standing in the bend. Air can only get past by pushing it all the way down to the bend's dip.</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Sink" xml:space="preserve">
+    <value>Sink</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Sink" xml:space="preserve">
+    <value>Every time it empties, fresh water refills the seal.</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Drain" xml:space="preserve">
+    <value>Drain</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Drain" xml:space="preserve">
+    <value>It leads to the sewer and is full of its air. Water rushing along it can pull that air and make suction.</value>
+  </data>
+  <data name="Plumbing_Trap_Part_Vent" xml:space="preserve">
+    <value>Vent pipe</value>
+  </data>
+  <data name="Narr_Plumbing_Trap_Part_Vent" xml:space="preserve">
+    <value>A pipe up through the roof. It lets outside air into the drain so the suction cannot empty the trap.</value>
+  </data>
+  <data name="Plumbing_Pump_Title" xml:space="preserve">
+    <value>Why a pump cannot suck</value>
+  </data>
+  <data name="Plumbing_Pump_P1" xml:space="preserve">
+    <value>An old hand pump stands on top of a well. Lifting its handle draws a piston up a cylinder, and water follows the piston up the pipe from the well. It looks as if the pump sucks the water up. It does not: the piston only takes air away from above the water in the pipe.</value>
+  </data>
+  <data name="Plumbing_Pump_P2" xml:space="preserve">
+    <value>What lifts the water is the air pressing on the well's surface outside the pipe. With less air pushing down inside the pipe, the outside air pushes water up it. Two ball valves keep each lift from slipping back. But the air can only push so hard: it balances a column of water about 10.3 metres tall. If the well's water is deeper than that, the water stops in the pipe, however hard you pump.</value>
+  </data>
+  <data name="Plumbing_Pump_Deeper" xml:space="preserve">
+    <value>Real pumps manage less, about seven or eight metres, because their seals leak a little and because water near the top of the column, at very low pressure, starts to boil into bubbles. Deep wells therefore put the pump down at the water: a long rod from the handle works it, or an electric pump sits under water. A pump down there pushes the water up from below, and pushing has no such limit. The same ten metres limits a siphon. It puzzled pump makers four hundred years ago, and explaining it led to the discovery that air has weight.</value>
+  </data>
+  <data name="Plumbing_Pump_Depth" xml:space="preserve">
+    <value>Depth of the well's water</value>
+  </data>
+  <data name="Plumbing_Pump_Down" xml:space="preserve">
+    <value>Put the pump down at the water</value>
+  </data>
+  <data name="Plumbing_Pump_Pushes" xml:space="preserve">
+    <value>The pump pushes from below, and water comes up from {0} down and pours out.</value>
+  </data>
+  <data name="Plumbing_Pump_Readout" xml:space="preserve">
+    <value>The water is {0} down: the air pushes it all the way up, and it pours out.</value>
+  </data>
+  <data name="Plumbing_Pump_Fails" xml:space="preserve">
+    <value>The water rises only {0} up the pipe: the air cannot push it higher, however hard you pump.</value>
+  </data>
+  <data name="Plumbing_Pump_Picture" xml:space="preserve">
+    <value>A well with a hand pump: the cylinder and piston, two ball valves, the pipe down to the water, and arrows of the air pressing on the well's surface</value>
+  </data>
+  <data name="Plumbing_Pump_LimitLabel" xml:space="preserve">
+    <value>10.3 m above the well's water</value>
+  </data>
+  <data name="Plumbing_Pump_EmptyLabel" xml:space="preserve">
+    <value>nearly empty: nothing pushes it higher</value>
+  </data>
+  <data name="Plumbing_Pump_DownLabel" xml:space="preserve">
+    <value>pump under water</value>
+  </data>
+  <data name="Plumbing_Pump_Rule" xml:space="preserve">
+    <value>the air outside pushes the water up the pipe</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_01" xml:space="preserve">
+    <value>Pumping draws this piston up its cylinder, taking the air away from above the water in the pipe.</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_02" xml:space="preserve">
+    <value>The air outside keeps pressing on the well's water, and pushes it up the pipe.</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_03" xml:space="preserve">
+    <value>Your turn: make the well deeper, more than eleven metres.</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_04" xml:space="preserve">
+    <value>So deep wells put the pump down at the water. It pushes from below, and pushing has no such limit.</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_05" xml:space="preserve">
+    <value>Why can a pump at the top not lift water more than about ten metres?</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz1" xml:space="preserve">
+    <value>The air outside can only push water that high</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz2" xml:space="preserve">
+    <value>The pipe would burst</value>
+  </data>
+  <data name="Plumbing_Pump_Quiz3" xml:space="preserve">
+    <value>The piston gets too heavy to lift</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Piston" xml:space="preserve">
+    <value>Piston</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Piston" xml:space="preserve">
+    <value>Moving up its cylinder, it leaves room with almost no air in it above the water.</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Valves" xml:space="preserve">
+    <value>Valves</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Valves" xml:space="preserve">
+    <value>Two balls on seats, one under the cylinder and one in the piston. They let water up but never back down.</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Pipe" xml:space="preserve">
+    <value>Pipe</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Pipe" xml:space="preserve">
+    <value>It reaches down into the well's water. The water in it can stand no more than about ten metres above the well.</value>
+  </data>
+  <data name="Plumbing_Pump_Part_Water" xml:space="preserve">
+    <value>Well water</value>
+  </data>
+  <data name="Narr_Plumbing_Pump_Part_Water" xml:space="preserve">
+    <value>The air presses on its surface. That push, not the pump, is what drives the water up the pipe.</value>
+  </data>
 </root>
