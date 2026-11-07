@@ -13,6 +13,7 @@ using Lemon.Inside.Book.Chapters.Locks;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Watch;
+using Lemon.Inside.Book.Chapters.Weighing;
 using Lemon.Inside.Book.Contents;
 using Lemon.Inside.Book.Controls;
 using Xunit;
@@ -35,6 +36,7 @@ public sealed class WalkthroughTests
         .. new LiftingViewModel(narration).AllSpreads,
         .. new PlumbingViewModel(narration).AllSpreads,
         .. new BridgesViewModel(narration).AllSpreads,
+        .. new WeighingViewModel(narration).AllSpreads,
     ];
 
     [Fact]
@@ -114,6 +116,7 @@ public sealed class WalkthroughTests
     [InlineData("Lifting")]
     [InlineData("Plumbing")]
     [InlineData("Bridges")]
+    [InlineData("Weighing")]
     public void EveryRing_SitsOnAPartThePictureDrew(string slug)
     {
         var (window, model) = OpenAt(slug);
@@ -163,6 +166,7 @@ public sealed class WalkthroughTests
     [InlineData("Lifting")]
     [InlineData("Plumbing")]
     [InlineData("Bridges")]
+    [InlineData("Weighing")]
     public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
     {
         var (window, model) = OpenAt(slug);

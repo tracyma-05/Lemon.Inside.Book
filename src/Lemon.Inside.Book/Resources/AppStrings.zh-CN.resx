@@ -5862,4 +5862,553 @@
   <data name="Narr_Bridges_Expansion_Part_Abutment" xml:space="preserve">
     <value>桥面尽头的那块墩子。要是没有伸缩缝，桥面会以几千吨的力推它。</value>
   </data>
+  <data name="Chapter_Weighing" xml:space="preserve">
+    <value>怎么称重</value>
+  </data>
+  <data name="Weighing_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Weighing_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Weighing_Kg" xml:space="preserve">
+    <value>{0} 千克</value>
+  </data>
+  <data name="Weighing_Grams" xml:space="preserve">
+    <value>{0} 克</value>
+  </data>
+  <data name="Weighing_Centimetres" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Weighing_Balance_Title" xml:space="preserve">
+    <value>天平</value>
+  </data>
+  <data name="Weighing_Balance_P1" xml:space="preserve">
+    <value>天平是拿两样东西来比的。它的横梁架在一道锋利的刀口上来回摆动，两头各挂一个秤盘。两边放上一样重的东西，横梁就平平地停着；一边多放一点，那边就往下沉，直到横梁停在一个倾斜的角度上。指针在刻度上指出这个角度。</value>
+  </data>
+  <data name="Weighing_Balance_P2" xml:space="preserve">
+    <value>它为什么能停住，而不是一下子翻倒？因为横梁自己的重心挂在刀口稍下面一点。横梁一倾斜，重心就摆到一边，把横梁往回拉，直到两边的力平衡。重心离刀口越近，往回拉的力就越小，一点点的差别就能让横梁偏得越多。</value>
+  </data>
+  <data name="Weighing_Balance_Deeper" xml:space="preserve">
+    <value>这就是做天平的人的两难。重心离刀口很远，横梁又稳又快，却几乎觉察不到几克的差别；离得很近，横梁就很灵敏，但摆得很慢；要是重心跑到刀口上面去，横梁就会翻倒，不管秤盘里放什么都翻着不动。精密的天平在指针上有一颗小螺丝，上下拧动它就能挪动重心，调节灵敏度。</value>
+  </data>
+  <data name="Weighing_Balance_Difference" xml:space="preserve">
+    <value>右盘多放的</value>
+  </data>
+  <data name="Weighing_Balance_Drop" xml:space="preserve">
+    <value>重心在刀口下多远</value>
+  </data>
+  <data name="Weighing_Balance_Readout" xml:space="preserve">
+    <value>横梁停在倾斜 {0}° 的位置。</value>
+  </data>
+  <data name="Weighing_Balance_Topples" xml:space="preserve">
+    <value>重心不在刀口下面：没有东西把横梁拉回来，它就翻倒了。</value>
+  </data>
+  <data name="Weighing_Balance_Picture" xml:space="preserve">
+    <value>架在刀口上的等臂天平，两头各挂一个秤盘，重心在刀口下方，指针指着刻度</value>
+  </data>
+  <data name="Weighing_Balance_MassLabel" xml:space="preserve">
+    <value>重心</value>
+  </data>
+  <data name="Weighing_Balance_ToppleLabel" xml:space="preserve">
+    <value>翻倒了！</value>
+  </data>
+  <data name="Weighing_Balance_TiltLabel" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Weighing_Balance_Rule" xml:space="preserve">
+    <value>刀口下面的重心把横梁拉回来</value>
+  </data>
+  <data name="Narr_Weighing_Balance_01" xml:space="preserve">
+    <value>两个秤盘各放一百克：横梁平平地停着。</value>
+  </data>
+  <data name="Narr_Weighing_Balance_02" xml:space="preserve">
+    <value>在右边加十克。那边往下沉，横梁停在倾斜大约二十度的位置。</value>
+  </data>
+  <data name="Narr_Weighing_Balance_03" xml:space="preserve">
+    <value>轮到你了：让重心靠近刀口，直到这十克让横梁倾斜超过三十五度。</value>
+  </data>
+  <data name="Narr_Weighing_Balance_04" xml:space="preserve">
+    <value>挪过头了：重心到了刀口上面，没有东西把横梁拉回来，它就整个翻倒了。</value>
+  </data>
+  <data name="Narr_Weighing_Balance_05" xml:space="preserve">
+    <value>为什么横梁会停在一个倾斜的位置，而不是翻倒？</value>
+  </data>
+  <data name="Weighing_Balance_Quiz1" xml:space="preserve">
+    <value>秤盘够重，把它挡住了</value>
+  </data>
+  <data name="Weighing_Balance_Quiz2" xml:space="preserve">
+    <value>刀口有点黏</value>
+  </data>
+  <data name="Weighing_Balance_Quiz3" xml:space="preserve">
+    <value>它在刀口下面的重心摆到一边，把它拉了回来</value>
+  </data>
+  <data name="Weighing_Balance_Part_Pans" xml:space="preserve">
+    <value>秤盘</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Pans" xml:space="preserve">
+    <value>它们用线笔直地挂着，所以东西放在盘里哪儿，拉力都一样。</value>
+  </data>
+  <data name="Weighing_Balance_Part_Pointer" xml:space="preserve">
+    <value>指针</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Pointer" xml:space="preserve">
+    <value>固定在横梁上。它很长，把一点点倾斜变成刻度上的一大段移动。</value>
+  </data>
+  <data name="Weighing_Balance_Part_Edge" xml:space="preserve">
+    <value>刀口</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Edge" xml:space="preserve">
+    <value>横梁架在上面摆动的又硬又锋利的边，所以转动时几乎没有摩擦。</value>
+  </data>
+  <data name="Weighing_Balance_Part_Beam" xml:space="preserve">
+    <value>横梁</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Beam" xml:space="preserve">
+    <value>两边臂长相等。它的重心，也就是那个黑点，决定了它有多稳、有多灵敏。</value>
+  </data>
+  <data name="Weighing_Steelyard_Title" xml:space="preserve">
+    <value>一个秤砣称万物</value>
+  </data>
+  <data name="Weighing_Steelyard_P1" xml:space="preserve">
+    <value>天平需要一整盒砝码，杆秤只要一个秤砣。秤杆在靠近一头的地方挂起来；东西挂在一边的短臂上，另一边的长臂上挂着一个可以滑动的秤砣。</value>
+  </data>
+  <data name="Weighing_Steelyard_P2" xml:space="preserve">
+    <value>这是一根杠杆。东西乘以它到支点的短距离，等于秤砣乘以它的长距离时，秤杆就平了。东西挂在离支点五厘米处，秤砣重一千克，秤砣每往外滑五厘米，就能多平衡一千克，所以秤杆上可以直接刻上千克数。</value>
+  </data>
+  <data name="Weighing_Steelyard_Deeper" xml:space="preserve">
+    <value>杆秤在从中国到罗马的集市上用了几千年。很多杆秤有两个提纽：靠近重物的那个称重东西，远一点的称轻东西，各有一排自己的刻度。长臂上一个小秤砣能称很重的东西，但每一毫米都要紧：刻度刻错了位置，或者秤砣被锉轻了一点，每个买东西的人都会吃亏。</value>
+  </data>
+  <data name="Weighing_Steelyard_Sack" xml:space="preserve">
+    <value>袋子的质量</value>
+  </data>
+  <data name="Weighing_Steelyard_Position" xml:space="preserve">
+    <value>秤砣离支点多远</value>
+  </data>
+  <data name="Weighing_Steelyard_Readout" xml:space="preserve">
+    <value>秤杆上读数是 {0}。</value>
+  </data>
+  <data name="Weighing_Steelyard_Level" xml:space="preserve">
+    <value>秤杆平了：这就是袋子的质量。</value>
+  </data>
+  <data name="Weighing_Steelyard_SackDown" xml:space="preserve">
+    <value>袋子那边往下沉：把秤砣往外滑。</value>
+  </data>
+  <data name="Weighing_Steelyard_PoiseDown" xml:space="preserve">
+    <value>秤砣那边往下沉：把它往回滑。</value>
+  </data>
+  <data name="Weighing_Steelyard_Picture" xml:space="preserve">
+    <value>挂在横梁上的杆秤：短臂挂着袋子，一千克的秤砣在长长的刻度臂上滑动</value>
+  </data>
+  <data name="Weighing_Steelyard_ReadsLabel" xml:space="preserve">
+    <value>读数 {0}</value>
+  </data>
+  <data name="Weighing_Steelyard_Rule" xml:space="preserve">
+    <value>袋子 × 5 厘米 = 1 千克 × 秤砣的距离</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_01" xml:space="preserve">
+    <value>袋子挂在离支点只有五厘米的钩子上。</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_02" xml:space="preserve">
+    <value>这个一千克的秤砣沿着长臂滑动。现在它离得不够远，袋子那边往下沉。</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_03" xml:space="preserve">
+    <value>轮到你了：滑动秤砣，直到秤杆平了。</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_04" xml:space="preserve">
+    <value>袋子越重，秤砣就得越往外。所以秤杆上可以刻千克数。</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_05" xml:space="preserve">
+    <value>一个小秤砣怎么能平衡重得多的袋子？</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz1" xml:space="preserve">
+    <value>它离支点远得多：平衡靠的是重量乘以距离</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz2" xml:space="preserve">
+    <value>秤杆本身很重</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz3" xml:space="preserve">
+    <value>支点把袋子往上推</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Hook" xml:space="preserve">
+    <value>袋子</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Hook" xml:space="preserve">
+    <value>要称的东西，挂在离支点很近的短臂上。</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Poise" xml:space="preserve">
+    <value>秤砣</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Poise" xml:space="preserve">
+    <value>一千克。每往外挪五厘米，就能多平衡钩上的一千克。</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Arm" xml:space="preserve">
+    <value>秤杆</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Arm" xml:space="preserve">
+    <value>上面刻的是千克，不是厘米：刻度已经把乘法算好了。</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Pivot" xml:space="preserve">
+    <value>提纽</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Pivot" xml:space="preserve">
+    <value>杆秤挂起来、绕着转的地方。全部的诀窍就在两边离这里有多远。</value>
+  </data>
+  <data name="Weighing_Spring_Title" xml:space="preserve">
+    <value>拉长再弹回</value>
+  </data>
+  <data name="Weighing_Spring_P1" xml:space="preserve">
+    <value>弹簧秤靠拉长来称重。弹簧上挂两倍的东西，它就拉长两倍；挂三倍，就拉长三倍。所以弹簧末端的指针沿着一把等间距的刻度移动就行了。</value>
+  </data>
+  <data name="Weighing_Spring_P2" xml:space="preserve">
+    <value>把东西拿下来，弹簧就弹回原来的位置，一点不差，只要它没被拉过头。要是超载了，弹簧圈就被永久拉弯：它从此长了一点，以后就算什么也不挂，读数也偏大。</value>
+  </data>
+  <data name="Weighing_Spring_Deeper" xml:space="preserve">
+    <value>拉力多大、伸长多少，大多数固体被轻轻拉伸时都是这样：原子被稍稍拉开，又往回拉。拉得太过，原子就滑到新的位置上去了，这就是永久变形。好的弹簧秤有一个挡块，不让它被拉过极限，还有一颗螺丝，可以把指针调回零。</value>
+  </data>
+  <data name="Weighing_Spring_Mass" xml:space="preserve">
+    <value>钩上的东西</value>
+  </data>
+  <data name="Weighing_Spring_Off" xml:space="preserve">
+    <value>把东西拿下来</value>
+  </data>
+  <data name="Weighing_Spring_Readout" xml:space="preserve">
+    <value>读数是 {0}；弹簧拉长了 {1}。</value>
+  </data>
+  <data name="Weighing_Spring_Set" xml:space="preserve">
+    <value>它已被永久拉长了 {0}，所以现在读数偏大。</value>
+  </data>
+  <data name="Weighing_Spring_Picture" xml:space="preserve">
+    <value>弹簧秤：从环上挂下来的弹簧，底端的指针沿着千克刻度往下移，下面的钩子挂着东西</value>
+  </data>
+  <data name="Weighing_Spring_LimitLabel" xml:space="preserve">
+    <value>极限</value>
+  </data>
+  <data name="Weighing_Spring_ReadsLabel" xml:space="preserve">
+    <value>读数 {0}</value>
+  </data>
+  <data name="Weighing_Spring_Rule" xml:space="preserve">
+    <value>东西加倍，伸长加倍</value>
+  </data>
+  <data name="Narr_Weighing_Spring_01" xml:space="preserve">
+    <value>钩上挂两千克，这根弹簧拉长四厘米。</value>
+  </data>
+  <data name="Narr_Weighing_Spring_02" xml:space="preserve">
+    <value>四千克：东西加倍，伸长也加倍。所以刻度是等间距的。</value>
+  </data>
+  <data name="Narr_Weighing_Spring_03" xml:space="preserve">
+    <value>轮到你了：挂上七千克，超过它的极限。</value>
+  </data>
+  <data name="Narr_Weighing_Spring_04" xml:space="preserve">
+    <value>现在把东西拿下来。指针回不到零了：弹簧被永久拉长了。</value>
+  </data>
+  <data name="Narr_Weighing_Spring_05" xml:space="preserve">
+    <value>为什么弹簧秤的刻度是等间距的？</value>
+  </data>
+  <data name="Weighing_Spring_Quiz1" xml:space="preserve">
+    <value>为了方便印刷</value>
+  </data>
+  <data name="Weighing_Spring_Quiz2" xml:space="preserve">
+    <value>因为伸长和东西的重量成正比</value>
+  </data>
+  <data name="Weighing_Spring_Quiz3" xml:space="preserve">
+    <value>因为弹簧越拉越硬</value>
+  </data>
+  <data name="Weighing_Spring_Part_Spring" xml:space="preserve">
+    <value>弹簧</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Spring" xml:space="preserve">
+    <value>一圈圈的钢丝。在极限之内，它总能弹回来。</value>
+  </data>
+  <data name="Weighing_Spring_Part_Pointer" xml:space="preserve">
+    <value>指针</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Pointer" xml:space="preserve">
+    <value>固定在弹簧底端，每千克往下移两厘米。</value>
+  </data>
+  <data name="Weighing_Spring_Part_Hook" xml:space="preserve">
+    <value>钩子</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Hook" xml:space="preserve">
+    <value>东西挂在这里，它的全部重量都拉着弹簧。</value>
+  </data>
+  <data name="Weighing_Spring_Part_Scale" xml:space="preserve">
+    <value>刻度</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Scale" xml:space="preserve">
+    <value>按能回到零的弹簧来刻的。红线是它能安全拉到的最远处。</value>
+  </data>
+  <data name="Weighing_Roberval_Title" xml:space="preserve">
+    <value>放在盘上哪儿都行</value>
+  </data>
+  <data name="Weighing_Roberval_P1" xml:space="preserve">
+    <value>把秤盘装在一根绕着立柱转动的单臂末端，臂的另一头下面垫一根弹簧。东西放在盘子正中，读数是对的。挪到盘子外沿，它离立柱更远，转动臂的劲儿更大，读数就偏大；往里挪，读数就偏小。</value>
+  </data>
+  <data name="Weighing_Roberval_P2" xml:space="preserve">
+    <value>厨房秤用两根平行的连杆来解决这个问题，一上一下，把立柱和秤盘的支柱连起来，每个角都用销子连接。四个销子组成一个平行四边形，支柱只能笔直地上下滑动，永远不会倾斜。转动的劲儿被连杆承担了，支柱下面的弹簧只感觉到东西的重量，不管它放在哪儿。</value>
+  </data>
+  <data name="Weighing_Roberval_Deeper" xml:space="preserve">
+    <value>这种连杆是一位法国数学家在十七世纪想出来的，现在几乎每台带盘子的秤里都有：厨房秤、商店的秤、超市收银台下面的秤。看看信件秤，或者两个秤盘都在上面的老式商店天平：底座里藏着的，就是同样让秤盘保持水平的平行连杆。</value>
+  </data>
+  <data name="Weighing_Roberval_Offset" xml:space="preserve">
+    <value>东西放在盘上哪儿</value>
+  </data>
+  <data name="Weighing_Roberval_Parallel" xml:space="preserve">
+    <value>用两根平行连杆托住秤盘</value>
+  </data>
+  <data name="Weighing_Roberval_Readout" xml:space="preserve">
+    <value>东西重 {1}，秤上读数 {0}。</value>
+  </data>
+  <data name="Weighing_Roberval_Picture" xml:space="preserve">
+    <value>侧面看的厨房秤：秤盘装在单臂上，或者装在从立柱伸出的两根平行连杆上，下面是弹簧，旁边是表盘</value>
+  </data>
+  <data name="Weighing_Roberval_TakesTurning" xml:space="preserve">
+    <value>连杆承担转动</value>
+  </data>
+  <data name="Weighing_Roberval_ParallelLabel" xml:space="preserve">
+    <value>放哪儿都一样</value>
+  </data>
+  <data name="Weighing_Roberval_ArmLabel" xml:space="preserve">
+    <value>要看放在哪儿！</value>
+  </data>
+  <data name="Weighing_Roberval_Rule" xml:space="preserve">
+    <value>平行四边形让秤盘保持水平</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_01" xml:space="preserve">
+    <value>这个秤盘装在一根单臂的末端，臂的另一头下面垫着弹簧。</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_02" xml:space="preserve">
+    <value>把东西挪到盘子外沿。它离立柱更远，转动臂的劲儿更大，秤上读数变成了七百五十克。</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_03" xml:space="preserve">
+    <value>轮到你了：改用两根平行连杆托住秤盘。</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_04" xml:space="preserve">
+    <value>现在把东西挪到靠里的一边。转动的劲儿由连杆承担，秤上读数仍然是五百克。</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_05" xml:space="preserve">
+    <value>为什么厨房秤不管东西放在哪儿，读数都一样？</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz1" xml:space="preserve">
+    <value>它的秤盘很轻</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz2" xml:space="preserve">
+    <value>里面的电脑会修正</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz3" xml:space="preserve">
+    <value>平行连杆让秤盘的支柱保持竖直，只有重量传到弹簧上</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Pan" xml:space="preserve">
+    <value>秤盘</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Pan" xml:space="preserve">
+    <value>装在平行连杆上，往下移时始终保持水平。</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Load" xml:space="preserve">
+    <value>东西</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Load" xml:space="preserve">
+    <value>五百克。挪动它，看看读数变不变。</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Links" xml:space="preserve">
+    <value>连杆</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Links" xml:space="preserve">
+    <value>一根臂会让秤盘倾斜转动；两根平行连杆，四角都用销子连着，就只让它笔直地往下滑。</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Post" xml:space="preserve">
+    <value>立柱</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Post" xml:space="preserve">
+    <value>固定在底座上。连杆绕着它转动。</value>
+  </data>
+  <data name="Weighing_Strain_Title" xml:space="preserve">
+    <value>电子秤</value>
+  </data>
+  <data name="Weighing_Strain_P1" xml:space="preserve">
+    <value>电子秤里面没有你能看到拉长的弹簧，只有一块金属，在重物下面微微弯曲，弯得比一根头发丝还细。上面粘着一片应变片，是一条弯弯曲曲的细金属箔。下面的金属一被拉长，金属箔也跟着被拉长、变细，电阻就增加一点点。</value>
+  </data>
+  <data name="Weighing_Strain_P2" xml:space="preserve">
+    <value>这个变化非常小，只有零点几欧姆，所以要用电桥来测：四个电阻连成一圈，一对角接电源，另一对角接一个很灵敏的电表。平衡时电表读数为零；应变片那一点点变化让电桥失去平衡，差出几毫伏，芯片再把它换算成显示屏上的千克数。</value>
+  </data>
+  <data name="Weighing_Strain_Deeper" xml:space="preserve">
+    <value>温度也会改变应变片的电阻，所以只用一片应变片，会把屋子变暖误当成东西变重。好的称重传感器用四片应变片当电桥的四条臂：两片贴在梁的上面，受拉；两片贴在下面，受压。弯曲让电桥失衡的程度是一片的四倍，而温度对四片的影响一模一样，正好互相抵消。</value>
+  </data>
+  <data name="Weighing_Strain_Mass" xml:space="preserve">
+    <value>东西</value>
+  </data>
+  <data name="Weighing_Strain_Warm" xml:space="preserve">
+    <value>把屋子加热 10 °C</value>
+  </data>
+  <data name="Weighing_Strain_Bridge" xml:space="preserve">
+    <value>电桥用四片应变片</value>
+  </data>
+  <data name="Weighing_Strain_Readout" xml:space="preserve">
+    <value>梁的上表面拉长了百万分之 {0}；每片应变片的 350 欧姆增加了 {1} 欧姆。显示屏读数 {2}。</value>
+  </data>
+  <data name="Weighing_Strain_Picture" xml:space="preserve">
+    <value>称重传感器：一端夹住、另一端挂着东西的金属梁，上面贴着应变片；下面是接成电桥的应变片、电表和显示屏</value>
+  </data>
+  <data name="Weighing_Strain_FourLabel" xml:space="preserve">
+    <value>下面还有两片，受压</value>
+  </data>
+  <data name="Weighing_Strain_WarmLabel" xml:space="preserve">
+    <value>+10 °C</value>
+  </data>
+  <data name="Weighing_Strain_Drawn" xml:space="preserve">
+    <value>弯曲画大了几千倍</value>
+  </data>
+  <data name="Weighing_Strain_Supply" xml:space="preserve">
+    <value>5 V</value>
+  </data>
+  <data name="Weighing_Strain_Millivolts" xml:space="preserve">
+    <value>{0} 毫伏</value>
+  </data>
+  <data name="Weighing_Strain_ErrorLabel" xml:space="preserve">
+    <value>多了 {0}！</value>
+  </data>
+  <data name="Weighing_Strain_Rule" xml:space="preserve">
+    <value>金属箔被拉长，电阻增大</value>
+  </data>
+  <data name="Narr_Weighing_Strain_01" xml:space="preserve">
+    <value>这根金属梁挂着两千克。它弯了，只是弯得太少，根本看不出来。</value>
+  </data>
+  <data name="Narr_Weighing_Strain_02" xml:space="preserve">
+    <value>上面的应变片跟着被拉长。它的电阻增加了十分之一欧姆多一点。</value>
+  </data>
+  <data name="Narr_Weighing_Strain_03" xml:space="preserve">
+    <value>轮到你了：把屋子加热十度，看看显示屏。</value>
+  </data>
+  <data name="Narr_Weighing_Strain_04" xml:space="preserve">
+    <value>一片应变片把变暖当成了多一千克。电桥里用四片应变片，温度的影响互相抵消，显示屏又对了。</value>
+  </data>
+  <data name="Narr_Weighing_Strain_05" xml:space="preserve">
+    <value>电子秤为什么用四片应变片，而不是一片？</value>
+  </data>
+  <data name="Weighing_Strain_Quiz1" xml:space="preserve">
+    <value>温度对四片的影响一样，互相抵消，弯曲的效果却叠加起来</value>
+  </data>
+  <data name="Weighing_Strain_Quiz2" xml:space="preserve">
+    <value>以防坏掉三片</value>
+  </data>
+  <data name="Weighing_Strain_Quiz3" xml:space="preserve">
+    <value>让秤更重、更稳</value>
+  </data>
+  <data name="Weighing_Strain_Part_Bar" xml:space="preserve">
+    <value>金属梁</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Bar" xml:space="preserve">
+    <value>一块金属，弯得非常少，而且同样的东西总是弯同样多。</value>
+  </data>
+  <data name="Weighing_Strain_Part_Gauge" xml:space="preserve">
+    <value>应变片</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Gauge" xml:space="preserve">
+    <value>粘在梁上弯弯曲曲的细金属箔。被拉长后它变长变细，对电流的阻碍也就多了一点。</value>
+  </data>
+  <data name="Weighing_Strain_Part_Bridge" xml:space="preserve">
+    <value>电桥</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Bridge" xml:space="preserve">
+    <value>连成一圈的四个电阻。它显示的不是电阻多大，只是它们失衡了多少。</value>
+  </data>
+  <data name="Weighing_Strain_Part_Display" xml:space="preserve">
+    <value>显示屏</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Display" xml:space="preserve">
+    <value>芯片把电桥那几毫伏的电压换算成千克。</value>
+  </data>
+  <data name="Weighing_Moon_Title" xml:space="preserve">
+    <value>在月球上称重</value>
+  </data>
+  <data name="Weighing_Moon_P1" xml:space="preserve">
+    <value>弹簧秤其实量的不是袋子里有多少东西，而是重力把袋子往下拉得多用力。把它带到月球上，那里的重力只有地球的六分之一左右，同一个袋子只把弹簧拉长六分之一：在地球上刻好的弹簧秤，读数只有质量的六分之一。</value>
+  </data>
+  <data name="Weighing_Moon_P2" xml:space="preserve">
+    <value>天平是拿袋子和另一个盘里已知质量的砝码比。在月球上，两个盘子受的拉力都只有六分之一，所以它们仍然在同样的地方平衡。天平在地球、月球、火星上读数都一样：它量的是质量，也就是东西有多少；弹簧秤量的是重量，也就是东西受的拉力。</value>
+  </data>
+  <data name="Weighing_Moon_Deeper" xml:space="preserve">
+    <value>日常说话时我们说“重量”，指的其实是质量。在地球上这没什么区别，因为地球表面各处的重力差不多一样。不过也不完全一样：两极的重力比赤道大约强千分之五，所以灵敏的电子秤要按使用的地方来校准。天平永远不需要。</value>
+  </data>
+  <data name="Weighing_Moon_Place" xml:space="preserve">
+    <value>我们在哪儿</value>
+  </data>
+  <data name="Weighing_Moon_Mass" xml:space="preserve">
+    <value>袋子的质量</value>
+  </data>
+  <data name="Weighing_Moon_Readout" xml:space="preserve">
+    <value>在{0}，弹簧秤读数 {1}；天平读数 {2}。</value>
+  </data>
+  <data name="Weighing_Moon_Earth" xml:space="preserve">
+    <value>地球</value>
+  </data>
+  <data name="Weighing_Moon_TheMoon" xml:space="preserve">
+    <value>月球</value>
+  </data>
+  <data name="Weighing_Moon_Mars" xml:space="preserve">
+    <value>火星</value>
+  </data>
+  <data name="Weighing_Moon_Picture" xml:space="preserve">
+    <value>同一个袋子分别用弹簧秤和天平称，站在地球、月球或火星上</value>
+  </data>
+  <data name="Weighing_Moon_GroundLabel" xml:space="preserve">
+    <value>{0}：重力加速度 {1} 米/秒²</value>
+  </data>
+  <data name="Weighing_Moon_SpringLabel" xml:space="preserve">
+    <value>弹簧秤：{0}</value>
+  </data>
+  <data name="Weighing_Moon_BalanceLabel" xml:space="preserve">
+    <value>天平：{0}</value>
+  </data>
+  <data name="Weighing_Moon_Rule" xml:space="preserve">
+    <value>弹簧秤称的是拉力；天平比的是东西有多少</value>
+  </data>
+  <data name="Narr_Weighing_Moon_01" xml:space="preserve">
+    <value>一千克糖，装在袋子里。</value>
+  </data>
+  <data name="Narr_Weighing_Moon_02" xml:space="preserve">
+    <value>左边的弹簧秤，重力把袋子拉多用力，它就拉长多少。在地球上，它的读数是一千克。</value>
+  </data>
+  <data name="Narr_Weighing_Moon_03" xml:space="preserve">
+    <value>轮到你了：把两台秤都带到月球上去。</value>
+  </data>
+  <data name="Narr_Weighing_Moon_04" xml:space="preserve">
+    <value>弹簧秤现在只读出大约六分之一千克。天平还是一千克：它的两个盘子受的拉力一起变小了。</value>
+  </data>
+  <data name="Narr_Weighing_Moon_05" xml:space="preserve">
+    <value>这两台秤，哪一台量的是糖有多少？</value>
+  </data>
+  <data name="Weighing_Moon_Quiz1" xml:space="preserve">
+    <value>弹簧秤</value>
+  </data>
+  <data name="Weighing_Moon_Quiz2" xml:space="preserve">
+    <value>天平</value>
+  </data>
+  <data name="Weighing_Moon_Quiz3" xml:space="preserve">
+    <value>哪个都不是</value>
+  </data>
+  <data name="Weighing_Moon_Part_Bag" xml:space="preserve">
+    <value>袋子</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Bag" xml:space="preserve">
+    <value>不管到哪儿，糖都是那么多。变的只是它受的拉力。</value>
+  </data>
+  <data name="Weighing_Moon_Part_Spring" xml:space="preserve">
+    <value>弹簧秤</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Spring" xml:space="preserve">
+    <value>它量的是重力的拉力，所以重力弱的地方读数小。</value>
+  </data>
+  <data name="Weighing_Moon_Part_Balance" xml:space="preserve">
+    <value>天平</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Balance" xml:space="preserve">
+    <value>两个盘子受的拉力一样，所以在哪儿都在同样的质量上平衡。</value>
+  </data>
+  <data name="Weighing_Moon_Part_Ground" xml:space="preserve">
+    <value>地面</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Ground" xml:space="preserve">
+    <value>地球、月球或者火星，各自用自己的力气往下拉。</value>
+  </data>
 </root>

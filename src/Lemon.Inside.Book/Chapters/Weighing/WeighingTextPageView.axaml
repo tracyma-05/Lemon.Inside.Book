@@ -1,0 +1,154 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:weighing="using:Lemon.Inside.Book.Chapters.Weighing"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Weighing.WeighingTextPageView"
+                              x:DataType="weighing:WeighingTextPageViewModel">
+    <!-- A left page of the Weighing chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="weighing:BalanceSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DifferenceText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Balance_Difference}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="20" Value="{Binding Difference}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Balance_Difference}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DropText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Balance_Drop}" />
+                                </DockPanel>
+                                <Slider Minimum="-1" Maximum="4" Value="{Binding Drop}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Balance_Drop}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:SteelyardSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SackText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Steelyard_Sack}" />
+                                </DockPanel>
+                                <Slider Minimum="2" Maximum="18" Value="{Binding Sack}" SmallChange="0.5" LargeChange="1"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Steelyard_Sack}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PositionText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Steelyard_Position}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="100" Value="{Binding Position}" SmallChange="0.5" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Steelyard_Position}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:SpringSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding MassText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Spring_Mass}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="8" Value="{Binding Mass}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Spring_Mass}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Off}" Content="{loc:Localize Weighing_Spring_Off}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:RobervalSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding OffsetText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Roberval_Offset}" />
+                                </DockPanel>
+                                <Slider Minimum="-6" Maximum="6" Value="{Binding Offset}" SmallChange="0.25" LargeChange="1"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Roberval_Offset}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Parallel}" Content="{loc:Localize Weighing_Roberval_Parallel}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:StrainSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding MassText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Strain_Mass}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="5" Value="{Binding Mass}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Strain_Mass}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Warm}" Content="{loc:Localize Weighing_Strain_Warm}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Bridge}" Content="{loc:Localize Weighing_Strain_Bridge}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:MoonSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PlaceText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Moon_Place}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="2" Value="{Binding Place}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Moon_Place}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding MassText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Weighing_Moon_Mass}" />
+                                </DockPanel>
+                                <Slider Minimum="0.5" Maximum="5" Value="{Binding Mass}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Weighing_Moon_Mass}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

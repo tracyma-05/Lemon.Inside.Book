@@ -5862,4 +5862,553 @@
   <data name="Narr_Bridges_Expansion_Part_Abutment" xml:space="preserve">
     <value>The block the deck ends at. With no joint, the deck would push on it with thousands of tonnes.</value>
   </data>
+  <data name="Chapter_Weighing" xml:space="preserve">
+    <value>Weighing things</value>
+  </data>
+  <data name="Weighing_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Weighing_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Weighing_Kg" xml:space="preserve">
+    <value>{0} kg</value>
+  </data>
+  <data name="Weighing_Grams" xml:space="preserve">
+    <value>{0} g</value>
+  </data>
+  <data name="Weighing_Centimetres" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Weighing_Balance_Title" xml:space="preserve">
+    <value>The balance</value>
+  </data>
+  <data name="Weighing_Balance_P1" xml:space="preserve">
+    <value>A balance compares two things. Its beam rocks on a sharp knife edge, with a pan hanging from each end. Put equal masses in the pans and it rests level; add a little more to one side and that side sinks until the beam settles at a tilt. The pointer shows the tilt on a scale.</value>
+  </data>
+  <data name="Weighing_Balance_P2" xml:space="preserve">
+    <value>Why does it settle at all, instead of tipping right over? Because the beam's own centre of mass hangs a little below the knife edge. As the beam tilts, that centre swings out to one side and pulls the beam back, until the pulls balance. The closer the centre of mass is to the edge, the less it pulls back, and the farther a small difference tips the beam.</value>
+  </data>
+  <data name="Weighing_Balance_Deeper" xml:space="preserve">
+    <value>Here lies the balance-maker's dilemma. A centre of mass far below the edge makes a steady, quick beam that hardly notices a few grams. One very close makes a sensitive beam that swings slowly. And one above the edge makes a beam that tips over and stays tipped whatever is in the pans. Fine balances have a small screw on the pointer that moves the centre of mass up or down to set the sensitivity.</value>
+  </data>
+  <data name="Weighing_Balance_Difference" xml:space="preserve">
+    <value>Extra on the right pan</value>
+  </data>
+  <data name="Weighing_Balance_Drop" xml:space="preserve">
+    <value>Centre of mass below the edge</value>
+  </data>
+  <data name="Weighing_Balance_Readout" xml:space="preserve">
+    <value>The beam settles at a tilt of {0}°.</value>
+  </data>
+  <data name="Weighing_Balance_Topples" xml:space="preserve">
+    <value>The centre of mass is not below the edge: nothing pulls the beam back, and it tips over.</value>
+  </data>
+  <data name="Weighing_Balance_Picture" xml:space="preserve">
+    <value>An equal-arm balance on a knife edge, a pan hanging from each end, its centre of mass below the edge and a pointer over a scale</value>
+  </data>
+  <data name="Weighing_Balance_MassLabel" xml:space="preserve">
+    <value>centre of mass</value>
+  </data>
+  <data name="Weighing_Balance_ToppleLabel" xml:space="preserve">
+    <value>tips over!</value>
+  </data>
+  <data name="Weighing_Balance_TiltLabel" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Weighing_Balance_Rule" xml:space="preserve">
+    <value>the centre of mass below the edge pulls the beam back</value>
+  </data>
+  <data name="Narr_Weighing_Balance_01" xml:space="preserve">
+    <value>A hundred grams in each pan: the beam rests level.</value>
+  </data>
+  <data name="Narr_Weighing_Balance_02" xml:space="preserve">
+    <value>Add ten grams on the right. That side sinks, and the beam settles at a tilt of about twenty degrees.</value>
+  </data>
+  <data name="Narr_Weighing_Balance_03" xml:space="preserve">
+    <value>Your turn: bring the centre of mass closer to the knife edge, until those ten grams tilt the beam more than thirty-five degrees.</value>
+  </data>
+  <data name="Narr_Weighing_Balance_04" xml:space="preserve">
+    <value>Too far: with the centre of mass above the edge, nothing pulls the beam back, and it tips right over.</value>
+  </data>
+  <data name="Narr_Weighing_Balance_05" xml:space="preserve">
+    <value>Why does the beam settle at a tilt instead of tipping over?</value>
+  </data>
+  <data name="Weighing_Balance_Quiz1" xml:space="preserve">
+    <value>The pans are heavy enough to stop it</value>
+  </data>
+  <data name="Weighing_Balance_Quiz2" xml:space="preserve">
+    <value>The knife edge is sticky</value>
+  </data>
+  <data name="Weighing_Balance_Quiz3" xml:space="preserve">
+    <value>Its centre of mass, below the edge, swings aside and pulls it back</value>
+  </data>
+  <data name="Weighing_Balance_Part_Pans" xml:space="preserve">
+    <value>Pans</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Pans" xml:space="preserve">
+    <value>They hang straight down on threads, so a load pulls the same wherever it sits in the pan.</value>
+  </data>
+  <data name="Weighing_Balance_Part_Pointer" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Pointer" xml:space="preserve">
+    <value>Fixed to the beam. Its long reach turns a small tilt into a big movement on the scale.</value>
+  </data>
+  <data name="Weighing_Balance_Part_Edge" xml:space="preserve">
+    <value>Knife edge</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Edge" xml:space="preserve">
+    <value>A hard, sharp edge the beam rocks on, so it turns with almost no rubbing.</value>
+  </data>
+  <data name="Weighing_Balance_Part_Beam" xml:space="preserve">
+    <value>Beam</value>
+  </data>
+  <data name="Narr_Weighing_Balance_Part_Beam" xml:space="preserve">
+    <value>Two equal arms. Its centre of mass, the dark dot, decides how steady and how sensitive it is.</value>
+  </data>
+  <data name="Weighing_Steelyard_Title" xml:space="preserve">
+    <value>One weight for every load</value>
+  </data>
+  <data name="Weighing_Steelyard_P1" xml:space="preserve">
+    <value>A balance needs a box of weights. A steelyard needs only one. Its arm hangs from a pivot near one end; the load hangs on a short arm on one side, and a single weight slides along the long arm on the other.</value>
+  </data>
+  <data name="Weighing_Steelyard_P2" xml:space="preserve">
+    <value>It is a lever. The arm balances when the load times its short distance equals the weight times its long distance. With the load five centimetres from the pivot and a one-kilogram weight, each five centimetres the weight slides out balances one more kilogram, so the arm can be marked in kilograms.</value>
+  </data>
+  <data name="Weighing_Steelyard_Deeper" xml:space="preserve">
+    <value>Steelyards were used for thousands of years in markets from China to Rome. Many have two hooks to hang from, one close to the load for heavy things and one farther away for light ones, each with its own row of marks. A small weight on a long arm can weigh a great deal, but every millimetre counts: a mark in the wrong place, or a weight filed a little lighter, cheats every customer.</value>
+  </data>
+  <data name="Weighing_Steelyard_Sack" xml:space="preserve">
+    <value>The sack's mass</value>
+  </data>
+  <data name="Weighing_Steelyard_Position" xml:space="preserve">
+    <value>The weight's distance from the pivot</value>
+  </data>
+  <data name="Weighing_Steelyard_Readout" xml:space="preserve">
+    <value>The arm reads {0}.</value>
+  </data>
+  <data name="Weighing_Steelyard_Level" xml:space="preserve">
+    <value>It is level: that is the sack's mass.</value>
+  </data>
+  <data name="Weighing_Steelyard_SackDown" xml:space="preserve">
+    <value>The sack's side sinks: slide the weight farther out.</value>
+  </data>
+  <data name="Weighing_Steelyard_PoiseDown" xml:space="preserve">
+    <value>The weight's side sinks: slide it back in.</value>
+  </data>
+  <data name="Weighing_Steelyard_Picture" xml:space="preserve">
+    <value>A steelyard hanging from a beam: a sack on the short arm and a one-kilogram weight sliding along the long, marked arm</value>
+  </data>
+  <data name="Weighing_Steelyard_ReadsLabel" xml:space="preserve">
+    <value>reads {0}</value>
+  </data>
+  <data name="Weighing_Steelyard_Rule" xml:space="preserve">
+    <value>sack × 5 cm = 1 kg × the weight's distance</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_01" xml:space="preserve">
+    <value>The sack hangs on a hook just five centimetres from the pivot.</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_02" xml:space="preserve">
+    <value>This one-kilogram weight slides along the long arm. Here it is not far enough out, and the sack's side sinks.</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_03" xml:space="preserve">
+    <value>Your turn: slide the weight until the arm is level.</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_04" xml:space="preserve">
+    <value>A heavier sack needs the weight farther out. That is why the arm can be marked in kilograms.</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_05" xml:space="preserve">
+    <value>How can one small weight balance a much heavier sack?</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz1" xml:space="preserve">
+    <value>It sits much farther from the pivot: weight times distance is what balances</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz2" xml:space="preserve">
+    <value>The arm itself is very heavy</value>
+  </data>
+  <data name="Weighing_Steelyard_Quiz3" xml:space="preserve">
+    <value>The pivot pushes the sack up</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Hook" xml:space="preserve">
+    <value>Sack</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Hook" xml:space="preserve">
+    <value>The load, on a short arm close to the pivot.</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Poise" xml:space="preserve">
+    <value>Sliding weight</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Poise" xml:space="preserve">
+    <value>One kilogram. Every five centimetres farther out balances one more kilogram on the hook.</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Arm" xml:space="preserve">
+    <value>Marked arm</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Arm" xml:space="preserve">
+    <value>Marked in kilograms, not centimetres: the marks already do the multiplying.</value>
+  </data>
+  <data name="Weighing_Steelyard_Part_Pivot" xml:space="preserve">
+    <value>Pivot</value>
+  </data>
+  <data name="Narr_Weighing_Steelyard_Part_Pivot" xml:space="preserve">
+    <value>Where the steelyard hangs and turns. The whole trick is how far each side is from here.</value>
+  </data>
+  <data name="Weighing_Spring_Title" xml:space="preserve">
+    <value>Stretch and spring back</value>
+  </data>
+  <data name="Weighing_Spring_P1" xml:space="preserve">
+    <value>A spring balance measures by stretching. Hang twice the load on a spring and it stretches twice as far; three times the load, three times as far. So a pointer on the spring's end can move along a scale marked in even steps.</value>
+  </data>
+  <data name="Weighing_Spring_P2" xml:space="preserve">
+    <value>Take the load off and the spring springs back to exactly where it started, as long as it was not stretched too far. Overload it, and its coils are bent for good: it stays a little longer, and from then on it reads too much, even with nothing on it.</value>
+  </data>
+  <data name="Weighing_Spring_Deeper" xml:space="preserve">
+    <value>Stretch in step with the pull is how most solid things behave when they are stretched only a little: the atoms are pulled slightly apart and pull back. Stretched too far they slide past each other into new places, and that is the lasting set. A good spring balance has a stop that will not let it be stretched past its limit, and a screw to set its pointer back to zero.</value>
+  </data>
+  <data name="Weighing_Spring_Mass" xml:space="preserve">
+    <value>Load on the hook</value>
+  </data>
+  <data name="Weighing_Spring_Off" xml:space="preserve">
+    <value>Take the load off</value>
+  </data>
+  <data name="Weighing_Spring_Readout" xml:space="preserve">
+    <value>It reads {0}; the spring is stretched {1}.</value>
+  </data>
+  <data name="Weighing_Spring_Set" xml:space="preserve">
+    <value>It has been stretched {0} for good, so now it reads too much.</value>
+  </data>
+  <data name="Weighing_Spring_Picture" xml:space="preserve">
+    <value>A spring balance: a coil hanging from a ring, a pointer at its foot moving down a scale marked in kilograms, and a hook with a load</value>
+  </data>
+  <data name="Weighing_Spring_LimitLabel" xml:space="preserve">
+    <value>limit</value>
+  </data>
+  <data name="Weighing_Spring_ReadsLabel" xml:space="preserve">
+    <value>reads {0}</value>
+  </data>
+  <data name="Weighing_Spring_Rule" xml:space="preserve">
+    <value>twice the load, twice the stretch</value>
+  </data>
+  <data name="Narr_Weighing_Spring_01" xml:space="preserve">
+    <value>Two kilograms on the hook stretch this spring four centimetres.</value>
+  </data>
+  <data name="Narr_Weighing_Spring_02" xml:space="preserve">
+    <value>Four kilograms: twice the load, twice the stretch. The scale's marks are evenly spaced.</value>
+  </data>
+  <data name="Narr_Weighing_Spring_03" xml:space="preserve">
+    <value>Your turn: hang seven kilograms on it, more than its limit.</value>
+  </data>
+  <data name="Narr_Weighing_Spring_04" xml:space="preserve">
+    <value>Now take the load off. The pointer does not come back to zero: the spring has been stretched for good.</value>
+  </data>
+  <data name="Narr_Weighing_Spring_05" xml:space="preserve">
+    <value>Why are a spring balance's marks evenly spaced?</value>
+  </data>
+  <data name="Weighing_Spring_Quiz1" xml:space="preserve">
+    <value>To make it easier to print</value>
+  </data>
+  <data name="Weighing_Spring_Quiz2" xml:space="preserve">
+    <value>Because the stretch grows in step with the load</value>
+  </data>
+  <data name="Weighing_Spring_Quiz3" xml:space="preserve">
+    <value>Because the spring gets stiffer as it stretches</value>
+  </data>
+  <data name="Weighing_Spring_Part_Spring" xml:space="preserve">
+    <value>Spring</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Spring" xml:space="preserve">
+    <value>A coil of steel wire. Within its limit it always springs back.</value>
+  </data>
+  <data name="Weighing_Spring_Part_Pointer" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Pointer" xml:space="preserve">
+    <value>Fixed to the spring's foot, it moves down two centimetres for every kilogram.</value>
+  </data>
+  <data name="Weighing_Spring_Part_Hook" xml:space="preserve">
+    <value>Hook</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Hook" xml:space="preserve">
+    <value>The load hangs here, and its whole weight pulls on the spring.</value>
+  </data>
+  <data name="Weighing_Spring_Part_Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="Narr_Weighing_Spring_Part_Scale" xml:space="preserve">
+    <value>Marked for a spring that comes back to zero. The red line is as far as it can safely go.</value>
+  </data>
+  <data name="Weighing_Roberval_Title" xml:space="preserve">
+    <value>Anywhere on the pan</value>
+  </data>
+  <data name="Weighing_Roberval_P1" xml:space="preserve">
+    <value>Put a pan on the end of a single arm that turns about a post, with a spring under the arm's other end. A load in the middle of the pan reads correctly. Slide it out to the far edge and it turns the arm harder, because it is farther from the post, and the scale reads too much; slide it in and it reads too little.</value>
+  </data>
+  <data name="Weighing_Roberval_P2" xml:space="preserve">
+    <value>Kitchen scales solve this with two parallel links, one above the other, joining the post to the pan's column, with a pin at every corner. The four pins make a parallelogram, so the column can only slide straight up and down, never tip. The links take the turning effect, and the spring under the column feels only the load's weight, wherever it sits.</value>
+  </data>
+  <data name="Weighing_Roberval_Deeper" xml:space="preserve">
+    <value>This linkage was worked out by a French mathematician in the 1600s and is still inside almost every pan scale: kitchen scales, shop scales, the scale under a supermarket checkout. Look at a letter scale or an old shop balance with its two pans on top: underneath, hidden in the base, are the same parallel links keeping the pans level.</value>
+  </data>
+  <data name="Weighing_Roberval_Offset" xml:space="preserve">
+    <value>Where the load sits on the pan</value>
+  </data>
+  <data name="Weighing_Roberval_Parallel" xml:space="preserve">
+    <value>Hold the pan on two parallel links</value>
+  </data>
+  <data name="Weighing_Roberval_Readout" xml:space="preserve">
+    <value>The scale reads {0} for a load of {1}.</value>
+  </data>
+  <data name="Weighing_Roberval_Picture" xml:space="preserve">
+    <value>A kitchen scale from the side: the pan on a single arm or on two parallel links from a post, a spring underneath, and a dial</value>
+  </data>
+  <data name="Weighing_Roberval_TakesTurning" xml:space="preserve">
+    <value>the links take the turning</value>
+  </data>
+  <data name="Weighing_Roberval_ParallelLabel" xml:space="preserve">
+    <value>the same anywhere</value>
+  </data>
+  <data name="Weighing_Roberval_ArmLabel" xml:space="preserve">
+    <value>depends where it sits!</value>
+  </data>
+  <data name="Weighing_Roberval_Rule" xml:space="preserve">
+    <value>a parallelogram keeps the pan level</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_01" xml:space="preserve">
+    <value>This pan sits on the end of a single arm, with a spring under the arm's other end.</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_02" xml:space="preserve">
+    <value>Slide the load to the far edge. It is farther from the post, turns the arm harder, and the scale reads seven hundred and fifty grams.</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_03" xml:space="preserve">
+    <value>Your turn: hold the pan on two parallel links instead.</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_04" xml:space="preserve">
+    <value>Now move the load to the near edge. The links take the turning, and the scale still reads five hundred grams.</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_05" xml:space="preserve">
+    <value>Why does a kitchen scale read the same wherever the load sits?</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz1" xml:space="preserve">
+    <value>Its pan is very light</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz2" xml:space="preserve">
+    <value>A computer inside corrects it</value>
+  </data>
+  <data name="Weighing_Roberval_Quiz3" xml:space="preserve">
+    <value>Parallel links keep the pan's column upright, so only the weight reaches the spring</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Pan" xml:space="preserve">
+    <value>Pan</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Pan" xml:space="preserve">
+    <value>On parallel links it stays level as it moves down.</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Load" xml:space="preserve">
+    <value>Five hundred grams. Slide it to see whether the reading changes.</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Links" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Links" xml:space="preserve">
+    <value>One arm lets the pan tip and turn; two parallel links, pinned at every corner, only let it slide straight down.</value>
+  </data>
+  <data name="Weighing_Roberval_Part_Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="Narr_Weighing_Roberval_Part_Post" xml:space="preserve">
+    <value>Fixed to the base. The links pivot on it.</value>
+  </data>
+  <data name="Weighing_Strain_Title" xml:space="preserve">
+    <value>The electronic scale</value>
+  </data>
+  <data name="Weighing_Strain_P1" xml:space="preserve">
+    <value>Inside an electronic scale there is no spring you could see stretch: there is a block of metal that bends very slightly under the load, far less than a hair's width. Glued to it is a strain gauge, a zigzag of thin metal foil. When the metal under it stretches, the foil stretches too, gets longer and thinner, and its electrical resistance rises a little.</value>
+  </data>
+  <data name="Weighing_Strain_P2" xml:space="preserve">
+    <value>The change is tiny, a fraction of an ohm, so it is measured in a bridge: four resistances in a ring, with the supply across one pair of corners and a sensitive meter across the other. Balanced, the meter reads nothing; the gauge's small change unbalances it by a few thousandths of a volt, and a chip turns that into kilograms on the display.</value>
+  </data>
+  <data name="Weighing_Strain_Deeper" xml:space="preserve">
+    <value>Warmth also changes a gauge's resistance, so one gauge on its own mistakes a warm room for a heavier load. Good load cells use four gauges, two on the top of the bar that are stretched and two underneath that are squeezed, as the four arms of the bridge. The bending pushes the bridge out of balance four times as hard as one gauge could, while warmth changes all four alike and cancels out.</value>
+  </data>
+  <data name="Weighing_Strain_Mass" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Weighing_Strain_Warm" xml:space="preserve">
+    <value>Warm the room by 10 °C</value>
+  </data>
+  <data name="Weighing_Strain_Bridge" xml:space="preserve">
+    <value>Use four gauges in the bridge</value>
+  </data>
+  <data name="Weighing_Strain_Readout" xml:space="preserve">
+    <value>The bar's top stretches by {0} millionths; each gauge's 350 Ω rises by {1} Ω. The display reads {2}.</value>
+  </data>
+  <data name="Weighing_Strain_Picture" xml:space="preserve">
+    <value>A load cell: a metal bar clamped at one end with a load on the other and a strain gauge on top; below, the gauges wired as a bridge to a meter and a display</value>
+  </data>
+  <data name="Weighing_Strain_FourLabel" xml:space="preserve">
+    <value>two more gauges underneath, squeezed</value>
+  </data>
+  <data name="Weighing_Strain_WarmLabel" xml:space="preserve">
+    <value>+10 °C</value>
+  </data>
+  <data name="Weighing_Strain_Drawn" xml:space="preserve">
+    <value>the bending drawn thousands of times bigger</value>
+  </data>
+  <data name="Weighing_Strain_Supply" xml:space="preserve">
+    <value>5 V</value>
+  </data>
+  <data name="Weighing_Strain_Millivolts" xml:space="preserve">
+    <value>{0} mV</value>
+  </data>
+  <data name="Weighing_Strain_ErrorLabel" xml:space="preserve">
+    <value>{0} too much!</value>
+  </data>
+  <data name="Weighing_Strain_Rule" xml:space="preserve">
+    <value>the foil stretches, its resistance rises</value>
+  </data>
+  <data name="Narr_Weighing_Strain_01" xml:space="preserve">
+    <value>Two kilograms hang from this metal bar. It bends, though far too little to see.</value>
+  </data>
+  <data name="Narr_Weighing_Strain_02" xml:space="preserve">
+    <value>The gauge on top is stretched with it. Its resistance rises by just over a tenth of an ohm.</value>
+  </data>
+  <data name="Narr_Weighing_Strain_03" xml:space="preserve">
+    <value>Your turn: warm the room by ten degrees, and watch the display.</value>
+  </data>
+  <data name="Narr_Weighing_Strain_04" xml:space="preserve">
+    <value>One gauge took the warmth for a kilogram more. With four gauges in the bridge, the warmth cancels and the display is right again.</value>
+  </data>
+  <data name="Narr_Weighing_Strain_05" xml:space="preserve">
+    <value>Why does an electronic scale use four gauges instead of one?</value>
+  </data>
+  <data name="Weighing_Strain_Quiz1" xml:space="preserve">
+    <value>Warmth changes all four alike and cancels, while the bending adds up</value>
+  </data>
+  <data name="Weighing_Strain_Quiz2" xml:space="preserve">
+    <value>In case three of them break</value>
+  </data>
+  <data name="Weighing_Strain_Quiz3" xml:space="preserve">
+    <value>To make the scale heavier and steadier</value>
+  </data>
+  <data name="Weighing_Strain_Part_Bar" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Bar" xml:space="preserve">
+    <value>A block of metal that bends very slightly, and always by the same amount for the same load.</value>
+  </data>
+  <data name="Weighing_Strain_Part_Gauge" xml:space="preserve">
+    <value>Strain gauge</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Gauge" xml:space="preserve">
+    <value>A zigzag of thin foil glued to the bar. Stretched, it gets longer and thinner, and resists the current a little more.</value>
+  </data>
+  <data name="Weighing_Strain_Part_Bridge" xml:space="preserve">
+    <value>Bridge</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Bridge" xml:space="preserve">
+    <value>Four resistances in a ring. It shows not their size, only how far out of balance they are.</value>
+  </data>
+  <data name="Weighing_Strain_Part_Display" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="Narr_Weighing_Strain_Part_Display" xml:space="preserve">
+    <value>A chip turns the bridge's few thousandths of a volt into kilograms.</value>
+  </data>
+  <data name="Weighing_Moon_Title" xml:space="preserve">
+    <value>Weighing on the Moon</value>
+  </data>
+  <data name="Weighing_Moon_P1" xml:space="preserve">
+    <value>A spring balance does not really measure how much stuff is in a bag; it measures how hard gravity pulls the bag down. Take it to the Moon, where gravity pulls about a sixth as hard, and the same bag stretches the spring a sixth as far: a spring marked on the Earth reads a sixth of the mass.</value>
+  </data>
+  <data name="Weighing_Moon_P2" xml:space="preserve">
+    <value>A balance compares the bag with known masses in the other pan. On the Moon both pans are pulled a sixth as hard, so they still balance at the same place. A balance reads the same on the Earth, the Moon or Mars: it measures mass, the amount of stuff, while a spring measures weight, the pull on it.</value>
+  </data>
+  <data name="Weighing_Moon_Deeper" xml:space="preserve">
+    <value>In everyday speech we say weight and mean mass, and on the Earth it makes no difference, because gravity is nearly the same everywhere on its surface. Not quite: it is about half a percent stronger at the poles than at the equator, so a sensitive electronic scale must be set for the place where it is used. A balance never needs that.</value>
+  </data>
+  <data name="Weighing_Moon_Place" xml:space="preserve">
+    <value>Where we are</value>
+  </data>
+  <data name="Weighing_Moon_Mass" xml:space="preserve">
+    <value>The bag's mass</value>
+  </data>
+  <data name="Weighing_Moon_Readout" xml:space="preserve">
+    <value>On {0}, the spring reads {1}; the balance reads {2}.</value>
+  </data>
+  <data name="Weighing_Moon_Earth" xml:space="preserve">
+    <value>the Earth</value>
+  </data>
+  <data name="Weighing_Moon_TheMoon" xml:space="preserve">
+    <value>the Moon</value>
+  </data>
+  <data name="Weighing_Moon_Mars" xml:space="preserve">
+    <value>Mars</value>
+  </data>
+  <data name="Weighing_Moon_Picture" xml:space="preserve">
+    <value>The same bag weighed on a spring scale and on a balance, standing on the Earth, the Moon or Mars</value>
+  </data>
+  <data name="Weighing_Moon_GroundLabel" xml:space="preserve">
+    <value>{0}: gravity {1} m/s²</value>
+  </data>
+  <data name="Weighing_Moon_SpringLabel" xml:space="preserve">
+    <value>spring: {0}</value>
+  </data>
+  <data name="Weighing_Moon_BalanceLabel" xml:space="preserve">
+    <value>balance: {0}</value>
+  </data>
+  <data name="Weighing_Moon_Rule" xml:space="preserve">
+    <value>a spring weighs the pull; a balance compares the stuff</value>
+  </data>
+  <data name="Narr_Weighing_Moon_01" xml:space="preserve">
+    <value>One kilogram of sugar, in a bag.</value>
+  </data>
+  <data name="Narr_Weighing_Moon_02" xml:space="preserve">
+    <value>The spring scale on the left stretches as far as gravity pulls the bag. On the Earth it reads one kilogram.</value>
+  </data>
+  <data name="Narr_Weighing_Moon_03" xml:space="preserve">
+    <value>Your turn: take both scales to the Moon.</value>
+  </data>
+  <data name="Narr_Weighing_Moon_04" xml:space="preserve">
+    <value>The spring now reads about a sixth of a kilogram. The balance still reads one kilogram: both its pans are pulled less, alike.</value>
+  </data>
+  <data name="Narr_Weighing_Moon_05" xml:space="preserve">
+    <value>Which of the two measures how much sugar there is?</value>
+  </data>
+  <data name="Weighing_Moon_Quiz1" xml:space="preserve">
+    <value>The spring scale</value>
+  </data>
+  <data name="Weighing_Moon_Quiz2" xml:space="preserve">
+    <value>The balance</value>
+  </data>
+  <data name="Weighing_Moon_Quiz3" xml:space="preserve">
+    <value>Neither of them</value>
+  </data>
+  <data name="Weighing_Moon_Part_Bag" xml:space="preserve">
+    <value>Bag</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Bag" xml:space="preserve">
+    <value>The same amount of sugar wherever it goes. Only the pull on it changes.</value>
+  </data>
+  <data name="Weighing_Moon_Part_Spring" xml:space="preserve">
+    <value>Spring scale</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Spring" xml:space="preserve">
+    <value>It measures the pull of gravity, so it reads less where gravity is weaker.</value>
+  </data>
+  <data name="Weighing_Moon_Part_Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Balance" xml:space="preserve">
+    <value>Both pans are pulled alike, so it balances at the same mass anywhere.</value>
+  </data>
+  <data name="Weighing_Moon_Part_Ground" xml:space="preserve">
+    <value>Ground</value>
+  </data>
+  <data name="Narr_Weighing_Moon_Part_Ground" xml:space="preserve">
+    <value>The Earth, the Moon or Mars, each pulling with its own strength.</value>
+  </data>
 </root>

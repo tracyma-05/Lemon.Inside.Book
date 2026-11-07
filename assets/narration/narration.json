@@ -7358,6 +7358,715 @@
       "How hard the spring pulls, and how many hours it can still run the watch."
      ]
     ]
+   },
+   "Narr_Weighing_Balance_01": {
+    "duration": 4.584,
+    "hash": "d62f0a21e21b4e4d",
+    "sentences": [
+     [
+      0.05,
+      4.528,
+      "A hundred grams in each pan: the beam rests level."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_02": {
+    "duration": 7.656,
+    "hash": "44946b56f621fc48",
+    "sentences": [
+     [
+      0.05,
+      2.375,
+      "Add ten grams on the right."
+     ],
+     [
+      2.375,
+      7.597,
+      "That side sinks, and the beam settles at a tilt of about twenty degrees."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_03": {
+    "duration": 8.928,
+    "hash": "3772973941b5799d",
+    "sentences": [
+     [
+      0.05,
+      8.861,
+      "Your turn: bring the centre of mass closer to the knife edge, until those ten grams tilt the beam more than thirty-five degrees."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_04": {
+    "duration": 7.392,
+    "hash": "91b603822bc04763",
+    "sentences": [
+     [
+      0.05,
+      7.333,
+      "Too far: with the centre of mass above the edge, nothing pulls the beam back, and it tips right over."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_05": {
+    "duration": 4.176,
+    "hash": "ad169be786897690",
+    "sentences": [
+     [
+      0.05,
+      4.111,
+      "Why does the beam settle at a tilt instead of tipping over?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Beam": {
+    "duration": 7.632,
+    "hash": "bb0f6a4a36d56a70",
+    "sentences": [
+     [
+      0.05,
+      1.958,
+      "Two equal arms."
+     ],
+     [
+      1.958,
+      7.569,
+      "Its centre of mass, the dark dot, decides how steady and how sensitive it is."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Edge": {
+    "duration": 5.904,
+    "hash": "1fa55919d35c981d",
+    "sentences": [
+     [
+      0.05,
+      5.847,
+      "A hard, sharp edge the beam rocks on, so it turns with almost no rubbing."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Pans": {
+    "duration": 5.328,
+    "hash": "b4470a460adc1d07",
+    "sentences": [
+     [
+      0.05,
+      5.264,
+      "They hang straight down on threads, so a load pulls the same wherever it sits in the pan."
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Pointer": {
+    "duration": 6.648,
+    "hash": "26f3afb68536e9e4",
+    "sentences": [
+     [
+      0.05,
+      1.694,
+      "Fixed to the beam."
+     ],
+     [
+      1.694,
+      6.583,
+      "Its long reach turns a small tilt into a big movement on the scale."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_01": {
+    "duration": 2.904,
+    "hash": "9ac393912e1fd4f7",
+    "sentences": [
+     [
+      0.05,
+      2.847,
+      "One kilogram of sugar, in a bag."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_02": {
+    "duration": 7.632,
+    "hash": "2218687c177166d5",
+    "sentences": [
+     [
+      0.05,
+      4.764,
+      "The spring scale on the left stretches as far as gravity pulls the bag."
+     ],
+     [
+      4.764,
+      7.583,
+      "On the Earth it reads one kilogram."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_03": {
+    "duration": 3.48,
+    "hash": "232eeb0f346edd98",
+    "sentences": [
+     [
+      0.05,
+      3.417,
+      "Your turn: take both scales to the Moon."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_04": {
+    "duration": 9.408,
+    "hash": "cec6bbe543c26768",
+    "sentences": [
+     [
+      0.05,
+      3.444,
+      "The spring now reads about a sixth of a kilogram."
+     ],
+     [
+      3.444,
+      9.347,
+      "The balance still reads one kilogram: both its pans are pulled less, alike."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_05": {
+    "duration": 3.192,
+    "hash": "e6a0b48db618bded",
+    "sentences": [
+     [
+      0.05,
+      3.139,
+      "Which of the two measures how much sugar there is?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Bag": {
+    "duration": 5.064,
+    "hash": "925e3aaa4ef788cb",
+    "sentences": [
+     [
+      0.05,
+      3.0,
+      "The same amount of sugar wherever it goes."
+     ],
+     [
+      3.0,
+      5.014,
+      "Only the pull on it changes."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Balance": {
+    "duration": 5.208,
+    "hash": "7f6ebffd19c589b2",
+    "sentences": [
+     [
+      0.05,
+      5.139,
+      "Both pans are pulled alike, so it balances at the same mass anywhere."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Ground": {
+    "duration": 5.424,
+    "hash": "9b6d4471b929b1ae",
+    "sentences": [
+     [
+      0.05,
+      5.361,
+      "The Earth, the Moon or Mars, each pulling with its own strength."
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Spring": {
+    "duration": 5.424,
+    "hash": "7c2fd46e49088083",
+    "sentences": [
+     [
+      0.05,
+      5.361,
+      "It measures the pull of gravity, so it reads less where gravity is weaker."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_01": {
+    "duration": 6.024,
+    "hash": "795249a995db86c2",
+    "sentences": [
+     [
+      0.05,
+      5.972,
+      "This pan sits on the end of a single arm, with a spring under the arm's other end."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_02": {
+    "duration": 9.792,
+    "hash": "0b52b373d3b1a708",
+    "sentences": [
+     [
+      0.05,
+      2.778,
+      "Slide the load to the far edge."
+     ],
+     [
+      2.778,
+      9.736,
+      "It is farther from the post, turns the arm harder, and the scale reads seven hundred and fifty grams."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_03": {
+    "duration": 4.464,
+    "hash": "fdaa1b79def90193",
+    "sentences": [
+     [
+      0.05,
+      4.403,
+      "Your turn: hold the pan on two parallel links instead."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_04": {
+    "duration": 7.752,
+    "hash": "68522d7de7de1b54",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "Now move the load to the near edge."
+     ],
+     [
+      2.722,
+      7.681,
+      "The links take the turning, and the scale still reads five hundred grams."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_05": {
+    "duration": 4.08,
+    "hash": "fc7f282a7d6c2423",
+    "sentences": [
+     [
+      0.05,
+      4.028,
+      "Why does a kitchen scale read the same wherever the load sits?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Links": {
+    "duration": 9.168,
+    "hash": "d7025c6f1303925f",
+    "sentences": [
+     [
+      0.05,
+      9.097,
+      "One arm lets the pan tip and turn; two parallel links, pinned at every corner, only let it slide straight down."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Load": {
+    "duration": 5.016,
+    "hash": "17400217d3fae8b7",
+    "sentences": [
+     [
+      0.05,
+      1.917,
+      "Five hundred grams."
+     ],
+     [
+      1.917,
+      4.958,
+      "Slide it to see whether the reading changes."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Pan": {
+    "duration": 3.744,
+    "hash": "e7a2d33a7d733faf",
+    "sentences": [
+     [
+      0.05,
+      3.681,
+      "On parallel links it stays level as it moves down."
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Post": {
+    "duration": 3.12,
+    "hash": "5dee0dd4886d3909",
+    "sentences": [
+     [
+      0.05,
+      1.542,
+      "Fixed to the base."
+     ],
+     [
+      1.542,
+      3.056,
+      "The links pivot on it."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_01": {
+    "duration": 4.536,
+    "hash": "aeb3ecea79a53daa",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "Two kilograms on the hook stretch this spring four centimetres."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_02": {
+    "duration": 7.608,
+    "hash": "9786d24bc71590e1",
+    "sentences": [
+     [
+      0.05,
+      4.417,
+      "Four kilograms: twice the load, twice the stretch."
+     ],
+     [
+      4.417,
+      7.556,
+      "The scale's marks are evenly spaced."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_03": {
+    "duration": 5.232,
+    "hash": "1b6dfc4cf888b6ed",
+    "sentences": [
+     [
+      0.05,
+      5.181,
+      "Your turn: hang seven kilograms on it, more than its limit."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_04": {
+    "duration": 6.816,
+    "hash": "864ca98382f14779",
+    "sentences": [
+     [
+      0.05,
+      1.889,
+      "Now take the load off."
+     ],
+     [
+      1.889,
+      6.75,
+      "The pointer does not come back to zero: the spring has been stretched for good."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_05": {
+    "duration": 4.104,
+    "hash": "22892e8748c50190",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "Why are a spring balance's marks evenly spaced?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Hook": {
+    "duration": 4.416,
+    "hash": "d00168621bc604b1",
+    "sentences": [
+     [
+      0.05,
+      4.347,
+      "The load hangs here, and its whole weight pulls on the spring."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Pointer": {
+    "duration": 6.0,
+    "hash": "8a355189ba8a08a2",
+    "sentences": [
+     [
+      0.05,
+      5.944,
+      "Fixed to the spring's foot, it moves down two centimetres for every kilogram."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Scale": {
+    "duration": 6.576,
+    "hash": "205f4fce266b4c6a",
+    "sentences": [
+     [
+      0.05,
+      2.944,
+      "Marked for a spring that comes back to zero."
+     ],
+     [
+      2.944,
+      6.514,
+      "The red line is as far as it can safely go."
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Spring": {
+    "duration": 5.16,
+    "hash": "91f8ff4f8db24682",
+    "sentences": [
+     [
+      0.05,
+      2.125,
+      "A coil of steel wire."
+     ],
+     [
+      2.125,
+      5.111,
+      "Within its limit it always springs back."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_01": {
+    "duration": 3.936,
+    "hash": "c528a267c52e9eda",
+    "sentences": [
+     [
+      0.05,
+      3.875,
+      "The sack hangs on a hook just five centimetres from the pivot."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_02": {
+    "duration": 7.584,
+    "hash": "9f4eeaca64d65337",
+    "sentences": [
+     [
+      0.05,
+      3.708,
+      "This one-kilogram weight slides along the long arm."
+     ],
+     [
+      3.708,
+      7.528,
+      "Here it is not far enough out, and the sack's side sinks."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_03": {
+    "duration": 4.08,
+    "hash": "07b61b22c8f266fe",
+    "sentences": [
+     [
+      0.05,
+      4.053,
+      "Your turn: slide the weight until the arm is level."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_04": {
+    "duration": 6.288,
+    "hash": "eb83fd4a1d4e76e0",
+    "sentences": [
+     [
+      0.05,
+      2.944,
+      "A heavier sack needs the weight farther out."
+     ],
+     [
+      2.944,
+      6.222,
+      "That is why the arm can be marked in kilograms."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_05": {
+    "duration": 3.792,
+    "hash": "12779a29725536e5",
+    "sentences": [
+     [
+      0.05,
+      3.722,
+      "How can one small weight balance a much heavier sack?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Arm": {
+    "duration": 6.24,
+    "hash": "dc65228d7260c641",
+    "sentences": [
+     [
+      0.05,
+      6.193,
+      "Marked in kilograms, not centimetres: the marks already do the multiplying."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Hook": {
+    "duration": 3.48,
+    "hash": "0d26571522f2ea06",
+    "sentences": [
+     [
+      0.05,
+      3.417,
+      "The load, on a short arm close to the pivot."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Pivot": {
+    "duration": 6.336,
+    "hash": "1f64757436d0b7f8",
+    "sentences": [
+     [
+      0.05,
+      2.972,
+      "Where the steelyard hangs and turns."
+     ],
+     [
+      2.972,
+      6.278,
+      "The whole trick is how far each side is from here."
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Poise": {
+    "duration": 6.984,
+    "hash": "e928e6ae97c007f3",
+    "sentences": [
+     [
+      0.05,
+      1.569,
+      "One kilogram."
+     ],
+     [
+      1.569,
+      6.917,
+      "Every five centimetres farther out balances one more kilogram on the hook."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_01": {
+    "duration": 6.072,
+    "hash": "e0ce3fbc758500a9",
+    "sentences": [
+     [
+      0.05,
+      2.958,
+      "Two kilograms hang from this metal bar."
+     ],
+     [
+      2.958,
+      6.014,
+      "It bends, though far too little to see."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_02": {
+    "duration": 6.696,
+    "hash": "8dd8ff2389fde378",
+    "sentences": [
+     [
+      0.05,
+      2.5,
+      "The gauge on top is stretched with it."
+     ],
+     [
+      2.5,
+      6.625,
+      "Its resistance rises by just over a tenth of an ohm."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_03": {
+    "duration": 5.064,
+    "hash": "de46755c449e4dfe",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "Your turn: warm the room by ten degrees, and watch the display."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_04": {
+    "duration": 9.192,
+    "hash": "e88be18886279bd7",
+    "sentences": [
+     [
+      0.05,
+      3.139,
+      "One gauge took the warmth for a kilogram more."
+     ],
+     [
+      3.139,
+      9.139,
+      "With four gauges in the bridge, the warmth cancels and the display is right again."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_05": {
+    "duration": 4.32,
+    "hash": "d800c0f63735cd8a",
+    "sentences": [
+     [
+      0.05,
+      4.264,
+      "Why does an electronic scale use four gauges instead of one?"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Bar": {
+    "duration": 5.976,
+    "hash": "ac021336bf677412",
+    "sentences": [
+     [
+      0.05,
+      5.917,
+      "A block of metal that bends very slightly, and always by the same amount for the same load."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Bridge": {
+    "duration": 6.648,
+    "hash": "70a5e86b2a89a74d",
+    "sentences": [
+     [
+      0.05,
+      2.236,
+      "Four resistances in a ring."
+     ],
+     [
+      2.236,
+      6.583,
+      "It shows not their size, only how far out of balance they are."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Display": {
+    "duration": 4.704,
+    "hash": "e03812580d0ddc64",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "A chip turns the bridge's few thousandths of a volt into kilograms."
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Gauge": {
+    "duration": 8.4,
+    "hash": "80a09409e3c225fd",
+    "sentences": [
+     [
+      0.05,
+      3.208,
+      "A zigzag of thin foil glued to the bar."
+     ],
+     [
+      3.208,
+      8.333,
+      "Stretched, it gets longer and thinner, and resists the current a little more."
+     ]
+    ]
    }
   },
   "pitch": "+0Hz",
@@ -14641,6 +15350,715 @@
       0.1,
       4.606,
       "发条拉得有多紧，还能让表走多少个小时。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_01": {
+    "duration": 4.608,
+    "hash": "90f6c595f8b9abc9",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "两个秤盘各放一百克：横梁平平地停着。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_02": {
+    "duration": 7.344,
+    "hash": "9e6c777cf4220cc4",
+    "sentences": [
+     [
+      0.1,
+      2.203,
+      "在右边加十克。"
+     ],
+     [
+      2.153,
+      7.278,
+      "那边往下沉，横梁停在倾斜大约二十度的位置。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_03": {
+    "duration": 7.824,
+    "hash": "98b497bed61eecc5",
+    "sentences": [
+     [
+      0.1,
+      7.814,
+      "轮到你了：让重心靠近刀口，直到这十克让横梁倾斜超过三十五度。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_04": {
+    "duration": 7.512,
+    "hash": "e1e8719b45edc355",
+    "sentences": [
+     [
+      0.1,
+      7.494,
+      "挪过头了：重心到了刀口上面，没有东西把横梁拉回来，它就整个翻倒了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_05": {
+    "duration": 5.064,
+    "hash": "4bba0837a1af64cd",
+    "sentences": [
+     [
+      0.1,
+      5.05,
+      "为什么横梁会停在一个倾斜的位置，而不是翻倒？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Beam": {
+    "duration": 8.688,
+    "hash": "1d6ee5bbb3665155",
+    "sentences": [
+     [
+      0.1,
+      2.203,
+      "两边臂长相等。"
+     ],
+     [
+      2.153,
+      8.639,
+      "它的重心，也就是那个黑点，决定了它有多稳、有多灵敏。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Edge": {
+    "duration": 7.128,
+    "hash": "ebe56869f15baed6",
+    "sentences": [
+     [
+      0.1,
+      7.119,
+      "横梁架在上面摆动的又硬又锋利的边，所以转动时几乎没有摩擦。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Pans": {
+    "duration": 6.0,
+    "hash": "3f8e331386c36085",
+    "sentences": [
+     [
+      0.1,
+      5.981,
+      "它们用线笔直地挂着，所以东西放在盘里哪儿，拉力都一样。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Balance_Part_Pointer": {
+    "duration": 7.584,
+    "hash": "0165543ed6b994aa",
+    "sentences": [
+     [
+      0.1,
+      2.147,
+      "固定在横梁上。"
+     ],
+     [
+      2.097,
+      7.514,
+      "它很长，把一点点倾斜变成刻度上的一大段移动。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_01": {
+    "duration": 3.048,
+    "hash": "91980fad4e7203bd",
+    "sentences": [
+     [
+      0.1,
+      3.036,
+      "一千克糖，装在袋子里。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_02": {
+    "duration": 9.504,
+    "hash": "31c717cf4c7b8a0e",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "左边的弹簧秤，重力把袋子拉多用力，它就拉长多少。"
+     ],
+     [
+      5.792,
+      9.444,
+      "在地球上，它的读数是一千克。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_03": {
+    "duration": 4.392,
+    "hash": "73972addd7d6c035",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "轮到你了：把两台秤都带到月球上去。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_04": {
+    "duration": 10.344,
+    "hash": "72c49bd4074baa1f",
+    "sentences": [
+     [
+      0.1,
+      4.494,
+      "弹簧秤现在只读出大约六分之一千克。"
+     ],
+     [
+      4.444,
+      10.292,
+      "天平还是一千克：它的两个盘子受的拉力一起变小了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_05": {
+    "duration": 4.272,
+    "hash": "a4bd733162e32d34",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "这两台秤，哪一台量的是糖有多少？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Bag": {
+    "duration": 5.544,
+    "hash": "b24ecdd4e4b9782f",
+    "sentences": [
+     [
+      0.1,
+      3.05,
+      "不管到哪儿，糖都是那么多。"
+     ],
+     [
+      3.0,
+      5.472,
+      "变的只是它受的拉力。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Balance": {
+    "duration": 6.024,
+    "hash": "9cef7c0e363f2cf0",
+    "sentences": [
+     [
+      0.1,
+      6.008,
+      "两个盘子受的拉力一样，所以在哪儿都在同样的质量上平衡。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Ground": {
+    "duration": 5.688,
+    "hash": "b6799356aec72ede",
+    "sentences": [
+     [
+      0.1,
+      5.689,
+      "地球、月球或者火星，各自用自己的力气往下拉。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Moon_Part_Spring": {
+    "duration": 5.496,
+    "hash": "06165e24d4967d8b",
+    "sentences": [
+     [
+      0.1,
+      5.494,
+      "它量的是重力的拉力，所以重力弱的地方读数小。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_01": {
+    "duration": 6.36,
+    "hash": "6d3cb10fb552cfcd",
+    "sentences": [
+     [
+      0.1,
+      6.342,
+      "这个秤盘装在一根单臂的末端，臂的另一头下面垫着弹簧。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_02": {
+    "duration": 9.648,
+    "hash": "34db0786aa42b4db",
+    "sentences": [
+     [
+      0.1,
+      2.842,
+      "把东西挪到盘子外沿。"
+     ],
+     [
+      2.792,
+      9.583,
+      "它离立柱更远，转动臂的劲儿更大，秤上读数变成了七百五十克。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_03": {
+    "duration": 4.872,
+    "hash": "cfe4b771c7b825f0",
+    "sentences": [
+     [
+      0.1,
+      4.856,
+      "轮到你了：改用两根平行连杆托住秤盘。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_04": {
+    "duration": 8.88,
+    "hash": "dc8b843c6e7b2bbb",
+    "sentences": [
+     [
+      0.1,
+      3.397,
+      "现在把东西挪到靠里的一边。"
+     ],
+     [
+      3.347,
+      8.819,
+      "转动的劲儿由连杆承担，秤上读数仍然是五百克。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_05": {
+    "duration": 4.8,
+    "hash": "94dfd7847034a8e6",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "为什么厨房秤不管东西放在哪儿，读数都一样？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Links": {
+    "duration": 9.624,
+    "hash": "e5c795bf0e44c962",
+    "sentences": [
+     [
+      0.1,
+      9.619,
+      "一根臂会让秤盘倾斜转动；两根平行连杆，四角都用销子连着，就只让它笔直地往下滑。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Load": {
+    "duration": 4.728,
+    "hash": "d30804834b7c498d",
+    "sentences": [
+     [
+      0.1,
+      1.55,
+      "五百克。"
+     ],
+     [
+      1.5,
+      4.667,
+      "挪动它，看看读数变不变。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Pan": {
+    "duration": 5.256,
+    "hash": "d92d7c7b13aa7dfa",
+    "sentences": [
+     [
+      0.1,
+      5.244,
+      "装在平行连杆上，往下移时始终保持水平。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Roberval_Part_Post": {
+    "duration": 4.344,
+    "hash": "3313fbdc89d2ee61",
+    "sentences": [
+     [
+      0.1,
+      2.147,
+      "固定在底座上。"
+     ],
+     [
+      2.097,
+      4.292,
+      "连杆绕着它转动。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_01": {
+    "duration": 4.68,
+    "hash": "b747664692a1ba06",
+    "sentences": [
+     [
+      0.1,
+      4.675,
+      "钩上挂两千克，这根弹簧拉长四厘米。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_02": {
+    "duration": 7.152,
+    "hash": "af080716c797d0e4",
+    "sentences": [
+     [
+      0.1,
+      4.286,
+      "四千克：东西加倍，伸长也加倍。"
+     ],
+     [
+      4.236,
+      7.083,
+      "所以刻度是等间距的。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_03": {
+    "duration": 4.704,
+    "hash": "d2c59ebddbf4c777",
+    "sentences": [
+     [
+      0.1,
+      4.703,
+      "轮到你了：挂上七千克，超过它的极限。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_04": {
+    "duration": 6.6,
+    "hash": "f88c85ee9bbf8e20",
+    "sentences": [
+     [
+      0.1,
+      2.453,
+      "现在把东西拿下来。"
+     ],
+     [
+      2.403,
+      6.542,
+      "指针回不到零了：弹簧被永久拉长了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_05": {
+    "duration": 3.552,
+    "hash": "91a2482cc51eb08f",
+    "sentences": [
+     [
+      0.1,
+      3.536,
+      "为什么弹簧秤的刻度是等间距的？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Hook": {
+    "duration": 4.872,
+    "hash": "52e9b266ae1a6f87",
+    "sentences": [
+     [
+      0.1,
+      4.856,
+      "东西挂在这里，它的全部重量都拉着弹簧。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Pointer": {
+    "duration": 4.632,
+    "hash": "f079ada6715adabc",
+    "sentences": [
+     [
+      0.1,
+      4.633,
+      "固定在弹簧底端，每千克往下移两厘米。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Scale": {
+    "duration": 6.576,
+    "hash": "15ab378a6e84a2ca",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "按能回到零的弹簧来刻的。"
+     ],
+     [
+      2.958,
+      6.514,
+      "红线是它能安全拉到的最远处。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Spring_Part_Spring": {
+    "duration": 5.496,
+    "hash": "e63f7639da91c309",
+    "sentences": [
+     [
+      0.1,
+      2.161,
+      "一圈圈的钢丝。"
+     ],
+     [
+      2.111,
+      5.431,
+      "在极限之内，它总能弹回来。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_01": {
+    "duration": 3.984,
+    "hash": "4717b975d5507c8a",
+    "sentences": [
+     [
+      0.1,
+      3.967,
+      "袋子挂在离支点只有五厘米的钩子上。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_02": {
+    "duration": 7.968,
+    "hash": "a90c91bc8bb1dfbd",
+    "sentences": [
+     [
+      0.1,
+      3.856,
+      "这个一千克的秤砣沿着长臂滑动。"
+     ],
+     [
+      3.806,
+      7.917,
+      "现在它离得不够远，袋子那边往下沉。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_03": {
+    "duration": 4.512,
+    "hash": "801ce4ecde2ffdca",
+    "sentences": [
+     [
+      0.1,
+      4.494,
+      "轮到你了：滑动秤砣，直到秤杆平了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_04": {
+    "duration": 6.936,
+    "hash": "071d28a31fe5554f",
+    "sentences": [
+     [
+      0.1,
+      3.536,
+      "袋子越重，秤砣就得越往外。"
+     ],
+     [
+      3.486,
+      6.875,
+      "所以秤杆上可以刻千克数。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_05": {
+    "duration": 4.152,
+    "hash": "a1fca6daf817f32b",
+    "sentences": [
+     [
+      0.1,
+      4.133,
+      "一个小秤砣怎么能平衡重得多的袋子？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Arm": {
+    "duration": 5.952,
+    "hash": "7e0eb39fb2791e6a",
+    "sentences": [
+     [
+      0.1,
+      5.953,
+      "上面刻的是千克，不是厘米：刻度已经把乘法算好了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Hook": {
+    "duration": 4.464,
+    "hash": "b4cfc070b3dd7b81",
+    "sentences": [
+     [
+      0.1,
+      4.453,
+      "要称的东西，挂在离支点很近的短臂上。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Pivot": {
+    "duration": 7.272,
+    "hash": "ed1162b4ba1949d2",
+    "sentences": [
+     [
+      0.1,
+      3.328,
+      "杆秤挂起来、绕着转的地方。"
+     ],
+     [
+      3.278,
+      7.208,
+      "全部的诀窍就在两边离这里有多远。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Steelyard_Part_Poise": {
+    "duration": 6.288,
+    "hash": "c9190a2d099a7efd",
+    "sentences": [
+     [
+      0.1,
+      1.606,
+      "一千克。"
+     ],
+     [
+      1.556,
+      6.222,
+      "每往外挪五厘米，就能多平衡钩上的一千克。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_01": {
+    "duration": 7.584,
+    "hash": "f7b87ffc7708d1db",
+    "sentences": [
+     [
+      0.1,
+      3.217,
+      "这根金属梁挂着两千克。"
+     ],
+     [
+      3.167,
+      7.514,
+      "它弯了，只是弯得太少，根本看不出来。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_02": {
+    "duration": 7.32,
+    "hash": "1a7b8d7b1442a965",
+    "sentences": [
+     [
+      0.1,
+      3.356,
+      "上面的应变片跟着被拉长。"
+     ],
+     [
+      3.306,
+      7.264,
+      "它的电阻增加了十分之一欧姆多一点。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_03": {
+    "duration": 4.896,
+    "hash": "8da205eeb4ec89c1",
+    "sentences": [
+     [
+      0.1,
+      4.897,
+      "轮到你了：把屋子加热十度，看看显示屏。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_04": {
+    "duration": 10.872,
+    "hash": "044702921301550c",
+    "sentences": [
+     [
+      0.1,
+      4.258,
+      "一片应变片把变暖当成了多一千克。"
+     ],
+     [
+      4.208,
+      10.806,
+      "电桥里用四片应变片，温度的影响互相抵消，显示屏又对了。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_05": {
+    "duration": 4.752,
+    "hash": "1e673822169fbfd4",
+    "sentences": [
+     [
+      0.1,
+      4.744,
+      "电子秤为什么用四片应变片，而不是一片？"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Bar": {
+    "duration": 6.456,
+    "hash": "3c53c44873c1823d",
+    "sentences": [
+     [
+      0.1,
+      6.453,
+      "一块金属，弯得非常少，而且同样的东西总是弯同样多。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Bridge": {
+    "duration": 7.752,
+    "hash": "6101c0177634b73b",
+    "sentences": [
+     [
+      0.1,
+      2.606,
+      "连成一圈的四个电阻。"
+     ],
+     [
+      2.556,
+      7.681,
+      "它显示的不是电阻多大，只是它们失衡了多少。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Display": {
+    "duration": 4.752,
+    "hash": "8d016870cae2bdc3",
+    "sentences": [
+     [
+      0.1,
+      4.744,
+      "芯片把电桥那几毫伏的电压换算成千克。"
+     ]
+    ]
+   },
+   "Narr_Weighing_Strain_Part_Gauge": {
+    "duration": 9.48,
+    "hash": "f4f3b4c45d589106",
+    "sentences": [
+     [
+      0.1,
+      3.661,
+      "粘在梁上弯弯曲曲的细金属箔。"
+     ],
+     [
+      3.611,
+      9.417,
+      "被拉长后它变长变细，对电流的阻碍也就多了一点。"
      ]
     ]
    }

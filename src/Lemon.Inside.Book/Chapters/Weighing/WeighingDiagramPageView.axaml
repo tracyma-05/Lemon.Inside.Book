@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:weighing="using:Lemon.Inside.Book.Chapters.Weighing"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Weighing.WeighingDiagramPageView"
+                         x:DataType="weighing:WeighingDiagramPageViewModel">
+    <!-- A right page of the Weighing chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="weighing:BalanceSpread">
+                            <weighing:BalanceDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Difference="{Binding Difference}" Drop="{Binding Drop}" AutomationProperties.Name="{loc:Localize Weighing_Balance_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:SteelyardSpread">
+                            <weighing:SteelyardDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Sack="{Binding Sack}" Position="{Binding Position}" AutomationProperties.Name="{loc:Localize Weighing_Steelyard_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:SpringSpread">
+                            <weighing:SpringDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Mass="{Binding Mass}" Off="{Binding Off}" Highest="{Binding Highest}" AutomationProperties.Name="{loc:Localize Weighing_Spring_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:RobervalSpread">
+                            <weighing:RobervalDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Offset="{Binding Offset}" Parallel="{Binding Parallel}" AutomationProperties.Name="{loc:Localize Weighing_Roberval_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:StrainSpread">
+                            <weighing:StrainDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Mass="{Binding Mass}" Warm="{Binding Warm}" Bridge="{Binding Bridge}" AutomationProperties.Name="{loc:Localize Weighing_Strain_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="weighing:MoonSpread">
+                            <weighing:MoonDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Place="{Binding Place}" Mass="{Binding Mass}" AutomationProperties.Name="{loc:Localize Weighing_Moon_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>
