@@ -5313,4 +5313,553 @@
   <data name="Narr_Plumbing_Pump_Part_Water" xml:space="preserve">
     <value>空气压在它的水面上。把水推上管子的，是这个压力，不是水泵。</value>
   </data>
+  <data name="Chapter_Bridges" xml:space="preserve">
+    <value>桥是怎么立住的</value>
+  </data>
+  <data name="Bridges_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Bridges_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Bridges_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Bridges_Centimetres" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Bridges_Tonnes" xml:space="preserve">
+    <value>{0} 吨</value>
+  </data>
+  <data name="Bridges_Degrees" xml:space="preserve">
+    <value>{0} °C</value>
+  </data>
+  <data name="Bridges_Squeezed" xml:space="preserve">
+    <value>受压</value>
+  </data>
+  <data name="Bridges_Stretched" xml:space="preserve">
+    <value>受拉</value>
+  </data>
+  <data name="Bridges_Beam_Title" xml:space="preserve">
+    <value>溪上的一块木板</value>
+  </data>
+  <data name="Bridges_Beam_P1" xml:space="preserve">
+    <value>最简单的桥，就是搭在两岸上的一块木板。站到中间，它会稍微弯下去。弯的时候，木板的上表面变短，受压；下表面变长，受拉。托住你的，正是木头抵抗被压缩和被拉长的力。</value>
+  </data>
+  <data name="Bridges_Beam_P2" xml:space="preserve">
+    <value>长度让梁弯得比你想的厉害得多：长一倍，同样的重量会让它下垂八倍。厚度的作用也一样大，只是方向相反：厚一倍的木板，下垂只有原来的八分之一。所以桥越长，梁就得厚得多，用不了多久，梁就重得连自己都托不住了。</value>
+  </data>
+  <data name="Bridges_Beam_Deeper" xml:space="preserve">
+    <value>梁厚度的正中间既不受压也不受拉；出力的是靠近上下两个表面的部分。所以钢梁做成工字形：两块宽宽的翼缘离得远远的，中间只用一块薄腹板连着，正中间用不着的地方很少放材料。同样的道理，楼板下的木龙骨都是窄边朝上竖着放。木头还是那块木头，竖起来就硬了好多倍。</value>
+  </data>
+  <data name="Bridges_Beam_Span" xml:space="preserve">
+    <value>两岸之间的跨度</value>
+  </data>
+  <data name="Bridges_Beam_Depth" xml:space="preserve">
+    <value>木板的厚度</value>
+  </data>
+  <data name="Bridges_Beam_Readout" xml:space="preserve">
+    <value>压上两吨，中间下垂 {0}。</value>
+  </data>
+  <data name="Bridges_Beam_Picture" xml:space="preserve">
+    <value>溪上的木板桥，中间压着重物，上半部分受压，下半部分受拉</value>
+  </data>
+  <data name="Bridges_Beam_SagLabel" xml:space="preserve">
+    <value>下垂 {0} 厘米（画大了 5 倍）</value>
+  </data>
+  <data name="Bridges_Beam_Rule" xml:space="preserve">
+    <value>跨度加倍：下垂 8 倍 · 厚度加倍：下垂 ⅛</value>
+  </data>
+  <data name="Narr_Bridges_Beam_01" xml:space="preserve">
+    <value>这块木板跨过一条六米宽的小溪，中间压着两吨重的东西。</value>
+  </data>
+  <data name="Narr_Bridges_Beam_02" xml:space="preserve">
+    <value>它一弯，上面被压短，下面被拉长。托住重物的就是这个。</value>
+  </data>
+  <data name="Narr_Bridges_Beam_03" xml:space="preserve">
+    <value>轮到你了：把跨度加长一倍，变成十二米。</value>
+  </data>
+  <data name="Narr_Bridges_Beam_04" xml:space="preserve">
+    <value>下垂变成了八倍。再把木板加厚一倍：它就硬了八倍，下垂又回到原来那么多。</value>
+  </data>
+  <data name="Narr_Bridges_Beam_05" xml:space="preserve">
+    <value>为什么楼板下的梁要窄边朝上竖着放，而不是平躺着？</value>
+  </data>
+  <data name="Bridges_Beam_Quiz1" xml:space="preserve">
+    <value>厚度最要紧：厚一倍，硬八倍</value>
+  </data>
+  <data name="Bridges_Beam_Quiz2" xml:space="preserve">
+    <value>这样更容易刷漆</value>
+  </data>
+  <data name="Bridges_Beam_Quiz3" xml:space="preserve">
+    <value>因为木头平放时本身会变弱</value>
+  </data>
+  <data name="Bridges_Beam_Part_Beam" xml:space="preserve">
+    <value>木板</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Beam" xml:space="preserve">
+    <value>一根梁：它靠弯曲来承重，上面受压，下面受拉。</value>
+  </data>
+  <data name="Bridges_Beam_Part_Load" xml:space="preserve">
+    <value>重物</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Load" xml:space="preserve">
+    <value>两吨重，压在正中间，这里让木板弯得最厉害。</value>
+  </data>
+  <data name="Bridges_Beam_Part_Top" xml:space="preserve">
+    <value>上表面</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Top" xml:space="preserve">
+    <value>木板一弯，它就被压短。下表面被拉长的程度一样大。</value>
+  </data>
+  <data name="Bridges_Beam_Part_Banks" xml:space="preserve">
+    <value>两岸</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Banks" xml:space="preserve">
+    <value>两岸各托住一半的重量。离得越远，木板弯得越厉害。</value>
+  </data>
+  <data name="Bridges_Frame_Title" xml:space="preserve">
+    <value>为什么是三角形</value>
+  </data>
+  <data name="Bridges_Frame_P1" xml:space="preserve">
+    <value>用四根杆子拼成一个正方形，每个角用销子连起来，角可以转动。从侧面推它的顶，正方形就歪成一个斜的形状。哪根杆子都没有变长或变短，只是角转了一下。正方形没有办法保住自己的形状。</value>
+  </data>
+  <data name="Bridges_Frame_P2" xml:space="preserve">
+    <value>沿对角线再加一根杆子，正方形就变成了两个三角形。这下它一点也歪不了，因为三角形的边长不变，形状就变不了。再去推，这根斜撑只会被拉紧。杆子顺着长度方向非常结实，所以用细杆子搭几个三角形，就能又轻又硬。</value>
+  </data>
+  <data name="Bridges_Frame_Deeper" xml:space="preserve">
+    <value>这里的斜撑承受的力比推力还大：大约是一点四倍，因为它斜着四十五度，只有一部分拉力是横着起作用的。要是从另一边推，同一根斜撑就会被压。所以很多框架两个方向都加斜撑，或者用一根粗得能受拉也能受压的。起重机、屋架、高压电塔、自行车车架里，都能找到三角形。</value>
+  </data>
+  <data name="Bridges_Frame_Push" xml:space="preserve">
+    <value>推顶角的力</value>
+  </data>
+  <data name="Bridges_Frame_Brace" xml:space="preserve">
+    <value>装上斜撑</value>
+  </data>
+  <data name="Bridges_Frame_Braced" xml:space="preserve">
+    <value>有了斜撑，框架保住了形状。斜撑被拉着，受力 {0}。</value>
+  </data>
+  <data name="Bridges_Frame_Still" xml:space="preserve">
+    <value>还没人推：正方形立着。</value>
+  </data>
+  <data name="Bridges_Frame_Leans" xml:space="preserve">
+    <value>正方形歪了 {0}°，还会接着倒：里面没有什么能阻止角转动。</value>
+  </data>
+  <data name="Bridges_Frame_Picture" xml:space="preserve">
+    <value>地上四根杆子用销子连成的正方形，一只手从侧面推它的顶，还有一个装斜撑的位置</value>
+  </data>
+  <data name="Bridges_Frame_BraceLabel" xml:space="preserve">
+    <value>斜撑：{0}</value>
+  </data>
+  <data name="Bridges_Frame_LeanLabel" xml:space="preserve">
+    <value>歪了 {0}°</value>
+  </data>
+  <data name="Bridges_Frame_Rule" xml:space="preserve">
+    <value>三角形不改变边长，就改变不了形状</value>
+  </data>
+  <data name="Narr_Bridges_Frame_01" xml:space="preserve">
+    <value>四根杆子，在四个角用销子连着，每个角都能转。</value>
+  </data>
+  <data name="Narr_Bridges_Frame_02" xml:space="preserve">
+    <value>推一下顶，正方形就歪倒了。可没有一根杆子改变了长度。</value>
+  </data>
+  <data name="Narr_Bridges_Frame_03" xml:space="preserve">
+    <value>轮到你了：沿对角线装上一根斜撑。</value>
+  </data>
+  <data name="Narr_Bridges_Frame_04" xml:space="preserve">
+    <value>用两倍的力推。框架还是方的，斜撑被拉着，受力将近三吨。</value>
+  </data>
+  <data name="Narr_Bridges_Frame_05" xml:space="preserve">
+    <value>为什么桥和起重机都用三角形来搭？</value>
+  </data>
+  <data name="Bridges_Frame_Quiz1" xml:space="preserve">
+    <value>三角形比别的形状都省钢材</value>
+  </data>
+  <data name="Bridges_Frame_Quiz2" xml:space="preserve">
+    <value>三角形不改变边长，就改变不了形状</value>
+  </data>
+  <data name="Bridges_Frame_Quiz3" xml:space="preserve">
+    <value>三角形挡风少</value>
+  </data>
+  <data name="Bridges_Frame_Part_Bars" xml:space="preserve">
+    <value>杆子</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Bars" xml:space="preserve">
+    <value>顺着长度方向很结实，但在正方形里，没有什么能阻止它们绕着销子转。</value>
+  </data>
+  <data name="Bridges_Frame_Part_Pins" xml:space="preserve">
+    <value>销子</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Pins" xml:space="preserve">
+    <value>每个销子都让那个角可以自由转动。早年的桁架桥就是这样连起来的。</value>
+  </data>
+  <data name="Bridges_Frame_Part_Brace" xml:space="preserve">
+    <value>斜撑</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Brace" xml:space="preserve">
+    <value>沿对角线的一根杆子，把正方形变成两个三角形，框架就再也歪不了了。</value>
+  </data>
+  <data name="Bridges_Frame_Part_Hand" xml:space="preserve">
+    <value>推力</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Hand" xml:space="preserve">
+    <value>从侧面推顶部的力，就像风吹在桥上，或者起重机甩动吊着的重物。</value>
+  </data>
+  <data name="Bridges_Truss_Title" xml:space="preserve">
+    <value>桁架</value>
+  </data>
+  <data name="Bridges_Truss_P1" xml:space="preserve">
+    <value>桁架就像一根很厚的梁，只是大部分材料都省掉了：它是用直杆搭成的一排三角形。一辆卡车开上去，整个桁架会像木板一样稍微弯一点。上面那一排杆子叫上弦，受压；下面那一排叫下弦，受拉。</value>
+  </data>
+  <data name="Bridges_Truss_P2" xml:space="preserve">
+    <value>上下弦之间的斜杆把重量一格一格地传到两岸去。每根杆子都只是顺着长度受压或受拉，从来不弯；直杆这样受力要结实得多。桁架越高，就像梁越厚：高一倍，上下弦受的力就只剩一半。</value>
+  </data>
+  <data name="Bridges_Truss_Deeper" xml:space="preserve">
+    <value>这些力不是猜的：在每个节点上，杆子的拉力和推力必须和那里的重量平衡，所有节点的平衡合起来，就把每根杆子的力确定了。图里的数字就是这样算出来的。挪动卡车，看看斜杆怎么变：原来受压的那根，可能变成受拉。钢材受压受拉都行，但又长又受压的杆子会往旁边弯曲失稳，所以通常比受拉的杆子做得粗。</value>
+  </data>
+  <data name="Bridges_Truss_Height" xml:space="preserve">
+    <value>桁架的高度</value>
+  </data>
+  <data name="Bridges_Truss_Position" xml:space="preserve">
+    <value>卡车的位置</value>
+  </data>
+  <data name="Bridges_Truss_Readout" xml:space="preserve">
+    <value>上弦最多受压 {0}，下弦最多受拉 {1}。</value>
+  </data>
+  <data name="Bridges_Truss_Picture" xml:space="preserve">
+    <value>河上的桁架桥，桥面上有一辆卡车，每根杆子按受压或受拉上色，并标着以吨计的受力</value>
+  </data>
+  <data name="Bridges_Truss_Rule" xml:space="preserve">
+    <value>每根杆子只受压或受拉，从不弯曲</value>
+  </data>
+  <data name="Narr_Bridges_Truss_01" xml:space="preserve">
+    <value>一辆十吨重的卡车停在这座桁架桥的正中间。</value>
+  </data>
+  <data name="Narr_Bridges_Truss_02" xml:space="preserve">
+    <value>上弦受压，画成红色：桁架像木板一样弯，它的上面变短了。</value>
+  </data>
+  <data name="Narr_Bridges_Truss_03" xml:space="preserve">
+    <value>下弦受拉，画成蓝色。上下弦合起来，干的正是梁上下两个表面的活。</value>
+  </data>
+  <data name="Narr_Bridges_Truss_04" xml:space="preserve">
+    <value>轮到你了：把桁架加高，直到上弦受的力不超过十吨。</value>
+  </data>
+  <data name="Narr_Bridges_Truss_05" xml:space="preserve">
+    <value>斜杆是做什么用的？</value>
+  </data>
+  <data name="Bridges_Truss_Quiz1" xml:space="preserve">
+    <value>什么也不做，只是为了好看</value>
+  </data>
+  <data name="Bridges_Truss_Quiz2" xml:space="preserve">
+    <value>刮风时把桥面压住</value>
+  </data>
+  <data name="Bridges_Truss_Quiz3" xml:space="preserve">
+    <value>把重量传到两岸，并让每一格都由三角形组成</value>
+  </data>
+  <data name="Bridges_Truss_Part_Load" xml:space="preserve">
+    <value>卡车</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Load" xml:space="preserve">
+    <value>十吨重，由它两边桥面上的节点分担。</value>
+  </data>
+  <data name="Bridges_Truss_Part_Top" xml:space="preserve">
+    <value>上弦</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Top" xml:space="preserve">
+    <value>最上面那一排杆子，受压，跨中最厉害。</value>
+  </data>
+  <data name="Bridges_Truss_Part_Bottom" xml:space="preserve">
+    <value>下弦</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Bottom" xml:space="preserve">
+    <value>最下面那一排，也托着桥面。它受拉。</value>
+  </data>
+  <data name="Bridges_Truss_Part_Diagonals" xml:space="preserve">
+    <value>斜杆</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Diagonals" xml:space="preserve">
+    <value>它们把重量一格一格地往外传；有的受压、有的受拉，要看卡车在哪儿。</value>
+  </data>
+  <data name="Bridges_Arch_Title" xml:space="preserve">
+    <value>拱</value>
+  </data>
+  <data name="Bridges_Arch_P1" xml:space="preserve">
+    <value>石头受压很结实，受拉却很弱，所以长长的石梁会从受拉的底面裂开。拱完全避开了受拉。它那些楔形的石块互相倚靠，自身的重量把每一块都压向两边的邻居，一直压到地面。</value>
+  </data>
+  <data name="Bridges_Arch_P2" xml:space="preserve">
+    <value>不过拱不只是往下压，它还往外推两岸，想把两只脚撑开。这个往外的推力叫推力，必须靠结实的地基或叫作桥台的大石墩顶住。拱越扁，往外推得越厉害；又高又圆的拱，往外推得就少多了。</value>
+  </data>
+  <data name="Bridges_Arch_Deeper" xml:space="preserve">
+    <value>拱在砌的时候，石块自己立不住，所以要先搭一个临时的木架，把石块放在上面。最上面的拱顶石最后放进去；放好之后，整圈石头才能自己撑住，木架才能拆掉。在建好的拱上压哪一块石头，都只会把它压得更紧。两千年前建的不少石拱桥，到今天还在走车。</value>
+  </data>
+  <data name="Bridges_Arch_Rise" xml:space="preserve">
+    <value>拱的高度</value>
+  </data>
+  <data name="Bridges_Arch_Abutments" xml:space="preserve">
+    <value>两脚有桥台</value>
+  </data>
+  <data name="Bridges_Arch_Readout" xml:space="preserve">
+    <value>每一岸被往外推 {0}，同时托住 {1}。</value>
+  </data>
+  <data name="Bridges_Arch_Falls" xml:space="preserve">
+    <value>两脚没有东西顶住，就往外滑开，拱塌了下来。</value>
+  </data>
+  <data name="Bridges_Arch_Picture" xml:space="preserve">
+    <value>河上的石拱：楔形石块和拱顶石、上面填土铺的路，以及两脚处推力的箭头</value>
+  </data>
+  <data name="Bridges_Arch_FallsLabel" xml:space="preserve">
+    <value>两脚滑开了！</value>
+  </data>
+  <data name="Bridges_Arch_RiseLabel" xml:space="preserve">
+    <value>跨度 10 米，高 {0} 米</value>
+  </data>
+  <data name="Bridges_Arch_Rule" xml:space="preserve">
+    <value>每块石头都受压，没有一块受拉</value>
+  </data>
+  <data name="Narr_Bridges_Arch_01" xml:space="preserve">
+    <value>这座拱的每块石头都是楔形的，每一块都被两边的邻居挤着。</value>
+  </data>
+  <data name="Narr_Bridges_Arch_02" xml:space="preserve">
+    <value>最上面的拱顶石是最后放进去的。它一放好，整圈石头就能自己撑住。</value>
+  </data>
+  <data name="Narr_Bridges_Arch_03" xml:space="preserve">
+    <value>轮到你了：把拱压扁，直到每一岸被往外推的力超过八十吨。</value>
+  </data>
+  <data name="Narr_Bridges_Arch_04" xml:space="preserve">
+    <value>现在把桥台拿掉。没有东西顶住推力，两脚滑开，拱就塌了。</value>
+  </data>
+  <data name="Narr_Bridges_Arch_05" xml:space="preserve">
+    <value>为什么石头能砌成很长的拱，却做不成很长的梁？</value>
+  </data>
+  <data name="Bridges_Arch_Quiz1" xml:space="preserve">
+    <value>拱用的石头少</value>
+  </data>
+  <data name="Bridges_Arch_Quiz2" xml:space="preserve">
+    <value>拱里每块石头都只受压，而石头受压结实，受拉就裂</value>
+  </data>
+  <data name="Bridges_Arch_Quiz3" xml:space="preserve">
+    <value>拱不需要地基</value>
+  </data>
+  <data name="Bridges_Arch_Part_Stones" xml:space="preserve">
+    <value>石块</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Stones" xml:space="preserve">
+    <value>互相倚靠的楔块。压上去的重量只会让它们挤得更紧。</value>
+  </data>
+  <data name="Bridges_Arch_Part_Keystone" xml:space="preserve">
+    <value>拱顶石</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Keystone" xml:space="preserve">
+    <value>最上面那块石头，最后放进去。它把整圈石头锁在一起。</value>
+  </data>
+  <data name="Bridges_Arch_Part_Abutments" xml:space="preserve">
+    <value>桥台</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Abutments" xml:space="preserve">
+    <value>两脚处的大石墩，顶住拱往外的推力。</value>
+  </data>
+  <data name="Bridges_Arch_Part_Road" xml:space="preserve">
+    <value>路面</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Road" xml:space="preserve">
+    <value>铺在拱上方的填土上。它的重量把石块压紧，帮它们待在原位。</value>
+  </data>
+  <data name="Bridges_Cable_Title" xml:space="preserve">
+    <value>挂在缆索上</value>
+  </data>
+  <data name="Bridges_Cable_P1" xml:space="preserve">
+    <value>悬索桥把拱倒了过来。它不靠挤在一起的石块，而是把桥面挂在只受拉的钢缆上。主缆搭在两座高塔之间垂下来，吊索从主缆垂到桥面，主缆的两头再往下拉到埋在地里的巨大锚碇上。</value>
+  </data>
+  <data name="Bridges_Cable_P2" xml:space="preserve">
+    <value>主缆必须垂下来。它挂得越平，要托住同样的桥面就得拉得越紧：下垂减半，拉力加倍。这个拉力沿着主缆传到塔顶，再沿后面那段缆索传进锚碇，锚碇必须拉住它，就像拱的桥台要顶住推力一样。</value>
+  </data>
+  <data name="Bridges_Cable_Deeper" xml:space="preserve">
+    <value>挂着沿桥面均匀分布的重量，缆索会垂成一条抛物线，正好是倒过来的拱的形状。缆索再长也不会失稳弯曲，而又长又受压的构件会，所以世界上最长的桥都是挂在缆索上的。它们的主缆是在工地上用成千上万根细钢丝一根根并排放好，再挤成一根圆缆。</value>
+  </data>
+  <data name="Bridges_Cable_Sag" xml:space="preserve">
+    <value>主缆的垂度</value>
+  </data>
+  <data name="Bridges_Cable_Anchored" xml:space="preserve">
+    <value>把主缆两头拴在锚碇上</value>
+  </data>
+  <data name="Bridges_Cable_Readout" xml:space="preserve">
+    <value>主缆沿着桥的方向拉力 {0}，塔顶处 {1}。</value>
+  </data>
+  <data name="Bridges_Cable_Loose" xml:space="preserve">
+    <value>没有锚碇，主缆 {0} 的拉力就没有东西拉住：它把塔顶往里拽。</value>
+  </data>
+  <data name="Bridges_Cable_Picture" xml:space="preserve">
+    <value>悬索桥：两座塔，主缆挂在中间，吊索垂到桥面，主缆两头拉到锚碇</value>
+  </data>
+  <data name="Bridges_Cable_SagLabel" xml:space="preserve">
+    <value>垂度 {0} 米</value>
+  </data>
+  <data name="Bridges_Cable_PullLabel" xml:space="preserve">
+    <value>拉力 {0}</value>
+  </data>
+  <data name="Bridges_Cable_PulledIn" xml:space="preserve">
+    <value>塔被拽歪了！</value>
+  </data>
+  <data name="Bridges_Cable_Rule" xml:space="preserve">
+    <value>垂度减半，拉力加倍</value>
+  </data>
+  <data name="Narr_Bridges_Cable_01" xml:space="preserve">
+    <value>这根主缆在两塔之间垂下二十米，托着两千吨重的桥面。</value>
+  </data>
+  <data name="Narr_Bridges_Cable_02" xml:space="preserve">
+    <value>吊索从主缆垂到桥面，把桥面的重量交给主缆。</value>
+  </data>
+  <data name="Narr_Bridges_Cable_03" xml:space="preserve">
+    <value>轮到你了：把主缆拉紧，直到垂度不超过八米。</value>
+  </data>
+  <data name="Narr_Bridges_Cable_04" xml:space="preserve">
+    <value>现在把锚碇松开。没有东西拉住这股力，主缆就把塔顶往里拽。</value>
+  </data>
+  <data name="Narr_Bridges_Cable_05" xml:space="preserve">
+    <value>为什么悬索桥的主缆一定要垂下来？</value>
+  </data>
+  <data name="Bridges_Cable_Quiz1" xml:space="preserve">
+    <value>为了少用钢材</value>
+  </data>
+  <data name="Bridges_Cable_Quiz2" xml:space="preserve">
+    <value>好让高大的船通过</value>
+  </data>
+  <data name="Bridges_Cable_Quiz3" xml:space="preserve">
+    <value>拉得笔直的缆索，要托住任何重量都得有无穷大的拉力</value>
+  </data>
+  <data name="Bridges_Cable_Part_Cable" xml:space="preserve">
+    <value>主缆</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Cable" xml:space="preserve">
+    <value>成千上万根钢丝捆在一起，从来只受拉。</value>
+  </data>
+  <data name="Bridges_Cable_Part_Towers" xml:space="preserve">
+    <value>塔</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Towers" xml:space="preserve">
+    <value>它们把主缆举起来。只要锚碇平衡了主缆的拉力，它们就只是被竖直往下压。</value>
+  </data>
+  <data name="Bridges_Cable_Part_Hangers" xml:space="preserve">
+    <value>吊索</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Hangers" xml:space="preserve">
+    <value>从主缆垂到桥面的细缆，每根吊着自己那一小段桥面。</value>
+  </data>
+  <data name="Bridges_Cable_Part_Anchors" xml:space="preserve">
+    <value>锚碇</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Anchors" xml:space="preserve">
+    <value>埋在地里的巨大块体，拉住主缆的两头。</value>
+  </data>
+  <data name="Bridges_Expansion_Title" xml:space="preserve">
+    <value>留出伸缩的余地</value>
+  </data>
+  <data name="Bridges_Expansion_P1" xml:space="preserve">
+    <value>钢材受热会变长。变得不多：每升高一度，一米长的钢只长大约百分之一毫米。可桥面有几百米长，从冬天的夜晚到夏天的午后，温度能差五十度，足够让四百米长的桥面伸缩大约四分之一米。</value>
+  </data>
+  <data name="Bridges_Expansion_P2" xml:space="preserve">
+    <value>所以桥面只在一头固定，其余地方都放在滚轴或滑动支座上。自由的那一头装着伸缩缝：桥面上的钢指和桥台上的钢指互相插着滑动，留出一道缝，冷时张开，热时合拢，车轮照样平稳地开过去。</value>
+  </data>
+  <data name="Bridges_Expansion_Deeper" xml:space="preserve">
+    <value>要是两头都固定死，桥面没法伸长，就会以几千吨的力推两边的桥台，足以把桥台推裂，或者让桥面向上拱起。铁路也有同样的问题；长长的焊接钢轨在铺设时就被预先拉长，这样到了热天，受到的挤压就小得多。开车过长桥时，那一下下有规律的“咚咚”声，就是伸缩缝。</value>
+  </data>
+  <data name="Bridges_Expansion_Temperature" xml:space="preserve">
+    <value>气温</value>
+  </data>
+  <data name="Bridges_Expansion_Joint" xml:space="preserve">
+    <value>留伸缩缝</value>
+  </data>
+  <data name="Bridges_Expansion_Held" xml:space="preserve">
+    <value>两头固定死，桥面以大约 {0} 的力推或拉桥台。</value>
+  </data>
+  <data name="Bridges_Expansion_Longer" xml:space="preserve">
+    <value>桥面比温和天气时长了 {0}；伸缩缝宽 {1}。</value>
+  </data>
+  <data name="Bridges_Expansion_Shorter" xml:space="preserve">
+    <value>桥面比温和天气时短了 {0}；伸缩缝宽 {1}。</value>
+  </data>
+  <data name="Bridges_Expansion_Picture" xml:space="preserve">
+    <value>架在桥墩上的 400 米钢桥面和一支温度计，下面是从上方看的伸缩缝和互相滑动的钢指</value>
+  </data>
+  <data name="Bridges_Expansion_Pinned" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="Bridges_Expansion_Drawn" xml:space="preserve">
+    <value>桥面的伸缩画大了 100 倍</value>
+  </data>
+  <data name="Bridges_Expansion_Bows" xml:space="preserve">
+    <value>两头固定，桥面拱起来了！</value>
+  </data>
+  <data name="Bridges_Expansion_HeldLabel" xml:space="preserve">
+    <value>两头固定，桥面拉着两头</value>
+  </data>
+  <data name="Bridges_Expansion_FromAbove" xml:space="preserve">
+    <value>从上方看伸缩缝，按真实比例</value>
+  </data>
+  <data name="Bridges_Expansion_GapLabel" xml:space="preserve">
+    <value>缝宽 {0} 厘米</value>
+  </data>
+  <data name="Bridges_Expansion_PushLabel" xml:space="preserve">
+    <value>推 {0}</value>
+  </data>
+  <data name="Bridges_Expansion_PullLabel" xml:space="preserve">
+    <value>拉 {0}</value>
+  </data>
+  <data name="Bridges_Expansion_DeckLabel" xml:space="preserve">
+    <value>桥面</value>
+  </data>
+  <data name="Bridges_Expansion_AbutmentLabel" xml:space="preserve">
+    <value>桥台</value>
+  </data>
+  <data name="Bridges_Expansion_Rule" xml:space="preserve">
+    <value>每升高 10 °C，100 米钢材约长 1.2 厘米</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_01" xml:space="preserve">
+    <value>这段钢桥面长四百米，只在左端固定。</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_02" xml:space="preserve">
+    <value>到了四十度的炎热午后，它长了十二厘米，伸缩缝合拢到只剩八厘米。</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_03" xml:space="preserve">
+    <value>轮到你了：把天气调到寒冷的夜晚，零下十度或更冷。</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_04" xml:space="preserve">
+    <value>现在去掉伸缩缝，把两头固定死。天一热，桥面就以大约三千吨的力推桥台。</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_05" xml:space="preserve">
+    <value>这段桥面升温三十度，会长多少？</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz1" xml:space="preserve">
+    <value>大约十四厘米</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz2" xml:space="preserve">
+    <value>大约一毫米</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz3" xml:space="preserve">
+    <value>大约四米</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Deck" xml:space="preserve">
+    <value>桥面</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Deck" xml:space="preserve">
+    <value>四百米长的钢，随着天气伸长、缩短。</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Joint" xml:space="preserve">
+    <value>伸缩缝</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Joint" xml:space="preserve">
+    <value>互相插着滑动的钢指，缝宽可以变，车轮照样能开过去。</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Bearing" xml:space="preserve">
+    <value>滚轴支座</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Bearing" xml:space="preserve">
+    <value>让桥面自由的那头来回滑动，而不去推托着它的东西。</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Abutment" xml:space="preserve">
+    <value>桥台</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Abutment" xml:space="preserve">
+    <value>桥面尽头的那块墩子。要是没有伸缩缝，桥面会以几千吨的力推它。</value>
+  </data>
 </root>

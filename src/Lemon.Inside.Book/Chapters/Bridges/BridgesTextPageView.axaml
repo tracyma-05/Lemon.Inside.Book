@@ -1,0 +1,148 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:bridges="using:Lemon.Inside.Book.Chapters.Bridges"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Bridges.BridgesTextPageView"
+                              x:DataType="bridges:BridgesTextPageViewModel">
+    <!-- A left page of the Bridges chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="bridges:BeamSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpanText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Beam_Span}" />
+                                </DockPanel>
+                                <Slider Minimum="4" Maximum="12" Value="{Binding Span}" SmallChange="0.25" LargeChange="1"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Beam_Span}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding DepthText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Beam_Depth}" />
+                                </DockPanel>
+                                <Slider Minimum="0.2" Maximum="0.8" Value="{Binding Depth}" SmallChange="0.01" LargeChange="0.05"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Beam_Depth}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:FrameSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PushText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Frame_Push}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="2" Value="{Binding Push}" SmallChange="0.05" LargeChange="0.25"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Frame_Push}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Brace}" Content="{loc:Localize Bridges_Frame_Brace}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:TrussSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding HeightText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Truss_Height}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="4" Value="{Binding Height}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Truss_Height}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PositionText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Truss_Position}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Position}" SmallChange="0.01" LargeChange="0.125"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Truss_Position}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:ArchSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding RiseText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Arch_Rise}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="5" Value="{Binding Rise}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Arch_Rise}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Abutments}" Content="{loc:Localize Bridges_Arch_Abutments}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:CableSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SagText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Cable_Sag}" />
+                                </DockPanel>
+                                <Slider Minimum="5" Maximum="50" Value="{Binding Sag}" SmallChange="0.5" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Cable_Sag}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Anchored}" Content="{loc:Localize Bridges_Cable_Anchored}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:ExpansionSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding TemperatureText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bridges_Expansion_Temperature}" />
+                                </DockPanel>
+                                <Slider Minimum="-20" Maximum="45" Value="{Binding Temperature}" SmallChange="1" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Bridges_Expansion_Temperature}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Joint}" Content="{loc:Localize Bridges_Expansion_Joint}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

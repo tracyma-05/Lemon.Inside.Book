@@ -1521,6 +1521,690 @@
      ]
     ]
    },
+   "Narr_Bridges_Arch_01": {
+    "duration": 5.904,
+    "hash": "dfeed48ea29f9d56",
+    "sentences": [
+     [
+      0.05,
+      5.847,
+      "Every stone in this arch is wedge-shaped, and every one is squeezed by its neighbours."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_02": {
+    "duration": 5.904,
+    "hash": "8f013ee561d1c546",
+    "sentences": [
+     [
+      0.05,
+      2.694,
+      "The keystone at the top goes in last."
+     ],
+     [
+      2.694,
+      5.833,
+      "Once it is there, the ring holds itself up."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_03": {
+    "duration": 6.624,
+    "hash": "58b134c6d77500d5",
+    "sentences": [
+     [
+      0.05,
+      6.569,
+      "Your turn: flatten the arch until each bank is pushed outward with more than eighty tonnes."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_04": {
+    "duration": 7.416,
+    "hash": "dbd14420be401fba",
+    "sentences": [
+     [
+      0.05,
+      2.278,
+      "Now take the abutments away."
+     ],
+     [
+      2.278,
+      7.347,
+      "Nothing holds the thrust, the feet slide apart, and the arch falls."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_05": {
+    "duration": 4.08,
+    "hash": "0c3a0fa8531000fc",
+    "sentences": [
+     [
+      0.05,
+      4.028,
+      "Why can stone make long arches but not long beams?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Abutments": {
+    "duration": 4.128,
+    "hash": "88a7668259b11b71",
+    "sentences": [
+     [
+      0.05,
+      4.082,
+      "Heavy blocks at the feet that take the arch's outward push."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Keystone": {
+    "duration": 4.68,
+    "hash": "e210c0a94ef10c0f",
+    "sentences": [
+     [
+      0.05,
+      2.681,
+      "The stone at the top, put in last."
+     ],
+     [
+      2.681,
+      4.625,
+      "It locks the ring together."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Road": {
+    "duration": 7.44,
+    "hash": "ba6a1767f577a31d",
+    "sentences": [
+     [
+      0.05,
+      2.625,
+      "Laid on fill over the arch."
+     ],
+     [
+      2.625,
+      7.389,
+      "Its weight presses the stones together and helps keep them in place."
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Stones": {
+    "duration": 5.736,
+    "hash": "6985514006b95815",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "Wedges that lean on each other."
+     ],
+     [
+      2.389,
+      5.681,
+      "The load only squeezes them tighter together."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_01": {
+    "duration": 5.112,
+    "hash": "f9b4020825c5155f",
+    "sentences": [
+     [
+      0.05,
+      5.056,
+      "This plank crosses a six-metre stream, with a two-tonne load in the middle."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_02": {
+    "duration": 7.272,
+    "hash": "22f0208f4d7136f5",
+    "sentences": [
+     [
+      0.05,
+      5.153,
+      "As it bends, its top is squeezed shorter and its bottom stretched longer."
+     ],
+     [
+      5.153,
+      7.208,
+      "That is what holds the load up."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_03": {
+    "duration": 4.68,
+    "hash": "1692c308a7d3a34e",
+    "sentences": [
+     [
+      0.05,
+      4.625,
+      "Your turn: make the span twice as long, twelve metres."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_04": {
+    "duration": 9.744,
+    "hash": "0b95df7f89fceef9",
+    "sentences": [
+     [
+      0.05,
+      2.847,
+      "It sags eight times as much."
+     ],
+     [
+      2.847,
+      9.694,
+      "Now make the plank twice as deep: it is eight times as stiff, and the sag is back where it was."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_05": {
+    "duration": 4.8,
+    "hash": "076764ef25c0557a",
+    "sentences": [
+     [
+      0.05,
+      4.736,
+      "Why are floor beams stood on their narrow edge instead of laid flat?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Banks": {
+    "duration": 6.408,
+    "hash": "6cc1480759b41d6e",
+    "sentences": [
+     [
+      0.05,
+      2.486,
+      "Each bank holds up half the load."
+     ],
+     [
+      2.486,
+      6.347,
+      "The farther apart they are, the more the plank bends."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Beam": {
+    "duration": 6.288,
+    "hash": "3b51c767dc37d93d",
+    "sentences": [
+     [
+      0.05,
+      6.236,
+      "A beam: it carries the load by bending, squeezed on top and stretched underneath."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Load": {
+    "duration": 3.984,
+    "hash": "c536a34d8bd783dd",
+    "sentences": [
+     [
+      0.05,
+      3.917,
+      "Two tonnes, in the middle, where it bends the plank the most."
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Top": {
+    "duration": 5.904,
+    "hash": "11e48253e6c0d071",
+    "sentences": [
+     [
+      0.05,
+      2.889,
+      "Squeezed shorter as the plank bends."
+     ],
+     [
+      2.889,
+      5.847,
+      "The bottom face is stretched just as much."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_01": {
+    "duration": 6.744,
+    "hash": "32779205f9c12b1c",
+    "sentences": [
+     [
+      0.05,
+      6.694,
+      "This main cable hangs twenty metres down between the towers, holding up a two-thousand-tonne deck."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_02": {
+    "duration": 4.872,
+    "hash": "663dd516a586e1cc",
+    "sentences": [
+     [
+      0.05,
+      4.806,
+      "Hangers drop from the cable to the deck, passing the deck's weight up to it."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_03": {
+    "duration": 5.952,
+    "hash": "d7968a3613b3b806",
+    "sentences": [
+     [
+      0.05,
+      5.889,
+      "Your turn: pull the cable tighter, until it sags no more than eight metres."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_04": {
+    "duration": 6.96,
+    "hash": "fdc4163483d8dd56",
+    "sentences": [
+     [
+      0.05,
+      2.181,
+      "Now cut the anchors free."
+     ],
+     [
+      2.181,
+      6.903,
+      "Nothing holds the pull back, and the cable drags the tower tops inward."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_05": {
+    "duration": 2.88,
+    "hash": "217d21639ba0c48a",
+    "sentences": [
+     [
+      0.05,
+      2.819,
+      "Why does a suspension cable have to sag?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Anchors": {
+    "duration": 4.68,
+    "hash": "7661b6b274fcdbe3",
+    "sentences": [
+     [
+      0.05,
+      4.611,
+      "Enormous blocks in the ground that hold the cable's ends against its pull."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Cable": {
+    "duration": 5.28,
+    "hash": "d740014e09a85c40",
+    "sentences": [
+     [
+      0.05,
+      5.222,
+      "Thousands of steel wires bundled together, only ever stretched."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Hangers": {
+    "duration": 6.384,
+    "hash": "33a2f6eeb89306eb",
+    "sentences": [
+     [
+      0.05,
+      6.333,
+      "Thin cables from the main cable to the deck, each carrying its own short stretch of deck."
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Towers": {
+    "duration": 6.72,
+    "hash": "a3e70ef4e4c237a1",
+    "sentences": [
+     [
+      0.05,
+      1.749,
+      "They hold the cable up."
+     ],
+     [
+      1.749,
+      6.667,
+      "They are squeezed straight down, as long as the anchors balance the cable's pull."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_01": {
+    "duration": 5.88,
+    "hash": "6344ea3b6ffdfb41",
+    "sentences": [
+     [
+      0.05,
+      5.819,
+      "This steel deck is four hundred metres long, pinned at its left end only."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_02": {
+    "duration": 7.176,
+    "hash": "61aded4f0edd7bdd",
+    "sentences": [
+     [
+      0.05,
+      7.125,
+      "On a hot afternoon of forty degrees it is twelve centimetres longer, and the joint's gap closes to eight."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_03": {
+    "duration": 5.808,
+    "hash": "56131f9568d6fbda",
+    "sentences": [
+     [
+      0.05,
+      5.75,
+      "Your turn: make it a cold night, ten degrees below zero or colder."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_04": {
+    "duration": 9.048,
+    "hash": "47302df60d3bcece",
+    "sentences": [
+     [
+      0.05,
+      4.083,
+      "Now take the joint away and hold both ends fast."
+     ],
+     [
+      4.083,
+      8.986,
+      "In the heat the deck pushes on the abutments with about three thousand tonnes."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_05": {
+    "duration": 4.344,
+    "hash": "a31d24e861596d68",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "By how much does this deck grow when it warms by thirty degrees?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Abutment": {
+    "duration": 6.96,
+    "hash": "692bb5bcda7d1f16",
+    "sentences": [
+     [
+      0.05,
+      2.083,
+      "The block the deck ends at."
+     ],
+     [
+      2.083,
+      6.903,
+      "With no joint, the deck would push on it with thousands of tonnes."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Bearing": {
+    "duration": 5.16,
+    "hash": "3cda8bb28b31dd06",
+    "sentences": [
+     [
+      0.05,
+      5.097,
+      "Lets the deck's free end slide back and forth without pushing on what holds it up."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Deck": {
+    "duration": 4.872,
+    "hash": "0ca96724d13491c0",
+    "sentences": [
+     [
+      0.05,
+      4.819,
+      "Four hundred metres of steel, growing and shrinking with the weather."
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Joint": {
+    "duration": 6.456,
+    "hash": "20e29f2a92e01d0e",
+    "sentences": [
+     [
+      0.05,
+      6.403,
+      "Steel fingers that slide between each other, so the gap can change while wheels still roll across."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_01": {
+    "duration": 4.632,
+    "hash": "dda29f788730af3f",
+    "sentences": [
+     [
+      0.05,
+      4.583,
+      "Four bars, pinned at the corners so each corner can turn."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_02": {
+    "duration": 6.168,
+    "hash": "582e74021f5ff814",
+    "sentences": [
+     [
+      0.05,
+      3.431,
+      "Push the top, and the square folds over."
+     ],
+     [
+      3.431,
+      6.097,
+      "Not one bar has changed its length."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_03": {
+    "duration": 3.696,
+    "hash": "3a78403dbc83fcc4",
+    "sentences": [
+     [
+      0.05,
+      3.651,
+      "Your turn: fit a brace across the diagonal."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_04": {
+    "duration": 6.96,
+    "hash": "621a107f8510bc87",
+    "sentences": [
+     [
+      0.05,
+      1.708,
+      "Push twice as hard."
+     ],
+     [
+      1.708,
+      6.889,
+      "The frame stays square, and the brace is stretched by nearly three tonnes."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_05": {
+    "duration": 3.888,
+    "hash": "b6d568835ece85a6",
+    "sentences": [
+     [
+      0.05,
+      3.819,
+      "Why are bridges and cranes built of triangles?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Bars": {
+    "duration": 6.312,
+    "hash": "72b1f2d7ca5e6a8d",
+    "sentences": [
+     [
+      0.05,
+      6.25,
+      "Strong along their length, but in a square nothing stops them swinging round their pins."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Brace": {
+    "duration": 6.888,
+    "hash": "5b5c630b6576aa4c",
+    "sentences": [
+     [
+      0.05,
+      6.833,
+      "One bar across the diagonal turns the square into two triangles, and the frame can no longer fold."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Hand": {
+    "duration": 5.664,
+    "hash": "832ba551892dd70d",
+    "sentences": [
+     [
+      0.05,
+      5.611,
+      "A sideways push at the top, like the wind on a bridge or a crane swinging its load."
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Pins": {
+    "duration": 7.248,
+    "hash": "7464e11ff9084bc7",
+    "sentences": [
+     [
+      0.05,
+      3.0,
+      "Each pin lets its corner turn freely."
+     ],
+     [
+      3.0,
+      7.194,
+      "Bridges built of trusses were once joined just like this."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_01": {
+    "duration": 3.888,
+    "hash": "c6ee5ac57e1724df",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "A ten-tonne lorry stands in the middle of this truss bridge."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_02": {
+    "duration": 6.648,
+    "hash": "1e5dfd705a0bcc1a",
+    "sentences": [
+     [
+      0.05,
+      6.583,
+      "The top chord is squeezed, red: the truss is bending like a plank, and its top gets shorter."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_03": {
+    "duration": 7.416,
+    "hash": "99d356e264c3e3fb",
+    "sentences": [
+     [
+      0.05,
+      2.486,
+      "The bottom chord is stretched, blue."
+     ],
+     [
+      2.486,
+      7.361,
+      "Together the two chords do the job of a beam's top and bottom faces."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_04": {
+    "duration": 6.816,
+    "hash": "1bf22f524a63af9d",
+    "sentences": [
+     [
+      0.05,
+      6.764,
+      "Your turn: make the truss taller, until the top chord carries no more than ten tonnes."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_05": {
+    "duration": 2.208,
+    "hash": "65c71b53b4907cc1",
+    "sentences": [
+     [
+      0.05,
+      2.153,
+      "What do the diagonal members do?"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Bottom": {
+    "duration": 4.944,
+    "hash": "16596f6f42c26725",
+    "sentences": [
+     [
+      0.05,
+      3.569,
+      "The bottom row, which also carries the deck."
+     ],
+     [
+      3.569,
+      4.875,
+      "It is stretched."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Diagonals": {
+    "duration": 6.672,
+    "hash": "06bf7ce4ad8210c6",
+    "sentences": [
+     [
+      0.05,
+      6.611,
+      "They pass the load from panel to panel; some are squeezed and some stretched, depending on where the lorry is."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Load": {
+    "duration": 4.488,
+    "hash": "2e77f96931b95c92",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "Ten tonnes, shared between the joints of the deck either side of it."
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Top": {
+    "duration": 4.608,
+    "hash": "dc11f347e91f87b4",
+    "sentences": [
+     [
+      0.05,
+      4.556,
+      "The top row of members, squeezed, hardest in the middle of the span."
+     ]
+    ]
+   },
    "Narr_Car_Bend_01": {
     "duration": 5.496,
     "hash": "d45e28d563891c8b",
@@ -8199,6 +8883,690 @@
       0.1,
       6.633,
       "灌进海水就变重下潜；用空气把水吹出去就变轻上浮。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_01": {
+    "duration": 6.384,
+    "hash": "4eed467698ad05cf",
+    "sentences": [
+     [
+      0.1,
+      6.383,
+      "这座拱的每块石头都是楔形的，每一块都被两边的邻居挤着。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_02": {
+    "duration": 7.824,
+    "hash": "f81300438a11e9df",
+    "sentences": [
+     [
+      0.1,
+      3.703,
+      "最上面的拱顶石是最后放进去的。"
+     ],
+     [
+      3.653,
+      7.764,
+      "它一放好，整圈石头就能自己撑住。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_03": {
+    "duration": 6.552,
+    "hash": "d391d2dd096e9a1f",
+    "sentences": [
+     [
+      0.1,
+      6.536,
+      "轮到你了：把拱压扁，直到每一岸被往外推的力超过八十吨。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_04": {
+    "duration": 6.96,
+    "hash": "b9771ab6f0fa7b07",
+    "sentences": [
+     [
+      0.1,
+      2.397,
+      "现在把桥台拿掉。"
+     ],
+     [
+      2.347,
+      6.889,
+      "没有东西顶住推力，两脚滑开，拱就塌了。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_05": {
+    "duration": 5.136,
+    "hash": "b6b13d6d9a75f90f",
+    "sentences": [
+     [
+      0.1,
+      5.119,
+      "为什么石头能砌成很长的拱，却做不成很长的梁？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Abutments": {
+    "duration": 4.248,
+    "hash": "4ccc7a72253ac0e4",
+    "sentences": [
+     [
+      0.1,
+      4.244,
+      "两脚处的大石墩，顶住拱往外的推力。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Keystone": {
+    "duration": 6.408,
+    "hash": "43515e475ed588a7",
+    "sentences": [
+     [
+      0.1,
+      3.578,
+      "最上面那块石头，最后放进去。"
+     ],
+     [
+      3.528,
+      6.347,
+      "它把整圈石头锁在一起。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Road": {
+    "duration": 7.08,
+    "hash": "2cb00540275d95cb",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "铺在拱上方的填土上。"
+     ],
+     [
+      2.708,
+      7.028,
+      "它的重量把石块压紧，帮它们待在原位。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Arch_Part_Stones": {
+    "duration": 6.216,
+    "hash": "887b349eaa42dd35",
+    "sentences": [
+     [
+      0.1,
+      2.356,
+      "互相倚靠的楔块。"
+     ],
+     [
+      2.306,
+      6.167,
+      "压上去的重量只会让它们挤得更紧。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_01": {
+    "duration": 6.432,
+    "hash": "6bc285efed9be239",
+    "sentences": [
+     [
+      0.1,
+      6.411,
+      "这块木板跨过一条六米宽的小溪，中间压着两吨重的东西。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_02": {
+    "duration": 6.984,
+    "hash": "2cc9d5966d0a4508",
+    "sentences": [
+     [
+      0.1,
+      4.217,
+      "它一弯，上面被压短，下面被拉长。"
+     ],
+     [
+      4.167,
+      6.917,
+      "托住重物的就是这个。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_03": {
+    "duration": 4.8,
+    "hash": "9da7744e3f433095",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "轮到你了：把跨度加长一倍，变成十二米。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_04": {
+    "duration": 8.688,
+    "hash": "b03fe6695cac50c2",
+    "sentences": [
+     [
+      0.1,
+      2.453,
+      "下垂变成了八倍。"
+     ],
+     [
+      2.403,
+      8.625,
+      "再把木板加厚一倍：它就硬了八倍，下垂又回到原来那么多。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_05": {
+    "duration": 5.568,
+    "hash": "c781b073f49ee38e",
+    "sentences": [
+     [
+      0.1,
+      5.55,
+      "为什么楼板下的梁要窄边朝上竖着放，而不是平躺着？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Banks": {
+    "duration": 6.192,
+    "hash": "adf769aa3d495f98",
+    "sentences": [
+     [
+      0.1,
+      2.911,
+      "两岸各托住一半的重量。"
+     ],
+     [
+      2.861,
+      6.125,
+      "离得越远，木板弯得越厉害。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Beam": {
+    "duration": 5.76,
+    "hash": "d5e7c9827a768190",
+    "sentences": [
+     [
+      0.1,
+      5.744,
+      "一根梁：它靠弯曲来承重，上面受压，下面受拉。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Load": {
+    "duration": 5.304,
+    "hash": "5318574714f3dc3f",
+    "sentences": [
+     [
+      0.1,
+      5.286,
+      "两吨重，压在正中间，这里让木板弯得最厉害。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Beam_Part_Top": {
+    "duration": 6.216,
+    "hash": "287d15b6aa9cef70",
+    "sentences": [
+     [
+      0.1,
+      2.897,
+      "木板一弯，它就被压短。"
+     ],
+     [
+      2.847,
+      6.153,
+      "下表面被拉长的程度一样大。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_01": {
+    "duration": 6.216,
+    "hash": "c62ccd10dc8a7398",
+    "sentences": [
+     [
+      0.1,
+      6.217,
+      "这根主缆在两塔之间垂下二十米，托着两千吨重的桥面。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_02": {
+    "duration": 5.568,
+    "hash": "de4cd83c61943df0",
+    "sentences": [
+     [
+      0.1,
+      5.55,
+      "吊索从主缆垂到桥面，把桥面的重量交给主缆。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_03": {
+    "duration": 5.208,
+    "hash": "00754876fff1298d",
+    "sentences": [
+     [
+      0.1,
+      5.189,
+      "轮到你了：把主缆拉紧，直到垂度不超过八米。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_04": {
+    "duration": 7.032,
+    "hash": "056abc9929ae7fc3",
+    "sentences": [
+     [
+      0.1,
+      2.369,
+      "现在把锚碇松开。"
+     ],
+     [
+      2.319,
+      6.972,
+      "没有东西拉住这股力，主缆就把塔顶往里拽。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_05": {
+    "duration": 3.792,
+    "hash": "6851b439743a0b41",
+    "sentences": [
+     [
+      0.1,
+      3.786,
+      "为什么悬索桥的主缆一定要垂下来？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Anchors": {
+    "duration": 4.512,
+    "hash": "ed1079427cb15713",
+    "sentences": [
+     [
+      0.1,
+      4.508,
+      "埋在地里的巨大块体，拉住主缆的两头。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Cable": {
+    "duration": 4.632,
+    "hash": "22e39ec5084ff977",
+    "sentences": [
+     [
+      0.1,
+      4.633,
+      "成千上万根钢丝捆在一起，从来只受拉。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Hangers": {
+    "duration": 5.688,
+    "hash": "f7c6b5cf7169470c",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "从主缆垂到桥面的细缆，每根吊着自己那一小段桥面。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Cable_Part_Towers": {
+    "duration": 7.824,
+    "hash": "c9df14dd4dd8b843",
+    "sentences": [
+     [
+      0.1,
+      2.286,
+      "它们把主缆举起来。"
+     ],
+     [
+      2.236,
+      7.764,
+      "只要锚碇平衡了主缆的拉力，它们就只是被竖直往下压。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_01": {
+    "duration": 4.344,
+    "hash": "e3a5c13b9dace0c0",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "这段钢桥面长四百米，只在左端固定。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_02": {
+    "duration": 7.272,
+    "hash": "2124908ced7d3434",
+    "sentences": [
+     [
+      0.1,
+      7.258,
+      "到了四十度的炎热午后，它长了十二厘米，伸缩缝合拢到只剩八厘米。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_03": {
+    "duration": 5.928,
+    "hash": "fda990b39e35673f",
+    "sentences": [
+     [
+      0.1,
+      5.925,
+      "轮到你了：把天气调到寒冷的夜晚，零下十度或更冷。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_04": {
+    "duration": 8.904,
+    "hash": "0b4072d9690677ec",
+    "sentences": [
+     [
+      0.1,
+      4.078,
+      "现在去掉伸缩缝，把两头固定死。"
+     ],
+     [
+      4.028,
+      8.847,
+      "天一热，桥面就以大约三千吨的力推桥台。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_05": {
+    "duration": 3.984,
+    "hash": "aadf5f1dff4b1c00",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "这段桥面升温三十度，会长多少？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Abutment": {
+    "duration": 7.536,
+    "hash": "cb786e62c20b08f9",
+    "sentences": [
+     [
+      0.1,
+      2.675,
+      "桥面尽头的那块墩子。"
+     ],
+     [
+      2.625,
+      7.472,
+      "要是没有伸缩缝，桥面会以几千吨的力推它。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Bearing": {
+    "duration": 5.688,
+    "hash": "8e20e3d9232147ec",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "让桥面自由的那头来回滑动，而不去推托着它的东西。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Deck": {
+    "duration": 4.512,
+    "hash": "2e9e76b6da46205c",
+    "sentences": [
+     [
+      0.1,
+      4.508,
+      "四百米长的钢，随着天气伸长、缩短。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Expansion_Part_Joint": {
+    "duration": 5.904,
+    "hash": "d1070e2d8b0e1b26",
+    "sentences": [
+     [
+      0.1,
+      5.883,
+      "互相插着滑动的钢指，缝宽可以变，车轮照样能开过去。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_01": {
+    "duration": 5.472,
+    "hash": "6a23c72f6823a2e0",
+    "sentences": [
+     [
+      0.1,
+      5.453,
+      "四根杆子，在四个角用销子连着，每个角都能转。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_02": {
+    "duration": 6.672,
+    "hash": "ef90081b6017d737",
+    "sentences": [
+     [
+      0.1,
+      3.342,
+      "推一下顶，正方形就歪倒了。"
+     ],
+     [
+      3.292,
+      6.611,
+      "可没有一根杆子改变了长度。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_03": {
+    "duration": 4.08,
+    "hash": "f94bc522dcb52bb9",
+    "sentences": [
+     [
+      0.1,
+      4.064,
+      "轮到你了：沿对角线装上一根斜撑。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_04": {
+    "duration": 7.224,
+    "hash": "ff85a13cfb4e7648",
+    "sentences": [
+     [
+      0.1,
+      2.092,
+      "用两倍的力推。"
+     ],
+     [
+      2.042,
+      7.153,
+      "框架还是方的，斜撑被拉着，受力将近三吨。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_05": {
+    "duration": 3.984,
+    "hash": "8bbbc9435873851a",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "为什么桥和起重机都用三角形来搭？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Bars": {
+    "duration": 8.04,
+    "hash": "223177f1b5eaf25d",
+    "sentences": [
+     [
+      0.1,
+      8.036,
+      "顺着长度方向很结实，但在正方形里，没有什么能阻止它们绕着销子转。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Brace": {
+    "duration": 7.656,
+    "hash": "5f5e5674f11bc00f",
+    "sentences": [
+     [
+      0.1,
+      7.633,
+      "沿对角线的一根杆子，把正方形变成两个三角形，框架就再也歪不了了。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Hand": {
+    "duration": 7.416,
+    "hash": "488fa9fc16b833e0",
+    "sentences": [
+     [
+      0.1,
+      7.411,
+      "从侧面推顶部的力，就像风吹在桥上，或者起重机甩动吊着的重物。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Frame_Part_Pins": {
+    "duration": 7.632,
+    "hash": "36b539c8b5625ada",
+    "sentences": [
+     [
+      0.1,
+      4.05,
+      "每个销子都让那个角可以自由转动。"
+     ],
+     [
+      4.0,
+      7.569,
+      "早年的桁架桥就是这样连起来的。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_01": {
+    "duration": 5.016,
+    "hash": "4f568ba4f85807e5",
+    "sentences": [
+     [
+      0.1,
+      5.008,
+      "一辆十吨重的卡车停在这座桁架桥的正中间。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_02": {
+    "duration": 6.84,
+    "hash": "a512c8b3e13adc16",
+    "sentences": [
+     [
+      0.1,
+      6.828,
+      "上弦受压，画成红色：桁架像木板一样弯，它的上面变短了。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_03": {
+    "duration": 8.16,
+    "hash": "def66f658e5f2970",
+    "sentences": [
+     [
+      0.1,
+      3.092,
+      "下弦受拉，画成蓝色。"
+     ],
+     [
+      3.042,
+      8.111,
+      "上下弦合起来，干的正是梁上下两个表面的活。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_04": {
+    "duration": 6.168,
+    "hash": "69012136e902b586",
+    "sentences": [
+     [
+      0.1,
+      6.161,
+      "轮到你了：把桁架加高，直到上弦受的力不超过十吨。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_05": {
+    "duration": 2.52,
+    "hash": "bc2ad8efc0183438",
+    "sentences": [
+     [
+      0.1,
+      2.508,
+      "斜杆是做什么用的？"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Bottom": {
+    "duration": 4.824,
+    "hash": "43b9ee41e0c2fb6c",
+    "sentences": [
+     [
+      0.1,
+      3.411,
+      "最下面那一排，也托着桥面。"
+     ],
+     [
+      3.361,
+      4.764,
+      "它受拉。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Diagonals": {
+    "duration": 7.272,
+    "hash": "3fbae816fb7c30b1",
+    "sentences": [
+     [
+      0.1,
+      7.258,
+      "它们把重量一格一格地往外传；有的受压、有的受拉，要看卡车在哪儿。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Load": {
+    "duration": 4.344,
+    "hash": "9a4ff628c7f69203",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "十吨重，由它两边桥面上的节点分担。"
+     ]
+    ]
+   },
+   "Narr_Bridges_Truss_Part_Top": {
+    "duration": 4.752,
+    "hash": "d5de27110107356d",
+    "sentences": [
+     [
+      0.1,
+      4.731,
+      "最上面那一排杆子，受压，跨中最厉害。"
      ]
     ]
    },

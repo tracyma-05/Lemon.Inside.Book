@@ -17,6 +17,7 @@
              xmlns:locks="using:Lemon.Inside.Book.Chapters.Locks"
              xmlns:lifting="using:Lemon.Inside.Book.Chapters.Lifting"
              xmlns:plumbing="using:Lemon.Inside.Book.Chapters.Plumbing"
+             xmlns:bridges="using:Lemon.Inside.Book.Chapters.Bridges"
              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
              x:Class="Lemon.Inside.Book.Views.MainView"
@@ -46,6 +47,8 @@
         <DataTemplate DataType="lifting:LiftingDiagramPageViewModel"><lifting:LiftingDiagramPageView /></DataTemplate>
         <DataTemplate DataType="plumbing:PlumbingTextPageViewModel"><plumbing:PlumbingTextPageView /></DataTemplate>
         <DataTemplate DataType="plumbing:PlumbingDiagramPageViewModel"><plumbing:PlumbingDiagramPageView /></DataTemplate>
+        <DataTemplate DataType="bridges:BridgesTextPageViewModel"><bridges:BridgesTextPageView /></DataTemplate>
+        <DataTemplate DataType="bridges:BridgesDiagramPageViewModel"><bridges:BridgesDiagramPageView /></DataTemplate>
         <DataTemplate DataType="pages:CoverPageViewModel"><pageViews:CoverPageView /></DataTemplate>
         <DataTemplate DataType="pages:HowToUsePageViewModel"><pageViews:HowToUsePageView /></DataTemplate>
         <DataTemplate DataType="pages:TitlePageViewModel"><pageViews:TitlePageView /></DataTemplate>

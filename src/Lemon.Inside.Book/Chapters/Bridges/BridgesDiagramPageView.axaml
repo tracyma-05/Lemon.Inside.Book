@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:bridges="using:Lemon.Inside.Book.Chapters.Bridges"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Bridges.BridgesDiagramPageView"
+                         x:DataType="bridges:BridgesDiagramPageViewModel">
+    <!-- A right page of the Bridges chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="bridges:BeamSpread">
+                            <bridges:BeamDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Span="{Binding Span}" Depth="{Binding Depth}" AutomationProperties.Name="{loc:Localize Bridges_Beam_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:FrameSpread">
+                            <bridges:FrameDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Push="{Binding Push}" Brace="{Binding Brace}" AutomationProperties.Name="{loc:Localize Bridges_Frame_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:TrussSpread">
+                            <bridges:TrussDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     TrussHeight="{Binding Height}" Position="{Binding Position}" AutomationProperties.Name="{loc:Localize Bridges_Truss_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:ArchSpread">
+                            <bridges:ArchDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Rise="{Binding Rise}" Abutments="{Binding Abutments}" AutomationProperties.Name="{loc:Localize Bridges_Arch_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:CableSpread">
+                            <bridges:CableDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Sag="{Binding Sag}" Anchored="{Binding Anchored}" AutomationProperties.Name="{loc:Localize Bridges_Cable_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bridges:ExpansionSpread">
+                            <bridges:ExpansionDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Temperature="{Binding Temperature}" Joint="{Binding Joint}" AutomationProperties.Name="{loc:Localize Bridges_Expansion_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

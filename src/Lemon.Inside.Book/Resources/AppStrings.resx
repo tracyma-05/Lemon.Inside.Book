@@ -5313,4 +5313,553 @@
   <data name="Narr_Plumbing_Pump_Part_Water" xml:space="preserve">
     <value>The air presses on its surface. That push, not the pump, is what drives the water up the pipe.</value>
   </data>
+  <data name="Chapter_Bridges" xml:space="preserve">
+    <value>How bridges stand</value>
+  </data>
+  <data name="Bridges_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Bridges_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Bridges_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Bridges_Centimetres" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Bridges_Tonnes" xml:space="preserve">
+    <value>{0} t</value>
+  </data>
+  <data name="Bridges_Degrees" xml:space="preserve">
+    <value>{0} °C</value>
+  </data>
+  <data name="Bridges_Squeezed" xml:space="preserve">
+    <value>squeezed</value>
+  </data>
+  <data name="Bridges_Stretched" xml:space="preserve">
+    <value>stretched</value>
+  </data>
+  <data name="Bridges_Beam_Title" xml:space="preserve">
+    <value>A plank across a stream</value>
+  </data>
+  <data name="Bridges_Beam_P1" xml:space="preserve">
+    <value>The simplest bridge is a plank resting on two banks. Stand in the middle and it bends a little. As it bends, its upper side gets shorter, squeezed, and its lower side gets longer, stretched. It is the wood's resistance to being squeezed and stretched that holds you up.</value>
+  </data>
+  <data name="Bridges_Beam_P2" xml:space="preserve">
+    <value>Length makes a beam bend far more than you might guess: twice as long, and the same load makes it sag eight times as much. Depth works just as strongly the other way: a plank twice as deep sags only an eighth as much. So a longer bridge needs a much deeper beam, and soon the beam gets too heavy to carry even itself.</value>
+  </data>
+  <data name="Bridges_Beam_Deeper" xml:space="preserve">
+    <value>The middle of a beam's depth is neither squeezed nor stretched; the work is done near the top and the bottom faces. That is why steel beams are made in the shape of an I: two wide flanges far apart, joined by a thin web, with little metal in the middle where it would do nothing. For the same reason floor joists stand on their narrow edge. The wood is the same; turning it on edge makes it many times stiffer.</value>
+  </data>
+  <data name="Bridges_Beam_Span" xml:space="preserve">
+    <value>Span between the banks</value>
+  </data>
+  <data name="Bridges_Beam_Depth" xml:space="preserve">
+    <value>Depth of the plank</value>
+  </data>
+  <data name="Bridges_Beam_Readout" xml:space="preserve">
+    <value>Under the two tonnes, the middle sags {0}.</value>
+  </data>
+  <data name="Bridges_Beam_Picture" xml:space="preserve">
+    <value>A plank bridge across a stream with a load in the middle, its upper half squeezed and its lower half stretched</value>
+  </data>
+  <data name="Bridges_Beam_SagLabel" xml:space="preserve">
+    <value>sags {0} cm (drawn 5× bigger)</value>
+  </data>
+  <data name="Bridges_Beam_Rule" xml:space="preserve">
+    <value>twice the span: 8× the sag · twice the depth: ⅛ the sag</value>
+  </data>
+  <data name="Narr_Bridges_Beam_01" xml:space="preserve">
+    <value>This plank crosses a six-metre stream, with a two-tonne load in the middle.</value>
+  </data>
+  <data name="Narr_Bridges_Beam_02" xml:space="preserve">
+    <value>As it bends, its top is squeezed shorter and its bottom stretched longer. That is what holds the load up.</value>
+  </data>
+  <data name="Narr_Bridges_Beam_03" xml:space="preserve">
+    <value>Your turn: make the span twice as long, twelve metres.</value>
+  </data>
+  <data name="Narr_Bridges_Beam_04" xml:space="preserve">
+    <value>It sags eight times as much. Now make the plank twice as deep: it is eight times as stiff, and the sag is back where it was.</value>
+  </data>
+  <data name="Narr_Bridges_Beam_05" xml:space="preserve">
+    <value>Why are floor beams stood on their narrow edge instead of laid flat?</value>
+  </data>
+  <data name="Bridges_Beam_Quiz1" xml:space="preserve">
+    <value>Depth counts most: twice as deep is eight times as stiff</value>
+  </data>
+  <data name="Bridges_Beam_Quiz2" xml:space="preserve">
+    <value>So that they are easier to paint</value>
+  </data>
+  <data name="Bridges_Beam_Quiz3" xml:space="preserve">
+    <value>Because wood is weaker lying flat</value>
+  </data>
+  <data name="Bridges_Beam_Part_Beam" xml:space="preserve">
+    <value>Plank</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Beam" xml:space="preserve">
+    <value>A beam: it carries the load by bending, squeezed on top and stretched underneath.</value>
+  </data>
+  <data name="Bridges_Beam_Part_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Load" xml:space="preserve">
+    <value>Two tonnes, in the middle, where it bends the plank the most.</value>
+  </data>
+  <data name="Bridges_Beam_Part_Top" xml:space="preserve">
+    <value>Top face</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Top" xml:space="preserve">
+    <value>Squeezed shorter as the plank bends. The bottom face is stretched just as much.</value>
+  </data>
+  <data name="Bridges_Beam_Part_Banks" xml:space="preserve">
+    <value>Banks</value>
+  </data>
+  <data name="Narr_Bridges_Beam_Part_Banks" xml:space="preserve">
+    <value>Each bank holds up half the load. The farther apart they are, the more the plank bends.</value>
+  </data>
+  <data name="Bridges_Frame_Title" xml:space="preserve">
+    <value>Why triangles</value>
+  </data>
+  <data name="Bridges_Frame_P1" xml:space="preserve">
+    <value>Join four bars into a square with a pin at each corner, so each corner can turn. Push the top sideways and the square folds over into a slanting shape. None of the bars got longer or shorter; the corners simply turned. A square has no way of holding its shape.</value>
+  </data>
+  <data name="Bridges_Frame_P2" xml:space="preserve">
+    <value>Add one bar across a diagonal and the square becomes two triangles. Now it will not fold at all, because a triangle cannot change its shape unless one of its sides changes length. Push it, and the brace is stretched instead. A bar is very strong along its length, so a few triangles of thin bars can be both light and stiff.</value>
+  </data>
+  <data name="Bridges_Frame_Deeper" xml:space="preserve">
+    <value>The brace here carries more than the push: about one and four-tenths times as much, because it leans at forty-five degrees and only part of its pull acts sideways. Push from the other side and the same brace would be squeezed instead, which is why many frames have braces both ways, or one stout enough to take either. Look for triangles in cranes, roof timbers, electricity pylons and bicycle frames.</value>
+  </data>
+  <data name="Bridges_Frame_Push" xml:space="preserve">
+    <value>Push on the top corner</value>
+  </data>
+  <data name="Bridges_Frame_Brace" xml:space="preserve">
+    <value>Fit a diagonal brace</value>
+  </data>
+  <data name="Bridges_Frame_Braced" xml:space="preserve">
+    <value>Braced, the frame keeps its shape. The brace is stretched by {0}.</value>
+  </data>
+  <data name="Bridges_Frame_Still" xml:space="preserve">
+    <value>Nothing pushes yet: the square stands.</value>
+  </data>
+  <data name="Bridges_Frame_Leans" xml:space="preserve">
+    <value>The square folds over {0}° and keeps going: nothing in it can stop the corners turning.</value>
+  </data>
+  <data name="Bridges_Frame_Picture" xml:space="preserve">
+    <value>A square of four pinned bars on the ground, a hand pushing its top sideways, and a place for a diagonal brace</value>
+  </data>
+  <data name="Bridges_Frame_BraceLabel" xml:space="preserve">
+    <value>brace: {0}</value>
+  </data>
+  <data name="Bridges_Frame_LeanLabel" xml:space="preserve">
+    <value>leans {0}°</value>
+  </data>
+  <data name="Bridges_Frame_Rule" xml:space="preserve">
+    <value>a triangle cannot change shape without changing a side</value>
+  </data>
+  <data name="Narr_Bridges_Frame_01" xml:space="preserve">
+    <value>Four bars, pinned at the corners so each corner can turn.</value>
+  </data>
+  <data name="Narr_Bridges_Frame_02" xml:space="preserve">
+    <value>Push the top, and the square folds over. Not one bar has changed its length.</value>
+  </data>
+  <data name="Narr_Bridges_Frame_03" xml:space="preserve">
+    <value>Your turn: fit a brace across the diagonal.</value>
+  </data>
+  <data name="Narr_Bridges_Frame_04" xml:space="preserve">
+    <value>Push twice as hard. The frame stays square, and the brace is stretched by nearly three tonnes.</value>
+  </data>
+  <data name="Narr_Bridges_Frame_05" xml:space="preserve">
+    <value>Why are bridges and cranes built of triangles?</value>
+  </data>
+  <data name="Bridges_Frame_Quiz1" xml:space="preserve">
+    <value>Triangles use the least steel of any shape</value>
+  </data>
+  <data name="Bridges_Frame_Quiz2" xml:space="preserve">
+    <value>A triangle cannot change its shape unless one of its sides changes length</value>
+  </data>
+  <data name="Bridges_Frame_Quiz3" xml:space="preserve">
+    <value>Triangles catch less wind</value>
+  </data>
+  <data name="Bridges_Frame_Part_Bars" xml:space="preserve">
+    <value>Bars</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Bars" xml:space="preserve">
+    <value>Strong along their length, but in a square nothing stops them swinging round their pins.</value>
+  </data>
+  <data name="Bridges_Frame_Part_Pins" xml:space="preserve">
+    <value>Pins</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Pins" xml:space="preserve">
+    <value>Each pin lets its corner turn freely. Bridges built of trusses were once joined just like this.</value>
+  </data>
+  <data name="Bridges_Frame_Part_Brace" xml:space="preserve">
+    <value>Brace</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Brace" xml:space="preserve">
+    <value>One bar across the diagonal turns the square into two triangles, and the frame can no longer fold.</value>
+  </data>
+  <data name="Bridges_Frame_Part_Hand" xml:space="preserve">
+    <value>Push</value>
+  </data>
+  <data name="Narr_Bridges_Frame_Part_Hand" xml:space="preserve">
+    <value>A sideways push at the top, like the wind on a bridge or a crane swinging its load.</value>
+  </data>
+  <data name="Bridges_Truss_Title" xml:space="preserve">
+    <value>The truss</value>
+  </data>
+  <data name="Bridges_Truss_P1" xml:space="preserve">
+    <value>A truss is a deep beam with most of it left out: a row of triangles made of straight members. When a lorry drives onto it, the whole truss bends a little, just like a plank. Its top members, the top chord, are squeezed; its bottom members, the bottom chord, are stretched.</value>
+  </data>
+  <data name="Bridges_Truss_P2" xml:space="preserve">
+    <value>The diagonals between them carry the load across, from panel to panel, out to the banks. Each member is only squeezed or stretched along its length, never bent, and a straight bar is far stronger that way. A taller truss works like a deeper beam: twice as tall, and its chords carry half the force.</value>
+  </data>
+  <data name="Bridges_Truss_Deeper" xml:space="preserve">
+    <value>These forces are not guessed: at every joint the members' pulls and pushes must balance the load on it, and together those balances fix every force exactly. That is how the picture works them out. Move the lorry and watch the diagonals swap: one that was squeezed may become stretched. Steel is good at both, but long squeezed members can buckle sideways, so they are usually made thicker than the stretched ones.</value>
+  </data>
+  <data name="Bridges_Truss_Height" xml:space="preserve">
+    <value>Height of the truss</value>
+  </data>
+  <data name="Bridges_Truss_Position" xml:space="preserve">
+    <value>Where the lorry is</value>
+  </data>
+  <data name="Bridges_Truss_Readout" xml:space="preserve">
+    <value>The top chord is squeezed by up to {0}, the bottom chord stretched by up to {1}.</value>
+  </data>
+  <data name="Bridges_Truss_Picture" xml:space="preserve">
+    <value>A truss bridge over a river with a lorry on its deck, each member coloured by whether it is squeezed or stretched and marked with its force in tonnes</value>
+  </data>
+  <data name="Bridges_Truss_Rule" xml:space="preserve">
+    <value>each member only squeezed or stretched, never bent</value>
+  </data>
+  <data name="Narr_Bridges_Truss_01" xml:space="preserve">
+    <value>A ten-tonne lorry stands in the middle of this truss bridge.</value>
+  </data>
+  <data name="Narr_Bridges_Truss_02" xml:space="preserve">
+    <value>The top chord is squeezed, red: the truss is bending like a plank, and its top gets shorter.</value>
+  </data>
+  <data name="Narr_Bridges_Truss_03" xml:space="preserve">
+    <value>The bottom chord is stretched, blue. Together the two chords do the job of a beam's top and bottom faces.</value>
+  </data>
+  <data name="Narr_Bridges_Truss_04" xml:space="preserve">
+    <value>Your turn: make the truss taller, until the top chord carries no more than ten tonnes.</value>
+  </data>
+  <data name="Narr_Bridges_Truss_05" xml:space="preserve">
+    <value>What do the diagonal members do?</value>
+  </data>
+  <data name="Bridges_Truss_Quiz1" xml:space="preserve">
+    <value>Nothing: they are there for looks</value>
+  </data>
+  <data name="Bridges_Truss_Quiz2" xml:space="preserve">
+    <value>They hold the deck down in the wind</value>
+  </data>
+  <data name="Bridges_Truss_Quiz3" xml:space="preserve">
+    <value>They carry the load across to the banks and keep every panel made of triangles</value>
+  </data>
+  <data name="Bridges_Truss_Part_Load" xml:space="preserve">
+    <value>Lorry</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Load" xml:space="preserve">
+    <value>Ten tonnes, shared between the joints of the deck either side of it.</value>
+  </data>
+  <data name="Bridges_Truss_Part_Top" xml:space="preserve">
+    <value>Top chord</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Top" xml:space="preserve">
+    <value>The top row of members, squeezed, hardest in the middle of the span.</value>
+  </data>
+  <data name="Bridges_Truss_Part_Bottom" xml:space="preserve">
+    <value>Bottom chord</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Bottom" xml:space="preserve">
+    <value>The bottom row, which also carries the deck. It is stretched.</value>
+  </data>
+  <data name="Bridges_Truss_Part_Diagonals" xml:space="preserve">
+    <value>Diagonals</value>
+  </data>
+  <data name="Narr_Bridges_Truss_Part_Diagonals" xml:space="preserve">
+    <value>They pass the load from panel to panel; some are squeezed and some stretched, depending on where the lorry is.</value>
+  </data>
+  <data name="Bridges_Arch_Title" xml:space="preserve">
+    <value>The arch</value>
+  </data>
+  <data name="Bridges_Arch_P1" xml:space="preserve">
+    <value>Stone is strong when it is squeezed and weak when it is stretched, so a long stone beam cracks along its stretched underside. An arch avoids stretching altogether. Its wedge-shaped stones lean on each other, and their weight presses each one against its neighbours, all the way down to the ground.</value>
+  </data>
+  <data name="Bridges_Arch_P2" xml:space="preserve">
+    <value>But an arch does not only push down: it also pushes outward on the banks, trying to spread its feet. That outward push is the thrust, and solid ground or heavy blocks called abutments must hold it. The flatter the arch, the harder it pushes outward; a tall, round arch pushes outward much less.</value>
+  </data>
+  <data name="Bridges_Arch_Deeper" xml:space="preserve">
+    <value>While an arch is being built its stones cannot stand on their own, so they are laid on a temporary wooden frame. The keystone at the top goes in last; only then does the ring hold itself, and the frame can be taken away. Lean on any one stone of a finished arch and you only squeeze it harder. Many stone arch bridges built two thousand years ago are still carrying traffic.</value>
+  </data>
+  <data name="Bridges_Arch_Rise" xml:space="preserve">
+    <value>Rise of the arch</value>
+  </data>
+  <data name="Bridges_Arch_Abutments" xml:space="preserve">
+    <value>Abutments at the feet</value>
+  </data>
+  <data name="Bridges_Arch_Readout" xml:space="preserve">
+    <value>Each bank is pushed outward with {0} and holds up {1}.</value>
+  </data>
+  <data name="Bridges_Arch_Falls" xml:space="preserve">
+    <value>With nothing to push against, the feet slide apart and the arch falls in.</value>
+  </data>
+  <data name="Bridges_Arch_Picture" xml:space="preserve">
+    <value>A stone arch over a river, its wedge-shaped stones and keystone, the road on fill above, and arrows of the push at each foot</value>
+  </data>
+  <data name="Bridges_Arch_FallsLabel" xml:space="preserve">
+    <value>the feet slide apart!</value>
+  </data>
+  <data name="Bridges_Arch_RiseLabel" xml:space="preserve">
+    <value>10 m span, {0} m rise</value>
+  </data>
+  <data name="Bridges_Arch_Rule" xml:space="preserve">
+    <value>every stone squeezed, none stretched</value>
+  </data>
+  <data name="Narr_Bridges_Arch_01" xml:space="preserve">
+    <value>Every stone in this arch is wedge-shaped, and every one is squeezed by its neighbours.</value>
+  </data>
+  <data name="Narr_Bridges_Arch_02" xml:space="preserve">
+    <value>The keystone at the top goes in last. Once it is there, the ring holds itself up.</value>
+  </data>
+  <data name="Narr_Bridges_Arch_03" xml:space="preserve">
+    <value>Your turn: flatten the arch until each bank is pushed outward with more than eighty tonnes.</value>
+  </data>
+  <data name="Narr_Bridges_Arch_04" xml:space="preserve">
+    <value>Now take the abutments away. Nothing holds the thrust, the feet slide apart, and the arch falls.</value>
+  </data>
+  <data name="Narr_Bridges_Arch_05" xml:space="preserve">
+    <value>Why can stone make long arches but not long beams?</value>
+  </data>
+  <data name="Bridges_Arch_Quiz1" xml:space="preserve">
+    <value>Arches use less stone</value>
+  </data>
+  <data name="Bridges_Arch_Quiz2" xml:space="preserve">
+    <value>In an arch every stone is only squeezed, and stone is strong when squeezed but cracks when stretched</value>
+  </data>
+  <data name="Bridges_Arch_Quiz3" xml:space="preserve">
+    <value>Arches need no foundations</value>
+  </data>
+  <data name="Bridges_Arch_Part_Stones" xml:space="preserve">
+    <value>Stones</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Stones" xml:space="preserve">
+    <value>Wedges that lean on each other. The load only squeezes them tighter together.</value>
+  </data>
+  <data name="Bridges_Arch_Part_Keystone" xml:space="preserve">
+    <value>Keystone</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Keystone" xml:space="preserve">
+    <value>The stone at the top, put in last. It locks the ring together.</value>
+  </data>
+  <data name="Bridges_Arch_Part_Abutments" xml:space="preserve">
+    <value>Abutments</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Abutments" xml:space="preserve">
+    <value>Heavy blocks at the feet that take the arch's outward push.</value>
+  </data>
+  <data name="Bridges_Arch_Part_Road" xml:space="preserve">
+    <value>Road</value>
+  </data>
+  <data name="Narr_Bridges_Arch_Part_Road" xml:space="preserve">
+    <value>Laid on fill over the arch. Its weight presses the stones together and helps keep them in place.</value>
+  </data>
+  <data name="Bridges_Cable_Title" xml:space="preserve">
+    <value>Hanging from a cable</value>
+  </data>
+  <data name="Bridges_Cable_P1" xml:space="preserve">
+    <value>A suspension bridge turns the arch upside down. Instead of stones squeezed together, it hangs its deck from steel cables that are only ever stretched. The main cables drape between two tall towers, hangers drop from them to the deck, and their ends run back down to huge anchor blocks set in the ground.</value>
+  </data>
+  <data name="Bridges_Cable_P2" xml:space="preserve">
+    <value>The cable has to sag. The flatter it hangs, the harder it must pull to hold the same deck: half the sag, twice the pull. That pull runs along the cable to the tower tops and down the back stays into the anchors, which must hold it, just as an arch's abutments hold its thrust.</value>
+  </data>
+  <data name="Bridges_Cable_Deeper" xml:space="preserve">
+    <value>A cable carrying weight spread evenly along a deck hangs in a parabola, the same curve an arch takes upside down. A cable cannot buckle however long it is, while a long squeezed member can, which is why the longest bridges hang from cables. Their main cables are spun on site from thousands of thin wires laid side by side, then squeezed into a round bundle.</value>
+  </data>
+  <data name="Bridges_Cable_Sag" xml:space="preserve">
+    <value>Sag of the cable</value>
+  </data>
+  <data name="Bridges_Cable_Anchored" xml:space="preserve">
+    <value>Tie the cable ends to anchors</value>
+  </data>
+  <data name="Bridges_Cable_Readout" xml:space="preserve">
+    <value>The cable pulls with {0} along the bridge, and {1} at the tower tops.</value>
+  </data>
+  <data name="Bridges_Cable_Loose" xml:space="preserve">
+    <value>With no anchors, nothing holds the cable's pull of {0}: it drags the tower tops inward.</value>
+  </data>
+  <data name="Bridges_Cable_Picture" xml:space="preserve">
+    <value>A suspension bridge: two towers, the main cable hanging between them, hangers down to the deck, and the cable ends running to anchor blocks</value>
+  </data>
+  <data name="Bridges_Cable_SagLabel" xml:space="preserve">
+    <value>sag {0} m</value>
+  </data>
+  <data name="Bridges_Cable_PullLabel" xml:space="preserve">
+    <value>pull {0}</value>
+  </data>
+  <data name="Bridges_Cable_PulledIn" xml:space="preserve">
+    <value>the towers are pulled in!</value>
+  </data>
+  <data name="Bridges_Cable_Rule" xml:space="preserve">
+    <value>half the sag, twice the pull</value>
+  </data>
+  <data name="Narr_Bridges_Cable_01" xml:space="preserve">
+    <value>This main cable hangs twenty metres down between the towers, holding up a two-thousand-tonne deck.</value>
+  </data>
+  <data name="Narr_Bridges_Cable_02" xml:space="preserve">
+    <value>Hangers drop from the cable to the deck, passing the deck's weight up to it.</value>
+  </data>
+  <data name="Narr_Bridges_Cable_03" xml:space="preserve">
+    <value>Your turn: pull the cable tighter, until it sags no more than eight metres.</value>
+  </data>
+  <data name="Narr_Bridges_Cable_04" xml:space="preserve">
+    <value>Now cut the anchors free. Nothing holds the pull back, and the cable drags the tower tops inward.</value>
+  </data>
+  <data name="Narr_Bridges_Cable_05" xml:space="preserve">
+    <value>Why does a suspension cable have to sag?</value>
+  </data>
+  <data name="Bridges_Cable_Quiz1" xml:space="preserve">
+    <value>To use less steel</value>
+  </data>
+  <data name="Bridges_Cable_Quiz2" xml:space="preserve">
+    <value>So that tall ships can pass</value>
+  </data>
+  <data name="Bridges_Cable_Quiz3" xml:space="preserve">
+    <value>A cable pulled perfectly straight would need an endless pull to hold up any weight</value>
+  </data>
+  <data name="Bridges_Cable_Part_Cable" xml:space="preserve">
+    <value>Main cable</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Cable" xml:space="preserve">
+    <value>Thousands of steel wires bundled together, only ever stretched.</value>
+  </data>
+  <data name="Bridges_Cable_Part_Towers" xml:space="preserve">
+    <value>Towers</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Towers" xml:space="preserve">
+    <value>They hold the cable up. They are squeezed straight down, as long as the anchors balance the cable's pull.</value>
+  </data>
+  <data name="Bridges_Cable_Part_Hangers" xml:space="preserve">
+    <value>Hangers</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Hangers" xml:space="preserve">
+    <value>Thin cables from the main cable to the deck, each carrying its own short stretch of deck.</value>
+  </data>
+  <data name="Bridges_Cable_Part_Anchors" xml:space="preserve">
+    <value>Anchors</value>
+  </data>
+  <data name="Narr_Bridges_Cable_Part_Anchors" xml:space="preserve">
+    <value>Enormous blocks in the ground that hold the cable's ends against its pull.</value>
+  </data>
+  <data name="Bridges_Expansion_Title" xml:space="preserve">
+    <value>Room to grow</value>
+  </data>
+  <data name="Bridges_Expansion_P1" xml:space="preserve">
+    <value>Steel grows as it warms. Not by much: a metre of it gets about a hundredth of a millimetre longer for every degree. But a bridge deck is hundreds of metres long, and between a winter night and a summer afternoon it can warm by fifty degrees, enough for a four-hundred-metre deck to grow and shrink by about a quarter of a metre.</value>
+  </data>
+  <data name="Bridges_Expansion_P2" xml:space="preserve">
+    <value>So the deck is pinned at one end only and rests on rollers or sliding bearings everywhere else. At the free end is an expansion joint: steel fingers on the deck slide between fingers on the abutment, leaving a gap that opens in the cold and closes in the heat, while wheels roll smoothly across.</value>
+  </data>
+  <data name="Bridges_Expansion_Deeper" xml:space="preserve">
+    <value>Held fast at both ends, the deck could not grow, and it would push on the abutments with thousands of tonnes, enough to crack them or make the deck buckle upward. Railway lines meet the same problem; long welded rails are stretched when they are laid, so that on hot days they are squeezed far less. You can hear expansion joints as a regular thump-thump when a car drives across a long bridge.</value>
+  </data>
+  <data name="Bridges_Expansion_Temperature" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="Bridges_Expansion_Joint" xml:space="preserve">
+    <value>Leave an expansion joint</value>
+  </data>
+  <data name="Bridges_Expansion_Held" xml:space="preserve">
+    <value>Held fast at both ends, the deck pushes or pulls on the abutments with about {0}.</value>
+  </data>
+  <data name="Bridges_Expansion_Longer" xml:space="preserve">
+    <value>The deck is {0} longer than on a mild day; the joint's gap is {1}.</value>
+  </data>
+  <data name="Bridges_Expansion_Shorter" xml:space="preserve">
+    <value>The deck is {0} shorter than on a mild day; the joint's gap is {1}.</value>
+  </data>
+  <data name="Bridges_Expansion_Picture" xml:space="preserve">
+    <value>A 400-metre steel deck on piers with a thermometer, and below it the expansion joint seen from above with its sliding steel fingers</value>
+  </data>
+  <data name="Bridges_Expansion_Pinned" xml:space="preserve">
+    <value>pinned</value>
+  </data>
+  <data name="Bridges_Expansion_Drawn" xml:space="preserve">
+    <value>the deck's growth drawn 100× bigger</value>
+  </data>
+  <data name="Bridges_Expansion_Bows" xml:space="preserve">
+    <value>held fast, the deck bows up!</value>
+  </data>
+  <data name="Bridges_Expansion_HeldLabel" xml:space="preserve">
+    <value>held fast, the deck pulls on its ends</value>
+  </data>
+  <data name="Bridges_Expansion_FromAbove" xml:space="preserve">
+    <value>the joint, from above, to scale</value>
+  </data>
+  <data name="Bridges_Expansion_GapLabel" xml:space="preserve">
+    <value>gap {0} cm</value>
+  </data>
+  <data name="Bridges_Expansion_PushLabel" xml:space="preserve">
+    <value>pushes {0}</value>
+  </data>
+  <data name="Bridges_Expansion_PullLabel" xml:space="preserve">
+    <value>pulls {0}</value>
+  </data>
+  <data name="Bridges_Expansion_DeckLabel" xml:space="preserve">
+    <value>deck</value>
+  </data>
+  <data name="Bridges_Expansion_AbutmentLabel" xml:space="preserve">
+    <value>abutment</value>
+  </data>
+  <data name="Bridges_Expansion_Rule" xml:space="preserve">
+    <value>steel grows about 1.2 cm per 100 m for every 10 °C</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_01" xml:space="preserve">
+    <value>This steel deck is four hundred metres long, pinned at its left end only.</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_02" xml:space="preserve">
+    <value>On a hot afternoon of forty degrees it is twelve centimetres longer, and the joint's gap closes to eight.</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_03" xml:space="preserve">
+    <value>Your turn: make it a cold night, ten degrees below zero or colder.</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_04" xml:space="preserve">
+    <value>Now take the joint away and hold both ends fast. In the heat the deck pushes on the abutments with about three thousand tonnes.</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_05" xml:space="preserve">
+    <value>By how much does this deck grow when it warms by thirty degrees?</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz1" xml:space="preserve">
+    <value>About fourteen centimetres</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz2" xml:space="preserve">
+    <value>About a millimetre</value>
+  </data>
+  <data name="Bridges_Expansion_Quiz3" xml:space="preserve">
+    <value>About four metres</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Deck" xml:space="preserve">
+    <value>Deck</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Deck" xml:space="preserve">
+    <value>Four hundred metres of steel, growing and shrinking with the weather.</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Joint" xml:space="preserve">
+    <value>Expansion joint</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Joint" xml:space="preserve">
+    <value>Steel fingers that slide between each other, so the gap can change while wheels still roll across.</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Bearing" xml:space="preserve">
+    <value>Roller bearing</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Bearing" xml:space="preserve">
+    <value>Lets the deck's free end slide back and forth without pushing on what holds it up.</value>
+  </data>
+  <data name="Bridges_Expansion_Part_Abutment" xml:space="preserve">
+    <value>Abutment</value>
+  </data>
+  <data name="Narr_Bridges_Expansion_Part_Abutment" xml:space="preserve">
+    <value>The block the deck ends at. With no joint, the deck would push on it with thousands of tonnes.</value>
+  </data>
 </root>
