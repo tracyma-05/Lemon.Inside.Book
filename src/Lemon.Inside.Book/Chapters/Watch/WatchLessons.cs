@@ -2,10 +2,13 @@ using Lemon.Book.Shell.Explore.Lessons;
 
 namespace Lemon.Inside.Book.Chapters.Watch;
 
-// The mechanical watch chapter's spoken walkthroughs, one per spread. Clips are Narr_Watch_<Key>_NN.
+// The mechanical watch chapter's spoken walkthroughs, one per spread, and the parts of each picture
+// that can be clicked. Clips are Narr_Watch_<Key>_NN; parts are explained by Narr_Watch_<Key>_Part_<Id>.
 
 public sealed partial class SpringSpread
 {
+    public override IReadOnlyList<string> Parts => ["barrel", "arbor", "gauges"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "barrel", () => Wound = 0.05),
@@ -17,6 +20,8 @@ public sealed partial class SpringSpread
 
 public sealed partial class HandsSpread
 {
+    public override IReadOnlyList<string> Parts => ["dial", "train"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "dial", () => SpeedStep = 0),
@@ -28,6 +33,8 @@ public sealed partial class HandsSpread
 
 public sealed partial class EscapementSpread
 {
+    public override IReadOnlyList<string> Parts => ["wheel", "lever", "stones", "balance"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "stones", () => SlowMotion = 0.05),
@@ -40,6 +47,8 @@ public sealed partial class EscapementSpread
 
 public sealed partial class BalanceSpread
 {
+    public override IReadOnlyList<string> Parts => ["balance", "hairspring", "trace"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "balance", () => (Stiffness, Amplitude) = (1, 270)),
@@ -52,6 +61,8 @@ public sealed partial class BalanceSpread
 
 public sealed partial class RotorSpread
 {
+    public override IReadOnlyList<string> Parts => ["rotor", "wheel", "barrel", "reserve"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "rotor", () => (Activity, Reverser) = (0.6, true)),
@@ -64,6 +75,8 @@ public sealed partial class RotorSpread
 
 public sealed partial class MovementSpread
 {
+    public override IReadOnlyList<string> Parts => ["plate", "barrel", "train", "escapement", "motionworks", "dial"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "movement", () => (Explode, Hidden) = (0, 0)),

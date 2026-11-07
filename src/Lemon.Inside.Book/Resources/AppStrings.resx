@@ -1213,7 +1213,7 @@
     <value>Make the lamp big. Near the edge, part of the lamp is hidden and part is not, so the shadow fades gently.</value>
   </data>
   <data name="Narr_Light_Shadow_03" xml:space="preserve">
-    <value>Your turn: raise the lamp as high as it goes and watch the soft edge.</value>
+    <value>Your turn: raise the lamp as high as it goes. Does the edge get sharper or softer?</value>
   </data>
   <data name="Narr_Light_Shadow_04" xml:space="preserve">
     <value>Why are shadows so soft on a cloudy day?</value>
@@ -1502,5 +1502,419 @@
   </data>
   <data name="Narr_Watch_Movement_05" xml:space="preserve">
     <value>Energy flows from the spring at the bottom, up through each layer, to the hands at the top.</value>
+  </data>
+  <data name="Light_Brightness_Part_Lamp" xml:space="preserve">
+    <value>Lamp</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Lamp" xml:space="preserve">
+    <value>The lamp turns electricity into light. Its power, in watts, says how much light it sends out each second.</value>
+  </data>
+  <data name="Light_Brightness_Part_Floor" xml:space="preserve">
+    <value>Lit floor</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Floor" xml:space="preserve">
+    <value>The floor sends back some of the light that lands on it. That is the light that reaches your eye.</value>
+  </data>
+  <data name="Light_Brightness_Part_Chart" xml:space="preserve">
+    <value>How bright it looks</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Chart" xml:space="preserve">
+    <value>Across is how much light there is, up is how bright it looks. The curve climbs fast, then flattens, then stops at white.</value>
+  </data>
+  <data name="Light_Tilt_Part_Torch" xml:space="preserve">
+    <value>Torch</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Torch" xml:space="preserve">
+    <value>The torch sends down a beam of the same width and the same amount of light, whatever the board does.</value>
+  </data>
+  <data name="Light_Tilt_Part_Patch" xml:space="preserve">
+    <value>Lit patch</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Patch" xml:space="preserve">
+    <value>The part of the board the beam lands on. The longer it gets, the less light each bit of it has.</value>
+  </data>
+  <data name="Light_Tilt_Part_Board" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Board" xml:space="preserve">
+    <value>Tip the board and the same beam is spread along more of it, like sunlight in the evening.</value>
+  </data>
+  <data name="Light_Distance_Part_Lamp" xml:space="preserve">
+    <value>Small lamp</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Lamp" xml:space="preserve">
+    <value>A lamp so small it is nearly a point. Its light goes out in straight lines in every direction.</value>
+  </data>
+  <data name="Light_Distance_Part_Square" xml:space="preserve">
+    <value>One square at one metre</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Square" xml:space="preserve">
+    <value>Follow only the light that passes through this square. It never gains or loses any on the way.</value>
+  </data>
+  <data name="Light_Distance_Part_Frame" xml:space="preserve">
+    <value>The same light, further on</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Frame" xml:space="preserve">
+    <value>The light from the gold square, now spread over more squares. Twice as far, four times the squares.</value>
+  </data>
+  <data name="Light_Angle_Part_Car" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_Car" xml:space="preserve">
+    <value>The car is always four and a half metres long. Only its distance from the eye changes.</value>
+  </data>
+  <data name="Light_Angle_Part_Arc" xml:space="preserve">
+    <value>Angle at the eye</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_Arc" xml:space="preserve">
+    <value>The angle between the lines to the car's two ends. This, not the car's length, is how big it looks.</value>
+  </data>
+  <data name="Light_Angle_Part_View" xml:space="preserve">
+    <value>What the eye sees</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_View" xml:space="preserve">
+    <value>The car as the eye sees it: as wide as the angle it takes up.</value>
+  </data>
+  <data name="Light_Sky_Part_Spot" xml:space="preserve">
+    <value>Spot on the floor</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Spot" xml:space="preserve">
+    <value>Everything here is seen from this one spot, looking up.</value>
+  </data>
+  <data name="Light_Sky_Part_Lamp" xml:space="preserve">
+    <value>Lamp</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Lamp" xml:space="preserve">
+    <value>A square lamp hanging above the spot. Move it lower or further, and its patch of sky changes.</value>
+  </data>
+  <data name="Light_Sky_Part_Patch" xml:space="preserve">
+    <value>Lamp, pressed flat</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Patch" xml:space="preserve">
+    <value>The lamp's patch of the dome, pressed straight down onto the floor. Its share of the circle is this spot's share of the light.</value>
+  </data>
+  <data name="Light_Sky_Part_Circle" xml:space="preserve">
+    <value>Sky, pressed flat</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Circle" xml:space="preserve">
+    <value>The whole half-sphere of sky, pressed flat into a circle on the floor.</value>
+  </data>
+  <data name="Light_Radiance_Part_Eye" xml:space="preserve">
+    <value>Eye</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Eye" xml:space="preserve">
+    <value>The eye takes in light from a narrow cone in front of it, whatever is there.</value>
+  </data>
+  <data name="Light_Radiance_Part_Panel" xml:space="preserve">
+    <value>Glowing panel</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Panel" xml:space="preserve">
+    <value>A panel that glows evenly, like a lit wall or a screen.</value>
+  </data>
+  <data name="Light_Radiance_Part_Seen" xml:space="preserve">
+    <value>Part the eye takes in</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Seen" xml:space="preserve">
+    <value>The part of the panel inside the eye's cone. Further away or slanted, it is bigger, but each bit sends less, just as much less.</value>
+  </data>
+  <data name="Light_Reflection_Part_Lamp" xml:space="preserve">
+    <value>Light coming in</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Lamp" xml:space="preserve">
+    <value>Light arrives from this side and lands on the surface in the middle.</value>
+  </data>
+  <data name="Light_Reflection_Part_Mirror" xml:space="preserve">
+    <value>Mirror direction</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Mirror" xml:space="preserve">
+    <value>Where a perfect mirror would send all the light: out at the same angle it came in.</value>
+  </data>
+  <data name="Light_Reflection_Part_Lobe" xml:space="preserve">
+    <value>Where the light goes</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Lobe" xml:space="preserve">
+    <value>The further this shape reaches in a direction, the more light leaves that way.</value>
+  </data>
+  <data name="Light_Reflection_Part_Eye" xml:space="preserve">
+    <value>Eye</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Eye" xml:space="preserve">
+    <value>How bright the spot looks depends on how much light leaves towards the eye.</value>
+  </data>
+  <data name="Light_Shadow_Part_Lamp" xml:space="preserve">
+    <value>Square lamp</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Lamp" xml:space="preserve">
+    <value>A glowing square. Make it bigger, or bring it lower, and the shadow's edge gets softer.</value>
+  </data>
+  <data name="Light_Shadow_Part_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Box" xml:space="preserve">
+    <value>The box hides part of the lamp from the floor behind it.</value>
+  </data>
+  <data name="Light_Shadow_Part_Edge" xml:space="preserve">
+    <value>Shadow's edge</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Edge" xml:space="preserve">
+    <value>Here the floor sees part of the lamp, not all of it, so it is part dark.</value>
+  </data>
+  <data name="Light_Bounce_Part_Lamp" xml:space="preserve">
+    <value>Lamp</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Lamp" xml:space="preserve">
+    <value>The only thing that makes light here. Everything else only sends light on.</value>
+  </data>
+  <data name="Light_Bounce_Part_Wall" xml:space="preserve">
+    <value>Coloured wall</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Wall" xml:space="preserve">
+    <value>The wall gives back mostly its own colour and keeps the rest.</value>
+  </data>
+  <data name="Light_Bounce_Part_Floor" xml:space="preserve">
+    <value>Floor by the wall</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Floor" xml:space="preserve">
+    <value>Once light bounces, the wall lights this floor too, and tints it with its colour.</value>
+  </data>
+  <data name="Light_Bounce_Part_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Box" xml:space="preserve">
+    <value>Its far side gets no light from the lamp at all. Only bounced light reaches it.</value>
+  </data>
+  <data name="Gears_Ratio_Part_Driver" xml:space="preserve">
+    <value>Driving gear</value>
+  </data>
+  <data name="Narr_Gears_Ratio_Part_Driver" xml:space="preserve">
+    <value>The gear that is turned. Each of its teeth pushes one tooth of the other gear past.</value>
+  </data>
+  <data name="Gears_Ratio_Part_Driven" xml:space="preserve">
+    <value>Driven gear</value>
+  </data>
+  <data name="Narr_Gears_Ratio_Part_Driven" xml:space="preserve">
+    <value>The gear being pushed round. More teeth means more pushes for one turn, so it turns slower.</value>
+  </data>
+  <data name="Gears_Torque_Part_Crank" xml:space="preserve">
+    <value>Crank and small gear</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Crank" xml:space="preserve">
+    <value>Your hand turns this. It goes round fast but pushes gently.</value>
+  </data>
+  <data name="Gears_Torque_Part_Drum" xml:space="preserve">
+    <value>Drum gear</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Drum" xml:space="preserve">
+    <value>The big gear and the drum on its axle. It turns slowly but hard enough to wind up the rope.</value>
+  </data>
+  <data name="Gears_Torque_Part_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Load" xml:space="preserve">
+    <value>The weight on the rope. It climbs as the drum winds.</value>
+  </data>
+  <data name="Gears_Torque_Part_Bars" xml:space="preserve">
+    <value>Speed and force</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Bars" xml:space="preserve">
+    <value>The crank turns faster, the drum turns harder, by the same number of times.</value>
+  </data>
+  <data name="Gears_Involute_Part_Can" xml:space="preserve">
+    <value>Can</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Can" xml:space="preserve">
+    <value>The circle the string is wound on. On a gear it is called the base circle.</value>
+  </data>
+  <data name="Gears_Involute_Part_String" xml:space="preserve">
+    <value>Tight string</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_String" xml:space="preserve">
+    <value>It always leaves the can along a straight line that just touches it, and always meets the curve square on.</value>
+  </data>
+  <data name="Gears_Involute_Part_Pencil" xml:space="preserve">
+    <value>Pencil</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Pencil" xml:space="preserve">
+    <value>The end of the string. As it unwinds, it draws the curve.</value>
+  </data>
+  <data name="Gears_Involute_Part_Curve" xml:space="preserve">
+    <value>Involute</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Curve" xml:space="preserve">
+    <value>The curve on each side of a good gear tooth.</value>
+  </data>
+  <data name="Gears_Mesh_Part_Contact" xml:space="preserve">
+    <value>Where teeth touch</value>
+  </data>
+  <data name="Narr_Gears_Mesh_Part_Contact" xml:space="preserve">
+    <value>Each gold dot is a pair of teeth pressing on each other right now.</value>
+  </data>
+  <data name="Gears_Mesh_Part_Line" xml:space="preserve">
+    <value>Line of action</value>
+  </data>
+  <data name="Narr_Gears_Mesh_Part_Line" xml:space="preserve">
+    <value>Every touching point slides along this one line. Its slant is the pressure angle.</value>
+  </data>
+  <data name="Gears_Train_Part_Input" xml:space="preserve">
+    <value>Input gear</value>
+  </data>
+  <data name="Narr_Gears_Train_Part_Input" xml:space="preserve">
+    <value>The first, fast gear. The train starts here.</value>
+  </data>
+  <data name="Gears_Train_Part_Output" xml:space="preserve">
+    <value>Output gear</value>
+  </data>
+  <data name="Narr_Gears_Train_Part_Output" xml:space="preserve">
+    <value>The last gear, with a pointer. Each step in between slows it three times more.</value>
+  </data>
+  <data name="Gears_Planet_Part_Sun" xml:space="preserve">
+    <value>Sun gear</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Sun" xml:space="preserve">
+    <value>The gear in the middle. The planets roll round it.</value>
+  </data>
+  <data name="Gears_Planet_Part_Ring" xml:space="preserve">
+    <value>Ring gear</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Ring" xml:space="preserve">
+    <value>A big ring with its teeth on the inside, holding all the planets.</value>
+  </data>
+  <data name="Gears_Planet_Part_Carrier" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Carrier" xml:space="preserve">
+    <value>The frame that holds the planets' axles. When the planets travel round, it turns with them.</value>
+  </data>
+  <data name="Watch_Spring_Part_Barrel" xml:space="preserve">
+    <value>Barrel</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Barrel" xml:space="preserve">
+    <value>A drum with teeth on its rim. The spring inside pushes it round, and its teeth drive the watch.</value>
+  </data>
+  <data name="Watch_Spring_Part_Arbor" xml:space="preserve">
+    <value>Arbor</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Arbor" xml:space="preserve">
+    <value>The axle in the middle. Winding turns it, and the spring's inner end is hooked to it.</value>
+  </data>
+  <data name="Watch_Spring_Part_Gauges" xml:space="preserve">
+    <value>Pull and hours left</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Gauges" xml:space="preserve">
+    <value>How hard the spring pulls, and how many hours it can still run the watch.</value>
+  </data>
+  <data name="Watch_Hands_Part_Dial" xml:space="preserve">
+    <value>Dial and hands</value>
+  </data>
+  <data name="Narr_Watch_Hands_Part_Dial" xml:space="preserve">
+    <value>The seconds hand is on the fourth wheel, the minute hand on the centre wheel. The hour hand is geared down from the minute hand.</value>
+  </data>
+  <data name="Watch_Hands_Part_Train" xml:space="preserve">
+    <value>Going train</value>
+  </data>
+  <data name="Narr_Watch_Hands_Part_Train" xml:space="preserve">
+    <value>Each big wheel drives a small pinion on the next axle, so each axle turns faster than the one before.</value>
+  </data>
+  <data name="Watch_Escape_Part_Wheel" xml:space="preserve">
+    <value>Escape wheel</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Wheel" xml:space="preserve">
+    <value>The last wheel of the train. It is only let go half a tooth at a time.</value>
+  </data>
+  <data name="Watch_Escape_Part_Lever" xml:space="preserve">
+    <value>Lever</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Lever" xml:space="preserve">
+    <value>It rocks from side to side each time the balance swings past the middle.</value>
+  </data>
+  <data name="Watch_Escape_Part_Stones" xml:space="preserve">
+    <value>Pallet stones</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Stones" xml:space="preserve">
+    <value>Two red jewels on the lever. One always holds the escape wheel still.</value>
+  </data>
+  <data name="Watch_Escape_Part_Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Balance" xml:space="preserve">
+    <value>It swings to and fro and sets the pace. Its pin flicks the lever as it passes.</value>
+  </data>
+  <data name="Watch_Balance_Part_Balance" xml:space="preserve">
+    <value>Balance wheel</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Balance" xml:space="preserve">
+    <value>A small, heavy-rimmed wheel. The heavier its rim, the slower it swings.</value>
+  </data>
+  <data name="Watch_Balance_Part_Hairspring" xml:space="preserve">
+    <value>Hairspring</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Hairspring" xml:space="preserve">
+    <value>A hair-thin spiral spring that always pulls the balance back to the middle. Stiffer means faster.</value>
+  </data>
+  <data name="Watch_Balance_Part_Trace" xml:space="preserve">
+    <value>Swing over time</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Trace" xml:space="preserve">
+    <value>How far the balance is turned, moment by moment. Wide or narrow, each swing takes the same time.</value>
+  </data>
+  <data name="Watch_Rotor_Part_Rotor" xml:space="preserve">
+    <value>Rotor</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Rotor" xml:space="preserve">
+    <value>A heavy half-moon that swings freely on the centre. Gravity keeps it hanging down.</value>
+  </data>
+  <data name="Watch_Rotor_Part_Wheel" xml:space="preserve">
+    <value>Winding wheel</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Wheel" xml:space="preserve">
+    <value>It only ever turns one way, and each turn winds the spring a little.</value>
+  </data>
+  <data name="Watch_Rotor_Part_Barrel" xml:space="preserve">
+    <value>Barrel</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Barrel" xml:space="preserve">
+    <value>Where the mainspring is wound up and stored.</value>
+  </data>
+  <data name="Watch_Rotor_Part_Reserve" xml:space="preserve">
+    <value>Power reserve</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Reserve" xml:space="preserve">
+    <value>How full the mainspring is. Once it is full, the spring slips instead of winding further.</value>
+  </data>
+  <data name="Watch_Movement_Part_Plate" xml:space="preserve">
+    <value>Main plate</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Plate" xml:space="preserve">
+    <value>The base everything is built on. Its little red rubies are bearings for the axles.</value>
+  </data>
+  <data name="Watch_Movement_Part_Barrel" xml:space="preserve">
+    <value>Barrel</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Barrel" xml:space="preserve">
+    <value>The mainspring in its drum: where the energy starts.</value>
+  </data>
+  <data name="Watch_Movement_Part_Train" xml:space="preserve">
+    <value>Going train</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Train" xml:space="preserve">
+    <value>The wheels that carry the spring's push up to the escapement, faster at each step.</value>
+  </data>
+  <data name="Watch_Movement_Part_Escapement" xml:space="preserve">
+    <value>Escapement and balance</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Escapement" xml:space="preserve">
+    <value>They let the energy out in even beats, five a second.</value>
+  </data>
+  <data name="Watch_Movement_Part_Motionworks" xml:space="preserve">
+    <value>Motion works</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Motionworks" xml:space="preserve">
+    <value>Small wheels under the dial that slow the minute hand twelve times for the hour hand.</value>
+  </data>
+  <data name="Watch_Movement_Part_Dial" xml:space="preserve">
+    <value>Dial and hands</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Dial" xml:space="preserve">
+    <value>The only part you see from the front, at the end of the whole chain.</value>
   </data>
 </root>

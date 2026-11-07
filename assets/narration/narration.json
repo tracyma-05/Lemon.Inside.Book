@@ -120,6 +120,60 @@
      ]
     ]
    },
+   "Narr_Gears_Involute_Part_Can": {
+    "duration": 5.136,
+    "hash": "bef1942a04eaf29e",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "The circle the string is wound on."
+     ],
+     [
+      2.389,
+      5.083,
+      "On a gear it is called the base circle."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_Curve": {
+    "duration": 3.0,
+    "hash": "5966b848ff0afbc0",
+    "sentences": [
+     [
+      0.05,
+      2.931,
+      "The curve on each side of a good gear tooth."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_Pencil": {
+    "duration": 5.064,
+    "hash": "43132756b918b4af",
+    "sentences": [
+     [
+      0.05,
+      1.625,
+      "The end of the string."
+     ],
+     [
+      1.625,
+      5.0,
+      "As it unwinds, it draws the curve."
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_String": {
+    "duration": 6.432,
+    "hash": "e679a124a76eb06f",
+    "sentences": [
+     [
+      0.05,
+      6.375,
+      "It always leaves the can along a straight line that just touches it, and always meets the curve square on."
+     ]
+    ]
+   },
    "Narr_Gears_Mesh_01": {
     "duration": 5.136,
     "hash": "77a02ebdf7562928",
@@ -182,6 +236,33 @@
       0.05,
       2.778,
       "What does a bigger pressure angle give the teeth?"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_Part_Contact": {
+    "duration": 3.864,
+    "hash": "6d704c8f1de67d69",
+    "sentences": [
+     [
+      0.05,
+      3.806,
+      "Each gold dot is a pair of teeth pressing on each other right now."
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_Part_Line": {
+    "duration": 6.12,
+    "hash": "69c450a6bdf6542e",
+    "sentences": [
+     [
+      0.05,
+      3.722,
+      "Every touching point slides along this one line."
+     ],
+     [
+      3.722,
+      6.069,
+      "Its slant is the pressure angle."
      ]
     ]
    },
@@ -250,6 +331,49 @@
      ]
     ]
    },
+   "Narr_Gears_Planet_Part_Carrier": {
+    "duration": 6.96,
+    "hash": "562f8dfdac0bb177",
+    "sentences": [
+     [
+      0.05,
+      2.861,
+      "The frame that holds the planets' axles."
+     ],
+     [
+      2.861,
+      6.903,
+      "When the planets travel round, it turns with them."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_Part_Ring": {
+    "duration": 4.968,
+    "hash": "442ef0f3afdad0b1",
+    "sentences": [
+     [
+      0.05,
+      4.903,
+      "A big ring with its teeth on the inside, holding all the planets."
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_Part_Sun": {
+    "duration": 3.528,
+    "hash": "d05ae30123f1c02b",
+    "sentences": [
+     [
+      0.05,
+      1.5,
+      "The gear in the middle."
+     ],
+     [
+      1.5,
+      3.458,
+      "The planets roll round it."
+     ]
+    ]
+   },
    "Narr_Gears_Ratio_01": {
     "duration": 6.624,
     "hash": "beab28abc39e7a7e",
@@ -301,6 +425,38 @@
       3.292,
       6.917,
       "One turn of the small gear turns the big one how far?"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_Part_Driven": {
+    "duration": 7.104,
+    "hash": "3ee9bf080a2fed05",
+    "sentences": [
+     [
+      0.05,
+      2.056,
+      "The gear being pushed round."
+     ],
+     [
+      2.056,
+      7.042,
+      "More teeth means more pushes for one turn, so it turns slower."
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_Part_Driver": {
+    "duration": 5.76,
+    "hash": "c38b8b18e61a227c",
+    "sentences": [
+     [
+      0.05,
+      1.75,
+      "The gear that is turned."
+     ],
+     [
+      1.75,
+      5.708,
+      "Each of its teeth pushes one tooth of the other gear past."
      ]
     ]
    },
@@ -358,6 +514,65 @@
      ]
     ]
    },
+   "Narr_Gears_Torque_Part_Bars": {
+    "duration": 5.832,
+    "hash": "c11119f9fdc134bc",
+    "sentences": [
+     [
+      0.05,
+      5.778,
+      "The crank turns faster, the drum turns harder, by the same number of times."
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Crank": {
+    "duration": 5.064,
+    "hash": "4ce53469b32d9354",
+    "sentences": [
+     [
+      0.05,
+      2.069,
+      "Your hand turns this."
+     ],
+     [
+      2.069,
+      5.0,
+      "It goes round fast but pushes gently."
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Drum": {
+    "duration": 7.296,
+    "hash": "1d9c08d1e30d1704",
+    "sentences": [
+     [
+      0.05,
+      3.292,
+      "The big gear and the drum on its axle."
+     ],
+     [
+      3.292,
+      7.236,
+      "It turns slowly but hard enough to wind up the rope."
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Load": {
+    "duration": 4.248,
+    "hash": "a40440ee3b4c2dff",
+    "sentences": [
+     [
+      0.05,
+      1.681,
+      "The weight on the rope."
+     ],
+     [
+      1.681,
+      4.194,
+      "It climbs as the drum winds."
+     ]
+    ]
+   },
    "Narr_Gears_Train_01": {
     "duration": 5.856,
     "hash": "78e83bdacf644666",
@@ -407,6 +622,38 @@
      ]
     ]
    },
+   "Narr_Gears_Train_Part_Input": {
+    "duration": 3.744,
+    "hash": "8fe2dcabbbcdb1a9",
+    "sentences": [
+     [
+      0.05,
+      1.903,
+      "The first, fast gear."
+     ],
+     [
+      1.903,
+      3.681,
+      "The train starts here."
+     ]
+    ]
+   },
+   "Narr_Gears_Train_Part_Output": {
+    "duration": 6.456,
+    "hash": "cd9f750e0db9ff23",
+    "sentences": [
+     [
+      0.05,
+      2.444,
+      "The last gear, with a pointer."
+     ],
+     [
+      2.444,
+      6.389,
+      "Each step in between slows it three times more."
+     ]
+    ]
+   },
    "Narr_Light_Angle_01": {
     "duration": 6.072,
     "hash": "9783db7e41fa496f",
@@ -453,6 +700,49 @@
       2.847,
       7.292,
       "For a patch, like a lamp, it is how much of your view it fills."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_Arc": {
+    "duration": 6.96,
+    "hash": "f510a56e86274177",
+    "sentences": [
+     [
+      0.05,
+      3.389,
+      "The angle between the lines to the car's two ends."
+     ],
+     [
+      3.389,
+      6.903,
+      "This, not the car's length, is how big it looks."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_Car": {
+    "duration": 6.12,
+    "hash": "cf50a404675ae7e3",
+    "sentences": [
+     [
+      0.05,
+      3.403,
+      "The car is always four and a half metres long."
+     ],
+     [
+      3.403,
+      6.056,
+      "Only its distance from the eye changes."
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_View": {
+    "duration": 4.896,
+    "hash": "a82476c2c2577265",
+    "sentences": [
+     [
+      0.05,
+      4.833,
+      "The car as the eye sees it: as wide as the angle it takes up."
      ]
     ]
    },
@@ -521,6 +811,60 @@
      ]
     ]
    },
+   "Narr_Light_Bounce_Part_Box": {
+    "duration": 5.688,
+    "hash": "47a5c5f56571478d",
+    "sentences": [
+     [
+      0.05,
+      3.306,
+      "Its far side gets no light from the lamp at all."
+     ],
+     [
+      3.306,
+      5.625,
+      "Only bounced light reaches it."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Floor": {
+    "duration": 6.264,
+    "hash": "d007a6d5d8a93ee6",
+    "sentences": [
+     [
+      0.05,
+      6.194,
+      "Once light bounces, the wall lights this floor too, and tints it with its colour."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Lamp": {
+    "duration": 5.232,
+    "hash": "017da0f2846ace8b",
+    "sentences": [
+     [
+      0.05,
+      2.5,
+      "The only thing that makes light here."
+     ],
+     [
+      2.5,
+      5.167,
+      "Everything else only sends light on."
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Wall": {
+    "duration": 4.56,
+    "hash": "93a8f163beac7c13",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "The wall gives back mostly its own colour and keeps the rest."
+     ]
+    ]
+   },
    "Narr_Light_Brightness_01": {
     "duration": 5.976,
     "hash": "1a92463df03e6a80",
@@ -586,6 +930,54 @@
      ]
     ]
    },
+   "Narr_Light_Brightness_Part_Chart": {
+    "duration": 9.432,
+    "hash": "605fb08f5e03b049",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "Across is how much light there is, up is how bright it looks."
+     ],
+     [
+      4.472,
+      9.361,
+      "The curve climbs fast, then flattens, then stops at white."
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_Part_Floor": {
+    "duration": 5.904,
+    "hash": "20a8730db0fb7f6a",
+    "sentences": [
+     [
+      0.05,
+      3.458,
+      "The floor sends back some of the light that lands on it."
+     ],
+     [
+      3.458,
+      5.847,
+      "That is the light that reaches your eye."
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_Part_Lamp": {
+    "duration": 8.376,
+    "hash": "a8b289bcae2304a5",
+    "sentences": [
+     [
+      0.05,
+      3.0,
+      "The lamp turns electricity into light."
+     ],
+     [
+      3.0,
+      8.306,
+      "Its power, in watts, says how much light it sends out each second."
+     ]
+    ]
+   },
    "Narr_Light_Distance_01": {
     "duration": 4.584,
     "hash": "17e857097a2e064a",
@@ -627,6 +1019,54 @@
       0.05,
       6.208,
       "So at three metres, how much light does each square get, compared with one metre?"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Frame": {
+    "duration": 7.56,
+    "hash": "7e12b8c99920ebbb",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "The light from the gold square, now spread over more squares."
+     ],
+     [
+      4.639,
+      7.5,
+      "Twice as far, four times the squares."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Lamp": {
+    "duration": 7.128,
+    "hash": "fa203b97ec30d520",
+    "sentences": [
+     [
+      0.05,
+      2.986,
+      "A lamp so small it is nearly a point."
+     ],
+     [
+      2.986,
+      7.056,
+      "Its light goes out in straight lines in every direction."
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Square": {
+    "duration": 7.008,
+    "hash": "a67495ac4b07436d",
+    "sentences": [
+     [
+      0.05,
+      3.5,
+      "Follow only the light that passes through this square."
+     ],
+     [
+      3.5,
+      6.958,
+      "It never gains or loses any on the way."
      ]
     ]
    },
@@ -681,6 +1121,44 @@
       3.222,
       4.875,
       "How bright does it look?"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Eye": {
+    "duration": 4.776,
+    "hash": "5978504e11d92873",
+    "sentences": [
+     [
+      0.05,
+      4.722,
+      "The eye takes in light from a narrow cone in front of it, whatever is there."
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Panel": {
+    "duration": 4.584,
+    "hash": "4999f5ab411a5d48",
+    "sentences": [
+     [
+      0.05,
+      4.514,
+      "A panel that glows evenly, like a lit wall or a screen."
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Seen": {
+    "duration": 9.864,
+    "hash": "b6ff34d0a314c201",
+    "sentences": [
+     [
+      0.05,
+      2.903,
+      "The part of the panel inside the eye's cone."
+     ],
+     [
+      2.903,
+      9.806,
+      "Further away or slanted, it is bigger, but each bit sends less, just as much less."
      ]
     ]
    },
@@ -744,6 +1222,50 @@
      ]
     ]
    },
+   "Narr_Light_Reflection_Part_Eye": {
+    "duration": 4.512,
+    "hash": "1baff4e7967dc8b6",
+    "sentences": [
+     [
+      0.05,
+      4.444,
+      "How bright the spot looks depends on how much light leaves towards the eye."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Lamp": {
+    "duration": 4.056,
+    "hash": "001afb6ff197396d",
+    "sentences": [
+     [
+      0.05,
+      4.0,
+      "Light arrives from this side and lands on the surface in the middle."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Lobe": {
+    "duration": 5.112,
+    "hash": "277238b9c6afca4e",
+    "sentences": [
+     [
+      0.05,
+      5.056,
+      "The further this shape reaches in a direction, the more light leaves that way."
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Mirror": {
+    "duration": 5.856,
+    "hash": "b72871fb37dbebca",
+    "sentences": [
+     [
+      0.05,
+      5.792,
+      "Where a perfect mirror would send all the light: out at the same angle it came in."
+     ]
+    ]
+   },
    "Narr_Light_Shadow_01": {
     "duration": 7.752,
     "hash": "fd1ae521b985d7ef",
@@ -777,13 +1299,18 @@
     ]
    },
    "Narr_Light_Shadow_03": {
-    "duration": 5.592,
-    "hash": "955e323adf7e938d",
+    "duration": 6.792,
+    "hash": "8134041ac2b23d78",
     "sentences": [
      [
       0.05,
-      5.542,
-      "Your turn: raise the lamp as high as it goes and watch the soft edge."
+      3.847,
+      "Your turn: raise the lamp as high as it goes."
+     ],
+     [
+      3.847,
+      6.722,
+      "Does the edge get sharper or softer?"
      ]
     ]
    },
@@ -795,6 +1322,44 @@
       0.05,
       3.639,
       "Why are shadows so soft on a cloudy day?"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Box": {
+    "duration": 3.888,
+    "hash": "a19723de26ceeb99",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "The box hides part of the lamp from the floor behind it."
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Edge": {
+    "duration": 5.16,
+    "hash": "224035bbd04bc00e",
+    "sentences": [
+     [
+      0.05,
+      5.111,
+      "Here the floor sees part of the lamp, not all of it, so it is part dark."
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Lamp": {
+    "duration": 6.576,
+    "hash": "06fb24fdc341eb60",
+    "sentences": [
+     [
+      0.05,
+      1.639,
+      "A glowing square."
+     ],
+     [
+      1.639,
+      6.514,
+      "Make it bigger, or bring it lower, and the shadow's edge gets softer."
      ]
     ]
    },
@@ -863,6 +1428,60 @@
      ]
     ]
    },
+   "Narr_Light_Sky_Part_Circle": {
+    "duration": 5.16,
+    "hash": "ea5b78a2ebab3ca9",
+    "sentences": [
+     [
+      0.05,
+      5.111,
+      "The whole half-sphere of sky, pressed flat into a circle on the floor."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Lamp": {
+    "duration": 7.416,
+    "hash": "94c82b848960398b",
+    "sentences": [
+     [
+      0.05,
+      2.75,
+      "A square lamp hanging above the spot."
+     ],
+     [
+      2.75,
+      7.347,
+      "Move it lower or further, and its patch of sky changes."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Patch": {
+    "duration": 7.872,
+    "hash": "e4f3d3caeaa6cd94",
+    "sentences": [
+     [
+      0.05,
+      4.25,
+      "The lamp's patch of the dome, pressed straight down onto the floor."
+     ],
+     [
+      4.25,
+      7.806,
+      "Its share of the circle is this spot's share of the light."
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Spot": {
+    "duration": 3.84,
+    "hash": "c66a21c9e892c9ff",
+    "sentences": [
+     [
+      0.05,
+      3.778,
+      "Everything here is seen from this one spot, looking up."
+     ]
+    ]
+   },
    "Narr_Light_Tilt_01": {
     "duration": 5.664,
     "hash": "f28f7f62fb81c98e",
@@ -914,6 +1533,44 @@
       2.597,
       5.014,
       "How bright is each bit of it?"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Board": {
+    "duration": 6.408,
+    "hash": "6c3b7e97d1281609",
+    "sentences": [
+     [
+      0.05,
+      6.347,
+      "Tip the board and the same beam is spread along more of it, like sunlight in the evening."
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Patch": {
+    "duration": 6.816,
+    "hash": "1aa34a25275f3cd8",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "The part of the board the beam lands on."
+     ],
+     [
+      2.722,
+      6.764,
+      "The longer it gets, the less light each bit of it has."
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Torch": {
+    "duration": 6.432,
+    "hash": "47822d1f580b1c78",
+    "sentences": [
+     [
+      0.05,
+      6.375,
+      "The torch sends down a beam of the same width and the same amount of light, whatever the board does."
      ]
     ]
    },
@@ -974,6 +1631,54 @@
       0.05,
       6.556,
       "A tiny change in the spring is minutes a day, which is why watchmakers adjust it so carefully."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Balance": {
+    "duration": 6.048,
+    "hash": "9d6a950565dc7e8f",
+    "sentences": [
+     [
+      0.05,
+      2.569,
+      "A small, heavy-rimmed wheel."
+     ],
+     [
+      2.569,
+      5.986,
+      "The heavier its rim, the slower it swings."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Hairspring": {
+    "duration": 7.032,
+    "hash": "de39d3891c485ea3",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "A hair-thin spiral spring that always pulls the balance back to the middle."
+     ],
+     [
+      5.0,
+      6.972,
+      "Stiffer means faster."
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Trace": {
+    "duration": 8.112,
+    "hash": "0e83ffa4a922ab10",
+    "sentences": [
+     [
+      0.05,
+      3.736,
+      "How far the balance is turned, moment by moment."
+     ],
+     [
+      3.736,
+      8.056,
+      "Wide or narrow, each swing takes the same time."
      ]
     ]
    },
@@ -1042,6 +1747,65 @@
      ]
     ]
    },
+   "Narr_Watch_Escape_Part_Balance": {
+    "duration": 6.624,
+    "hash": "4ef866c738d4f882",
+    "sentences": [
+     [
+      0.05,
+      3.556,
+      "It swings to and fro and sets the pace."
+     ],
+     [
+      3.556,
+      6.556,
+      "Its pin flicks the lever as it passes."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Lever": {
+    "duration": 4.8,
+    "hash": "0b99ae590b4032f3",
+    "sentences": [
+     [
+      0.05,
+      4.75,
+      "It rocks from side to side each time the balance swings past the middle."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Stones": {
+    "duration": 5.232,
+    "hash": "6107b473b6dd4001",
+    "sentences": [
+     [
+      0.05,
+      2.347,
+      "Two red jewels on the lever."
+     ],
+     [
+      2.347,
+      5.167,
+      "One always holds the escape wheel still."
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Wheel": {
+    "duration": 5.064,
+    "hash": "503417211420e3e7",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "The last wheel of the train."
+     ],
+     [
+      2.014,
+      5.014,
+      "It is only let go half a tooth at a time."
+     ]
+    ]
+   },
    "Narr_Watch_Hands_01": {
     "duration": 6.264,
     "hash": "f8c1598f39cbfbaf",
@@ -1083,6 +1847,33 @@
       0.05,
       3.681,
       "Which hand is not carried by the going train itself?"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_Part_Dial": {
+    "duration": 9.024,
+    "hash": "a4dc4db4b83a83b1",
+    "sentences": [
+     [
+      0.05,
+      5.389,
+      "The seconds hand is on the fourth wheel, the minute hand on the centre wheel."
+     ],
+     [
+      5.389,
+      8.972,
+      "The hour hand is geared down from the minute hand."
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_Part_Train": {
+    "duration": 7.176,
+    "hash": "c4fe98300f2591af",
+    "sentences": [
+     [
+      0.05,
+      7.111,
+      "Each big wheel drives a small pinion on the next axle, so each axle turns faster than the one before."
      ]
     ]
    },
@@ -1146,6 +1937,77 @@
      ]
     ]
    },
+   "Narr_Watch_Movement_Part_Barrel": {
+    "duration": 4.152,
+    "hash": "8ab07e9a6e2cb020",
+    "sentences": [
+     [
+      0.05,
+      4.083,
+      "The mainspring in its drum: where the energy starts."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Dial": {
+    "duration": 4.176,
+    "hash": "64bc0c47b73f7a74",
+    "sentences": [
+     [
+      0.05,
+      4.111,
+      "The only part you see from the front, at the end of the whole chain."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Escapement": {
+    "duration": 3.72,
+    "hash": "a2faff4d5104a0fe",
+    "sentences": [
+     [
+      0.05,
+      3.653,
+      "They let the energy out in even beats, five a second."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Motionworks": {
+    "duration": 5.832,
+    "hash": "3afd8dacbcc328e0",
+    "sentences": [
+     [
+      0.05,
+      5.764,
+      "Small wheels under the dial that slow the minute hand twelve times for the hour hand."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Plate": {
+    "duration": 5.76,
+    "hash": "b78447fcd3e4df30",
+    "sentences": [
+     [
+      0.05,
+      2.292,
+      "The base everything is built on."
+     ],
+     [
+      2.292,
+      5.694,
+      "Its little red rubies are bearings for the axles."
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Train": {
+    "duration": 5.76,
+    "hash": "2a94f7aae4300a32",
+    "sentences": [
+     [
+      0.05,
+      5.694,
+      "The wheels that carry the spring's push up to the escapement, faster at each step."
+     ]
+    ]
+   },
    "Narr_Watch_Rotor_01": {
     "duration": 4.68,
     "hash": "cdb12e4963284316",
@@ -1206,6 +2068,60 @@
      ]
     ]
    },
+   "Narr_Watch_Rotor_Part_Barrel": {
+    "duration": 3.024,
+    "hash": "d031a8addd761791",
+    "sentences": [
+     [
+      0.05,
+      2.972,
+      "Where the mainspring is wound up and stored."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Reserve": {
+    "duration": 7.224,
+    "hash": "afeb974fc6348ab0",
+    "sentences": [
+     [
+      0.05,
+      2.236,
+      "How full the mainspring is."
+     ],
+     [
+      2.236,
+      7.167,
+      "Once it is full, the spring slips instead of winding further."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Rotor": {
+    "duration": 6.72,
+    "hash": "d21175396827a4fc",
+    "sentences": [
+     [
+      0.05,
+      3.944,
+      "A heavy half-moon that swings freely on the centre."
+     ],
+     [
+      3.944,
+      6.653,
+      "Gravity keeps it hanging down."
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Wheel": {
+    "duration": 5.064,
+    "hash": "9ee2544f1a4998d7",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "It only ever turns one way, and each turn winds the spring a little."
+     ]
+    ]
+   },
    "Narr_Watch_Spring_01": {
     "duration": 5.304,
     "hash": "751e48bc6faac3de",
@@ -1252,6 +2168,49 @@
       0.05,
       2.958,
       "Where does a mechanical watch get its energy?"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Arbor": {
+    "duration": 5.856,
+    "hash": "6eedc528dc0c895f",
+    "sentences": [
+     [
+      0.05,
+      1.722,
+      "The axle in the middle."
+     ],
+     [
+      1.722,
+      5.806,
+      "Winding turns it, and the spring's inner end is hooked to it."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Barrel": {
+    "duration": 7.248,
+    "hash": "7c64b7ed2878e5f7",
+    "sentences": [
+     [
+      0.05,
+      2.472,
+      "A drum with teeth on its rim."
+     ],
+     [
+      2.472,
+      7.194,
+      "The spring inside pushes it round, and its teeth drive the watch."
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Gauges": {
+    "duration": 5.544,
+    "hash": "f5514d42eed07182",
+    "sentences": [
+     [
+      0.05,
+      5.472,
+      "How hard the spring pulls, and how many hours it can still run the watch."
      ]
     ]
    }
@@ -1366,6 +2325,60 @@
      ]
     ]
    },
+   "Narr_Gears_Involute_Part_Can": {
+    "duration": 4.896,
+    "hash": "3617f080fee78bb1",
+    "sentences": [
+     [
+      0.1,
+      2.022,
+      "绕线的那个圆。"
+     ],
+     [
+      1.972,
+      4.847,
+      "在齿轮上，它叫基圆。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_Curve": {
+    "duration": 3.216,
+    "hash": "53b294503ce43f5b",
+    "sentences": [
+     [
+      0.1,
+      3.217,
+      "好齿轮每个齿两侧的曲线。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_Pencil": {
+    "duration": 5.76,
+    "hash": "1d9dec10cfdc9b20",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "线的末端。"
+     ],
+     [
+      1.708,
+      5.694,
+      "线一边放开，它一边画出这条曲线。"
+     ]
+    ]
+   },
+   "Narr_Gears_Involute_Part_String": {
+    "duration": 6.72,
+    "hash": "d8704ebedab72edc",
+    "sentences": [
+     [
+      0.1,
+      6.717,
+      "它总是沿着刚好贴着罐子的直线离开，而且总是和曲线成直角。"
+     ]
+    ]
+   },
    "Narr_Gears_Mesh_01": {
     "duration": 6.912,
     "hash": "e9d641270aab3eb4",
@@ -1428,6 +2441,33 @@
       0.1,
       3.064,
       "压力角调大，齿会怎样？"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_Part_Contact": {
+    "duration": 5.136,
+    "hash": "6d74b4e8e4009967",
+    "sentences": [
+     [
+      0.1,
+      5.133,
+      "每个金色的点，都是此刻正互相压着的一对齿。"
+     ]
+    ]
+   },
+   "Narr_Gears_Mesh_Part_Line": {
+    "duration": 6.648,
+    "hash": "2d9b1af7ba582df8",
+    "sentences": [
+     [
+      0.1,
+      3.619,
+      "所有接触点都沿这一条线滑动。"
+     ],
+     [
+      3.569,
+      6.583,
+      "它的倾斜角就是压力角。"
      ]
     ]
    },
@@ -1496,6 +2536,44 @@
      ]
     ]
    },
+   "Narr_Gears_Planet_Part_Carrier": {
+    "duration": 6.336,
+    "hash": "3ae9fdd6356b0700",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "托着行星轮轴的架子。"
+     ],
+     [
+      2.708,
+      6.278,
+      "行星轮绕着走时，它就跟着转。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_Part_Ring": {
+    "duration": 5.28,
+    "hash": "0b6863208765dc02",
+    "sentences": [
+     [
+      0.1,
+      5.272,
+      "一个齿长在内侧的大圈，把所有行星轮围在里面。"
+     ]
+    ]
+   },
+   "Narr_Gears_Planet_Part_Sun": {
+    "duration": 3.696,
+    "hash": "7d9450904f9ded58",
+    "sentences": [
+     [
+      0.1,
+      3.689,
+      "中间的齿轮，行星轮绕着它滚。"
+     ]
+    ]
+   },
    "Narr_Gears_Ratio_01": {
     "duration": 5.064,
     "hash": "2f77dfff8fa54c1a",
@@ -1547,6 +2625,38 @@
       3.972,
       7.653,
       "小齿轮转一圈，大齿轮转多少？"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_Part_Driven": {
+    "duration": 7.776,
+    "hash": "05c3e536214bd4b1",
+    "sentences": [
+     [
+      0.1,
+      2.356,
+      "被推着转的齿轮。"
+     ],
+     [
+      2.306,
+      7.722,
+      "齿越多，转一圈要推的次数越多，所以转得越慢。"
+     ]
+    ]
+   },
+   "Narr_Gears_Ratio_Part_Driver": {
+    "duration": 7.224,
+    "hash": "29feed3fb5e36a2e",
+    "sentences": [
+     [
+      0.1,
+      2.161,
+      "被转动的齿轮。"
+     ],
+     [
+      2.111,
+      7.167,
+      "它每转过一个齿，就推着另一个齿轮走过一个齿。"
      ]
     ]
    },
@@ -1604,6 +2714,65 @@
      ]
     ]
    },
+   "Narr_Gears_Torque_Part_Bars": {
+    "duration": 4.608,
+    "hash": "fa87bbfa76b56f19",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "摇柄转得快多少倍，卷筒就有劲多少倍。"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Crank": {
+    "duration": 5.328,
+    "hash": "a839a5047e7fa695",
+    "sentences": [
+     [
+      0.1,
+      2.231,
+      "用手转的就是它。"
+     ],
+     [
+      2.181,
+      5.264,
+      "它转得快，但推得不用力。"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Drum": {
+    "duration": 7.68,
+    "hash": "cd74bdc5b322daea",
+    "sentences": [
+     [
+      0.1,
+      3.133,
+      "大齿轮和它轴上的卷筒。"
+     ],
+     [
+      3.083,
+      7.611,
+      "它转得慢，却有足够的劲把绳子卷上来。"
+     ]
+    ]
+   },
+   "Narr_Gears_Torque_Part_Load": {
+    "duration": 5.232,
+    "hash": "06697cfcfcbfe91f",
+    "sentences": [
+     [
+      0.1,
+      2.342,
+      "绳子上挂的重物。"
+     ],
+     [
+      2.292,
+      5.181,
+      "卷筒一转，它就往上升。"
+     ]
+    ]
+   },
    "Narr_Gears_Train_01": {
     "duration": 5.04,
     "hash": "9612f82dd376a6ea",
@@ -1653,6 +2822,33 @@
      ]
     ]
    },
+   "Narr_Gears_Train_Part_Input": {
+    "duration": 4.872,
+    "hash": "38f7a1f1a7192e48",
+    "sentences": [
+     [
+      0.1,
+      4.869,
+      "第一个、转得最快的齿轮，轮系从这里开始。"
+     ]
+    ]
+   },
+   "Narr_Gears_Train_Part_Output": {
+    "duration": 6.36,
+    "hash": "1841c7e19d352484",
+    "sentences": [
+     [
+      0.1,
+      2.814,
+      "最后一个带指针的齿轮。"
+     ],
+     [
+      2.764,
+      6.292,
+      "中间每多一级，它就再慢三倍。"
+     ]
+    ]
+   },
    "Narr_Light_Angle_01": {
     "duration": 5.904,
     "hash": "a3b75d06c1b00c73",
@@ -1699,6 +2895,44 @@
       3.639,
       9.014,
       "换成一块面，比如一盏灯，就是它占了你视野的多少。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_Arc": {
+    "duration": 9.408,
+    "hash": "86f29dbc257c014b",
+    "sentences": [
+     [
+      0.1,
+      4.397,
+      "看向车头和车尾的两条线之间的夹角。"
+     ],
+     [
+      4.347,
+      9.347,
+      "东西看起来多大，取决于它，而不是车有多长。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_Car": {
+    "duration": 5.424,
+    "hash": "1af2f306a1bd50f3",
+    "sentences": [
+     [
+      0.1,
+      5.411,
+      "车一直是四米半长，变的只是它离眼睛有多远。"
+     ]
+    ]
+   },
+   "Narr_Light_Angle_Part_View": {
+    "duration": 5.616,
+    "hash": "59ad911ddae9f221",
+    "sentences": [
+     [
+      0.1,
+      5.606,
+      "眼睛看到的车：它占多大的角度，看起来就有多宽。"
      ]
     ]
    },
@@ -1767,6 +3001,50 @@
      ]
     ]
    },
+   "Narr_Light_Bounce_Part_Box": {
+    "duration": 5.208,
+    "hash": "7335eae8769e7414",
+    "sentences": [
+     [
+      0.1,
+      5.203,
+      "它的背面完全照不到灯，只有反弹的光能到那里。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Floor": {
+    "duration": 6.432,
+    "hash": "49eb1f0c8bd01c85",
+    "sentences": [
+     [
+      0.1,
+      6.411,
+      "光一反弹，墙也照亮了这块地面，还给它染上了自己的颜色。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Lamp": {
+    "duration": 5.496,
+    "hash": "6c92006199cd8cff",
+    "sentences": [
+     [
+      0.1,
+      5.481,
+      "这里唯一发光的东西，其他一切只是把光转送出去。"
+     ]
+    ]
+   },
+   "Narr_Light_Bounce_Part_Wall": {
+    "duration": 6.12,
+    "hash": "c1b8686677ecc2aa",
+    "sentences": [
+     [
+      0.1,
+      6.119,
+      "墙主要反射回它自己的颜色，其余的颜色被它吸收了。"
+     ]
+    ]
+   },
    "Narr_Light_Brightness_01": {
     "duration": 4.344,
     "hash": "469259f2f0a5499e",
@@ -1827,6 +3105,49 @@
      ]
     ]
    },
+   "Narr_Light_Brightness_Part_Chart": {
+    "duration": 9.744,
+    "hash": "b35fdd90e2abc90f",
+    "sentences": [
+     [
+      0.1,
+      4.772,
+      "横着是光有多少，竖着是看起来有多亮。"
+     ],
+     [
+      4.722,
+      9.681,
+      "曲线先爬得快，然后变平，到白色就到顶了。"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_Part_Floor": {
+    "duration": 7.152,
+    "hash": "23ed2d31b7f40292",
+    "sentences": [
+     [
+      0.1,
+      7.133,
+      "地面把落到它上面的光反射回一部分，进到你眼里的就是这些光。"
+     ]
+    ]
+   },
+   "Narr_Light_Brightness_Part_Lamp": {
+    "duration": 8.304,
+    "hash": "8dba2eca030d5df6",
+    "sentences": [
+     [
+      0.1,
+      2.203,
+      "灯把电变成光。"
+     ],
+     [
+      2.153,
+      8.236,
+      "它的功率，也就是多少瓦，说的是它每秒送出多少光。"
+     ]
+    ]
+   },
    "Narr_Light_Distance_01": {
     "duration": 5.04,
     "hash": "f13eab3107d91cd7",
@@ -1868,6 +3189,54 @@
       0.1,
       5.356,
       "那么在三米远，每个方格分到的光是一米时的多少？"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Frame": {
+    "duration": 7.752,
+    "hash": "23bc88023fb68732",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "从金色方格出来的光，现在铺满了更多方格。"
+     ],
+     [
+      4.736,
+      7.694,
+      "远一倍，方格就多四倍。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Lamp": {
+    "duration": 6.984,
+    "hash": "2ce569ecc28dfa69",
+    "sentences": [
+     [
+      0.1,
+      3.133,
+      "一盏小到几乎是一个点的灯。"
+     ],
+     [
+      3.083,
+      6.931,
+      "它的光沿直线向四面八方射出去。"
+     ]
+    ]
+   },
+   "Narr_Light_Distance_Part_Square": {
+    "duration": 6.528,
+    "hash": "e6caace0491a4614",
+    "sentences": [
+     [
+      0.1,
+      3.078,
+      "只跟着穿过这个方格的光走。"
+     ],
+     [
+      3.028,
+      6.458,
+      "一路上它既不会多，也不会少。"
      ]
     ]
    },
@@ -1922,6 +3291,44 @@
       3.931,
       6.014,
       "它看起来有多亮？"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Eye": {
+    "duration": 6.096,
+    "hash": "d92a95364a92b287",
+    "sentences": [
+     [
+      0.1,
+      6.078,
+      "眼睛接收的是它前面一个窄窄锥形里的光，不管那里是什么。"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Panel": {
+    "duration": 5.52,
+    "hash": "03fb3260425a8a46",
+    "sentences": [
+     [
+      0.1,
+      5.508,
+      "一块均匀发光的板，就像被照亮的墙或者一块屏幕。"
+     ]
+    ]
+   },
+   "Narr_Light_Radiance_Part_Seen": {
+    "duration": 9.984,
+    "hash": "c9938b86b121f94d",
+    "sentences": [
+     [
+      0.1,
+      3.3,
+      "板上落在眼睛锥形里的那一段。"
+     ],
+     [
+      3.25,
+      9.917,
+      "远了或斜了，这一段变大，可每一小块送来的光少了，正好抵消。"
      ]
     ]
    },
@@ -1985,6 +3392,50 @@
      ]
     ]
    },
+   "Narr_Light_Reflection_Part_Eye": {
+    "duration": 5.136,
+    "hash": "3fbc8b36e8be9b4e",
+    "sentences": [
+     [
+      0.1,
+      5.133,
+      "那个点看起来多亮，要看有多少光朝眼睛这边走。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Lamp": {
+    "duration": 4.176,
+    "hash": "e352b5703590177e",
+    "sentences": [
+     [
+      0.1,
+      4.175,
+      "光从这一边射来，落在中间的表面上。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Lobe": {
+    "duration": 6.408,
+    "hash": "572163d762ea26c6",
+    "sentences": [
+     [
+      0.1,
+      6.397,
+      "这个形状在哪个方向伸得越远，往那个方向去的光就越多。"
+     ]
+    ]
+   },
+   "Narr_Light_Reflection_Part_Mirror": {
+    "duration": 6.744,
+    "hash": "4b49f7dece5315de",
+    "sentences": [
+     [
+      0.1,
+      6.744,
+      "完美的镜子会把光全送到这里：怎么斜着进来，就怎么斜着出去。"
+     ]
+    ]
+   },
    "Narr_Light_Shadow_01": {
     "duration": 10.776,
     "hash": "1f821d65bd69d8c1",
@@ -2018,13 +3469,18 @@
     ]
    },
    "Narr_Light_Shadow_03": {
-    "duration": 5.04,
-    "hash": "ff35dd421ba7637e",
+    "duration": 7.128,
+    "hash": "3c234da04fa19ae0",
     "sentences": [
      [
       0.1,
-      5.036,
-      "轮到你了：把灯升到最高，看看那道柔和的边。"
+      3.161,
+      "轮到你了：把灯升到最高。"
+     ],
+     [
+      3.111,
+      7.056,
+      "影子的边是变清楚了，还是更模糊了？"
      ]
     ]
    },
@@ -2036,6 +3492,44 @@
       0.1,
       3.022,
       "为什么阴天的影子特别柔和？"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Box": {
+    "duration": 5.064,
+    "hash": "5f81087d0a467bf3",
+    "sentences": [
+     [
+      0.1,
+      5.064,
+      "盒子挡住了灯，后面的地面看不到灯的一部分。"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Edge": {
+    "duration": 5.136,
+    "hash": "0dcf1cf215f0f93a",
+    "sentences": [
+     [
+      0.1,
+      5.133,
+      "这里的地面只能看到灯的一部分，所以只是半暗。"
+     ]
+    ]
+   },
+   "Narr_Light_Shadow_Part_Lamp": {
+    "duration": 6.984,
+    "hash": "0cfe145a82e4a099",
+    "sentences": [
+     [
+      0.1,
+      2.244,
+      "一块发光的方块。"
+     ],
+     [
+      2.194,
+      6.931,
+      "把它变大，或者放低，影子的边就更柔和。"
      ]
     ]
    },
@@ -2104,6 +3598,60 @@
      ]
     ]
    },
+   "Narr_Light_Sky_Part_Circle": {
+    "duration": 4.584,
+    "hash": "322c539174bafb60",
+    "sentences": [
+     [
+      0.1,
+      4.578,
+      "整个半球形的天空，压扁成地上的一个圆。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Lamp": {
+    "duration": 7.752,
+    "hash": "8cba044fbcc5a1ba",
+    "sentences": [
+     [
+      0.1,
+      2.939,
+      "挂在这一点上方的方形灯。"
+     ],
+     [
+      2.889,
+      7.681,
+      "把它放低或挪远，它在天上占的那一块就会变。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Patch": {
+    "duration": 8.808,
+    "hash": "e2f22354c9d7272c",
+    "sentences": [
+     [
+      0.1,
+      4.619,
+      "灯在半球上占的那一块，竖直压到地面上。"
+     ],
+     [
+      4.569,
+      8.736,
+      "它占圆的多少，这一点就得到多少光。"
+     ]
+    ]
+   },
+   "Narr_Light_Sky_Part_Spot": {
+    "duration": 4.176,
+    "hash": "7be72e2592427232",
+    "sentences": [
+     [
+      0.1,
+      4.161,
+      "这里的一切，都是从这一点抬头看到的。"
+     ]
+    ]
+   },
    "Narr_Light_Tilt_01": {
     "duration": 5.808,
     "hash": "024adb5df62fa7c1",
@@ -2155,6 +3703,44 @@
       2.931,
       4.861,
       "每一处有多亮？"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Board": {
+    "duration": 6.648,
+    "hash": "97f0194dc5555a9a",
+    "sentences": [
+     [
+      0.1,
+      6.647,
+      "把板斜过来，同一束光就铺到更长的一段上，就像傍晚的阳光。"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Patch": {
+    "duration": 6.72,
+    "hash": "e260133201364e2b",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "光束落在板上的那一块。"
+     ],
+     [
+      2.958,
+      6.653,
+      "它越长，每一处分到的光就越少。"
+     ]
+    ]
+   },
+   "Narr_Light_Tilt_Part_Torch": {
+    "duration": 7.056,
+    "hash": "6868ae1e29f03ddb",
+    "sentences": [
+     [
+      0.1,
+      7.036,
+      "不管板怎么转，手电筒照下来的光束宽度不变，光的总量也不变。"
      ]
     ]
    },
@@ -2210,6 +3796,54 @@
       0.1,
       7.564,
       "游丝差一点点，一天就差好几分钟，所以制表师调它时格外小心。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Balance": {
+    "duration": 5.64,
+    "hash": "6673b1483ee2ff16",
+    "sentences": [
+     [
+      0.1,
+      2.856,
+      "一个边缘较重的小轮子。"
+     ],
+     [
+      2.806,
+      5.569,
+      "边缘越重，摆得越慢。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Hairspring": {
+    "duration": 7.224,
+    "hash": "6a5e5e243de0268f",
+    "sentences": [
+     [
+      0.1,
+      5.231,
+      "一根细如发丝的螺旋弹簧，总把摆轮拉回中间。"
+     ],
+     [
+      5.181,
+      7.167,
+      "越硬摆得越快。"
+     ]
+    ]
+   },
+   "Narr_Watch_Balance_Part_Trace": {
+    "duration": 7.488,
+    "hash": "444557f391ce9053",
+    "sentences": [
+     [
+      0.1,
+      3.022,
+      "摆轮每一刻转到了哪里。"
+     ],
+     [
+      2.972,
+      7.417,
+      "不管摆幅大小，每次摆动用的时间都一样。"
      ]
     ]
    },
@@ -2278,6 +3912,60 @@
      ]
     ]
    },
+   "Narr_Watch_Escape_Part_Balance": {
+    "duration": 7.92,
+    "hash": "56ceccce70024145",
+    "sentences": [
+     [
+      0.1,
+      3.717,
+      "它来回摆动，定下快慢的节奏。"
+     ],
+     [
+      3.667,
+      7.861,
+      "经过时，它上面的小钉拨动擒纵叉。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Lever": {
+    "duration": 4.776,
+    "hash": "89c08fc2f0636a41",
+    "sentences": [
+     [
+      0.1,
+      4.772,
+      "摆轮每次摆过中间，它就从一边拨到另一边。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Stones": {
+    "duration": 5.136,
+    "hash": "4cdbaebb52c9c750",
+    "sentences": [
+     [
+      0.1,
+      5.133,
+      "擒纵叉上的两颗红宝石，总有一颗卡着擒纵轮。"
+     ]
+    ]
+   },
+   "Narr_Watch_Escape_Part_Wheel": {
+    "duration": 5.424,
+    "hash": "c6a7e607f775540d",
+    "sentences": [
+     [
+      0.1,
+      2.536,
+      "轮系的最后一个轮子。"
+     ],
+     [
+      2.486,
+      5.361,
+      "它每次只被放走半个齿。"
+     ]
+    ]
+   },
    "Narr_Watch_Hands_01": {
     "duration": 5.64,
     "hash": "bb8b12a61f30db4e",
@@ -2319,6 +4007,33 @@
       0.1,
       3.856,
       "哪根指针不是装在走时轮系上的？"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_Part_Dial": {
+    "duration": 7.392,
+    "hash": "0ca38c7889df5d18",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "秒针装在四轮上，分针装在中心轮上。"
+     ],
+     [
+      4.361,
+      7.333,
+      "时针由分针再减速带动。"
+     ]
+    ]
+   },
+   "Narr_Watch_Hands_Part_Train": {
+    "duration": 7.008,
+    "hash": "9ef4866d8704ceb0",
+    "sentences": [
+     [
+      0.1,
+      7.008,
+      "每个大轮带动下一根轴上的小齿轴，所以每根轴都比前一根转得快。"
      ]
     ]
    },
@@ -2382,6 +4097,77 @@
      ]
     ]
    },
+   "Narr_Watch_Movement_Part_Barrel": {
+    "duration": 4.272,
+    "hash": "f2f87e1b1d677fb0",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "装在条盒里的发条：能量从这里出发。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Dial": {
+    "duration": 5.376,
+    "hash": "cc322af27ab65b0f",
+    "sentences": [
+     [
+      0.1,
+      5.369,
+      "从正面唯一看得到的部分，在整条传动链的最后。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Escapement": {
+    "duration": 4.728,
+    "hash": "c9938ea402635dfb",
+    "sentences": [
+     [
+      0.1,
+      4.717,
+      "它们把能量按均匀的节拍放出去，每秒五拍。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Motionworks": {
+    "duration": 6.288,
+    "hash": "0cbbb7e7c86519ab",
+    "sentences": [
+     [
+      0.1,
+      6.272,
+      "表盘下的小轮子，把分针的速度再慢十二倍，带动时针。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Plate": {
+    "duration": 6.216,
+    "hash": "59118d76a28f547b",
+    "sentences": [
+     [
+      0.1,
+      2.883,
+      "所有零件都装在它上面。"
+     ],
+     [
+      2.833,
+      6.167,
+      "那些小红宝石是轴的轴承。"
+     ]
+    ]
+   },
+   "Narr_Watch_Movement_Part_Train": {
+    "duration": 6.648,
+    "hash": "0cebacdd60cc8cd9",
+    "sentences": [
+     [
+      0.1,
+      6.633,
+      "把发条的推力一级级传到擒纵机构的轮子，每一级都转得更快。"
+     ]
+    ]
+   },
    "Narr_Watch_Rotor_01": {
     "duration": 5.736,
     "hash": "70d4a1797b2e5065",
@@ -2442,6 +4228,55 @@
      ]
     ]
    },
+   "Narr_Watch_Rotor_Part_Barrel": {
+    "duration": 3.696,
+    "hash": "6820e5761ffb4ea9",
+    "sentences": [
+     [
+      0.1,
+      3.675,
+      "发条被上紧、储存能量的地方。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Reserve": {
+    "duration": 6.552,
+    "hash": "19e1a7131835c1ca",
+    "sentences": [
+     [
+      0.1,
+      2.258,
+      "发条上得有多满。"
+     ],
+     [
+      2.208,
+      6.5,
+      "满了以后，发条会打滑，不再往紧里上。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Rotor": {
+    "duration": 7.248,
+    "hash": "d742db395f75fdb5",
+    "sentences": [
+     [
+      0.1,
+      7.231,
+      "一块沉沉的半月形重块，绕中心自由摆动，重力让它总是垂向下方。"
+     ]
+    ]
+   },
+   "Narr_Watch_Rotor_Part_Wheel": {
+    "duration": 5.4,
+    "hash": "771fe011dbc2dda0",
+    "sentences": [
+     [
+      0.1,
+      5.383,
+      "它只朝一个方向转，每转一点就给发条上一点弦。"
+     ]
+    ]
+   },
    "Narr_Watch_Spring_01": {
     "duration": 4.608,
     "hash": "a9aec5da0b69b2f8",
@@ -2483,6 +4318,49 @@
       0.1,
       3.036,
       "机械表的能量从哪里来？"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Arbor": {
+    "duration": 7.08,
+    "hash": "389d8907bd32e59e",
+    "sentences": [
+     [
+      0.1,
+      1.744,
+      "中间的轴。"
+     ],
+     [
+      1.694,
+      7.014,
+      "上弦时转的就是它，发条的内端就钩在它上面。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Barrel": {
+    "duration": 7.56,
+    "hash": "ddd09b110813eafa",
+    "sentences": [
+     [
+      0.1,
+      2.647,
+      "一个边上有齿的小鼓。"
+     ],
+     [
+      2.597,
+      7.5,
+      "里面的发条推着它转，它的齿带动整只表。"
+     ]
+    ]
+   },
+   "Narr_Watch_Spring_Part_Gauges": {
+    "duration": 4.608,
+    "hash": "66f909f3c3a64be3",
+    "sentences": [
+     [
+      0.1,
+      4.606,
+      "发条拉得有多紧，还能让表走多少个小时。"
      ]
     ]
    }

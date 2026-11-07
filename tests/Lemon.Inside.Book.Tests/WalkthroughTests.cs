@@ -25,7 +25,15 @@ public sealed class WalkthroughTests
     [Fact]
     public void EveryClipAndAnswer_IsWrittenInBothLanguages()
     {
-        var used = WalkthroughKeys(AllSpreads(new FakeNarration()).Select(s => s.Walkthrough()));
+        var spreads = AllSpreads(new FakeNarration()).ToList();
+        var used = WalkthroughKeys(spreads.Select(s => s.Walkthrough()));
+        foreach (var spread in spreads)
+        {
+            Assert.True(spread.Parts.Count >= 2, spread.Key);
+            used.UnionWith(spread.Parts.Select(spread.PartTitleKey)!);
+            used.UnionWith(spread.Parts.Select(spread.PartClipKey)!);
+        }
+
         foreach (var keys in BothLanguages())
         {
             var missing = used.Where(k => !keys.Contains(k)).ToList();
@@ -120,6 +128,65 @@ public sealed class WalkthroughTests
         }
 
         window.Close();
+    }
+
+    [AvaloniaTheory]
+    [InlineData("Light-Shadow")]
+    [InlineData("Gears")]
+    [InlineData("Watch")]
+    public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
+    {
+        var (window, model) = OpenAt(slug);
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == slug);
+        for (var s = 0; s < BookContents.Chapters[chapter].Spreads; s++)
+        {
+            var page = BookContents.SpreadPage(chapter, s);
+            model.GoToPage(page);
+            Frames(3);
+            var diagram = model.Pages[page + 1];
+            var spread = (Spread)diagram.GetType().GetProperty("Spread")!.GetValue(diagram)!;
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+
+            foreach (var id in spread.Parts)
+            {
+                // Somewhere inside its ring a click picks this part (a smaller one may sit over its middle).
+                Assert.True(picture.PartCentre(id) is not null, $"{picture.GetType().Name} does not draw '{id}'");
+                var spot = SpotFor(picture, id);
+                Assert.True(spot is not null, $"{picture.GetType().Name}: '{id}' is covered by smaller parts");
+
+                picture.ClickAt(spot.Value);
+                Frames(1);
+                Assert.Equal(id, spread.Card.Id);
+                Assert.False(string.IsNullOrWhiteSpace(spread.Card.Text));
+                var card = window.GetVisualDescendants().OfType<Controls.Explore.ObjectCardView>().Single(c => c.IsEffectivelyVisible);
+                Assert.Same(spread.Card, card.DataContext);
+                if (id == spread.Parts[0]) Snapshot(window, $"card-{slug}-{s + 1}");
+
+                // The card's close button clears the picture's choice too (the parts may have moved on by now).
+                spread.Card.CloseCommand.Execute(null);
+                Frames(1);
+                Assert.Null(picture.SelectedPart);
+            }
+        }
+
+        window.Close();
+    }
+
+    /// <summary>A point in the part's ring where a click picks it, trying its middle first.</summary>
+    private static Avalonia.Point? SpotFor(Picture picture, string id)
+    {
+        var centre = picture.PartCentre(id)!.Value;
+        for (var r = 0.0; r <= 200; r += 4)
+        {
+            for (var a = 0; a < 16; a++)
+            {
+                var p = centre + new Avalonia.Point(r * Math.Cos(a * Math.PI / 8), r * Math.Sin(a * Math.PI / 8));
+                if (picture.PartAt(p) == id) return p;
+                if (r == 0) break;
+            }
+        }
+
+        return null;
     }
 
     [AvaloniaFact]

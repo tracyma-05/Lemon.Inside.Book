@@ -2,11 +2,14 @@ using Lemon.Book.Shell.Explore.Lessons;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
 
-// The Light and shadow chapter's spoken walkthroughs, one per spread. Each sets the picture up as it speaks, then
-// leaves one thing for the reader to try or one question to answer. Clips are Narr_Light_<Key>_NN.
+// The Light and shadow chapter's spoken walkthroughs, one per spread, and the parts of each picture that can be
+// clicked. Each walkthrough sets the picture up as it speaks, then leaves one thing for the reader to try or one
+// question to answer. Clips are Narr_Light_<Key>_NN; parts are explained by Narr_Light_<Key>_Part_<Id>.
 
 public sealed partial class BrightnessSpread
 {
+    public override IReadOnlyList<string> Parts => ["lamp", "floor", "chart"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "lamp", () => Power = 5),
@@ -19,6 +22,8 @@ public sealed partial class BrightnessSpread
 
 public sealed partial class TiltSpread
 {
+    public override IReadOnlyList<string> Parts => ["torch", "patch", "board"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "patch", () => Tilt = 0),
@@ -30,6 +35,8 @@ public sealed partial class TiltSpread
 
 public sealed partial class DistanceSpread
 {
+    public override IReadOnlyList<string> Parts => ["lamp", "square", "frame"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "square", () => Distance = 1),
@@ -41,6 +48,8 @@ public sealed partial class DistanceSpread
 
 public sealed partial class AngleSpread
 {
+    public override IReadOnlyList<string> Parts => ["car", "arc", "view"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "car", () => Distance = 5),
@@ -52,6 +61,8 @@ public sealed partial class AngleSpread
 
 public sealed partial class SkySpread
 {
+    public override IReadOnlyList<string> Parts => ["spot", "lamp", "patch", "circle"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "spot", () => (Elevation, Distance) = (90, 2.5)),
@@ -64,6 +75,8 @@ public sealed partial class SkySpread
 
 public sealed partial class RadianceSpread
 {
+    public override IReadOnlyList<string> Parts => ["eye", "panel", "seen"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "panel", () => (Distance, Tilt) = (2, 0)),
@@ -75,6 +88,8 @@ public sealed partial class RadianceSpread
 
 public sealed partial class ReflectionSpread
 {
+    public override IReadOnlyList<string> Parts => ["lamp", "mirror", "lobe", "eye"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "mirror", () => (LightAngle, Roughness, EyeAngle) = (40, 0, 40)),
@@ -87,6 +102,8 @@ public sealed partial class ReflectionSpread
 
 public sealed partial class ShadowSpread
 {
+    public override IReadOnlyList<string> Parts => ["lamp", "box", "edge"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "edge", () => (LightHeight, LightSize, LightX) = (2.5, 0.05, 0.6)),
@@ -98,6 +115,8 @@ public sealed partial class ShadowSpread
 
 public sealed partial class BounceSpread
 {
+    public override IReadOnlyList<string> Parts => ["lamp", "wall", "floor", "box"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "box", () => (Bounces, Wall) = (0, WallColor.Red)),

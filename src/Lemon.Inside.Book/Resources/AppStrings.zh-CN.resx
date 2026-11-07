@@ -1213,7 +1213,7 @@
     <value>把灯变大。在影子边上，灯一部分被挡住、一部分没有，影子就慢慢淡开。</value>
   </data>
   <data name="Narr_Light_Shadow_03" xml:space="preserve">
-    <value>轮到你了：把灯升到最高，看看那道柔和的边。</value>
+    <value>轮到你了：把灯升到最高。影子的边是变清楚了，还是更模糊了？</value>
   </data>
   <data name="Narr_Light_Shadow_04" xml:space="preserve">
     <value>为什么阴天的影子特别柔和？</value>
@@ -1502,5 +1502,419 @@
   </data>
   <data name="Narr_Watch_Movement_05" xml:space="preserve">
     <value>能量从底下的发条出发，一层层往上，一直送到顶上的指针。</value>
+  </data>
+  <data name="Light_Brightness_Part_Lamp" xml:space="preserve">
+    <value>灯</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Lamp" xml:space="preserve">
+    <value>灯把电变成光。它的功率，也就是多少瓦，说的是它每秒送出多少光。</value>
+  </data>
+  <data name="Light_Brightness_Part_Floor" xml:space="preserve">
+    <value>被照亮的地面</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Floor" xml:space="preserve">
+    <value>地面把落到它上面的光反射回一部分，进到你眼里的就是这些光。</value>
+  </data>
+  <data name="Light_Brightness_Part_Chart" xml:space="preserve">
+    <value>看起来有多亮</value>
+  </data>
+  <data name="Narr_Light_Brightness_Part_Chart" xml:space="preserve">
+    <value>横着是光有多少，竖着是看起来有多亮。曲线先爬得快，然后变平，到白色就到顶了。</value>
+  </data>
+  <data name="Light_Tilt_Part_Torch" xml:space="preserve">
+    <value>手电筒</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Torch" xml:space="preserve">
+    <value>不管板怎么转，手电筒照下来的光束宽度不变，光的总量也不变。</value>
+  </data>
+  <data name="Light_Tilt_Part_Patch" xml:space="preserve">
+    <value>亮斑</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Patch" xml:space="preserve">
+    <value>光束落在板上的那一块。它越长，每一处分到的光就越少。</value>
+  </data>
+  <data name="Light_Tilt_Part_Board" xml:space="preserve">
+    <value>木板</value>
+  </data>
+  <data name="Narr_Light_Tilt_Part_Board" xml:space="preserve">
+    <value>把板斜过来，同一束光就铺到更长的一段上，就像傍晚的阳光。</value>
+  </data>
+  <data name="Light_Distance_Part_Lamp" xml:space="preserve">
+    <value>小灯</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Lamp" xml:space="preserve">
+    <value>一盏小到几乎是一个点的灯。它的光沿直线向四面八方射出去。</value>
+  </data>
+  <data name="Light_Distance_Part_Square" xml:space="preserve">
+    <value>一米处的一个方格</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Square" xml:space="preserve">
+    <value>只跟着穿过这个方格的光走。一路上它既不会多，也不会少。</value>
+  </data>
+  <data name="Light_Distance_Part_Frame" xml:space="preserve">
+    <value>同样的光，更远处</value>
+  </data>
+  <data name="Narr_Light_Distance_Part_Frame" xml:space="preserve">
+    <value>从金色方格出来的光，现在铺满了更多方格。远一倍，方格就多四倍。</value>
+  </data>
+  <data name="Light_Angle_Part_Car" xml:space="preserve">
+    <value>汽车</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_Car" xml:space="preserve">
+    <value>车一直是四米半长，变的只是它离眼睛有多远。</value>
+  </data>
+  <data name="Light_Angle_Part_Arc" xml:space="preserve">
+    <value>眼睛处的夹角</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_Arc" xml:space="preserve">
+    <value>看向车头和车尾的两条线之间的夹角。东西看起来多大，取决于它，而不是车有多长。</value>
+  </data>
+  <data name="Light_Angle_Part_View" xml:space="preserve">
+    <value>眼睛看到的</value>
+  </data>
+  <data name="Narr_Light_Angle_Part_View" xml:space="preserve">
+    <value>眼睛看到的车：它占多大的角度，看起来就有多宽。</value>
+  </data>
+  <data name="Light_Sky_Part_Spot" xml:space="preserve">
+    <value>地上的一点</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Spot" xml:space="preserve">
+    <value>这里的一切，都是从这一点抬头看到的。</value>
+  </data>
+  <data name="Light_Sky_Part_Lamp" xml:space="preserve">
+    <value>灯</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Lamp" xml:space="preserve">
+    <value>挂在这一点上方的方形灯。把它放低或挪远，它在天上占的那一块就会变。</value>
+  </data>
+  <data name="Light_Sky_Part_Patch" xml:space="preserve">
+    <value>压扁后的灯</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Patch" xml:space="preserve">
+    <value>灯在半球上占的那一块，竖直压到地面上。它占圆的多少，这一点就得到多少光。</value>
+  </data>
+  <data name="Light_Sky_Part_Circle" xml:space="preserve">
+    <value>压扁后的天空</value>
+  </data>
+  <data name="Narr_Light_Sky_Part_Circle" xml:space="preserve">
+    <value>整个半球形的天空，压扁成地上的一个圆。</value>
+  </data>
+  <data name="Light_Radiance_Part_Eye" xml:space="preserve">
+    <value>眼睛</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Eye" xml:space="preserve">
+    <value>眼睛接收的是它前面一个窄窄锥形里的光，不管那里是什么。</value>
+  </data>
+  <data name="Light_Radiance_Part_Panel" xml:space="preserve">
+    <value>发光的板</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Panel" xml:space="preserve">
+    <value>一块均匀发光的板，就像被照亮的墙或者一块屏幕。</value>
+  </data>
+  <data name="Light_Radiance_Part_Seen" xml:space="preserve">
+    <value>眼睛看进去的部分</value>
+  </data>
+  <data name="Narr_Light_Radiance_Part_Seen" xml:space="preserve">
+    <value>板上落在眼睛锥形里的那一段。远了或斜了，这一段变大，可每一小块送来的光少了，正好抵消。</value>
+  </data>
+  <data name="Light_Reflection_Part_Lamp" xml:space="preserve">
+    <value>射来的光</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Lamp" xml:space="preserve">
+    <value>光从这一边射来，落在中间的表面上。</value>
+  </data>
+  <data name="Light_Reflection_Part_Mirror" xml:space="preserve">
+    <value>镜面方向</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Mirror" xml:space="preserve">
+    <value>完美的镜子会把光全送到这里：怎么斜着进来，就怎么斜着出去。</value>
+  </data>
+  <data name="Light_Reflection_Part_Lobe" xml:space="preserve">
+    <value>光往哪里去</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Lobe" xml:space="preserve">
+    <value>这个形状在哪个方向伸得越远，往那个方向去的光就越多。</value>
+  </data>
+  <data name="Light_Reflection_Part_Eye" xml:space="preserve">
+    <value>眼睛</value>
+  </data>
+  <data name="Narr_Light_Reflection_Part_Eye" xml:space="preserve">
+    <value>那个点看起来多亮，要看有多少光朝眼睛这边走。</value>
+  </data>
+  <data name="Light_Shadow_Part_Lamp" xml:space="preserve">
+    <value>方形灯</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Lamp" xml:space="preserve">
+    <value>一块发光的方块。把它变大，或者放低，影子的边就更柔和。</value>
+  </data>
+  <data name="Light_Shadow_Part_Box" xml:space="preserve">
+    <value>盒子</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Box" xml:space="preserve">
+    <value>盒子挡住了灯，后面的地面看不到灯的一部分。</value>
+  </data>
+  <data name="Light_Shadow_Part_Edge" xml:space="preserve">
+    <value>影子的边</value>
+  </data>
+  <data name="Narr_Light_Shadow_Part_Edge" xml:space="preserve">
+    <value>这里的地面只能看到灯的一部分，所以只是半暗。</value>
+  </data>
+  <data name="Light_Bounce_Part_Lamp" xml:space="preserve">
+    <value>灯</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Lamp" xml:space="preserve">
+    <value>这里唯一发光的东西，其他一切只是把光转送出去。</value>
+  </data>
+  <data name="Light_Bounce_Part_Wall" xml:space="preserve">
+    <value>彩色的墙</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Wall" xml:space="preserve">
+    <value>墙主要反射回它自己的颜色，其余的颜色被它吸收了。</value>
+  </data>
+  <data name="Light_Bounce_Part_Floor" xml:space="preserve">
+    <value>墙边的地面</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Floor" xml:space="preserve">
+    <value>光一反弹，墙也照亮了这块地面，还给它染上了自己的颜色。</value>
+  </data>
+  <data name="Light_Bounce_Part_Box" xml:space="preserve">
+    <value>盒子</value>
+  </data>
+  <data name="Narr_Light_Bounce_Part_Box" xml:space="preserve">
+    <value>它的背面完全照不到灯，只有反弹的光能到那里。</value>
+  </data>
+  <data name="Gears_Ratio_Part_Driver" xml:space="preserve">
+    <value>主动轮</value>
+  </data>
+  <data name="Narr_Gears_Ratio_Part_Driver" xml:space="preserve">
+    <value>被转动的齿轮。它每转过一个齿，就推着另一个齿轮走过一个齿。</value>
+  </data>
+  <data name="Gears_Ratio_Part_Driven" xml:space="preserve">
+    <value>从动轮</value>
+  </data>
+  <data name="Narr_Gears_Ratio_Part_Driven" xml:space="preserve">
+    <value>被推着转的齿轮。齿越多，转一圈要推的次数越多，所以转得越慢。</value>
+  </data>
+  <data name="Gears_Torque_Part_Crank" xml:space="preserve">
+    <value>摇柄和小齿轮</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Crank" xml:space="preserve">
+    <value>用手转的就是它。它转得快，但推得不用力。</value>
+  </data>
+  <data name="Gears_Torque_Part_Drum" xml:space="preserve">
+    <value>卷筒齿轮</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Drum" xml:space="preserve">
+    <value>大齿轮和它轴上的卷筒。它转得慢，却有足够的劲把绳子卷上来。</value>
+  </data>
+  <data name="Gears_Torque_Part_Load" xml:space="preserve">
+    <value>重物</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Load" xml:space="preserve">
+    <value>绳子上挂的重物。卷筒一转，它就往上升。</value>
+  </data>
+  <data name="Gears_Torque_Part_Bars" xml:space="preserve">
+    <value>速度和力</value>
+  </data>
+  <data name="Narr_Gears_Torque_Part_Bars" xml:space="preserve">
+    <value>摇柄转得快多少倍，卷筒就有劲多少倍。</value>
+  </data>
+  <data name="Gears_Involute_Part_Can" xml:space="preserve">
+    <value>罐子</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Can" xml:space="preserve">
+    <value>绕线的那个圆。在齿轮上，它叫基圆。</value>
+  </data>
+  <data name="Gears_Involute_Part_String" xml:space="preserve">
+    <value>绷紧的线</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_String" xml:space="preserve">
+    <value>它总是沿着刚好贴着罐子的直线离开，而且总是和曲线成直角。</value>
+  </data>
+  <data name="Gears_Involute_Part_Pencil" xml:space="preserve">
+    <value>铅笔</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Pencil" xml:space="preserve">
+    <value>线的末端。线一边放开，它一边画出这条曲线。</value>
+  </data>
+  <data name="Gears_Involute_Part_Curve" xml:space="preserve">
+    <value>渐开线</value>
+  </data>
+  <data name="Narr_Gears_Involute_Part_Curve" xml:space="preserve">
+    <value>好齿轮每个齿两侧的曲线。</value>
+  </data>
+  <data name="Gears_Mesh_Part_Contact" xml:space="preserve">
+    <value>齿的接触点</value>
+  </data>
+  <data name="Narr_Gears_Mesh_Part_Contact" xml:space="preserve">
+    <value>每个金色的点，都是此刻正互相压着的一对齿。</value>
+  </data>
+  <data name="Gears_Mesh_Part_Line" xml:space="preserve">
+    <value>啮合线</value>
+  </data>
+  <data name="Narr_Gears_Mesh_Part_Line" xml:space="preserve">
+    <value>所有接触点都沿这一条线滑动。它的倾斜角就是压力角。</value>
+  </data>
+  <data name="Gears_Train_Part_Input" xml:space="preserve">
+    <value>输入齿轮</value>
+  </data>
+  <data name="Narr_Gears_Train_Part_Input" xml:space="preserve">
+    <value>第一个、转得最快的齿轮，轮系从这里开始。</value>
+  </data>
+  <data name="Gears_Train_Part_Output" xml:space="preserve">
+    <value>输出齿轮</value>
+  </data>
+  <data name="Narr_Gears_Train_Part_Output" xml:space="preserve">
+    <value>最后一个带指针的齿轮。中间每多一级，它就再慢三倍。</value>
+  </data>
+  <data name="Gears_Planet_Part_Sun" xml:space="preserve">
+    <value>太阳轮</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Sun" xml:space="preserve">
+    <value>中间的齿轮，行星轮绕着它滚。</value>
+  </data>
+  <data name="Gears_Planet_Part_Ring" xml:space="preserve">
+    <value>齿圈</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Ring" xml:space="preserve">
+    <value>一个齿长在内侧的大圈，把所有行星轮围在里面。</value>
+  </data>
+  <data name="Gears_Planet_Part_Carrier" xml:space="preserve">
+    <value>行星架</value>
+  </data>
+  <data name="Narr_Gears_Planet_Part_Carrier" xml:space="preserve">
+    <value>托着行星轮轴的架子。行星轮绕着走时，它就跟着转。</value>
+  </data>
+  <data name="Watch_Spring_Part_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Barrel" xml:space="preserve">
+    <value>一个边上有齿的小鼓。里面的发条推着它转，它的齿带动整只表。</value>
+  </data>
+  <data name="Watch_Spring_Part_Arbor" xml:space="preserve">
+    <value>条轴</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Arbor" xml:space="preserve">
+    <value>中间的轴。上弦时转的就是它，发条的内端就钩在它上面。</value>
+  </data>
+  <data name="Watch_Spring_Part_Gauges" xml:space="preserve">
+    <value>拉力和剩余时间</value>
+  </data>
+  <data name="Narr_Watch_Spring_Part_Gauges" xml:space="preserve">
+    <value>发条拉得有多紧，还能让表走多少个小时。</value>
+  </data>
+  <data name="Watch_Hands_Part_Dial" xml:space="preserve">
+    <value>表盘和指针</value>
+  </data>
+  <data name="Narr_Watch_Hands_Part_Dial" xml:space="preserve">
+    <value>秒针装在四轮上，分针装在中心轮上。时针由分针再减速带动。</value>
+  </data>
+  <data name="Watch_Hands_Part_Train" xml:space="preserve">
+    <value>走时轮系</value>
+  </data>
+  <data name="Narr_Watch_Hands_Part_Train" xml:space="preserve">
+    <value>每个大轮带动下一根轴上的小齿轴，所以每根轴都比前一根转得快。</value>
+  </data>
+  <data name="Watch_Escape_Part_Wheel" xml:space="preserve">
+    <value>擒纵轮</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Wheel" xml:space="preserve">
+    <value>轮系的最后一个轮子。它每次只被放走半个齿。</value>
+  </data>
+  <data name="Watch_Escape_Part_Lever" xml:space="preserve">
+    <value>擒纵叉</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Lever" xml:space="preserve">
+    <value>摆轮每次摆过中间，它就从一边拨到另一边。</value>
+  </data>
+  <data name="Watch_Escape_Part_Stones" xml:space="preserve">
+    <value>叉瓦</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Stones" xml:space="preserve">
+    <value>擒纵叉上的两颗红宝石，总有一颗卡着擒纵轮。</value>
+  </data>
+  <data name="Watch_Escape_Part_Balance" xml:space="preserve">
+    <value>摆轮</value>
+  </data>
+  <data name="Narr_Watch_Escape_Part_Balance" xml:space="preserve">
+    <value>它来回摆动，定下快慢的节奏。经过时，它上面的小钉拨动擒纵叉。</value>
+  </data>
+  <data name="Watch_Balance_Part_Balance" xml:space="preserve">
+    <value>摆轮</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Balance" xml:space="preserve">
+    <value>一个边缘较重的小轮子。边缘越重，摆得越慢。</value>
+  </data>
+  <data name="Watch_Balance_Part_Hairspring" xml:space="preserve">
+    <value>游丝</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Hairspring" xml:space="preserve">
+    <value>一根细如发丝的螺旋弹簧，总把摆轮拉回中间。越硬摆得越快。</value>
+  </data>
+  <data name="Watch_Balance_Part_Trace" xml:space="preserve">
+    <value>摆角随时间</value>
+  </data>
+  <data name="Narr_Watch_Balance_Part_Trace" xml:space="preserve">
+    <value>摆轮每一刻转到了哪里。不管摆幅大小，每次摆动用的时间都一样。</value>
+  </data>
+  <data name="Watch_Rotor_Part_Rotor" xml:space="preserve">
+    <value>自动陀</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Rotor" xml:space="preserve">
+    <value>一块沉沉的半月形重块，绕中心自由摆动，重力让它总是垂向下方。</value>
+  </data>
+  <data name="Watch_Rotor_Part_Wheel" xml:space="preserve">
+    <value>上条轮</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Wheel" xml:space="preserve">
+    <value>它只朝一个方向转，每转一点就给发条上一点弦。</value>
+  </data>
+  <data name="Watch_Rotor_Part_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Barrel" xml:space="preserve">
+    <value>发条被上紧、储存能量的地方。</value>
+  </data>
+  <data name="Watch_Rotor_Part_Reserve" xml:space="preserve">
+    <value>动力储存</value>
+  </data>
+  <data name="Narr_Watch_Rotor_Part_Reserve" xml:space="preserve">
+    <value>发条上得有多满。满了以后，发条会打滑，不再往紧里上。</value>
+  </data>
+  <data name="Watch_Movement_Part_Plate" xml:space="preserve">
+    <value>主夹板</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Plate" xml:space="preserve">
+    <value>所有零件都装在它上面。那些小红宝石是轴的轴承。</value>
+  </data>
+  <data name="Watch_Movement_Part_Barrel" xml:space="preserve">
+    <value>条盒</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Barrel" xml:space="preserve">
+    <value>装在条盒里的发条：能量从这里出发。</value>
+  </data>
+  <data name="Watch_Movement_Part_Train" xml:space="preserve">
+    <value>走时轮系</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Train" xml:space="preserve">
+    <value>把发条的推力一级级传到擒纵机构的轮子，每一级都转得更快。</value>
+  </data>
+  <data name="Watch_Movement_Part_Escapement" xml:space="preserve">
+    <value>擒纵与摆轮</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Escapement" xml:space="preserve">
+    <value>它们把能量按均匀的节拍放出去，每秒五拍。</value>
+  </data>
+  <data name="Watch_Movement_Part_Motionworks" xml:space="preserve">
+    <value>跨轮系</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Motionworks" xml:space="preserve">
+    <value>表盘下的小轮子，把分针的速度再慢十二倍，带动时针。</value>
+  </data>
+  <data name="Watch_Movement_Part_Dial" xml:space="preserve">
+    <value>表盘和指针</value>
+  </data>
+  <data name="Narr_Watch_Movement_Part_Dial" xml:space="preserve">
+    <value>从正面唯一看得到的部分，在整条传动链的最后。</value>
   </data>
 </root>

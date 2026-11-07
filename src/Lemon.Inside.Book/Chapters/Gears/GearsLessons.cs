@@ -3,10 +3,13 @@ using Lemon.Inside.Book.Controls.Mechanics;
 
 namespace Lemon.Inside.Book.Chapters.Gears;
 
-// The Gears chapter's spoken walkthroughs, one per spread. Clips are Narr_Gears_<Key>_NN.
+// The Gears chapter's spoken walkthroughs, one per spread, and the parts of each picture
+// that can be clicked. Clips are Narr_Gears_<Key>_NN; parts are explained by Narr_Gears_<Key>_Part_<Id>.
 
 public sealed partial class RatioSpread
 {
+    public override IReadOnlyList<string> Parts => ["driver", "driven"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "driver", () => (DriverTeeth, DrivenTeeth) = (20, 20)),
@@ -18,6 +21,8 @@ public sealed partial class RatioSpread
 
 public sealed partial class TorqueSpread
 {
+    public override IReadOnlyList<string> Parts => ["crank", "drum", "load", "bars"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "crank", () => DrivenTeeth = 24),
@@ -29,6 +34,8 @@ public sealed partial class TorqueSpread
 
 public sealed partial class InvoluteSpread
 {
+    public override IReadOnlyList<string> Parts => ["can", "string", "pencil", "curve"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "can", () => Unwound = 0),
@@ -40,6 +47,8 @@ public sealed partial class InvoluteSpread
 
 public sealed partial class MeshSpread
 {
+    public override IReadOnlyList<string> Parts => ["contact", "line"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "contact", () => (PressureAngle, Speed) = (20, 0.15)),
@@ -52,6 +61,8 @@ public sealed partial class MeshSpread
 
 public sealed partial class TrainSpread
 {
+    public override IReadOnlyList<string> Parts => ["input", "output"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "input", () => Steps = 1),
@@ -63,6 +74,8 @@ public sealed partial class TrainSpread
 
 public sealed partial class PlanetarySpread
 {
+    public override IReadOnlyList<string> Parts => ["sun", "ring", "carrier"];
+
     public override IReadOnlyList<LessonStep> Walkthrough() =>
     [
         Say(1, "sun", () => (Held, SunStep) = (PlanetHeld.Ring, 2)),

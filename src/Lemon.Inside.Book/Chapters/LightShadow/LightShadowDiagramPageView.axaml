@@ -12,41 +12,50 @@
                 <ContentControl Content="{Binding Spread}">
                     <ContentControl.DataTemplates>
                         <DataTemplate DataType="light:BrightnessSpread">
-                            <light:BrightnessScene Highlight="{Binding Lesson.Highlight}" Power="{Binding Power}"
+                            <light:BrightnessScene Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Power="{Binding Power}"
                                                    ToolTip.Tip="{loc:Localize Light_DragHint}"
                                                    AutomationProperties.Name="{loc:Localize Light_Brightness_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:TiltSpread">
-                            <light:TiltDiagram Highlight="{Binding Lesson.Highlight}" Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Light_Tilt_Picture}" />
+                            <light:TiltDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Light_Tilt_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:DistanceSpread">
-                            <light:DistanceScene Highlight="{Binding Lesson.Highlight}" Distance="{Binding Distance}"
+                            <light:DistanceScene Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Distance="{Binding Distance}"
                                                  ToolTip.Tip="{loc:Localize Light_DragHint}"
                                                  AutomationProperties.Name="{loc:Localize Light_Distance_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:AngleSpread">
-                            <light:AngleDiagram Highlight="{Binding Lesson.Highlight}" Distance="{Binding Distance}" AutomationProperties.Name="{loc:Localize Light_Angle_Picture}" />
+                            <light:AngleDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Distance="{Binding Distance}" AutomationProperties.Name="{loc:Localize Light_Angle_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:SkySpread">
-                            <light:SkyScene Highlight="{Binding Lesson.Highlight}" Elevation="{Binding Elevation}" Distance="{Binding Distance}"
+                            <light:SkyScene Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Elevation="{Binding Elevation}" Distance="{Binding Distance}"
                                             ToolTip.Tip="{loc:Localize Light_DragHint}"
                                             AutomationProperties.Name="{loc:Localize Light_Sky_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:RadianceSpread">
-                            <light:RadianceDiagram Highlight="{Binding Lesson.Highlight}" Distance="{Binding Distance}" Tilt="{Binding Tilt}"
+                            <light:RadianceDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Distance="{Binding Distance}" Tilt="{Binding Tilt}"
                                                    AutomationProperties.Name="{loc:Localize Light_Radiance_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:ReflectionSpread">
-                            <light:ReflectionDiagram Highlight="{Binding Lesson.Highlight}" LightAngle="{Binding LightAngle}" Roughness="{Binding Roughness}" EyeAngle="{Binding EyeAngle}"
+                            <light:ReflectionDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     LightAngle="{Binding LightAngle}" Roughness="{Binding Roughness}" EyeAngle="{Binding EyeAngle}"
                                                      AutomationProperties.Name="{loc:Localize Light_Reflection_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:BounceSpread">
-                            <light:BounceScene Highlight="{Binding Lesson.Highlight}" Bounces="{Binding Bounces}" Wall="{Binding Wall}"
+                            <light:BounceScene Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Bounces="{Binding Bounces}" Wall="{Binding Wall}"
                                                ToolTip.Tip="{loc:Localize Light_DragHint}"
                                                AutomationProperties.Name="{loc:Localize Light_Bounce_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="light:ShadowSpread">
-                            <light:ShadowScene Highlight="{Binding Lesson.Highlight}" LightHeight="{Binding LightHeight}"
+                            <light:ShadowScene Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     LightHeight="{Binding LightHeight}"
                                                LightSize="{Binding LightSize}"
                                                LightX="{Binding LightX}"
                                                ToolTip.Tip="{loc:Localize Light_DragHint}"

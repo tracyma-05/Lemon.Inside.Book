@@ -6,13 +6,16 @@ using Lemon.Book.Shell.Explore.Narration;
 using Lemon.Book.Shell.Infrastructures.Localization;
 using Lemon.Book.Shell.Infrastructures.Settings;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Explore.Lessons;
 
 namespace Lemon.Inside.Book.Chapters;
 
 /// <summary>
 /// One spread of a chapter: its title, two paragraphs, a closer look, the settings its picture uses, and its spoken
 /// walkthrough. The strings are <c>&lt;Area&gt;_&lt;Key&gt;_Title</c>, <c>_P1</c>, <c>_P2</c> and <c>_Deeper</c>; the
-/// walkthrough's clips are <c>Narr_&lt;Area&gt;_&lt;Key&gt;_NN</c>.
+/// walkthrough's clips are <c>Narr_&lt;Area&gt;_&lt;Key&gt;_NN</c>. Each part in <see cref="Parts"/> can be clicked in the
+/// picture: its name is <c>&lt;Area&gt;_&lt;Key&gt;_Part_&lt;Id&gt;</c> and its explanation (also a clip)
+/// <c>Narr_&lt;Area&gt;_&lt;Key&gt;_Part_&lt;Id&gt;</c>, the id with a capital first letter.
 /// </summary>
 public abstract class Spread(string area, string key) : ObservableObject
 {
@@ -36,6 +39,22 @@ public abstract class Spread(string area, string key) : ObservableObject
     /// <summary>The spoken walkthrough of this spread; set once the chapter is given the narration channel.</summary>
     public LessonPlayer Lesson { get; private set; } = null!;
 
+    /// <summary>The card explaining the part last clicked in the picture; set with <see cref="Lesson"/>.</summary>
+    public ObjectCard Card { get; private set; } = null!;
+
+    /// <summary>The ids of the parts that can be clicked in the picture (as the picture marks them).</summary>
+    public abstract IReadOnlyList<string> Parts { get; }
+
+    /// <summary>Each clickable part's name in the reader's language, for the picture's pointer label.</summary>
+    public IReadOnlyDictionary<string, string> PartNames =>
+        Parts.ToDictionary(id => id, id => Text.GetString(PartTitleKey(id)!), StringComparer.Ordinal);
+
+    /// <summary>A part's name key, or null for an id that is not one of <see cref="Parts"/>.</summary>
+    public string? PartTitleKey(string? id) => id is not null && Parts.Contains(id) ? $"{Area}_{Key}_Part_{Capital(id)}" : null;
+
+    /// <summary>A part's explanation clip key, or null for an id that is not one of <see cref="Parts"/>.</summary>
+    public string? PartClipKey(string? id) => id is not null && Parts.Contains(id) ? $"Narr_{Area}_{Key}_Part_{Capital(id)}" : null;
+
     /// <summary>The steps of the walkthrough, built afresh on every start.</summary>
     public abstract IReadOnlyList<LessonStep> Walkthrough();
 
@@ -45,6 +64,7 @@ public abstract class Spread(string area, string key) : ObservableObject
     internal void UseNarration(INarrationService narration)
     {
         Lesson = new LessonPlayer(narration, Walkthrough);
+        Card = new ObjectCard(narration, Lesson, PartTitleKey, PartClipKey);
         PropertyChanged += OnSettingChanged;
     }
 
@@ -53,6 +73,8 @@ public abstract class Spread(string area, string key) : ObservableObject
     {
         if (_solutions.TryGetValue(step, out var solve)) solve();
     }
+
+    private static string Capital(string id) => char.ToUpperInvariant(id[0]) + id[1..];
 
     /// <summary>The clip key of step <paramref name="number"/> (from 1).</summary>
     protected string Clip(int number) => $"Narr_{Area}_{Key}_{number:00}";
@@ -109,6 +131,7 @@ public abstract class SpreadChapter : IChapterContent
         foreach (var spread in AllSpreads)
         {
             spread.Lesson.Stop();
+            spread.Card.Close();
         }
     }
 
