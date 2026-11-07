@@ -14,6 +14,7 @@
              xmlns:bicycle="using:Lemon.Inside.Book.Chapters.Bicycle"
              xmlns:boats="using:Lemon.Inside.Book.Chapters.Boats"
              xmlns:car="using:Lemon.Inside.Book.Chapters.Car"
+             xmlns:locks="using:Lemon.Inside.Book.Chapters.Locks"
              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
              x:Class="Lemon.Inside.Book.Views.MainView"
@@ -37,6 +38,8 @@
         <DataTemplate DataType="boats:BoatsDiagramPageViewModel"><boats:BoatsDiagramPageView /></DataTemplate>
         <DataTemplate DataType="car:CarTextPageViewModel"><car:CarTextPageView /></DataTemplate>
         <DataTemplate DataType="car:CarDiagramPageViewModel"><car:CarDiagramPageView /></DataTemplate>
+        <DataTemplate DataType="locks:LocksTextPageViewModel"><locks:LocksTextPageView /></DataTemplate>
+        <DataTemplate DataType="locks:LocksDiagramPageViewModel"><locks:LocksDiagramPageView /></DataTemplate>
         <DataTemplate DataType="pages:CoverPageViewModel"><pageViews:CoverPageView /></DataTemplate>
         <DataTemplate DataType="pages:HowToUsePageViewModel"><pageViews:HowToUsePageView /></DataTemplate>
         <DataTemplate DataType="pages:TitlePageViewModel"><pageViews:TitlePageView /></DataTemplate>

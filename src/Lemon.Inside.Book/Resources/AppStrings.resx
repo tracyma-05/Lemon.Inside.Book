@@ -3654,4 +3654,556 @@
   <data name="Narr_Car_Ice_Part_Push" xml:space="preserve">
     <value>How hard each tyre pushes the car along, and the two together.</value>
   </data>
+  <data name="Chapter_Locks" xml:space="preserve">
+    <value>Locks and keys</value>
+  </data>
+  <data name="Locks_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Locks_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Locks_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Locks_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Locks_Steps" xml:space="preserve">
+    <value>{0} steps</value>
+  </data>
+  <data name="Locks_Pins_Title" xml:space="preserve">
+    <value>Pins at the shear line</value>
+  </data>
+  <data name="Locks_Pins_P1" xml:space="preserve">
+    <value>Most front-door locks are pin-tumbler locks. Inside a fixed shell sits a plug, a brass cylinder that the key turns. Above the keyway a row of holes runs up through the plug and into the shell, and in each hole stands a little stack: a key pin at the bottom, a driver pin on top of it, and a spring pressing both down. With no key in, every driver pin is pushed partway into the plug, and the plug cannot turn.</value>
+  </data>
+  <data name="Locks_Pins_P2" xml:space="preserve">
+    <value>The plug and the shell meet along a thin gap called the shear line. Push the right key in and each cut lifts its key pin by exactly the right amount, so the top of every key pin stops on the shear line and every driver pin sits wholly in the shell. Nothing crosses the gap, and the plug turns. A cut a little too shallow lifts its pin too far; a little too deep, not far enough. Either way a pin bridges the gap.</value>
+  </data>
+  <data name="Locks_Pins_Deeper" xml:space="preserve">
+    <value>In this lock each step of cut is half a millimetre, and a pin must stop within about a twentieth of a millimetre of the line. Real locks are made to about that accuracy too, which is why a copied key cut slightly wrong can feel gritty, or not turn at all. The key pins are all different lengths, each matched to its cut; the driver pins are all alike.</value>
+  </data>
+  <data name="Locks_Pins_Insert" xml:space="preserve">
+    <value>How far the key is in</value>
+  </data>
+  <data name="Locks_Pins_Wrong" xml:space="preserve">
+    <value>Use a key that is nearly right</value>
+  </data>
+  <data name="Locks_Pins_Readout" xml:space="preserve">
+    <value>{0} of {1} pins are at the shear line.</value>
+  </data>
+  <data name="Locks_Pins_Open" xml:space="preserve">
+    <value>Every pin is at the shear line: the plug turns.</value>
+  </data>
+  <data name="Locks_Pins_Gauge" xml:space="preserve">
+    <value>each key pin's top: on the line, too high or too low</value>
+  </data>
+  <data name="Locks_Pins_High" xml:space="preserve">
+    <value>too high</value>
+  </data>
+  <data name="Locks_Pins_Low" xml:space="preserve">
+    <value>too low</value>
+  </data>
+  <data name="Locks_Pins_Picture" xml:space="preserve">
+    <value>A pin-tumbler lock cut open from the side, a key sliding in, and the lock seen from the front</value>
+  </data>
+  <data name="Locks_Pins_Shear" xml:space="preserve">
+    <value>shear line</value>
+  </data>
+  <data name="Locks_Pins_Front" xml:space="preserve">
+    <value>from the front</value>
+  </data>
+  <data name="Locks_Pins_Turns" xml:space="preserve">
+    <value>it turns!</value>
+  </data>
+  <data name="Narr_Locks_Pins_01" xml:space="preserve">
+    <value>This is a lock cut in half. The outer brass block is the shell; the plug inside it is what the key turns.</value>
+  </data>
+  <data name="Narr_Locks_Pins_02" xml:space="preserve">
+    <value>Springs push the grey driver pins down into the plug. While they cross the gap, the plug is pinned in place.</value>
+  </data>
+  <data name="Narr_Locks_Pins_03" xml:space="preserve">
+    <value>As the key slides in, the orange key pins ride up and down over its cuts.</value>
+  </data>
+  <data name="Narr_Locks_Pins_04" xml:space="preserve">
+    <value>Your turn: push the key all the way in, and watch the plug turn.</value>
+  </data>
+  <data name="Narr_Locks_Pins_05" xml:space="preserve">
+    <value>What happens if one cut on the key is a little too shallow?</value>
+  </data>
+  <data name="Locks_Pins_Quiz1" xml:space="preserve">
+    <value>Its pin is lifted past the line, and the plug stays locked</value>
+  </data>
+  <data name="Locks_Pins_Quiz2" xml:space="preserve">
+    <value>The plug turns anyway, since the other pins are right</value>
+  </data>
+  <data name="Locks_Pins_Quiz3" xml:space="preserve">
+    <value>The spring above it breaks</value>
+  </data>
+  <data name="Locks_Pins_Part_Plug" xml:space="preserve">
+    <value>Plug</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Plug" xml:space="preserve">
+    <value>The cylinder the key turns. It can turn only when nothing crosses the gap around it.</value>
+  </data>
+  <data name="Locks_Pins_Part_Shell" xml:space="preserve">
+    <value>Shell</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Shell" xml:space="preserve">
+    <value>The fixed body of the lock, fitted into the door. The pin holes run up into it.</value>
+  </data>
+  <data name="Locks_Pins_Part_Keypins" xml:space="preserve">
+    <value>Key pins</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Keypins" xml:space="preserve">
+    <value>They rest on the key. Each is a different length, to match its cut.</value>
+  </data>
+  <data name="Locks_Pins_Part_Drivers" xml:space="preserve">
+    <value>Driver pins</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Drivers" xml:space="preserve">
+    <value>All the same length. Pushed into the plug, they stop it turning.</value>
+  </data>
+  <data name="Locks_Pins_Part_Springs" xml:space="preserve">
+    <value>Springs</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Springs" xml:space="preserve">
+    <value>They press each stack down, so the pins always follow the key.</value>
+  </data>
+  <data name="Locks_Keys_Title" xml:space="preserve">
+    <value>How many different keys?</value>
+  </data>
+  <data name="Locks_Keys_P1" xml:space="preserve">
+    <value>A key is really just a list of numbers: how deep each cut goes. If a cut can take ten depths and a key has five cuts, there are ten choices for the first, ten for the second, and so on: ten times ten times ten times ten times ten, a hundred thousand keys. One more cut multiplies that by ten again.</value>
+  </data>
+  <data name="Locks_Keys_P2" xml:space="preserve">
+    <value>Not all of them can be made. If one cut is very shallow and the next very deep, the slope between them is so steep that a pin cannot slide over it as the key goes in, and the key would jam or snap. So makers set a largest step allowed between neighbouring cuts. That throws out many combinations, and the real count is smaller than the simple product.</value>
+  </data>
+  <data name="Locks_Keys_Deeper" xml:space="preserve">
+    <value>Counting the allowed keys is a neat puzzle: go cut by cut, and for each depth keep a tally of how many keys could end there. The next cut's tally for a depth is the sum of the tallies of every depth close enough to it. A hundred thousand keys sounds like plenty, but a building with many doors also needs master keys, which use some of them up.</value>
+  </data>
+  <data name="Locks_Keys_Cuts" xml:space="preserve">
+    <value>Cuts on the key</value>
+  </data>
+  <data name="Locks_Keys_Depths" xml:space="preserve">
+    <value>Depths a cut can take</value>
+  </data>
+  <data name="Locks_Keys_Steepest" xml:space="preserve">
+    <value>Largest step between neighbours</value>
+  </data>
+  <data name="Locks_Keys_Readout" xml:space="preserve">
+    <value>{0} keys in all; {1} of them keep every pair of neighbouring cuts close enough.</value>
+  </data>
+  <data name="Locks_Keys_Picture" xml:space="preserve">
+    <value>A key's blade drawn large, with a dashed line for each depth, and the number of possible keys</value>
+  </data>
+  <data name="Locks_Keys_SteepLabel" xml:space="preserve">
+    <value>steepest: {0} steps (at most {1})</value>
+  </data>
+  <data name="Locks_Keys_All" xml:space="preserve">
+    <value>{0} keys</value>
+  </data>
+  <data name="Locks_Keys_Formula" xml:space="preserve">
+    <value>{0} depths, multiplied together {1} times</value>
+  </data>
+  <data name="Locks_Keys_Allowed" xml:space="preserve">
+    <value>{0} with no step over {1}</value>
+  </data>
+  <data name="Narr_Locks_Keys_01" xml:space="preserve">
+    <value>Here is a key drawn large. The numbers under it are its cut depths: that is all a key really is.</value>
+  </data>
+  <data name="Narr_Locks_Keys_02" xml:space="preserve">
+    <value>Each dashed line is a depth a cut may take. More depths give more keys, but each must be cut accurately.</value>
+  </data>
+  <data name="Narr_Locks_Keys_03" xml:space="preserve">
+    <value>Your turn: add another cut to the key, and see how the count jumps.</value>
+  </data>
+  <data name="Narr_Locks_Keys_04" xml:space="preserve">
+    <value>Now neighbouring cuts may differ by only three steps. The blue slope is the steepest, and the count falls.</value>
+  </data>
+  <data name="Narr_Locks_Keys_05" xml:space="preserve">
+    <value>A key with ten depths gets one more cut. How many keys are there now?</value>
+  </data>
+  <data name="Locks_Keys_Quiz1" xml:space="preserve">
+    <value>Ten times as many</value>
+  </data>
+  <data name="Locks_Keys_Quiz2" xml:space="preserve">
+    <value>Ten more</value>
+  </data>
+  <data name="Locks_Keys_Quiz3" xml:space="preserve">
+    <value>Twice as many</value>
+  </data>
+  <data name="Locks_Keys_Part_Key" xml:space="preserve">
+    <value>Key blade</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Key" xml:space="preserve">
+    <value>The cut edge of the key. Its shape is the only thing that tells one key from another.</value>
+  </data>
+  <data name="Locks_Keys_Part_Depths" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Depths" xml:space="preserve">
+    <value>The depths a cut may take, numbered from shallow to deep.</value>
+  </data>
+  <data name="Locks_Keys_Part_Steep" xml:space="preserve">
+    <value>Steepest step</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Steep" xml:space="preserve">
+    <value>Where neighbouring cuts differ most. Too steep, and the pins cannot slide over it.</value>
+  </data>
+  <data name="Locks_Keys_Part_Count" xml:space="preserve">
+    <value>Number of keys</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Count" xml:space="preserve">
+    <value>How many different keys the design allows, first counting every one, then only those without steep steps.</value>
+  </data>
+  <data name="Locks_Master_Title" xml:space="preserve">
+    <value>One lock, two keys</value>
+  </data>
+  <data name="Locks_Master_P1" xml:space="preserve">
+    <value>In an office or a hotel, each door has its own key, but the caretaker carries a single master key that opens them all. The trick is a thin extra pin, a master wafer, slipped between key pin and driver pin wherever the two keys differ. Now that stack can part in two places: at the top of the key pin, or at the top of the wafer.</value>
+  </data>
+  <data name="Locks_Master_P2" xml:space="preserve">
+    <value>The shallower of the two cuts lifts the key pin's top to the shear line. The deeper cut lets the stack sit lower by exactly the wafer's thickness, so the wafer's top lands on the line instead. Either key opens the door. But there is a catch: a key that takes some cuts from one and the rest from the other works too, though nobody ever cut it.</value>
+  </data>
+  <data name="Locks_Master_Deeper" xml:space="preserve">
+    <value>With wafers in three of the five stacks, each of those three has two working depths, so 2 × 2 × 2 = 8 different keys open this lock. In a big building, several levels of master keys mean more wafers and more keys that work by accident. Careful planning of the cuts, and keys that are hard to copy, keep the risk down.</value>
+  </data>
+  <data name="Locks_Master_Which" xml:space="preserve">
+    <value>Key in the lock</value>
+  </data>
+  <data name="Locks_Master_Key1" xml:space="preserve">
+    <value>Your own key</value>
+  </data>
+  <data name="Locks_Master_Key2" xml:space="preserve">
+    <value>The master key</value>
+  </data>
+  <data name="Locks_Master_Key3" xml:space="preserve">
+    <value>A neighbour's key</value>
+  </data>
+  <data name="Locks_Master_Key4" xml:space="preserve">
+    <value>A key mixed from both</value>
+  </data>
+  <data name="Locks_Master_Open" xml:space="preserve">
+    <value>It opens.</value>
+  </data>
+  <data name="Locks_Master_Blocked" xml:space="preserve">
+    <value>Pin {0} blocks it.</value>
+  </data>
+  <data name="Locks_Master_Count" xml:space="preserve">
+    <value>{0} different keys open this lock.</value>
+  </data>
+  <data name="Locks_Master_Picture" xml:space="preserve">
+    <value>A master-keyed lock cut open, gold wafers in some of its pin stacks, the chosen key in it</value>
+  </data>
+  <data name="Locks_Master_Opens" xml:space="preserve">
+    <value>opens</value>
+  </data>
+  <data name="Locks_Master_Stays" xml:space="preserve">
+    <value>stays locked</value>
+  </data>
+  <data name="Locks_Master_WaferLabel" xml:space="preserve">
+    <value>gold: master wafers</value>
+  </data>
+  <data name="Narr_Locks_Master_01" xml:space="preserve">
+    <value>Your own key is in. Each key pin's top sits on the line, just as in a plain lock.</value>
+  </data>
+  <data name="Narr_Locks_Master_02" xml:space="preserve">
+    <value>But three stacks have a thin gold wafer. It gives each of them a second place to split.</value>
+  </data>
+  <data name="Narr_Locks_Master_03" xml:space="preserve">
+    <value>Your turn: try the master key.</value>
+  </data>
+  <data name="Narr_Locks_Master_04" xml:space="preserve">
+    <value>This key was never handed out: its cuts come partly from your key and partly from the master. It opens the lock too.</value>
+  </data>
+  <data name="Narr_Locks_Master_05" xml:space="preserve">
+    <value>Why can a master-keyed lock open for a key nobody made for it?</value>
+  </data>
+  <data name="Locks_Master_Quiz1" xml:space="preserve">
+    <value>Its pins are made of softer metal</value>
+  </data>
+  <data name="Locks_Master_Quiz2" xml:space="preserve">
+    <value>Its springs are weaker</value>
+  </data>
+  <data name="Locks_Master_Quiz3" xml:space="preserve">
+    <value>Each wafer gives a stack a second place to split</value>
+  </data>
+  <data name="Locks_Master_Part_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Key" xml:space="preserve">
+    <value>The key in the lock. Choose another with the slider on the left page.</value>
+  </data>
+  <data name="Locks_Master_Part_Keypins" xml:space="preserve">
+    <value>Key pins</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Keypins" xml:space="preserve">
+    <value>Each is made to suit the shallower of the two keys' cuts.</value>
+  </data>
+  <data name="Locks_Master_Part_Wafers" xml:space="preserve">
+    <value>Master wafers</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Wafers" xml:space="preserve">
+    <value>Thin pins, each as thick as the difference between the two keys' cuts.</value>
+  </data>
+  <data name="Locks_Master_Part_Drivers" xml:space="preserve">
+    <value>Driver pins</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Drivers" xml:space="preserve">
+    <value>Pushed down by the springs. Wherever the stack splits, they must end up wholly above the line.</value>
+  </data>
+  <data name="Locks_Binding_Title" xml:space="preserve">
+    <value>One pin at a time</value>
+  </data>
+  <data name="Locks_Binding_P1" xml:space="preserve">
+    <value>If every hole in a lock were drilled in exactly the same line, turning the plug gently would press on all the pins at once, and none could move. But no machine is perfect. The holes wander by a few hundredths of a millimetre, so when the plug is turned a hair, the hole furthest out of line pinches its pin first, and only that one.</value>
+  </data>
+  <data name="Locks_Binding_P2" xml:space="preserve">
+    <value>Push that pin up until the join between its two pins reaches the shear line, and its driver is caught on the edge of the plug. The plug turns a fraction more, and now the next hole out of line pinches its pin. Pin by pin, a lock can be opened without its key. Good locks fight back with very precise holes, and with oddly shaped driver pins that catch in the wrong place.</value>
+  </data>
+  <data name="Locks_Binding_Deeper" xml:space="preserve">
+    <value>This is why a lock's security depends so much on how precisely it is made, not only on how many keys it allows. Designers add spool- or saw-toothed driver pins, extra side bars, and pins that must also be turned to the right angle. Each adds a test that the key passes easily and a tool does not.</value>
+  </data>
+  <data name="Locks_Binding_Set" xml:space="preserve">
+    <value>Pins set so far</value>
+  </data>
+  <data name="Locks_Binding_Perfect" xml:space="preserve">
+    <value>Drill every hole perfectly in line</value>
+  </data>
+  <data name="Locks_Binding_Readout" xml:space="preserve">
+    <value>Pin {0} is holding the plug: it is the only one that can be set now.</value>
+  </data>
+  <data name="Locks_Binding_All" xml:space="preserve">
+    <value>Every pin is pinched at once, so none can be lifted on its own.</value>
+  </data>
+  <data name="Locks_Binding_Open" xml:space="preserve">
+    <value>Every pin is set: the plug turns.</value>
+  </data>
+  <data name="Locks_Binding_Picture" xml:space="preserve">
+    <value>A lock cut open with no key, a gentle turning force on its plug, and the plug's holes seen from above</value>
+  </data>
+  <data name="Locks_Binding_HolesLabel" xml:space="preserve">
+    <value>holes from above, errors drawn {0}× bigger; numbers: the order they hold</value>
+  </data>
+  <data name="Narr_Locks_Binding_01" xml:space="preserve">
+    <value>Under the lock are its holes seen from above, their tiny errors made a hundred times bigger. No two are quite in line.</value>
+  </data>
+  <data name="Narr_Locks_Binding_02" xml:space="preserve">
+    <value>A gentle turning force is on the plug. It moves until one hole pinches its pin.</value>
+  </data>
+  <data name="Narr_Locks_Binding_03" xml:space="preserve">
+    <value>The pin outlined in gold is the one holding the plug. The others are loose, and move freely.</value>
+  </data>
+  <data name="Narr_Locks_Binding_04" xml:space="preserve">
+    <value>Your turn: set three pins, one after another, and watch which one holds next.</value>
+  </data>
+  <data name="Narr_Locks_Binding_05" xml:space="preserve">
+    <value>Why can the pins of a real lock be set one at a time?</value>
+  </data>
+  <data name="Locks_Binding_Quiz1" xml:space="preserve">
+    <value>The springs have different strengths</value>
+  </data>
+  <data name="Locks_Binding_Quiz2" xml:space="preserve">
+    <value>Its holes are not drilled exactly in line</value>
+  </data>
+  <data name="Locks_Binding_Quiz3" xml:space="preserve">
+    <value>The key pins are different lengths</value>
+  </data>
+  <data name="Locks_Binding_Part_Turn" xml:space="preserve">
+    <value>Turning tool</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Turn" xml:space="preserve">
+    <value>Gives the plug a gentle turn, so whichever hole is most out of line pinches its pin.</value>
+  </data>
+  <data name="Locks_Binding_Part_Binding" xml:space="preserve">
+    <value>Holding pin</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Binding" xml:space="preserve">
+    <value>The one stack pinched between plug and shell. Only this one can be set right now.</value>
+  </data>
+  <data name="Locks_Binding_Part_Holes" xml:space="preserve">
+    <value>Holes from above</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Holes" xml:space="preserve">
+    <value>Each hole a little off the line, drawn a hundred times bigger. The furthest out holds first.</value>
+  </data>
+  <data name="Locks_Binding_Part_Set" xml:space="preserve">
+    <value>Set pins</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Set" xml:space="preserve">
+    <value>A set pin's driver rests on the plug's edge, just above the shear line.</value>
+  </data>
+  <data name="Locks_Lever_Title" xml:space="preserve">
+    <value>The lever lock</value>
+  </data>
+  <data name="Locks_Lever_P1" xml:space="preserve">
+    <value>Long before pin tumblers, and still on many back doors and safes, there is the lever lock. Its bolt carries a small post, the stump. Over the bolt lie flat levers, each with a window the stump sits in and, running from the window, a narrow channel called the gate. While the stump is in the windows, the levers hold the bolt still.</value>
+  </data>
+  <data name="Locks_Lever_P2" xml:space="preserve">
+    <value>The key's bit has steps of different heights, one for each lever. As the key turns, each step lifts its lever, and for a moment every gate is level with the stump. Just then the bit catches the bolt and slides it along, the stump running through the gates. Lift one lever too little or too much, and the stump meets solid metal.</value>
+  </data>
+  <data name="Locks_Lever_Deeper" xml:space="preserve">
+    <value>More levers allow more keys and make the lock harder to cheat: good door locks have five or more. Some levers have false notches cut beside the gate, so a probing tool catches in the wrong place. The idea is the same as with pins: the bolt moves only when several separate parts all agree.</value>
+  </data>
+  <data name="Locks_Lever_Angle" xml:space="preserve">
+    <value>Turn the key</value>
+  </data>
+  <data name="Locks_Lever_Wrong" xml:space="preserve">
+    <value>Use a key with one step too high</value>
+  </data>
+  <data name="Locks_Lever_Readout" xml:space="preserve">
+    <value>The bolt has moved {0}% of the way back.</value>
+  </data>
+  <data name="Locks_Lever_Open" xml:space="preserve">
+    <value>The bolt is out of the door frame: the door opens.</value>
+  </data>
+  <data name="Locks_Lever_Stuck" xml:space="preserve">
+    <value>A gate is not level with the stump: the bolt will not move.</value>
+  </data>
+  <data name="Locks_Lever_Picture" xml:space="preserve">
+    <value>A lever lock with its three levers drawn apart, the key's bit turning beside them, and the bolt in the door frame</value>
+  </data>
+  <data name="Locks_Lever_Frame" xml:space="preserve">
+    <value>door frame</value>
+  </data>
+  <data name="Locks_Lever_Exploded" xml:space="preserve">
+    <value>the three levers drawn one above another; really they lie in a stack</value>
+  </data>
+  <data name="Narr_Locks_Lever_01" xml:space="preserve">
+    <value>Along the bottom is the bolt, its end in the door frame. While it stays there, the door is locked.</value>
+  </data>
+  <data name="Narr_Locks_Lever_02" xml:space="preserve">
+    <value>Above it are three levers, drawn apart so each can be seen. The gold stump sits in each one's window.</value>
+  </data>
+  <data name="Narr_Locks_Lever_03" xml:space="preserve">
+    <value>Turning the key lifts the levers, each by its own step. Not far enough yet: the gates are not level with the stump.</value>
+  </data>
+  <data name="Narr_Locks_Lever_04" xml:space="preserve">
+    <value>Your turn: keep turning the key until the bolt is right out of the frame.</value>
+  </data>
+  <data name="Narr_Locks_Lever_05" xml:space="preserve">
+    <value>What happens if one step on the key lifts its lever too high?</value>
+  </data>
+  <data name="Locks_Lever_Quiz1" xml:space="preserve">
+    <value>Nothing: higher is fine</value>
+  </data>
+  <data name="Locks_Lever_Quiz2" xml:space="preserve">
+    <value>The lever breaks</value>
+  </data>
+  <data name="Locks_Lever_Quiz3" xml:space="preserve">
+    <value>Its gate misses the stump, and the bolt stays put</value>
+  </data>
+  <data name="Locks_Lever_Part_Bit" xml:space="preserve">
+    <value>Key's bit</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Bit" xml:space="preserve">
+    <value>The end of the key, with a step for each lever. Turning, it lifts the levers and pushes the bolt.</value>
+  </data>
+  <data name="Locks_Lever_Part_Levers" xml:space="preserve">
+    <value>Levers</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Levers" xml:space="preserve">
+    <value>Flat plates that pivot at one end. Each has its gate cut at its own height.</value>
+  </data>
+  <data name="Locks_Lever_Part_Stump" xml:space="preserve">
+    <value>Stump</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Stump" xml:space="preserve">
+    <value>A post fixed to the bolt. It can only slide along the levers' gates.</value>
+  </data>
+  <data name="Locks_Lever_Part_Bolt" xml:space="preserve">
+    <value>Bolt</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Bolt" xml:space="preserve">
+    <value>The bar that goes into the door frame. Drawn back, the door opens.</value>
+  </data>
+  <data name="Locks_Dials_Title" xml:space="preserve">
+    <value>Numbers instead of a key</value>
+  </data>
+  <data name="Locks_Dials_P1" xml:space="preserve">
+    <value>A combination padlock has no keyhole. Each numbered wheel turns on a sleeve with a notch in it, and a bar lies along the sleeves, holding the shackle down. Only when every wheel shows its number are all the notches at the top, in a row; then the bar drops into them, and the shackle springs free.</value>
+  </data>
+  <data name="Locks_Dials_P2" xml:space="preserve">
+    <value>Three wheels of ten numbers give a thousand settings, so on average a stranger would need five hundred tries. But cheap wheels are made loosely, with notches wider than they should be. Then the numbers either side of the right one work too, and each try covers several settings at once. A loose lock can be far weaker than its numbers suggest.</value>
+  </data>
+  <data name="Locks_Dials_Deeper" xml:space="preserve">
+    <value>With notches that also take one number either side, each wheel has only about four settings worth trying, so 4 × 4 × 4 = 64 tries are sure to open it. Better locks keep their notches tight and add false ones, so a wheel that seems to give a little on a wrong number gives nothing away. A safe's single dial drives its wheels one after another with pins, but the notches and the bar work the same way.</value>
+  </data>
+  <data name="Locks_Dials_First" xml:space="preserve">
+    <value>First wheel</value>
+  </data>
+  <data name="Locks_Dials_Second" xml:space="preserve">
+    <value>Second wheel</value>
+  </data>
+  <data name="Locks_Dials_Third" xml:space="preserve">
+    <value>Third wheel</value>
+  </data>
+  <data name="Locks_Dials_Sloppy" xml:space="preserve">
+    <value>Make the notches loose</value>
+  </data>
+  <data name="Locks_Dials_Open" xml:space="preserve">
+    <value>Every notch is at the top: the bar drops and the shackle opens.</value>
+  </data>
+  <data name="Locks_Dials_Blocked" xml:space="preserve">
+    <value>Wheel {0} still holds the bar up.</value>
+  </data>
+  <data name="Locks_Dials_Tries" xml:space="preserve">
+    <value>To be sure, a stranger must try up to {0} settings.</value>
+  </data>
+  <data name="Locks_Dials_Picture" xml:space="preserve">
+    <value>A combination padlock from the front, and inside it each wheel's notched sleeve under the bar</value>
+  </data>
+  <data name="Locks_Dials_Inside" xml:space="preserve">
+    <value>inside: each wheel's sleeve, seen end on</value>
+  </data>
+  <data name="Narr_Locks_Dials_01" xml:space="preserve">
+    <value>Three numbered wheels, all set to nought. The shackle is held down.</value>
+  </data>
+  <data name="Narr_Locks_Dials_02" xml:space="preserve">
+    <value>Inside, each wheel carries a sleeve with a notch, turned round as the wheel turns.</value>
+  </data>
+  <data name="Narr_Locks_Dials_03" xml:space="preserve">
+    <value>Two wheels are now right: their notches are at the top. The bar still rests on the third.</value>
+  </data>
+  <data name="Narr_Locks_Dials_04" xml:space="preserve">
+    <value>Your turn: find the third number and open the lock.</value>
+  </data>
+  <data name="Narr_Locks_Dials_05" xml:space="preserve">
+    <value>Why are loose notches a weakness?</value>
+  </data>
+  <data name="Locks_Dials_Quiz1" xml:space="preserve">
+    <value>They wear out the wheels</value>
+  </data>
+  <data name="Locks_Dials_Quiz2" xml:space="preserve">
+    <value>Nearby numbers work too, so fewer tries are needed</value>
+  </data>
+  <data name="Locks_Dials_Quiz3" xml:space="preserve">
+    <value>They make the shackle rattle</value>
+  </data>
+  <data name="Locks_Dials_Part_Wheels" xml:space="preserve">
+    <value>Number wheels</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Wheels" xml:space="preserve">
+    <value>Turned by thumb. Each shows a number in its window.</value>
+  </data>
+  <data name="Locks_Dials_Part_Notches" xml:space="preserve">
+    <value>Sleeves and notches</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Notches" xml:space="preserve">
+    <value>Each sleeve turns with its wheel. Its notch is at the top only on the right number.</value>
+  </data>
+  <data name="Locks_Dials_Part_Bar" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Bar" xml:space="preserve">
+    <value>It rests on the sleeves, and drops into the notches only when they all line up.</value>
+  </data>
+  <data name="Locks_Dials_Part_Shackle" xml:space="preserve">
+    <value>Shackle</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Shackle" xml:space="preserve">
+    <value>The U-shaped loop. Once the bar drops, a spring pushes it up.</value>
+  </data>
 </root>

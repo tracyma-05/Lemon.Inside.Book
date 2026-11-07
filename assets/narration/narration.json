@@ -3802,6 +3802,781 @@
      ]
     ]
    },
+   "Narr_Locks_Binding_01": {
+    "duration": 8.376,
+    "hash": "b37fbb018be23304",
+    "sentences": [
+     [
+      0.05,
+      5.986,
+      "Under the lock are its holes seen from above, their tiny errors made a hundred times bigger."
+     ],
+     [
+      5.986,
+      8.306,
+      "No two are quite in line."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_02": {
+    "duration": 6.288,
+    "hash": "5cf7ef67cd1c30af",
+    "sentences": [
+     [
+      0.05,
+      3.194,
+      "A gentle turning force is on the plug."
+     ],
+     [
+      3.194,
+      6.236,
+      "It moves until one hole pinches its pin."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_03": {
+    "duration": 6.264,
+    "hash": "44a9771cd4139c3f",
+    "sentences": [
+     [
+      0.05,
+      3.611,
+      "The pin outlined in gold is the one holding the plug."
+     ],
+     [
+      3.611,
+      6.208,
+      "The others are loose, and move freely."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_04": {
+    "duration": 6.36,
+    "hash": "63e147e99062217f",
+    "sentences": [
+     [
+      0.05,
+      6.306,
+      "Your turn: set three pins, one after another, and watch which one holds next."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_05": {
+    "duration": 3.96,
+    "hash": "1b4c768be92a27fe",
+    "sentences": [
+     [
+      0.05,
+      3.903,
+      "Why can the pins of a real lock be set one at a time?"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Binding": {
+    "duration": 5.952,
+    "hash": "d6a45a5725cc7fa6",
+    "sentences": [
+     [
+      0.05,
+      3.319,
+      "The one stack pinched between plug and shell."
+     ],
+     [
+      3.319,
+      5.903,
+      "Only this one can be set right now."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Holes": {
+    "duration": 5.784,
+    "hash": "a0468fa6c59cdb4c",
+    "sentences": [
+     [
+      0.05,
+      3.569,
+      "Each hole a little off the line, drawn a hundred times bigger."
+     ],
+     [
+      3.569,
+      5.722,
+      "The furthest out holds first."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Set": {
+    "duration": 5.04,
+    "hash": "bd1c37c0d3163218",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "A set pin's driver rests on the plug's edge, just above the shear line."
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Turn": {
+    "duration": 6.216,
+    "hash": "e951f4a9813c82fb",
+    "sentences": [
+     [
+      0.05,
+      6.153,
+      "Gives the plug a gentle turn, so whichever hole is most out of line pinches its pin."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_01": {
+    "duration": 5.376,
+    "hash": "900ed1f556596adf",
+    "sentences": [
+     [
+      0.05,
+      3.153,
+      "Three numbered wheels, all set to nought."
+     ],
+     [
+      3.153,
+      5.319,
+      "The shackle is held down."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_02": {
+    "duration": 6.384,
+    "hash": "a667c58934929118",
+    "sentences": [
+     [
+      0.05,
+      6.333,
+      "Inside, each wheel carries a sleeve with a notch, turned round as the wheel turns."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_03": {
+    "duration": 6.576,
+    "hash": "f73810579afc5a5d",
+    "sentences": [
+     [
+      0.05,
+      4.139,
+      "Two wheels are now right: their notches are at the top."
+     ],
+     [
+      4.139,
+      6.514,
+      "The bar still rests on the third."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_04": {
+    "duration": 4.104,
+    "hash": "c7f7d57adef9cef7",
+    "sentences": [
+     [
+      0.05,
+      4.056,
+      "Your turn: find the third number and open the lock."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_05": {
+    "duration": 2.784,
+    "hash": "144a1510aa69bbdb",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "Why are loose notches a weakness?"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Bar": {
+    "duration": 5.616,
+    "hash": "4c7f6fb9ba8389f4",
+    "sentences": [
+     [
+      0.05,
+      5.556,
+      "It rests on the sleeves, and drops into the notches only when they all line up."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Notches": {
+    "duration": 5.904,
+    "hash": "1a7c97c5f6cdb4f0",
+    "sentences": [
+     [
+      0.05,
+      2.597,
+      "Each sleeve turns with its wheel."
+     ],
+     [
+      2.597,
+      5.833,
+      "Its notch is at the top only on the right number."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Shackle": {
+    "duration": 4.896,
+    "hash": "63f09f60cfb0a9fb",
+    "sentences": [
+     [
+      0.05,
+      1.625,
+      "The U-shaped loop."
+     ],
+     [
+      1.625,
+      4.847,
+      "Once the bar drops, a spring pushes it up."
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Wheels": {
+    "duration": 4.152,
+    "hash": "45a316a286e58c41",
+    "sentences": [
+     [
+      0.05,
+      1.611,
+      "Turned by thumb."
+     ],
+     [
+      1.611,
+      4.097,
+      "Each shows a number in its window."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_01": {
+    "duration": 7.08,
+    "hash": "bec262fcc2cdfef0",
+    "sentences": [
+     [
+      0.05,
+      2.444,
+      "Here is a key drawn large."
+     ],
+     [
+      2.444,
+      7.014,
+      "The numbers under it are its cut depths: that is all a key really is."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_02": {
+    "duration": 8.376,
+    "hash": "4971ea470f6299a4",
+    "sentences": [
+     [
+      0.05,
+      3.264,
+      "Each dashed line is a depth a cut may take."
+     ],
+     [
+      3.264,
+      8.319,
+      "More depths give more keys, but each must be cut accurately."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_03": {
+    "duration": 5.112,
+    "hash": "9fd417769a85d85d",
+    "sentences": [
+     [
+      0.05,
+      5.042,
+      "Your turn: add another cut to the key, and see how the count jumps."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_04": {
+    "duration": 7.92,
+    "hash": "2513938d3df5a31d",
+    "sentences": [
+     [
+      0.05,
+      4.25,
+      "Now neighbouring cuts may differ by only three steps."
+     ],
+     [
+      4.25,
+      7.861,
+      "The blue slope is the steepest, and the count falls."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_05": {
+    "duration": 5.328,
+    "hash": "86c644544e0e88ef",
+    "sentences": [
+     [
+      0.05,
+      3.319,
+      "A key with ten depths gets one more cut."
+     ],
+     [
+      3.319,
+      5.264,
+      "How many keys are there now?"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Count": {
+    "duration": 7.128,
+    "hash": "203c5281cb40b071",
+    "sentences": [
+     [
+      0.05,
+      7.056,
+      "How many different keys the design allows, first counting every one, then only those without steep steps."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Depths": {
+    "duration": 4.272,
+    "hash": "ebc3b1bbc55e8cf3",
+    "sentences": [
+     [
+      0.05,
+      4.222,
+      "The depths a cut may take, numbered from shallow to deep."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Key": {
+    "duration": 6.336,
+    "hash": "76c6255550d77c79",
+    "sentences": [
+     [
+      0.05,
+      2.083,
+      "The cut edge of the key."
+     ],
+     [
+      2.083,
+      6.278,
+      "Its shape is the only thing that tells one key from another."
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Steep": {
+    "duration": 6.264,
+    "hash": "f6ccd44ef5b4bc08",
+    "sentences": [
+     [
+      0.05,
+      2.542,
+      "Where neighbouring cuts differ most."
+     ],
+     [
+      2.542,
+      6.208,
+      "Too steep, and the pins cannot slide over it."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_01": {
+    "duration": 7.056,
+    "hash": "e25d3e3b7baaa5f8",
+    "sentences": [
+     [
+      0.05,
+      3.847,
+      "Along the bottom is the bolt, its end in the door frame."
+     ],
+     [
+      3.847,
+      6.986,
+      "While it stays there, the door is locked."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_02": {
+    "duration": 7.704,
+    "hash": "e706968f0efe0077",
+    "sentences": [
+     [
+      0.05,
+      4.514,
+      "Above it are three levers, drawn apart so each can be seen."
+     ],
+     [
+      4.514,
+      7.653,
+      "The gold stump sits in each one's window."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_03": {
+    "duration": 9.288,
+    "hash": "54d39f0d13066c34",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "Turning the key lifts the levers, each by its own step."
+     ],
+     [
+      4.431,
+      9.222,
+      "Not far enough yet: the gates are not level with the stump."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_04": {
+    "duration": 5.064,
+    "hash": "8a787e6f66844a30",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "Your turn: keep turning the key until the bolt is right out of the frame."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_05": {
+    "duration": 4.008,
+    "hash": "87effa4a78b43600",
+    "sentences": [
+     [
+      0.05,
+      3.958,
+      "What happens if one step on the key lifts its lever too high?"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Bit": {
+    "duration": 7.344,
+    "hash": "0870e82a968e583c",
+    "sentences": [
+     [
+      0.05,
+      3.528,
+      "The end of the key, with a step for each lever."
+     ],
+     [
+      3.528,
+      7.292,
+      "Turning, it lifts the levers and pushes the bolt."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Bolt": {
+    "duration": 5.28,
+    "hash": "a6c149e5d2363cd4",
+    "sentences": [
+     [
+      0.05,
+      2.528,
+      "The bar that goes into the door frame."
+     ],
+     [
+      2.528,
+      5.222,
+      "Drawn back, the door opens."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Levers": {
+    "duration": 6.168,
+    "hash": "dd2dced030b82ff4",
+    "sentences": [
+     [
+      0.05,
+      3.153,
+      "Flat plates that pivot at one end."
+     ],
+     [
+      3.153,
+      6.111,
+      "Each has its gate cut at its own height."
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Stump": {
+    "duration": 5.304,
+    "hash": "0dd8c09d87b6fb27",
+    "sentences": [
+     [
+      0.05,
+      2.028,
+      "A post fixed to the bolt."
+     ],
+     [
+      2.028,
+      5.25,
+      "It can only slide along the levers' gates."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_01": {
+    "duration": 6.216,
+    "hash": "9d0c5fc6bb60ac3c",
+    "sentences": [
+     [
+      0.05,
+      1.931,
+      "Your own key is in."
+     ],
+     [
+      1.931,
+      6.153,
+      "Each key pin's top sits on the line, just as in a plain lock."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_02": {
+    "duration": 6.048,
+    "hash": "93c109e9d37dc652",
+    "sentences": [
+     [
+      0.05,
+      3.181,
+      "But three stacks have a thin gold wafer."
+     ],
+     [
+      3.181,
+      5.986,
+      "It gives each of them a second place to split."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_03": {
+    "duration": 2.664,
+    "hash": "c38339e6df618af3",
+    "sentences": [
+     [
+      0.05,
+      2.624,
+      "Your turn: try the master key."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_04": {
+    "duration": 8.64,
+    "hash": "e4c8f691a333ff00",
+    "sentences": [
+     [
+      0.05,
+      6.694,
+      "This key was never handed out: its cuts come partly from your key and partly from the master."
+     ],
+     [
+      6.694,
+      8.583,
+      "It opens the lock too."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_05": {
+    "duration": 4.368,
+    "hash": "ee5f99339b01b219",
+    "sentences": [
+     [
+      0.05,
+      4.306,
+      "Why can a master-keyed lock open for a key nobody made for it?"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Drivers": {
+    "duration": 6.696,
+    "hash": "760e7bc89bd6722a",
+    "sentences": [
+     [
+      0.05,
+      2.069,
+      "Pushed down by the springs."
+     ],
+     [
+      2.069,
+      6.639,
+      "Wherever the stack splits, they must end up wholly above the line."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Key": {
+    "duration": 5.088,
+    "hash": "778d2cccdcf4ff4b",
+    "sentences": [
+     [
+      0.05,
+      1.75,
+      "The key in the lock."
+     ],
+     [
+      1.75,
+      5.014,
+      "Choose another with the slider on the left page."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Keypins": {
+    "duration": 4.008,
+    "hash": "9a271923e3257d21",
+    "sentences": [
+     [
+      0.05,
+      3.958,
+      "Each is made to suit the shallower of the two keys' cuts."
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Wafers": {
+    "duration": 5.232,
+    "hash": "84ca4772887bf9a9",
+    "sentences": [
+     [
+      0.05,
+      5.181,
+      "Thin pins, each as thick as the difference between the two keys' cuts."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_01": {
+    "duration": 7.584,
+    "hash": "576f2697138938e5",
+    "sentences": [
+     [
+      0.05,
+      2.042,
+      "This is a lock cut in half."
+     ],
+     [
+      2.042,
+      7.528,
+      "The outer brass block is the shell; the plug inside it is what the key turns."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_02": {
+    "duration": 7.32,
+    "hash": "31b99dac3dee0888",
+    "sentences": [
+     [
+      0.05,
+      3.625,
+      "Springs push the grey driver pins down into the plug."
+     ],
+     [
+      3.625,
+      7.25,
+      "While they cross the gap, the plug is pinned in place."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_03": {
+    "duration": 5.76,
+    "hash": "31ff9e42d7c74c49",
+    "sentences": [
+     [
+      0.05,
+      5.694,
+      "As the key slides in, the orange key pins ride up and down over its cuts."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_04": {
+    "duration": 4.608,
+    "hash": "1402816921c77cd1",
+    "sentences": [
+     [
+      0.05,
+      4.556,
+      "Your turn: push the key all the way in, and watch the plug turn."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_05": {
+    "duration": 4.176,
+    "hash": "910bc42648cbb39f",
+    "sentences": [
+     [
+      0.05,
+      4.111,
+      "What happens if one cut on the key is a little too shallow?"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Drivers": {
+    "duration": 4.752,
+    "hash": "c42df8cb8d4c6fe4",
+    "sentences": [
+     [
+      0.05,
+      1.708,
+      "All the same length."
+     ],
+     [
+      1.708,
+      4.694,
+      "Pushed into the plug, they stop it turning."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Keypins": {
+    "duration": 5.088,
+    "hash": "75766ce0f615e230",
+    "sentences": [
+     [
+      0.05,
+      1.681,
+      "They rest on the key."
+     ],
+     [
+      1.681,
+      5.028,
+      "Each is a different length, to match its cut."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Plug": {
+    "duration": 6.024,
+    "hash": "f4845b28c9978011",
+    "sentences": [
+     [
+      0.05,
+      2.208,
+      "The cylinder the key turns."
+     ],
+     [
+      2.208,
+      5.958,
+      "It can turn only when nothing crosses the gap around it."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Shell": {
+    "duration": 5.76,
+    "hash": "978cf1967ac80019",
+    "sentences": [
+     [
+      0.05,
+      3.403,
+      "The fixed body of the lock, fitted into the door."
+     ],
+     [
+      3.403,
+      5.708,
+      "The pin holes run up into it."
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Springs": {
+    "duration": 4.488,
+    "hash": "a2f0a0671196de0b",
+    "sentences": [
+     [
+      0.05,
+      4.417,
+      "They press each stack down, so the pins always follow the key."
+     ]
+    ]
+   },
    "Narr_Watch_Balance_01": {
     "duration": 6.456,
     "hash": "da5f7a0c7f651281",
@@ -8192,6 +8967,776 @@
       0.1,
       7.036,
       "不管板怎么转，手电筒照下来的光束宽度不变，光的总量也不变。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_01": {
+    "duration": 9.264,
+    "hash": "935d8c8206385afc",
+    "sentences": [
+     [
+      0.1,
+      6.578,
+      "锁下面画的是从上往下看的孔，微小的偏差放大了一百倍。"
+     ],
+     [
+      6.528,
+      9.194,
+      "没有两个是完全对齐的。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_02": {
+    "duration": 7.68,
+    "hash": "808c4a33cc87ddcd",
+    "sentences": [
+     [
+      0.1,
+      3.036,
+      "锁芯上加了轻轻的转力。"
+     ],
+     [
+      2.986,
+      7.625,
+      "它会一直转，直到某个孔夹住了它的弹子。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_03": {
+    "duration": 7.92,
+    "hash": "6acb4e4e6478040a",
+    "sentences": [
+     [
+      0.1,
+      4.369,
+      "金色描边的那颗弹子就是卡住锁芯的。"
+     ],
+     [
+      4.319,
+      7.861,
+      "其余的都是松的，可以随意推动。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_04": {
+    "duration": 7.248,
+    "hash": "98c5e8f2f81715ca",
+    "sentences": [
+     [
+      0.1,
+      7.231,
+      "轮到你了：一颗接一颗抬好三颗弹子，看看下一颗被夹住的是哪颗。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_05": {
+    "duration": 4.656,
+    "hash": "eab7891129f03701",
+    "sentences": [
+     [
+      0.1,
+      4.647,
+      "为什么真实的锁里，弹子可以一颗一颗地抬好？"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Binding": {
+    "duration": 6.072,
+    "hash": "b1cd1ffd19156f12",
+    "sentences": [
+     [
+      0.1,
+      3.356,
+      "被锁芯和锁壳夹住的那一摞。"
+     ],
+     [
+      3.306,
+      6.0,
+      "此刻只有它能被抬好。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Holes": {
+    "duration": 7.8,
+    "hash": "55adb72d1c444b10",
+    "sentences": [
+     [
+      0.1,
+      4.814,
+      "每个孔都偏离直线一点，这里放大了一百倍。"
+     ],
+     [
+      4.764,
+      7.736,
+      "偏得最远的最先夹住。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Set": {
+    "duration": 6.456,
+    "hash": "9a82c2184799ad88",
+    "sentences": [
+     [
+      0.1,
+      6.453,
+      "抬好的弹子，上弹子停在锁芯边缘，刚好在剪切线上方。"
+     ]
+    ]
+   },
+   "Narr_Locks_Binding_Part_Turn": {
+    "duration": 5.688,
+    "hash": "12914418e06544b4",
+    "sentences": [
+     [
+      0.1,
+      5.689,
+      "给锁芯一点轻轻的转力，让偏得最远的孔夹住它的弹子。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_01": {
+    "duration": 5.04,
+    "hash": "60a5fa43369d93a3",
+    "sentences": [
+     [
+      0.1,
+      3.161,
+      "三个数字轮，都拨在零上。"
+     ],
+     [
+      3.111,
+      4.972,
+      "锁梁被压着。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_02": {
+    "duration": 5.856,
+    "hash": "fe1e500dc6b39ea7",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "在里面，每个轮带着一个有缺口的套筒，跟着轮一起转。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_03": {
+    "duration": 7.44,
+    "hash": "e94768c40b321cfa",
+    "sentences": [
+     [
+      0.1,
+      4.717,
+      "现在有两个轮对了：它们的缺口转到了顶上。"
+     ],
+     [
+      4.667,
+      7.375,
+      "横杆还搁在第三个上。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_04": {
+    "duration": 4.488,
+    "hash": "a46582c079df6c2e",
+    "sentences": [
+     [
+      0.1,
+      4.481,
+      "轮到你了：找出第三个数字，把锁打开。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_05": {
+    "duration": 3.384,
+    "hash": "9aed22459628c14a",
+    "sentences": [
+     [
+      0.1,
+      3.369,
+      "为什么缺口做松了是个弱点？"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Bar": {
+    "duration": 5.904,
+    "hash": "3184018bbcbfeb96",
+    "sentences": [
+     [
+      0.1,
+      2.008,
+      "搁在套筒上。"
+     ],
+     [
+      1.958,
+      5.833,
+      "只有缺口全部对齐时，它才落进去。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Notches": {
+    "duration": 6.936,
+    "hash": "0c466a7164168227",
+    "sentences": [
+     [
+      0.1,
+      2.842,
+      "每个套筒跟着它的轮转。"
+     ],
+     [
+      2.792,
+      6.875,
+      "只有在正确的数字上，缺口才在顶上。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Shackle": {
+    "duration": 5.64,
+    "hash": "1623d9402b6f91ec",
+    "sentences": [
+     [
+      0.1,
+      1.967,
+      "U 形的锁环。"
+     ],
+     [
+      1.917,
+      5.583,
+      "横杆一落下，弹簧就把它顶起来。"
+     ]
+    ]
+   },
+   "Narr_Locks_Dials_Part_Wheels": {
+    "duration": 5.352,
+    "hash": "e6d405641f9a7558",
+    "sentences": [
+     [
+      0.1,
+      1.967,
+      "用拇指拨动。"
+     ],
+     [
+      1.917,
+      5.278,
+      "每个在窗口里显示一个数字。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_01": {
+    "duration": 8.736,
+    "hash": "ce36ed5ac9bda394",
+    "sentences": [
+     [
+      0.1,
+      2.578,
+      "这是一把放大的钥匙。"
+     ],
+     [
+      2.528,
+      8.681,
+      "下面的数字是每个齿的深度，钥匙说到底就是这串数字。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_02": {
+    "duration": 8.976,
+    "hash": "422cf1388056a9e7",
+    "sentences": [
+     [
+      0.1,
+      3.939,
+      "每条虚线是一个齿可以切到的深度。"
+     ],
+     [
+      3.889,
+      8.917,
+      "深度越多，钥匙越多，但每一级都要切得很准。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_03": {
+    "duration": 5.88,
+    "hash": "d2cd7e5c3969637c",
+    "sentences": [
+     [
+      0.1,
+      5.869,
+      "轮到你了：给钥匙再加一个齿，看看数目一下子涨了多少。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_04": {
+    "duration": 9.072,
+    "hash": "45e7fd4f8db10c62",
+    "sentences": [
+     [
+      0.1,
+      3.897,
+      "现在相邻的齿最多只能差三级。"
+     ],
+     [
+      3.847,
+      9.0,
+      "蓝色的那段坡是最陡的，钥匙数也随之变少。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_05": {
+    "duration": 6.648,
+    "hash": "20875219aaa76fd5",
+    "sentences": [
+     [
+      0.1,
+      6.633,
+      "一把每齿十种深度的钥匙，再加一个齿，钥匙数会变成多少？"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Count": {
+    "duration": 8.112,
+    "hash": "78d550b87e89bedd",
+    "sentences": [
+     [
+      0.1,
+      8.106,
+      "这种设计能做出多少把不同的钥匙：先是全部的数目，再是没有陡坡的数目。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Depths": {
+    "duration": 3.96,
+    "hash": "345ae40d36e8539b",
+    "sentences": [
+     [
+      0.1,
+      3.939,
+      "齿可以切到的深度，从浅到深编号。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Key": {
+    "duration": 6.288,
+    "hash": "8dfeb5d0e45aece2",
+    "sentences": [
+     [
+      0.1,
+      2.661,
+      "钥匙切出齿的那条边。"
+     ],
+     [
+      2.611,
+      6.222,
+      "区分两把钥匙的，只有它的形状。"
+     ]
+    ]
+   },
+   "Narr_Locks_Keys_Part_Steep": {
+    "duration": 6.48,
+    "hash": "96251eaa27f6ef1d",
+    "sentences": [
+     [
+      0.1,
+      3.494,
+      "相邻两个齿相差最大的地方。"
+     ],
+     [
+      3.444,
+      6.431,
+      "太陡的话，弹子滑不过去。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_01": {
+    "duration": 7.296,
+    "hash": "0155cc86f1fc5853",
+    "sentences": [
+     [
+      0.1,
+      4.189,
+      "最下面是锁舌，它的一头插在门框里。"
+     ],
+     [
+      4.139,
+      7.236,
+      "只要它在那儿，门就是锁着的。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_02": {
+    "duration": 8.208,
+    "hash": "2c138c31cdf7cac8",
+    "sentences": [
+     [
+      0.1,
+      4.578,
+      "上面是三片杠杆，分开画好看清每一片。"
+     ],
+     [
+      4.528,
+      8.153,
+      "金色的止柱待在每片的窗口里。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_03": {
+    "duration": 9.504,
+    "hash": "ed3c19eb5b795b05",
+    "sentences": [
+     [
+      0.1,
+      5.508,
+      "转动钥匙会抬起杠杆，每片按自己那级台阶抬。"
+     ],
+     [
+      5.458,
+      9.444,
+      "还不够高：门槽还没和止柱对齐。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_04": {
+    "duration": 5.568,
+    "hash": "288e10f632ca2855",
+    "sentences": [
+     [
+      0.1,
+      5.55,
+      "轮到你了：继续转钥匙，直到锁舌完全退出门框。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_05": {
+    "duration": 5.376,
+    "hash": "202243e6ed566386",
+    "sentences": [
+     [
+      0.1,
+      5.369,
+      "如果钥匙上有一级台阶把杠杆抬得太高，会怎样？"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Bit": {
+    "duration": 8.28,
+    "hash": "06e10131c12d5c90",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "钥匙的末端，每片杠杆有一级台阶。"
+     ],
+     [
+      4.361,
+      8.222,
+      "转动时它抬起杠杆、推动锁舌。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Bolt": {
+    "duration": 5.52,
+    "hash": "466587fdea07a13e",
+    "sentences": [
+     [
+      0.1,
+      3.05,
+      "伸进门框的那根金属条。"
+     ],
+     [
+      3.0,
+      5.458,
+      "退回来，门就开了。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Levers": {
+    "duration": 6.672,
+    "hash": "eb15bf703df9ada0",
+    "sentences": [
+     [
+      0.1,
+      3.3,
+      "一端可以转动的扁平金属片。"
+     ],
+     [
+      3.25,
+      6.611,
+      "每片的门槽切在不同的高度。"
+     ]
+    ]
+   },
+   "Narr_Locks_Lever_Part_Stump": {
+    "duration": 6.024,
+    "hash": "151d4b8fc3d77149",
+    "sentences": [
+     [
+      0.1,
+      2.897,
+      "固定在锁舌上的小柱子。"
+     ],
+     [
+      2.847,
+      5.958,
+      "它只能沿着杠杆的门槽滑动。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_01": {
+    "duration": 8.232,
+    "hash": "6a691f9faafb2a9a",
+    "sentences": [
+     [
+      0.1,
+      2.869,
+      "插着的是你自己的钥匙。"
+     ],
+     [
+      2.819,
+      8.181,
+      "每颗下弹子的顶端都落在线上，跟普通的锁一样。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_02": {
+    "duration": 8.16,
+    "hash": "dff94d881a36030e",
+    "sentences": [
+     [
+      0.1,
+      4.453,
+      "不过有三摞弹子里夹着一片金色的薄片。"
+     ],
+     [
+      4.403,
+      8.097,
+      "它让每摞都多了一个可以断开的地方。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_03": {
+    "duration": 3.144,
+    "hash": "31fa63cb7946a12d",
+    "sentences": [
+     [
+      0.1,
+      3.133,
+      "轮到你了：试试总钥匙。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_04": {
+    "duration": 10.776,
+    "hash": "fe39b0fc528a6364",
+    "sentences": [
+     [
+      0.1,
+      8.425,
+      "这把钥匙从来没有发给过谁：它的齿一部分取自你的钥匙，一部分取自总钥匙。"
+     ],
+     [
+      8.375,
+      10.722,
+      "它也能打开这把锁。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_05": {
+    "duration": 5.16,
+    "hash": "0929cdf98b6bf397",
+    "sentences": [
+     [
+      0.1,
+      5.147,
+      "为什么总钥匙锁能被一把没人为它配过的钥匙打开？"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Drivers": {
+    "duration": 7.632,
+    "hash": "65864e3051753bbf",
+    "sentences": [
+     [
+      0.1,
+      2.203,
+      "被弹簧往下压。"
+     ],
+     [
+      2.153,
+      7.569,
+      "不管这摞在哪里断开，它们都必须完全退到线的上方。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Key": {
+    "duration": 4.776,
+    "hash": "65f0958c9804259a",
+    "sentences": [
+     [
+      0.1,
+      2.286,
+      "插在锁里的钥匙。"
+     ],
+     [
+      2.236,
+      4.722,
+      "用左页的滑块换一把。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Keypins": {
+    "duration": 4.896,
+    "hash": "e25ecf26046c90fd",
+    "sentences": [
+     [
+      0.1,
+      4.897,
+      "每颗的长度都按两把钥匙里较浅的那个齿来定。"
+     ]
+    ]
+   },
+   "Narr_Locks_Master_Part_Wafers": {
+    "duration": 6.0,
+    "hash": "866606c11bed00fe",
+    "sentences": [
+     [
+      0.1,
+      5.981,
+      "薄薄的弹子，每片的厚度正好等于两把钥匙齿深之差。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_01": {
+    "duration": 8.832,
+    "hash": "84057e110873ff85",
+    "sentences": [
+     [
+      0.1,
+      2.883,
+      "这是一把剖成两半的锁。"
+     ],
+     [
+      2.833,
+      8.778,
+      "外面的黄铜块是锁壳，里面的锁芯才是钥匙要转动的部分。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_02": {
+    "duration": 7.44,
+    "hash": "3ec786ec91d90760",
+    "sentences": [
+     [
+      0.1,
+      3.883,
+      "弹簧把灰色的上弹子压进锁芯。"
+     ],
+     [
+      3.833,
+      7.375,
+      "它们跨在缝上，锁芯就被钉住了。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_03": {
+    "duration": 6.84,
+    "hash": "c6302d5a07c3a348",
+    "sentences": [
+     [
+      0.1,
+      6.828,
+      "钥匙往里插的时候，橙色的下弹子在它的齿上一上一下地滑过。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_04": {
+    "duration": 5.136,
+    "hash": "8a96ff6161dffba4",
+    "sentences": [
+     [
+      0.1,
+      5.119,
+      "轮到你了：把钥匙一直插到底，看锁芯转起来。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_05": {
+    "duration": 4.056,
+    "hash": "e08759e1a3472097",
+    "sentences": [
+     [
+      0.1,
+      4.05,
+      "如果钥匙上有一个齿浅了一点，会怎样？"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Drivers": {
+    "duration": 5.832,
+    "hash": "a4355c605f4f47e5",
+    "sentences": [
+     [
+      0.1,
+      1.731,
+      "都一样长。"
+     ],
+     [
+      1.681,
+      5.764,
+      "被压进锁芯时，就挡住它不让转。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Keypins": {
+    "duration": 5.304,
+    "hash": "0b202904112400f1",
+    "sentences": [
+     [
+      0.1,
+      5.3,
+      "它们落在钥匙上，长短各不相同，各自配一个齿。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Plug": {
+    "duration": 6.216,
+    "hash": "48e4eaa4d1f7ffb0",
+    "sentences": [
+     [
+      0.1,
+      2.328,
+      "钥匙转动的圆柱。"
+     ],
+     [
+      2.278,
+      6.153,
+      "只有缝上没有东西挡着时，它才能转。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Shell": {
+    "duration": 6.456,
+    "hash": "f658f134fa1c5407",
+    "sentences": [
+     [
+      0.1,
+      3.703,
+      "锁固定不动的外壳，装在门里。"
+     ],
+     [
+      3.653,
+      6.389,
+      "弹子孔一直通到它里面。"
+     ]
+    ]
+   },
+   "Narr_Locks_Pins_Part_Springs": {
+    "duration": 5.16,
+    "hash": "d9ebbb6233b02a9d",
+    "sentences": [
+     [
+      0.1,
+      5.161,
+      "把每摞弹子往下压，让弹子总是贴着钥匙走。"
      ]
     ]
    },

@@ -3654,4 +3654,556 @@
   <data name="Narr_Car_Ice_Part_Push" xml:space="preserve">
     <value>每个轮胎推车往前有多用力，以及两个加起来。</value>
   </data>
+  <data name="Chapter_Locks" xml:space="preserve">
+    <value>锁与钥匙</value>
+  </data>
+  <data name="Locks_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Locks_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Locks_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Locks_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Locks_Steps" xml:space="preserve">
+    <value>{0} 级</value>
+  </data>
+  <data name="Locks_Pins_Title" xml:space="preserve">
+    <value>剪切线上的弹子</value>
+  </data>
+  <data name="Locks_Pins_P1" xml:space="preserve">
+    <value>大多数家门用的是弹子锁。固定的锁壳里装着一个锁芯：一个能被钥匙转动的黄铜圆柱。钥匙孔上方有一排孔，从锁芯一直通到锁壳里，每个孔里立着一小摞：下面是下弹子，上面是上弹子，最上面一根弹簧把它们往下压。没插钥匙时，每颗上弹子都有一截被压进锁芯，锁芯就转不动。</value>
+  </data>
+  <data name="Locks_Pins_P2" xml:space="preserve">
+    <value>锁芯和锁壳之间有一道细缝，叫剪切线。插进对的钥匙，每个齿刚好把它那颗下弹子顶到合适的高度：每颗下弹子的顶端正好停在剪切线上，每颗上弹子完全退回锁壳。没有东西跨过这道缝，锁芯就能转。只要有一个齿浅了一点，弹子就被顶过头；深了一点，又顶得不够。不管哪种，都有一颗弹子卡在缝上。</value>
+  </data>
+  <data name="Locks_Pins_Deeper" xml:space="preserve">
+    <value>这把锁每一级齿深差半毫米，弹子必须停在离剪切线约二十分之一毫米以内。真实的锁也大致是这个精度，所以配得稍有偏差的钥匙，转起来会发涩，甚至转不动。下弹子长短各不相同，各自对应一个齿；上弹子都一样长。</value>
+  </data>
+  <data name="Locks_Pins_Insert" xml:space="preserve">
+    <value>钥匙插进去多少</value>
+  </data>
+  <data name="Locks_Pins_Wrong" xml:space="preserve">
+    <value>换一把差不多对的钥匙</value>
+  </data>
+  <data name="Locks_Pins_Readout" xml:space="preserve">
+    <value>{1} 颗弹子里有 {0} 颗在剪切线上。</value>
+  </data>
+  <data name="Locks_Pins_Open" xml:space="preserve">
+    <value>每颗弹子都在剪切线上：锁芯转动了。</value>
+  </data>
+  <data name="Locks_Pins_Gauge" xml:space="preserve">
+    <value>每颗下弹子的顶端：在线上、太高还是太低</value>
+  </data>
+  <data name="Locks_Pins_High" xml:space="preserve">
+    <value>太高</value>
+  </data>
+  <data name="Locks_Pins_Low" xml:space="preserve">
+    <value>太低</value>
+  </data>
+  <data name="Locks_Pins_Picture" xml:space="preserve">
+    <value>从侧面剖开的弹子锁，一把钥匙正往里插，左上角是锁的正面</value>
+  </data>
+  <data name="Locks_Pins_Shear" xml:space="preserve">
+    <value>剪切线</value>
+  </data>
+  <data name="Locks_Pins_Front" xml:space="preserve">
+    <value>正面</value>
+  </data>
+  <data name="Locks_Pins_Turns" xml:space="preserve">
+    <value>转动了！</value>
+  </data>
+  <data name="Narr_Locks_Pins_01" xml:space="preserve">
+    <value>这是一把剖成两半的锁。外面的黄铜块是锁壳，里面的锁芯才是钥匙要转动的部分。</value>
+  </data>
+  <data name="Narr_Locks_Pins_02" xml:space="preserve">
+    <value>弹簧把灰色的上弹子压进锁芯。它们跨在缝上，锁芯就被钉住了。</value>
+  </data>
+  <data name="Narr_Locks_Pins_03" xml:space="preserve">
+    <value>钥匙往里插的时候，橙色的下弹子在它的齿上一上一下地滑过。</value>
+  </data>
+  <data name="Narr_Locks_Pins_04" xml:space="preserve">
+    <value>轮到你了：把钥匙一直插到底，看锁芯转起来。</value>
+  </data>
+  <data name="Narr_Locks_Pins_05" xml:space="preserve">
+    <value>如果钥匙上有一个齿浅了一点，会怎样？</value>
+  </data>
+  <data name="Locks_Pins_Quiz1" xml:space="preserve">
+    <value>那颗弹子被顶过了线，锁芯还是转不动</value>
+  </data>
+  <data name="Locks_Pins_Quiz2" xml:space="preserve">
+    <value>其他弹子都对，锁芯照样能转</value>
+  </data>
+  <data name="Locks_Pins_Quiz3" xml:space="preserve">
+    <value>它上面的弹簧会断</value>
+  </data>
+  <data name="Locks_Pins_Part_Plug" xml:space="preserve">
+    <value>锁芯</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Plug" xml:space="preserve">
+    <value>钥匙转动的圆柱。只有缝上没有东西挡着时，它才能转。</value>
+  </data>
+  <data name="Locks_Pins_Part_Shell" xml:space="preserve">
+    <value>锁壳</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Shell" xml:space="preserve">
+    <value>锁固定不动的外壳，装在门里。弹子孔一直通到它里面。</value>
+  </data>
+  <data name="Locks_Pins_Part_Keypins" xml:space="preserve">
+    <value>下弹子</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Keypins" xml:space="preserve">
+    <value>它们落在钥匙上，长短各不相同，各自配一个齿。</value>
+  </data>
+  <data name="Locks_Pins_Part_Drivers" xml:space="preserve">
+    <value>上弹子</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Drivers" xml:space="preserve">
+    <value>都一样长。被压进锁芯时，就挡住它不让转。</value>
+  </data>
+  <data name="Locks_Pins_Part_Springs" xml:space="preserve">
+    <value>弹簧</value>
+  </data>
+  <data name="Narr_Locks_Pins_Part_Springs" xml:space="preserve">
+    <value>把每摞弹子往下压，让弹子总是贴着钥匙走。</value>
+  </data>
+  <data name="Locks_Keys_Title" xml:space="preserve">
+    <value>能有多少种不同的钥匙？</value>
+  </data>
+  <data name="Locks_Keys_P1" xml:space="preserve">
+    <value>一把钥匙其实就是一串数字：每个齿切多深。如果每个齿有十种深度可选，钥匙上有五个齿，那么第一个齿有十种选法，第二个也有十种，依此类推：十乘十乘十乘十乘十，一共十万种钥匙。再多一个齿，就再乘以十。</value>
+  </data>
+  <data name="Locks_Keys_P2" xml:space="preserve">
+    <value>但不是每一种都做得出来。如果一个齿很浅、下一个齿很深，两者之间的坡就太陡，钥匙插进去时弹子滑不过去，钥匙会卡住甚至折断。所以厂家规定了相邻两个齿最多能差几级。这样就去掉了很多组合，实际能用的钥匙比简单相乘得到的数要少。</value>
+  </data>
+  <data name="Locks_Keys_Deeper" xml:space="preserve">
+    <value>数出允许的钥匙有个巧办法：一个齿一个齿地算，对每种深度记下“以这个深度结尾的钥匙有多少把”。下一个齿某个深度的数目，就是所有离它足够近的深度的数目之和。十万把钥匙听起来很多，但一栋门很多的楼还要用总钥匙，会占掉一部分组合。</value>
+  </data>
+  <data name="Locks_Keys_Cuts" xml:space="preserve">
+    <value>钥匙上的齿数</value>
+  </data>
+  <data name="Locks_Keys_Depths" xml:space="preserve">
+    <value>每个齿可选的深度</value>
+  </data>
+  <data name="Locks_Keys_Steepest" xml:space="preserve">
+    <value>相邻齿最多相差</value>
+  </data>
+  <data name="Locks_Keys_Readout" xml:space="preserve">
+    <value>一共 {0} 种钥匙；其中 {1} 种的每对相邻齿都不太陡。</value>
+  </data>
+  <data name="Locks_Keys_Picture" xml:space="preserve">
+    <value>放大的钥匙齿面，每种深度一条虚线，下面是可能的钥匙数</value>
+  </data>
+  <data name="Locks_Keys_SteepLabel" xml:space="preserve">
+    <value>最陡：{0} 级（最多 {1} 级）</value>
+  </data>
+  <data name="Locks_Keys_All" xml:space="preserve">
+    <value>{0} 种钥匙</value>
+  </data>
+  <data name="Locks_Keys_Formula" xml:space="preserve">
+    <value>{0} 种深度，连乘 {1} 次</value>
+  </data>
+  <data name="Locks_Keys_Allowed" xml:space="preserve">
+    <value>没有超过 {1} 级的陡坡：{0} 种</value>
+  </data>
+  <data name="Narr_Locks_Keys_01" xml:space="preserve">
+    <value>这是一把放大的钥匙。下面的数字是每个齿的深度，钥匙说到底就是这串数字。</value>
+  </data>
+  <data name="Narr_Locks_Keys_02" xml:space="preserve">
+    <value>每条虚线是一个齿可以切到的深度。深度越多，钥匙越多，但每一级都要切得很准。</value>
+  </data>
+  <data name="Narr_Locks_Keys_03" xml:space="preserve">
+    <value>轮到你了：给钥匙再加一个齿，看看数目一下子涨了多少。</value>
+  </data>
+  <data name="Narr_Locks_Keys_04" xml:space="preserve">
+    <value>现在相邻的齿最多只能差三级。蓝色的那段坡是最陡的，钥匙数也随之变少。</value>
+  </data>
+  <data name="Narr_Locks_Keys_05" xml:space="preserve">
+    <value>一把每齿十种深度的钥匙，再加一个齿，钥匙数会变成多少？</value>
+  </data>
+  <data name="Locks_Keys_Quiz1" xml:space="preserve">
+    <value>原来的十倍</value>
+  </data>
+  <data name="Locks_Keys_Quiz2" xml:space="preserve">
+    <value>多十种</value>
+  </data>
+  <data name="Locks_Keys_Quiz3" xml:space="preserve">
+    <value>原来的两倍</value>
+  </data>
+  <data name="Locks_Keys_Part_Key" xml:space="preserve">
+    <value>钥匙齿面</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Key" xml:space="preserve">
+    <value>钥匙切出齿的那条边。区分两把钥匙的，只有它的形状。</value>
+  </data>
+  <data name="Locks_Keys_Part_Depths" xml:space="preserve">
+    <value>深度</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Depths" xml:space="preserve">
+    <value>齿可以切到的深度，从浅到深编号。</value>
+  </data>
+  <data name="Locks_Keys_Part_Steep" xml:space="preserve">
+    <value>最陡的一级</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Steep" xml:space="preserve">
+    <value>相邻两个齿相差最大的地方。太陡的话，弹子滑不过去。</value>
+  </data>
+  <data name="Locks_Keys_Part_Count" xml:space="preserve">
+    <value>钥匙数</value>
+  </data>
+  <data name="Narr_Locks_Keys_Part_Count" xml:space="preserve">
+    <value>这种设计能做出多少把不同的钥匙：先是全部的数目，再是没有陡坡的数目。</value>
+  </data>
+  <data name="Locks_Master_Title" xml:space="preserve">
+    <value>一把锁，两把钥匙</value>
+  </data>
+  <data name="Locks_Master_P1" xml:space="preserve">
+    <value>在办公楼或旅馆里，每扇门都有自己的钥匙，但管理员只带一把总钥匙就能打开所有的门。窍门是一片薄薄的额外弹子，叫主片，凡是两把钥匙不同的位置，就在下弹子和上弹子之间塞上一片。这样这摞弹子就有两个地方可以断开：下弹子顶上，或者主片顶上。</value>
+  </data>
+  <data name="Locks_Master_P2" xml:space="preserve">
+    <value>两个齿中较浅的那个，把下弹子的顶端抬到剪切线上。较深的那个让这摞弹子低一些，低的正好是主片的厚度，于是换成主片的顶端落在剪切线上。两把钥匙都能开门。可这里有个漏洞：一把钥匙如果有的齿取自这一把、其余取自那一把，也能打开，虽然谁也没配过它。</value>
+  </data>
+  <data name="Locks_Master_Deeper" xml:space="preserve">
+    <value>五摞里有三摞装了主片，这三摞各有两个可用的深度，所以能打开这把锁的钥匙有 2 × 2 × 2 = 8 种。大楼里如果有好几层总钥匙，主片就更多，碰巧能开的钥匙也更多。仔细规划齿的深度，再加上难以复制的钥匙，可以减少这种风险。</value>
+  </data>
+  <data name="Locks_Master_Which" xml:space="preserve">
+    <value>插在锁里的钥匙</value>
+  </data>
+  <data name="Locks_Master_Key1" xml:space="preserve">
+    <value>自己的钥匙</value>
+  </data>
+  <data name="Locks_Master_Key2" xml:space="preserve">
+    <value>总钥匙</value>
+  </data>
+  <data name="Locks_Master_Key3" xml:space="preserve">
+    <value>邻居的钥匙</value>
+  </data>
+  <data name="Locks_Master_Key4" xml:space="preserve">
+    <value>两把拼出来的钥匙</value>
+  </data>
+  <data name="Locks_Master_Open" xml:space="preserve">
+    <value>能打开。</value>
+  </data>
+  <data name="Locks_Master_Blocked" xml:space="preserve">
+    <value>第 {0} 颗弹子挡住了。</value>
+  </data>
+  <data name="Locks_Master_Count" xml:space="preserve">
+    <value>能打开这把锁的钥匙共有 {0} 种。</value>
+  </data>
+  <data name="Locks_Master_Picture" xml:space="preserve">
+    <value>剖开的总钥匙锁，有几摞弹子里夹着金色主片，插着所选的钥匙</value>
+  </data>
+  <data name="Locks_Master_Opens" xml:space="preserve">
+    <value>打开了</value>
+  </data>
+  <data name="Locks_Master_Stays" xml:space="preserve">
+    <value>打不开</value>
+  </data>
+  <data name="Locks_Master_WaferLabel" xml:space="preserve">
+    <value>金色：主片</value>
+  </data>
+  <data name="Narr_Locks_Master_01" xml:space="preserve">
+    <value>插着的是你自己的钥匙。每颗下弹子的顶端都落在线上，跟普通的锁一样。</value>
+  </data>
+  <data name="Narr_Locks_Master_02" xml:space="preserve">
+    <value>不过有三摞弹子里夹着一片金色的薄片。它让每摞都多了一个可以断开的地方。</value>
+  </data>
+  <data name="Narr_Locks_Master_03" xml:space="preserve">
+    <value>轮到你了：试试总钥匙。</value>
+  </data>
+  <data name="Narr_Locks_Master_04" xml:space="preserve">
+    <value>这把钥匙从来没有发给过谁：它的齿一部分取自你的钥匙，一部分取自总钥匙。它也能打开这把锁。</value>
+  </data>
+  <data name="Narr_Locks_Master_05" xml:space="preserve">
+    <value>为什么总钥匙锁能被一把没人为它配过的钥匙打开？</value>
+  </data>
+  <data name="Locks_Master_Quiz1" xml:space="preserve">
+    <value>它的弹子用的金属更软</value>
+  </data>
+  <data name="Locks_Master_Quiz2" xml:space="preserve">
+    <value>它的弹簧更弱</value>
+  </data>
+  <data name="Locks_Master_Quiz3" xml:space="preserve">
+    <value>每片主片都让一摞弹子多了一个断开的位置</value>
+  </data>
+  <data name="Locks_Master_Part_Key" xml:space="preserve">
+    <value>钥匙</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Key" xml:space="preserve">
+    <value>插在锁里的钥匙。用左页的滑块换一把。</value>
+  </data>
+  <data name="Locks_Master_Part_Keypins" xml:space="preserve">
+    <value>下弹子</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Keypins" xml:space="preserve">
+    <value>每颗的长度都按两把钥匙里较浅的那个齿来定。</value>
+  </data>
+  <data name="Locks_Master_Part_Wafers" xml:space="preserve">
+    <value>主片</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Wafers" xml:space="preserve">
+    <value>薄薄的弹子，每片的厚度正好等于两把钥匙齿深之差。</value>
+  </data>
+  <data name="Locks_Master_Part_Drivers" xml:space="preserve">
+    <value>上弹子</value>
+  </data>
+  <data name="Narr_Locks_Master_Part_Drivers" xml:space="preserve">
+    <value>被弹簧往下压。不管这摞在哪里断开，它们都必须完全退到线的上方。</value>
+  </data>
+  <data name="Locks_Binding_Title" xml:space="preserve">
+    <value>一次一颗</value>
+  </data>
+  <data name="Locks_Binding_P1" xml:space="preserve">
+    <value>如果锁上每个孔都钻在完全同一条直线上，轻轻转锁芯时，所有弹子会同时被压住，哪颗都动不了。可没有哪台机器是完美的。孔的位置会偏几百分之一毫米，所以锁芯稍稍一转，偏得最远的那个孔最先夹住它的弹子，而且只夹住这一颗。</value>
+  </data>
+  <data name="Locks_Binding_P2" xml:space="preserve">
+    <value>把这颗弹子往上推，直到上下两颗弹子的分界到达剪切线，上弹子就会卡在锁芯边缘。锁芯又多转了一点点，这时偏得第二远的孔夹住了它的弹子。一颗接一颗，锁就能在没有钥匙的情况下被打开。好的锁会反击：孔打得极准，还用形状古怪的上弹子，让它卡在错误的地方。</value>
+  </data>
+  <data name="Locks_Binding_Deeper" xml:space="preserve">
+    <value>所以一把锁安全不安全，很大程度上取决于它做得有多精密，而不只是能配多少种钥匙。设计师会加入线轴形或锯齿形的上弹子、额外的侧杆，还有必须转到正确角度的弹子。每加一样，钥匙都能轻松通过，工具却难以通过。</value>
+  </data>
+  <data name="Locks_Binding_Set" xml:space="preserve">
+    <value>已经抬好的弹子</value>
+  </data>
+  <data name="Locks_Binding_Perfect" xml:space="preserve">
+    <value>把每个孔都钻得完全对齐</value>
+  </data>
+  <data name="Locks_Binding_Readout" xml:space="preserve">
+    <value>第 {0} 颗弹子卡着锁芯：现在只有它能被抬好。</value>
+  </data>
+  <data name="Locks_Binding_All" xml:space="preserve">
+    <value>所有弹子同时被夹住，哪一颗都抬不起来。</value>
+  </data>
+  <data name="Locks_Binding_Open" xml:space="preserve">
+    <value>每颗弹子都抬好了：锁芯转动了。</value>
+  </data>
+  <data name="Locks_Binding_Picture" xml:space="preserve">
+    <value>没插钥匙的剖开的锁，锁芯上加着轻轻的转力，下面是从上往下看的锁芯孔</value>
+  </data>
+  <data name="Locks_Binding_HolesLabel" xml:space="preserve">
+    <value>俯视的孔，偏差放大 {0} 倍；数字：被夹住的先后</value>
+  </data>
+  <data name="Narr_Locks_Binding_01" xml:space="preserve">
+    <value>锁下面画的是从上往下看的孔，微小的偏差放大了一百倍。没有两个是完全对齐的。</value>
+  </data>
+  <data name="Narr_Locks_Binding_02" xml:space="preserve">
+    <value>锁芯上加了轻轻的转力。它会一直转，直到某个孔夹住了它的弹子。</value>
+  </data>
+  <data name="Narr_Locks_Binding_03" xml:space="preserve">
+    <value>金色描边的那颗弹子就是卡住锁芯的。其余的都是松的，可以随意推动。</value>
+  </data>
+  <data name="Narr_Locks_Binding_04" xml:space="preserve">
+    <value>轮到你了：一颗接一颗抬好三颗弹子，看看下一颗被夹住的是哪颗。</value>
+  </data>
+  <data name="Narr_Locks_Binding_05" xml:space="preserve">
+    <value>为什么真实的锁里，弹子可以一颗一颗地抬好？</value>
+  </data>
+  <data name="Locks_Binding_Quiz1" xml:space="preserve">
+    <value>弹簧的力有大有小</value>
+  </data>
+  <data name="Locks_Binding_Quiz2" xml:space="preserve">
+    <value>它的孔没有钻得完全对齐</value>
+  </data>
+  <data name="Locks_Binding_Quiz3" xml:space="preserve">
+    <value>下弹子长短不一</value>
+  </data>
+  <data name="Locks_Binding_Part_Turn" xml:space="preserve">
+    <value>转动工具</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Turn" xml:space="preserve">
+    <value>给锁芯一点轻轻的转力，让偏得最远的孔夹住它的弹子。</value>
+  </data>
+  <data name="Locks_Binding_Part_Binding" xml:space="preserve">
+    <value>卡住的弹子</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Binding" xml:space="preserve">
+    <value>被锁芯和锁壳夹住的那一摞。此刻只有它能被抬好。</value>
+  </data>
+  <data name="Locks_Binding_Part_Holes" xml:space="preserve">
+    <value>俯视的孔</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Holes" xml:space="preserve">
+    <value>每个孔都偏离直线一点，这里放大了一百倍。偏得最远的最先夹住。</value>
+  </data>
+  <data name="Locks_Binding_Part_Set" xml:space="preserve">
+    <value>抬好的弹子</value>
+  </data>
+  <data name="Narr_Locks_Binding_Part_Set" xml:space="preserve">
+    <value>抬好的弹子，上弹子停在锁芯边缘，刚好在剪切线上方。</value>
+  </data>
+  <data name="Locks_Lever_Title" xml:space="preserve">
+    <value>杠杆锁</value>
+  </data>
+  <data name="Locks_Lever_P1" xml:space="preserve">
+    <value>早在弹子锁出现之前就有了杠杆锁，现在很多后门和保险柜上还在用。它的锁舌上有一根小柱子，叫止柱。锁舌上面叠着几片扁平的杠杆片，每片有一个让止柱待着的窗口，从窗口伸出一条窄槽，叫门槽。止柱在窗口里时，杠杆片就把锁舌牢牢挡住。</value>
+  </data>
+  <data name="Locks_Lever_P2" xml:space="preserve">
+    <value>钥匙的齿上有高低不同的台阶，每片杠杆对应一级。钥匙一转，每级台阶抬起它那片杠杆，有那么一瞬间，所有门槽都正好和止柱一样高。就在这时，钥匙齿勾住锁舌把它推过去，止柱沿着门槽滑走。只要有一片抬得太低或太高，止柱就撞上实心的金属。</value>
+  </data>
+  <data name="Locks_Lever_Deeper" xml:space="preserve">
+    <value>杠杆片越多，能配的钥匙越多，也越难被投机取巧：好的门锁有五片以上。有些杠杆片在门槽旁边还切了假槽，让探进去的工具卡错地方。这跟弹子锁是同一个道理：只有几个各自独立的零件同时“同意”，锁舌才能动。</value>
+  </data>
+  <data name="Locks_Lever_Angle" xml:space="preserve">
+    <value>转动钥匙</value>
+  </data>
+  <data name="Locks_Lever_Wrong" xml:space="preserve">
+    <value>换一把有一级台阶太高的钥匙</value>
+  </data>
+  <data name="Locks_Lever_Readout" xml:space="preserve">
+    <value>锁舌已经退回了 {0}%。</value>
+  </data>
+  <data name="Locks_Lever_Open" xml:space="preserve">
+    <value>锁舌离开了门框：门打开了。</value>
+  </data>
+  <data name="Locks_Lever_Stuck" xml:space="preserve">
+    <value>有一道门槽没对准止柱：锁舌动不了。</value>
+  </data>
+  <data name="Locks_Lever_Picture" xml:space="preserve">
+    <value>杠杆锁，三片杠杆分开画出，钥匙齿在旁边转动，锁舌插在门框里</value>
+  </data>
+  <data name="Locks_Lever_Frame" xml:space="preserve">
+    <value>门框</value>
+  </data>
+  <data name="Locks_Lever_Exploded" xml:space="preserve">
+    <value>三片杠杆上下分开画，实际上它们叠在一起</value>
+  </data>
+  <data name="Narr_Locks_Lever_01" xml:space="preserve">
+    <value>最下面是锁舌，它的一头插在门框里。只要它在那儿，门就是锁着的。</value>
+  </data>
+  <data name="Narr_Locks_Lever_02" xml:space="preserve">
+    <value>上面是三片杠杆，分开画好看清每一片。金色的止柱待在每片的窗口里。</value>
+  </data>
+  <data name="Narr_Locks_Lever_03" xml:space="preserve">
+    <value>转动钥匙会抬起杠杆，每片按自己那级台阶抬。还不够高：门槽还没和止柱对齐。</value>
+  </data>
+  <data name="Narr_Locks_Lever_04" xml:space="preserve">
+    <value>轮到你了：继续转钥匙，直到锁舌完全退出门框。</value>
+  </data>
+  <data name="Narr_Locks_Lever_05" xml:space="preserve">
+    <value>如果钥匙上有一级台阶把杠杆抬得太高，会怎样？</value>
+  </data>
+  <data name="Locks_Lever_Quiz1" xml:space="preserve">
+    <value>没关系，高一点也行</value>
+  </data>
+  <data name="Locks_Lever_Quiz2" xml:space="preserve">
+    <value>杠杆会断</value>
+  </data>
+  <data name="Locks_Lever_Quiz3" xml:space="preserve">
+    <value>它的门槽对不上止柱，锁舌不动</value>
+  </data>
+  <data name="Locks_Lever_Part_Bit" xml:space="preserve">
+    <value>钥匙齿</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Bit" xml:space="preserve">
+    <value>钥匙的末端，每片杠杆有一级台阶。转动时它抬起杠杆、推动锁舌。</value>
+  </data>
+  <data name="Locks_Lever_Part_Levers" xml:space="preserve">
+    <value>杠杆片</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Levers" xml:space="preserve">
+    <value>一端可以转动的扁平金属片。每片的门槽切在不同的高度。</value>
+  </data>
+  <data name="Locks_Lever_Part_Stump" xml:space="preserve">
+    <value>止柱</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Stump" xml:space="preserve">
+    <value>固定在锁舌上的小柱子。它只能沿着杠杆的门槽滑动。</value>
+  </data>
+  <data name="Locks_Lever_Part_Bolt" xml:space="preserve">
+    <value>锁舌</value>
+  </data>
+  <data name="Narr_Locks_Lever_Part_Bolt" xml:space="preserve">
+    <value>伸进门框的那根金属条。退回来，门就开了。</value>
+  </data>
+  <data name="Locks_Dials_Title" xml:space="preserve">
+    <value>用数字代替钥匙</value>
+  </data>
+  <data name="Locks_Dials_P1" xml:space="preserve">
+    <value>密码挂锁没有钥匙孔。每个数字轮都套在一个带缺口的套筒上，一根横杆贴着这些套筒，压住锁梁。只有每个轮都转到它的数字，所有缺口才一起转到顶上排成一排，横杆落进去，锁梁就弹开了。</value>
+  </data>
+  <data name="Locks_Dials_P2" xml:space="preserve">
+    <value>三个十位数的轮子共有一千种组合，所以陌生人平均要试五百次。可是便宜的轮子做得松，缺口比应有的宽。这时正确数字两边的数也能开，每试一次就等于同时试了好几种组合。做得松的锁，可能比它的数字看起来弱得多。</value>
+  </data>
+  <data name="Locks_Dials_Deeper" xml:space="preserve">
+    <value>缺口若能多容下左右各一个数，每个轮实际上只有大约四种值得试的位置，于是 4 × 4 × 4 = 64 次就一定能打开。好一些的锁会把缺口做紧，再加上假缺口，让在错误数字上“好像松了一下”的感觉什么也泄露不出来。保险柜只有一个转盘，靠拨销一个接一个地带动里面的轮子，但缺口和横杆的道理是一样的。</value>
+  </data>
+  <data name="Locks_Dials_First" xml:space="preserve">
+    <value>第一个轮</value>
+  </data>
+  <data name="Locks_Dials_Second" xml:space="preserve">
+    <value>第二个轮</value>
+  </data>
+  <data name="Locks_Dials_Third" xml:space="preserve">
+    <value>第三个轮</value>
+  </data>
+  <data name="Locks_Dials_Sloppy" xml:space="preserve">
+    <value>把缺口做松</value>
+  </data>
+  <data name="Locks_Dials_Open" xml:space="preserve">
+    <value>每个缺口都到了顶上：横杆落下，锁梁弹开。</value>
+  </data>
+  <data name="Locks_Dials_Blocked" xml:space="preserve">
+    <value>第 {0} 个轮还顶着横杆。</value>
+  </data>
+  <data name="Locks_Dials_Tries" xml:space="preserve">
+    <value>陌生人最多要试 {0} 次才能保证打开。</value>
+  </data>
+  <data name="Locks_Dials_Picture" xml:space="preserve">
+    <value>密码挂锁的正面，下面是锁里每个轮的带缺口套筒和横杆</value>
+  </data>
+  <data name="Locks_Dials_Inside" xml:space="preserve">
+    <value>里面：从端面看每个轮的套筒</value>
+  </data>
+  <data name="Narr_Locks_Dials_01" xml:space="preserve">
+    <value>三个数字轮，都拨在零上。锁梁被压着。</value>
+  </data>
+  <data name="Narr_Locks_Dials_02" xml:space="preserve">
+    <value>在里面，每个轮带着一个有缺口的套筒，跟着轮一起转。</value>
+  </data>
+  <data name="Narr_Locks_Dials_03" xml:space="preserve">
+    <value>现在有两个轮对了：它们的缺口转到了顶上。横杆还搁在第三个上。</value>
+  </data>
+  <data name="Narr_Locks_Dials_04" xml:space="preserve">
+    <value>轮到你了：找出第三个数字，把锁打开。</value>
+  </data>
+  <data name="Narr_Locks_Dials_05" xml:space="preserve">
+    <value>为什么缺口做松了是个弱点？</value>
+  </data>
+  <data name="Locks_Dials_Quiz1" xml:space="preserve">
+    <value>会把轮子磨坏</value>
+  </data>
+  <data name="Locks_Dials_Quiz2" xml:space="preserve">
+    <value>旁边的数字也能开，要试的次数就少了</value>
+  </data>
+  <data name="Locks_Dials_Quiz3" xml:space="preserve">
+    <value>会让锁梁晃动</value>
+  </data>
+  <data name="Locks_Dials_Part_Wheels" xml:space="preserve">
+    <value>数字轮</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Wheels" xml:space="preserve">
+    <value>用拇指拨动。每个在窗口里显示一个数字。</value>
+  </data>
+  <data name="Locks_Dials_Part_Notches" xml:space="preserve">
+    <value>套筒和缺口</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Notches" xml:space="preserve">
+    <value>每个套筒跟着它的轮转。只有在正确的数字上，缺口才在顶上。</value>
+  </data>
+  <data name="Locks_Dials_Part_Bar" xml:space="preserve">
+    <value>横杆</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Bar" xml:space="preserve">
+    <value>搁在套筒上。只有缺口全部对齐时，它才落进去。</value>
+  </data>
+  <data name="Locks_Dials_Part_Shackle" xml:space="preserve">
+    <value>锁梁</value>
+  </data>
+  <data name="Narr_Locks_Dials_Part_Shackle" xml:space="preserve">
+    <value>U 形的锁环。横杆一落下，弹簧就把它顶起来。</value>
+  </data>
 </root>

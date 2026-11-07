@@ -1,0 +1,60 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:locks="using:Lemon.Inside.Book.Chapters.Locks"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Locks.LocksDiagramPageView"
+                         x:DataType="locks:LocksDiagramPageViewModel">
+    <!-- A right page of the Locks chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="locks:PinsSpread">
+                            <locks:PinsDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Insert="{Binding Insert}" Wrong="{Binding Wrong}" AutomationProperties.Name="{loc:Localize Locks_Pins_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="locks:KeysSpread">
+                            <locks:KeysDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Cuts="{Binding Cuts}" Depths="{Binding Depths}" Steepest="{Binding Steepest}" AutomationProperties.Name="{loc:Localize Locks_Keys_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="locks:MasterSpread">
+                            <locks:MasterDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     KeyChoice="{Binding KeyChoice}" AutomationProperties.Name="{loc:Localize Locks_Master_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="locks:BindingSpread">
+                            <locks:BindingDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Set="{Binding Set}" Perfect="{Binding Perfect}" AutomationProperties.Name="{loc:Localize Locks_Binding_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="locks:LeverSpread">
+                            <locks:LeverDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Angle="{Binding Angle}" Wrong="{Binding Wrong}" AutomationProperties.Name="{loc:Localize Locks_Lever_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="locks:DialsSpread">
+                            <locks:DialsDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     First="{Binding First}" Second="{Binding Second}" Third="{Binding Third}" Sloppy="{Binding Sloppy}"
+                                     AutomationProperties.Name="{loc:Localize Locks_Dials_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>
