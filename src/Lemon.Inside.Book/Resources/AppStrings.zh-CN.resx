@@ -1917,4 +1917,7 @@
   <data name="Narr_Watch_Movement_Part_Dial" xml:space="preserve">
     <value>从正面唯一看得到的部分，在整条传动链的最后。</value>
   </data>
+  <data name="Picture_KeyHint" xml:space="preserve">
+    <value>方向键：选部件 · 回车：看说明 · Esc：关闭</value>
+  </data>
 </root>

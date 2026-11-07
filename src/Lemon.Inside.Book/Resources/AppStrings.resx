@@ -1917,4 +1917,7 @@
   <data name="Narr_Watch_Movement_Part_Dial" xml:space="preserve">
     <value>The only part you see from the front, at the end of the whole chain.</value>
   </data>
+  <data name="Picture_KeyHint" xml:space="preserve">
+    <value>Arrow keys: pick a part · Enter: what it is · Esc: close</value>
+  </data>
 </root>

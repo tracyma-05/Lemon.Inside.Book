@@ -1,3 +1,4 @@
+using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Book.Shell.Explore.Lessons;
@@ -169,6 +170,46 @@ public sealed class WalkthroughTests
             }
         }
 
+        window.Close();
+    }
+
+    [AvaloniaFact]
+    public void FromTheKeyboard_ArrowsPickParts_EnterOpensTheCard_EscapeClosesIt_AndThePageStays()
+    {
+        var (window, model) = OpenAt("Watch");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Watch");
+        var page = BookContents.SpreadPage(chapter, 2);
+        model.GoToPage(page);
+        Frames(3);
+        var spread = (Spread)model.Pages[page + 1].GetType().GetProperty("Spread")!.GetValue(model.Pages[page + 1])!;
+        var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+        Assert.True(picture.Focusable);
+        picture.Focus(Avalonia.Input.NavigationMethod.Tab);
+        Frames(2);
+        Snapshot(window, "keyboard-focus");
+
+        void Press(Avalonia.Input.Key key)
+        {
+            window.KeyPress(key, Avalonia.Input.RawInputModifiers.None, Avalonia.Input.PhysicalKey.None, null);
+            window.KeyRelease(key, Avalonia.Input.RawInputModifiers.None, Avalonia.Input.PhysicalKey.None, null);
+            Frames(2);
+        }
+
+        Press(Avalonia.Input.Key.Right);
+        Assert.Equal(spread.Parts[0], picture.HoveredPart);
+        Press(Avalonia.Input.Key.Right);
+        Assert.Equal(spread.Parts[1], picture.HoveredPart);
+        Press(Avalonia.Input.Key.Left);
+        Press(Avalonia.Input.Key.Left);
+        Assert.Equal(spread.Parts[^1], picture.HoveredPart);
+        Assert.Equal(page, model.PageIndex);
+
+        Press(Avalonia.Input.Key.Enter);
+        Assert.Equal(spread.Parts[^1], spread.Card.Id);
+        Snapshot(window, "keyboard-card");
+        Press(Avalonia.Input.Key.Escape);
+        Assert.Null(spread.Card.Id);
+        Assert.Null(picture.HoveredPart);
         window.Close();
     }
 

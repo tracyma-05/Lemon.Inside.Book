@@ -1,10 +1,12 @@
 using System.Globalization;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Data;
 using Avalonia.Input;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Book.Shell.Infrastructures.Localization;
 
 namespace Lemon.Inside.Book.Controls;
 
@@ -13,7 +15,8 @@ namespace Lemon.Inside.Book.Controls;
 /// …); a walkthrough sets <see cref="Highlight"/> to one of those names and the picture rings that part on top. Since
 /// the marks come from the drawing itself, a ring always sits on the part as it is drawn now, wherever the reader has
 /// turned or moved it. The parts named in <see cref="PartNames"/> can also be pointed at (their name shows) and clicked,
-/// which sets <see cref="SelectedPart"/>; the spread's card then explains that part.
+/// which sets <see cref="SelectedPart"/>; the spread's card then explains that part. From the keyboard: Tab to the
+/// picture, the arrow keys step through its parts, Enter or Space opens the card and Escape closes it.
 /// </summary>
 public abstract class Picture : Control
 {
@@ -34,6 +37,7 @@ public abstract class Picture : Control
     private static readonly IPen Ring = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xFF, 0xE6, 0x8A)), 2.5);
     private static readonly IPen SelectedRing = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x8E, 0xC5, 0xFF)), 2);
     private static readonly IPen HoverRing = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xC8, 0xFF, 0xFF, 0xFF)), 1.4);
+    private static readonly IPen FocusPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x8E, 0xC5, 0xFF)), 2);
     private static readonly IBrush SelectedFill = new ImmutableSolidColorBrush(Color.FromArgb(0x1C, 0x8E, 0xC5, 0xFF));
     private static readonly IBrush PillBrush = new ImmutableSolidColorBrush(Color.FromArgb(0xE0, 0x0B, 0x10, 0x19));
 
@@ -41,9 +45,13 @@ public abstract class Picture : Control
     private string? _hover;
     private Point? _pressedAt;
 
+    /// <summary>Focus came from the keyboard: the outline and the key hint show.</summary>
+    private bool _keyboard;
+
     static Picture()
     {
         AffectsRender<Picture>(HighlightProperty, SelectedPartProperty, PartNamesProperty);
+        FocusableProperty.OverrideDefaultValue<Picture>(true);
     }
 
     /// <summary>The part to ring, by the name the picture marks it with; null for none.</summary>
@@ -60,7 +68,7 @@ public abstract class Picture : Control
         set => SetValue(SelectedPartProperty, value);
     }
 
-    /// <summary>The parts that can be clicked, with the name shown while the pointer is over one.</summary>
+    /// <summary>The parts that can be clicked, in the spread's order, with the name shown while one is pointed at.</summary>
     public IReadOnlyDictionary<string, string>? PartNames
     {
         get => GetValue(PartNamesProperty);
@@ -69,6 +77,9 @@ public abstract class Picture : Control
 
     /// <summary>The parts marked in the last frame (for the tests).</summary>
     internal IReadOnlyCollection<string> MarkedParts => _parts.Keys;
+
+    /// <summary>The part the pointer or the keyboard is on (for the tests).</summary>
+    internal string? HoveredPart => _hover;
 
     public sealed override void Render(DrawingContext context)
     {
@@ -82,12 +93,26 @@ public abstract class Picture : Control
         if (_hover is { } hover && hover != SelectedPart && _parts.TryGetValue(hover, out var under))
         {
             DrawRing(context, under, HoverRing, null);
-            if (PartNames?.TryGetValue(hover, out var name) == true) DrawName(context, name, under);
         }
 
         if (Highlight is { } id && _parts.TryGetValue(id, out var box))
         {
             DrawRing(context, box, Ring, null);
+        }
+
+        // Names go on top of every ring.
+        if (_hover is { } named && _parts.TryGetValue(named, out var at) && PartNames?.TryGetValue(named, out var name) == true)
+        {
+            DrawName(context, name, at);
+        }
+
+        if (_keyboard && IsFocused)
+        {
+            context.DrawRectangle(null, FocusPen, new Rect(Bounds.Size).Deflate(2), 10, 10);
+            if (_hover is null && PartNames is { Count: > 0 })
+            {
+                DrawPill(context, LocalizationService.Instance.GetString("Picture_KeyHint"), new Point(12, Bounds.Height - 12), above: true);
+            }
         }
     }
 
@@ -157,10 +182,73 @@ public abstract class Picture : Control
     /// <summary>The middle of a part's ring (for the tests).</summary>
     internal Point? PartCentre(string id) => _parts.TryGetValue(id, out var box) ? Ellipse(box).Center : null;
 
+    /// <summary>Moves the keyboard's choice to the next (or previous) part on show, in the spread's order, round and round.</summary>
+    internal bool Step(int direction)
+    {
+        var shown = PartNames?.Keys.Where(_parts.ContainsKey).ToList() ?? [];
+        if (shown.Count == 0) return false;
+
+        var at = _hover is null ? -1 : shown.IndexOf(_hover);
+        var next = at < 0 ? (direction > 0 ? 0 : shown.Count - 1) : (at + direction + shown.Count) % shown.Count;
+        SetHover(shown[next]);
+        return true;
+    }
+
+    protected override void OnGotFocus(FocusChangedEventArgs e)
+    {
+        base.OnGotFocus(e);
+        _keyboard = e.NavigationMethod == NavigationMethod.Tab;
+        InvalidateVisual();
+    }
+
+    protected override void OnLostFocus(FocusChangedEventArgs e)
+    {
+        base.OnLostFocus(e);
+        _keyboard = false;
+        SetHover(null);
+        InvalidateVisual();
+    }
+
+    /// <summary>
+    /// The arrow keys step through the parts, Enter or Space opens (or closes) the card of the part reached, and Escape
+    /// lets go. Handled here, they do not also turn the page; Tab moves on as usual.
+    /// </summary>
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        base.OnKeyDown(e);
+        if (e.Handled) return;
+
+        switch (e.Key)
+        {
+            case Key.Right or Key.Down:
+                e.Handled = StepByKey(1);
+                break;
+            case Key.Left or Key.Up:
+                e.Handled = StepByKey(-1);
+                break;
+            case Key.Enter or Key.Space when _hover is { } id:
+                SelectedPart = id == SelectedPart ? null : id;
+                e.Handled = true;
+                break;
+            case Key.Escape when SelectedPart is not null || _hover is not null:
+                SelectedPart = null;
+                SetHover(null);
+                e.Handled = true;
+                break;
+        }
+    }
+
+    private bool StepByKey(int direction)
+    {
+        _keyboard = true;
+        return Step(direction);
+    }
+
     protected override void OnPointerPressed(PointerPressedEventArgs e)
     {
         base.OnPointerPressed(e);
         _pressedAt = e.GetPosition(this);
+        _keyboard = false;
     }
 
     protected override void OnPointerMoved(PointerEventArgs e)
@@ -188,7 +276,7 @@ public abstract class Picture : Control
     protected override void OnPointerExited(PointerEventArgs e)
     {
         base.OnPointerExited(e);
-        SetHover(null);
+        if (!_keyboard) SetHover(null);
     }
 
     private void SetHover(string? id)
@@ -197,6 +285,9 @@ public abstract class Picture : Control
 
         _hover = id;
         Cursor = id is null ? null : new Cursor(StandardCursorType.Hand);
+
+        // Screen readers can read the name of the part reached as the picture's help text.
+        AutomationProperties.SetHelpText(this, id is not null && PartNames?.TryGetValue(id, out var name) == true ? name : null);
         InvalidateVisual();
     }
 
@@ -218,15 +309,28 @@ public abstract class Picture : Control
     private void DrawName(DrawingContext context, string name, Rect box)
     {
         var ring = Ellipse(box);
-        var text = new FormattedText(name, CultureInfo.CurrentCulture, FlowDirection.LeftToRight, Typeface.Default, 12, Brushes.White);
+        var above = ring.Top - Words(name).Height - 14 >= 4;
+        DrawPill(context, name, new Point(ring.Center.X, above ? ring.Top - 6 : ring.Bottom + 6), above, centred: true);
+    }
+
+    /// <summary>
+    /// White words in a dark pill at <paramref name="at"/> (its bottom edge when <paramref name="above"/>, else its top;
+    /// its middle when <paramref name="centred"/>, else its left), kept inside the picture.
+    /// </summary>
+    private void DrawPill(DrawingContext context, string words, Point at, bool above, bool centred = false)
+    {
+        var text = Words(words);
         var width = text.Width + 16;
         var height = text.Height + 8;
-        var x = Math.Clamp(ring.Center.X - (width / 2), 4, Math.Max(4, Bounds.Width - width - 4));
-        var y = ring.Top - height - 6 >= 4 ? ring.Top - height - 6 : Math.Min(ring.Bottom + 6, Bounds.Height - height - 4);
+        var x = Math.Clamp(centred ? at.X - (width / 2) : at.X, 4, Math.Max(4, Bounds.Width - width - 4));
+        var y = Math.Clamp(above ? at.Y - height : at.Y, 4, Math.Max(4, Bounds.Height - height - 4));
         var pill = new Rect(x, y, width, height);
         context.DrawRectangle(PillBrush, null, pill, height / 2, height / 2);
         context.DrawText(text, new Point(pill.X + 8, pill.Y + 4));
     }
+
+    private static FormattedText Words(string words) =>
+        new(words, CultureInfo.CurrentCulture, FlowDirection.LeftToRight, Typeface.Default, 12, Brushes.White);
 
     /// <summary>The ring round a part's box: just outside it, never smaller than a finger tip, kept inside the picture.</summary>
     private Rect Ellipse(Rect box)
