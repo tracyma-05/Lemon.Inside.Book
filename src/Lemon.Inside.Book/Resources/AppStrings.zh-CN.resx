@@ -1920,4 +1920,1189 @@
   <data name="Picture_KeyHint" xml:space="preserve">
     <value>方向键：选部件 · 回车：看说明 · Esc：关闭</value>
   </data>
+  <data name="Chapter_Bicycle" xml:space="preserve">
+    <value>自行车</value>
+  </data>
+  <data name="Bicycle_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Bicycle_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Bicycle_TeethCount" xml:space="preserve">
+    <value>{0} 个齿</value>
+  </data>
+  <data name="Bicycle_Newtons" xml:space="preserve">
+    <value>{0} 牛</value>
+  </data>
+  <data name="Bicycle_Kilograms" xml:space="preserve">
+    <value>{0} 千克</value>
+  </data>
+  <data name="Bicycle_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Bicycle_Kmh" xml:space="preserve">
+    <value>{0} 千米/时</value>
+  </data>
+  <data name="Bicycle_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Bicycle_Millimetres" xml:space="preserve">
+    <value>{0} 毫米</value>
+  </data>
+  <data name="Bicycle_Wheel_Title" xml:space="preserve">
+    <value>站在钢丝上</value>
+  </data>
+  <data name="Bicycle_Wheel_P1" xml:space="preserve">
+    <value>自行车轮子看上去单薄得驮不动人：细细的轮圈，靠几十根跟毛衣针差不多粗的钢丝连到轮毂上。钢丝推不了东西（一推就弯），拉起来却很结实。所以造轮子时，每根辐条都先被拉得紧紧的，像吉他的弦。</value>
+  </data>
+  <data name="Bicycle_Wheel_P2" xml:space="preserve">
+    <value>人一坐上去，体重就把轮毂往地面压。轮毂下方的辐条（轮圈在那里被地面稍稍压扁）少了一些拉力，其余的几乎不变。原本四面八方互相抵消的拉力不再平衡，多出来的那一点就把你托住了。轮子往前滚，每根辐条轮流转到下面去。</value>
+  </data>
+  <data name="Bicycle_Wheel_Deeper" xml:space="preserve">
+    <value>辐条装得太松，重物会把下面几根的拉力全部抵消：它们松垮下来，那里的轮圈没有东西拉住，轮子就可能变形。正下方那根辐条少掉的拉力只有负载的五分之一左右，其余由旁边的几根分担。</value>
+  </data>
+  <data name="Bicycle_Wheel_Load" xml:space="preserve">
+    <value>轮子承受的重量</value>
+  </data>
+  <data name="Bicycle_Wheel_Tension" xml:space="preserve">
+    <value>辐条装得多紧</value>
+  </data>
+  <data name="Bicycle_Wheel_Readout" xml:space="preserve">
+    <value>最下面的辐条现在拉力 {0} 牛，原来是 {1} 牛。</value>
+  </data>
+  <data name="Bicycle_Wheel_Slack" xml:space="preserve">
+    <value>下面的辐条松了：那里的轮圈没有东西拉住，轮子可能会变形。</value>
+  </data>
+  <data name="Bicycle_Wheel_Picture" xml:space="preserve">
+    <value>负重的轮子慢慢滚动，辐条的颜色表示拉力大小</value>
+  </data>
+  <data name="Bicycle_Wheel_TopPull" xml:space="preserve">
+    <value>最上面的辐条：{0} 牛</value>
+  </data>
+  <data name="Bicycle_Wheel_BottomPull" xml:space="preserve">
+    <value>最下面的辐条：{0} 牛</value>
+  </data>
+  <data name="Bicycle_Wheel_BottomSlack" xml:space="preserve">
+    <value>最下面的辐条：松了！</value>
+  </data>
+  <data name="Bicycle_Wheel_KeySlack" xml:space="preserve">
+    <value>松</value>
+  </data>
+  <data name="Bicycle_Wheel_KeyTight" xml:space="preserve">
+    <value>紧</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_01" xml:space="preserve">
+    <value>每根辐条都是一根细钢丝，在轮毂和轮圈之间绷得紧紧的。车上没人的时候，它们的拉力都一样。</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_02" xml:space="preserve">
+    <value>现在给轮子加上重量。它把轮毂往地面压。</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_03" xml:space="preserve">
+    <value>看下面的辐条：拉力比原来小了。上面的辐条还是拉得一样紧，合起来就把轮毂提住了。</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_04" xml:space="preserve">
+    <value>轮到你了：把辐条放松，再加重量，直到最下面的辐条松掉。</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_05" xml:space="preserve">
+    <value>那么，到底是什么托住了轮毂？</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz1" xml:space="preserve">
+    <value>所有辐条都在拉，只是下面的拉得少了</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz2" xml:space="preserve">
+    <value>下面的辐条像柱子一样把它顶起来</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz3" xml:space="preserve">
+    <value>只有最上面那根，像绳子一样吊着</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Hub" xml:space="preserve">
+    <value>轮毂</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Hub" xml:space="preserve">
+    <value>轮子中间，套在车轴上。每根辐条都拉着它，重量也压在它上面。</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Rim" xml:space="preserve">
+    <value>轮圈</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Rim" xml:space="preserve">
+    <value>装轮胎的那个圈。辐条从四面八方往里拉，让它又圆又结实。</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Bottom" xml:space="preserve">
+    <value>下面的辐条</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Bottom" xml:space="preserve">
+    <value>轮圈被路面压着的地方，这几根辐条少了一些拉力。</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Top" xml:space="preserve">
+    <value>上面的辐条</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Top" xml:space="preserve">
+    <value>它们拉得跟原来一样紧，于是比下面的多出了一点点力。</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Load" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Load" xml:space="preserve">
+    <value>骑车人压在这个轮子上的重量，把轮毂往地面压。</value>
+  </data>
+  <data name="Bicycle_Chain_Title" xml:space="preserve">
+    <value>从脚到轮子</value>
+  </data>
+  <data name="Bicycle_Chain_P1" xml:space="preserve">
+    <value>脚踏带动一个带齿的大轮子，叫“牙盘”。链条绕过它，再绕过后轮上的小齿轮。链条的每一节都卡在两个齿之间的缝里，打不了滑：牙盘转过多少个齿，后面的小齿轮也转过同样多个齿。</value>
+  </data>
+  <data name="Bicycle_Chain_P2" xml:space="preserve">
+    <value>所以，牙盘的齿数是小齿轮的两倍，脚踏转一圈，后轮就转两圈。自行车就是这样跑过人的：腿转得慢，轮子却转得快，轮子每转一圈，车就往前滚两米多。</value>
+  </data>
+  <data name="Bicycle_Chain_Deeper" xml:space="preserve">
+    <value>脚踏转一圈后轮转的圈数 = 牙盘齿数 ÷ 小齿轮齿数。再乘以轮子滚一圈的距离（公路车约 2.1 米），就是脚踏一圈能走多远。链条一节长半英寸（12.7 毫米），全世界的自行车几乎都一样。</value>
+  </data>
+  <data name="Bicycle_Chain_Chainring" xml:space="preserve">
+    <value>牙盘的齿数</value>
+  </data>
+  <data name="Bicycle_Chain_Sprocket" xml:space="preserve">
+    <value>后面小齿轮的齿数</value>
+  </data>
+  <data name="Bicycle_Chain_Readout" xml:space="preserve">
+    <value>脚踏每转一圈，后轮转 {0} 圈，车往前走 {1} 米。</value>
+  </data>
+  <data name="Bicycle_Chain_Picture" xml:space="preserve">
+    <value>自行车的脚踏、牙盘、链条和后面的小齿轮，按真实比例画</value>
+  </data>
+  <data name="Bicycle_Chain_Ring" xml:space="preserve">
+    <value>牙盘</value>
+  </data>
+  <data name="Bicycle_Chain_Cog" xml:space="preserve">
+    <value>小齿轮</value>
+  </data>
+  <data name="Bicycle_Chain_PedalTurns" xml:space="preserve">
+    <value>脚踏：{0} 圈</value>
+  </data>
+  <data name="Bicycle_Chain_WheelTurns" xml:space="preserve">
+    <value>后轮：{0} 圈</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_01" xml:space="preserve">
+    <value>脚踩脚踏，脚踏带着大牙盘转。</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_02" xml:space="preserve">
+    <value>链条把转动传到后面。前面每转过一个齿，就拉动一节链条；每一节链条，又让后面转过一个齿。</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_03" xml:space="preserve">
+    <value>现在把后面换成很小的齿轮。脚踏转一圈，轮子转四圈。</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_04" xml:space="preserve">
+    <value>轮到你了：让脚踏转一圈，后轮正好转三圈。</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_05" xml:space="preserve">
+    <value>三十六个齿的牙盘带十八个齿的小齿轮。脚踏转一圈，后轮转几圈？</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz1" xml:space="preserve">
+    <value>一圈</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz2" xml:space="preserve">
+    <value>两圈</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz3" xml:space="preserve">
+    <value>十八圈</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Pedal" xml:space="preserve">
+    <value>脚踏和曲柄</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Pedal" xml:space="preserve">
+    <value>脚就踩在这里。曲柄是一根杠杆：脚踏离中心越远，转动的力越大。</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Chainring" xml:space="preserve">
+    <value>牙盘</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Chainring" xml:space="preserve">
+    <value>脚踏带着转的大齿轮。齿越多，脚踏转一圈拉动的链条越长。</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Chain" xml:space="preserve">
+    <value>链条</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Chain" xml:space="preserve">
+    <value>由钢片和滚子一节节连成。上面那段被拉得紧紧的，真正干活的就是这一段。</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Sprocket" xml:space="preserve">
+    <value>后面的小齿轮</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Sprocket" xml:space="preserve">
+    <value>固定在后轮上。齿越少，同样一段链条让轮子转的圈数越多。</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Wheel" xml:space="preserve">
+    <value>后轮</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Wheel" xml:space="preserve">
+    <value>它跟着小齿轮一起转，每转一圈，车往前滚两米多。</value>
+  </data>
+  <data name="Bicycle_Hill_Title" xml:space="preserve">
+    <value>爬坡要换挡</value>
+  </data>
+  <data name="Bicycle_Hill_P1" xml:space="preserve">
+    <value>腿最舒服的是一种固定的节奏，大约每分钟踩八十圈，而且能长时间使出的力气就那么多。在平路上，大挡（后面用小齿轮）把这个节奏变成不错的速度。到了上坡，同样的挡位要用的力气，谁都撑不了多久。</value>
+  </data>
+  <data name="Bicycle_Hill_P2" xml:space="preserve">
+    <value>所以后轮上叠着一排大小不同的小齿轮，还有一个“拨链器”把链条从一个拨到另一个上。换到大一点的齿轮，脚踏一圈走的路短了，同样的节奏骑得慢了，可每一脚的力气也轻了同样多。爬得慢，但爬得上去。</value>
+  </data>
+  <data name="Bicycle_Hill_Deeper" xml:space="preserve">
+    <value>上坡时，大部分力气花在把人和车往上抬：8% 的坡，每往前走 100 米就要升高 8 米。爬完一段坡做的功，用哪个挡都差不多；挡位只决定你是用很多下轻的踩踏，还是很少几下重的。</value>
+  </data>
+  <data name="Bicycle_Hill_Slope" xml:space="preserve">
+    <value>路的坡度</value>
+  </data>
+  <data name="Bicycle_Hill_Gear" xml:space="preserve">
+    <value>后面的齿轮（1 = 最小）</value>
+  </data>
+  <data name="Bicycle_Hill_GearValue" xml:space="preserve">
+    <value>第 {0} 个：{1} 个齿</value>
+  </data>
+  <data name="Bicycle_Hill_Readout" xml:space="preserve">
+    <value>每分钟踩 {0} 圈，车速 {1} 千米/时，每一脚大约要踩出 {2} 千克的力（{3} 瓦）。</value>
+  </data>
+  <data name="Bicycle_Hill_Picture" xml:space="preserve">
+    <value>骑车人爬坡，旁边是后面的一排齿轮和每一脚要用的力</value>
+  </data>
+  <data name="Bicycle_Hill_Rhythm" xml:space="preserve">
+    <value>每分钟踩 {0} 圈</value>
+  </data>
+  <data name="Bicycle_Hill_Cassette" xml:space="preserve">
+    <value>后面的齿轮</value>
+  </data>
+  <data name="Bicycle_Hill_Push" xml:space="preserve">
+    <value>每一脚的力：约 {0} 千克</value>
+  </data>
+  <data name="Bicycle_Hill_Easy" xml:space="preserve">
+    <value>能一直骑下去</value>
+  </data>
+  <data name="Bicycle_Hill_TooHard" xml:space="preserve">
+    <value>太费劲，撑不住！</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_01" xml:space="preserve">
+    <value>在平路上用中间的挡，骑车人用轻松的节奏踩着，骑得很快。</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_02" xml:space="preserve">
+    <value>现在路开始上坡。挡位不变，每一脚都得用大得多的力。看下面那根条。</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_03" xml:space="preserve">
+    <value>轮到你了：把后面换到大一点的齿轮，直到每一脚的力能一直撑下去。</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_04" xml:space="preserve">
+    <value>节奏没变，车却慢了。每一脚走的路短了，所以力气也轻了。</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_05" xml:space="preserve">
+    <value>从坡上飞快地冲下来，你会用哪个齿轮？</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz1" xml:space="preserve">
+    <value>最小的那个</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz2" xml:space="preserve">
+    <value>最大的那个</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz3" xml:space="preserve">
+    <value>哪个都一样</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Cassette" xml:space="preserve">
+    <value>后面的一排齿轮</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Cassette" xml:space="preserve">
+    <value>从十一个齿到三十六个齿。拨链器把链条往旁边拨，从一个换到另一个。</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Rider" xml:space="preserve">
+    <value>骑车人</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Rider" xml:space="preserve">
+    <value>不论哪个挡，都保持同样的节奏：大约每分钟八十圈。</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Slope" xml:space="preserve">
+    <value>坡度</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Slope" xml:space="preserve">
+    <value>沿着路每走一百米，路面升高多少米。</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Push" xml:space="preserve">
+    <value>踩踏的力</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Push" xml:space="preserve">
+    <value>每一脚要用多大的力，和骑车人长时间能使出的力相比。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Title" xml:space="preserve">
+    <value>不蹬也能滑</value>
+  </data>
+  <data name="Bicycle_Freewheel_P1" xml:space="preserve">
+    <value>小三轮车的脚踏直接连在轮子上：轮子转，脚就得跟着转。自行车却可以停下不蹬，照样往前滑。秘密藏在后轮的花鼓里，而且你听得见：滑行时那一串“咔咔”声。</value>
+  </data>
+  <data name="Bicycle_Freewheel_P2" xml:space="preserve">
+    <value>小齿轮带着里面一个零件转，叫“驱动座”，上面装着两个小棘爪，被弹簧往外顶着。包在外面的轮壳内壁有一圈像锯齿一样的齿。往前蹬，棘爪卡住一个齿，拖着轮子转。轮子比脚踏转得快时，齿就从棘爪底下滑过去，把棘爪顶起来又让它弹下去：咔、咔、咔。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Deeper" xml:space="preserve">
+    <value>每个齿一边是缓坡，一边是陡面。棘爪只能顶在陡面上，所以花鼓只能朝一个方向传递转动的力：这叫单向离合器。同样的道理（棘轮）也用在棘轮扳手里，还有机械表的上弦机构里。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Pedals" xml:space="preserve">
+    <value>蹬踏（每秒几圈）</value>
+  </data>
+  <data name="Bicycle_Freewheel_Still" xml:space="preserve">
+    <value>不蹬</value>
+  </data>
+  <data name="Bicycle_Freewheel_Forward" xml:space="preserve">
+    <value>向前 {0}</value>
+  </data>
+  <data name="Bicycle_Freewheel_Back" xml:space="preserve">
+    <value>向后 {0}</value>
+  </data>
+  <data name="Bicycle_Freewheel_Hint" xml:space="preserve">
+    <value>把脚踏放慢、停下，或者往后蹬，看看棘爪怎么动。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Picture" xml:space="preserve">
+    <value>剖开的后花鼓：驱动座上的棘爪和轮壳里的棘齿</value>
+  </data>
+  <data name="Bicycle_Freewheel_Driver" xml:space="preserve">
+    <value>驱动座</value>
+  </data>
+  <data name="Bicycle_Freewheel_Click" xml:space="preserve">
+    <value>咔！</value>
+  </data>
+  <data name="Bicycle_Freewheel_Driving" xml:space="preserve">
+    <value>棘爪顶住：脚踏带着轮子转</value>
+  </data>
+  <data name="Bicycle_Freewheel_Coasting" xml:space="preserve">
+    <value>滑行：齿从棘爪底下滑过</value>
+  </data>
+  <data name="Bicycle_Freewheel_Speeds" xml:space="preserve">
+    <value>脚踏 {0} · 轮子 {1}（每秒圈数）</value>
+  </data>
+  <data name="Bicycle_Freewheel_Clicks" xml:space="preserve">
+    <value>已经咔了 {0} 下</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_01" xml:space="preserve">
+    <value>小齿轮带着里面这个零件转，它叫驱动座。现在你在蹬，驱动座带着轮子转。</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_02" xml:space="preserve">
+    <value>原理是这样的：一个小棘爪被弹簧往外顶，卡住齿的陡面，拖着轮子走。</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_03" xml:space="preserve">
+    <value>轮到你了：停下不蹬，看轮子照样转。</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_04" xml:space="preserve">
+    <value>现在轮子跑在前面了。齿从棘爪底下滑过去，把它顶起来，又让它弹回去。</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_05" xml:space="preserve">
+    <value>那么，滑行时听到的咔咔声是怎么来的？</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz1" xml:space="preserve">
+    <value>棘爪越过每个齿时弹下来</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz2" xml:space="preserve">
+    <value>链条在齿轮上打滑</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz3" xml:space="preserve">
+    <value>刹车在蹭</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Driver" xml:space="preserve">
+    <value>驱动座</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Driver" xml:space="preserve">
+    <value>由小齿轮带动，也就是由你的脚踏带动。棘爪就装在它上面。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Pawl" xml:space="preserve">
+    <value>棘爪</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Pawl" xml:space="preserve">
+    <value>一个能摆动的小卡子。它能顶住齿的陡面，碰到缓坡就滑过去。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Ratchet" xml:space="preserve">
+    <value>轮壳和棘齿</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Ratchet" xml:space="preserve">
+    <value>花鼓的外壳，用辐条连到轮圈上。它内壁的齿都朝着同一个方向。</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Spring" xml:space="preserve">
+    <value>弹簧</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Spring" xml:space="preserve">
+    <value>一直把棘爪往外顶，让它落进每一个齿缝。</value>
+  </data>
+  <data name="Bicycle_Brakes_Title" xml:space="preserve">
+    <value>停下来</value>
+  </data>
+  <data name="Bicycle_Brakes_P1" xml:space="preserve">
+    <value>刹车把刹车皮夹在轮圈上，或者夹住花鼓上的碟片。摩擦把速度变成热量；长下坡之后，轮圈会烫得摸不得。停下来要的距离比你想的长：速度快一倍，刹车距离就要变成四倍，因为要变成热量的动能是原来的四倍。</value>
+  </data>
+  <data name="Bicycle_Brakes_P2" xml:space="preserve">
+    <value>一刹车，身体还想往前冲，体重就往前倒到前轮上，后轮上的重量变少了。轮胎抓地的力，最多跟它被压在地上的力成正比，所以前刹能让你停得猛得多，而后刹稍一用力，后轮就抱死打滑。不过前刹捏得太猛，后轮会翘起来。</value>
+  </data>
+  <data name="Bicycle_Brakes_Deeper" xml:space="preserve">
+    <value>有多少重量挪到前轮上，取决于重心的高度和前后轮距之比。这里重心高度和轮距一样长，平时前轮承担 40% 的重量：减速超过约 0.6 g，全部重量都压在前轮上，车就会往前翻。汽车又长又低，所以能刹得猛得多也不会翻。</value>
+  </data>
+  <data name="Bicycle_Brakes_Use" xml:space="preserve">
+    <value>用哪个刹车</value>
+  </data>
+  <data name="Bicycle_Brakes_Both" xml:space="preserve">
+    <value>前后都用</value>
+  </data>
+  <data name="Bicycle_Brakes_Front" xml:space="preserve">
+    <value>只用前刹</value>
+  </data>
+  <data name="Bicycle_Brakes_Rear" xml:space="preserve">
+    <value>只用后刹</value>
+  </data>
+  <data name="Bicycle_Brakes_Speed" xml:space="preserve">
+    <value>刹车前的速度</value>
+  </data>
+  <data name="Bicycle_Brakes_Strength" xml:space="preserve">
+    <value>刹得多猛</value>
+  </data>
+  <data name="Bicycle_Brakes_G" xml:space="preserve">
+    <value>{0} g</value>
+  </data>
+  <data name="Bicycle_Brakes_Readout" xml:space="preserve">
+    <value>{0} 米停下。刹车时前轮承担 {1}% 的重量。</value>
+  </data>
+  <data name="Bicycle_Brakes_Skid" xml:space="preserve">
+    <value>后轮抱死打滑了！它最多只能以 {0} g 减速，要 {1} 米才停得下。</value>
+  </data>
+  <data name="Bicycle_Brakes_Flip" xml:space="preserve">
+    <value>后轮翘起来了：人会从车把上翻出去！刹得轻一点。</value>
+  </data>
+  <data name="Bicycle_Brakes_Picture" xml:space="preserve">
+    <value>骑车人从高速刹车，标出每个轮胎承担的重量和刹车距离</value>
+  </data>
+  <data name="Bicycle_Brakes_Line" xml:space="preserve">
+    <value>刹车！</value>
+  </data>
+  <data name="Bicycle_Brakes_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Bicycle_Brakes_Skidding" xml:space="preserve">
+    <value>后轮打滑</value>
+  </data>
+  <data name="Bicycle_Brakes_Over" xml:space="preserve">
+    <value>翻车了！</value>
+  </data>
+  <data name="Bicycle_Brakes_Braking" xml:space="preserve">
+    <value>正在刹车</value>
+  </data>
+  <data name="Bicycle_Brakes_Stopped" xml:space="preserve">
+    <value>停住了</value>
+  </data>
+  <data name="Bicycle_Brakes_LoadKey" xml:space="preserve">
+    <value>箭头：重量在两个轮胎上怎么分</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_01" xml:space="preserve">
+    <value>捏下刹车，刹车皮就夹住轮子。摩擦把速度变成热量。</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_02" xml:space="preserve">
+    <value>轮到你了：刹得一样猛，但速度加倍。看看要走多远。</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_03" xml:space="preserve">
+    <value>速度快一倍，距离变成四倍。再看这个圆点，它是你体重的中心：减速时它往前倾，前轮被压得更重。</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_04" xml:space="preserve">
+    <value>现在只用后刹。后轮上没剩多少重量，抓不住地，就打滑了。</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_05" xml:space="preserve">
+    <value>那么，哪个刹车能让你在最短的距离里停下？</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz1" xml:space="preserve">
+    <value>前刹</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz2" xml:space="preserve">
+    <value>后刹</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz3" xml:space="preserve">
+    <value>都一样</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Pads" xml:space="preserve">
+    <value>刹车</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Pads" xml:space="preserve">
+    <value>两块刹车皮夹住轮圈。摩擦把车的运动变成热量。</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Front" xml:space="preserve">
+    <value>前轮</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Front" xml:space="preserve">
+    <value>刹车时它承担的重量越来越多，所以能抓得更牢。</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Rear" xml:space="preserve">
+    <value>后轮</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Rear" xml:space="preserve">
+    <value>刹车让它上面的重量变少，所以后刹一用力就容易打滑。</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Centre" xml:space="preserve">
+    <value>重心</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Centre" xml:space="preserve">
+    <value>人和车重量的中心。它的位置很高，所以刹车时往前倾得这么厉害。</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Distance" xml:space="preserve">
+    <value>刹车距离</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Distance" xml:space="preserve">
+    <value>从开始刹车到停住，车往前走了多远。</value>
+  </data>
+  <data name="Bicycle_Steer_Title" xml:space="preserve">
+    <value>车把为什么会自己回正</value>
+  </data>
+  <data name="Bicycle_Steer_P1" xml:space="preserve">
+    <value>扶着车座推着自行车走，稍稍让它歪一下：车把会自己往歪的那边转，车又直起来了。这很大程度上来自车头的形状。前叉绕着一条斜线转，叫“转向轴”，这条线碰到地面的地方，比轮胎着地的地方稍微靠前一点。</value>
+  </data>
+  <data name="Bicycle_Steer_P2" xml:space="preserve">
+    <value>这段距离叫“拖曳距”。它的作用就像超市手推车的小轮子，轮子总拖在转轴的后面：轮子一被撞歪，地面就把着地点拉回到转轴后面，轮子又摆正了。没有拖曳距，轮子不会自己回来；着地点跑到前面，它就一下子甩到一边去。</value>
+  </data>
+  <data name="Bicycle_Steer_Deeper" xml:space="preserve">
+    <value>拖曳距 =（车轮半径 × cos 车头角 − 前叉偏移）÷ sin 车头角。公路车大约 55–65 毫米：小了，转向轻但发飘；大了，转向沉、转得慢。拖曳距只是原因之一：轮子的转动、重量的分布也有帮助；骑车人保持平衡，主要还是靠往要倒的那边稍微打一点车把。</value>
+  </data>
+  <data name="Bicycle_Steer_HeadAngle" xml:space="preserve">
+    <value>车头角（转向轴的倾角）</value>
+  </data>
+  <data name="Bicycle_Steer_Offset" xml:space="preserve">
+    <value>前叉偏移（前叉往前弯多少）</value>
+  </data>
+  <data name="Bicycle_Steer_Readout" xml:space="preserve">
+    <value>拖曳距：{0} 毫米，{1}。</value>
+  </data>
+  <data name="Bicycle_Steer_Unstable" xml:space="preserve">
+    <value>轮子会甩开（不稳）</value>
+  </data>
+  <data name="Bicycle_Steer_Light" xml:space="preserve">
+    <value>转向轻，有点发飘</value>
+  </data>
+  <data name="Bicycle_Steer_Steady" xml:space="preserve">
+    <value>稳</value>
+  </data>
+  <data name="Bicycle_Steer_Heavy" xml:space="preserve">
+    <value>转向沉，转得慢</value>
+  </data>
+  <data name="Bicycle_Steer_Picture" xml:space="preserve">
+    <value>从侧面看车头，画出转向轴和拖曳距；下方是从上往下看前轮被颠一下之后的样子</value>
+  </data>
+  <data name="Bicycle_Steer_Axis" xml:space="preserve">
+    <value>转向轴</value>
+  </data>
+  <data name="Bicycle_Steer_TrailLabel" xml:space="preserve">
+    <value>拖曳距 {0} 毫米</value>
+  </data>
+  <data name="Bicycle_Steer_FromAbove" xml:space="preserve">
+    <value>从上往下看前轮（拖曳距放大 3 倍画）</value>
+  </data>
+  <data name="Bicycle_Steer_Ahead" xml:space="preserve">
+    <value>前进方向 →</value>
+  </data>
+  <data name="Bicycle_Steer_Bump" xml:space="preserve">
+    <value>颠！</value>
+  </data>
+  <data name="Bicycle_Steer_Turned" xml:space="preserve">
+    <value>轮子偏了 {0}°</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_01" xml:space="preserve">
+    <value>车把和前叉绕着这条斜线转，它叫转向轴。</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_02" xml:space="preserve">
+    <value>顺着这条线往下看到路面。它落在轮胎着地点稍前一点。这段距离就是拖曳距。</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_03" xml:space="preserve">
+    <value>现在从上往下看：每隔几秒，路上颠一下，把轮子撞歪，拖曳距又把它拉正。</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_04" xml:space="preserve">
+    <value>轮到你了：把转向轴调得更陡，前叉往前弯得更多，直到拖曳距变成负数。</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_05" xml:space="preserve">
+    <value>超市手推车前面的小轮子，为什么总在转轴的后面？</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz1" xml:space="preserve">
+    <value>这样它会自己摆正</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz2" xml:space="preserve">
+    <value>这样滚得更快</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz3" xml:space="preserve">
+    <value>只是为了好看</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Axis" xml:space="preserve">
+    <value>转向轴</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Axis" xml:space="preserve">
+    <value>前叉转动时绕的那条线，穿过车头管。它的倾斜角叫车头角。</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Contact" xml:space="preserve">
+    <value>轮胎着地点</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Contact" xml:space="preserve">
+    <value>路面推轮子的地方。有拖曳距时，它在转向轴落地点的后面。</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Trail" xml:space="preserve">
+    <value>拖曳距</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Trail" xml:space="preserve">
+    <value>从轮胎着地点往前，到转向轴碰到路面的地方。它把轮子拉正。</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Fork" xml:space="preserve">
+    <value>前叉</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Fork" xml:space="preserve">
+    <value>夹着前轮。它往前弯，把车轴挪到转向轴前面，拖曳距就变短了。</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Top" xml:space="preserve">
+    <value>从上看的前轮</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Top" xml:space="preserve">
+    <value>它绕着转向轴的落地点，也就是蓝点转。颠簸把它撞歪，拖曳距又让它回来。</value>
+  </data>
+  <data name="Chapter_Boats" xml:space="preserve">
+    <value>船为什么不沉</value>
+  </data>
+  <data name="Boats_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Boats_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Boats_Density" xml:space="preserve">
+    <value>{0} 千克/立方米</value>
+  </data>
+  <data name="Boats_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Boats_Tonnes" xml:space="preserve">
+    <value>{0} 吨</value>
+  </data>
+  <data name="Boats_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Boats_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Boats_Material_Cork" xml:space="preserve">
+    <value>软木</value>
+  </data>
+  <data name="Boats_Material_Pine" xml:space="preserve">
+    <value>松木</value>
+  </data>
+  <data name="Boats_Material_Oak" xml:space="preserve">
+    <value>橡木</value>
+  </data>
+  <data name="Boats_Material_Ice" xml:space="preserve">
+    <value>冰</value>
+  </data>
+  <data name="Boats_Material_Rubber" xml:space="preserve">
+    <value>橡胶</value>
+  </data>
+  <data name="Boats_Material_Brick" xml:space="preserve">
+    <value>砖</value>
+  </data>
+  <data name="Boats_Float_Title" xml:space="preserve">
+    <value>把水推开</value>
+  </data>
+  <data name="Boats_Float_P1" xml:space="preserve">
+    <value>把一块木头放进水里，它会把一部分水挤开。水也往回推它，方向朝上；木块沉得越深，挤开的水越多，水往上推得越用力。等这股推力跟木块的重量一样大，木块就不再往下沉了。</value>
+  </data>
+  <data name="Boats_Float_P2" xml:space="preserve">
+    <value>这股推力有多大？正好等于被挤开的那些水的重量。一块木头如果只有同样大小的水一半重，就有一半泡在水里；冰差不多跟水一样重，几乎整块都在水下。比同样大小的水还重的东西，怎么也挤不开足够的水，只好沉下去。</value>
+  </data>
+  <data name="Boats_Float_Deeper" xml:space="preserve">
+    <value>密度就是每立方米有多重：水约 1000 千克，松木约 500，砖约 1900。漂着的东西泡在水下的比例，等于它的密度除以水的密度。所以冰山露出海面的只有大约十分之一。</value>
+  </data>
+  <data name="Boats_Float_Density" xml:space="preserve">
+    <value>木块有多重（密度）</value>
+  </data>
+  <data name="Boats_Float_DensityLike" xml:space="preserve">
+    <value>{0} 千克/立方米（像{1}）</value>
+  </data>
+  <data name="Boats_Float_Readout" xml:space="preserve">
+    <value>它漂着，有 {0}% 泡在水下。</value>
+  </data>
+  <data name="Boats_Float_Sinks" xml:space="preserve">
+    <value>它沉下去了：就算整块没进水里，挤开的水也没有它自己重。</value>
+  </data>
+  <data name="Boats_Float_Picture" xml:space="preserve">
+    <value>水箱里的一块木块，标出它的重量和水的推力</value>
+  </data>
+  <data name="Boats_Float_WeightLabel" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="Boats_Float_LiftLabel" xml:space="preserve">
+    <value>水的推力</value>
+  </data>
+  <data name="Boats_Float_Under" xml:space="preserve">
+    <value>{0}% 在水下</value>
+  </data>
+  <data name="Boats_Float_OnFloor" xml:space="preserve">
+    <value>沉到底了：比它能挤开的水还重</value>
+  </data>
+  <data name="Narr_Boats_Float_01" xml:space="preserve">
+    <value>一块松木放进水里。它稳下来时，大约一半在水面下。</value>
+  </data>
+  <data name="Narr_Boats_Float_02" xml:space="preserve">
+    <value>水往上推它，推力正好等于被挤开的水的重量。在这里，这股力跟木块的重量一样大。</value>
+  </data>
+  <data name="Narr_Boats_Float_03" xml:space="preserve">
+    <value>轮到你了：让木块比水还重，看它沉下去。</value>
+  </data>
+  <data name="Narr_Boats_Float_04" xml:space="preserve">
+    <value>冰只比水轻一点点，所以它漂着的时候，几乎整块都在水面下。</value>
+  </data>
+  <data name="Narr_Boats_Float_05" xml:space="preserve">
+    <value>一块东西漂着，有四分之一在水下。跟同样大小的水比，它有多重？</value>
+  </data>
+  <data name="Boats_Float_Quiz1" xml:space="preserve">
+    <value>四分之一那么重</value>
+  </data>
+  <data name="Boats_Float_Quiz2" xml:space="preserve">
+    <value>四倍那么重</value>
+  </data>
+  <data name="Boats_Float_Quiz3" xml:space="preserve">
+    <value>一样重</value>
+  </data>
+  <data name="Boats_Float_Part_Block" xml:space="preserve">
+    <value>木块</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Block" xml:space="preserve">
+    <value>它一直往下沉，直到挤开的水跟它一样重。</value>
+  </data>
+  <data name="Boats_Float_Part_Waterline" xml:space="preserve">
+    <value>水线</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Waterline" xml:space="preserve">
+    <value>水面碰到木块的地方。它下面的部分，都是被挤开的水的位置。</value>
+  </data>
+  <data name="Boats_Float_Part_Weight" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Weight" xml:space="preserve">
+    <value>重力把木块往下拉，就像拉在它的正中间。</value>
+  </data>
+  <data name="Boats_Float_Part_Lift" xml:space="preserve">
+    <value>水的推力</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Lift" xml:space="preserve">
+    <value>水往上推，作用在水下那部分的中间。木块沉得越深，它就越大。</value>
+  </data>
+  <data name="Boats_Pressure_Title" xml:space="preserve">
+    <value>推力从哪里来</value>
+  </data>
+  <data name="Boats_Pressure_P1" xml:space="preserve">
+    <value>水是有重量的，所以池底的水被上面所有的水压着。这种挤压就是压强，它从四面八方压在水里的任何东西上。每往下一米，大约多出空气压强的十分之一：潜到十米深，耳朵就能感觉到。</value>
+  </data>
+  <data name="Boats_Pressure_P2" xml:space="preserve">
+    <value>把一个方块按在水里。水也压着它的侧面，不过两边的力互相抵消。底面比顶面深，被压得更厉害；水往上推底面的力，比往下压顶面的力大。两者的差就是水往上的推力，而且不管方块沉多深，这个差都一样。</value>
+  </data>
+  <data name="Boats_Pressure_Deeper" xml:space="preserve">
+    <value>压强 = 水的密度 × 重力 × 深度。底面和顶面的压强差 = 密度 × 重力 × 方块的高度；再乘以一个面的面积，就是 密度 × 重力 × 方块的体积，也就是它挤开的水的重量，正好是上一节说的。</value>
+  </data>
+  <data name="Boats_Pressure_Depth" xml:space="preserve">
+    <value>方块顶面的深度</value>
+  </data>
+  <data name="Boats_Pressure_Readout" xml:space="preserve">
+    <value>顶面 {0} 千帕，底面 {1} 千帕：两者的差把方块往上推，推力 {2} 千牛，在哪个深度都一样。</value>
+  </data>
+  <data name="Boats_Pressure_Picture" xml:space="preserve">
+    <value>水下的一个方块，箭头表示水压在每个面上有多大</value>
+  </data>
+  <data name="Boats_Pressure_Tick" xml:space="preserve">
+    <value>{0} 米 · {1} 千帕</value>
+  </data>
+  <data name="Boats_Pressure_Kpa" xml:space="preserve">
+    <value>{0} 千帕</value>
+  </data>
+  <data name="Boats_Pressure_Lift" xml:space="preserve">
+    <value>往上的推力：{0} 千牛</value>
+  </data>
+  <data name="Narr_Boats_Pressure_01" xml:space="preserve">
+    <value>一个方块被按在水下。箭头表示水压在每个面上有多大。</value>
+  </data>
+  <data name="Narr_Boats_Pressure_02" xml:space="preserve">
+    <value>底面比顶面深，所以水往上压底面，比往下压顶面更用力。</value>
+  </data>
+  <data name="Narr_Boats_Pressure_03" xml:space="preserve">
+    <value>轮到你了：把方块往下放，深过八米。</value>
+  </data>
+  <data name="Narr_Boats_Pressure_04" xml:space="preserve">
+    <value>每个箭头都变长了，可侧面还是互相抵消，底面比顶面多出来的，还是那么多。</value>
+  </data>
+  <data name="Narr_Boats_Pressure_05" xml:space="preserve">
+    <value>跟两米深比，在十米深的地方，水把方块往上推的力有多大？</value>
+  </data>
+  <data name="Boats_Pressure_Quiz1" xml:space="preserve">
+    <value>更大</value>
+  </data>
+  <data name="Boats_Pressure_Quiz2" xml:space="preserve">
+    <value>一样大</value>
+  </data>
+  <data name="Boats_Pressure_Quiz3" xml:space="preserve">
+    <value>更小</value>
+  </data>
+  <data name="Boats_Pressure_Part_Cube" xml:space="preserve">
+    <value>方块</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Cube" xml:space="preserve">
+    <value>每边一米半。它挤开了三吨半的水。</value>
+  </data>
+  <data name="Boats_Pressure_Part_Top" xml:space="preserve">
+    <value>顶面受的压力</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Top" xml:space="preserve">
+    <value>上面的水往下压顶面。越深压得越重。</value>
+  </data>
+  <data name="Boats_Pressure_Part_Bottom" xml:space="preserve">
+    <value>底面受的压力</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Bottom" xml:space="preserve">
+    <value>比顶面深，所以被压得更重，方向朝上。浮力就是从这里来的。</value>
+  </data>
+  <data name="Boats_Pressure_Part_Sides" xml:space="preserve">
+    <value>侧面受的压力</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Sides" xml:space="preserve">
+    <value>越往下越大，但左右两边一样大，互相抵消了。</value>
+  </data>
+  <data name="Boats_Hull_Title" xml:space="preserve">
+    <value>钢铁做的船</value>
+  </data>
+  <data name="Boats_Hull_P1" xml:space="preserve">
+    <value>钢差不多有水的八倍重，一块钢扔进水里立刻就沉。可是巨大的轮船都是钢做的。诀窍在形状：同样的钢做成船壳，里面围着一大片空气。这样它能挤开的水比那块钢多得多，水还远没漫到船舷，就已经够了。</value>
+  </data>
+  <data name="Boats_Hull_P2" xml:space="preserve">
+    <value>往船上装货，它就沉得更深，挤开更多的水，直到挤开的水跟船和货加起来一样重。船头上画着刻度，船员一看就知道船吃水多深。装得太多，海水漫上甲板灌进去，船就会像那块钢一样沉下去。</value>
+  </data>
+  <data name="Boats_Hull_Deeper" xml:space="preserve">
+    <value>这条船长 12 米、宽 4 米，船壳用了 6 吨钢。船上每多一吨，它就多沉约 2 厘米（一吨海水铺满 48 平方米，大约 2 厘米深）。1.5 米高的船舷最多能挤开约 74 吨海水，所以它大约能载 68 吨货。真正的船身上都画着载重线，免得装得太深。</value>
+  </data>
+  <data name="Boats_Hull_Cargo" xml:space="preserve">
+    <value>船上的货</value>
+  </data>
+  <data name="Boats_Hull_Readout" xml:space="preserve">
+    <value>它吃水 {0} 米，船舷还有 {1} 米露在水面上。</value>
+  </data>
+  <data name="Boats_Hull_Sinks" xml:space="preserve">
+    <value>太多了！海水漫上甲板，船沉了。它大约只能载 {0} 吨。</value>
+  </data>
+  <data name="Boats_Hull_Picture" xml:space="preserve">
+    <value>装着货箱的小钢船，船头有吃水刻度；海底有一块同样重的钢</value>
+  </data>
+  <data name="Boats_Hull_Lump" xml:space="preserve">
+    <value>{0} 吨钢做成一块</value>
+  </data>
+  <data name="Boats_Hull_Sinking" xml:space="preserve">
+    <value>沉了！</value>
+  </data>
+  <data name="Boats_Hull_Draft" xml:space="preserve">
+    <value>吃水：{0} 米</value>
+  </data>
+  <data name="Boats_Hull_Weighs" xml:space="preserve">
+    <value>船加货：{0} 吨</value>
+  </data>
+  <data name="Narr_Boats_Hull_01" xml:space="preserve">
+    <value>六吨钢做成一块：它躺在海底。</value>
+  </data>
+  <data name="Narr_Boats_Hull_02" xml:space="preserve">
+    <value>同样的六吨钢做成船壳。空着的时候它漂得很高，只在海里浸了一点点。</value>
+  </data>
+  <data name="Narr_Boats_Hull_03" xml:space="preserve">
+    <value>装上货，它就沉得深一些。船头的刻度显示有多深。</value>
+  </data>
+  <data name="Narr_Boats_Hull_04" xml:space="preserve">
+    <value>轮到你了：一直装货，直到海水漫上甲板。</value>
+  </data>
+  <data name="Narr_Boats_Hull_05" xml:space="preserve">
+    <value>同样的钢，做成一块就沉，做成船壳为什么就能浮？</value>
+  </data>
+  <data name="Boats_Hull_Quiz1" xml:space="preserve">
+    <value>它的形状能挤开多得多的水</value>
+  </data>
+  <data name="Boats_Hull_Quiz2" xml:space="preserve">
+    <value>做成船壳的钢变轻了</value>
+  </data>
+  <data name="Boats_Hull_Quiz3" xml:space="preserve">
+    <value>是海浪把它托着</value>
+  </data>
+  <data name="Boats_Hull_Part_Hull" xml:space="preserve">
+    <value>船壳</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Hull" xml:space="preserve">
+    <value>薄薄的钢围着一大片空气。按它的重量算，它能挤开非常多的水。</value>
+  </data>
+  <data name="Boats_Hull_Part_Cargo" xml:space="preserve">
+    <value>货物</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Cargo" xml:space="preserve">
+    <value>每箱五吨。每多一吨，船就多沉大约两厘米。</value>
+  </data>
+  <data name="Boats_Hull_Part_Lump" xml:space="preserve">
+    <value>钢块</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Lump" xml:space="preserve">
+    <value>把船的六吨钢做成一整块。它挤开的水还不到一立方米，远远不够。</value>
+  </data>
+  <data name="Boats_Hull_Part_Draft" xml:space="preserve">
+    <value>吃水刻度</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Draft" xml:space="preserve">
+    <value>船头上的数字，从船底往上每半米一个。水面停在哪里，就说明船吃水多深。</value>
+  </data>
+  <data name="Boats_Heel_Title" xml:space="preserve">
+    <value>歪了还能回来</value>
+  </data>
+  <data name="Boats_Heel_P1" xml:space="preserve">
+    <value>船的重量往下拉，就像拉在一个点上，那就是重心。水的推力从另一个点往上推：被挤开的那部分水的中心，叫浮心。船正着漂的时候，两点上下对齐在一条线上，船不会转。</value>
+  </data>
+  <data name="Boats_Heel_P2" xml:space="preserve">
+    <value>浪把船推歪了，低的一边往水里压得更深，高的一边露出水面。被挤开的水形状变了，浮心就往低的一边滑过去。这时往上的推力和往下的重量不在一条线上了，两股力像两只手转方向盘一样，把船扳回正。</value>
+  </data>
+  <data name="Boats_Heel_Deeper" xml:space="preserve">
+    <value>两条力线之间的横向距离叫复原力臂（GZ）。扳回来的力矩 = 船的重量 × GZ。歪得不多时，GZ 随角度变大；船越宽，浮心滑得越远，扳回来的力就越大。</value>
+  </data>
+  <data name="Boats_Heel_Angle" xml:space="preserve">
+    <value>船歪了多少</value>
+  </data>
+  <data name="Boats_Heel_Readout" xml:space="preserve">
+    <value>水的推力落在重心靠低的一侧 {0} 米处：它把船扳回正。</value>
+  </data>
+  <data name="Boats_Heel_Tips" xml:space="preserve">
+    <value>水的推力落在重心靠高的一侧 {0} 米处：它让船歪得更厉害！</value>
+  </data>
+  <data name="Boats_Heel_Upright" xml:space="preserve">
+    <value>正着：水的推力和重量在一条线上。</value>
+  </data>
+  <data name="Boats_Heel_Picture" xml:space="preserve">
+    <value>从船头方向看一条歪着的船，标出重心和被挤开的水的中心</value>
+  </data>
+  <data name="Boats_Heel_WeightLabel" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="Boats_Heel_LiftLabel" xml:space="preserve">
+    <value>水的推力</value>
+  </data>
+  <data name="Boats_Heel_Lever" xml:space="preserve">
+    <value>力臂 {0} 米</value>
+  </data>
+  <data name="Boats_Heel_Balanced" xml:space="preserve">
+    <value>在一条线上：不会转</value>
+  </data>
+  <data name="Boats_Heel_Rights" xml:space="preserve">
+    <value>两股力把船扳回正</value>
+  </data>
+  <data name="Boats_Heel_TipsOver" xml:space="preserve">
+    <value>两股力让船歪得更厉害</value>
+  </data>
+  <data name="Narr_Boats_Heel_01" xml:space="preserve">
+    <value>船正着的时候，重量从这个点往下拉，它就是重心。</value>
+  </data>
+  <data name="Narr_Boats_Heel_02" xml:space="preserve">
+    <value>水从被挤开的那部分水的中心往上推，正好在重心的下方。</value>
+  </data>
+  <data name="Narr_Boats_Heel_03" xml:space="preserve">
+    <value>轮到你了：把船推歪，超过二十度。</value>
+  </data>
+  <data name="Narr_Boats_Heel_04" xml:space="preserve">
+    <value>水的推力滑到了低的一边。这段距离就是力臂：推力和重量一起把船扳回去。</value>
+  </data>
+  <data name="Narr_Boats_Heel_05" xml:space="preserve">
+    <value>船往右歪时，水的推力往哪边移？</value>
+  </data>
+  <data name="Boats_Heel_Quiz1" xml:space="preserve">
+    <value>往右，低的那边</value>
+  </data>
+  <data name="Boats_Heel_Quiz2" xml:space="preserve">
+    <value>往左，高的那边</value>
+  </data>
+  <data name="Boats_Heel_Quiz3" xml:space="preserve">
+    <value>留在中间不动</value>
+  </data>
+  <data name="Boats_Heel_Part_Hull" xml:space="preserve">
+    <value>船体</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Hull" xml:space="preserve">
+    <value>从船头方向看。虚线框出的是被挤开的水，船一歪，它的形状就变了。</value>
+  </data>
+  <data name="Boats_Heel_Part_Weight" xml:space="preserve">
+    <value>重心</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Weight" xml:space="preserve">
+    <value>船的重量往下拉的地方。船怎么歪，它在船里的位置都不变。</value>
+  </data>
+  <data name="Boats_Heel_Part_Lift" xml:space="preserve">
+    <value>浮心</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Lift" xml:space="preserve">
+    <value>被挤开的水的中心，水从这里往上推。船一歪，它就跟着移动。</value>
+  </data>
+  <data name="Boats_Heel_Part_Lever" xml:space="preserve">
+    <value>复原力臂</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Lever" xml:space="preserve">
+    <value>往上的推力和往下的重量之间的横向距离。它越长，船扳回来的劲越大。</value>
+  </data>
+  <data name="Boats_Stability_Title" xml:space="preserve">
+    <value>稳当，还是头重脚轻</value>
+  </data>
+  <data name="Boats_Stability_P1" xml:space="preserve">
+    <value>船能不能自己扳回来，要看一场比赛。船一歪，水的推力滑向低的一边；可重心越高，它也越往低的一边甩出去。要是重心甩得比推力还远，两股力就会让船歪得更厉害，最后翻过去。</value>
+  </data>
+  <data name="Boats_Stability_P2" xml:space="preserve">
+    <value>所以重东西要放低：发动机和燃油装在船底深处，有时还在最底下压上几吨重物，叫压舱物。船造宽一点也有帮助，因为一歪，推力移动得远得多。把货高高堆在甲板上，或者所有人都挤到高处，都可能让一条稳当的船翻掉。</value>
+  </data>
+  <data name="Boats_Stability_Deeper" xml:space="preserve">
+    <value>歪得不多时，水的推力好像总是来自船上方的一个固定点，叫稳心。稳心在重心以上的高度叫稳心高度 GM，一个数就能说明问题：为正，船会自己扳回来（越大越硬朗）；为负，船立不住。对箱形的船，稳心在被挤开的水的中心以上 宽度² ÷（12 × 吃水深度）处。</value>
+  </data>
+  <data name="Boats_Stability_Height" xml:space="preserve">
+    <value>重心离船底多高</value>
+  </data>
+  <data name="Boats_Stability_Beam" xml:space="preserve">
+    <value>船的宽度</value>
+  </data>
+  <data name="Boats_Stability_Readout" xml:space="preserve">
+    <value>稳心高度 {0} 米：每次被浪推歪都能扳回来。</value>
+  </data>
+  <data name="Boats_Stability_TopHeavy" xml:space="preserve">
+    <value>稳心高度 {0} 米：头重脚轻！它立不住。</value>
+  </data>
+  <data name="Boats_Stability_Picture" xml:space="preserve">
+    <value>从船头方向看一条在浪里摇晃的船，下面的曲线表示每个角度它扳回来的劲有多大</value>
+  </data>
+  <data name="Boats_Stability_Capsized" xml:space="preserve">
+    <value>翻船了！</value>
+  </data>
+  <data name="Boats_Stability_Tipped" xml:space="preserve">
+    <value>歪了 {0}°</value>
+  </data>
+  <data name="Boats_Stability_RightsItself" xml:space="preserve">
+    <value>能扳回来</value>
+  </data>
+  <data name="Boats_Stability_TipsFurther" xml:space="preserve">
+    <value>越歪越厉害</value>
+  </data>
+  <data name="Boats_Stability_Lever" xml:space="preserve">
+    <value>力臂</value>
+  </data>
+  <data name="Narr_Boats_Stability_01" xml:space="preserve">
+    <value>一条船在浪里摇晃。每来一个浪就把它推歪，它又摆回来。</value>
+  </data>
+  <data name="Narr_Boats_Stability_02" xml:space="preserve">
+    <value>这条曲线表示每个角度下它扳回来的劲有多大。在线上面它能回来；在线下面，它就会翻。</value>
+  </data>
+  <data name="Narr_Boats_Stability_03" xml:space="preserve">
+    <value>轮到你了：把重量堆高，或者把船变窄，直到它头重脚轻。</value>
+  </data>
+  <data name="Narr_Boats_Stability_04" xml:space="preserve">
+    <value>现在把船加宽。同样高的货，它又稳了。</value>
+  </data>
+  <data name="Narr_Boats_Stability_05" xml:space="preserve">
+    <value>船上最重的东西应该放在哪里？</value>
+  </data>
+  <data name="Boats_Stability_Quiz1" xml:space="preserve">
+    <value>放低，放在船底深处</value>
+  </data>
+  <data name="Boats_Stability_Quiz2" xml:space="preserve">
+    <value>放在甲板上</value>
+  </data>
+  <data name="Boats_Stability_Quiz3" xml:space="preserve">
+    <value>放在桅杆顶上</value>
+  </data>
+  <data name="Boats_Stability_Part_Boat" xml:space="preserve">
+    <value>船</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Boat" xml:space="preserve">
+    <value>一开始宽六米。甲板上堆起的货会把重心抬高。</value>
+  </data>
+  <data name="Boats_Stability_Part_Weight" xml:space="preserve">
+    <value>重心</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Weight" xml:space="preserve">
+    <value>它越高，船一歪，它就往低的一边甩得越远。</value>
+  </data>
+  <data name="Boats_Stability_Part_Curve" xml:space="preserve">
+    <value>复原力臂曲线</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Curve" xml:space="preserve">
+    <value>从正立到八十度，每个角度下的复原力臂。白点是船现在的样子。</value>
+  </data>
+  <data name="Boats_Submarine_Title" xml:space="preserve">
+    <value>故意沉下去</value>
+  </data>
+  <data name="Boats_Submarine_P1" xml:space="preserve">
+    <value>潜艇造得比它整个没进水里时挤开的水稍轻一点，所以什么都不做的时候，它是浮着的。要下潜，就打开阀门，让海水灌进压载水舱。它没变大，却变重了；一旦比同样大小的水还重，它就沉下去。</value>
+  </data>
+  <data name="Boats_Submarine_P2" xml:space="preserve">
+    <value>要浮上来，就用压缩空气把水舱里的水吹出去，它又变轻了。中间有一个很窄的平衡点：正好跟它挤开的水一样重，它就停在原地。可只是勉强停住：多几升、少几升，它都会慢慢往上漂或往下沉，所以艇员要不停地调整水舱，还要像鱼一样用鳍来控制方向。</value>
+  </data>
+  <data name="Boats_Submarine_Deeper" xml:space="preserve">
+    <value>跟水面上的船不同，潜艇没进水里后就没有水线可以停：再往下沉，水的推力也不会变大，所以没有什么能把它拉回到某个深度。鱼也有同样的问题，它们靠鱼鳔解决：一个装气的袋子，可以充一点或放掉一点。</value>
+  </data>
+  <data name="Boats_Submarine_Ballast" xml:space="preserve">
+    <value>压载水舱装了多少水</value>
+  </data>
+  <data name="Boats_Submarine_Hangs" xml:space="preserve">
+    <value>它的重量是完全没入时挤开的水的 {0}%：它停在原地，只是勉强停住。</value>
+  </data>
+  <data name="Boats_Submarine_Floats" xml:space="preserve">
+    <value>它的重量是完全没入时挤开的水的 {0}%：比水轻，所以浮上去。</value>
+  </data>
+  <data name="Boats_Submarine_Sinks" xml:space="preserve">
+    <value>它的重量是完全没入时挤开的水的 {0}%：比水重，所以沉下去。</value>
+  </data>
+  <data name="Boats_Submarine_Picture" xml:space="preserve">
+    <value>六十米深的海里的一艘潜艇，压载水舱装了一部分水，旁边是深度表</value>
+  </data>
+  <data name="Boats_Submarine_OnSeabed" xml:space="preserve">
+    <value>沉到海底了</value>
+  </data>
+  <data name="Boats_Submarine_Surfaced" xml:space="preserve">
+    <value>浮在水面</value>
+  </data>
+  <data name="Boats_Submarine_Hanging" xml:space="preserve">
+    <value>停在水中</value>
+  </data>
+  <data name="Boats_Submarine_Sinking" xml:space="preserve">
+    <value>正在下沉</value>
+  </data>
+  <data name="Boats_Submarine_Rising" xml:space="preserve">
+    <value>正在上浮</value>
+  </data>
+  <data name="Boats_Submarine_Depth" xml:space="preserve">
+    <value>深 {0} 米</value>
+  </data>
+  <data name="Narr_Boats_Submarine_01" xml:space="preserve">
+    <value>水舱里全是空气，潜艇比它能挤开的水轻，所以浮在水面上。</value>
+  </data>
+  <data name="Narr_Boats_Submarine_02" xml:space="preserve">
+    <value>现在给压载水舱灌满水。潜艇比它挤开的水重了，于是往下沉。</value>
+  </data>
+  <data name="Narr_Boats_Submarine_03" xml:space="preserve">
+    <value>轮到你了：给水舱灌水，灌到潜艇跟它挤开的水正好一样重。</value>
+  </data>
+  <data name="Narr_Boats_Submarine_04" xml:space="preserve">
+    <value>看深度表：现在它停住了，或者漂得很慢。更深的水不会把它推回来，所以只能靠人来配平。</value>
+  </data>
+  <data name="Narr_Boats_Submarine_05" xml:space="preserve">
+    <value>要浮上来，潜艇会怎么做？</value>
+  </data>
+  <data name="Boats_Submarine_Quiz1" xml:space="preserve">
+    <value>往水舱里再灌海水</value>
+  </data>
+  <data name="Boats_Submarine_Quiz2" xml:space="preserve">
+    <value>用压缩空气把水吹出去</value>
+  </data>
+  <data name="Boats_Submarine_Quiz3" xml:space="preserve">
+    <value>把螺旋桨关掉</value>
+  </data>
+  <data name="Boats_Submarine_Part_Sub" xml:space="preserve">
+    <value>潜艇</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Sub" xml:space="preserve">
+    <value>它的大小不会变，所以没在水下时挤开的水也不会变。能变的只有它的重量。</value>
+  </data>
+  <data name="Boats_Submarine_Part_Tanks" xml:space="preserve">
+    <value>压载水舱</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Tanks" xml:space="preserve">
+    <value>灌进海水就变重下潜；用空气把水吹出去就变轻上浮。</value>
+  </data>
+  <data name="Boats_Submarine_Part_Gauge" xml:space="preserve">
+    <value>深度表</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Gauge" xml:space="preserve">
+    <value>潜艇在多深的地方，一直标到六十米深的海底。</value>
+  </data>
 </root>

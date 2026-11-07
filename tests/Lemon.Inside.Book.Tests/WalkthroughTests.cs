@@ -3,6 +3,8 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Book.Shell.Explore.Lessons;
 using Lemon.Inside.Book.Chapters;
+using Lemon.Inside.Book.Chapters.Bicycle;
+using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Watch;
@@ -21,6 +23,8 @@ public sealed class WalkthroughTests
         .. new LightShadowViewModel(narration).AllSpreads,
         .. new GearsViewModel(narration).AllSpreads,
         .. new WatchViewModel(narration).AllSpreads,
+        .. new BicycleViewModel(narration).AllSpreads,
+        .. new BoatsViewModel(narration).AllSpreads,
     ];
 
     [Fact]
@@ -93,6 +97,8 @@ public sealed class WalkthroughTests
     [InlineData("Light-Shadow")]
     [InlineData("Gears")]
     [InlineData("Watch")]
+    [InlineData("Bicycle")]
+    [InlineData("Boats")]
     public void EveryRing_SitsOnAPartThePictureDrew(string slug)
     {
         var (window, model) = OpenAt(slug);
@@ -135,6 +141,8 @@ public sealed class WalkthroughTests
     [InlineData("Light-Shadow")]
     [InlineData("Gears")]
     [InlineData("Watch")]
+    [InlineData("Bicycle")]
+    [InlineData("Boats")]
     public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
     {
         var (window, model) = OpenAt(slug);

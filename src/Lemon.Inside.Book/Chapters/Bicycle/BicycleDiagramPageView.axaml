@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:bicycle="using:Lemon.Inside.Book.Chapters.Bicycle"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Bicycle.BicycleDiagramPageView"
+                         x:DataType="bicycle:BicycleDiagramPageViewModel">
+    <!-- A right page of the Bicycle chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="bicycle:WheelSpread">
+                            <bicycle:WheelDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Tension="{Binding Tension}" Load="{Binding Load}" AutomationProperties.Name="{loc:Localize Bicycle_Wheel_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:ChainSpread">
+                            <bicycle:ChainDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Chainring="{Binding Chainring}" Sprocket="{Binding Sprocket}" AutomationProperties.Name="{loc:Localize Bicycle_Chain_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:HillSpread">
+                            <bicycle:HillDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Slope="{Binding Slope}" Sprocket="{Binding Sprocket}" AutomationProperties.Name="{loc:Localize Bicycle_Hill_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:FreewheelSpread">
+                            <bicycle:FreewheelDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     PedalSpeed="{Binding PedalSpeed}" AutomationProperties.Name="{loc:Localize Bicycle_Freewheel_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:BrakeSpread">
+                            <bicycle:BrakeDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Speed="{Binding Speed}" Strength="{Binding Strength}" Use="{Binding Use}" AutomationProperties.Name="{loc:Localize Bicycle_Brakes_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:SteerSpread">
+                            <bicycle:SteerDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     HeadAngle="{Binding HeadAngle}" Offset="{Binding Offset}" AutomationProperties.Name="{loc:Localize Bicycle_Steer_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

@@ -1,6 +1,1526 @@
 {
  "en": {
   "clips": {
+   "Narr_Bicycle_Brakes_01": {
+    "duration": 6.336,
+    "hash": "e0156b88c6f050f7",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "Squeeze the levers and the pads grip the wheels."
+     ],
+     [
+      3.833,
+      6.278,
+      "The rubbing turns your speed into heat."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_02": {
+    "duration": 6.48,
+    "hash": "5aec8c704815a064",
+    "sentences": [
+     [
+      0.05,
+      4.775,
+      "Your turn: brake just as hard, but from twice the speed."
+     ],
+     [
+      4.775,
+      6.417,
+      "Watch how far you go."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_03": {
+    "duration": 11.688,
+    "hash": "25b89baed90f51b0",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "Twice as fast, four times as far."
+     ],
+     [
+      2.722,
+      11.639,
+      "Now watch this dot, the centre of your weight: as you slow, it tips forwards, and the front tyre is pressed down harder."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_04": {
+    "duration": 6.456,
+    "hash": "35ec9120d75a8244",
+    "sentences": [
+     [
+      0.05,
+      2.306,
+      "Now use only the back brake."
+     ],
+     [
+      2.306,
+      6.389,
+      "With so little weight on it, the back wheel can't grip, and it skids."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_05": {
+    "duration": 4.344,
+    "hash": "71d06c13b443471f",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "So which brake can stop you in the shortest distance?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Centre": {
+    "duration": 7.416,
+    "hash": "7ad91fd8046a3102",
+    "sentences": [
+     [
+      0.05,
+      3.028,
+      "The middle of the weight of rider and bike."
+     ],
+     [
+      3.028,
+      7.347,
+      "It sits high up, which is why braking tips it forwards so much."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Distance": {
+    "duration": 4.008,
+    "hash": "268a481c6f2b2d93",
+    "sentences": [
+     [
+      0.05,
+      3.944,
+      "How far the bike rolls from the moment you brake until it stops."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Front": {
+    "duration": 5.016,
+    "hash": "99b37caab6f951eb",
+    "sentences": [
+     [
+      0.05,
+      4.944,
+      "While braking it carries more and more of the weight, so it can grip harder."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Pads": {
+    "duration": 5.448,
+    "hash": "6c2bcc686076e3ae",
+    "sentences": [
+     [
+      0.05,
+      2.167,
+      "Two pads squeeze the rim."
+     ],
+     [
+      2.167,
+      5.389,
+      "Friction turns the bike's motion into heat."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Rear": {
+    "duration": 4.488,
+    "hash": "2d2013c0ec6cca94",
+    "sentences": [
+     [
+      0.05,
+      4.442,
+      "Braking takes weight off it, so its brake soon makes it skid."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_01": {
+    "duration": 4.344,
+    "hash": "784d43914d7213a6",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "Your foot pushes the pedal, and the pedal turns the big chainring."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_02": {
+    "duration": 9.36,
+    "hash": "24f4c05e83d22d23",
+    "sentences": [
+     [
+      0.05,
+      2.597,
+      "The chain carries the turn backwards."
+     ],
+     [
+      2.597,
+      9.306,
+      "Each tooth that passes at the front pulls one link along, and each link moves the back one tooth on."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_03": {
+    "duration": 6.528,
+    "hash": "8f70438ce71df43f",
+    "sentences": [
+     [
+      0.05,
+      2.931,
+      "Now try a tiny sprocket at the back."
+     ],
+     [
+      2.931,
+      6.458,
+      "The wheel turns four times for each turn of the pedals."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_04": {
+    "duration": 5.688,
+    "hash": "8ace66c136c5a6c1",
+    "sentences": [
+     [
+      0.05,
+      5.625,
+      "Your turn: make the back wheel turn exactly three times for each turn of the pedals."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_05": {
+    "duration": 8.4,
+    "hash": "e76c314f065a3b5b",
+    "sentences": [
+     [
+      0.05,
+      4.583,
+      "A chainring with thirty-six teeth drives a sprocket with eighteen."
+     ],
+     [
+      4.583,
+      8.347,
+      "How many times does the wheel turn for each turn of the pedals?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Chain": {
+    "duration": 7.68,
+    "hash": "7d3d3b404802ad79",
+    "sentences": [
+     [
+      0.05,
+      3.139,
+      "Steel plates and rollers, link after link."
+     ],
+     [
+      3.139,
+      7.611,
+      "The top run is pulled tight: that is the side doing the work."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Chainring": {
+    "duration": 6.696,
+    "hash": "5e978f3226c1869b",
+    "sentences": [
+     [
+      0.05,
+      2.667,
+      "The big toothed wheel the pedals turn."
+     ],
+     [
+      2.667,
+      6.625,
+      "More teeth pull more chain round for each turn of the pedals."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Pedal": {
+    "duration": 7.032,
+    "hash": "375bb55a3bd98447",
+    "sentences": [
+     [
+      0.05,
+      1.722,
+      "Your foot pushes here."
+     ],
+     [
+      1.722,
+      6.972,
+      "The crank is a lever: the further out the pedal, the more turning force."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Sprocket": {
+    "duration": 6.648,
+    "hash": "12e5a43f73a54671",
+    "sentences": [
+     [
+      0.05,
+      1.736,
+      "Fixed to the back wheel."
+     ],
+     [
+      1.736,
+      6.583,
+      "The fewer its teeth, the more the wheel turns for the same length of chain."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Wheel": {
+    "duration": 5.4,
+    "hash": "9696070d21c29eb9",
+    "sentences": [
+     [
+      0.05,
+      5.347,
+      "It turns with the sprocket, and each of its turns rolls the bike about two metres."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_01": {
+    "duration": 7.44,
+    "hash": "a49135b80caa0145",
+    "sentences": [
+     [
+      0.05,
+      3.25,
+      "The sprocket turns this inner part, the driver."
+     ],
+     [
+      3.25,
+      7.389,
+      "Right now you are pedalling, and the driver turns the wheel."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_02": {
+    "duration": 8.376,
+    "hash": "3c0192b37a91d0a3",
+    "sentences": [
+     [
+      0.05,
+      8.306,
+      "Here is how: a little pawl, pressed outwards by a spring, catches the steep face of a tooth and drags the wheel along."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_03": {
+    "duration": 4.536,
+    "hash": "0677912752533b5c",
+    "sentences": [
+     [
+      0.05,
+      4.486,
+      "Your turn: stop pedalling, and watch the wheel keep rolling."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_04": {
+    "duration": 7.152,
+    "hash": "5b2c2db820ded491",
+    "sentences": [
+     [
+      0.05,
+      1.944,
+      "The wheel runs ahead now."
+     ],
+     [
+      1.944,
+      7.097,
+      "Its teeth slide under the pawls, push them up, and let them snap back down."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_05": {
+    "duration": 3.792,
+    "hash": "1b5398e701238458",
+    "sentences": [
+     [
+      0.05,
+      3.736,
+      "So what makes the ticking you hear when you coast?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Driver": {
+    "duration": 5.28,
+    "hash": "291599a022d07f58",
+    "sentences": [
+     [
+      0.05,
+      3.472,
+      "Turned by the sprocket, and so by your pedals."
+     ],
+     [
+      3.472,
+      5.208,
+      "It carries the pawls."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Pawl": {
+    "duration": 7.392,
+    "hash": "e7838b8235e39337",
+    "sentences": [
+     [
+      0.05,
+      2.028,
+      "A small hinged catch."
+     ],
+     [
+      2.028,
+      7.333,
+      "It can push on a tooth's steep face, but slides over its gentle slope."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Ratchet": {
+    "duration": 6.84,
+    "hash": "87689daaf489324a",
+    "sentences": [
+     [
+      0.05,
+      4.083,
+      "The outside of the hub, laced to the rim by the spokes."
+     ],
+     [
+      4.083,
+      6.778,
+      "All its teeth face the same way."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Spring": {
+    "duration": 4.512,
+    "hash": "f383c125df121b44",
+    "sentences": [
+     [
+      0.05,
+      4.458,
+      "Keeps the pawl pressed outwards, so it drops into every gap."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_01": {
+    "duration": 7.128,
+    "hash": "bbcb5265a3308957",
+    "sentences": [
+     [
+      0.05,
+      7.056,
+      "On the flat, in a middle gear, the rider turns the pedals at an easy rhythm and rolls along quickly."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_02": {
+    "duration": 7.944,
+    "hash": "c4d0505f9abdb872",
+    "sentences": [
+     [
+      0.05,
+      1.986,
+      "Now the road climbs."
+     ],
+     [
+      1.986,
+      6.653,
+      "In the same gear, each push on the pedals has to be far harder."
+     ],
+     [
+      6.653,
+      7.875,
+      "Look at the bar."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_03": {
+    "duration": 6.384,
+    "hash": "6eeebf8cee2fbd68",
+    "sentences": [
+     [
+      0.05,
+      6.319,
+      "Your turn: shift to a bigger sprocket at the back, until the push is light enough to keep up."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_04": {
+    "duration": 7.368,
+    "hash": "ecb3448858e52f8c",
+    "sentences": [
+     [
+      0.05,
+      3.778,
+      "The rhythm hasn't changed, but the bike goes slower."
+     ],
+     [
+      3.778,
+      7.306,
+      "Each push takes you less far, so it can be lighter."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_05": {
+    "duration": 3.336,
+    "hash": "f4b335512cb4c9ca",
+    "sentences": [
+     [
+      0.05,
+      3.303,
+      "Racing down a hill, which sprocket would you use?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Cassette": {
+    "duration": 6.528,
+    "hash": "864d0bd0d6ff83fc",
+    "sentences": [
+     [
+      0.05,
+      2.625,
+      "From eleven to thirty-six teeth."
+     ],
+     [
+      2.625,
+      6.458,
+      "The derailleur pushes the chain sideways from one to another."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Push": {
+    "duration": 5.856,
+    "hash": "a64aca5671ccf849",
+    "sentences": [
+     [
+      0.05,
+      5.792,
+      "How hard each push must be, against what a rider can keep up for a long climb."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Rider": {
+    "duration": 5.52,
+    "hash": "d340bf9e825cab3b",
+    "sentences": [
+     [
+      0.05,
+      5.458,
+      "Keeps the same rhythm in every gear: about eighty pedal turns a minute."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Slope": {
+    "duration": 4.416,
+    "hash": "7aea1bb4321f4bf3",
+    "sentences": [
+     [
+      0.05,
+      4.347,
+      "How many metres the road rises for every hundred metres along."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_01": {
+    "duration": 5.304,
+    "hash": "0f3de66f20904ef8",
+    "sentences": [
+     [
+      0.05,
+      5.236,
+      "The handlebars and fork turn about this tilted line, the steering axis."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_02": {
+    "duration": 7.896,
+    "hash": "fb504b2ccf9b5aa6",
+    "sentences": [
+     [
+      0.05,
+      2.153,
+      "Follow the line down to the road."
+     ],
+     [
+      2.153,
+      5.778,
+      "It lands a little ahead of where the tyre touches."
+     ],
+     [
+      5.778,
+      7.833,
+      "That gap is the trail."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_03": {
+    "duration": 7.896,
+    "hash": "5fad4eb7958422a1",
+    "sentences": [
+     [
+      0.05,
+      7.833,
+      "Now look from above: every few seconds a bump knocks the wheel sideways, and the trail pulls it straight again."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_04": {
+    "duration": 8.16,
+    "hash": "24164903a7a333f5",
+    "sentences": [
+     [
+      0.05,
+      8.097,
+      "Your turn: make the steering axis steeper and bend the fork further forward, until the trail is less than nothing."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_05": {
+    "duration": 4.752,
+    "hash": "e6934ec909a7290f",
+    "sentences": [
+     [
+      0.05,
+      4.694,
+      "Why does the little front wheel of a shopping trolley sit behind its pivot?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Axis": {
+    "duration": 5.928,
+    "hash": "2ced29d846716dc2",
+    "sentences": [
+     [
+      0.05,
+      3.708,
+      "The line the fork turns about, through the head tube."
+     ],
+     [
+      3.708,
+      5.875,
+      "Its tilt is the head angle."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Contact": {
+    "duration": 7.104,
+    "hash": "30521a2f638fb3df",
+    "sentences": [
+     [
+      0.05,
+      2.375,
+      "Where the road pushes on the wheel."
+     ],
+     [
+      2.375,
+      7.042,
+      "With trail, it lies behind the foot of the steering axis."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Fork": {
+    "duration": 7.512,
+    "hash": "d112334b11fa9b55",
+    "sentences": [
+     [
+      0.05,
+      1.819,
+      "Holds the front wheel."
+     ],
+     [
+      1.819,
+      7.444,
+      "Its bend moves the axle forward of the steering axis, which shortens the trail."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Top": {
+    "duration": 7.608,
+    "hash": "8c8f464776311088",
+    "sentences": [
+     [
+      0.05,
+      3.819,
+      "It pivots about the foot of the steering axis, the blue dot."
+     ],
+     [
+      3.819,
+      7.556,
+      "Bumps knock it sideways; the trail brings it back."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Trail": {
+    "duration": 7.032,
+    "hash": "caaf071205e6eadc",
+    "sentences": [
+     [
+      0.05,
+      5.069,
+      "From the tyre's touch forward to where the steering axis meets the road."
+     ],
+     [
+      5.069,
+      6.972,
+      "It drags the wheel straight."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_01": {
+    "duration": 8.736,
+    "hash": "9b2b29890ca0f6a0",
+    "sentences": [
+     [
+      0.05,
+      5.542,
+      "Each spoke is a thin steel wire, pulled tight between the hub and the rim."
+     ],
+     [
+      5.542,
+      8.681,
+      "With no one on the bike, they all pull the same."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_02": {
+    "duration": 4.8,
+    "hash": "2af849d9f432cc10",
+    "sentences": [
+     [
+      0.05,
+      2.097,
+      "Now put a load on the wheel."
+     ],
+     [
+      2.097,
+      4.736,
+      "It presses the hub down towards the road."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_03": {
+    "duration": 9.048,
+    "hash": "244d89df9defc652",
+    "sentences": [
+     [
+      0.05,
+      4.138,
+      "Look at the spokes underneath: they pull less than before."
+     ],
+     [
+      4.138,
+      8.986,
+      "The spokes above still pull as hard, so together they lift the hub."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_04": {
+    "duration": 6.36,
+    "hash": "756f6412c3fb1294",
+    "sentences": [
+     [
+      0.05,
+      6.306,
+      "Your turn: loosen the spokes and add weight, until the ones at the bottom go slack."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_05": {
+    "duration": 2.064,
+    "hash": "e71d5c3c206700b9",
+    "sentences": [
+     [
+      0.05,
+      2.0,
+      "So what holds the hub up?"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Bottom": {
+    "duration": 5.112,
+    "hash": "b266442985e93bd0",
+    "sentences": [
+     [
+      0.05,
+      5.042,
+      "Where the rim is squeezed against the road, these spokes lose some of their pull."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Hub": {
+    "duration": 6.216,
+    "hash": "fefdc0c8feead587",
+    "sentences": [
+     [
+      0.05,
+      2.306,
+      "The middle of the wheel, on the axle."
+     ],
+     [
+      2.306,
+      6.153,
+      "Every spoke pulls on it, and the load presses down on it."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Load": {
+    "duration": 4.56,
+    "hash": "715e3f2952a95d10",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "The rider's weight on this wheel, pressing the hub towards the ground."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Rim": {
+    "duration": 7.512,
+    "hash": "d5dffcb84595f082",
+    "sentences": [
+     [
+      0.05,
+      2.028,
+      "The ring the tyre sits on."
+     ],
+     [
+      2.028,
+      7.458,
+      "The spokes pull it inwards from all round, which keeps it round and stiff."
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Top": {
+    "duration": 5.232,
+    "hash": "cd9456ce67b3ac25",
+    "sentences": [
+     [
+      0.05,
+      5.181,
+      "They keep pulling as hard as before, so now they win, a little, against the ones below."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_01": {
+    "duration": 7.272,
+    "hash": "44ab86751cc1b408",
+    "sentences": [
+     [
+      0.05,
+      3.444,
+      "A block of pine, lowered into water."
+     ],
+     [
+      3.444,
+      7.222,
+      "It settles with about half of itself under the surface."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_02": {
+    "duration": 8.568,
+    "hash": "227ba8c1b3fe25a1",
+    "sentences": [
+     [
+      0.05,
+      5.889,
+      "The water pushes up on it, exactly as hard as the water it has pushed aside weighs."
+     ],
+     [
+      5.889,
+      8.5,
+      "Here that matches the block's weight."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_03": {
+    "duration": 5.136,
+    "hash": "ffc6b25080d9be83",
+    "sentences": [
+     [
+      0.05,
+      5.069,
+      "Your turn: make the block heavier than water, and watch it sink."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_04": {
+    "duration": 6.864,
+    "hash": "7473dd56a4708af8",
+    "sentences": [
+     [
+      0.05,
+      6.792,
+      "Ice is only a little lighter than water, so it floats with almost all of itself under the surface."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_05": {
+    "duration": 8.088,
+    "hash": "fa5959dfb16aeaa3",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "A block floats with a quarter of itself under water."
+     ],
+     [
+      3.889,
+      8.028,
+      "How heavy is it, compared with the same size of water?"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Block": {
+    "duration": 4.704,
+    "hash": "fb478b78ab834586",
+    "sentences": [
+     [
+      0.05,
+      4.653,
+      "It sinks until the water it pushes aside weighs as much as it does."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Lift": {
+    "duration": 6.552,
+    "hash": "198b2578481cf782",
+    "sentences": [
+     [
+      0.05,
+      3.847,
+      "The water pushing up, from the middle of the part under water."
+     ],
+     [
+      3.847,
+      6.5,
+      "It grows as the block sinks deeper."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Waterline": {
+    "duration": 5.688,
+    "hash": "23ddefa3695e7b34",
+    "sentences": [
+     [
+      0.05,
+      2.375,
+      "Where the surface meets the block."
+     ],
+     [
+      2.375,
+      5.639,
+      "Everything below it is water pushed out of the way."
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Weight": {
+    "duration": 4.104,
+    "hash": "efef92487e4a4ea1",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "Gravity pulling the block down, as if from its middle."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_01": {
+    "duration": 5.184,
+    "hash": "9ac1cdcbba1e03a2",
+    "sentences": [
+     [
+      0.05,
+      5.125,
+      "Upright, the weight pulls down through this point, the centre of the boat's weight."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_02": {
+    "duration": 4.992,
+    "hash": "5c0d0de7d109bf7c",
+    "sentences": [
+     [
+      0.05,
+      4.931,
+      "And the water pushes up through the centre of the water pushed aside, right under it."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_03": {
+    "duration": 4.92,
+    "hash": "f2c362e2e2cfd6ec",
+    "sentences": [
+     [
+      0.05,
+      4.861,
+      "Your turn: tip the boat well over, past twenty degrees."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_04": {
+    "duration": 7.848,
+    "hash": "32af7ce14c11de16",
+    "sentences": [
+     [
+      0.05,
+      3.028,
+      "The water's push has slid to the low side."
+     ],
+     [
+      3.028,
+      7.792,
+      "This gap is the lever: the push and the weight together turn the boat back."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_05": {
+    "duration": 3.768,
+    "hash": "b93dc947a80b2989",
+    "sentences": [
+     [
+      0.05,
+      3.708,
+      "Tipped to the right, where does the water's push move?"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Hull": {
+    "duration": 7.512,
+    "hash": "19e2ffd6d6e85f12",
+    "sentences": [
+     [
+      0.05,
+      1.597,
+      "Seen end-on."
+     ],
+     [
+      1.597,
+      7.458,
+      "The dashed outline is the water it pushes aside, which changes shape as it tips."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Lever": {
+    "duration": 7.896,
+    "hash": "e2a63bf89b40c734",
+    "sentences": [
+     [
+      0.05,
+      3.847,
+      "The sideways gap between the push up and the weight down."
+     ],
+     [
+      3.847,
+      7.847,
+      "The longer it is, the harder the boat rights itself."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Lift": {
+    "duration": 6.456,
+    "hash": "bf79f67d3cef2386",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "The middle of the water pushed aside, where the water pushes up."
+     ],
+     [
+      4.292,
+      6.403,
+      "It moves as the boat tips."
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Weight": {
+    "duration": 6.6,
+    "hash": "15fb60ec56e67e60",
+    "sentences": [
+     [
+      0.05,
+      2.472,
+      "Where the boat's weight pulls down."
+     ],
+     [
+      2.472,
+      6.542,
+      "It stays in the same place in the boat however it tips."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_01": {
+    "duration": 4.68,
+    "hash": "c82f3be6a4dee26b",
+    "sentences": [
+     [
+      0.05,
+      4.625,
+      "Six tonnes of steel as a lump: it lies on the seabed."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_02": {
+    "duration": 8.16,
+    "hash": "e87d42f2d2c52cf3",
+    "sentences": [
+     [
+      0.05,
+      3.5,
+      "The same six tonnes of steel made into a hull."
+     ],
+     [
+      3.5,
+      8.111,
+      "Empty, it floats high, barely dipping into the sea."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_03": {
+    "duration": 4.944,
+    "hash": "5b39e9194b7a6925",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "Load it, and it sits deeper."
+     ],
+     [
+      2.389,
+      4.875,
+      "The marks on the bow show how deep."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_04": {
+    "duration": 4.56,
+    "hash": "113b974c0c710228",
+    "sentences": [
+     [
+      0.05,
+      4.513,
+      "Your turn: keep loading until the sea comes over the deck."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_05": {
+    "duration": 4.584,
+    "hash": "f266db6356572934",
+    "sentences": [
+     [
+      0.05,
+      4.514,
+      "Why does the hull float, when the same steel as a lump sinks?"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Cargo": {
+    "duration": 6.624,
+    "hash": "9b9ddd41199cc0cf",
+    "sentences": [
+     [
+      0.05,
+      2.514,
+      "Crates of five tonnes each."
+     ],
+     [
+      2.514,
+      6.569,
+      "Each tonne sinks the boat about two centimetres deeper."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Draft": {
+    "duration": 7.344,
+    "hash": "5e0ce682f0868eed",
+    "sentences": [
+     [
+      0.05,
+      3.944,
+      "Numbers on the bow, every half metre up from the keel."
+     ],
+     [
+      3.944,
+      7.292,
+      "The water's edge tells how deep the boat sits."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Hull": {
+    "duration": 6.864,
+    "hash": "a39a2d8a4b09e606",
+    "sentences": [
+     [
+      0.05,
+      2.972,
+      "Thin steel round a big space of air."
+     ],
+     [
+      2.972,
+      6.806,
+      "It pushes aside a great deal of water for its weight."
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Lump": {
+    "duration": 8.208,
+    "hash": "f68faa30cfc2735c",
+    "sentences": [
+     [
+      0.05,
+      3.431,
+      "The boat's six tonnes of steel as a solid lump."
+     ],
+     [
+      3.431,
+      8.139,
+      "It pushes aside less than a cubic metre of water, far too little."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_01": {
+    "duration": 6.432,
+    "hash": "06e09dd4a6f7fd6a",
+    "sentences": [
+     [
+      0.05,
+      2.028,
+      "A cube held under water."
+     ],
+     [
+      2.028,
+      6.361,
+      "The arrows show how hard the water presses on each face."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_02": {
+    "duration": 6.264,
+    "hash": "1940aef6085e5009",
+    "sentences": [
+     [
+      0.05,
+      6.208,
+      "The bottom is deeper than the top, so the water presses up on it harder than it presses down on the top."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_03": {
+    "duration": 5.136,
+    "hash": "004d0b7d88a51526",
+    "sentences": [
+     [
+      0.05,
+      5.083,
+      "Your turn: take the cube much deeper, down past eight metres."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_04": {
+    "duration": 6.768,
+    "hash": "9964d13b94957136",
+    "sentences": [
+     [
+      0.05,
+      6.708,
+      "Every arrow grew, but the sides still cancel, and the bottom still beats the top by the same amount."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_05": {
+    "duration": 5.616,
+    "hash": "e11a53ef05be18d7",
+    "sentences": [
+     [
+      0.05,
+      5.556,
+      "At ten metres down, compared with two, how hard does the water push the cube up?"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Bottom": {
+    "duration": 6.216,
+    "hash": "5e21d978d17de47a",
+    "sentences": [
+     [
+      0.05,
+      3.611,
+      "Deeper than the top, so pressed harder, upwards."
+     ],
+     [
+      3.611,
+      6.153,
+      "This is where floating comes from."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Cube": {
+    "duration": 6.12,
+    "hash": "799c0eadfba982f0",
+    "sentences": [
+     [
+      0.05,
+      2.625,
+      "A metre and a half on each side."
+     ],
+     [
+      2.625,
+      6.056,
+      "It pushes aside three and a half tonnes of water."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Sides": {
+    "duration": 5.304,
+    "hash": "f3d73f5645bdce25",
+    "sentences": [
+     [
+      0.05,
+      5.236,
+      "Stronger lower down, but the left and right sides match, so they cancel."
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Top": {
+    "duration": 4.992,
+    "hash": "ab30d68a54080451",
+    "sentences": [
+     [
+      0.05,
+      2.861,
+      "The water above presses the top down."
+     ],
+     [
+      2.861,
+      4.931,
+      "The deeper, the harder."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_01": {
+    "duration": 6.072,
+    "hash": "c554ce3cc3be1eef",
+    "sentences": [
+     [
+      0.05,
+      2.208,
+      "A boat rolling in the waves."
+     ],
+     [
+      2.208,
+      6.0,
+      "Each wave tips it, and it swings back upright."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_02": {
+    "duration": 8.688,
+    "hash": "962f3a9cc2166820",
+    "sentences": [
+     [
+      0.05,
+      4.332,
+      "This curve shows how hard it rights itself at each angle."
+     ],
+     [
+      4.332,
+      8.639,
+      "Above the line it comes back; below it, it would go over."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_03": {
+    "duration": 6.456,
+    "hash": "5a76246ea1e7d7b5",
+    "sentences": [
+     [
+      0.05,
+      6.389,
+      "Your turn: stack the weight higher, or make the boat narrower, until it is top-heavy."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_04": {
+    "duration": 5.04,
+    "hash": "8edd0a931806319d",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "Now make the boat wider."
+     ],
+     [
+      2.014,
+      4.986,
+      "With the same high load, it is steady again."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_05": {
+    "duration": 3.096,
+    "hash": "5e32e759d8abb792",
+    "sentences": [
+     [
+      0.05,
+      3.028,
+      "Where should a ship carry its heaviest things?"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Boat": {
+    "duration": 6.888,
+    "hash": "eb4b842cea27ca93",
+    "sentences": [
+     [
+      0.05,
+      2.514,
+      "Six metres wide to start with."
+     ],
+     [
+      2.514,
+      6.833,
+      "Cargo stacked on deck raises the centre of its weight."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Curve": {
+    "duration": 6.48,
+    "hash": "5cb1fc326e98369b",
+    "sentences": [
+     [
+      0.05,
+      4.514,
+      "The righting lever at each angle, from upright to eighty degrees."
+     ],
+     [
+      4.514,
+      6.417,
+      "The white dot is the boat now."
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Weight": {
+    "duration": 5.28,
+    "hash": "7db6cc92e159ad45",
+    "sentences": [
+     [
+      0.05,
+      5.208,
+      "The higher it sits, the more it swings out to the low side when the boat tips."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_01": {
+    "duration": 7.632,
+    "hash": "5da3b1e01842a298",
+    "sentences": [
+     [
+      0.05,
+      7.583,
+      "With its tanks full of air, the submarine is lighter than the water it could push aside, so it floats on the surface."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_02": {
+    "duration": 6.48,
+    "hash": "9f029c17b54e913f",
+    "sentences": [
+     [
+      0.05,
+      2.361,
+      "Now flood the ballast tanks."
+     ],
+     [
+      2.361,
+      6.431,
+      "The submarine is heavier than its water, and down it goes."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_03": {
+    "duration": 7.032,
+    "hash": "d9eed05f33ff2c05",
+    "sentences": [
+     [
+      0.05,
+      6.958,
+      "Your turn: fill the tanks just enough that the submarine weighs exactly what its water weighs."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_04": {
+    "duration": 9.96,
+    "hash": "14c144263b403182",
+    "sentences": [
+     [
+      0.05,
+      5.097,
+      "Watch the gauge: now it hangs, or drifts very slowly."
+     ],
+     [
+      5.097,
+      9.889,
+      "Deeper water won't push it back, so it has to be balanced by hand."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_05": {
+    "duration": 3.096,
+    "hash": "38198a951978558b",
+    "sentences": [
+     [
+      0.05,
+      3.028,
+      "To come back up, what does the submarine do?"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Gauge": {
+    "duration": 5.04,
+    "hash": "1b9aea4edd27a2d3",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "How deep the submarine is, down to the seabed sixty metres below."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Sub": {
+    "duration": 8.424,
+    "hash": "1a5005acd29e941a",
+    "sentences": [
+     [
+      0.05,
+      6.042,
+      "Its size never changes, so neither does the water it pushes aside under water."
+     ],
+     [
+      6.042,
+      8.388,
+      "Only its weight can change."
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Tanks": {
+    "duration": 6.0,
+    "hash": "bf49620042d3309b",
+    "sentences": [
+     [
+      0.05,
+      5.944,
+      "Let the sea in to get heavier and dive; blow it out with air to get lighter and rise."
+     ]
+    ]
+   },
    "Narr_Common_MoveOn": {
     "duration": 3.168,
     "hash": "7f92fcf16bdadd37",
@@ -2221,6 +3741,1526 @@
  },
  "zh-CN": {
   "clips": {
+   "Narr_Bicycle_Brakes_01": {
+    "duration": 6.672,
+    "hash": "915495484829bb8c",
+    "sentences": [
+     [
+      0.1,
+      3.953,
+      "捏下刹车，刹车皮就夹住轮子。"
+     ],
+     [
+      3.903,
+      6.611,
+      "摩擦把速度变成热量。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_02": {
+    "duration": 6.36,
+    "hash": "933340326e947eac",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "轮到你了：刹得一样猛，但速度加倍。"
+     ],
+     [
+      4.222,
+      6.292,
+      "看看要走多远。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_03": {
+    "duration": 11.088,
+    "hash": "c7a8e6c9b222fe25",
+    "sentences": [
+     [
+      0.1,
+      3.425,
+      "速度快一倍，距离变成四倍。"
+     ],
+     [
+      3.375,
+      11.028,
+      "再看这个圆点，它是你体重的中心：减速时它往前倾，前轮被压得更重。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_04": {
+    "duration": 7.08,
+    "hash": "4207a1205953e1e1",
+    "sentences": [
+     [
+      0.1,
+      2.175,
+      "现在只用后刹。"
+     ],
+     [
+      2.125,
+      7.028,
+      "后轮上没剩多少重量，抓不住地，就打滑了。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_05": {
+    "duration": 4.584,
+    "hash": "9ed656405f48130b",
+    "sentences": [
+     [
+      0.1,
+      4.578,
+      "那么，哪个刹车能让你在最短的距离里停下？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Centre": {
+    "duration": 7.536,
+    "hash": "f34177eec4396593",
+    "sentences": [
+     [
+      0.1,
+      2.592,
+      "人和车重量的中心。"
+     ],
+     [
+      2.542,
+      7.472,
+      "它的位置很高，所以刹车时往前倾得这么厉害。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Distance": {
+    "duration": 4.392,
+    "hash": "b28583750adb2a7f",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "从开始刹车到停住，车往前走了多远。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Front": {
+    "duration": 5.664,
+    "hash": "2c337b3424361a16",
+    "sentences": [
+     [
+      0.1,
+      5.647,
+      "刹车时它承担的重量越来越多，所以能抓得更牢。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Pads": {
+    "duration": 6.024,
+    "hash": "a1f93d87ca05f3cf",
+    "sentences": [
+     [
+      0.1,
+      2.939,
+      "两块刹车皮夹住轮圈。"
+     ],
+     [
+      2.889,
+      5.958,
+      "摩擦把车的运动变成热量。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Brakes_Part_Rear": {
+    "duration": 6.432,
+    "hash": "9c5989277369f28d",
+    "sentences": [
+     [
+      0.1,
+      6.411,
+      "刹车让它上面的重量变少，所以后刹一用力就容易打滑。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_01": {
+    "duration": 4.032,
+    "hash": "aa7f097c37096c88",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "脚踩脚踏，脚踏带着大牙盘转。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_02": {
+    "duration": 10.224,
+    "hash": "0f933032cc7610b4",
+    "sentences": [
+     [
+      0.1,
+      2.744,
+      "链条把转动传到后面。"
+     ],
+     [
+      2.694,
+      10.153,
+      "前面每转过一个齿，就拉动一节链条；每一节链条，又让后面转过一个齿。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_03": {
+    "duration": 6.888,
+    "hash": "7ba7f8a05fec7adf",
+    "sentences": [
+     [
+      0.1,
+      3.522,
+      "现在把后面换成很小的齿轮。"
+     ],
+     [
+      3.472,
+      6.833,
+      "脚踏转一圈，轮子转四圈。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_04": {
+    "duration": 5.232,
+    "hash": "a86f99329da58fe6",
+    "sentences": [
+     [
+      0.1,
+      5.217,
+      "轮到你了：让脚踏转一圈，后轮正好转三圈。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_05": {
+    "duration": 7.752,
+    "hash": "9b9c833706345bbc",
+    "sentences": [
+     [
+      0.1,
+      4.369,
+      "三十六个齿的牙盘带十八个齿的小齿轮。"
+     ],
+     [
+      4.319,
+      7.681,
+      "脚踏转一圈，后轮转几圈？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Chain": {
+    "duration": 8.76,
+    "hash": "10f6d7a74320a570",
+    "sentences": [
+     [
+      0.1,
+      3.55,
+      "由钢片和滚子一节节连成。"
+     ],
+     [
+      3.5,
+      8.708,
+      "上面那段被拉得紧紧的，真正干活的就是这一段。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Chainring": {
+    "duration": 7.416,
+    "hash": "766e90460b6aefbc",
+    "sentences": [
+     [
+      0.1,
+      2.814,
+      "脚踏带着转的大齿轮。"
+     ],
+     [
+      2.764,
+      7.361,
+      "齿越多，脚踏转一圈拉动的链条越长。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Pedal": {
+    "duration": 7.776,
+    "hash": "38142a30b1a6faf8",
+    "sentences": [
+     [
+      0.1,
+      2.078,
+      "脚就踩在这里。"
+     ],
+     [
+      2.028,
+      7.722,
+      "曲柄是一根杠杆：脚踏离中心越远，转动的力越大。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Sprocket": {
+    "duration": 7.152,
+    "hash": "bb6d89e13cf57f26",
+    "sentences": [
+     [
+      0.1,
+      2.106,
+      "固定在后轮上。"
+     ],
+     [
+      2.056,
+      7.083,
+      "齿越少，同样一段链条让轮子转的圈数越多。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Chain_Part_Wheel": {
+    "duration": 5.976,
+    "hash": "c3432985f702f0eb",
+    "sentences": [
+     [
+      0.1,
+      5.967,
+      "它跟着小齿轮一起转，每转一圈，车往前滚两米多。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_01": {
+    "duration": 8.736,
+    "hash": "21469a1177ef43bd",
+    "sentences": [
+     [
+      0.1,
+      4.897,
+      "小齿轮带着里面这个零件转，它叫驱动座。"
+     ],
+     [
+      4.847,
+      8.667,
+      "现在你在蹬，驱动座带着轮子转。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_02": {
+    "duration": 7.872,
+    "hash": "b76c6ab387fb9b25",
+    "sentences": [
+     [
+      0.1,
+      7.856,
+      "原理是这样的：一个小棘爪被弹簧往外顶，卡住齿的陡面，拖着轮子走。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_03": {
+    "duration": 4.32,
+    "hash": "aea2cbe7c82297ba",
+    "sentences": [
+     [
+      0.1,
+      4.314,
+      "轮到你了：停下不蹬，看轮子照样转。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_04": {
+    "duration": 8.256,
+    "hash": "d4c85df7e824af71",
+    "sentences": [
+     [
+      0.1,
+      2.925,
+      "现在轮子跑在前面了。"
+     ],
+     [
+      2.875,
+      8.194,
+      "齿从棘爪底下滑过去，把它顶起来，又让它弹回去。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_05": {
+    "duration": 4.488,
+    "hash": "5f9020a9395291cb",
+    "sentences": [
+     [
+      0.1,
+      4.481,
+      "那么，滑行时听到的咔咔声是怎么来的？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Driver": {
+    "duration": 6.912,
+    "hash": "55eb28c7bd50595a",
+    "sentences": [
+     [
+      0.1,
+      4.397,
+      "由小齿轮带动，也就是由你的脚踏带动。"
+     ],
+     [
+      4.347,
+      6.861,
+      "棘爪就装在它上面。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Pawl": {
+    "duration": 7.08,
+    "hash": "ef7c46648c7cdfc6",
+    "sentences": [
+     [
+      0.1,
+      2.633,
+      "一个能摆动的小卡子。"
+     ],
+     [
+      2.583,
+      7.014,
+      "它能顶住齿的陡面，碰到缓坡就滑过去。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Ratchet": {
+    "duration": 7.392,
+    "hash": "20ffee4748ce461d",
+    "sentences": [
+     [
+      0.1,
+      3.925,
+      "花鼓的外壳，用辐条连到轮圈上。"
+     ],
+     [
+      3.875,
+      7.319,
+      "它内壁的齿都朝着同一个方向。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Freewheel_Part_Spring": {
+    "duration": 4.608,
+    "hash": "60e5a2f6ffd25899",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "一直把棘爪往外顶，让它落进每一个齿缝。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_01": {
+    "duration": 7.032,
+    "hash": "2d700d6fde65e133",
+    "sentences": [
+     [
+      0.1,
+      7.022,
+      "在平路上用中间的挡，骑车人用轻松的节奏踩着，骑得很快。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_02": {
+    "duration": 8.52,
+    "hash": "f92f897510e9fc5b",
+    "sentences": [
+     [
+      0.1,
+      2.467,
+      "现在路开始上坡。"
+     ],
+     [
+      2.417,
+      6.417,
+      "挡位不变，每一脚都得用大得多的力。"
+     ],
+     [
+      6.417,
+      8.444,
+      "看下面那根条。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_03": {
+    "duration": 7.2,
+    "hash": "37fdba41e965019a",
+    "sentences": [
+     [
+      0.1,
+      7.189,
+      "轮到你了：把后面换到大一点的齿轮，直到每一脚的力能一直撑下去。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_04": {
+    "duration": 6.72,
+    "hash": "85f50ed0f8458be2",
+    "sentences": [
+     [
+      0.1,
+      2.883,
+      "节奏没变，车却慢了。"
+     ],
+     [
+      2.833,
+      6.667,
+      "每一脚走的路短了，所以力气也轻了。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_05": {
+    "duration": 4.296,
+    "hash": "1aad6b50e4544eb0",
+    "sentences": [
+     [
+      0.1,
+      4.286,
+      "从坡上飞快地冲下来，你会用哪个齿轮？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Cassette": {
+    "duration": 7.896,
+    "hash": "b985eaab94321163",
+    "sentences": [
+     [
+      0.1,
+      3.258,
+      "从十一个齿到三十六个齿。"
+     ],
+     [
+      3.208,
+      7.833,
+      "拨链器把链条往旁边拨，从一个换到另一个。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Push": {
+    "duration": 5.856,
+    "hash": "33a275c21a8a12c9",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "每一脚要用多大的力，和骑车人长时间能使出的力相比。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Rider": {
+    "duration": 5.856,
+    "hash": "eb5970e9464bce17",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "不论哪个挡，都保持同样的节奏：大约每分钟八十圈。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Hill_Part_Slope": {
+    "duration": 4.272,
+    "hash": "45515ed715494bb8",
+    "sentences": [
+     [
+      0.1,
+      4.258,
+      "沿着路每走一百米，路面升高多少米。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_01": {
+    "duration": 4.968,
+    "hash": "243271a492f032f8",
+    "sentences": [
+     [
+      0.1,
+      4.953,
+      "车把和前叉绕着这条斜线转，它叫转向轴。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_02": {
+    "duration": 9.48,
+    "hash": "4bb24a78e8b8dd12",
+    "sentences": [
+     [
+      0.1,
+      3.425,
+      "顺着这条线往下看到路面。"
+     ],
+     [
+      3.375,
+      6.542,
+      "它落在轮胎着地点稍前一点。"
+     ],
+     [
+      6.542,
+      9.417,
+      "这段距离就是拖曳距。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_03": {
+    "duration": 8.448,
+    "hash": "d693976a59493167",
+    "sentences": [
+     [
+      0.1,
+      8.439,
+      "现在从上往下看：每隔几秒，路上颠一下，把轮子撞歪，拖曳距又把它拉正。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_04": {
+    "duration": 8.16,
+    "hash": "9b836ef1b4d03b0f",
+    "sentences": [
+     [
+      0.1,
+      8.147,
+      "轮到你了：把转向轴调得更陡，前叉往前弯得更多，直到拖曳距变成负数。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_05": {
+    "duration": 5.616,
+    "hash": "b0727299fa101ad5",
+    "sentences": [
+     [
+      0.1,
+      5.606,
+      "超市手推车前面的小轮子，为什么总在转轴的后面？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Axis": {
+    "duration": 7.344,
+    "hash": "07efea2e763a7fa5",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "前叉转动时绕的那条线，穿过车头管。"
+     ],
+     [
+      4.361,
+      7.278,
+      "它的倾斜角叫车头角。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Contact": {
+    "duration": 7.008,
+    "hash": "df9e7f248412c47a",
+    "sentences": [
+     [
+      0.1,
+      2.536,
+      "路面推轮子的地方。"
+     ],
+     [
+      2.486,
+      6.944,
+      "有拖曳距时，它在转向轴落地点的后面。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Fork": {
+    "duration": 8.04,
+    "hash": "44e5da6d2730d53e",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "夹着前轮。"
+     ],
+     [
+      1.708,
+      7.972,
+      "它往前弯，把车轴挪到转向轴前面，拖曳距就变短了。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Top": {
+    "duration": 8.4,
+    "hash": "711c32981df00294",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "它绕着转向轴的落地点，也就是蓝点转。"
+     ],
+     [
+      4.361,
+      8.347,
+      "颠簸把它撞歪，拖曳距又让它回来。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Steer_Part_Trail": {
+    "duration": 7.224,
+    "hash": "8ff4788c1abb84c0",
+    "sentences": [
+     [
+      0.1,
+      5.314,
+      "从轮胎着地点往前，到转向轴碰到路面的地方。"
+     ],
+     [
+      5.264,
+      7.153,
+      "它把轮子拉正。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_01": {
+    "duration": 10.44,
+    "hash": "87c50f784f35dd32",
+    "sentences": [
+     [
+      0.1,
+      6.536,
+      "每根辐条都是一根细钢丝，在轮毂和轮圈之间绷得紧紧的。"
+     ],
+     [
+      6.486,
+      10.389,
+      "车上没人的时候，它们的拉力都一样。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_02": {
+    "duration": 5.112,
+    "hash": "09dbb2673400e3e5",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "现在给轮子加上重量。"
+     ],
+     [
+      2.708,
+      5.056,
+      "它把轮毂往地面压。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_03": {
+    "duration": 9.408,
+    "hash": "7908621a28333842",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "看下面的辐条：拉力比原来小了。"
+     ],
+     [
+      3.694,
+      9.347,
+      "上面的辐条还是拉得一样紧，合起来就把轮毂提住了。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_04": {
+    "duration": 6.648,
+    "hash": "86993e8c12cb792e",
+    "sentences": [
+     [
+      0.1,
+      6.633,
+      "轮到你了：把辐条放松，再加重量，直到最下面的辐条松掉。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_05": {
+    "duration": 3.408,
+    "hash": "d25443f76f626e13",
+    "sentences": [
+     [
+      0.1,
+      3.397,
+      "那么，到底是什么托住了轮毂？"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Bottom": {
+    "duration": 5.64,
+    "hash": "3e55a092559d5b93",
+    "sentences": [
+     [
+      0.1,
+      5.619,
+      "轮圈被路面压着的地方，这几根辐条少了一些拉力。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Hub": {
+    "duration": 7.392,
+    "hash": "5d954bde1085ab07",
+    "sentences": [
+     [
+      0.1,
+      3.161,
+      "轮子中间，套在车轴上。"
+     ],
+     [
+      3.111,
+      7.333,
+      "每根辐条都拉着它，重量也压在它上面。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Load": {
+    "duration": 5.4,
+    "hash": "f91c1bdfafbeb4b5",
+    "sentences": [
+     [
+      0.1,
+      5.383,
+      "骑车人压在这个轮子上的重量，把轮毂往地面压。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Rim": {
+    "duration": 7.08,
+    "hash": "d50fb01c31120b4a",
+    "sentences": [
+     [
+      0.1,
+      2.272,
+      "装轮胎的那个圈。"
+     ],
+     [
+      2.222,
+      7.014,
+      "辐条从四面八方往里拉，让它又圆又结实。"
+     ]
+    ]
+   },
+   "Narr_Bicycle_Wheel_Part_Top": {
+    "duration": 5.736,
+    "hash": "becc40a163f17847",
+    "sentences": [
+     [
+      0.1,
+      5.731,
+      "它们拉得跟原来一样紧，于是比下面的多出了一点点力。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_01": {
+    "duration": 6.24,
+    "hash": "ef82108778bdaa06",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "一块松木放进水里。"
+     ],
+     [
+      2.514,
+      6.167,
+      "它稳下来时，大约一半在水面下。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_02": {
+    "duration": 9.216,
+    "hash": "590736865a6b79ed",
+    "sentences": [
+     [
+      0.1,
+      5.217,
+      "水往上推它，推力正好等于被挤开的水的重量。"
+     ],
+     [
+      5.167,
+      9.167,
+      "在这里，这股力跟木块的重量一样大。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_03": {
+    "duration": 4.8,
+    "hash": "1c353519e88044cd",
+    "sentences": [
+     [
+      0.1,
+      4.8,
+      "轮到你了：让木块比水还重，看它沉下去。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_04": {
+    "duration": 6.816,
+    "hash": "51c3d99e58adfe3d",
+    "sentences": [
+     [
+      0.1,
+      6.814,
+      "冰只比水轻一点点，所以它漂着的时候，几乎整块都在水面下。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_05": {
+    "duration": 7.608,
+    "hash": "c169a2a549bf1729",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "一块东西漂着，有四分之一在水下。"
+     ],
+     [
+      3.972,
+      7.556,
+      "跟同样大小的水比，它有多重？"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Block": {
+    "duration": 4.8,
+    "hash": "a2d423b8736b08db",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "它一直往下沉，直到挤开的水跟它一样重。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Lift": {
+    "duration": 7.512,
+    "hash": "188645983387ead9",
+    "sentences": [
+     [
+      0.1,
+      4.439,
+      "水往上推，作用在水下那部分的中间。"
+     ],
+     [
+      4.389,
+      7.458,
+      "木块沉得越深，它就越大。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Waterline": {
+    "duration": 6.984,
+    "hash": "9aa1e200b9e93e8b",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "水面碰到木块的地方。"
+     ],
+     [
+      2.708,
+      6.917,
+      "它下面的部分，都是被挤开的水的位置。"
+     ]
+    ]
+   },
+   "Narr_Boats_Float_Part_Weight": {
+    "duration": 4.872,
+    "hash": "11e2ced1e854dae6",
+    "sentences": [
+     [
+      0.1,
+      4.869,
+      "重力把木块往下拉，就像拉在它的正中间。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_01": {
+    "duration": 5.472,
+    "hash": "d1493099aa71108e",
+    "sentences": [
+     [
+      0.1,
+      5.467,
+      "船正着的时候，重量从这个点往下拉，它就是重心。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_02": {
+    "duration": 6.456,
+    "hash": "f6d15d271864dbb4",
+    "sentences": [
+     [
+      0.1,
+      6.439,
+      "水从被挤开的那部分水的中心往上推，正好在重心的下方。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_03": {
+    "duration": 4.176,
+    "hash": "4d1aba4561b21f18",
+    "sentences": [
+     [
+      0.1,
+      4.175,
+      "轮到你了：把船推歪，超过二十度。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_04": {
+    "duration": 8.76,
+    "hash": "f58eab31a5db49b5",
+    "sentences": [
+     [
+      0.1,
+      3.244,
+      "水的推力滑到了低的一边。"
+     ],
+     [
+      3.194,
+      8.708,
+      "这段距离就是力臂：推力和重量一起把船扳回去。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_05": {
+    "duration": 4.032,
+    "hash": "f74f35ab22a930ac",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "船往右歪时，水的推力往哪边移？"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Hull": {
+    "duration": 8.208,
+    "hash": "c830f7bd8862e1ad",
+    "sentences": [
+     [
+      0.1,
+      2.286,
+      "从船头方向看。"
+     ],
+     [
+      2.236,
+      8.139,
+      "虚线框出的是被挤开的水，船一歪，它的形状就变了。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Lever": {
+    "duration": 8.04,
+    "hash": "e76ee11eb356e19e",
+    "sentences": [
+     [
+      0.1,
+      4.703,
+      "往上的推力和往下的重量之间的横向距离。"
+     ],
+     [
+      4.653,
+      7.986,
+      "它越长，船扳回来的劲越大。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Lift": {
+    "duration": 7.248,
+    "hash": "99c8cd1a1a91cf0e",
+    "sentences": [
+     [
+      0.1,
+      4.467,
+      "被挤开的水的中心，水从这里往上推。"
+     ],
+     [
+      4.417,
+      7.181,
+      "船一歪，它就跟着移动。"
+     ]
+    ]
+   },
+   "Narr_Boats_Heel_Part_Weight": {
+    "duration": 6.528,
+    "hash": "17a7cc686b151c7d",
+    "sentences": [
+     [
+      0.1,
+      2.814,
+      "船的重量往下拉的地方。"
+     ],
+     [
+      2.764,
+      6.458,
+      "船怎么歪，它在船里的位置都不变。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_01": {
+    "duration": 3.624,
+    "hash": "4d2723c4802a62ac",
+    "sentences": [
+     [
+      0.1,
+      3.606,
+      "六吨钢做成一块：它躺在海底。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_02": {
+    "duration": 8.16,
+    "hash": "f927dd05c064066c",
+    "sentences": [
+     [
+      0.1,
+      3.244,
+      "同样的六吨钢做成船壳。"
+     ],
+     [
+      3.194,
+      8.097,
+      "空着的时候它漂得很高，只在海里浸了一点点。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_03": {
+    "duration": 6.192,
+    "hash": "5d926296ee3c1ee8",
+    "sentences": [
+     [
+      0.1,
+      3.133,
+      "装上货，它就沉得深一些。"
+     ],
+     [
+      3.083,
+      6.139,
+      "船头的刻度显示有多深。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_04": {
+    "duration": 4.992,
+    "hash": "ebc02f86dae9505a",
+    "sentences": [
+     [
+      0.1,
+      4.981,
+      "轮到你了：一直装货，直到海水漫上甲板。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_05": {
+    "duration": 5.76,
+    "hash": "458cf997e52d787a",
+    "sentences": [
+     [
+      0.1,
+      5.758,
+      "同样的钢，做成一块就沉，做成船壳为什么就能浮？"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Cargo": {
+    "duration": 5.904,
+    "hash": "4a02a9395385d252",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "每箱五吨。"
+     ],
+     [
+      1.708,
+      5.833,
+      "每多一吨，船就多沉大约两厘米。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Draft": {
+    "duration": 9.144,
+    "hash": "9e87cd41f3670e43",
+    "sentences": [
+     [
+      0.1,
+      4.731,
+      "船头上的数字，从船底往上每半米一个。"
+     ],
+     [
+      4.681,
+      9.083,
+      "水面停在哪里，就说明船吃水多深。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Hull": {
+    "duration": 7.104,
+    "hash": "5187c422d2476875",
+    "sentences": [
+     [
+      0.1,
+      2.994,
+      "薄薄的钢围着一大片空气。"
+     ],
+     [
+      2.944,
+      7.042,
+      "按它的重量算，它能挤开非常多的水。"
+     ]
+    ]
+   },
+   "Narr_Boats_Hull_Part_Lump": {
+    "duration": 7.776,
+    "hash": "5a49c4d9d97e653a",
+    "sentences": [
+     [
+      0.1,
+      3.314,
+      "把船的六吨钢做成一整块。"
+     ],
+     [
+      3.264,
+      7.722,
+      "它挤开的水还不到一立方米，远远不够。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_01": {
+    "duration": 6.624,
+    "hash": "6a5d9f69f70890ee",
+    "sentences": [
+     [
+      0.1,
+      2.717,
+      "一个方块被按在水下。"
+     ],
+     [
+      2.667,
+      6.569,
+      "箭头表示水压在每个面上有多大。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_02": {
+    "duration": 6.912,
+    "hash": "0a2ea114c755dca2",
+    "sentences": [
+     [
+      0.1,
+      6.897,
+      "底面比顶面深，所以水往上压底面，比往下压顶面更用力。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_03": {
+    "duration": 4.392,
+    "hash": "f0c2c68f0bb65d35",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "轮到你了：把方块往下放，深过八米。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_04": {
+    "duration": 8.16,
+    "hash": "20cf56c8598b8df2",
+    "sentences": [
+     [
+      0.1,
+      8.147,
+      "每个箭头都变长了，可侧面还是互相抵消，底面比顶面多出来的，还是那么多。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_05": {
+    "duration": 6.6,
+    "hash": "ab7bae92b9135758",
+    "sentences": [
+     [
+      0.1,
+      6.592,
+      "跟两米深比，在十米深的地方，水把方块往上推的力有多大？"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Bottom": {
+    "duration": 7.368,
+    "hash": "ad48c91d19727bd9",
+    "sentences": [
+     [
+      0.1,
+      4.772,
+      "比顶面深，所以被压得更重，方向朝上。"
+     ],
+     [
+      4.722,
+      7.306,
+      "浮力就是从这里来的。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Cube": {
+    "duration": 4.392,
+    "hash": "c0ea9d91c78e89db",
+    "sentences": [
+     [
+      0.1,
+      1.911,
+      "每边一米半。"
+     ],
+     [
+      1.861,
+      4.333,
+      "它挤开了三吨半的水。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Sides": {
+    "duration": 5.16,
+    "hash": "75c81a531f0e26ad",
+    "sentences": [
+     [
+      0.1,
+      5.161,
+      "越往下越大，但左右两边一样大，互相抵消了。"
+     ]
+    ]
+   },
+   "Narr_Boats_Pressure_Part_Top": {
+    "duration": 4.92,
+    "hash": "67d32e3e73f6e58b",
+    "sentences": [
+     [
+      0.1,
+      2.828,
+      "上面的水往下压顶面。"
+     ],
+     [
+      2.778,
+      4.847,
+      "越深压得越重。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_01": {
+    "duration": 6.6,
+    "hash": "109091ffb831095f",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "一条船在浪里摇晃。"
+     ],
+     [
+      2.514,
+      6.542,
+      "每来一个浪就把它推歪，它又摆回来。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_02": {
+    "duration": 9.768,
+    "hash": "8f49b8d4835d7a47",
+    "sentences": [
+     [
+      0.1,
+      4.967,
+      "这条曲线表示每个角度下它扳回来的劲有多大。"
+     ],
+     [
+      4.917,
+      9.708,
+      "在线上面它能回来；在线下面，它就会翻。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_03": {
+    "duration": 6.6,
+    "hash": "eed67d5670e1b485",
+    "sentences": [
+     [
+      0.1,
+      6.592,
+      "轮到你了：把重量堆高，或者把船变窄，直到它头重脚轻。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_04": {
+    "duration": 5.112,
+    "hash": "ff1806d190297208",
+    "sentences": [
+     [
+      0.1,
+      2.217,
+      "现在把船加宽。"
+     ],
+     [
+      2.167,
+      5.056,
+      "同样高的货，它又稳了。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_05": {
+    "duration": 3.648,
+    "hash": "62436c7b9c902ae1",
+    "sentences": [
+     [
+      0.1,
+      3.633,
+      "船上最重的东西应该放在哪里？"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Boat": {
+    "duration": 5.952,
+    "hash": "8d86edbeda0fe684",
+    "sentences": [
+     [
+      0.1,
+      2.217,
+      "一开始宽六米。"
+     ],
+     [
+      2.167,
+      5.903,
+      "甲板上堆起的货会把重心抬高。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Curve": {
+    "duration": 7.128,
+    "hash": "47396a9e9976723b",
+    "sentences": [
+     [
+      0.1,
+      4.508,
+      "从正立到八十度，每个角度下的复原力臂。"
+     ],
+     [
+      4.458,
+      7.056,
+      "白点是船现在的样子。"
+     ]
+    ]
+   },
+   "Narr_Boats_Stability_Part_Weight": {
+    "duration": 4.872,
+    "hash": "2b0df04e72bba5e7",
+    "sentences": [
+     [
+      0.1,
+      4.869,
+      "它越高，船一歪，它就往低的一边甩得越远。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_01": {
+    "duration": 6.72,
+    "hash": "f26af510d29ac2a2",
+    "sentences": [
+     [
+      0.1,
+      6.703,
+      "水舱里全是空气，潜艇比它能挤开的水轻，所以浮在水面上。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_02": {
+    "duration": 7.56,
+    "hash": "d86a0b91dd4d635d",
+    "sentences": [
+     [
+      0.1,
+      3.356,
+      "现在给压载水舱灌满水。"
+     ],
+     [
+      3.306,
+      7.486,
+      "潜艇比它挤开的水重了，于是往下沉。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_03": {
+    "duration": 6.96,
+    "hash": "3ef8648a98f4966a",
+    "sentences": [
+     [
+      0.1,
+      6.939,
+      "轮到你了：给水舱灌水，灌到潜艇跟它挤开的水正好一样重。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_04": {
+    "duration": 10.176,
+    "hash": "ac3b9b2952b42a6e",
+    "sentences": [
+     [
+      0.1,
+      4.786,
+      "看深度表：现在它停住了，或者漂得很慢。"
+     ],
+     [
+      4.736,
+      10.125,
+      "更深的水不会把它推回来，所以只能靠人来配平。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_05": {
+    "duration": 3.072,
+    "hash": "d781c9f7b2acfb4b",
+    "sentences": [
+     [
+      0.1,
+      3.05,
+      "要浮上来，潜艇会怎么做？"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Gauge": {
+    "duration": 5.04,
+    "hash": "1b0460876c31f959",
+    "sentences": [
+     [
+      0.1,
+      5.022,
+      "潜艇在多深的地方，一直标到六十米深的海底。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Sub": {
+    "duration": 8.664,
+    "hash": "a79b986db75f299c",
+    "sentences": [
+     [
+      0.1,
+      5.856,
+      "它的大小不会变，所以没在水下时挤开的水也不会变。"
+     ],
+     [
+      5.806,
+      8.597,
+      "能变的只有它的重量。"
+     ]
+    ]
+   },
+   "Narr_Boats_Submarine_Part_Tanks": {
+    "duration": 6.648,
+    "hash": "5a9400828cdb1678",
+    "sentences": [
+     [
+      0.1,
+      6.633,
+      "灌进海水就变重下潜；用空气把水吹出去就变轻上浮。"
+     ]
+    ]
+   },
    "Narr_Common_MoveOn": {
     "duration": 4.272,
     "hash": "627bdfb155c9e33c",

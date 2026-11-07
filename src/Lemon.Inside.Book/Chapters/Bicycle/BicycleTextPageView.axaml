@@ -1,0 +1,168 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:bicycle="using:Lemon.Inside.Book.Chapters.Bicycle"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Bicycle.BicycleTextPageView"
+                              x:DataType="bicycle:BicycleTextPageViewModel">
+    <!-- A left page of the Bicycle chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="bicycle:WheelSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding LoadText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Wheel_Load}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="150" Value="{Binding Load}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Wheel_Load}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding TensionText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Wheel_Tension}" />
+                                </DockPanel>
+                                <Slider Minimum="100" Maximum="1500" Value="{Binding Tension}" SmallChange="10" LargeChange="100"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Wheel_Tension}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:ChainSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding ChainringText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Chain_Chainring}" />
+                                </DockPanel>
+                                <Slider Minimum="28" Maximum="53" Value="{Binding Chainring}" SmallChange="1" LargeChange="4" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Chain_Chainring}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SprocketText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Chain_Sprocket}" />
+                                </DockPanel>
+                                <Slider Minimum="11" Maximum="34" Value="{Binding Sprocket}" SmallChange="1" LargeChange="4" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Chain_Sprocket}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:HillSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SlopeText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Hill_Slope}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="15" Value="{Binding Slope}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Hill_Slope}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding GearText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Hill_Gear}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="9" Value="{Binding Gear}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Hill_Gear}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:FreewheelSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PedalText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Freewheel_Pedals}" />
+                                </DockPanel>
+                                <Slider Minimum="-0.4" Maximum="1" Value="{Binding PedalSpeed}" SmallChange="0.05" LargeChange="0.2"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Freewheel_Pedals}" />
+                                <SelectableTextBlock Classes="note" Text="{loc:Localize Bicycle_Freewheel_Hint}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:BrakeSpread">
+                            <StackPanel>
+                                <SelectableTextBlock Classes="caption" Margin="0,10,0,2" Text="{loc:Localize Bicycle_Brakes_Use}" />
+                                <WrapPanel>
+                                    <RadioButton Classes="chip" GroupName="BicycleBrakes" IsChecked="{Binding IsBoth}" Content="{loc:Localize Bicycle_Brakes_Both}" />
+                                    <RadioButton Classes="chip" GroupName="BicycleBrakes" IsChecked="{Binding IsFront}" Content="{loc:Localize Bicycle_Brakes_Front}" />
+                                    <RadioButton Classes="chip" GroupName="BicycleBrakes" IsChecked="{Binding IsRear}" Content="{loc:Localize Bicycle_Brakes_Rear}" />
+                                </WrapPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Brakes_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="10" Maximum="40" Value="{Binding Speed}" SmallChange="1" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Brakes_Speed}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding StrengthText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Brakes_Strength}" />
+                                </DockPanel>
+                                <Slider Minimum="0.1" Maximum="0.8" Value="{Binding Strength}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Brakes_Strength}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="bicycle:SteerSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding HeadAngleText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Steer_HeadAngle}" />
+                                </DockPanel>
+                                <Slider Minimum="62" Maximum="80" Value="{Binding HeadAngle}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Steer_HeadAngle}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding OffsetText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Bicycle_Steer_Offset}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="80" Value="{Binding Offset}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Bicycle_Steer_Offset}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:boats="using:Lemon.Inside.Book.Chapters.Boats"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Boats.BoatsDiagramPageView"
+                         x:DataType="boats:BoatsDiagramPageViewModel">
+    <!-- A right page of the Boats chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="boats:FloatSpread">
+                            <boats:FloatDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Density="{Binding Density}" AutomationProperties.Name="{loc:Localize Boats_Float_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="boats:PressureSpread">
+                            <boats:PressureDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Depth="{Binding Depth}" AutomationProperties.Name="{loc:Localize Boats_Pressure_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="boats:HullSpread">
+                            <boats:HullDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Cargo="{Binding Cargo}" AutomationProperties.Name="{loc:Localize Boats_Hull_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="boats:HeelSpread">
+                            <boats:HeelDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     HeelAngle="{Binding HeelAngle}" AutomationProperties.Name="{loc:Localize Boats_Heel_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="boats:StabilitySpread">
+                            <boats:StabilityDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     CentreHeight="{Binding CentreHeight}" Beam="{Binding Beam}" AutomationProperties.Name="{loc:Localize Boats_Stability_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="boats:SubmarineSpread">
+                            <boats:SubmarineDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Ballast="{Binding Ballast}" AutomationProperties.Name="{loc:Localize Boats_Submarine_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

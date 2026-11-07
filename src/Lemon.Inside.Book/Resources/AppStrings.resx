@@ -1920,4 +1920,1189 @@
   <data name="Picture_KeyHint" xml:space="preserve">
     <value>Arrow keys: pick a part · Enter: what it is · Esc: close</value>
   </data>
+  <data name="Chapter_Bicycle" xml:space="preserve">
+    <value>The bicycle</value>
+  </data>
+  <data name="Bicycle_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Bicycle_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Bicycle_TeethCount" xml:space="preserve">
+    <value>{0} teeth</value>
+  </data>
+  <data name="Bicycle_Newtons" xml:space="preserve">
+    <value>{0} N</value>
+  </data>
+  <data name="Bicycle_Kilograms" xml:space="preserve">
+    <value>{0} kg</value>
+  </data>
+  <data name="Bicycle_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Bicycle_Kmh" xml:space="preserve">
+    <value>{0} km/h</value>
+  </data>
+  <data name="Bicycle_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Bicycle_Millimetres" xml:space="preserve">
+    <value>{0} mm</value>
+  </data>
+  <data name="Bicycle_Wheel_Title" xml:space="preserve">
+    <value>Standing on wires</value>
+  </data>
+  <data name="Bicycle_Wheel_P1" xml:space="preserve">
+    <value>A bicycle wheel looks too flimsy to carry anyone: a thin rim held to the hub by a few dozen wires no thicker than a knitting needle. A wire is no good at pushing (it just bends), but it is very good at pulling. So the wheel is built with every spoke already pulled tight, like the strings of a guitar.</value>
+  </data>
+  <data name="Bicycle_Wheel_P2" xml:space="preserve">
+    <value>When you sit on the bike, your weight presses the hub down towards the road. The spokes under the hub, where the rim is squeezed a little against the ground, lose some of their pull; the rest hardly change. All the spokes pulling round the hub no longer balance, and the difference holds you up. As the wheel rolls, each spoke takes its turn at the bottom.</value>
+  </data>
+  <data name="Bicycle_Wheel_Deeper" xml:space="preserve">
+    <value>Build the spokes too loose and a heavy load takes away all the pull of the ones underneath: they go slack, nothing holds the rim there, and the wheel can buckle. The pull lost by the spoke straight below is only about a fifth of the load; the spokes beside it share the rest.</value>
+  </data>
+  <data name="Bicycle_Wheel_Load" xml:space="preserve">
+    <value>Load on the wheel</value>
+  </data>
+  <data name="Bicycle_Wheel_Tension" xml:space="preserve">
+    <value>How tight the spokes are built</value>
+  </data>
+  <data name="Bicycle_Wheel_Readout" xml:space="preserve">
+    <value>The spoke at the bottom now pulls {0} N, down from {1} N.</value>
+  </data>
+  <data name="Bicycle_Wheel_Slack" xml:space="preserve">
+    <value>The spokes at the bottom have gone slack: nothing holds the rim there, and the wheel could buckle.</value>
+  </data>
+  <data name="Bicycle_Wheel_Picture" xml:space="preserve">
+    <value>A loaded wheel rolling slowly, its spokes coloured by how hard they pull</value>
+  </data>
+  <data name="Bicycle_Wheel_TopPull" xml:space="preserve">
+    <value>Spoke at the top: {0} N</value>
+  </data>
+  <data name="Bicycle_Wheel_BottomPull" xml:space="preserve">
+    <value>Spoke at the bottom: {0} N</value>
+  </data>
+  <data name="Bicycle_Wheel_BottomSlack" xml:space="preserve">
+    <value>Spoke at the bottom: slack!</value>
+  </data>
+  <data name="Bicycle_Wheel_KeySlack" xml:space="preserve">
+    <value>slack</value>
+  </data>
+  <data name="Bicycle_Wheel_KeyTight" xml:space="preserve">
+    <value>tight</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_01" xml:space="preserve">
+    <value>Each spoke is a thin steel wire, pulled tight between the hub and the rim. With no one on the bike, they all pull the same.</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_02" xml:space="preserve">
+    <value>Now put a load on the wheel. It presses the hub down towards the road.</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_03" xml:space="preserve">
+    <value>Look at the spokes underneath: they pull less than before. The spokes above still pull as hard, so together they lift the hub.</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_04" xml:space="preserve">
+    <value>Your turn: loosen the spokes and add weight, until the ones at the bottom go slack.</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_05" xml:space="preserve">
+    <value>So what holds the hub up?</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz1" xml:space="preserve">
+    <value>All the spokes pull; the ones below just pull less</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz2" xml:space="preserve">
+    <value>The bottom spokes push it up like pillars</value>
+  </data>
+  <data name="Bicycle_Wheel_Quiz3" xml:space="preserve">
+    <value>Only the top spoke, like a rope</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Hub" xml:space="preserve">
+    <value>Hub</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Hub" xml:space="preserve">
+    <value>The middle of the wheel, on the axle. Every spoke pulls on it, and the load presses down on it.</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Rim" xml:space="preserve">
+    <value>Rim</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Rim" xml:space="preserve">
+    <value>The ring the tyre sits on. The spokes pull it inwards from all round, which keeps it round and stiff.</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Bottom" xml:space="preserve">
+    <value>Spokes underneath</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Bottom" xml:space="preserve">
+    <value>Where the rim is squeezed against the road, these spokes lose some of their pull.</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Top" xml:space="preserve">
+    <value>Spokes above</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Top" xml:space="preserve">
+    <value>They keep pulling as hard as before, so now they win, a little, against the ones below.</value>
+  </data>
+  <data name="Bicycle_Wheel_Part_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Narr_Bicycle_Wheel_Part_Load" xml:space="preserve">
+    <value>The rider's weight on this wheel, pressing the hub towards the ground.</value>
+  </data>
+  <data name="Bicycle_Chain_Title" xml:space="preserve">
+    <value>From your feet to the wheel</value>
+  </data>
+  <data name="Bicycle_Chain_P1" xml:space="preserve">
+    <value>The pedals turn a big toothed wheel, the chainring. A chain wraps round it and round a small sprocket on the back wheel. Each link of the chain sits in a gap between two teeth, so the chain cannot slip: however many teeth the chainring turns past, the sprocket turns past just as many.</value>
+  </data>
+  <data name="Bicycle_Chain_P2" xml:space="preserve">
+    <value>So if the chainring has twice as many teeth as the sprocket, the back wheel turns twice for every turn of the pedals. That is how a bike outruns a runner: your legs go round slowly, the wheel spins quickly, and each turn of the wheel rolls you about two metres.</value>
+  </data>
+  <data name="Bicycle_Chain_Deeper" xml:space="preserve">
+    <value>Wheel turns per pedal turn = chainring teeth ÷ sprocket teeth. Times the wheel's roll (about 2.1 m for a road bike), that is how far each pedal turn takes you. A chain link is half an inch (12.7 mm) long, the same on almost every bike in the world.</value>
+  </data>
+  <data name="Bicycle_Chain_Chainring" xml:space="preserve">
+    <value>Teeth on the chainring</value>
+  </data>
+  <data name="Bicycle_Chain_Sprocket" xml:space="preserve">
+    <value>Teeth on the back sprocket</value>
+  </data>
+  <data name="Bicycle_Chain_Readout" xml:space="preserve">
+    <value>Each turn of the pedals turns the back wheel {0} times and rolls you {1} m.</value>
+  </data>
+  <data name="Bicycle_Chain_Picture" xml:space="preserve">
+    <value>The pedals, chainring, chain and back sprocket of a bike, drawn to scale</value>
+  </data>
+  <data name="Bicycle_Chain_Ring" xml:space="preserve">
+    <value>chainring</value>
+  </data>
+  <data name="Bicycle_Chain_Cog" xml:space="preserve">
+    <value>sprocket</value>
+  </data>
+  <data name="Bicycle_Chain_PedalTurns" xml:space="preserve">
+    <value>Pedals: {0} turns</value>
+  </data>
+  <data name="Bicycle_Chain_WheelTurns" xml:space="preserve">
+    <value>Back wheel: {0} turns</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_01" xml:space="preserve">
+    <value>Your foot pushes the pedal, and the pedal turns the big chainring.</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_02" xml:space="preserve">
+    <value>The chain carries the turn backwards. Each tooth that passes at the front pulls one link along, and each link moves the back one tooth on.</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_03" xml:space="preserve">
+    <value>Now try a tiny sprocket at the back. The wheel turns four times for each turn of the pedals.</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_04" xml:space="preserve">
+    <value>Your turn: make the back wheel turn exactly three times for each turn of the pedals.</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_05" xml:space="preserve">
+    <value>A chainring with thirty-six teeth drives a sprocket with eighteen. How many times does the wheel turn for each turn of the pedals?</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz1" xml:space="preserve">
+    <value>Once</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz2" xml:space="preserve">
+    <value>Twice</value>
+  </data>
+  <data name="Bicycle_Chain_Quiz3" xml:space="preserve">
+    <value>Eighteen times</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Pedal" xml:space="preserve">
+    <value>Pedal and crank</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Pedal" xml:space="preserve">
+    <value>Your foot pushes here. The crank is a lever: the further out the pedal, the more turning force.</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Chainring" xml:space="preserve">
+    <value>Chainring</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Chainring" xml:space="preserve">
+    <value>The big toothed wheel the pedals turn. More teeth pull more chain round for each turn of the pedals.</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Chain" xml:space="preserve">
+    <value>Chain</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Chain" xml:space="preserve">
+    <value>Steel plates and rollers, link after link. The top run is pulled tight: that is the side doing the work.</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Sprocket" xml:space="preserve">
+    <value>Back sprocket</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Sprocket" xml:space="preserve">
+    <value>Fixed to the back wheel. The fewer its teeth, the more the wheel turns for the same length of chain.</value>
+  </data>
+  <data name="Bicycle_Chain_Part_Wheel" xml:space="preserve">
+    <value>Back wheel</value>
+  </data>
+  <data name="Narr_Bicycle_Chain_Part_Wheel" xml:space="preserve">
+    <value>It turns with the sprocket, and each of its turns rolls the bike about two metres.</value>
+  </data>
+  <data name="Bicycle_Hill_Title" xml:space="preserve">
+    <value>Gears for hills</value>
+  </data>
+  <data name="Bicycle_Hill_P1" xml:space="preserve">
+    <value>Legs are happiest at one rhythm, about eighty turns of the pedals a minute, and they can only push so hard for long. On the flat, a big gear (a small sprocket at the back) turns that rhythm into a good speed. Up a hill, the same gear would need a push no one can keep up.</value>
+  </data>
+  <data name="Bicycle_Hill_P2" xml:space="preserve">
+    <value>So the back wheel carries a stack of sprockets, and a derailleur lifts the chain from one to the next. On a bigger sprocket each pedal turn takes you less far, so the same rhythm carries you more slowly, but every push gets lighter by just as much. You climb slowly, but you climb.</value>
+  </data>
+  <data name="Bicycle_Hill_Deeper" xml:space="preserve">
+    <value>Going up, most of your effort lifts you and the bike: on an 8% road, every 100 m along also climbs 8 m. The work for a whole climb is much the same in any gear; the gear only decides whether you do it with many light pushes or a few heavy ones.</value>
+  </data>
+  <data name="Bicycle_Hill_Slope" xml:space="preserve">
+    <value>Slope of the road</value>
+  </data>
+  <data name="Bicycle_Hill_Gear" xml:space="preserve">
+    <value>Back sprocket (1 = smallest)</value>
+  </data>
+  <data name="Bicycle_Hill_GearValue" xml:space="preserve">
+    <value>{0}: {1} teeth</value>
+  </data>
+  <data name="Bicycle_Hill_Readout" xml:space="preserve">
+    <value>At {0} pedal turns a minute you ride at {1} km/h, pushing about {2} kg on each pedal ({3} W).</value>
+  </data>
+  <data name="Bicycle_Hill_Picture" xml:space="preserve">
+    <value>A rider climbing a road, with the back sprockets and how hard each push is</value>
+  </data>
+  <data name="Bicycle_Hill_Rhythm" xml:space="preserve">
+    <value>at {0} pedal turns a minute</value>
+  </data>
+  <data name="Bicycle_Hill_Cassette" xml:space="preserve">
+    <value>back sprockets</value>
+  </data>
+  <data name="Bicycle_Hill_Push" xml:space="preserve">
+    <value>Push on each pedal: about {0} kg</value>
+  </data>
+  <data name="Bicycle_Hill_Easy" xml:space="preserve">
+    <value>you can keep this up</value>
+  </data>
+  <data name="Bicycle_Hill_TooHard" xml:space="preserve">
+    <value>too hard to keep up!</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_01" xml:space="preserve">
+    <value>On the flat, in a middle gear, the rider turns the pedals at an easy rhythm and rolls along quickly.</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_02" xml:space="preserve">
+    <value>Now the road climbs. In the same gear, each push on the pedals has to be far harder. Look at the bar.</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_03" xml:space="preserve">
+    <value>Your turn: shift to a bigger sprocket at the back, until the push is light enough to keep up.</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_04" xml:space="preserve">
+    <value>The rhythm hasn't changed, but the bike goes slower. Each push takes you less far, so it can be lighter.</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_05" xml:space="preserve">
+    <value>Racing down a hill, which sprocket would you use?</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz1" xml:space="preserve">
+    <value>The smallest one</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz2" xml:space="preserve">
+    <value>The biggest one</value>
+  </data>
+  <data name="Bicycle_Hill_Quiz3" xml:space="preserve">
+    <value>It doesn't matter</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Cassette" xml:space="preserve">
+    <value>Back sprockets</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Cassette" xml:space="preserve">
+    <value>From eleven to thirty-six teeth. The derailleur pushes the chain sideways from one to another.</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Rider" xml:space="preserve">
+    <value>Rider</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Rider" xml:space="preserve">
+    <value>Keeps the same rhythm in every gear: about eighty pedal turns a minute.</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Slope" xml:space="preserve">
+    <value>Slope</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Slope" xml:space="preserve">
+    <value>How many metres the road rises for every hundred metres along.</value>
+  </data>
+  <data name="Bicycle_Hill_Part_Push" xml:space="preserve">
+    <value>Push on the pedals</value>
+  </data>
+  <data name="Narr_Bicycle_Hill_Part_Push" xml:space="preserve">
+    <value>How hard each push must be, against what a rider can keep up for a long climb.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Title" xml:space="preserve">
+    <value>Coasting</value>
+  </data>
+  <data name="Bicycle_Freewheel_P1" xml:space="preserve">
+    <value>On a toy tricycle the pedals are fixed to the wheel: when the wheel turns, your feet have to go round too. A bicycle lets you stop pedalling and roll on. The trick is hidden in the back hub, and you can hear it: that ticking as you coast.</value>
+  </data>
+  <data name="Bicycle_Freewheel_P2" xml:space="preserve">
+    <value>The sprocket turns an inner part, the driver, which carries two small pawls pressed outwards by springs. The wheel's shell around it has teeth on the inside, like a saw. Pedal forwards and the pawls catch a tooth and drag the wheel round. When the wheel runs faster than the pedals, the teeth slide under the pawls instead, lifting them and letting them snap down again: tick, tick, tick.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Deeper" xml:space="preserve">
+    <value>Each tooth has a gentle slope on one side and a steep face on the other. The pawls can only push on a steep face, so the hub passes turning force one way only: a one-way clutch. The same idea, a ratchet, works in a socket wrench and in a watch's winding.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Pedals" xml:space="preserve">
+    <value>Pedalling (turns a second)</value>
+  </data>
+  <data name="Bicycle_Freewheel_Still" xml:space="preserve">
+    <value>not pedalling</value>
+  </data>
+  <data name="Bicycle_Freewheel_Forward" xml:space="preserve">
+    <value>{0} forwards</value>
+  </data>
+  <data name="Bicycle_Freewheel_Back" xml:space="preserve">
+    <value>{0} backwards</value>
+  </data>
+  <data name="Bicycle_Freewheel_Hint" xml:space="preserve">
+    <value>Slow the pedals down, stop, or pedal backwards, and watch the pawls.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Picture" xml:space="preserve">
+    <value>The back hub cut open: pawls on the driver and ratchet teeth inside the wheel's shell</value>
+  </data>
+  <data name="Bicycle_Freewheel_Driver" xml:space="preserve">
+    <value>driver</value>
+  </data>
+  <data name="Bicycle_Freewheel_Click" xml:space="preserve">
+    <value>tick!</value>
+  </data>
+  <data name="Bicycle_Freewheel_Driving" xml:space="preserve">
+    <value>The pawls push: the pedals drive the wheel</value>
+  </data>
+  <data name="Bicycle_Freewheel_Coasting" xml:space="preserve">
+    <value>Coasting: the teeth slide under the pawls</value>
+  </data>
+  <data name="Bicycle_Freewheel_Speeds" xml:space="preserve">
+    <value>Pedals {0} · wheel {1} turns a second</value>
+  </data>
+  <data name="Bicycle_Freewheel_Clicks" xml:space="preserve">
+    <value>Ticks so far: {0}</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_01" xml:space="preserve">
+    <value>The sprocket turns this inner part, the driver. Right now you are pedalling, and the driver turns the wheel.</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_02" xml:space="preserve">
+    <value>Here is how: a little pawl, pressed outwards by a spring, catches the steep face of a tooth and drags the wheel along.</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_03" xml:space="preserve">
+    <value>Your turn: stop pedalling, and watch the wheel keep rolling.</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_04" xml:space="preserve">
+    <value>The wheel runs ahead now. Its teeth slide under the pawls, push them up, and let them snap back down.</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_05" xml:space="preserve">
+    <value>So what makes the ticking you hear when you coast?</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz1" xml:space="preserve">
+    <value>The pawls snapping down past each tooth</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz2" xml:space="preserve">
+    <value>The chain slipping on the sprocket</value>
+  </data>
+  <data name="Bicycle_Freewheel_Quiz3" xml:space="preserve">
+    <value>The brakes rubbing</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Driver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Driver" xml:space="preserve">
+    <value>Turned by the sprocket, and so by your pedals. It carries the pawls.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Pawl" xml:space="preserve">
+    <value>Pawl</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Pawl" xml:space="preserve">
+    <value>A small hinged catch. It can push on a tooth's steep face, but slides over its gentle slope.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Ratchet" xml:space="preserve">
+    <value>Hub shell and ratchet teeth</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Ratchet" xml:space="preserve">
+    <value>The outside of the hub, laced to the rim by the spokes. All its teeth face the same way.</value>
+  </data>
+  <data name="Bicycle_Freewheel_Part_Spring" xml:space="preserve">
+    <value>Spring</value>
+  </data>
+  <data name="Narr_Bicycle_Freewheel_Part_Spring" xml:space="preserve">
+    <value>Keeps the pawl pressed outwards, so it drops into every gap.</value>
+  </data>
+  <data name="Bicycle_Brakes_Title" xml:space="preserve">
+    <value>Stopping</value>
+  </data>
+  <data name="Bicycle_Brakes_P1" xml:space="preserve">
+    <value>Brakes squeeze pads against the rim, or against a disc on the hub. The rubbing turns your speed into heat; after a long downhill the rims can be too hot to touch. Stopping takes more room than you might think: at twice the speed you need four times as far, because there is four times as much energy of motion to turn into heat.</value>
+  </data>
+  <data name="Bicycle_Brakes_P2" xml:space="preserve">
+    <value>When you brake, your body wants to keep going, so your weight tips forwards onto the front wheel and off the back one. A tyre can only grip the road as hard as it is pressed onto it, so the front brake can stop you far harder than the back one, whose wheel soon skids. Too hard on the front, though, and the back wheel lifts.</value>
+  </data>
+  <data name="Bicycle_Brakes_Deeper" xml:space="preserve">
+    <value>How much weight moves onto the front wheel depends on how high the centre of mass sits compared with the wheelbase. Here it is as high as the wheelbase is long, with 40% of the weight on the front: past about 0.6 g, all of it is on the front and the bike tips over. A car is long and low, so it can brake much harder without tipping.</value>
+  </data>
+  <data name="Bicycle_Brakes_Use" xml:space="preserve">
+    <value>Brakes squeezed</value>
+  </data>
+  <data name="Bicycle_Brakes_Both" xml:space="preserve">
+    <value>Both</value>
+  </data>
+  <data name="Bicycle_Brakes_Front" xml:space="preserve">
+    <value>Front only</value>
+  </data>
+  <data name="Bicycle_Brakes_Rear" xml:space="preserve">
+    <value>Back only</value>
+  </data>
+  <data name="Bicycle_Brakes_Speed" xml:space="preserve">
+    <value>Speed before braking</value>
+  </data>
+  <data name="Bicycle_Brakes_Strength" xml:space="preserve">
+    <value>How hard you brake</value>
+  </data>
+  <data name="Bicycle_Brakes_G" xml:space="preserve">
+    <value>{0} g</value>
+  </data>
+  <data name="Bicycle_Brakes_Readout" xml:space="preserve">
+    <value>You stop in {0} m. While braking, the front wheel carries {1}% of the weight.</value>
+  </data>
+  <data name="Bicycle_Brakes_Skid" xml:space="preserve">
+    <value>The back wheel skids! It can only slow you at {0} g, so you need {1} m to stop.</value>
+  </data>
+  <data name="Bicycle_Brakes_Flip" xml:space="preserve">
+    <value>The back wheel lifts: you would go over the handlebars! Brake a little more gently.</value>
+  </data>
+  <data name="Bicycle_Brakes_Picture" xml:space="preserve">
+    <value>A rider braking from speed, with the weight on each tyre and the distance to stop</value>
+  </data>
+  <data name="Bicycle_Brakes_Line" xml:space="preserve">
+    <value>brake!</value>
+  </data>
+  <data name="Bicycle_Brakes_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Bicycle_Brakes_Skidding" xml:space="preserve">
+    <value>back wheel skidding</value>
+  </data>
+  <data name="Bicycle_Brakes_Over" xml:space="preserve">
+    <value>over the handlebars!</value>
+  </data>
+  <data name="Bicycle_Brakes_Braking" xml:space="preserve">
+    <value>braking</value>
+  </data>
+  <data name="Bicycle_Brakes_Stopped" xml:space="preserve">
+    <value>stopped</value>
+  </data>
+  <data name="Bicycle_Brakes_LoadKey" xml:space="preserve">
+    <value>Arrows: how the weight is shared between the tyres</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_01" xml:space="preserve">
+    <value>Squeeze the levers and the pads grip the wheels. The rubbing turns your speed into heat.</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_02" xml:space="preserve">
+    <value>Your turn: brake just as hard, but from twice the speed. Watch how far you go.</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_03" xml:space="preserve">
+    <value>Twice as fast, four times as far. Now watch this dot, the centre of your weight: as you slow, it tips forwards, and the front tyre is pressed down harder.</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_04" xml:space="preserve">
+    <value>Now use only the back brake. With so little weight on it, the back wheel can't grip, and it skids.</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_05" xml:space="preserve">
+    <value>So which brake can stop you in the shortest distance?</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz1" xml:space="preserve">
+    <value>The front brake</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz2" xml:space="preserve">
+    <value>The back brake</value>
+  </data>
+  <data name="Bicycle_Brakes_Quiz3" xml:space="preserve">
+    <value>They are the same</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Pads" xml:space="preserve">
+    <value>Brake</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Pads" xml:space="preserve">
+    <value>Two pads squeeze the rim. Friction turns the bike's motion into heat.</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Front" xml:space="preserve">
+    <value>Front wheel</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Front" xml:space="preserve">
+    <value>While braking it carries more and more of the weight, so it can grip harder.</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Rear" xml:space="preserve">
+    <value>Back wheel</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Rear" xml:space="preserve">
+    <value>Braking takes weight off it, so its brake soon makes it skid.</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Centre" xml:space="preserve">
+    <value>Centre of mass</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Centre" xml:space="preserve">
+    <value>The middle of the weight of rider and bike. It sits high up, which is why braking tips it forwards so much.</value>
+  </data>
+  <data name="Bicycle_Brakes_Part_Distance" xml:space="preserve">
+    <value>Stopping distance</value>
+  </data>
+  <data name="Narr_Bicycle_Brakes_Part_Distance" xml:space="preserve">
+    <value>How far the bike rolls from the moment you brake until it stops.</value>
+  </data>
+  <data name="Bicycle_Steer_Title" xml:space="preserve">
+    <value>Why it steers itself straight</value>
+  </data>
+  <data name="Bicycle_Steer_P1" xml:space="preserve">
+    <value>Push a bike along by its saddle and tilt it a little: the handlebars turn by themselves, into the lean, and the bike straightens up. Much of that comes from the shape of the front end. The fork turns about a tilted line, the steering axis, and that line meets the ground a little in front of where the tyre touches it.</value>
+  </data>
+  <data name="Bicycle_Steer_P2" xml:space="preserve">
+    <value>That gap is called the trail. It works like the little wheels of a shopping trolley, which trail behind their pivots: whenever the wheel is knocked sideways, the road drags its touch point back behind the pivot, and the wheel lines up straight again. Without trail the wheel does not come back; with the touch point in front, it swings right away.</value>
+  </data>
+  <data name="Bicycle_Steer_Deeper" xml:space="preserve">
+    <value>Trail = (wheel radius × cos head angle − fork offset) ÷ sin head angle. Road bikes have about 55–65 mm: less makes the steering light and nervous, more makes it heavy and slow to turn. Trail is only part of the story: the spinning wheels and where the weight sits help too, and riders keep their balance mostly by steering a little towards the side they are falling.</value>
+  </data>
+  <data name="Bicycle_Steer_HeadAngle" xml:space="preserve">
+    <value>Head angle (tilt of the steering axis)</value>
+  </data>
+  <data name="Bicycle_Steer_Offset" xml:space="preserve">
+    <value>Fork offset (how far the fork bends forward)</value>
+  </data>
+  <data name="Bicycle_Steer_Readout" xml:space="preserve">
+    <value>Trail: {0} mm, {1}.</value>
+  </data>
+  <data name="Bicycle_Steer_Unstable" xml:space="preserve">
+    <value>the wheel swings away (unstable)</value>
+  </data>
+  <data name="Bicycle_Steer_Light" xml:space="preserve">
+    <value>light and nervous</value>
+  </data>
+  <data name="Bicycle_Steer_Steady" xml:space="preserve">
+    <value>steady</value>
+  </data>
+  <data name="Bicycle_Steer_Heavy" xml:space="preserve">
+    <value>heavy and slow to turn</value>
+  </data>
+  <data name="Bicycle_Steer_Picture" xml:space="preserve">
+    <value>The front of a bike from the side with its steering axis and trail, and the front wheel from above after a bump</value>
+  </data>
+  <data name="Bicycle_Steer_Axis" xml:space="preserve">
+    <value>steering axis</value>
+  </data>
+  <data name="Bicycle_Steer_TrailLabel" xml:space="preserve">
+    <value>trail {0} mm</value>
+  </data>
+  <data name="Bicycle_Steer_FromAbove" xml:space="preserve">
+    <value>The front wheel from above (trail drawn 3 × as long)</value>
+  </data>
+  <data name="Bicycle_Steer_Ahead" xml:space="preserve">
+    <value>riding this way →</value>
+  </data>
+  <data name="Bicycle_Steer_Bump" xml:space="preserve">
+    <value>bump!</value>
+  </data>
+  <data name="Bicycle_Steer_Turned" xml:space="preserve">
+    <value>Wheel turned {0}°</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_01" xml:space="preserve">
+    <value>The handlebars and fork turn about this tilted line, the steering axis.</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_02" xml:space="preserve">
+    <value>Follow the line down to the road. It lands a little ahead of where the tyre touches. That gap is the trail.</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_03" xml:space="preserve">
+    <value>Now look from above: every few seconds a bump knocks the wheel sideways, and the trail pulls it straight again.</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_04" xml:space="preserve">
+    <value>Your turn: make the steering axis steeper and bend the fork further forward, until the trail is less than nothing.</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_05" xml:space="preserve">
+    <value>Why does the little front wheel of a shopping trolley sit behind its pivot?</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz1" xml:space="preserve">
+    <value>So that it lines itself up straight</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz2" xml:space="preserve">
+    <value>So that it rolls faster</value>
+  </data>
+  <data name="Bicycle_Steer_Quiz3" xml:space="preserve">
+    <value>Just to look neat</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Axis" xml:space="preserve">
+    <value>Steering axis</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Axis" xml:space="preserve">
+    <value>The line the fork turns about, through the head tube. Its tilt is the head angle.</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Contact" xml:space="preserve">
+    <value>Tyre's touch on the road</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Contact" xml:space="preserve">
+    <value>Where the road pushes on the wheel. With trail, it lies behind the foot of the steering axis.</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Trail" xml:space="preserve">
+    <value>Trail</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Trail" xml:space="preserve">
+    <value>From the tyre's touch forward to where the steering axis meets the road. It drags the wheel straight.</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Fork" xml:space="preserve">
+    <value>Fork</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Fork" xml:space="preserve">
+    <value>Holds the front wheel. Its bend moves the axle forward of the steering axis, which shortens the trail.</value>
+  </data>
+  <data name="Bicycle_Steer_Part_Top" xml:space="preserve">
+    <value>Front wheel from above</value>
+  </data>
+  <data name="Narr_Bicycle_Steer_Part_Top" xml:space="preserve">
+    <value>It pivots about the foot of the steering axis, the blue dot. Bumps knock it sideways; the trail brings it back.</value>
+  </data>
+  <data name="Chapter_Boats" xml:space="preserve">
+    <value>Why boats float</value>
+  </data>
+  <data name="Boats_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Boats_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Boats_Density" xml:space="preserve">
+    <value>{0} kg/m³</value>
+  </data>
+  <data name="Boats_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Boats_Tonnes" xml:space="preserve">
+    <value>{0} t</value>
+  </data>
+  <data name="Boats_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Boats_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Boats_Material_Cork" xml:space="preserve">
+    <value>cork</value>
+  </data>
+  <data name="Boats_Material_Pine" xml:space="preserve">
+    <value>pine</value>
+  </data>
+  <data name="Boats_Material_Oak" xml:space="preserve">
+    <value>oak</value>
+  </data>
+  <data name="Boats_Material_Ice" xml:space="preserve">
+    <value>ice</value>
+  </data>
+  <data name="Boats_Material_Rubber" xml:space="preserve">
+    <value>rubber</value>
+  </data>
+  <data name="Boats_Material_Brick" xml:space="preserve">
+    <value>brick</value>
+  </data>
+  <data name="Boats_Float_Title" xml:space="preserve">
+    <value>Pushing water aside</value>
+  </data>
+  <data name="Boats_Float_P1" xml:space="preserve">
+    <value>Lower a wooden block into water and it pushes some of the water out of the way. The water pushes back, upwards, and the deeper the block goes, the more water it has pushed aside and the harder the water pushes. The block stops sinking when that push matches its weight.</value>
+  </data>
+  <data name="Boats_Float_P2" xml:space="preserve">
+    <value>And how hard is that push? Exactly the weight of the water pushed aside. A block half as heavy as the same amount of water floats half under; ice, nearly as heavy as water, floats almost all under. Something heavier than its own size of water can never push aside enough, and sinks.</value>
+  </data>
+  <data name="Boats_Float_Deeper" xml:space="preserve">
+    <value>Density is how heavy each cubic metre of something is: water about 1000 kg, pine about 500, brick about 1900. A floating thing's share under water is its density divided by the water's. That is why only about a tenth of an iceberg shows above the sea.</value>
+  </data>
+  <data name="Boats_Float_Density" xml:space="preserve">
+    <value>How heavy the block is (density)</value>
+  </data>
+  <data name="Boats_Float_DensityLike" xml:space="preserve">
+    <value>{0} kg/m³ (like {1})</value>
+  </data>
+  <data name="Boats_Float_Readout" xml:space="preserve">
+    <value>It floats with {0}% of itself under water.</value>
+  </data>
+  <data name="Boats_Float_Sinks" xml:space="preserve">
+    <value>It sinks: even all under water, it can't push aside its own weight of water.</value>
+  </data>
+  <data name="Boats_Float_Picture" xml:space="preserve">
+    <value>A block in a tank of water, with its weight and the water's push</value>
+  </data>
+  <data name="Boats_Float_WeightLabel" xml:space="preserve">
+    <value>weight</value>
+  </data>
+  <data name="Boats_Float_LiftLabel" xml:space="preserve">
+    <value>water's push</value>
+  </data>
+  <data name="Boats_Float_Under" xml:space="preserve">
+    <value>{0}% under water</value>
+  </data>
+  <data name="Boats_Float_OnFloor" xml:space="preserve">
+    <value>On the bottom: heavier than the water it can push aside</value>
+  </data>
+  <data name="Narr_Boats_Float_01" xml:space="preserve">
+    <value>A block of pine, lowered into water. It settles with about half of itself under the surface.</value>
+  </data>
+  <data name="Narr_Boats_Float_02" xml:space="preserve">
+    <value>The water pushes up on it, exactly as hard as the water it has pushed aside weighs. Here that matches the block's weight.</value>
+  </data>
+  <data name="Narr_Boats_Float_03" xml:space="preserve">
+    <value>Your turn: make the block heavier than water, and watch it sink.</value>
+  </data>
+  <data name="Narr_Boats_Float_04" xml:space="preserve">
+    <value>Ice is only a little lighter than water, so it floats with almost all of itself under the surface.</value>
+  </data>
+  <data name="Narr_Boats_Float_05" xml:space="preserve">
+    <value>A block floats with a quarter of itself under water. How heavy is it, compared with the same size of water?</value>
+  </data>
+  <data name="Boats_Float_Quiz1" xml:space="preserve">
+    <value>A quarter as heavy</value>
+  </data>
+  <data name="Boats_Float_Quiz2" xml:space="preserve">
+    <value>Four times as heavy</value>
+  </data>
+  <data name="Boats_Float_Quiz3" xml:space="preserve">
+    <value>Just as heavy</value>
+  </data>
+  <data name="Boats_Float_Part_Block" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Block" xml:space="preserve">
+    <value>It sinks until the water it pushes aside weighs as much as it does.</value>
+  </data>
+  <data name="Boats_Float_Part_Waterline" xml:space="preserve">
+    <value>Waterline</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Waterline" xml:space="preserve">
+    <value>Where the surface meets the block. Everything below it is water pushed out of the way.</value>
+  </data>
+  <data name="Boats_Float_Part_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Weight" xml:space="preserve">
+    <value>Gravity pulling the block down, as if from its middle.</value>
+  </data>
+  <data name="Boats_Float_Part_Lift" xml:space="preserve">
+    <value>The water's push</value>
+  </data>
+  <data name="Narr_Boats_Float_Part_Lift" xml:space="preserve">
+    <value>The water pushing up, from the middle of the part under water. It grows as the block sinks deeper.</value>
+  </data>
+  <data name="Boats_Pressure_Title" xml:space="preserve">
+    <value>Where the push comes from</value>
+  </data>
+  <data name="Boats_Pressure_P1" xml:space="preserve">
+    <value>Water has weight, so the water at the bottom of a pool is squeezed by all the water above it. That squeeze is pressure, and it presses on anything in the water from every side. Every metre deeper adds about a tenth of the air's own pressure: dive to ten metres and your ears feel it.</value>
+  </data>
+  <data name="Boats_Pressure_P2" xml:space="preserve">
+    <value>Hold a cube under water. The water presses on its sides too, but those pushes cancel out. The bottom is deeper than the top, so it is pressed harder; the water pushes up on the bottom more than it pushes down on the top. That difference is the water's push upwards, and it is the same however deep the cube goes.</value>
+  </data>
+  <data name="Boats_Pressure_Deeper" xml:space="preserve">
+    <value>Pressure = water's density × gravity × depth. The difference between bottom and top is density × gravity × the cube's height; times the area of a face, that is density × gravity × the cube's volume: the weight of the water it pushes aside, just as the last spread said.</value>
+  </data>
+  <data name="Boats_Pressure_Depth" xml:space="preserve">
+    <value>Depth of the cube's top</value>
+  </data>
+  <data name="Boats_Pressure_Readout" xml:space="preserve">
+    <value>{0} kPa on top, {1} kPa underneath: the difference pushes the cube up with {2} kN, at any depth.</value>
+  </data>
+  <data name="Boats_Pressure_Picture" xml:space="preserve">
+    <value>A cube under water, with arrows for how hard the water presses on each face</value>
+  </data>
+  <data name="Boats_Pressure_Tick" xml:space="preserve">
+    <value>{0} m · {1} kPa</value>
+  </data>
+  <data name="Boats_Pressure_Kpa" xml:space="preserve">
+    <value>{0} kPa</value>
+  </data>
+  <data name="Boats_Pressure_Lift" xml:space="preserve">
+    <value>Push up: {0} kN</value>
+  </data>
+  <data name="Narr_Boats_Pressure_01" xml:space="preserve">
+    <value>A cube held under water. The arrows show how hard the water presses on each face.</value>
+  </data>
+  <data name="Narr_Boats_Pressure_02" xml:space="preserve">
+    <value>The bottom is deeper than the top, so the water presses up on it harder than it presses down on the top.</value>
+  </data>
+  <data name="Narr_Boats_Pressure_03" xml:space="preserve">
+    <value>Your turn: take the cube much deeper, down past eight metres.</value>
+  </data>
+  <data name="Narr_Boats_Pressure_04" xml:space="preserve">
+    <value>Every arrow grew, but the sides still cancel, and the bottom still beats the top by the same amount.</value>
+  </data>
+  <data name="Narr_Boats_Pressure_05" xml:space="preserve">
+    <value>At ten metres down, compared with two, how hard does the water push the cube up?</value>
+  </data>
+  <data name="Boats_Pressure_Quiz1" xml:space="preserve">
+    <value>Harder</value>
+  </data>
+  <data name="Boats_Pressure_Quiz2" xml:space="preserve">
+    <value>Just the same</value>
+  </data>
+  <data name="Boats_Pressure_Quiz3" xml:space="preserve">
+    <value>Less</value>
+  </data>
+  <data name="Boats_Pressure_Part_Cube" xml:space="preserve">
+    <value>Cube</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Cube" xml:space="preserve">
+    <value>A metre and a half on each side. It pushes aside three and a half tonnes of water.</value>
+  </data>
+  <data name="Boats_Pressure_Part_Top" xml:space="preserve">
+    <value>Push on the top</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Top" xml:space="preserve">
+    <value>The water above presses the top down. The deeper, the harder.</value>
+  </data>
+  <data name="Boats_Pressure_Part_Bottom" xml:space="preserve">
+    <value>Push on the bottom</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Bottom" xml:space="preserve">
+    <value>Deeper than the top, so pressed harder, upwards. This is where floating comes from.</value>
+  </data>
+  <data name="Boats_Pressure_Part_Sides" xml:space="preserve">
+    <value>Push on the sides</value>
+  </data>
+  <data name="Narr_Boats_Pressure_Part_Sides" xml:space="preserve">
+    <value>Stronger lower down, but the left and right sides match, so they cancel.</value>
+  </data>
+  <data name="Boats_Hull_Title" xml:space="preserve">
+    <value>A boat made of steel</value>
+  </data>
+  <data name="Boats_Hull_P1" xml:space="preserve">
+    <value>Steel is nearly eight times as heavy as water, and a lump of it sinks at once. Yet great ships are made of steel. The trick is the shape: spread the same steel into a hull, and it holds a large space of air. Now it can push aside far more water than the steel alone, long before the water reaches its sides' top edge.</value>
+  </data>
+  <data name="Boats_Hull_P2" xml:space="preserve">
+    <value>Load the boat and it settles deeper, pushing aside more water, until the water pushed aside weighs as much as boat and cargo together. Painted marks on the bow tell the crew how deep she sits. Load too much and the sea reaches the deck, pours in, and the boat sinks like the lump.</value>
+  </data>
+  <data name="Boats_Hull_Deeper" xml:space="preserve">
+    <value>This boat is 12 m long and 4 m wide and has 6 t of steel. Each tonne aboard sinks it about 2 cm deeper (a tonne of sea water fills 48 m² about 2 cm deep). Its 1.5 m sides let it push aside about 74 t of sea, so it can carry about 68 t. Ships have a load line painted on their sides so they are never loaded too deep.</value>
+  </data>
+  <data name="Boats_Hull_Cargo" xml:space="preserve">
+    <value>Cargo aboard</value>
+  </data>
+  <data name="Boats_Hull_Readout" xml:space="preserve">
+    <value>It sits {0} m deep, with {1} m of side above the water.</value>
+  </data>
+  <data name="Boats_Hull_Sinks" xml:space="preserve">
+    <value>Too much! The sea comes over the deck and the boat sinks. It can carry about {0} t.</value>
+  </data>
+  <data name="Boats_Hull_Picture" xml:space="preserve">
+    <value>A small steel boat loaded with crates, its draft marks on the bow, and a lump of the same steel on the seabed</value>
+  </data>
+  <data name="Boats_Hull_Lump" xml:space="preserve">
+    <value>{0} t of steel as a lump</value>
+  </data>
+  <data name="Boats_Hull_Sinking" xml:space="preserve">
+    <value>Sinking!</value>
+  </data>
+  <data name="Boats_Hull_Draft" xml:space="preserve">
+    <value>Draft: {0} m</value>
+  </data>
+  <data name="Boats_Hull_Weighs" xml:space="preserve">
+    <value>Boat and cargo: {0} t</value>
+  </data>
+  <data name="Narr_Boats_Hull_01" xml:space="preserve">
+    <value>Six tonnes of steel as a lump: it lies on the seabed.</value>
+  </data>
+  <data name="Narr_Boats_Hull_02" xml:space="preserve">
+    <value>The same six tonnes of steel made into a hull. Empty, it floats high, barely dipping into the sea.</value>
+  </data>
+  <data name="Narr_Boats_Hull_03" xml:space="preserve">
+    <value>Load it, and it sits deeper. The marks on the bow show how deep.</value>
+  </data>
+  <data name="Narr_Boats_Hull_04" xml:space="preserve">
+    <value>Your turn: keep loading until the sea comes over the deck.</value>
+  </data>
+  <data name="Narr_Boats_Hull_05" xml:space="preserve">
+    <value>Why does the hull float, when the same steel as a lump sinks?</value>
+  </data>
+  <data name="Boats_Hull_Quiz1" xml:space="preserve">
+    <value>Its shape pushes aside much more water</value>
+  </data>
+  <data name="Boats_Hull_Quiz2" xml:space="preserve">
+    <value>The steel in a hull is lighter</value>
+  </data>
+  <data name="Boats_Hull_Quiz3" xml:space="preserve">
+    <value>The waves hold it up</value>
+  </data>
+  <data name="Boats_Hull_Part_Hull" xml:space="preserve">
+    <value>Hull</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Hull" xml:space="preserve">
+    <value>Thin steel round a big space of air. It pushes aside a great deal of water for its weight.</value>
+  </data>
+  <data name="Boats_Hull_Part_Cargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Cargo" xml:space="preserve">
+    <value>Crates of five tonnes each. Each tonne sinks the boat about two centimetres deeper.</value>
+  </data>
+  <data name="Boats_Hull_Part_Lump" xml:space="preserve">
+    <value>Steel lump</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Lump" xml:space="preserve">
+    <value>The boat's six tonnes of steel as a solid lump. It pushes aside less than a cubic metre of water, far too little.</value>
+  </data>
+  <data name="Boats_Hull_Part_Draft" xml:space="preserve">
+    <value>Draft marks</value>
+  </data>
+  <data name="Narr_Boats_Hull_Part_Draft" xml:space="preserve">
+    <value>Numbers on the bow, every half metre up from the keel. The water's edge tells how deep the boat sits.</value>
+  </data>
+  <data name="Boats_Heel_Title" xml:space="preserve">
+    <value>Tipping and coming back</value>
+  </data>
+  <data name="Boats_Heel_P1" xml:space="preserve">
+    <value>A boat's weight pulls down as if from one point, the centre of its weight. The water's push comes up through another: the centre of the water it pushes aside. Floating upright, the two are in one line, one above the other, and nothing turns.</value>
+  </data>
+  <data name="Boats_Heel_P2" xml:space="preserve">
+    <value>When a wave tips the boat, the low side dips deeper into the water and the high side comes out. The water pushed aside changes shape, and its centre slides towards the low side. Now the push up and the weight down are no longer in line: they make a turning pair, like two hands on a steering wheel, and it turns the boat back upright.</value>
+  </data>
+  <data name="Boats_Heel_Deeper" xml:space="preserve">
+    <value>The sideways gap between the two lines of push is the righting lever (GZ). Turning effort = the boat's weight × GZ. For small tips GZ grows with the angle; a wide boat makes the centre of buoyancy slide further, so it rights itself harder.</value>
+  </data>
+  <data name="Boats_Heel_Angle" xml:space="preserve">
+    <value>How far the boat is tipped</value>
+  </data>
+  <data name="Boats_Heel_Readout" xml:space="preserve">
+    <value>The water's push acts {0} m to the low side of the weight: it turns the boat back upright.</value>
+  </data>
+  <data name="Boats_Heel_Tips" xml:space="preserve">
+    <value>The water's push acts {0} m to the high side of the weight: it tips the boat further!</value>
+  </data>
+  <data name="Boats_Heel_Upright" xml:space="preserve">
+    <value>Upright: the water's push and the weight are in one line.</value>
+  </data>
+  <data name="Boats_Heel_Picture" xml:space="preserve">
+    <value>A boat seen end-on, tipped over, with the centre of its weight and the centre of the water it pushes aside</value>
+  </data>
+  <data name="Boats_Heel_WeightLabel" xml:space="preserve">
+    <value>weight</value>
+  </data>
+  <data name="Boats_Heel_LiftLabel" xml:space="preserve">
+    <value>water's push</value>
+  </data>
+  <data name="Boats_Heel_Lever" xml:space="preserve">
+    <value>lever {0} m</value>
+  </data>
+  <data name="Boats_Heel_Balanced" xml:space="preserve">
+    <value>In line: nothing turns</value>
+  </data>
+  <data name="Boats_Heel_Rights" xml:space="preserve">
+    <value>The pair turns the boat back upright</value>
+  </data>
+  <data name="Boats_Heel_TipsOver" xml:space="preserve">
+    <value>The pair tips the boat further</value>
+  </data>
+  <data name="Narr_Boats_Heel_01" xml:space="preserve">
+    <value>Upright, the weight pulls down through this point, the centre of the boat's weight.</value>
+  </data>
+  <data name="Narr_Boats_Heel_02" xml:space="preserve">
+    <value>And the water pushes up through the centre of the water pushed aside, right under it.</value>
+  </data>
+  <data name="Narr_Boats_Heel_03" xml:space="preserve">
+    <value>Your turn: tip the boat well over, past twenty degrees.</value>
+  </data>
+  <data name="Narr_Boats_Heel_04" xml:space="preserve">
+    <value>The water's push has slid to the low side. This gap is the lever: the push and the weight together turn the boat back.</value>
+  </data>
+  <data name="Narr_Boats_Heel_05" xml:space="preserve">
+    <value>Tipped to the right, where does the water's push move?</value>
+  </data>
+  <data name="Boats_Heel_Quiz1" xml:space="preserve">
+    <value>To the right, the low side</value>
+  </data>
+  <data name="Boats_Heel_Quiz2" xml:space="preserve">
+    <value>To the left, the high side</value>
+  </data>
+  <data name="Boats_Heel_Quiz3" xml:space="preserve">
+    <value>It stays in the middle</value>
+  </data>
+  <data name="Boats_Heel_Part_Hull" xml:space="preserve">
+    <value>Hull</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Hull" xml:space="preserve">
+    <value>Seen end-on. The dashed outline is the water it pushes aside, which changes shape as it tips.</value>
+  </data>
+  <data name="Boats_Heel_Part_Weight" xml:space="preserve">
+    <value>Centre of weight</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Weight" xml:space="preserve">
+    <value>Where the boat's weight pulls down. It stays in the same place in the boat however it tips.</value>
+  </data>
+  <data name="Boats_Heel_Part_Lift" xml:space="preserve">
+    <value>Centre of buoyancy</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Lift" xml:space="preserve">
+    <value>The middle of the water pushed aside, where the water pushes up. It moves as the boat tips.</value>
+  </data>
+  <data name="Boats_Heel_Part_Lever" xml:space="preserve">
+    <value>Righting lever</value>
+  </data>
+  <data name="Narr_Boats_Heel_Part_Lever" xml:space="preserve">
+    <value>The sideways gap between the push up and the weight down. The longer it is, the harder the boat rights itself.</value>
+  </data>
+  <data name="Boats_Stability_Title" xml:space="preserve">
+    <value>Steady or top-heavy</value>
+  </data>
+  <data name="Boats_Stability_P1" xml:space="preserve">
+    <value>Whether a boat rights itself depends on a race. As it tips, the water's push slides to the low side; but the higher the boat's weight sits, the further its centre swings out to the low side too. If the weight's centre swings out further than the push, the pair tips the boat further instead, and over it goes.</value>
+  </data>
+  <data name="Boats_Stability_P2" xml:space="preserve">
+    <value>So heavy things go low: engines and fuel deep in the hull, sometimes tonnes of extra weight, called ballast, at the very bottom. A wider boat helps too, because tipping it moves its push much further. Stacking cargo high on deck, or crowding everyone to the top, can turn a steady boat into one that rolls over.</value>
+  </data>
+  <data name="Boats_Stability_Deeper" xml:space="preserve">
+    <value>For small tips, the water's push seems to come from a fixed point above the boat, the metacentre. Its height above the centre of weight, GM, sums it up: positive and the boat rights itself (bigger is stiffer); negative and it will not stay upright. For a box-shaped boat, the metacentre is width² ÷ (12 × draft) above the middle of the water pushed aside.</value>
+  </data>
+  <data name="Boats_Stability_Height" xml:space="preserve">
+    <value>Height of the weight's centre above the keel</value>
+  </data>
+  <data name="Boats_Stability_Beam" xml:space="preserve">
+    <value>Width of the boat</value>
+  </data>
+  <data name="Boats_Stability_Readout" xml:space="preserve">
+    <value>Metacentric height {0} m: it rights itself after every wave.</value>
+  </data>
+  <data name="Boats_Stability_TopHeavy" xml:space="preserve">
+    <value>Metacentric height {0} m: top-heavy! It will not stay upright.</value>
+  </data>
+  <data name="Boats_Stability_Picture" xml:space="preserve">
+    <value>A boat rolling in waves, end-on, and a graph of how hard it rights itself at each angle</value>
+  </data>
+  <data name="Boats_Stability_Capsized" xml:space="preserve">
+    <value>Capsized!</value>
+  </data>
+  <data name="Boats_Stability_Tipped" xml:space="preserve">
+    <value>Tipped {0}°</value>
+  </data>
+  <data name="Boats_Stability_RightsItself" xml:space="preserve">
+    <value>rights itself</value>
+  </data>
+  <data name="Boats_Stability_TipsFurther" xml:space="preserve">
+    <value>tips further</value>
+  </data>
+  <data name="Boats_Stability_Lever" xml:space="preserve">
+    <value>lever</value>
+  </data>
+  <data name="Narr_Boats_Stability_01" xml:space="preserve">
+    <value>A boat rolling in the waves. Each wave tips it, and it swings back upright.</value>
+  </data>
+  <data name="Narr_Boats_Stability_02" xml:space="preserve">
+    <value>This curve shows how hard it rights itself at each angle. Above the line it comes back; below it, it would go over.</value>
+  </data>
+  <data name="Narr_Boats_Stability_03" xml:space="preserve">
+    <value>Your turn: stack the weight higher, or make the boat narrower, until it is top-heavy.</value>
+  </data>
+  <data name="Narr_Boats_Stability_04" xml:space="preserve">
+    <value>Now make the boat wider. With the same high load, it is steady again.</value>
+  </data>
+  <data name="Narr_Boats_Stability_05" xml:space="preserve">
+    <value>Where should a ship carry its heaviest things?</value>
+  </data>
+  <data name="Boats_Stability_Quiz1" xml:space="preserve">
+    <value>Low down, deep in the hull</value>
+  </data>
+  <data name="Boats_Stability_Quiz2" xml:space="preserve">
+    <value>On the deck</value>
+  </data>
+  <data name="Boats_Stability_Quiz3" xml:space="preserve">
+    <value>At the top of the mast</value>
+  </data>
+  <data name="Boats_Stability_Part_Boat" xml:space="preserve">
+    <value>Boat</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Boat" xml:space="preserve">
+    <value>Six metres wide to start with. Cargo stacked on deck raises the centre of its weight.</value>
+  </data>
+  <data name="Boats_Stability_Part_Weight" xml:space="preserve">
+    <value>Centre of weight</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Weight" xml:space="preserve">
+    <value>The higher it sits, the more it swings out to the low side when the boat tips.</value>
+  </data>
+  <data name="Boats_Stability_Part_Curve" xml:space="preserve">
+    <value>Righting curve</value>
+  </data>
+  <data name="Narr_Boats_Stability_Part_Curve" xml:space="preserve">
+    <value>The righting lever at each angle, from upright to eighty degrees. The white dot is the boat now.</value>
+  </data>
+  <data name="Boats_Submarine_Title" xml:space="preserve">
+    <value>Sinking on purpose</value>
+  </data>
+  <data name="Boats_Submarine_P1" xml:space="preserve">
+    <value>A submarine is built a little lighter than the water it pushes aside when fully under, so with nothing else to do, it floats. To dive, it opens valves and lets the sea into its ballast tanks. It gets no bigger, but it gets heavier, and once it is heavier than its own size of water, it sinks.</value>
+  </data>
+  <data name="Boats_Submarine_P2" xml:space="preserve">
+    <value>To come up again it blows the water out of the tanks with compressed air, and it is light once more. In between is a narrow balance: exactly as heavy as its water, it hangs where it is. But only just: a few litres either way and it slowly drifts up or down, so crews keep trimming the tanks and steer with fins like a fish.</value>
+  </data>
+  <data name="Boats_Submarine_Deeper" xml:space="preserve">
+    <value>Unlike a boat, a submarine under water has no waterline to settle at: the water's push no longer grows as it goes deeper, so nothing brings it back to one depth. Fish have the same problem and solve it with a swim bladder, a bag of gas they fill or empty a little.</value>
+  </data>
+  <data name="Boats_Submarine_Ballast" xml:space="preserve">
+    <value>Ballast tanks filled</value>
+  </data>
+  <data name="Boats_Submarine_Hangs" xml:space="preserve">
+    <value>It weighs {0}% of the water it pushes aside fully under: it hangs where it is, only just.</value>
+  </data>
+  <data name="Boats_Submarine_Floats" xml:space="preserve">
+    <value>It weighs {0}% of the water it pushes aside fully under: lighter, so it floats up.</value>
+  </data>
+  <data name="Boats_Submarine_Sinks" xml:space="preserve">
+    <value>It weighs {0}% of the water it pushes aside fully under: heavier, so it sinks.</value>
+  </data>
+  <data name="Boats_Submarine_Picture" xml:space="preserve">
+    <value>A submarine in a sixty-metre sea, its ballast tanks part full, with a depth gauge</value>
+  </data>
+  <data name="Boats_Submarine_OnSeabed" xml:space="preserve">
+    <value>On the seabed</value>
+  </data>
+  <data name="Boats_Submarine_Surfaced" xml:space="preserve">
+    <value>On the surface</value>
+  </data>
+  <data name="Boats_Submarine_Hanging" xml:space="preserve">
+    <value>Hanging still</value>
+  </data>
+  <data name="Boats_Submarine_Sinking" xml:space="preserve">
+    <value>Sinking</value>
+  </data>
+  <data name="Boats_Submarine_Rising" xml:space="preserve">
+    <value>Rising</value>
+  </data>
+  <data name="Boats_Submarine_Depth" xml:space="preserve">
+    <value>{0} m down</value>
+  </data>
+  <data name="Narr_Boats_Submarine_01" xml:space="preserve">
+    <value>With its tanks full of air, the submarine is lighter than the water it could push aside, so it floats on the surface.</value>
+  </data>
+  <data name="Narr_Boats_Submarine_02" xml:space="preserve">
+    <value>Now flood the ballast tanks. The submarine is heavier than its water, and down it goes.</value>
+  </data>
+  <data name="Narr_Boats_Submarine_03" xml:space="preserve">
+    <value>Your turn: fill the tanks just enough that the submarine weighs exactly what its water weighs.</value>
+  </data>
+  <data name="Narr_Boats_Submarine_04" xml:space="preserve">
+    <value>Watch the gauge: now it hangs, or drifts very slowly. Deeper water won't push it back, so it has to be balanced by hand.</value>
+  </data>
+  <data name="Narr_Boats_Submarine_05" xml:space="preserve">
+    <value>To come back up, what does the submarine do?</value>
+  </data>
+  <data name="Boats_Submarine_Quiz1" xml:space="preserve">
+    <value>Lets more sea into its tanks</value>
+  </data>
+  <data name="Boats_Submarine_Quiz2" xml:space="preserve">
+    <value>Blows the water out with compressed air</value>
+  </data>
+  <data name="Boats_Submarine_Quiz3" xml:space="preserve">
+    <value>Switches its propeller off</value>
+  </data>
+  <data name="Boats_Submarine_Part_Sub" xml:space="preserve">
+    <value>Submarine</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Sub" xml:space="preserve">
+    <value>Its size never changes, so neither does the water it pushes aside under water. Only its weight can change.</value>
+  </data>
+  <data name="Boats_Submarine_Part_Tanks" xml:space="preserve">
+    <value>Ballast tanks</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Tanks" xml:space="preserve">
+    <value>Let the sea in to get heavier and dive; blow it out with air to get lighter and rise.</value>
+  </data>
+  <data name="Boats_Submarine_Part_Gauge" xml:space="preserve">
+    <value>Depth gauge</value>
+  </data>
+  <data name="Narr_Boats_Submarine_Part_Gauge" xml:space="preserve">
+    <value>How deep the submarine is, down to the seabed sixty metres below.</value>
+  </data>
 </root>
