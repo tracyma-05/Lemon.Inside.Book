@@ -140,9 +140,13 @@ public sealed class SkyScene : SceneView
         Fill(context, bounds, outline, LampBrush, null);
         Fill(context, bounds, onFloor, OnFloorBrush, null);
         Fill(context, bounds, onDome, OnDomeBrush, null);
+        Mark("lamp", outline.Select(p => Project(p, bounds)).OfType<Point>(), pad: 2);
+        Mark("patch", onFloor.Select(p => Project(p, bounds)).OfType<Point>(), pad: 2);
+        Mark("circle", Circle(Dome, 0).Select(p => Project(p, bounds)).OfType<Point>(), pad: -8);
         if (Project(Vector3.Zero, bounds) is { } spot)
         {
             context.DrawEllipse(DiagramText.Ink, null, spot, 4, 4);
+            Mark("spot", spot, 8);
             DiagramText.Draw(context, DiagramText.Get("Light_Sky_Spot"), new Point(spot.X, spot.Y + 8), 11.5, DiagramText.Faint, 0.5, 0);
         }
 

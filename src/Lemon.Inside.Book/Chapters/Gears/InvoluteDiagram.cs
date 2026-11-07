@@ -81,16 +81,20 @@ public sealed class InvoluteDiagram : GearPicture
         {
             var along = (p - t) / Math.Max(1, Math.Sqrt(((p - t).X * (p - t).X) + ((p - t).Y * (p - t).Y)));
             var inward = (centre - t) / (baseRadius * scale);
-            const double Mark = 9;
-            var a = t + (along * Mark);
-            var b = a + (inward * Mark);
-            var c = t + (inward * Mark);
+            const double Corner = 9;
+            var a = t + (along * Corner);
+            var b = a + (inward * Corner);
+            var c = t + (inward * Corner);
             context.DrawLine(RightAnglePen, a, b);
             context.DrawLine(RightAnglePen, b, c);
         }
 
         context.DrawEllipse(DiagramText.Gold, null, t, 4, 4);
         context.DrawEllipse(Brushes.White, new ImmutablePen(DiagramText.Cyan, 2), p, 6, 6);
+        Mark("can", centre, baseRadius * scale);
+        Mark("pencil", p, 10);
+        Mark("string", [t, p], pad: 4);
+        Mark("curve", Enumerable.Range(0, 21).Select(i => ToScreen(GearGeometry.Unwind(baseRadius, unwound * i / 20).End, centre, scale)), pad: 4);
 
         DiagramText.Draw(context, DiagramText.Get("Gears_Involute_Can"), new Point(centre.X, centre.Y), 12, DiagramText.Ink, 0.5, 0.5);
         if (unwound > 0.4)

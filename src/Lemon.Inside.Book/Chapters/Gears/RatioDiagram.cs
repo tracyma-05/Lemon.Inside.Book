@@ -71,6 +71,8 @@ public sealed class RatioDiagram : GearPicture
         DrawGear(context, z1, Pressure, c1, scale, a1, Gold);
         DrawCircle(context, c1, r1 * scale, Circle);
         DrawCircle(context, c2, r2 * scale, Circle);
+        Mark("driver", c1, (r1 + 1) * scale);
+        Mark("driven", c2, (r2 + 1) * scale);
 
         var label = y + ((Math.Max(r1, r2) + 2.5) * scale);
         var text = Math.Max(12, Math.Min(15, bounds.Width / 40));

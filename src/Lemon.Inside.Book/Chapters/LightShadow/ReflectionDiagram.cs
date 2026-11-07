@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -11,7 +12,7 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 /// goes off in each direction: one ray for a mirror, a narrow beam for a glossy surface, a round puff for a matte
 /// one. An eye looking from somewhere sees as much as the shape reaches towards it.
 /// </summary>
-public sealed class ReflectionDiagram : Control
+public sealed class ReflectionDiagram : Picture
 {
     public static readonly StyledProperty<double> LightAngleProperty =
         AvaloniaProperty.Register<ReflectionDiagram, double>(nameof(LightAngle), 40);
@@ -77,7 +78,7 @@ public sealed class ReflectionDiagram : Control
         return ((1 - m) * beam) + (m * matte);
     }
 
-    public override void Render(DrawingContext context)
+    protected override void Paint(DrawingContext context)
     {
         var bounds = new Rect(Bounds.Size);
         context.FillRectangle(Plate, bounds);
@@ -115,16 +116,22 @@ public sealed class ReflectionDiagram : Control
         }
 
         context.DrawGeometry(LobeBrush, LobePen, lobe);
+        Mark("lamp", from, 12);
+        Mark("mirror", [hit, Towards(LightAngle, reach * 0.95)], pad: 4);
+        Mark("lobe", Enumerable.Range(0, 37).Select(i => -90.0 + (5 * i))
+            .Select(a => Towards(a, reach * 0.8 * Leaving(a, LightAngle, Roughness))).Append(hit), pad: 4);
 
         // The eye and what it sees.
         var eye = Towards(EyeAngle, reach);
         context.DrawLine(EyePen, hit, eye);
         context.DrawEllipse(DiagramText.Ink, null, eye, 6, 6);
+        Mark("eye", eye, 10);
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_Eye"), new Point(eye.X, eye.Y - 10), 12, DiagramText.Faint, 0.5, 1);
 
         var seen = Leaving(EyeAngle, LightAngle, Roughness);
         var panel = new Rect(bounds.X + 12, bounds.Y + 12, Math.Min(230, bounds.Width - 24), 64);
         context.FillRectangle(PanelBrush, panel, 8);
+        Mark("view", panel.Deflate(8));
         var shade = (byte)(30 + (225 * Math.Sqrt(Math.Clamp(seen, 0, 1))));
         context.FillRectangle(new SolidColorBrush(Color.FromRgb(shade, shade, (byte)(shade * 0.85))), new Rect(panel.X + 12, panel.Y + 12, 40, 40), 4);
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_View"), new Point(panel.X + 64, panel.Y + 12), 11.5, DiagramText.Faint);

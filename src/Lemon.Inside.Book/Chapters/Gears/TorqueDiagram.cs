@@ -57,6 +57,8 @@ public sealed class TorqueDiagram : GearPicture
         var a2 = GearGeometry.MeshAngle(CrankTeeth, a1, z2, 0);
         DrawGear(context, z2, Pressure, c2, scale, a2, Steel);
         DrawGear(context, CrankTeeth, Pressure, c1, scale, a1, Gold, mark: false);
+        Mark("crank", c1, (r1 + 3) * scale);
+        Mark("drum", c2, (r2 + 1) * scale);
 
         // The drum on the big gear's axle, and the rope down its right side to the weight. The weight climbs while the
         // drum winds; it starts again from the floor when it reaches the top.
@@ -73,6 +75,7 @@ public sealed class TorqueDiagram : GearPicture
         var ropeX = c2.X + drum;
         context.DrawLine(RopePen, new Point(ropeX, c2.Y), new Point(ropeX, boxTop));
         context.FillRectangle(Weight, new Rect(ropeX - (box / 2), boxTop, box, box), 3);
+        Mark("load", new Rect(ropeX - (box / 2), boxTop, box, box));
         DiagramText.Draw(context, DiagramText.Get("Gears_Torque_Load"), new Point(ropeX + (box / 2) + 6, boxTop + (box / 2)), 12, DiagramText.Faint, 0, 0.5);
 
         // The crank's handle and the hand's push.
@@ -81,7 +84,9 @@ public sealed class TorqueDiagram : GearPicture
         context.DrawEllipse(DiagramText.Gold, null, handle, 6, 6);
         DiagramText.Draw(context, DiagramText.Get("Gears_Torque_Hand"), new Point(c1.X, c1.Y - ((r1 + 5) * scale)), 12, DiagramText.Gold, 0.5, 1);
 
-        DrawBars(context, new Rect(bounds.X + 18, floor + 10, bounds.Width - 36, bounds.Height - floor - 18), ratio);
+        var bars = new Rect(bounds.X + 18, floor + 10, bounds.Width - 36, bounds.Height - floor - 18);
+        DrawBars(context, bars, ratio);
+        Mark("bars", bars.Deflate(new Thickness(0, 0, 0, 8)));
     }
 
     /// <summary>Speed and turning force of the crank (gold) and the drum (grey), each as a share of the larger.</summary>

@@ -90,6 +90,9 @@ public sealed class MovementDiagram : GearPicture
             }
 
             var centre = new Point(cx, y);
+            var flat = new Rect(cx - size, y - (size * Squash), 2 * size, 2 * size * Squash);
+            Mark(layer.ToString().ToLowerInvariant(), flat);
+            Mark("movement", flat);
             using (context.PushTransform(Matrix.CreateTranslation(-cx, -y) * Matrix.CreateScale(1, Squash) * Matrix.CreateTranslation(cx, y)))
             {
                 DrawLayer(context, layer, centre, size);

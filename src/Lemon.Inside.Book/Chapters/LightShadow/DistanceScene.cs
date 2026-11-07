@@ -81,11 +81,14 @@ public sealed class DistanceScene : SceneView
 
         // The first square, gold; the frame at the chosen distance, as bright as the light that reaches each square.
         DrawFrame(context, bounds, 1, EdgePen, new SolidColorBrush(Color.FromRgb(0xF2, 0xC9, 0x4C), 0.55));
+        Mark("square", Corners(1).Select(c => P(c)).OfType<Point>(), pad: 2);
+        Mark("frame", Corners(d).Select(c => P(c)).OfType<Point>(), pad: 2);
         var share = 1 / (d * d);
         DrawFrame(context, bounds, d, GridPen, new SolidColorBrush(Color.FromRgb(0xF2, 0xC9, 0x4C), 0.1 + (0.6 * share)), grid: true);
         if (P(Lamp) is { } bulb)
         {
             context.DrawEllipse(new SolidColorBrush(Color.FromRgb(0xFF, 0xF4, 0xD0)), null, bulb, 7, 7);
+            Mark("lamp", bulb, 10);
         }
 
         DiagramText.Draw(context,

@@ -1,5 +1,6 @@
 using System.Numerics;
 using Avalonia;
+using Avalonia.Media;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -85,6 +86,16 @@ public sealed class BounceScene : SceneView
 
         Raster.Exposure = 0.9f;
         return radiance;
+    }
+
+    protected override void DrawOverlay(DrawingContext context, Rect bounds)
+    {
+        IEnumerable<Point> Seen(params Vector3[] points) => points.Select(p => Project(p, bounds)).OfType<Point>();
+
+        Mark("wall", Seen(new(-1.5f, 0, -2), new(-1.5f, 2.4f, -2), new(-1.5f, 0, 2), new(-1.5f, 2.4f, 2)), pad: -12);
+        Mark("floor", Seen(new(-1.5f, 0, -1), new(-0.6f, 0, -1), new(-1.5f, 0, 1), new(-0.6f, 0, 1)), pad: 2);
+        Mark("box", Seen([.. ShadowScene.BoxCorners(Block)]), pad: 2);
+        Mark("lamp", Seen(_lamp.Center), pad: 14);
     }
 }
 

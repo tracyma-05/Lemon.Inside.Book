@@ -80,6 +80,10 @@ public sealed class EscapementDiagram : GearPicture
         context.DrawEllipse(Lever, null, fork, unit * 0.06, unit * 0.06);
         DrawStone(context, exit, wheelCentre, unit);
         DrawStone(context, entry, wheelCentre, unit);
+        Mark("wheel", wheelCentre, wheelRadius);
+        Mark("lever", [pivot, exit, entry, fork], pad: 8);
+        Mark("stones", [exit, entry], pad: 10);
+        Mark("balance", balanceCentre, balanceRadius);
         context.DrawEllipse(WatchParts.Dark, null, pivot, 4, 4);
 
         // The balance and its pin, which meets the lever's fork as it swings through the middle.

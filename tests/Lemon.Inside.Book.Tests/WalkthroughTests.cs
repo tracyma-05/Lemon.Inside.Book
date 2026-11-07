@@ -1,9 +1,12 @@
 using Avalonia.Headless.XUnit;
+using Avalonia.VisualTree;
 using Lemon.Book.Shell.Explore.Lessons;
 using Lemon.Inside.Book.Chapters;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Watch;
+using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -75,6 +78,48 @@ public sealed class WalkthroughTests
             Assert.Equal(LessonState.Done, lesson.State);
             lesson.Stop();
         }
+    }
+
+    [AvaloniaTheory]
+    [InlineData("Light-Shadow")]
+    [InlineData("Gears")]
+    [InlineData("Watch")]
+    public void EveryRing_SitsOnAPartThePictureDrew(string slug)
+    {
+        var (window, model) = OpenAt(slug);
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == slug);
+        for (var s = 0; s < BookContents.Chapters[chapter].Spreads; s++)
+        {
+            var page = BookContents.SpreadPage(chapter, s);
+            model.GoToPage(page);
+            Frames(3);
+            var diagram = model.Pages[page + 1];
+            var spread = (Spread)diagram.GetType().GetProperty("Spread")!.GetValue(diagram)!;
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            var lesson = spread.Lesson;
+            lesson.Start();
+            var rung = 0;
+            for (var guard = 0; guard < 50 && lesson.State != LessonState.Done; guard++)
+            {
+                Frames(2);
+                Assert.Equal(lesson.Highlight, picture.Highlight);
+                if (lesson.Highlight is { } id)
+                {
+                    Assert.True(picture.MarkedParts.Contains(id), $"{picture.GetType().Name} has no part '{id}' ({string.Join(", ", picture.MarkedParts)})");
+                    rung++;
+                    if (rung == 1) Snapshot(window, $"ring-{slug}-{s + 1}");
+                }
+
+                lesson.NextCommand.Execute(null);
+            }
+
+            Assert.True(rung > 0, spread.Key);
+            lesson.Stop();
+            Frames(2);
+            Assert.Null(picture.Highlight);
+        }
+
+        window.Close();
     }
 
     [AvaloniaFact]

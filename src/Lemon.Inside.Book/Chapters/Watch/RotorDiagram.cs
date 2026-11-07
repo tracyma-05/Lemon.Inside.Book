@@ -79,6 +79,9 @@ public sealed class RotorDiagram : GearPicture
         context.DrawGeometry(new ImmutableSolidColorBrush(Color.FromArgb(0xD8, 0xC8, 0x9A, 0x4A)),
             new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x7A, 0x5C, 0x2A)), 1.5), moon);
         context.DrawEllipse(new ImmutableSolidColorBrush(WatchParts.Steel), null, centre, radius * 0.08, radius * 0.08);
+        Mark("rotor", centre, radius * 0.94);
+        Mark("wheel", wheel, radius * 0.22);
+        Mark("barrel", barrel, radius * 0.28);
 
         DiagramText.Draw(context, DiagramText.Get("Watch_Rotor_Rotor"), WatchParts.At(centre, radius * 0.6, down), 12, DiagramText.Ink, 0.5, 0.5, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Watch_Rotor_Wheel"), wheel + new Point(0, -(radius * 0.24)), 11.5, DiagramText.Faint, 0.5, 1);
@@ -86,6 +89,7 @@ public sealed class RotorDiagram : GearPicture
         // The spring's reserve, as a bar.
         var bar = new Rect(bounds.X + 40, centre.Y + radius + 36, bounds.Width - 80, 12);
         context.FillRectangle(Track, bar, 4);
+        Mark("reserve", bar);
         context.FillRectangle(DiagramText.Gold, new Rect(bar.X, bar.Y, bar.Width * _winding.Wound, bar.Height), 4);
         DiagramText.Draw(context, DiagramText.Format("Watch_Rotor_Reserve", (_winding.Wound * 100).ToString("0")), new Point(bar.X, bar.Y - 6), 12.5, DiagramText.Ink, 0, 1);
         if (_winding.Wound >= 0.999)

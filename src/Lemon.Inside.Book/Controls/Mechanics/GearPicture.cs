@@ -12,7 +12,7 @@ namespace Lemon.Inside.Book.Controls.Mechanics;
 /// export steps them frame by frame). Gears are drawn from <see cref="GearGeometry"/> outlines in units of the module,
 /// with y up, at a centre and scale on screen.
 /// </summary>
-public abstract class GearPicture : Control
+public abstract class GearPicture : Picture
 {
     public static readonly IImmutableBrush Plate = new ImmutableLinearGradientBrush(
         [new ImmutableGradientStop(0, Color.FromRgb(0x14, 0x1B, 0x2A)), new ImmutableGradientStop(1, Color.FromRgb(0x08, 0x0B, 0x12))],
@@ -87,7 +87,7 @@ public abstract class GearPicture : Control
         RequestFrame();
     }
 
-    public sealed override void Render(DrawingContext context)
+    protected sealed override void Paint(DrawingContext context)
     {
         var bounds = new Rect(Bounds.Size);
         context.FillRectangle(Plate, bounds);

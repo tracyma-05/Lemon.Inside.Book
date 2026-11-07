@@ -84,9 +84,13 @@ public sealed class BrightnessScene : SceneView
         if (Project(new Vector3(0, LampHeight, 0), bounds) is { } lamp && Project(new Vector3(0, 4, 0), bounds) is { } ceiling)
         {
             context.DrawLine(CordPen, ceiling, lamp);
+            Mark("lamp", lamp, 14);
             DiagramText.Draw(context, DiagramText.Format("Light_Watts", Power.ToString("0")), new Point(lamp.X + 14, lamp.Y), 13, DiagramText.Gold, 0, 0.5, bold: true);
         }
 
+        // The pool of light on the floor under the lamp.
+        Mark("floor", new[] { new Vector3(-1, 0, 0), new Vector3(1, 0, 0), new Vector3(0, 0, -1), new Vector3(0, 0, 1) }
+            .Select(v => Project(v, bounds)).OfType<Point>(), pad: 0);
         DrawChart(context, bounds);
     }
 
@@ -96,6 +100,7 @@ public sealed class BrightnessScene : SceneView
         const double maxLight = 1.6;
         var panel = new Rect(bounds.X + 12, bounds.Bottom - 170, Math.Min(250, bounds.Width - 24), 158);
         context.FillRectangle(PanelBrush, panel, 8);
+        Mark("chart", panel.Deflate(8));
         var plot = new Rect(panel.X + 34, panel.Y + 12, panel.Width - 48, panel.Height - 52);
 
         double X(double light) => plot.X + (plot.Width * light / maxLight);

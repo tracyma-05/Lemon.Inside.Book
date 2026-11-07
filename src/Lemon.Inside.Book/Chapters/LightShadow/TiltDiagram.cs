@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,7 +11,7 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 /// Spread 2, seen from the side: a torch shining straight down on a board that tips. The same beam lands on a
 /// longer patch, so each bit of it gets less light; below, the patch seen face on.
 /// </summary>
-public sealed class TiltDiagram : Control
+public sealed class TiltDiagram : Picture
 {
     public static readonly StyledProperty<double> TiltProperty =
         AvaloniaProperty.Register<TiltDiagram, double>(nameof(Tilt), 30);
@@ -46,7 +47,7 @@ public sealed class TiltDiagram : Control
         set => SetValue(TiltProperty, value);
     }
 
-    public override void Render(DrawingContext context)
+    protected override void Paint(DrawingContext context)
     {
         var bounds = new Rect(Bounds.Size);
         context.FillRectangle(Plate, bounds);
@@ -96,6 +97,9 @@ public sealed class TiltDiagram : Control
         context.DrawLine(BoardPen, boardA, boardB);
         var lit = new Pen(new SolidColorBrush(Color.FromArgb(255, 0xF2, 0xC9, 0x4C), 0.35 + (0.65 * cos)), 8, lineCap: PenLineCap.Flat);
         context.DrawLine(lit, new Point(left, BoardY(left)), new Point(right, BoardY(right)));
+        Mark("torch", new Rect(left - 8, torchTop, beam + 16, torchBottom - torchTop));
+        Mark("patch", [new Point(left, BoardY(left)), new Point(right, BoardY(right))]);
+        Mark("board", [boardA, boardB], pad: 2);
         if (Tilt >= 3)
         {
             var arcRadius = reach * 0.8;

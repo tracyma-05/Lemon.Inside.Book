@@ -43,9 +43,12 @@ public sealed class HandsDiagram : GearPicture
         var dial = Math.Min(bounds.Width * 0.2, bounds.Height * 0.2);
         var centre = new Point(bounds.Center.X, (bounds.Height * 0.06) + dial + 8);
         DrawDial(context, centre, dial, _seconds);
+        Mark("dial", centre, dial);
         var clock = TimeSpan.FromSeconds(_seconds % 86400);
         DiagramText.Draw(context, clock.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture), new Point(bounds.Right - 16, bounds.Y + 14), 14, DiagramText.Ink, 1, 0, bold: true);
-        DrawTrain(context, new Rect(bounds.X + 12, centre.Y + dial + 16, bounds.Width - 24, bounds.Bottom - centre.Y - dial - 24), _seconds);
+        var train = new Rect(bounds.X + 12, centre.Y + dial + 16, bounds.Width - 24, bounds.Bottom - centre.Y - dial - 24);
+        DrawTrain(context, train, _seconds);
+        Mark("train", train.Deflate(8));
     }
 
     /// <summary>A white dial with hour and minute marks and three hands.</summary>

@@ -20,7 +20,7 @@ namespace Lemon.Inside.Book.Controls.Scene;
 /// rays, charts). Working out the light is the slow part, so a subclass does it in two passes: a quick, coarse one
 /// while the reader is moving a slider, and the full one once they have stopped for a moment.
 /// </summary>
-public abstract class SceneView : Control
+public abstract class SceneView : Picture
 {
     public static readonly StyledProperty<bool> ShowStatsProperty =
         AvaloniaProperty.Register<SceneView, bool>(nameof(ShowStats));
@@ -243,9 +243,8 @@ public abstract class SceneView : Control
 
     #region drawing
 
-    public override void Render(DrawingContext context)
+    protected override void Paint(DrawingContext context)
     {
-        base.Render(context);
         var bounds = new Rect(Bounds.Size);
         if (bounds.Width < 2 || bounds.Height < 2)
         {

@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -11,7 +12,7 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 /// more of the panel, but each bit of it is further away; tip the panel and the cone takes in more of it, but each
 /// bit sends less light that way. The two always cancel, so the panel looks just as bright.
 /// </summary>
-public sealed class RadianceDiagram : Control
+public sealed class RadianceDiagram : Picture
 {
     public static readonly StyledProperty<double> DistanceProperty =
         AvaloniaProperty.Register<RadianceDiagram, double>(nameof(Distance), 2);
@@ -63,7 +64,7 @@ public sealed class RadianceDiagram : Control
     /// <summary>How much of each bit's light reaches the eye, against facing it from 1 m (cos / d²).</summary>
     public static double LightPerBit(double distance, double tiltDegrees) => Math.Cos(tiltDegrees * Math.PI / 180) / (distance * distance);
 
-    public override void Render(DrawingContext context)
+    protected override void Paint(DrawingContext context)
     {
         var bounds = new Rect(Bounds.Size);
         context.FillRectangle(Plate, bounds);
@@ -109,6 +110,9 @@ public sealed class RadianceDiagram : Control
         }
 
         context.DrawEllipse(DiagramText.Ink, null, eye, 6, 6);
+        Mark("eye", eye, 10);
+        Mark("panel", [centre - (along * half), centre + (along * half)], pad: 4);
+        Mark("seen", [top, bottom], pad: 4);
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_Eye"), new Point(eye.X, eye.Y + 12), 12, DiagramText.Faint, 0.5, 0);
         DiagramText.Draw(context, DiagramText.Get("Light_Radiance_Panel"), new Point(centre.X, centre.Y + half + 10), 12, DiagramText.Faint, 0.5, 0);
 
@@ -119,6 +123,7 @@ public sealed class RadianceDiagram : Control
     {
         var panel = new Rect(bounds.X + 12, bounds.Y + 12, Math.Min(330, bounds.Width - 24), 96);
         context.FillRectangle(PanelBrush, panel, 8);
+        Mark("readout", panel.Deflate(8));
         var area = AreaSeen(Distance, Tilt);
         var perBit = LightPerBit(Distance, Tilt);
         DiagramText.Draw(context, DiagramText.Format("Light_Radiance_Area", area.ToString("0.00")), new Point(panel.X + 12, panel.Y + 10), 12.5, DiagramText.Cyan);

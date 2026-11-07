@@ -12,24 +12,24 @@
                 <ContentControl Content="{Binding Spread}">
                     <ContentControl.DataTemplates>
                         <DataTemplate DataType="watch:SpringSpread">
-                            <watch:SpringDiagram Wound="{Binding Wound}" AutomationProperties.Name="{loc:Localize Watch_Spring_Picture}" />
+                            <watch:SpringDiagram Highlight="{Binding Lesson.Highlight}" Wound="{Binding Wound}" AutomationProperties.Name="{loc:Localize Watch_Spring_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:HandsSpread">
-                            <watch:HandsDiagram Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
+                            <watch:HandsDiagram Highlight="{Binding Lesson.Highlight}" Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:EscapementSpread">
-                            <watch:EscapementDiagram SlowMotion="{Binding SlowMotion}" AutomationProperties.Name="{loc:Localize Watch_Escape_Picture}" />
+                            <watch:EscapementDiagram Highlight="{Binding Lesson.Highlight}" SlowMotion="{Binding SlowMotion}" AutomationProperties.Name="{loc:Localize Watch_Escape_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:BalanceSpread">
-                            <watch:BalanceDiagram Stiffness="{Binding Stiffness}" Amplitude="{Binding Amplitude}"
+                            <watch:BalanceDiagram Highlight="{Binding Lesson.Highlight}" Stiffness="{Binding Stiffness}" Amplitude="{Binding Amplitude}"
                                                   AutomationProperties.Name="{loc:Localize Watch_Balance_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:RotorSpread">
-                            <watch:RotorDiagram Activity="{Binding Activity}" Reverser="{Binding Reverser}"
+                            <watch:RotorDiagram Highlight="{Binding Lesson.Highlight}" Activity="{Binding Activity}" Reverser="{Binding Reverser}"
                                                 AutomationProperties.Name="{loc:Localize Watch_Rotor_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:MovementSpread">
-                            <watch:MovementDiagram Explode="{Binding Explode}" Hidden="{Binding Hidden}"
+                            <watch:MovementDiagram Highlight="{Binding Lesson.Highlight}" Explode="{Binding Explode}" Hidden="{Binding Hidden}"
                                                    AutomationProperties.Name="{loc:Localize Watch_Movement_Picture}" />
                         </DataTemplate>
                     </ContentControl.DataTemplates>

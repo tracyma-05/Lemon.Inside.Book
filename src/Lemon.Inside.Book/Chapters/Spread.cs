@@ -57,17 +57,21 @@ public abstract class Spread(string area, string key) : ObservableObject
     /// <summary>The clip key of step <paramref name="number"/> (from 1).</summary>
     protected string Clip(int number) => $"Narr_{Area}_{Key}_{number:00}";
 
+    /// <summary>A step that only speaks, ringing <paramref name="highlight"/> in the picture.</summary>
+    protected LessonStep Say(int number, string? highlight, Action? enter = null) => new(Clip(number)) { Enter = enter, Highlight = highlight };
+
     /// <summary>A "your turn" step: waits until <paramref name="done"/>; <paramref name="solve"/> is what a reader would do.</summary>
-    protected LessonStep TryIt(int number, Func<bool> done, Action solve)
+    protected LessonStep TryIt(int number, Func<bool> done, Action solve, string? highlight = null)
     {
         var key = Clip(number);
         _solutions[key] = solve;
-        return new LessonStep(key) { TryIt = done };
+        return new LessonStep(key) { TryIt = done, Highlight = highlight };
     }
 
     /// <summary>A question with three answers, <c>&lt;Area&gt;_&lt;Key&gt;_Quiz1..3</c>; <paramref name="answer"/> from 0.</summary>
-    protected LessonStep Quiz(int number, int answer) => new(Clip(number))
+    protected LessonStep Quiz(int number, int answer, string? highlight = null) => new(Clip(number))
     {
+        Highlight = highlight,
         Choices = [$"{Area}_{Key}_Quiz1", $"{Area}_{Key}_Quiz2", $"{Area}_{Key}_Quiz3"],
         Answer = answer,
     };

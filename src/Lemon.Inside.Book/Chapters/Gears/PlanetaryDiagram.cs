@@ -94,6 +94,9 @@ public sealed class PlanetaryDiagram : GearPicture
         }
 
         DrawGear(context, sunTeeth, Pressure, centre, scale, sun, ColorOf(PlanetHeld.Sun, input, output));
+        Mark("ring", centre, outer * scale);
+        Mark("sun", centre, (GearGeometry.PitchRadius(sunTeeth) + 1) * scale);
+        Mark("carrier", axles, pad: 10);
 
         // Which part is held, which is turned and which comes out.
         var text = 12.5;

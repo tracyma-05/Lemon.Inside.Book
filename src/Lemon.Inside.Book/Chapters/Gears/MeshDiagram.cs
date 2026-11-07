@@ -75,6 +75,8 @@ public sealed class MeshDiagram : GearPicture
         context.DrawLine(LinePen, At(0), At(between));
         var (contacts, from, to) = GearGeometry.Contacts(DriverTeeth, DrivenTeeth, pressure, _angle);
         context.DrawLine(PathPen, At(from), At(to));
+        Mark("line", [At(from), At(to)], pad: 6);
+        Mark("contact", contacts.Select(At), pad: 8);
         foreach (var s in contacts)
         {
             context.DrawEllipse(DiagramText.Gold, new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x10, 0x14, 0x1E)), 1.5), At(s), 6, 6);

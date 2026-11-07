@@ -101,6 +101,8 @@ public sealed class TrainDiagram : GearPicture
         }
 
         var output = ToScreen(axles[steps], origin, scale);
+        Mark("input", ToScreen(axles[0], origin, scale), (GearGeometry.PitchRadius(SmallTeeth) + 1) * scale);
+        Mark("output", output, big * scale);
         DrawHand(context, output, big * scale * 0.8, angles[steps]);
 
         var text = Math.Max(12, Math.Min(14, bounds.Width / 42));

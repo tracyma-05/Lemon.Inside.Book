@@ -66,6 +66,8 @@ public sealed class BalanceDiagram : GearPicture
         var centre = new Point(bounds.Center.X, (bounds.Height * 0.08) + radius + 14);
         WatchParts.DrawBalance(context, centre, radius, angle, pin: false);
         WatchParts.DrawHairspring(context, centre, radius * 0.16, radius * 0.62, angle);
+        Mark("balance", centre, radius * 1.1);
+        Mark("hairspring", centre, radius * 0.62);
 
         // A mark on the frame where the balance rests, and the swing either side.
         var rest = new Point(centre.X, centre.Y - (radius * 1.22));
@@ -79,6 +81,7 @@ public sealed class BalanceDiagram : GearPicture
         }
 
         var mid = area.Center.Y;
+        Mark("trace", area.Deflate(4));
         context.DrawLine(AxisPen, new Point(area.X, mid), new Point(area.Right, mid));
         DiagramText.Draw(context, DiagramText.Get("Watch_Balance_Trace"), new Point(area.X, area.Y - 6), 12, DiagramText.Faint, 0, 1);
         var points = _trace.ToArray();

@@ -78,6 +78,8 @@ public sealed class SpringDiagram : GearPicture
             context.FillRectangle(WatchParts.Dark, new Rect(centre.X - square, centre.Y - square, 2 * square, 2 * square));
         }
 
+        Mark("barrel", centre, radius * 1.1);
+        Mark("arbor", centre, radius * 0.2);
         DiagramText.Draw(context, DiagramText.Get("Watch_Spring_Arbor"), new Point(centre.X, centre.Y + (radius * 0.2) + 4), 12, DiagramText.Ink, 0.5);
         DiagramText.Draw(context, DiagramText.Get("Watch_Spring_Barrel"), new Point(centre.X, centre.Y - (radius * 1.12) - 6), 12, DiagramText.Faint, 0.5, 1);
 
@@ -86,6 +88,7 @@ public sealed class SpringDiagram : GearPicture
         var top = bounds.Height * 0.2;
         var height = bounds.Height * 0.52;
         var width = Math.Min(28, bounds.Width * 0.05);
+        Mark("gauges", new Rect(x - width - 14, top, (2 * width) + 28, height + 24));
         Gauge(context, new Rect(x - width - 14, top, width, height), wound, DiagramText.Gold, DiagramText.Get("Watch_Spring_Pull"));
         Gauge(context, new Rect(x + 14, top, width, height), wound, DiagramText.Cyan,
             DiagramText.Format("Watch_Spring_Hours", (wound * GoingTrain.ReserveHours).ToString("0")));

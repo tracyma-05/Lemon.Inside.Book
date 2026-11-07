@@ -1,5 +1,6 @@
 using System.Numerics;
 using Avalonia;
+using Avalonia.Media;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -94,4 +95,26 @@ public sealed class ShadowScene : SceneView
         Raster.Exposure = 1.2f;
         return radiance;
     }
+
+    protected override void DrawOverlay(DrawingContext context, Rect bounds)
+    {
+        var lamp = new Vector3((float)LightX, (float)LightHeight, 0);
+        var half = (float)LightSize / 2;
+        Mark("lamp", new[] { new Vector3(-half, 0, -half), new Vector3(half, 0, half) }
+            .Select(c => Project(lamp + c, bounds)).OfType<Point>(), pad: 8);
+        Mark("box", BoxCorners(Block).Select(c => Project(c, bounds)).OfType<Point>(), pad: 2);
+
+        // The shadow's far edge: where light from the lamp's middle just grazes the box's far top edge.
+        var top = new Vector3(LightX >= 0 ? Block.Min.X : Block.Max.X, Block.Max.Y, 0);
+        var t = lamp.Y / (lamp.Y - top.Y);
+        var edge = lamp + ((top - lamp) * t);
+        Mark("edge", new[] { edge + new Vector3(0, 0, Block.Min.Z), edge + new Vector3(0, 0, Block.Max.Z) }
+            .Select(c => Project(c, bounds)).OfType<Point>(), pad: 10);
+    }
+
+    internal static IEnumerable<Vector3> BoxCorners(Box box) =>
+        from x in new[] { box.Min.X, box.Max.X }
+        from y in new[] { box.Min.Y, box.Max.Y }
+        from z in new[] { box.Min.Z, box.Max.Z }
+        select new Vector3(x, y, z);
 }

@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,7 +11,7 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 /// Spread 4, from above: an eye, a car side on down the road, and the angle between the car's two ends. An arc
 /// round the eye turns the angle into a length (radians); the inset shows how big the car looks.
 /// </summary>
-public sealed class AngleDiagram : Control
+public sealed class AngleDiagram : Picture
 {
     public static readonly StyledProperty<double> DistanceProperty =
         AvaloniaProperty.Register<AngleDiagram, double>(nameof(Distance), 10);
@@ -44,7 +45,7 @@ public sealed class AngleDiagram : Control
         set => SetValue(DistanceProperty, value);
     }
 
-    public override void Render(DrawingContext context)
+    protected override void Paint(DrawingContext context)
     {
         var bounds = new Rect(Bounds.Size);
         context.FillRectangle(Plate, bounds);
@@ -92,6 +93,8 @@ public sealed class AngleDiagram : Control
         }
 
         context.DrawGeometry(null, ArcPen, arc);
+        Mark("car", new Rect(carX - Math.Max(3, perMetre * 0.9), front.Y, Math.Max(6, perMetre * 1.8), half * 2));
+        Mark("arc", [eye, new Point(eye.X + radius, eye.Y - (radius * Math.Sin(radians / 2))), new Point(eye.X + radius, eye.Y + (radius * Math.Sin(radians / 2)))]);
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_Arc"), new Point(eye.X + radius + 6, eye.Y - radius - 4), 11.5, DiagramText.Gold, 0, 1);
         DiagramText.Draw(context, DiagramText.Format("Light_Metres", Distance.ToString("0.0")),
             new Point((eye.X + carX) / 2, eye.Y + (half * 1.6) + 6), 12, DiagramText.Faint, 0.5, 0);
@@ -100,11 +103,12 @@ public sealed class AngleDiagram : Control
     }
 
     /// <summary>What the eye sees: a 60° view with the car as wide as its angle.</summary>
-    private static void DrawView(DrawingContext context, Rect bounds, double radians)
+    private void DrawView(DrawingContext context, Rect bounds, double radians)
     {
         const double fieldOfView = Math.PI / 3;
         var panel = new Rect(bounds.Right - Math.Min(260, bounds.Width * 0.55) - 12, bounds.Y + 12, Math.Min(260, bounds.Width * 0.55), 120);
         context.FillRectangle(PanelBrush, panel, 8);
+        Mark("view", panel.Deflate(8));
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_View"), new Point(panel.X + 10, panel.Y + 8), 11.5, DiagramText.Faint);
         var horizon = panel.Y + 78;
         context.DrawLine(new Pen(DiagramText.Faint, 1), new Point(panel.X + 10, horizon), new Point(panel.Right - 10, horizon));
