@@ -2983,6 +2983,685 @@
      ]
     ]
    },
+   "Narr_Friction_Capstan_01": {
+    "duration": 6.696,
+    "hash": "eb03f679aa8e89f0",
+    "sentences": [
+     [
+      0.05,
+      4.375,
+      "This boat pulls on its rope with a thousand kilograms of force."
+     ],
+     [
+      4.375,
+      6.625,
+      "No hand could hold it."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_02": {
+    "duration": 7.08,
+    "hash": "f6c2d41897ba9a63",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "One turn round the post."
+     ],
+     [
+      2.014,
+      7.028,
+      "The rope's pull presses it on the post, and friction takes up most of the load."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_03": {
+    "duration": 6.264,
+    "hash": "93cf5ea5fb737f81",
+    "sentences": [
+     [
+      0.05,
+      6.194,
+      "Your turn: add turns until your hand holds no more than twenty-five kilograms."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_04": {
+    "duration": 5.28,
+    "hash": "3ed2f1317c4a2c61",
+    "sentences": [
+     [
+      0.05,
+      5.208,
+      "Three turns: now a few kilograms in your hand hold the whole boat."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_05": {
+    "duration": 4.488,
+    "hash": "d145a6775f1cd5b6",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "What does each extra turn do to the pull your hand must hold?"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Boat": {
+    "duration": 4.56,
+    "hash": "9ea9af4c8f074323",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "It pulls with a thousand kilograms of force on its end of the rope."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Hand": {
+    "duration": 2.904,
+    "hash": "3a510c58254ddf3d",
+    "sentences": [
+     [
+      0.05,
+      2.847,
+      "It only holds what is left after the wrap."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Post": {
+    "duration": 5.856,
+    "hash": "c849fbc9e3a4e9e5",
+    "sentences": [
+     [
+      0.05,
+      5.806,
+      "The rope presses on it all the way round, and friction grips it everywhere it touches."
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Rope": {
+    "duration": 5.568,
+    "hash": "ce50ea096e08a842",
+    "sentences": [
+     [
+      0.05,
+      5.514,
+      "Drawn as thick as the pull in it: full at the boat, thinner all the way round."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_01": {
+    "duration": 7.872,
+    "hash": "841f543b156189da",
+    "sentences": [
+     [
+      0.05,
+      3.778,
+      "Magnified, the two metal surfaces are rough."
+     ],
+     [
+      3.778,
+      7.819,
+      "Dry, they touch at their bumps, which catch and grind."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_02": {
+    "duration": 5.952,
+    "hash": "39551d8ebf6ae7a2",
+    "sentences": [
+     [
+      0.05,
+      1.194,
+      "Add oil."
+     ],
+     [
+      1.194,
+      5.889,
+      "At this speed the film is thicker than the bumps, and the top surface floats."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_03": {
+    "duration": 4.584,
+    "hash": "6ad0cfd5c3dfcbd9",
+    "sentences": [
+     [
+      0.05,
+      4.528,
+      "Your turn: slow the surface down until the bumps touch again."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_04": {
+    "duration": 9.192,
+    "hash": "990feb12bde77a3c",
+    "sentences": [
+     [
+      0.05,
+      9.125,
+      "On the chart: friction is high at a crawl, falls fast as the film builds, then creeps up as the oil is stirred faster."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_05": {
+    "duration": 3.696,
+    "hash": "8f32b88a08c67a8b",
+    "sentences": [
+     [
+      0.05,
+      3.625,
+      "Why does an engine wear most just after it starts?"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Bumps": {
+    "duration": 5.064,
+    "hash": "c6ac4c3357be0c28",
+    "sentences": [
+     [
+      0.05,
+      5.014,
+      "Where they touch, marked red, they catch, scrape and wear."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Chart": {
+    "duration": 5.592,
+    "hash": "4a72bc1b777c02ac",
+    "sentences": [
+     [
+      0.05,
+      5.528,
+      "Friction against speed for the oiled surfaces, with the speed you have chosen marked."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Oil": {
+    "duration": 4.704,
+    "hash": "4f488c7785f4e6bb",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "Dragged into the gap by the moving surface, thicker the faster it goes."
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Surfaces": {
+    "duration": 5.496,
+    "hash": "6f392f2b718b5d67",
+    "sentences": [
+     [
+      0.05,
+      5.431,
+      "Smooth to the eye, but hills and valleys about a micrometre tall under a microscope."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_01": {
+    "duration": 5.424,
+    "hash": "1bf2652a01195fab",
+    "sentences": [
+     [
+      0.05,
+      5.361,
+      "A ten-kilogram block rests on a wooden board, tilted ten degrees."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_02": {
+    "duration": 6.72,
+    "hash": "e61aeada5da2b95f",
+    "sentences": [
+     [
+      0.05,
+      2.611,
+      "Part of its weight pulls it down the slope."
+     ],
+     [
+      2.611,
+      6.653,
+      "Friction pulls back just as hard, so it stays."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_03": {
+    "duration": 3.936,
+    "hash": "7c7a9c35fba34001",
+    "sentences": [
+     [
+      0.05,
+      3.875,
+      "Your turn: tilt the board until the block slides."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_04": {
+    "duration": 5.904,
+    "hash": "11365a0542459102",
+    "sentences": [
+     [
+      0.05,
+      1.986,
+      "Change the board to rubber."
+     ],
+     [
+      1.986,
+      5.833,
+      "It grips twice as well, and the block stays put again."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_05": {
+    "duration": 3.504,
+    "hash": "565d727c18ab9128",
+    "sentences": [
+     [
+      0.05,
+      3.444,
+      "Would a heavier block start sliding at a steeper angle?"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Block": {
+    "duration": 6.816,
+    "hash": "a2d26f4411069ce0",
+    "sentences": [
+     [
+      0.05,
+      1.722,
+      "Ten kilograms."
+     ],
+     [
+      1.722,
+      6.75,
+      "Its weight is split into a press on the board and a pull down the slope."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Grip": {
+    "duration": 6.192,
+    "hash": "a850b00db5a77222",
+    "sentences": [
+     [
+      0.05,
+      3.153,
+      "It pulls up the slope only as hard as it must."
+     ],
+     [
+      3.153,
+      6.125,
+      "The dashed arrow is the most it can give."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Pull": {
+    "duration": 3.576,
+    "hash": "fa2c4492f6fb0755",
+    "sentences": [
+     [
+      0.05,
+      3.514,
+      "The part of the block's weight that points along the board."
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Ramp": {
+    "duration": 6.0,
+    "hash": "bba7b43ebcf31eba",
+    "sentences": [
+     [
+      0.05,
+      5.931,
+      "The steeper it is, the more the block is pulled downhill and the less it presses down."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_01": {
+    "duration": 5.544,
+    "hash": "2b9a315e14d92edf",
+    "sentences": [
+     [
+      0.05,
+      2.625,
+      "Two hundred kilograms in a crate."
+     ],
+     [
+      2.625,
+      5.499,
+      "Dragged, it takes a push of about eighty."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_02": {
+    "duration": 3.864,
+    "hash": "8d5b5f7acad89f2e",
+    "sentences": [
+     [
+      0.05,
+      3.792,
+      "All along its bottom, the crate rubs on the ground."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_03": {
+    "duration": 3.096,
+    "hash": "9e0c28ae7da29299",
+    "sentences": [
+     [
+      0.05,
+      3.028,
+      "Your turn: put the crate on rollers."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_04": {
+    "duration": 7.392,
+    "hash": "144fd2635672b3a3",
+    "sentences": [
+     [
+      0.05,
+      4.597,
+      "On wheels with ball bearings, even the axles roll instead of rub."
+     ],
+     [
+      4.597,
+      7.333,
+      "One kilogram of push keeps it going."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_05": {
+    "duration": 3.864,
+    "hash": "125821aba1264739",
+    "sentences": [
+     [
+      0.05,
+      3.806,
+      "Why does rolling take so much less push than sliding?"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Crate": {
+    "duration": 5.136,
+    "hash": "63948e0c1dfb88ee",
+    "sentences": [
+     [
+      0.05,
+      3.069,
+      "Its weight is the same whichever way it moves."
+     ],
+     [
+      3.069,
+      5.083,
+      "Only the friction changes."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Ground": {
+    "duration": 3.096,
+    "hash": "c7c77ca8eb35f5ec",
+    "sentences": [
+     [
+      0.05,
+      3.042,
+      "Rough enough to grip a sliding crate hard."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Hand": {
+    "duration": 5.448,
+    "hash": "13525b875a2f4d5d",
+    "sentences": [
+     [
+      0.05,
+      5.389,
+      "Dragging, about two fifths of the weight; on bearings, a two-hundredth."
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Rollers": {
+    "duration": 6.48,
+    "hash": "1e87d26d40a9d686",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "They roll where they touch."
+     ],
+     [
+      2.014,
+      6.431,
+      "Ball bearings do the same between the wheel and its axle."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_01": {
+    "duration": 4.752,
+    "hash": "aa1d39797ace1178",
+    "sentences": [
+     [
+      0.05,
+      4.681,
+      "This car is braking from fifty kilometres an hour on a dry road."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_02": {
+    "duration": 10.368,
+    "hash": "2019b3cf601a6935",
+    "sentences": [
+     [
+      0.05,
+      2.458,
+      "Its tyres are still rolling."
+     ],
+     [
+      2.458,
+      10.306,
+      "Each patch of rubber stands still on the road while it touches, gripped by the stronger, resting kind of friction."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_03": {
+    "duration": 3.264,
+    "hash": "b69079744916cdbe",
+    "sentences": [
+     [
+      0.05,
+      3.194,
+      "Your turn: double the speed to a hundred."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_04": {
+    "duration": 8.424,
+    "hash": "215e264898c6d4fe",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "Now lock the wheels."
+     ],
+     [
+      2.014,
+      8.361,
+      "The tyres slide, the grip is weaker, the car needs more road, and it can no longer steer."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_05": {
+    "duration": 3.648,
+    "hash": "b3c36cf2281728cf",
+    "sentences": [
+     [
+      0.05,
+      3.583,
+      "Why do anti-lock brakes stop the wheels from locking?"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Car": {
+    "duration": 4.704,
+    "hash": "6729ce9789dc67d3",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "All of its stopping comes from four small patches of rubber on the road."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Distance": {
+    "duration": 4.92,
+    "hash": "82c1f5c77ef49643",
+    "sentences": [
+     [
+      0.05,
+      4.861,
+      "It grows with the square of the speed, and is longer still when skidding."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Road": {
+    "duration": 5.112,
+    "hash": "cc350d4d67a0d3cd",
+    "sentences": [
+     [
+      0.05,
+      1.264,
+      "Dry here."
+     ],
+     [
+      1.264,
+      5.056,
+      "Wet or icy, every grip would be smaller."
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Tyres": {
+    "duration": 5.472,
+    "hash": "f3c0ec3460be7ddc",
+    "sentences": [
+     [
+      0.05,
+      5.403,
+      "Rolling, their patch rests on the road; locked, it scrapes along it."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_01": {
+    "duration": 2.928,
+    "hash": "7b60a845a1dbcd31",
+    "sentences": [
+     [
+      0.05,
+      2.861,
+      "This box weighs forty kilograms."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_02": {
+    "duration": 6.0,
+    "hash": "1b2839efd07029b2",
+    "sentences": [
+     [
+      0.05,
+      2.292,
+      "Pull with ten kilograms."
+     ],
+     [
+      2.292,
+      5.931,
+      "The floor pulls back with ten, and nothing moves."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_03": {
+    "duration": 4.488,
+    "hash": "f11ea35d84d198c3",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "Your turn: pull harder, until the box breaks free."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_04": {
+    "duration": 6.48,
+    "hash": "a124e9a1c1565106",
+    "sentences": [
+     [
+      0.05,
+      6.417,
+      "On the chart, friction rose with your pull, then dropped as soon as the box began to slide."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_05": {
+    "duration": 4.008,
+    "hash": "9d51bced5bdf11ea",
+    "sentences": [
+     [
+      0.05,
+      3.944,
+      "Why is it harder to start a box moving than to keep it moving?"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Box": {
+    "duration": 6.072,
+    "hash": "d22e19e879836111",
+    "sentences": [
+     [
+      0.05,
+      6.014,
+      "The heavier it is, the harder it presses on the floor, and the more friction it can get."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Chart": {
+    "duration": 6.0,
+    "hash": "f013509dcb2ca242",
+    "sentences": [
+     [
+      0.05,
+      5.944,
+      "Friction against your pull: a straight rise, a sudden drop, then level."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Floor": {
+    "duration": 3.888,
+    "hash": "bf53225ed7b25ea1",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "Its grip on the box is larger at rest than sliding."
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Hand": {
+    "duration": 5.496,
+    "hash": "88d52b084dba15a0",
+    "sentences": [
+     [
+      0.05,
+      1.624,
+      "Your pull through the rope."
+     ],
+     [
+      1.624,
+      5.444,
+      "Below the limit, the floor matches it exactly."
+     ]
+    ]
+   },
    "Narr_Gears_Involute_01": {
     "duration": 4.68,
     "hash": "95975c9c883975ce",
@@ -11034,6 +11713,685 @@
       0.1,
       3.133,
       "不太对哦，我们来看看答案。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_01": {
+    "duration": 6.216,
+    "hash": "aac36b9fb1a55995",
+    "sentences": [
+     [
+      0.1,
+      3.883,
+      "这条船以一千千克的力拉着绳子。"
+     ],
+     [
+      3.833,
+      6.153,
+      "没有哪只手拉得住。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_02": {
+    "duration": 8.064,
+    "hash": "7c5f5c0b171a6151",
+    "sentences": [
+     [
+      0.1,
+      2.147,
+      "在桩上绕一圈。"
+     ],
+     [
+      2.097,
+      8.014,
+      "绳子的拉力把它压在桩上，摩擦力承担了大部分的力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_03": {
+    "duration": 6.936,
+    "hash": "1669711d8d8dcc65",
+    "sentences": [
+     [
+      0.1,
+      6.925,
+      "轮到你了：再绕几圈，直到你的手只需拉住不超过二十五千克。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_04": {
+    "duration": 5.736,
+    "hash": "c4ae21965bd76e26",
+    "sentences": [
+     [
+      0.1,
+      5.717,
+      "绕三圈：现在你手里几千克的力，就拉住了整条船。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_05": {
+    "duration": 4.464,
+    "hash": "34a4e951c61bc5f1",
+    "sentences": [
+     [
+      0.1,
+      4.453,
+      "每多绕一圈，你手上要拉住的力会怎么变？"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Boat": {
+    "duration": 4.152,
+    "hash": "6bb9f9e2c9ed782b",
+    "sentences": [
+     [
+      0.1,
+      4.147,
+      "它以一千千克的力拉着绳子的这一头。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Hand": {
+    "duration": 3.96,
+    "hash": "d2805b917e08a783",
+    "sentences": [
+     [
+      0.1,
+      3.953,
+      "它只需拉住绕过之后剩下的那一点力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Post": {
+    "duration": 6.6,
+    "hash": "39b4a1f90b687cb9",
+    "sentences": [
+     [
+      0.1,
+      6.592,
+      "绳子一圈都压在它上面，凡是贴着的地方，摩擦力都在抓着。"
+     ]
+    ]
+   },
+   "Narr_Friction_Capstan_Part_Rope": {
+    "duration": 6.216,
+    "hash": "ebc904afa704a9cb",
+    "sentences": [
+     [
+      0.1,
+      6.217,
+      "画得越粗表示拉力越大：在船那头最粗，绕一路细一路。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_01": {
+    "duration": 9.984,
+    "hash": "2275d001e6ce9839",
+    "sentences": [
+     [
+      0.1,
+      4.356,
+      "放大以后，两块金属表面都很粗糙。"
+     ],
+     [
+      4.306,
+      9.931,
+      "干的时候，它们在凸起处接触，互相卡住、磨损。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_02": {
+    "duration": 7.272,
+    "hash": "30cb48d4dd819975",
+    "sentences": [
+     [
+      0.1,
+      1.578,
+      "加上油。"
+     ],
+     [
+      1.528,
+      7.208,
+      "在这个速度下，油膜比凸起还厚，上面的表面浮了起来。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_03": {
+    "duration": 5.28,
+    "hash": "33bca4d08fc19c74",
+    "sentences": [
+     [
+      0.1,
+      5.258,
+      "轮到你了：把速度降下来，直到凸起又碰到一起。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_04": {
+    "duration": 9.816,
+    "hash": "fdd479dfa8a3a2e4",
+    "sentences": [
+     [
+      0.1,
+      9.8,
+      "看图：慢速时摩擦力很大，油膜形成后迅速下降，之后随着油被搅得更快又慢慢上升。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_05": {
+    "duration": 4.152,
+    "hash": "054b0e7e5a9b7418",
+    "sentences": [
+     [
+      0.1,
+      4.133,
+      "为什么发动机刚启动时磨损最厉害？"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Bumps": {
+    "duration": 5.688,
+    "hash": "2a5ae7aa7f843cc7",
+    "sentences": [
+     [
+      0.1,
+      5.689,
+      "它们接触的地方标成红色，会卡住、刮擦和磨损。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Chart": {
+    "duration": 5.904,
+    "hash": "389c6353d05443e5",
+    "sentences": [
+     [
+      0.1,
+      5.897,
+      "加了油的表面摩擦力随速度的变化，标出了你选的速度。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Oil": {
+    "duration": 5.208,
+    "hash": "766a4d131dea4712",
+    "sentences": [
+     [
+      0.1,
+      5.189,
+      "被移动的表面拖进缝隙里，动得越快就越厚。"
+     ]
+    ]
+   },
+   "Narr_Friction_Oil_Part_Surfaces": {
+    "duration": 6.192,
+    "hash": "1e77cbd79b72e621",
+    "sentences": [
+     [
+      0.1,
+      6.189,
+      "肉眼看很光滑，显微镜下却是一微米左右高低的起伏。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_01": {
+    "duration": 4.944,
+    "hash": "7078f69253eaac27",
+    "sentences": [
+     [
+      0.1,
+      4.925,
+      "一块十千克的木块，放在倾斜十度的木板上。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_02": {
+    "duration": 8.328,
+    "hash": "e7698db07ae3fedf",
+    "sentences": [
+     [
+      0.1,
+      3.967,
+      "它的一部分重量把它沿斜面往下拉。"
+     ],
+     [
+      3.917,
+      8.278,
+      "摩擦力以同样大的力往回拉，所以它不动。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_03": {
+    "duration": 4.632,
+    "hash": "964e1cde42fdddfe",
+    "sentences": [
+     [
+      0.1,
+      4.633,
+      "轮到你了：把木板抬高，直到木块滑下去。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_04": {
+    "duration": 6.792,
+    "hash": "b1ca3c108291b932",
+    "sentences": [
+     [
+      0.1,
+      2.592,
+      "把木板换成橡胶的。"
+     ],
+     [
+      2.542,
+      6.722,
+      "它的抓力是木头的两倍，木块又停住了。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_05": {
+    "duration": 3.72,
+    "hash": "ca9020da41aaff31",
+    "sentences": [
+     [
+      0.1,
+      3.717,
+      "重一点的木块，要更陡才开始滑吗？"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Block": {
+    "duration": 7.44,
+    "hash": "08d52324abc851b1",
+    "sentences": [
+     [
+      0.1,
+      1.717,
+      "十千克。"
+     ],
+     [
+      1.667,
+      7.375,
+      "它的重量分成了压在木板上的力和沿斜面往下的拉力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Grip": {
+    "duration": 7.896,
+    "hash": "c25f5bde054db03f",
+    "sentences": [
+     [
+      0.1,
+      4.425,
+      "它沿斜面往上拉，需要多少就拉多少。"
+     ],
+     [
+      4.375,
+      7.833,
+      "虚线箭头是它最多能给的力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Pull": {
+    "duration": 4.176,
+    "hash": "a33a37e079b7dd67",
+    "sentences": [
+     [
+      0.1,
+      4.161,
+      "木块重量里顺着木板方向的那一部分。"
+     ]
+    ]
+   },
+   "Narr_Friction_Ramp_Part_Ramp": {
+    "duration": 5.664,
+    "hash": "4c76b5808029c297",
+    "sentences": [
+     [
+      0.1,
+      5.647,
+      "越陡，木块往下拉得越厉害，压在上面的力就越小。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_01": {
+    "duration": 6.648,
+    "hash": "b0f0669d58b57696",
+    "sentences": [
+     [
+      0.1,
+      2.925,
+      "箱子里装着两百千克。"
+     ],
+     [
+      2.875,
+      6.583,
+      "直接拖，大约要八十千克的推力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_02": {
+    "duration": 3.648,
+    "hash": "806d65510c56f227",
+    "sentences": [
+     [
+      0.1,
+      3.647,
+      "箱子的整个底面都在地上摩擦。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_03": {
+    "duration": 3.624,
+    "hash": "d497bcd7a41914bf",
+    "sentences": [
+     [
+      0.1,
+      3.606,
+      "轮到你了：把箱子放到圆木上。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_04": {
+    "duration": 9.432,
+    "hash": "1b5f009bc76fe7ff",
+    "sentences": [
+     [
+      0.1,
+      5.883,
+      "放在带滚珠轴承的轮子上，连轴也是滚动而不是摩擦。"
+     ],
+     [
+      5.833,
+      9.375,
+      "一千克的推力就能让它一直走。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_05": {
+    "duration": 3.12,
+    "hash": "15f795c596acc1cf",
+    "sentences": [
+     [
+      0.1,
+      3.106,
+      "为什么滚动比滑动省力得多？"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Crate": {
+    "duration": 5.568,
+    "hash": "4d6ba27a1e4b2e3b",
+    "sentences": [
+     [
+      0.1,
+      3.467,
+      "不管怎么移动，它的重量都一样。"
+     ],
+     [
+      3.417,
+      5.514,
+      "变的只是摩擦力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Ground": {
+    "duration": 4.368,
+    "hash": "b1f5d1ff304959fc",
+    "sentences": [
+     [
+      0.1,
+      4.356,
+      "粗糙得足以把滑动的箱子牢牢拖住。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Hand": {
+    "duration": 6.936,
+    "hash": "87fd880386cd1a15",
+    "sentences": [
+     [
+      0.1,
+      6.925,
+      "拖的时候，大约是重量的五分之二；用轴承时，只要两百分之一。"
+     ]
+    ]
+   },
+   "Narr_Friction_Rolling_Part_Rollers": {
+    "duration": 6.984,
+    "hash": "3979c37403421d57",
+    "sentences": [
+     [
+      0.1,
+      2.717,
+      "它们在接触的地方滚动。"
+     ],
+     [
+      2.667,
+      6.917,
+      "滚珠轴承在轮子和轴之间也是这样。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_01": {
+    "duration": 5.544,
+    "hash": "0fe348a563407322",
+    "sentences": [
+     [
+      0.1,
+      5.536,
+      "这辆车在干燥的路上从每小时五十千米开始刹车。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_02": {
+    "duration": 9.648,
+    "hash": "fd46efe3e544156c",
+    "sentences": [
+     [
+      0.1,
+      2.439,
+      "它的轮胎还在滚动。"
+     ],
+     [
+      2.389,
+      9.583,
+      "每一小块橡胶接触路面时都是静止的，受到的是更大的静摩擦力。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_03": {
+    "duration": 3.624,
+    "hash": "c61981e5abb8b5f0",
+    "sentences": [
+     [
+      0.1,
+      3.606,
+      "轮到你了：把速度加倍到一百。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_04": {
+    "duration": 8.496,
+    "hash": "5e963a103ca01940",
+    "sentences": [
+     [
+      0.1,
+      2.453,
+      "现在让车轮抱死。"
+     ],
+     [
+      2.403,
+      8.431,
+      "轮胎在滑，抓力变小，车需要更长的路，也不能转向了。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_05": {
+    "duration": 3.888,
+    "hash": "fdd635fe5e68b5d7",
+    "sentences": [
+     [
+      0.1,
+      3.869,
+      "防抱死刹车为什么不让车轮抱死？"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Car": {
+    "duration": 4.728,
+    "hash": "18cde5b9b7b0e809",
+    "sentences": [
+     [
+      0.1,
+      4.717,
+      "它停下来全靠四小块贴在路面上的橡胶。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Distance": {
+    "duration": 4.68,
+    "hash": "33631dc4559fa19d",
+    "sentences": [
+     [
+      0.1,
+      4.675,
+      "它随速度的平方增加，打滑时还会更长。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Road": {
+    "duration": 6.288,
+    "hash": "3eb39d5c47c76fd1",
+    "sentences": [
+     [
+      0.1,
+      1.856,
+      "这里是干的。"
+     ],
+     [
+      1.806,
+      6.222,
+      "要是湿的或结冰，每种抓力都会小得多。"
+     ]
+    ]
+   },
+   "Narr_Friction_Skid_Part_Tyres": {
+    "duration": 6.816,
+    "hash": "16b6f7959fd68cc8",
+    "sentences": [
+     [
+      0.1,
+      6.814,
+      "滚动时，接地的部分静止在路上；抱死时，它在路上拖着滑。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_01": {
+    "duration": 2.736,
+    "hash": "0241418e2694c587",
+    "sentences": [
+     [
+      0.1,
+      2.717,
+      "这个箱子重四十千克。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_02": {
+    "duration": 6.072,
+    "hash": "8c6332baa9d9c8e6",
+    "sentences": [
+     [
+      0.1,
+      2.272,
+      "用十千克的力拉。"
+     ],
+     [
+      2.222,
+      6.014,
+      "地板以十千克往回拉，什么也没动。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_03": {
+    "duration": 4.32,
+    "hash": "bacbe48697591cd4",
+    "sentences": [
+     [
+      0.1,
+      4.314,
+      "轮到你了：使劲拉，直到箱子挣脱。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_04": {
+    "duration": 7.008,
+    "hash": "8bc66d0c4577eb24",
+    "sentences": [
+     [
+      0.1,
+      6.994,
+      "在图上，摩擦力随着你的拉力上升，箱子一开始滑，它就掉下来了。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_05": {
+    "duration": 4.344,
+    "hash": "65b8d0120126340d",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "为什么让箱子动起来，比让它一直动要难？"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Box": {
+    "duration": 5.904,
+    "hash": "f36791dafb4fea41",
+    "sentences": [
+     [
+      0.1,
+      5.897,
+      "它越重，压地板压得越用力，能得到的摩擦力就越大。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Chart": {
+    "duration": 7.248,
+    "hash": "03b757cd55954698",
+    "sentences": [
+     [
+      0.1,
+      7.231,
+      "摩擦力随你的拉力变化：先直线上升，突然下降，然后保持不变。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Floor": {
+    "duration": 4.368,
+    "hash": "f70abcd87d3e19db",
+    "sentences": [
+     [
+      0.1,
+      4.356,
+      "它对箱子的抓力，静止时比滑动时大。"
+     ]
+    ]
+   },
+   "Narr_Friction_Start_Part_Hand": {
+    "duration": 7.056,
+    "hash": "01ad081c0c918aed",
+    "sentences": [
+     [
+      0.1,
+      2.356,
+      "你通过绳子的拉力。"
+     ],
+     [
+      2.306,
+      6.986,
+      "没到上限时，地板的拉力和它正好相等。"
      ]
     ]
    },

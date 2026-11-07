@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:friction="using:Lemon.Inside.Book.Chapters.Friction"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Friction.FrictionDiagramPageView"
+                         x:DataType="friction:FrictionDiagramPageViewModel">
+    <!-- A right page of the Friction chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="friction:RampSpread">
+                            <friction:RampDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Angle="{Binding Angle}" Surface="{Binding Surface}" AutomationProperties.Name="{loc:Localize Friction_Ramp_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:StartSpread">
+                            <friction:StartDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Box="{Binding Box}" Pulling="{Binding Pulling}" AutomationProperties.Name="{loc:Localize Friction_Start_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:SkidSpread">
+                            <friction:SkidDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Speed="{Binding Speed}" Locked="{Binding Locked}" AutomationProperties.Name="{loc:Localize Friction_Skid_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:CapstanSpread">
+                            <friction:CapstanDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Turns="{Binding Turns}" Wet="{Binding Wet}" AutomationProperties.Name="{loc:Localize Friction_Capstan_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:RollingSpread">
+                            <friction:RollingDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Way="{Binding Way}" Crate="{Binding Crate}" AutomationProperties.Name="{loc:Localize Friction_Rolling_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:OilSpread">
+                            <friction:OilDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Oiled="{Binding Oiled}" Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Friction_Oil_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

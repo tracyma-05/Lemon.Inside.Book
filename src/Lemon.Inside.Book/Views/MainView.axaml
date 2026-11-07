@@ -19,6 +19,7 @@
              xmlns:plumbing="using:Lemon.Inside.Book.Chapters.Plumbing"
              xmlns:bridges="using:Lemon.Inside.Book.Chapters.Bridges"
              xmlns:weighing="using:Lemon.Inside.Book.Chapters.Weighing"
+             xmlns:friction="using:Lemon.Inside.Book.Chapters.Friction"
              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
              x:Class="Lemon.Inside.Book.Views.MainView"
@@ -52,6 +53,8 @@
         <DataTemplate DataType="bridges:BridgesDiagramPageViewModel"><bridges:BridgesDiagramPageView /></DataTemplate>
         <DataTemplate DataType="weighing:WeighingTextPageViewModel"><weighing:WeighingTextPageView /></DataTemplate>
         <DataTemplate DataType="weighing:WeighingDiagramPageViewModel"><weighing:WeighingDiagramPageView /></DataTemplate>
+        <DataTemplate DataType="friction:FrictionTextPageViewModel"><friction:FrictionTextPageView /></DataTemplate>
+        <DataTemplate DataType="friction:FrictionDiagramPageViewModel"><friction:FrictionDiagramPageView /></DataTemplate>
         <DataTemplate DataType="pages:CoverPageViewModel"><pageViews:CoverPageView /></DataTemplate>
         <DataTemplate DataType="pages:HowToUsePageViewModel"><pageViews:HowToUsePageView /></DataTemplate>
         <DataTemplate DataType="pages:TitlePageViewModel"><pageViews:TitlePageView /></DataTemplate>

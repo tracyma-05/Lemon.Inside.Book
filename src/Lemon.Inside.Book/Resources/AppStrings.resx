@@ -6411,4 +6411,583 @@
   <data name="Narr_Weighing_Moon_Part_Ground" xml:space="preserve">
     <value>The Earth, the Moon or Mars, each pulling with its own strength.</value>
   </data>
+  <data name="Chapter_Friction" xml:space="preserve">
+    <value>Friction</value>
+  </data>
+  <data name="Friction_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Friction_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Friction_Kg" xml:space="preserve">
+    <value>{0} kg</value>
+  </data>
+  <data name="Friction_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Friction_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Friction_Speed" xml:space="preserve">
+    <value>{0} km/h</value>
+  </data>
+  <data name="Friction_Turns" xml:space="preserve">
+    <value>{0} turns</value>
+  </data>
+  <data name="Friction_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Friction_Ramp_Title" xml:space="preserve">
+    <value>How steep before it slides</value>
+  </data>
+  <data name="Friction_Ramp_P1" xml:space="preserve">
+    <value>Put a block on a board and lift one end. Part of the block's weight now pulls it down the slope, and the steeper the board, the bigger that part. Friction pulls back up the slope, exactly as hard as it needs to, so at first the block stays put.</value>
+  </data>
+  <data name="Friction_Ramp_P2" xml:space="preserve">
+    <value>But friction has a limit: the surface's grip times how hard the block presses on it. As the board steepens, the pull down the slope grows and the press on the board shrinks, until the pull wins and the block slides. On ice that happens at a few degrees; on wood at about twenty; on rubber at nearly forty.</value>
+  </data>
+  <data name="Friction_Ramp_Deeper" xml:space="preserve">
+    <value>A heavier block pulls harder down the slope, but it also presses harder on the board, and the two grow together. So the angle where it starts to slide does not depend on its weight at all, only on the two surfaces. That is a handy way to measure grip: tilt a board until something slides and read off the angle. Friction is also why you can walk: your shoe pushes the ground back, and the ground's grip pushes you forward.</value>
+  </data>
+  <data name="Friction_Ramp_Angle" xml:space="preserve">
+    <value>Slope of the board</value>
+  </data>
+  <data name="Friction_Ramp_Surface" xml:space="preserve">
+    <value>The board's surface</value>
+  </data>
+  <data name="Friction_Ramp_Ice" xml:space="preserve">
+    <value>ice</value>
+  </data>
+  <data name="Friction_Ramp_Wood" xml:space="preserve">
+    <value>wood</value>
+  </data>
+  <data name="Friction_Ramp_Rubber" xml:space="preserve">
+    <value>rubber</value>
+  </data>
+  <data name="Friction_Ramp_Slides" xml:space="preserve">
+    <value>The slope pulls with {0}, but the surface can hold back at most {1}: the block slides. It stays only below {2}.</value>
+  </data>
+  <data name="Friction_Ramp_Holds" xml:space="preserve">
+    <value>The slope pulls with {0}; friction holds it back, and could give up to {1}. It would slide past {2}.</value>
+  </data>
+  <data name="Friction_Ramp_Picture" xml:space="preserve">
+    <value>A block on a tilted board, with arrows for its weight, the pull down the slope, and the friction holding it back</value>
+  </data>
+  <data name="Friction_Ramp_SlidesLabel" xml:space="preserve">
+    <value>slides!</value>
+  </data>
+  <data name="Friction_Ramp_MostLabel" xml:space="preserve">
+    <value>most: {0}</value>
+  </data>
+  <data name="Friction_Ramp_Rule" xml:space="preserve">
+    <value>it slides once the steepness beats the grip</value>
+  </data>
+  <data name="Narr_Friction_Ramp_01" xml:space="preserve">
+    <value>A ten-kilogram block rests on a wooden board, tilted ten degrees.</value>
+  </data>
+  <data name="Narr_Friction_Ramp_02" xml:space="preserve">
+    <value>Part of its weight pulls it down the slope. Friction pulls back just as hard, so it stays.</value>
+  </data>
+  <data name="Narr_Friction_Ramp_03" xml:space="preserve">
+    <value>Your turn: tilt the board until the block slides.</value>
+  </data>
+  <data name="Narr_Friction_Ramp_04" xml:space="preserve">
+    <value>Change the board to rubber. It grips twice as well, and the block stays put again.</value>
+  </data>
+  <data name="Narr_Friction_Ramp_05" xml:space="preserve">
+    <value>Would a heavier block start sliding at a steeper angle?</value>
+  </data>
+  <data name="Friction_Ramp_Quiz1" xml:space="preserve">
+    <value>Yes, because it presses harder on the board</value>
+  </data>
+  <data name="Friction_Ramp_Quiz2" xml:space="preserve">
+    <value>No: its pull down the slope and its grip both grow with its weight</value>
+  </data>
+  <data name="Friction_Ramp_Quiz3" xml:space="preserve">
+    <value>No, a heavier block slides sooner</value>
+  </data>
+  <data name="Friction_Ramp_Part_Block" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Block" xml:space="preserve">
+    <value>Ten kilograms. Its weight is split into a press on the board and a pull down the slope.</value>
+  </data>
+  <data name="Friction_Ramp_Part_Ramp" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Ramp" xml:space="preserve">
+    <value>The steeper it is, the more the block is pulled downhill and the less it presses down.</value>
+  </data>
+  <data name="Friction_Ramp_Part_Grip" xml:space="preserve">
+    <value>Friction</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Grip" xml:space="preserve">
+    <value>It pulls up the slope only as hard as it must. The dashed arrow is the most it can give.</value>
+  </data>
+  <data name="Friction_Ramp_Part_Pull" xml:space="preserve">
+    <value>Pull down the slope</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Pull" xml:space="preserve">
+    <value>The part of the block's weight that points along the board.</value>
+  </data>
+  <data name="Friction_Start_Title" xml:space="preserve">
+    <value>Harder to start than to keep going</value>
+  </data>
+  <data name="Friction_Start_P1" xml:space="preserve">
+    <value>Pull gently on a heavy box and it does not move: the floor pulls back exactly as hard. Pull harder and the floor pulls harder too, until you reach the most it can give. Then the box breaks free and slides.</value>
+  </data>
+  <data name="Friction_Start_P2" xml:space="preserve">
+    <value>The moment it moves, the friction drops. Sliding friction is smaller than the most friction at rest, so the same pull that only just started the box now speeds it up. That is why a heavy box lurches when it finally gives, and why it is easier to keep it going than to start it.</value>
+  </data>
+  <data name="Friction_Start_Deeper" xml:space="preserve">
+    <value>At rest, the two surfaces settle into each other: their tiny bumps sink together and even stick a little. Sliding, the bumps skip over each other and have no time to settle. The same jump from sticking to slipping, over and over, makes a door hinge creak, a violin string sing under its bow, and chalk squeak on a board.</value>
+  </data>
+  <data name="Friction_Start_Box" xml:space="preserve">
+    <value>The box</value>
+  </data>
+  <data name="Friction_Start_Pulling" xml:space="preserve">
+    <value>Your pull</value>
+  </data>
+  <data name="Friction_Start_Moving" xml:space="preserve">
+    <value>It broke free at {0}. Sliding friction is only {1}, so the other {2} of your pull speeds it up.</value>
+  </data>
+  <data name="Friction_Start_Still" xml:space="preserve">
+    <value>The floor pulls back with {0}, just as hard as you. It can give up to {1} before the box moves.</value>
+  </data>
+  <data name="Friction_Start_Picture" xml:space="preserve">
+    <value>A hand pulling a box along a floor, arrows for the pull and the friction, and a chart of friction against pull</value>
+  </data>
+  <data name="Friction_Start_MovingLabel" xml:space="preserve">
+    <value>sliding!</value>
+  </data>
+  <data name="Friction_Start_ChartPull" xml:space="preserve">
+    <value>your pull →</value>
+  </data>
+  <data name="Friction_Start_ChartFriction" xml:space="preserve">
+    <value>friction</value>
+  </data>
+  <data name="Friction_Start_PeakLabel" xml:space="preserve">
+    <value>breaks free at {0}</value>
+  </data>
+  <data name="Friction_Start_SlidingLabel" xml:space="preserve">
+    <value>sliding: {0}</value>
+  </data>
+  <data name="Friction_Start_Rule" xml:space="preserve">
+    <value>friction at rest matches the pull, up to a limit</value>
+  </data>
+  <data name="Narr_Friction_Start_01" xml:space="preserve">
+    <value>This box weighs forty kilograms.</value>
+  </data>
+  <data name="Narr_Friction_Start_02" xml:space="preserve">
+    <value>Pull with ten kilograms. The floor pulls back with ten, and nothing moves.</value>
+  </data>
+  <data name="Narr_Friction_Start_03" xml:space="preserve">
+    <value>Your turn: pull harder, until the box breaks free.</value>
+  </data>
+  <data name="Narr_Friction_Start_04" xml:space="preserve">
+    <value>On the chart, friction rose with your pull, then dropped as soon as the box began to slide.</value>
+  </data>
+  <data name="Narr_Friction_Start_05" xml:space="preserve">
+    <value>Why is it harder to start a box moving than to keep it moving?</value>
+  </data>
+  <data name="Friction_Start_Quiz1" xml:space="preserve">
+    <value>At rest the surfaces settle into each other; sliding, their bumps skip over each other</value>
+  </data>
+  <data name="Friction_Start_Quiz2" xml:space="preserve">
+    <value>The box gets lighter once it moves</value>
+  </data>
+  <data name="Friction_Start_Quiz3" xml:space="preserve">
+    <value>The floor warms up and gets slippery straight away</value>
+  </data>
+  <data name="Friction_Start_Part_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Box" xml:space="preserve">
+    <value>The heavier it is, the harder it presses on the floor, and the more friction it can get.</value>
+  </data>
+  <data name="Friction_Start_Part_Hand" xml:space="preserve">
+    <value>Pull</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Hand" xml:space="preserve">
+    <value>Your pull through the rope. Below the limit, the floor matches it exactly.</value>
+  </data>
+  <data name="Friction_Start_Part_Floor" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Floor" xml:space="preserve">
+    <value>Its grip on the box is larger at rest than sliding.</value>
+  </data>
+  <data name="Friction_Start_Part_Chart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Chart" xml:space="preserve">
+    <value>Friction against your pull: a straight rise, a sudden drop, then level.</value>
+  </data>
+  <data name="Friction_Skid_Title" xml:space="preserve">
+    <value>Stopping without skidding</value>
+  </data>
+  <data name="Friction_Skid_P1" xml:space="preserve">
+    <value>A car stops because its tyres grip the road. When a wheel rolls, the patch of tyre touching the road is not sliding: for the moment it touches, it stands still on the road and is gripped by friction at rest, the stronger kind.</value>
+  </data>
+  <data name="Friction_Skid_P2" xml:space="preserve">
+    <value>Brake so hard that the wheels lock, and the tyres scrape along the road instead. Sliding friction is weaker, so the car takes longer to stop. Worse, a sliding wheel cannot steer: turning the steering wheel changes nothing while the tyres are skidding. And the stopping distance grows with the square of the speed: twice as fast, four times as far.</value>
+  </data>
+  <data name="Friction_Skid_Deeper" xml:space="preserve">
+    <value>Anti-lock brakes watch every wheel many times a second. The moment one starts to lock, they ease its brake for an instant, let it turn again, and squeeze once more, keeping the tyre just short of sliding, where the grip is greatest, and leaving the driver able to steer. On wet or icy roads every grip is smaller and every distance longer; these are dry-road figures, and they leave out the second or so before your foot reaches the pedal.</value>
+  </data>
+  <data name="Friction_Skid_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Friction_Skid_Lock" xml:space="preserve">
+    <value>Lock the wheels</value>
+  </data>
+  <data name="Friction_Skid_Rolling" xml:space="preserve">
+    <value>With the wheels still turning, the car stops in {0} (it would take {1} skidding).</value>
+  </data>
+  <data name="Friction_Skid_Locked" xml:space="preserve">
+    <value>Skidding on locked wheels, the car takes {0} to stop (it could stop in {1}), and it cannot steer.</value>
+  </data>
+  <data name="Friction_Skid_Picture" xml:space="preserve">
+    <value>A braking car on a road, bars for its stopping distance rolling and skidding, and a close-up of a tyre's patch on the road</value>
+  </data>
+  <data name="Friction_Skid_RollingBar" xml:space="preserve">
+    <value>rolling: {0} m</value>
+  </data>
+  <data name="Friction_Skid_LockedBar" xml:space="preserve">
+    <value>skidding: {0} m</value>
+  </data>
+  <data name="Friction_Skid_PatchStill" xml:space="preserve">
+    <value>the patch stands still on the road</value>
+  </data>
+  <data name="Friction_Skid_PatchSliding" xml:space="preserve">
+    <value>the patch scrapes along the road</value>
+  </data>
+  <data name="Friction_Skid_Rule" xml:space="preserve">
+    <value>twice the speed, four times the distance</value>
+  </data>
+  <data name="Narr_Friction_Skid_01" xml:space="preserve">
+    <value>This car is braking from fifty kilometres an hour on a dry road.</value>
+  </data>
+  <data name="Narr_Friction_Skid_02" xml:space="preserve">
+    <value>Its tyres are still rolling. Each patch of rubber stands still on the road while it touches, gripped by the stronger, resting kind of friction.</value>
+  </data>
+  <data name="Narr_Friction_Skid_03" xml:space="preserve">
+    <value>Your turn: double the speed to a hundred.</value>
+  </data>
+  <data name="Narr_Friction_Skid_04" xml:space="preserve">
+    <value>Now lock the wheels. The tyres slide, the grip is weaker, the car needs more road, and it can no longer steer.</value>
+  </data>
+  <data name="Narr_Friction_Skid_05" xml:space="preserve">
+    <value>Why do anti-lock brakes stop the wheels from locking?</value>
+  </data>
+  <data name="Friction_Skid_Quiz1" xml:space="preserve">
+    <value>To save the brakes from wearing out</value>
+  </data>
+  <data name="Friction_Skid_Quiz2" xml:space="preserve">
+    <value>To make the ride quieter</value>
+  </data>
+  <data name="Friction_Skid_Quiz3" xml:space="preserve">
+    <value>A tyre that is not sliding grips better, and the car can still steer</value>
+  </data>
+  <data name="Friction_Skid_Part_Car" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Car" xml:space="preserve">
+    <value>All of its stopping comes from four small patches of rubber on the road.</value>
+  </data>
+  <data name="Friction_Skid_Part_Tyres" xml:space="preserve">
+    <value>Tyres</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Tyres" xml:space="preserve">
+    <value>Rolling, their patch rests on the road; locked, it scrapes along it.</value>
+  </data>
+  <data name="Friction_Skid_Part_Road" xml:space="preserve">
+    <value>Road</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Road" xml:space="preserve">
+    <value>Dry here. Wet or icy, every grip would be smaller.</value>
+  </data>
+  <data name="Friction_Skid_Part_Distance" xml:space="preserve">
+    <value>Stopping distance</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Distance" xml:space="preserve">
+    <value>It grows with the square of the speed, and is longer still when skidding.</value>
+  </data>
+  <data name="Friction_Capstan_Title" xml:space="preserve">
+    <value>A rope round a post</value>
+  </data>
+  <data name="Friction_Capstan_P1" xml:space="preserve">
+    <value>A sailor can hold a boat tugging with a tonne of force by taking a few turns of rope round a post. Where the rope lies on the post, the pull in it presses it against the post, and that press gives friction, which takes up part of the pull. Farther round, the pull is a little smaller.</value>
+  </data>
+  <data name="Friction_Capstan_P2" xml:space="preserve">
+    <value>Every bit of wrap takes the same share of what is left, so the pull falls by the same factor for each turn: here about six and a half times. One turn turns a thousand kilograms into about a hundred and fifty; two turns into about twenty-three; three turns into a few kilograms, which one hand can hold.</value>
+  </data>
+  <data name="Friction_Capstan_Deeper" xml:space="preserve">
+    <value>Because the shares multiply rather than add, a few turns go a long way, and a wet, slippery rope only needs a few more. It works the other way too: let the rope slip a little and it pays out smoothly under control, which is how a climber lowers a partner and how ships are moored. A capstan on a quay turns the post with a motor; the sailor only keeps the rope's end taut.</value>
+  </data>
+  <data name="Friction_Capstan_Turns" xml:space="preserve">
+    <value>Turns round the post</value>
+  </data>
+  <data name="Friction_Capstan_Wet" xml:space="preserve">
+    <value>A wet, slippery rope</value>
+  </data>
+  <data name="Friction_Capstan_Readout" xml:space="preserve">
+    <value>Your hand holds {0} against the boat's {1}: the wrap multiplies your hold {2} times.</value>
+  </data>
+  <data name="Friction_Capstan_Picture" xml:space="preserve">
+    <value>A mooring post from above, a boat pulling on a rope wrapped round it, and a hand holding the end; the rope drawn as thick as the pull in it</value>
+  </data>
+  <data name="Friction_Capstan_BoatLabel" xml:space="preserve">
+    <value>pulls {0}</value>
+  </data>
+  <data name="Friction_Capstan_HoldLabel" xml:space="preserve">
+    <value>hold {0}</value>
+  </data>
+  <data name="Friction_Capstan_Rule" xml:space="preserve">
+    <value>each turn divides the pull by the same factor</value>
+  </data>
+  <data name="Narr_Friction_Capstan_01" xml:space="preserve">
+    <value>This boat pulls on its rope with a thousand kilograms of force. No hand could hold it.</value>
+  </data>
+  <data name="Narr_Friction_Capstan_02" xml:space="preserve">
+    <value>One turn round the post. The rope's pull presses it on the post, and friction takes up most of the load.</value>
+  </data>
+  <data name="Narr_Friction_Capstan_03" xml:space="preserve">
+    <value>Your turn: add turns until your hand holds no more than twenty-five kilograms.</value>
+  </data>
+  <data name="Narr_Friction_Capstan_04" xml:space="preserve">
+    <value>Three turns: now a few kilograms in your hand hold the whole boat.</value>
+  </data>
+  <data name="Narr_Friction_Capstan_05" xml:space="preserve">
+    <value>What does each extra turn do to the pull your hand must hold?</value>
+  </data>
+  <data name="Friction_Capstan_Quiz1" xml:space="preserve">
+    <value>Takes away the same few kilograms each time</value>
+  </data>
+  <data name="Friction_Capstan_Quiz2" xml:space="preserve">
+    <value>Divides it by the same factor each time, about six and a half</value>
+  </data>
+  <data name="Friction_Capstan_Quiz3" xml:space="preserve">
+    <value>Nothing, after the first turn</value>
+  </data>
+  <data name="Friction_Capstan_Part_Boat" xml:space="preserve">
+    <value>Boat</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Boat" xml:space="preserve">
+    <value>It pulls with a thousand kilograms of force on its end of the rope.</value>
+  </data>
+  <data name="Friction_Capstan_Part_Rope" xml:space="preserve">
+    <value>Rope</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Rope" xml:space="preserve">
+    <value>Drawn as thick as the pull in it: full at the boat, thinner all the way round.</value>
+  </data>
+  <data name="Friction_Capstan_Part_Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Post" xml:space="preserve">
+    <value>The rope presses on it all the way round, and friction grips it everywhere it touches.</value>
+  </data>
+  <data name="Friction_Capstan_Part_Hand" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Hand" xml:space="preserve">
+    <value>It only holds what is left after the wrap.</value>
+  </data>
+  <data name="Friction_Rolling_Title" xml:space="preserve">
+    <value>Rolling instead of sliding</value>
+  </data>
+  <data name="Friction_Rolling_P1" xml:space="preserve">
+    <value>Drag a heavy crate along the ground and you fight sliding friction all the way: nearly half its weight. Put logs under it and push, and the logs roll. Where a log touches the ground, it does not slide: it is set down and lifted off again, so there is almost nothing to rub.</value>
+  </data>
+  <data name="Friction_Rolling_P2" xml:space="preserve">
+    <value>Logs have to be carried round to the front again, so wheels replaced them. But a wheel turns on an axle, and the axle rubs in its hole. Ball bearings fix that too: a ring of steel balls between the axle and the wheel roll instead of rubbing, and the push needed falls to a tiny share of the weight.</value>
+  </data>
+  <data name="Friction_Rolling_Deeper" xml:space="preserve">
+    <value>Rolling is not quite free. A wheel and the ground both squash a little where they meet, and the squashed material does not spring back with all of its energy, so there is always a small resistance. Soft tyres on soft sand squash a lot, which is why cycling on sand is so tiring, while a steel wheel on a steel rail squashes hardly at all: a train needs only a small push to keep its huge weight rolling.</value>
+  </data>
+  <data name="Friction_Rolling_Way" xml:space="preserve">
+    <value>How it moves</value>
+  </data>
+  <data name="Friction_Rolling_Crate" xml:space="preserve">
+    <value>The crate</value>
+  </data>
+  <data name="Friction_Rolling_Dragged" xml:space="preserve">
+    <value>dragged along the ground</value>
+  </data>
+  <data name="Friction_Rolling_Logs" xml:space="preserve">
+    <value>on log rollers</value>
+  </data>
+  <data name="Friction_Rolling_Wheels" xml:space="preserve">
+    <value>on wheels with ball bearings</value>
+  </data>
+  <data name="Friction_Rolling_Readout" xml:space="preserve">
+    <value>Keeping {1} moving takes a push of about {0}.</value>
+  </data>
+  <data name="Friction_Rolling_Picture" xml:space="preserve">
+    <value>A crate pushed along the ground: dragged, on log rollers, or on a cart whose wheels turn on ball bearings</value>
+  </data>
+  <data name="Friction_Rolling_BearingLabel" xml:space="preserve">
+    <value>ball bearings</value>
+  </data>
+  <data name="Friction_Rolling_ScrapeLabel" xml:space="preserve">
+    <value>scraping</value>
+  </data>
+  <data name="Friction_Rolling_Rule" xml:space="preserve">
+    <value>a rolling contact is set down and lifted off, not dragged</value>
+  </data>
+  <data name="Narr_Friction_Rolling_01" xml:space="preserve">
+    <value>Two hundred kilograms in a crate. Dragged, it takes a push of about eighty.</value>
+  </data>
+  <data name="Narr_Friction_Rolling_02" xml:space="preserve">
+    <value>All along its bottom, the crate rubs on the ground.</value>
+  </data>
+  <data name="Narr_Friction_Rolling_03" xml:space="preserve">
+    <value>Your turn: put the crate on rollers.</value>
+  </data>
+  <data name="Narr_Friction_Rolling_04" xml:space="preserve">
+    <value>On wheels with ball bearings, even the axles roll instead of rub. One kilogram of push keeps it going.</value>
+  </data>
+  <data name="Narr_Friction_Rolling_05" xml:space="preserve">
+    <value>Why does rolling take so much less push than sliding?</value>
+  </data>
+  <data name="Friction_Rolling_Quiz1" xml:space="preserve">
+    <value>Where it touches, a roller is set down and lifted off instead of dragged</value>
+  </data>
+  <data name="Friction_Rolling_Quiz2" xml:space="preserve">
+    <value>Rollers make the crate lighter</value>
+  </data>
+  <data name="Friction_Rolling_Quiz3" xml:space="preserve">
+    <value>The ground is smoother under rollers</value>
+  </data>
+  <data name="Friction_Rolling_Part_Crate" xml:space="preserve">
+    <value>Crate</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Crate" xml:space="preserve">
+    <value>Its weight is the same whichever way it moves. Only the friction changes.</value>
+  </data>
+  <data name="Friction_Rolling_Part_Ground" xml:space="preserve">
+    <value>Ground</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Ground" xml:space="preserve">
+    <value>Rough enough to grip a sliding crate hard.</value>
+  </data>
+  <data name="Friction_Rolling_Part_Rollers" xml:space="preserve">
+    <value>Rollers and wheels</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Rollers" xml:space="preserve">
+    <value>They roll where they touch. Ball bearings do the same between the wheel and its axle.</value>
+  </data>
+  <data name="Friction_Rolling_Part_Hand" xml:space="preserve">
+    <value>Push</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Hand" xml:space="preserve">
+    <value>Dragging, about two fifths of the weight; on bearings, a two-hundredth.</value>
+  </data>
+  <data name="Friction_Oil_Title" xml:space="preserve">
+    <value>A film of oil</value>
+  </data>
+  <data name="Friction_Oil_P1" xml:space="preserve">
+    <value>Under a microscope, even polished metal is a landscape of hills and valleys. Press two pieces together and they touch only at the tops of their highest bumps. Slide them, and those tips catch, grind and even weld together for an instant: dry metal on metal has a lot of friction and wears fast.</value>
+  </data>
+  <data name="Friction_Oil_P2" xml:space="preserve">
+    <value>Oil gets between them. While the parts move slowly the film is thin and the bumps still scrape through it. But a moving surface drags oil into the narrowing gap ahead of it, and the faster it moves, the thicker that film. Once it is thicker than the bumps, the metal floats on oil and never touches, and the only friction left is the oil's own stickiness.</value>
+  </data>
+  <data name="Friction_Oil_Deeper" xml:space="preserve">
+    <value>That is why an engine wears most in the first seconds after it starts, before the shafts spin fast enough to lift themselves on oil, and why oil pressure matters so much. The curve of friction against speed, high at a crawl, falling to a low point, then rising slowly as the oil is stirred faster, is the same shape for almost every oiled bearing.</value>
+  </data>
+  <data name="Friction_Oil_Oiled" xml:space="preserve">
+    <value>Put oil between them</value>
+  </data>
+  <data name="Friction_Oil_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Friction_Oil_Dry" xml:space="preserve">
+    <value>Dry metal on metal: the bumps catch and grind, and friction is about {0}% of the load.</value>
+  </data>
+  <data name="Friction_Oil_Thin" xml:space="preserve">
+    <value>The oil film is only {0} µm, thinner than the bumps: they still scrape. Friction is {1}% of the load.</value>
+  </data>
+  <data name="Friction_Oil_Thick" xml:space="preserve">
+    <value>The oil film is {0} µm, thicker than the bumps: the metal floats. Friction is only {1}% of the load.</value>
+  </data>
+  <data name="Friction_Oil_Picture" xml:space="preserve">
+    <value>Two metal surfaces magnified to show their bumps, the top one sliding, with or without oil between them; below, a chart of friction against speed</value>
+  </data>
+  <data name="Friction_Oil_Magnified" xml:space="preserve">
+    <value>magnified: bumps about 1 µm tall</value>
+  </data>
+  <data name="Friction_Oil_DryLabel" xml:space="preserve">
+    <value>dry: the bumps catch and grind</value>
+  </data>
+  <data name="Friction_Oil_TouchLabel" xml:space="preserve">
+    <value>film {0} µm: the bumps still touch</value>
+  </data>
+  <data name="Friction_Oil_FloatLabel" xml:space="preserve">
+    <value>film {0} µm: the metal floats on oil</value>
+  </data>
+  <data name="Friction_Oil_ChartSpeed" xml:space="preserve">
+    <value>speed →</value>
+  </data>
+  <data name="Friction_Oil_ChartFriction" xml:space="preserve">
+    <value>friction, oiled</value>
+  </data>
+  <data name="Friction_Oil_FloatsHere" xml:space="preserve">
+    <value>floats from here</value>
+  </data>
+  <data name="Friction_Oil_OffChart" xml:space="preserve">
+    <value>dry: {0}%, far off the chart</value>
+  </data>
+  <data name="Friction_Oil_Rule" xml:space="preserve">
+    <value>fast enough, the parts ride on oil</value>
+  </data>
+  <data name="Narr_Friction_Oil_01" xml:space="preserve">
+    <value>Magnified, the two metal surfaces are rough. Dry, they touch at their bumps, which catch and grind.</value>
+  </data>
+  <data name="Narr_Friction_Oil_02" xml:space="preserve">
+    <value>Add oil. At this speed the film is thicker than the bumps, and the top surface floats.</value>
+  </data>
+  <data name="Narr_Friction_Oil_03" xml:space="preserve">
+    <value>Your turn: slow the surface down until the bumps touch again.</value>
+  </data>
+  <data name="Narr_Friction_Oil_04" xml:space="preserve">
+    <value>On the chart: friction is high at a crawl, falls fast as the film builds, then creeps up as the oil is stirred faster.</value>
+  </data>
+  <data name="Narr_Friction_Oil_05" xml:space="preserve">
+    <value>Why does an engine wear most just after it starts?</value>
+  </data>
+  <data name="Friction_Oil_Quiz1" xml:space="preserve">
+    <value>The oil is too hot</value>
+  </data>
+  <data name="Friction_Oil_Quiz2" xml:space="preserve">
+    <value>The fuel is not burning yet</value>
+  </data>
+  <data name="Friction_Oil_Quiz3" xml:space="preserve">
+    <value>Turning slowly, the oil film is too thin and metal touches metal</value>
+  </data>
+  <data name="Friction_Oil_Part_Surfaces" xml:space="preserve">
+    <value>Surfaces</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Surfaces" xml:space="preserve">
+    <value>Smooth to the eye, but hills and valleys about a micrometre tall under a microscope.</value>
+  </data>
+  <data name="Friction_Oil_Part_Bumps" xml:space="preserve">
+    <value>Bumps</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Bumps" xml:space="preserve">
+    <value>Where they touch, marked red, they catch, scrape and wear.</value>
+  </data>
+  <data name="Friction_Oil_Part_Oil" xml:space="preserve">
+    <value>Oil film</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Oil" xml:space="preserve">
+    <value>Dragged into the gap by the moving surface, thicker the faster it goes.</value>
+  </data>
+  <data name="Friction_Oil_Part_Chart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Chart" xml:space="preserve">
+    <value>Friction against speed for the oiled surfaces, with the speed you have chosen marked.</value>
+  </data>
 </root>

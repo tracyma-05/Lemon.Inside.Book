@@ -1,0 +1,153 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:friction="using:Lemon.Inside.Book.Chapters.Friction"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Friction.FrictionTextPageView"
+                              x:DataType="friction:FrictionTextPageViewModel">
+    <!-- A left page of the Friction chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="friction:RampSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding AngleText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Ramp_Angle}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="45" Value="{Binding Angle}" SmallChange="0.5" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Friction_Ramp_Angle}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SurfaceText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Ramp_Surface}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="2" Value="{Binding Surface}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Friction_Ramp_Surface}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:StartSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BoxText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Start_Box}" />
+                                </DockPanel>
+                                <Slider Minimum="20" Maximum="80" Value="{Binding Box}" SmallChange="1" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Friction_Start_Box}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PullingText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Start_Pulling}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="40" Value="{Binding Pulling}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Friction_Start_Pulling}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:SkidSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Skid_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="20" Maximum="120" Value="{Binding Speed}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Friction_Skid_Speed}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Locked}" Content="{loc:Localize Friction_Skid_Lock}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:CapstanSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding TurnsText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Capstan_Turns}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="3" Value="{Binding Turns}" SmallChange="0.05" LargeChange="0.25"
+                                        AutomationProperties.Name="{loc:Localize Friction_Capstan_Turns}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Wet}" Content="{loc:Localize Friction_Capstan_Wet}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:RollingSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding WayText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Rolling_Way}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="2" Value="{Binding Way}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Friction_Rolling_Way}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding CrateText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Rolling_Crate}" />
+                                </DockPanel>
+                                <Slider Minimum="50" Maximum="500" Value="{Binding Crate}" SmallChange="10" LargeChange="50"
+                                        AutomationProperties.Name="{loc:Localize Friction_Rolling_Crate}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="friction:OilSpread">
+                            <StackPanel>
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Oiled}" Content="{loc:Localize Friction_Oil_Oiled}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Friction_Oil_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="100" Value="{Binding Speed}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Friction_Oil_Speed}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

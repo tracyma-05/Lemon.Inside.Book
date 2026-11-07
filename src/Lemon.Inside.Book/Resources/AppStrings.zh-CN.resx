@@ -6411,4 +6411,583 @@
   <data name="Narr_Weighing_Moon_Part_Ground" xml:space="preserve">
     <value>地球、月球或者火星，各自用自己的力气往下拉。</value>
   </data>
+  <data name="Chapter_Friction" xml:space="preserve">
+    <value>摩擦力</value>
+  </data>
+  <data name="Friction_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Friction_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Friction_Kg" xml:space="preserve">
+    <value>{0} 千克</value>
+  </data>
+  <data name="Friction_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Friction_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Friction_Speed" xml:space="preserve">
+    <value>{0} 千米/时</value>
+  </data>
+  <data name="Friction_Turns" xml:space="preserve">
+    <value>{0} 圈</value>
+  </data>
+  <data name="Friction_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Friction_Ramp_Title" xml:space="preserve">
+    <value>多陡才会滑下去</value>
+  </data>
+  <data name="Friction_Ramp_P1" xml:space="preserve">
+    <value>把一块木块放在木板上，抬起木板的一头。木块重量的一部分就开始把它沿斜面往下拉，木板越陡，这部分越大。摩擦力沿斜面往上拉，需要多大就有多大，所以一开始木块一动不动。</value>
+  </data>
+  <data name="Friction_Ramp_P2" xml:space="preserve">
+    <value>但摩擦力有个上限：表面的“抓力”乘以木块压在上面的力。木板越来越陡，往下拉的力越来越大，压在木板上的力却越来越小，直到往下拉的力占了上风，木块就滑下去了。在冰上，几度就滑；木头上大约二十度；橡胶上将近四十度。</value>
+  </data>
+  <data name="Friction_Ramp_Deeper" xml:space="preserve">
+    <value>重一点的木块往下拉得更用力，可它压在木板上也更用力，两者一起变大。所以开始滑动的角度和木块重量毫无关系，只看两个表面。这正好可以用来测抓力：把木板慢慢抬高，直到东西滑下去，读出角度就行。摩擦力也是你能走路的原因：鞋子把地面往后推，地面的抓力就把你往前推。</value>
+  </data>
+  <data name="Friction_Ramp_Angle" xml:space="preserve">
+    <value>木板的坡度</value>
+  </data>
+  <data name="Friction_Ramp_Surface" xml:space="preserve">
+    <value>木板的表面</value>
+  </data>
+  <data name="Friction_Ramp_Ice" xml:space="preserve">
+    <value>冰</value>
+  </data>
+  <data name="Friction_Ramp_Wood" xml:space="preserve">
+    <value>木头</value>
+  </data>
+  <data name="Friction_Ramp_Rubber" xml:space="preserve">
+    <value>橡胶</value>
+  </data>
+  <data name="Friction_Ramp_Slides" xml:space="preserve">
+    <value>斜面往下拉 {0}，表面最多只能拉住 {1}：木块滑下去了。只有低于 {2} 才停得住。</value>
+  </data>
+  <data name="Friction_Ramp_Holds" xml:space="preserve">
+    <value>斜面往下拉 {0}；摩擦力拉住了它，最多还能给到 {1}。超过 {2} 才会滑。</value>
+  </data>
+  <data name="Friction_Ramp_Picture" xml:space="preserve">
+    <value>倾斜木板上的一块木块，箭头表示它的重量、沿斜面往下的拉力和拉住它的摩擦力</value>
+  </data>
+  <data name="Friction_Ramp_SlidesLabel" xml:space="preserve">
+    <value>滑下去了！</value>
+  </data>
+  <data name="Friction_Ramp_MostLabel" xml:space="preserve">
+    <value>最多：{0}</value>
+  </data>
+  <data name="Friction_Ramp_Rule" xml:space="preserve">
+    <value>坡度超过抓力，就会滑</value>
+  </data>
+  <data name="Narr_Friction_Ramp_01" xml:space="preserve">
+    <value>一块十千克的木块，放在倾斜十度的木板上。</value>
+  </data>
+  <data name="Narr_Friction_Ramp_02" xml:space="preserve">
+    <value>它的一部分重量把它沿斜面往下拉。摩擦力以同样大的力往回拉，所以它不动。</value>
+  </data>
+  <data name="Narr_Friction_Ramp_03" xml:space="preserve">
+    <value>轮到你了：把木板抬高，直到木块滑下去。</value>
+  </data>
+  <data name="Narr_Friction_Ramp_04" xml:space="preserve">
+    <value>把木板换成橡胶的。它的抓力是木头的两倍，木块又停住了。</value>
+  </data>
+  <data name="Narr_Friction_Ramp_05" xml:space="preserve">
+    <value>重一点的木块，要更陡才开始滑吗？</value>
+  </data>
+  <data name="Friction_Ramp_Quiz1" xml:space="preserve">
+    <value>是的，因为它压木板压得更用力</value>
+  </data>
+  <data name="Friction_Ramp_Quiz2" xml:space="preserve">
+    <value>不会：往下拉的力和抓力都随重量一起变大</value>
+  </data>
+  <data name="Friction_Ramp_Quiz3" xml:space="preserve">
+    <value>不会，重的反而滑得更早</value>
+  </data>
+  <data name="Friction_Ramp_Part_Block" xml:space="preserve">
+    <value>木块</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Block" xml:space="preserve">
+    <value>十千克。它的重量分成了压在木板上的力和沿斜面往下的拉力。</value>
+  </data>
+  <data name="Friction_Ramp_Part_Ramp" xml:space="preserve">
+    <value>木板</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Ramp" xml:space="preserve">
+    <value>越陡，木块往下拉得越厉害，压在上面的力就越小。</value>
+  </data>
+  <data name="Friction_Ramp_Part_Grip" xml:space="preserve">
+    <value>摩擦力</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Grip" xml:space="preserve">
+    <value>它沿斜面往上拉，需要多少就拉多少。虚线箭头是它最多能给的力。</value>
+  </data>
+  <data name="Friction_Ramp_Part_Pull" xml:space="preserve">
+    <value>沿斜面的拉力</value>
+  </data>
+  <data name="Narr_Friction_Ramp_Part_Pull" xml:space="preserve">
+    <value>木块重量里顺着木板方向的那一部分。</value>
+  </data>
+  <data name="Friction_Start_Title" xml:space="preserve">
+    <value>起步难，滑动易</value>
+  </data>
+  <data name="Friction_Start_P1" xml:space="preserve">
+    <value>轻轻拉一个重箱子，它不会动：地板以同样大的力往回拉。拉得更用力，地板也拉得更用力，直到达到它能给的最大值。这时箱子突然挣脱，滑了起来。</value>
+  </data>
+  <data name="Friction_Start_P2" xml:space="preserve">
+    <value>箱子一动，摩擦力就变小了。滑动摩擦力比静止时最大的摩擦力小，所以刚好拉动箱子的那个力，现在会让它越来越快。这就是重箱子终于被拉动时会猛地一冲的原因，也是为什么让它一直滑比让它起步容易。</value>
+  </data>
+  <data name="Friction_Start_Deeper" xml:space="preserve">
+    <value>静止时，两个表面会互相“咬合”：细小的凸起陷到一起，甚至有点粘住。滑动时，凸起从彼此上面跳过去，来不及咬合。这种从粘住到滑开的跳变，一次又一次地重复，就让门铰链吱吱作响，让小提琴的弦在弓下歌唱，让粉笔在黑板上尖叫。</value>
+  </data>
+  <data name="Friction_Start_Box" xml:space="preserve">
+    <value>箱子</value>
+  </data>
+  <data name="Friction_Start_Pulling" xml:space="preserve">
+    <value>你的拉力</value>
+  </data>
+  <data name="Friction_Start_Moving" xml:space="preserve">
+    <value>它在 {0} 时挣脱了。滑动摩擦力只有 {1}，所以你拉力中多出的 {2} 让它越来越快。</value>
+  </data>
+  <data name="Friction_Start_Still" xml:space="preserve">
+    <value>地板以 {0} 往回拉，和你一样大。箱子动起来之前，它最多能给到 {1}。</value>
+  </data>
+  <data name="Friction_Start_Picture" xml:space="preserve">
+    <value>一只手拉着地板上的箱子，箭头表示拉力和摩擦力，下面是摩擦力随拉力变化的图</value>
+  </data>
+  <data name="Friction_Start_MovingLabel" xml:space="preserve">
+    <value>滑动了！</value>
+  </data>
+  <data name="Friction_Start_ChartPull" xml:space="preserve">
+    <value>你的拉力 →</value>
+  </data>
+  <data name="Friction_Start_ChartFriction" xml:space="preserve">
+    <value>摩擦力</value>
+  </data>
+  <data name="Friction_Start_PeakLabel" xml:space="preserve">
+    <value>{0} 时挣脱</value>
+  </data>
+  <data name="Friction_Start_SlidingLabel" xml:space="preserve">
+    <value>滑动：{0}</value>
+  </data>
+  <data name="Friction_Start_Rule" xml:space="preserve">
+    <value>静止时摩擦力和拉力一样大，直到上限</value>
+  </data>
+  <data name="Narr_Friction_Start_01" xml:space="preserve">
+    <value>这个箱子重四十千克。</value>
+  </data>
+  <data name="Narr_Friction_Start_02" xml:space="preserve">
+    <value>用十千克的力拉。地板以十千克往回拉，什么也没动。</value>
+  </data>
+  <data name="Narr_Friction_Start_03" xml:space="preserve">
+    <value>轮到你了：使劲拉，直到箱子挣脱。</value>
+  </data>
+  <data name="Narr_Friction_Start_04" xml:space="preserve">
+    <value>在图上，摩擦力随着你的拉力上升，箱子一开始滑，它就掉下来了。</value>
+  </data>
+  <data name="Narr_Friction_Start_05" xml:space="preserve">
+    <value>为什么让箱子动起来，比让它一直动要难？</value>
+  </data>
+  <data name="Friction_Start_Quiz1" xml:space="preserve">
+    <value>静止时两个表面互相咬合；滑动时凸起从彼此上面跳过</value>
+  </data>
+  <data name="Friction_Start_Quiz2" xml:space="preserve">
+    <value>箱子动起来以后变轻了</value>
+  </data>
+  <data name="Friction_Start_Quiz3" xml:space="preserve">
+    <value>地板马上变热、变滑了</value>
+  </data>
+  <data name="Friction_Start_Part_Box" xml:space="preserve">
+    <value>箱子</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Box" xml:space="preserve">
+    <value>它越重，压地板压得越用力，能得到的摩擦力就越大。</value>
+  </data>
+  <data name="Friction_Start_Part_Hand" xml:space="preserve">
+    <value>拉力</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Hand" xml:space="preserve">
+    <value>你通过绳子的拉力。没到上限时，地板的拉力和它正好相等。</value>
+  </data>
+  <data name="Friction_Start_Part_Floor" xml:space="preserve">
+    <value>地板</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Floor" xml:space="preserve">
+    <value>它对箱子的抓力，静止时比滑动时大。</value>
+  </data>
+  <data name="Friction_Start_Part_Chart" xml:space="preserve">
+    <value>图表</value>
+  </data>
+  <data name="Narr_Friction_Start_Part_Chart" xml:space="preserve">
+    <value>摩擦力随你的拉力变化：先直线上升，突然下降，然后保持不变。</value>
+  </data>
+  <data name="Friction_Skid_Title" xml:space="preserve">
+    <value>刹车不打滑</value>
+  </data>
+  <data name="Friction_Skid_P1" xml:space="preserve">
+    <value>汽车能停下来，靠的是轮胎抓住路面。车轮滚动时，轮胎贴着路面的那一小块并没有滑动：在接触路面的那一刻，它是静止地踩在路上的，受到的是静摩擦力，也就是比较大的那种。</value>
+  </data>
+  <data name="Friction_Skid_P2" xml:space="preserve">
+    <value>刹车太猛，车轮就会抱死，轮胎在路面上拖着滑。滑动摩擦力小一些，所以车要更长的距离才停得住。更糟的是，打滑的车轮不能转向：轮胎在滑的时候，怎么转方向盘都没用。而且刹车距离随速度的平方增加：速度快一倍，距离长四倍。</value>
+  </data>
+  <data name="Friction_Skid_Deeper" xml:space="preserve">
+    <value>防抱死刹车系统每秒钟要检查每个车轮很多次。一旦哪个车轮开始抱死，它就把那个车轮的刹车松开一瞬间，让它重新转起来，再刹紧，让轮胎始终处在刚好不打滑的状态，这时抓力最大，司机也还能转向。在湿滑或结冰的路上，每种抓力都更小，每段距离都更长；这里的数字是干燥路面的，也没有算上脚踩到刹车之前那一秒左右。</value>
+  </data>
+  <data name="Friction_Skid_Speed" xml:space="preserve">
+    <value>车速</value>
+  </data>
+  <data name="Friction_Skid_Lock" xml:space="preserve">
+    <value>让车轮抱死</value>
+  </data>
+  <data name="Friction_Skid_Rolling" xml:space="preserve">
+    <value>车轮仍在转动，车在 {0} 内停下（打滑的话要 {1}）。</value>
+  </data>
+  <data name="Friction_Skid_Locked" xml:space="preserve">
+    <value>车轮抱死打滑，车要 {0} 才能停下（本可以在 {1} 内停住），而且不能转向。</value>
+  </data>
+  <data name="Friction_Skid_Picture" xml:space="preserve">
+    <value>路上正在刹车的汽车，两条横条表示滚动和打滑时的刹车距离，下面是轮胎接地部分的特写</value>
+  </data>
+  <data name="Friction_Skid_RollingBar" xml:space="preserve">
+    <value>滚动：{0} 米</value>
+  </data>
+  <data name="Friction_Skid_LockedBar" xml:space="preserve">
+    <value>打滑：{0} 米</value>
+  </data>
+  <data name="Friction_Skid_PatchStill" xml:space="preserve">
+    <value>接地的部分静止在路面上</value>
+  </data>
+  <data name="Friction_Skid_PatchSliding" xml:space="preserve">
+    <value>接地的部分在路面上拖着滑</value>
+  </data>
+  <data name="Friction_Skid_Rule" xml:space="preserve">
+    <value>速度加倍，距离变四倍</value>
+  </data>
+  <data name="Narr_Friction_Skid_01" xml:space="preserve">
+    <value>这辆车在干燥的路上从每小时五十千米开始刹车。</value>
+  </data>
+  <data name="Narr_Friction_Skid_02" xml:space="preserve">
+    <value>它的轮胎还在滚动。每一小块橡胶接触路面时都是静止的，受到的是更大的静摩擦力。</value>
+  </data>
+  <data name="Narr_Friction_Skid_03" xml:space="preserve">
+    <value>轮到你了：把速度加倍到一百。</value>
+  </data>
+  <data name="Narr_Friction_Skid_04" xml:space="preserve">
+    <value>现在让车轮抱死。轮胎在滑，抓力变小，车需要更长的路，也不能转向了。</value>
+  </data>
+  <data name="Narr_Friction_Skid_05" xml:space="preserve">
+    <value>防抱死刹车为什么不让车轮抱死？</value>
+  </data>
+  <data name="Friction_Skid_Quiz1" xml:space="preserve">
+    <value>为了让刹车片少磨损</value>
+  </data>
+  <data name="Friction_Skid_Quiz2" xml:space="preserve">
+    <value>为了让车开起来更安静</value>
+  </data>
+  <data name="Friction_Skid_Quiz3" xml:space="preserve">
+    <value>不打滑的轮胎抓得更牢，车也还能转向</value>
+  </data>
+  <data name="Friction_Skid_Part_Car" xml:space="preserve">
+    <value>汽车</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Car" xml:space="preserve">
+    <value>它停下来全靠四小块贴在路面上的橡胶。</value>
+  </data>
+  <data name="Friction_Skid_Part_Tyres" xml:space="preserve">
+    <value>轮胎</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Tyres" xml:space="preserve">
+    <value>滚动时，接地的部分静止在路上；抱死时，它在路上拖着滑。</value>
+  </data>
+  <data name="Friction_Skid_Part_Road" xml:space="preserve">
+    <value>路面</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Road" xml:space="preserve">
+    <value>这里是干的。要是湿的或结冰，每种抓力都会小得多。</value>
+  </data>
+  <data name="Friction_Skid_Part_Distance" xml:space="preserve">
+    <value>刹车距离</value>
+  </data>
+  <data name="Narr_Friction_Skid_Part_Distance" xml:space="preserve">
+    <value>它随速度的平方增加，打滑时还会更长。</value>
+  </data>
+  <data name="Friction_Capstan_Title" xml:space="preserve">
+    <value>缠在桩上的绳子</value>
+  </data>
+  <data name="Friction_Capstan_P1" xml:space="preserve">
+    <value>水手只要把绳子在桩上绕几圈，就能拉住一条以一吨的力拽着的船。绳子贴在桩上的地方，绳子里的拉力把它压在桩上，这个压力产生摩擦力，承担了一部分拉力。再往后绕，绳子里的拉力就小了一点。</value>
+  </data>
+  <data name="Friction_Capstan_P2" xml:space="preserve">
+    <value>每绕一小段，都按同样的比例拿走剩下拉力的一部分，所以每绕一圈，拉力都缩小同样的倍数：这里大约是六倍半。绕一圈，一千千克变成大约一百五十；绕两圈，变成大约二十三；绕三圈，只剩几千克，一只手就能拉住。</value>
+  </data>
+  <data name="Friction_Capstan_Deeper" xml:space="preserve">
+    <value>因为这些比例是相乘而不是相加，所以绕几圈就很管用，湿滑的绳子也只要多绕几圈。反过来也行：让绳子稍微滑一点，它就能平稳、可控地放出去，攀岩者就是这样把同伴放下来的，船也是这样系泊的。码头上的绞盘用电动机转动桩子；水手只要把绳头拉紧就行了。</value>
+  </data>
+  <data name="Friction_Capstan_Turns" xml:space="preserve">
+    <value>绕桩的圈数</value>
+  </data>
+  <data name="Friction_Capstan_Wet" xml:space="preserve">
+    <value>湿滑的绳子</value>
+  </data>
+  <data name="Friction_Capstan_Readout" xml:space="preserve">
+    <value>你的手拉住 {0}，对抗船的 {1}：绕的圈把你的拉力放大了 {2} 倍。</value>
+  </data>
+  <data name="Friction_Capstan_Picture" xml:space="preserve">
+    <value>从上面看的系船桩，船拉着绕在桩上的绳子，一只手抓着绳头；绳子画得越粗，拉力越大</value>
+  </data>
+  <data name="Friction_Capstan_BoatLabel" xml:space="preserve">
+    <value>拉力 {0}</value>
+  </data>
+  <data name="Friction_Capstan_HoldLabel" xml:space="preserve">
+    <value>拉住 {0}</value>
+  </data>
+  <data name="Friction_Capstan_Rule" xml:space="preserve">
+    <value>每绕一圈，拉力都除以同样的倍数</value>
+  </data>
+  <data name="Narr_Friction_Capstan_01" xml:space="preserve">
+    <value>这条船以一千千克的力拉着绳子。没有哪只手拉得住。</value>
+  </data>
+  <data name="Narr_Friction_Capstan_02" xml:space="preserve">
+    <value>在桩上绕一圈。绳子的拉力把它压在桩上，摩擦力承担了大部分的力。</value>
+  </data>
+  <data name="Narr_Friction_Capstan_03" xml:space="preserve">
+    <value>轮到你了：再绕几圈，直到你的手只需拉住不超过二十五千克。</value>
+  </data>
+  <data name="Narr_Friction_Capstan_04" xml:space="preserve">
+    <value>绕三圈：现在你手里几千克的力，就拉住了整条船。</value>
+  </data>
+  <data name="Narr_Friction_Capstan_05" xml:space="preserve">
+    <value>每多绕一圈，你手上要拉住的力会怎么变？</value>
+  </data>
+  <data name="Friction_Capstan_Quiz1" xml:space="preserve">
+    <value>每次减少同样的几千克</value>
+  </data>
+  <data name="Friction_Capstan_Quiz2" xml:space="preserve">
+    <value>每次除以同样的倍数，大约六倍半</value>
+  </data>
+  <data name="Friction_Capstan_Quiz3" xml:space="preserve">
+    <value>第一圈之后就没变化了</value>
+  </data>
+  <data name="Friction_Capstan_Part_Boat" xml:space="preserve">
+    <value>船</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Boat" xml:space="preserve">
+    <value>它以一千千克的力拉着绳子的这一头。</value>
+  </data>
+  <data name="Friction_Capstan_Part_Rope" xml:space="preserve">
+    <value>绳子</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Rope" xml:space="preserve">
+    <value>画得越粗表示拉力越大：在船那头最粗，绕一路细一路。</value>
+  </data>
+  <data name="Friction_Capstan_Part_Post" xml:space="preserve">
+    <value>系船桩</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Post" xml:space="preserve">
+    <value>绳子一圈都压在它上面，凡是贴着的地方，摩擦力都在抓着。</value>
+  </data>
+  <data name="Friction_Capstan_Part_Hand" xml:space="preserve">
+    <value>手</value>
+  </data>
+  <data name="Narr_Friction_Capstan_Part_Hand" xml:space="preserve">
+    <value>它只需拉住绕过之后剩下的那一点力。</value>
+  </data>
+  <data name="Friction_Rolling_Title" xml:space="preserve">
+    <value>用滚动代替滑动</value>
+  </data>
+  <data name="Friction_Rolling_P1" xml:space="preserve">
+    <value>在地上拖一个重箱子，一路都要和滑动摩擦力较劲：差不多是它重量的一半。在下面垫上圆木再推，圆木就滚起来了。圆木碰到地面的地方并不滑动：它被放下，又被抬起，所以几乎没有什么在摩擦。</value>
+  </data>
+  <data name="Friction_Rolling_P2" xml:space="preserve">
+    <value>圆木滚到后面还得搬到前面去，所以后来换成了轮子。可是轮子绕着轴转，轴又在孔里摩擦。滚珠轴承把这个问题也解决了：轴和轮子之间的一圈钢珠滚动而不摩擦，需要的推力就只剩重量的一小部分。</value>
+  </data>
+  <data name="Friction_Rolling_Deeper" xml:space="preserve">
+    <value>滚动也不是完全不费力。轮子和地面接触的地方都会被压扁一点，被压扁的材料弹回来时并没有把能量全部还回去，所以总有一点点阻力。软轮胎压在软沙上，压得很厉害，所以在沙地上骑车特别累；钢轮压在钢轨上，几乎不变形：火车只要很小的推力，就能让它巨大的重量一直滚下去。</value>
+  </data>
+  <data name="Friction_Rolling_Way" xml:space="preserve">
+    <value>怎么移动</value>
+  </data>
+  <data name="Friction_Rolling_Crate" xml:space="preserve">
+    <value>箱子</value>
+  </data>
+  <data name="Friction_Rolling_Dragged" xml:space="preserve">
+    <value>在地上拖</value>
+  </data>
+  <data name="Friction_Rolling_Logs" xml:space="preserve">
+    <value>垫在圆木上</value>
+  </data>
+  <data name="Friction_Rolling_Wheels" xml:space="preserve">
+    <value>装在带滚珠轴承的轮子上</value>
+  </data>
+  <data name="Friction_Rolling_Readout" xml:space="preserve">
+    <value>让 {1} 一直移动，大约需要 {0} 的推力。</value>
+  </data>
+  <data name="Friction_Rolling_Picture" xml:space="preserve">
+    <value>在地上推的箱子：直接拖、垫在圆木上，或者放在轮子装有滚珠轴承的推车上</value>
+  </data>
+  <data name="Friction_Rolling_BearingLabel" xml:space="preserve">
+    <value>滚珠轴承</value>
+  </data>
+  <data name="Friction_Rolling_ScrapeLabel" xml:space="preserve">
+    <value>摩擦</value>
+  </data>
+  <data name="Friction_Rolling_Rule" xml:space="preserve">
+    <value>滚动的接触点是放下再抬起，不是拖过去</value>
+  </data>
+  <data name="Narr_Friction_Rolling_01" xml:space="preserve">
+    <value>箱子里装着两百千克。直接拖，大约要八十千克的推力。</value>
+  </data>
+  <data name="Narr_Friction_Rolling_02" xml:space="preserve">
+    <value>箱子的整个底面都在地上摩擦。</value>
+  </data>
+  <data name="Narr_Friction_Rolling_03" xml:space="preserve">
+    <value>轮到你了：把箱子放到圆木上。</value>
+  </data>
+  <data name="Narr_Friction_Rolling_04" xml:space="preserve">
+    <value>放在带滚珠轴承的轮子上，连轴也是滚动而不是摩擦。一千克的推力就能让它一直走。</value>
+  </data>
+  <data name="Narr_Friction_Rolling_05" xml:space="preserve">
+    <value>为什么滚动比滑动省力得多？</value>
+  </data>
+  <data name="Friction_Rolling_Quiz1" xml:space="preserve">
+    <value>滚子接触的地方是放下再抬起，而不是拖过去</value>
+  </data>
+  <data name="Friction_Rolling_Quiz2" xml:space="preserve">
+    <value>滚子让箱子变轻了</value>
+  </data>
+  <data name="Friction_Rolling_Quiz3" xml:space="preserve">
+    <value>滚子下面的地面更平滑</value>
+  </data>
+  <data name="Friction_Rolling_Part_Crate" xml:space="preserve">
+    <value>箱子</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Crate" xml:space="preserve">
+    <value>不管怎么移动，它的重量都一样。变的只是摩擦力。</value>
+  </data>
+  <data name="Friction_Rolling_Part_Ground" xml:space="preserve">
+    <value>地面</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Ground" xml:space="preserve">
+    <value>粗糙得足以把滑动的箱子牢牢拖住。</value>
+  </data>
+  <data name="Friction_Rolling_Part_Rollers" xml:space="preserve">
+    <value>滚子和轮子</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Rollers" xml:space="preserve">
+    <value>它们在接触的地方滚动。滚珠轴承在轮子和轴之间也是这样。</value>
+  </data>
+  <data name="Friction_Rolling_Part_Hand" xml:space="preserve">
+    <value>推力</value>
+  </data>
+  <data name="Narr_Friction_Rolling_Part_Hand" xml:space="preserve">
+    <value>拖的时候，大约是重量的五分之二；用轴承时，只要两百分之一。</value>
+  </data>
+  <data name="Friction_Oil_Title" xml:space="preserve">
+    <value>一层油膜</value>
+  </data>
+  <data name="Friction_Oil_P1" xml:space="preserve">
+    <value>在显微镜下，即使是抛光的金属表面也是高低起伏的。把两块金属压在一起，只有最高的凸起顶端互相接触。让它们滑动，这些尖端就会互相卡住、磨损，甚至瞬间焊在一起：干的金属对金属，摩擦力很大，磨损很快。</value>
+  </data>
+  <data name="Friction_Oil_P2" xml:space="preserve">
+    <value>油跑到两者之间。零件动得慢时，油膜很薄，凸起还会穿过油膜互相刮擦。但移动的表面会把油拖进前方越来越窄的缝隙里，动得越快，油膜越厚。一旦油膜比凸起还厚，金属就浮在油上，再也不会碰到，剩下的只有油自身的黏性带来的阻力。</value>
+  </data>
+  <data name="Friction_Oil_Deeper" xml:space="preserve">
+    <value>所以发动机刚启动的头几秒钟磨损最厉害，那时轴转得还不够快，没能把自己浮在油上；这也是机油压力那么重要的原因。摩擦力随速度变化的曲线，慢速时很高，然后降到一个最低点，之后随着油被搅得越来越快又慢慢上升，几乎所有加了油的轴承都是这个形状。</value>
+  </data>
+  <data name="Friction_Oil_Oiled" xml:space="preserve">
+    <value>在中间加油</value>
+  </data>
+  <data name="Friction_Oil_Speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="Friction_Oil_Dry" xml:space="preserve">
+    <value>干的金属对金属：凸起互相卡住、磨损，摩擦力大约是负载的 {0}%。</value>
+  </data>
+  <data name="Friction_Oil_Thin" xml:space="preserve">
+    <value>油膜只有 {0} 微米，比凸起还薄：它们还在刮擦。摩擦力是负载的 {1}%。</value>
+  </data>
+  <data name="Friction_Oil_Thick" xml:space="preserve">
+    <value>油膜有 {0} 微米，比凸起还厚：金属浮起来了。摩擦力只有负载的 {1}%。</value>
+  </data>
+  <data name="Friction_Oil_Picture" xml:space="preserve">
+    <value>放大到能看见凸起的两块金属表面，上面那块在滑动，中间有或没有油；下面是摩擦力随速度变化的图</value>
+  </data>
+  <data name="Friction_Oil_Magnified" xml:space="preserve">
+    <value>放大：凸起约 1 微米高</value>
+  </data>
+  <data name="Friction_Oil_DryLabel" xml:space="preserve">
+    <value>干的：凸起互相卡住、磨损</value>
+  </data>
+  <data name="Friction_Oil_TouchLabel" xml:space="preserve">
+    <value>油膜 {0} 微米：凸起还会碰到</value>
+  </data>
+  <data name="Friction_Oil_FloatLabel" xml:space="preserve">
+    <value>油膜 {0} 微米：金属浮在油上</value>
+  </data>
+  <data name="Friction_Oil_ChartSpeed" xml:space="preserve">
+    <value>速度 →</value>
+  </data>
+  <data name="Friction_Oil_ChartFriction" xml:space="preserve">
+    <value>加油时的摩擦力</value>
+  </data>
+  <data name="Friction_Oil_FloatsHere" xml:space="preserve">
+    <value>从这里开始浮起</value>
+  </data>
+  <data name="Friction_Oil_OffChart" xml:space="preserve">
+    <value>干的：{0}%，远在图外</value>
+  </data>
+  <data name="Friction_Oil_Rule" xml:space="preserve">
+    <value>够快时，零件就浮在油上</value>
+  </data>
+  <data name="Narr_Friction_Oil_01" xml:space="preserve">
+    <value>放大以后，两块金属表面都很粗糙。干的时候，它们在凸起处接触，互相卡住、磨损。</value>
+  </data>
+  <data name="Narr_Friction_Oil_02" xml:space="preserve">
+    <value>加上油。在这个速度下，油膜比凸起还厚，上面的表面浮了起来。</value>
+  </data>
+  <data name="Narr_Friction_Oil_03" xml:space="preserve">
+    <value>轮到你了：把速度降下来，直到凸起又碰到一起。</value>
+  </data>
+  <data name="Narr_Friction_Oil_04" xml:space="preserve">
+    <value>看图：慢速时摩擦力很大，油膜形成后迅速下降，之后随着油被搅得更快又慢慢上升。</value>
+  </data>
+  <data name="Narr_Friction_Oil_05" xml:space="preserve">
+    <value>为什么发动机刚启动时磨损最厉害？</value>
+  </data>
+  <data name="Friction_Oil_Quiz1" xml:space="preserve">
+    <value>机油太热了</value>
+  </data>
+  <data name="Friction_Oil_Quiz2" xml:space="preserve">
+    <value>燃料还没开始燃烧</value>
+  </data>
+  <data name="Friction_Oil_Quiz3" xml:space="preserve">
+    <value>转得慢时油膜太薄，金属碰到了金属</value>
+  </data>
+  <data name="Friction_Oil_Part_Surfaces" xml:space="preserve">
+    <value>表面</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Surfaces" xml:space="preserve">
+    <value>肉眼看很光滑，显微镜下却是一微米左右高低的起伏。</value>
+  </data>
+  <data name="Friction_Oil_Part_Bumps" xml:space="preserve">
+    <value>凸起</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Bumps" xml:space="preserve">
+    <value>它们接触的地方标成红色，会卡住、刮擦和磨损。</value>
+  </data>
+  <data name="Friction_Oil_Part_Oil" xml:space="preserve">
+    <value>油膜</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Oil" xml:space="preserve">
+    <value>被移动的表面拖进缝隙里，动得越快就越厚。</value>
+  </data>
+  <data name="Friction_Oil_Part_Chart" xml:space="preserve">
+    <value>图表</value>
+  </data>
+  <data name="Narr_Friction_Oil_Part_Chart" xml:space="preserve">
+    <value>加了油的表面摩擦力随速度的变化，标出了你选的速度。</value>
+  </data>
 </root>
