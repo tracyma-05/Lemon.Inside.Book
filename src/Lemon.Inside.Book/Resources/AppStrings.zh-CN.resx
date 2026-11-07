@@ -3105,4 +3105,553 @@
   <data name="Narr_Boats_Submarine_Part_Gauge" xml:space="preserve">
     <value>潜艇在多深的地方，一直标到六十米深的海底。</value>
   </data>
+  <data name="Chapter_Car" xml:space="preserve">
+    <value>汽车里的机械</value>
+  </data>
+  <data name="Car_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Car_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Car_Times" xml:space="preserve">
+    <value>{0} 倍</value>
+  </data>
+  <data name="Car_Millimetres" xml:space="preserve">
+    <value>{0} 毫米</value>
+  </data>
+  <data name="Car_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Car_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Car_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Car_Crank_Title" xml:space="preserve">
+    <value>从上下动到转圈</value>
+  </data>
+  <data name="Car_Crank_P1" xml:space="preserve">
+    <value>发动机里，燃料燃烧把活塞往气缸下面推。可轮子要的是转，不是推。办法是机械里最古老的一招：曲柄，也就是轴上伸出的一条臂，边上有个销子，用连杆跟活塞连起来。把活塞往下推，曲柄就转起来；曲柄转动的惯性又把活塞带回上面。</value>
+  </data>
+  <data name="Car_Crank_P2" xml:space="preserve">
+    <value>活塞的运动并不是规整的波浪。曲柄在上面时，销子往旁边一摆，连杆就跟着歪，让活塞多下降了一点；在下面时，连杆的歪又抵掉一些。所以活塞在行程的上半段走得急，在下半段慢吞吞，速度最快的时候，曲柄还没转到水平。连杆越短，这种不对称越明显。</value>
+  </data>
+  <data name="Car_Crank_Deeper" xml:space="preserve">
+    <value>从上止点算起的活塞位移 = r + l −（r cos θ + √(l² − r² sin² θ)），其中 r 是曲柄半径，l 是连杆长度，θ 是曲柄从最高点转过的角度。连杆无限长时，它就是规整的波浪 r(1 − cos θ)。汽车发动机的连杆大约是曲柄半径的三到四倍：够长，连杆才不会把活塞使劲往缸壁上压；也够短，发动机才不至于太高。</value>
+  </data>
+  <data name="Car_Crank_Rod" xml:space="preserve">
+    <value>连杆长度（曲柄半径的几倍）</value>
+  </data>
+  <data name="Car_Crank_Readout" xml:space="preserve">
+    <value>曲柄离最高点 {0}° 时活塞最快，而不是 90°。</value>
+  </data>
+  <data name="Car_Crank_Picture" xml:space="preserve">
+    <value>剖开的气缸，活塞通过连杆接到转动的曲柄上，下面是活塞位移的曲线</value>
+  </data>
+  <data name="Car_Crank_Fastest" xml:space="preserve">
+    <value>最快</value>
+  </data>
+  <data name="Car_Crank_Down" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="Car_Crank_Wave" xml:space="preserve">
+    <value>虚线：规整的波浪</value>
+  </data>
+  <data name="Narr_Car_Crank_01" xml:space="preserve">
+    <value>曲柄一圈一圈地匀速转动，带着连杆的下端一起转。</value>
+  </data>
+  <data name="Narr_Car_Crank_02" xml:space="preserve">
+    <value>连杆的上端只能上下走，所以它推着活塞在气缸里来回运动。</value>
+  </data>
+  <data name="Narr_Car_Crank_03" xml:space="preserve">
+    <value>金色曲线是活塞下降了多远。它跟虚线的波浪不太一样：在上面更陡，在下面更平。</value>
+  </data>
+  <data name="Narr_Car_Crank_04" xml:space="preserve">
+    <value>轮到你了：把连杆缩得很短，看曲线变得多不对称。</value>
+  </data>
+  <data name="Narr_Car_Crank_05" xml:space="preserve">
+    <value>活塞往下走的时候，什么时候最快？</value>
+  </data>
+  <data name="Car_Crank_Quiz1" xml:space="preserve">
+    <value>曲柄转到水平之前一点</value>
+  </data>
+  <data name="Car_Crank_Quiz2" xml:space="preserve">
+    <value>正好在曲柄水平的时候</value>
+  </data>
+  <data name="Car_Crank_Quiz3" xml:space="preserve">
+    <value>在最高点</value>
+  </data>
+  <data name="Car_Crank_Part_Piston" xml:space="preserve">
+    <value>活塞</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Piston" xml:space="preserve">
+    <value>在气缸里滑动的金属塞子。上面燃烧的气体把它往下推。</value>
+  </data>
+  <data name="Car_Crank_Part_Rod" xml:space="preserve">
+    <value>连杆</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Rod" xml:space="preserve">
+    <value>把活塞和曲柄连起来。上端上下走，下端转圈，中间一直在摆。</value>
+  </data>
+  <data name="Car_Crank_Part_Crank" xml:space="preserve">
+    <value>曲柄</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Crank" xml:space="preserve">
+    <value>曲轴上的一条臂，销子的对面有块重重的配重，让它转得平稳。</value>
+  </data>
+  <data name="Car_Crank_Part_Graph" xml:space="preserve">
+    <value>活塞位移</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Graph" xml:space="preserve">
+    <value>曲柄转一圈时，活塞往下走了多远。白点是现在的位置。</value>
+  </data>
+  <data name="Car_Cam_Title" xml:space="preserve">
+    <value>按时开门</value>
+  </data>
+  <data name="Car_Cam_P1" xml:space="preserve">
+    <value>每个气缸靠气门呼吸：一个放进新鲜空气和燃油，一个把烧过的废气放出去。它们必须在恰好的时刻打开、关上，每分钟几千次。这件事靠凸轮轴来做。凸轮是带一个鼓包的轮子；转起来，鼓包压着气门顶开弹簧，把气门推开；鼓包转过去，弹簧就把气门啪地关上。</value>
+  </data>
+  <data name="Car_Cam_P2" xml:space="preserve">
+    <value>发动机的曲轴要转两圈，才走完一个工作循环，每个气门在这期间开一次。所以凸轮轴用齿轮或链条带着，曲轴转两圈，它转一圈。凸轮的形状决定了一切：气门开多大、开多久。为高转速设计的发动机，用的凸轮会让气门开得更久。</value>
+  </data>
+  <data name="Car_Cam_Deeper" xml:space="preserve">
+    <value>每分钟 3000 转时，曲轴每秒转 50 圈，所以一个开启 240° 曲轴转角的气门，只开约千分之十三秒。弹簧必须够硬，气门才能紧跟凸轮落下；太软的话，转速一高，气门就会“飘”起来，关得太晚。</value>
+  </data>
+  <data name="Car_Cam_Lift" xml:space="preserve">
+    <value>凸轮把气门推开多少</value>
+  </data>
+  <data name="Car_Cam_Duration" xml:space="preserve">
+    <value>开多久（曲轴转角）</value>
+  </data>
+  <data name="Car_Cam_Readout" xml:space="preserve">
+    <value>气门开启 {0}° 曲轴转角：每分钟 3000 转时，只有千分之 {1} 秒。</value>
+  </data>
+  <data name="Car_Cam_Picture" xml:space="preserve">
+    <value>凸轮顶着弹簧把气门推开，下面是曲轴两圈里气门升程的曲线</value>
+  </data>
+  <data name="Car_Cam_Open" xml:space="preserve">
+    <value>开</value>
+  </data>
+  <data name="Car_Cam_Graph" xml:space="preserve">
+    <value>气门升程（最大 {0} 毫米）</value>
+  </data>
+  <data name="Car_Cam_Crank" xml:space="preserve">
+    <value>曲轴转角</value>
+  </data>
+  <data name="Narr_Car_Cam_01" xml:space="preserve">
+    <value>凸轮在凸轮轴上转。它大部分是圆的，一边有个圆滑的鼓包。</value>
+  </data>
+  <data name="Narr_Car_Cam_02" xml:space="preserve">
+    <value>鼓包转过来，就把气门往下压，气门头离开气门座，气体就能通过。</value>
+  </data>
+  <data name="Narr_Car_Cam_03" xml:space="preserve">
+    <value>弹簧一直往回顶，所以气门紧跟着凸轮，鼓包一过就又关上。</value>
+  </data>
+  <data name="Narr_Car_Cam_04" xml:space="preserve">
+    <value>轮到你了：把凸轮的鼓包加长，让气门在一个循环里开得更久。</value>
+  </data>
+  <data name="Narr_Car_Cam_05" xml:space="preserve">
+    <value>曲轴转一圈，凸轮轴转多少？</value>
+  </data>
+  <data name="Car_Cam_Quiz1" xml:space="preserve">
+    <value>两圈</value>
+  </data>
+  <data name="Car_Cam_Quiz2" xml:space="preserve">
+    <value>半圈</value>
+  </data>
+  <data name="Car_Cam_Quiz3" xml:space="preserve">
+    <value>一圈</value>
+  </data>
+  <data name="Car_Cam_Part_Cam" xml:space="preserve">
+    <value>凸轮</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Cam" xml:space="preserve">
+    <value>带鼓包的圆轮。它的形状决定气门什么时候开、开多大、开多久。</value>
+  </data>
+  <data name="Car_Cam_Part_Valve" xml:space="preserve">
+    <value>气门</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Valve" xml:space="preserve">
+    <value>一个蘑菇形的塞子。它的头部堵住气道，抬起来就让气体进出。</value>
+  </data>
+  <data name="Car_Cam_Part_Spring" xml:space="preserve">
+    <value>气门弹簧</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Spring" xml:space="preserve">
+    <value>让气门保持关闭，并让它跟着凸轮落回来。</value>
+  </data>
+  <data name="Car_Cam_Part_Graph" xml:space="preserve">
+    <value>气门升程</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Graph" xml:space="preserve">
+    <value>曲轴转两圈里气门开了多大。阴影部分是它开着的时候。</value>
+  </data>
+  <data name="Car_Cylinders_Title" xml:space="preserve">
+    <value>转得平稳</value>
+  </data>
+  <data name="Car_Cylinders_P1" xml:space="preserve">
+    <value>一个气缸，在曲轴转两圈里只有半圈在推；循环的其余时间它什么也不推，压缩下一次的混合气时还要倒拿回一点。单靠它，汽车会一顿一顿地往前冲。飞轮是装在曲轴上的一个沉重的圆盘，推的时候存下能量，中间再还回去，让曲轴一直转着。</value>
+  </data>
+  <data name="Car_Cylinders_P2" xml:space="preserve">
+    <value>气缸多了就轮流推，一次一次的推力叠在一起，把空当填满。四个气缸时总有一个在推；六个、八个时，转动的力几乎不变。所以大发动机转得那么平顺，单缸的割草机却要配一个沉重的飞轮。</value>
+  </data>
+  <data name="Car_Cylinders_Deeper" xml:space="preserve">
+    <value>转动的力高于平均值时，曲轴加速；低于平均值时减速。一个循环里得到又失去的能量，除以飞轮自己存的能量（½ × 转动惯量 × 转速²），就是转速波动的大小：飞轮加倍，波动减半。</value>
+  </data>
+  <data name="Car_Cylinders_Count" xml:space="preserve">
+    <value>气缸数</value>
+  </data>
+  <data name="Car_Cylinders_Flywheel" xml:space="preserve">
+    <value>飞轮有多重（1 = 普通）</value>
+  </data>
+  <data name="Car_Cylinders_Readout" xml:space="preserve">
+    <value>曲轴的转速每个循环上下波动 ±{0}%。</value>
+  </data>
+  <data name="Car_Cylinders_Picture" xml:space="preserve">
+    <value>一个循环里曲轴受到的转动力、飞轮，以及转速波动的仪表</value>
+  </data>
+  <data name="Car_Cylinders_FlywheelLabel" xml:space="preserve">
+    <value>飞轮</value>
+  </data>
+  <data name="Car_Cylinders_Slower" xml:space="preserve">
+    <value>慢</value>
+  </data>
+  <data name="Car_Cylinders_Faster" xml:space="preserve">
+    <value>快</value>
+  </data>
+  <data name="Car_Cylinders_Swing" xml:space="preserve">
+    <value>波动 ±{0}%</value>
+  </data>
+  <data name="Car_Cylinders_Force" xml:space="preserve">
+    <value>曲轴受到的转动力 · 气缸数：{0}</value>
+  </data>
+  <data name="Car_Cylinders_Average" xml:space="preserve">
+    <value>平均</value>
+  </data>
+  <data name="Narr_Car_Cylinders_01" xml:space="preserve">
+    <value>一个气缸：半圈里猛推一下，接下来一圈半几乎什么都不推。</value>
+  </data>
+  <data name="Narr_Car_Cylinders_02" xml:space="preserve">
+    <value>看指针：推的时候曲轴加速，中间又慢下来。</value>
+  </data>
+  <data name="Narr_Car_Cylinders_03" xml:space="preserve">
+    <value>轮到你了：给发动机四个或更多气缸。</value>
+  </data>
+  <data name="Narr_Car_Cylinders_04" xml:space="preserve">
+    <value>再换一个更重的飞轮，把剩下的波动也抹平。它吸收多出来的能量，在空当里再还回去。</value>
+  </data>
+  <data name="Narr_Car_Cylinders_05" xml:space="preserve">
+    <value>单缸发动机为什么需要一个很重的飞轮？</value>
+  </data>
+  <data name="Car_Cylinders_Quiz1" xml:space="preserve">
+    <value>在两次推力之间带着曲轴继续转</value>
+  </data>
+  <data name="Car_Cylinders_Quiz2" xml:space="preserve">
+    <value>让发动机声音更大</value>
+  </data>
+  <data name="Car_Cylinders_Quiz3" xml:space="preserve">
+    <value>给发动机降温</value>
+  </data>
+  <data name="Car_Cylinders_Part_Graph" xml:space="preserve">
+    <value>转动力</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Graph" xml:space="preserve">
+    <value>每个气缸的推力是一条淡线；金线是它们加起来的，虚线是平均值。</value>
+  </data>
+  <data name="Car_Cylinders_Part_Flywheel" xml:space="preserve">
+    <value>飞轮</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Flywheel" xml:space="preserve">
+    <value>装在曲轴上的沉重圆盘。越重，它的转速变化越小。</value>
+  </data>
+  <data name="Car_Cylinders_Part_Gauge" xml:space="preserve">
+    <value>转速表</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Gauge" xml:space="preserve">
+    <value>曲轴现在比平均转速快多少、慢多少。红色刻度是最快和最慢。</value>
+  </data>
+  <data name="Car_Clutch_Title" xml:space="preserve">
+    <value>起步</value>
+  </data>
+  <data name="Car_Clutch_P1" xml:space="preserve">
+    <value>发动机的转速不能低于某个值，否则就会熄火，可汽车得从静止开始走。总得有个东西，把正在转的发动机和不动的轮子温和地连起来。这就是离合器：一个带摩擦片的圆盘，被强劲的弹簧压在发动机飞轮和压盘之间。</value>
+  </data>
+  <data name="Car_Clutch_P2" xml:space="preserve">
+    <value>踩下踏板，压盘被拉开，离合片自由转动，什么也传不过去。慢慢松开踏板，弹簧压得越来越紧；摩擦片一边打滑一边摩擦，变速箱这一边越转越快，发动机这边也越来越吃力。等两边转得一样快，它们就咬合在一起，一起转。</value>
+  </data>
+  <data name="Car_Clutch_Deeper" xml:space="preserve">
+    <value>摩擦片打滑的时候，发动机输入的能量有一部分变成了热：传过去的转动力 × 两边的转速差。所以老是半踩离合器会把它磨坏，坡道起步之后还可能闻到焦味。一旦咬合，那里就不再损失能量了。</value>
+  </data>
+  <data name="Car_Clutch_Pedal" xml:space="preserve">
+    <value>离合踏板踩下多少</value>
+  </data>
+  <data name="Car_Clutch_Hint" xml:space="preserve">
+    <value>慢慢松开踏板，车就平稳起步；一下子松开，发动机就会被拖得很吃力。</value>
+  </data>
+  <data name="Car_Clutch_Apart" xml:space="preserve">
+    <value>踏板踩到底：摩擦片分开，什么也传不过去。</value>
+  </data>
+  <data name="Car_Clutch_Readout" xml:space="preserve">
+    <value>弹簧让摩擦片最多能传递 {0} 牛·米的转动力。</value>
+  </data>
+  <data name="Car_Clutch_Picture" xml:space="preserve">
+    <value>剖开的离合器：飞轮、摩擦片和装着弹簧的压盘，下面是两边的转速</value>
+  </data>
+  <data name="Car_Clutch_EngineSide" xml:space="preserve">
+    <value>发动机飞轮</value>
+  </data>
+  <data name="Car_Clutch_PlateLabel" xml:space="preserve">
+    <value>摩擦片</value>
+  </data>
+  <data name="Car_Clutch_ToGearbox" xml:space="preserve">
+    <value>通往变速箱 →</value>
+  </data>
+  <data name="Car_Clutch_EngineSpeed" xml:space="preserve">
+    <value>发动机：每分钟 {0} 转</value>
+  </data>
+  <data name="Car_Clutch_GearboxSpeed" xml:space="preserve">
+    <value>变速箱这边：每分钟 {0} 转</value>
+  </data>
+  <data name="Car_Clutch_StateApart" xml:space="preserve">
+    <value>分开：车没有被驱动</value>
+  </data>
+  <data name="Car_Clutch_StateGrip" xml:space="preserve">
+    <value>咬合：两边一起转</value>
+  </data>
+  <data name="Car_Clutch_StateSlip" xml:space="preserve">
+    <value>打滑：在摩擦，在发热</value>
+  </data>
+  <data name="Car_Clutch_Heat" xml:space="preserve">
+    <value>发热：{0} 千瓦</value>
+  </data>
+  <data name="Narr_Car_Clutch_01" xml:space="preserve">
+    <value>发动机带着飞轮转。踏板踩着时，摩擦片分开，车停着不动。</value>
+  </data>
+  <data name="Narr_Car_Clutch_02" xml:space="preserve">
+    <value>它们中间是摩擦片，装在通往变速箱和车轮的轴上。</value>
+  </data>
+  <data name="Narr_Car_Clutch_03" xml:space="preserve">
+    <value>轮到你了：慢慢地把踏板完全松开。</value>
+  </data>
+  <data name="Narr_Car_Clutch_04" xml:space="preserve">
+    <value>变速箱这边追上了发动机。现在它们咬合了，一起转。</value>
+  </data>
+  <data name="Narr_Car_Clutch_05" xml:space="preserve">
+    <value>离合器打滑的时候，损失的能量去哪儿了？</value>
+  </data>
+  <data name="Car_Clutch_Quiz1" xml:space="preserve">
+    <value>存进电池</value>
+  </data>
+  <data name="Car_Clutch_Quiz2" xml:space="preserve">
+    <value>回到燃油里</value>
+  </data>
+  <data name="Car_Clutch_Quiz3" xml:space="preserve">
+    <value>变成摩擦片里的热</value>
+  </data>
+  <data name="Car_Clutch_Part_Flywheel" xml:space="preserve">
+    <value>飞轮</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Flywheel" xml:space="preserve">
+    <value>用螺栓固定在发动机曲轴上。它的背面就是离合器的一面。</value>
+  </data>
+  <data name="Car_Clutch_Part_Plate" xml:space="preserve">
+    <value>摩擦片</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Plate" xml:space="preserve">
+    <value>带摩擦衬片的圆盘，装在变速箱的轴上。被压紧时，发动机就拖着它转。</value>
+  </data>
+  <data name="Car_Clutch_Part_Springs" xml:space="preserve">
+    <value>弹簧和压盘</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Springs" xml:space="preserve">
+    <value>弹簧把压盘往飞轮那边推。踏板把它往回拉。</value>
+  </data>
+  <data name="Car_Clutch_Part_Speeds" xml:space="preserve">
+    <value>转速</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Speeds" xml:space="preserve">
+    <value>发动机的转速和变速箱那边的转速。两个不一样时，离合器就在打滑。</value>
+  </data>
+  <data name="Car_Bend_Title" xml:space="preserve">
+    <value>转弯</value>
+  </data>
+  <data name="Car_Bend_P1" xml:space="preserve">
+    <value>转弯时，外侧的车轮绕的圈比内侧大，同样的时间里要多滚一段路。要是两个驱动轮固定在同一根轴上，总有一个得在路面上蹭着走，磨轮胎，还跟方向盘较劲。</value>
+  </data>
+  <data name="Car_Bend_P2" xml:space="preserve">
+    <value>差速器解决了这个问题。发动机通过大齿圈带着差速器壳转；壳里有几个小的行星齿轮跟着壳一起转，还跟两侧车轮各自的半轴齿轮啮合。直行时，行星齿轮不自转，两个车轮跟壳一起转。转弯时，行星齿轮转起来，让一个车轮快一点、另一个慢一点，而壳的转速正好是它们的平均。</value>
+  </data>
+  <data name="Car_Bend_Deeper" xml:space="preserve">
+    <value>左轮转的圈数 + 右轮转的圈数 = 2 × 壳转的圈数，永远成立。转弯半径为 R、两轮间距为 t 时，内侧车轮每滚 (R − t/2)，外侧就滚 (R + t/2)。在半径 5 米的急弯、轮距 1.6 米时，外侧要多滚大约 38%。</value>
+  </data>
+  <data name="Car_Bend_Radius" xml:space="preserve">
+    <value>转弯半径</value>
+  </data>
+  <data name="Car_Bend_Readout" xml:space="preserve">
+    <value>在半径 {0} 米的弯道上，外侧车轮比内侧快 {1}%。</value>
+  </data>
+  <data name="Car_Bend_Picture" xml:space="preserve">
+    <value>从上往下看一辆车转弯，标出车轮压过的痕迹，下面是差速器的侧视图</value>
+  </data>
+  <data name="Car_Bend_Centre" xml:space="preserve">
+    <value>转弯半径 {0} 米：圆心在左边很远处</value>
+  </data>
+  <data name="Car_Bend_Inner" xml:space="preserve">
+    <value>内侧车轮：车速的 {0}%</value>
+  </data>
+  <data name="Car_Bend_Outer" xml:space="preserve">
+    <value>外侧车轮：{0}%</value>
+  </data>
+  <data name="Car_Bend_CaseLabel" xml:space="preserve">
+    <value>差速器壳</value>
+  </data>
+  <data name="Narr_Car_Bend_01" xml:space="preserve">
+    <value>在缓弯上，两个车轮留下的痕迹间距几乎一样。</value>
+  </data>
+  <data name="Narr_Car_Bend_02" xml:space="preserve">
+    <value>把弯道变急：外侧车轮的痕迹拉开了，因为它滚得更远。</value>
+  </data>
+  <data name="Narr_Car_Bend_03" xml:space="preserve">
+    <value>在差速器里面，行星齿轮转起来，让两边可以用不同的速度转。</value>
+  </data>
+  <data name="Narr_Car_Bend_04" xml:space="preserve">
+    <value>轮到你了：把弯道变得很急，小于六米，看行星齿轮转得更快。</value>
+  </data>
+  <data name="Narr_Car_Bend_05" xml:space="preserve">
+    <value>内侧车轮转八圈，外侧转十二圈。差速器壳转了几圈？</value>
+  </data>
+  <data name="Car_Bend_Quiz1" xml:space="preserve">
+    <value>十圈</value>
+  </data>
+  <data name="Car_Bend_Quiz2" xml:space="preserve">
+    <value>十二圈</value>
+  </data>
+  <data name="Car_Bend_Quiz3" xml:space="preserve">
+    <value>二十圈</value>
+  </data>
+  <data name="Car_Bend_Part_Road" xml:space="preserve">
+    <value>弯道</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Road" xml:space="preserve">
+    <value>每个车轮每滚一米留下一个点。外侧的点间距更大。</value>
+  </data>
+  <data name="Car_Bend_Part_Wheels" xml:space="preserve">
+    <value>内侧车轮</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Wheels" xml:space="preserve">
+    <value>在弯道内侧，它滚的路短，所以转得慢。</value>
+  </data>
+  <data name="Car_Bend_Part_Case" xml:space="preserve">
+    <value>差速器壳和大齿圈</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Case" xml:space="preserve">
+    <value>由发动机带着转。它的转速永远是两个车轮的平均。</value>
+  </data>
+  <data name="Car_Bend_Part_Spider" xml:space="preserve">
+    <value>行星齿轮</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Spider" xml:space="preserve">
+    <value>跟着壳一起绕。只有两个车轮转速不同时，它才自转。</value>
+  </data>
+  <data name="Car_Ice_Title" xml:space="preserve">
+    <value>一个轮子踩在冰上</value>
+  </data>
+  <data name="Car_Ice_P1" xml:space="preserve">
+    <value>差速器有个毛病：它总是把转动力平分给两个车轮。两个车轮都抓得住地时没问题；可一个车轮踩在冰上，它稍一用力就打滑空转。另一个车轮分到的力跟它一样，也只有那么一点：冰上的轮子疯狂空转，车却几乎不动。</value>
+  </data>
+  <data name="Car_Ice_P2" xml:space="preserve">
+    <value>解决办法是在需要用力推的时候，不让两个车轮用不同的速度转。差速锁把两个轮子锁在一起，这样踩在干燥路面上的轮子就能用上它抓得住的全部力气。越野车有差速锁开关；很多汽车用限滑差速器，它自己会部分锁住；还有的车会刹住打滑的轮子，把力送到另一边去。</value>
+  </data>
+  <data name="Car_Ice_Deeper" xml:space="preserve">
+    <value>用普通（开放式）差速器时，车得到的推力最多是更滑那个轮子能承受的两倍。锁住后，是两个轮子能承受的加起来。不过在干燥路面上转弯时，锁住的差速器会跟车较劲，所以一离开冰面就要再解锁。</value>
+  </data>
+  <data name="Car_Ice_Grip" xml:space="preserve">
+    <value>左轮的抓地力</value>
+  </data>
+  <data name="Car_Ice_Lock" xml:space="preserve">
+    <value>锁住差速器</value>
+  </data>
+  <data name="Car_Ice_Spins" xml:space="preserve">
+    <value>冰上的轮子在空转：车只得到发动机能给的推力的 {0}%。</value>
+  </data>
+  <data name="Car_Ice_Readout" xml:space="preserve">
+    <value>车得到发动机能给的推力的 {0}%。</value>
+  </data>
+  <data name="Car_Ice_Picture" xml:space="preserve">
+    <value>汽车的尾部，左轮在冰上，右轮在干燥路面上，标出每个轮子推得多用力</value>
+  </data>
+  <data name="Car_Ice_DiffLocked" xml:space="preserve">
+    <value>已锁住</value>
+  </data>
+  <data name="Car_Ice_DiffOpen" xml:space="preserve">
+    <value>开放式差速器</value>
+  </data>
+  <data name="Car_Ice_Spinning" xml:space="preserve">
+    <value>空转！</value>
+  </data>
+  <data name="Car_Ice_IceLabel" xml:space="preserve">
+    <value>冰</value>
+  </data>
+  <data name="Car_Ice_DryLabel" xml:space="preserve">
+    <value>干燥路面</value>
+  </data>
+  <data name="Car_Ice_LeftPush" xml:space="preserve">
+    <value>左轮的推力</value>
+  </data>
+  <data name="Car_Ice_RightPush" xml:space="preserve">
+    <value>右轮的推力</value>
+  </data>
+  <data name="Car_Ice_Total" xml:space="preserve">
+    <value>往前的推力：{0}%</value>
+  </data>
+  <data name="Narr_Car_Ice_01" xml:space="preserve">
+    <value>两个后轮都在干燥路面上。差速器把转动力平分，两个轮子都在推。</value>
+  </data>
+  <data name="Narr_Car_Ice_02" xml:space="preserve">
+    <value>现在左轮踩到了冰上。它稍一用力就会打滑。</value>
+  </data>
+  <data name="Narr_Car_Ice_03" xml:space="preserve">
+    <value>看推力：右轮分到的力跟冰上的一样少，所以车几乎不动。</value>
+  </data>
+  <data name="Narr_Car_Ice_04" xml:space="preserve">
+    <value>轮到你了：把差速器锁住。</value>
+  </data>
+  <data name="Narr_Car_Ice_05" xml:space="preserve">
+    <value>用开放式差速器、一个轮子在冰上时，干燥路面上的轮子能推多用力？</value>
+  </data>
+  <data name="Car_Ice_Quiz1" xml:space="preserve">
+    <value>它能抓多紧就推多用力</value>
+  </data>
+  <data name="Car_Ice_Quiz2" xml:space="preserve">
+    <value>只能跟冰上的轮子一样</value>
+  </data>
+  <data name="Car_Ice_Quiz3" xml:space="preserve">
+    <value>一点也推不动</value>
+  </data>
+  <data name="Car_Ice_Part_Slippy" xml:space="preserve">
+    <value>冰上的车轮</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Slippy" xml:space="preserve">
+    <value>它稍一用力就会空转。用开放式差速器时，两个轮子的推力都被它限制住。</value>
+  </data>
+  <data name="Car_Ice_Part_Firm" xml:space="preserve">
+    <value>干燥路面上的车轮</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Firm" xml:space="preserve">
+    <value>只要分到力，它本来能推得很用力。</value>
+  </data>
+  <data name="Car_Ice_Part_Diff" xml:space="preserve">
+    <value>差速器</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Diff" xml:space="preserve">
+    <value>开着时把力平分；锁住时让两个轮子一起转。</value>
+  </data>
+  <data name="Car_Ice_Part_Push" xml:space="preserve">
+    <value>往前的推力</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Push" xml:space="preserve">
+    <value>每个轮胎推车往前有多用力，以及两个加起来。</value>
+  </data>
 </root>

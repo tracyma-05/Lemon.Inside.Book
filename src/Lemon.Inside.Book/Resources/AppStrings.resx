@@ -3105,4 +3105,553 @@
   <data name="Narr_Boats_Submarine_Part_Gauge" xml:space="preserve">
     <value>How deep the submarine is, down to the seabed sixty metres below.</value>
   </data>
+  <data name="Chapter_Car" xml:space="preserve">
+    <value>Inside a car</value>
+  </data>
+  <data name="Car_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Car_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Car_Times" xml:space="preserve">
+    <value>{0}×</value>
+  </data>
+  <data name="Car_Millimetres" xml:space="preserve">
+    <value>{0} mm</value>
+  </data>
+  <data name="Car_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Car_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Car_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Car_Crank_Title" xml:space="preserve">
+    <value>From up-and-down to round and round</value>
+  </data>
+  <data name="Car_Crank_P1" xml:space="preserve">
+    <value>In an engine, burning fuel pushes a piston down a cylinder. But wheels need turning, not pushing. The answer is the oldest trick in machinery: a crank, an arm on the shaft with a pin near its edge, joined to the piston by a connecting rod. Push the piston down and the crank swings round; the crank's momentum then brings the piston back up again.</value>
+  </data>
+  <data name="Car_Crank_P2" xml:space="preserve">
+    <value>The piston does not follow a neat wave. When the crank is near the top, the rod tilts as the pin swings sideways, which adds to the piston's drop; near the bottom the tilt takes some back. So the piston hurries through the top half of its travel and dawdles through the bottom half, and it moves fastest a little before the crank is sideways. The shorter the rod, the more lopsided this gets.</value>
+  </data>
+  <data name="Car_Crank_Deeper" xml:space="preserve">
+    <value>Travel from the top = r + l − (r cos θ + √(l² − r² sin² θ)), for a crank of radius r and a rod of length l turned θ from the top. With an endlessly long rod this would be the plain wave r(1 − cos θ). Car engines use rods about three to four times the crank's radius: long enough to keep the rod from pushing the piston hard against the cylinder's side, short enough to keep the engine compact.</value>
+  </data>
+  <data name="Car_Crank_Rod" xml:space="preserve">
+    <value>Connecting rod's length (crank radii)</value>
+  </data>
+  <data name="Car_Crank_Readout" xml:space="preserve">
+    <value>The piston moves fastest when the crank is {0}° from the top, not at 90°.</value>
+  </data>
+  <data name="Car_Crank_Picture" xml:space="preserve">
+    <value>A cylinder cut open, its piston on a rod to the turning crank, and a graph of the piston's travel</value>
+  </data>
+  <data name="Car_Crank_Fastest" xml:space="preserve">
+    <value>fastest</value>
+  </data>
+  <data name="Car_Crank_Down" xml:space="preserve">
+    <value>down</value>
+  </data>
+  <data name="Car_Crank_Wave" xml:space="preserve">
+    <value>dashed: a plain wave</value>
+  </data>
+  <data name="Narr_Car_Crank_01" xml:space="preserve">
+    <value>The crank turns steadily, round and round, and carries the bottom of the rod with it.</value>
+  </data>
+  <data name="Narr_Car_Crank_02" xml:space="preserve">
+    <value>The top of the rod can only go up and down, so it drives the piston along the cylinder.</value>
+  </data>
+  <data name="Narr_Car_Crank_03" xml:space="preserve">
+    <value>The gold curve is how far the piston has come down. It is not quite the dashed wave: steeper at the top, flatter at the bottom.</value>
+  </data>
+  <data name="Narr_Car_Crank_04" xml:space="preserve">
+    <value>Your turn: make the connecting rod much shorter, and watch the curve get more lopsided.</value>
+  </data>
+  <data name="Narr_Car_Crank_05" xml:space="preserve">
+    <value>When does the piston move fastest on its way down?</value>
+  </data>
+  <data name="Car_Crank_Quiz1" xml:space="preserve">
+    <value>A little before the crank is sideways</value>
+  </data>
+  <data name="Car_Crank_Quiz2" xml:space="preserve">
+    <value>Exactly when the crank is sideways</value>
+  </data>
+  <data name="Car_Crank_Quiz3" xml:space="preserve">
+    <value>At the very top</value>
+  </data>
+  <data name="Car_Crank_Part_Piston" xml:space="preserve">
+    <value>Piston</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Piston" xml:space="preserve">
+    <value>A metal plug sliding in the cylinder. The burning gas above pushes it down.</value>
+  </data>
+  <data name="Car_Crank_Part_Rod" xml:space="preserve">
+    <value>Connecting rod</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Rod" xml:space="preserve">
+    <value>Joins the piston to the crank. Its top goes up and down, its bottom goes round, and it tilts in between.</value>
+  </data>
+  <data name="Car_Crank_Part_Crank" xml:space="preserve">
+    <value>Crank</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Crank" xml:space="preserve">
+    <value>An arm on the crankshaft with a heavy counterweight opposite the pin, so it spins smoothly.</value>
+  </data>
+  <data name="Car_Crank_Part_Graph" xml:space="preserve">
+    <value>Piston travel</value>
+  </data>
+  <data name="Narr_Car_Crank_Part_Graph" xml:space="preserve">
+    <value>How far down the piston is through one turn of the crank. The white dot is now.</value>
+  </data>
+  <data name="Car_Cam_Title" xml:space="preserve">
+    <value>Opening on time</value>
+  </data>
+  <data name="Car_Cam_P1" xml:space="preserve">
+    <value>Each cylinder breathes through valves: one lets fresh air and fuel in, another lets the burnt gas out. They must open and close at exactly the right moments, thousands of times a minute. A camshaft does it. A cam is a wheel with a bump; as it turns, the bump presses the valve open against a strong spring, and as it passes, the spring snaps the valve shut.</value>
+  </data>
+  <data name="Car_Cam_P2" xml:space="preserve">
+    <value>An engine takes two turns of the crank to work through its cycle, and each valve opens once in that time. So the camshaft is geared, or chained, to turn once for every two turns of the crank. The cam's shape decides everything: how far the valve opens, and for how long. Engines built for high speed use cams that hold the valves open longer.</value>
+  </data>
+  <data name="Car_Cam_Deeper" xml:space="preserve">
+    <value>At 3,000 turns a minute the crank turns 50 times a second, so a valve open for 240° of crank turn is open for about 13 thousandths of a second. The spring must be stiff enough to keep the valve following the cam's fall; too soft, and at high speed the valve floats and is late to close.</value>
+  </data>
+  <data name="Car_Cam_Lift" xml:space="preserve">
+    <value>How far the cam opens the valve</value>
+  </data>
+  <data name="Car_Cam_Duration" xml:space="preserve">
+    <value>How long it stays open (crank degrees)</value>
+  </data>
+  <data name="Car_Cam_Readout" xml:space="preserve">
+    <value>Open for {0}° of the crank's turn: {1} thousandths of a second at 3,000 turns a minute.</value>
+  </data>
+  <data name="Car_Cam_Picture" xml:space="preserve">
+    <value>A cam pressing a valve open against its spring, and a graph of the valve's lift over two crank turns</value>
+  </data>
+  <data name="Car_Cam_Open" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="Car_Cam_Graph" xml:space="preserve">
+    <value>Valve lift (most {0} mm)</value>
+  </data>
+  <data name="Car_Cam_Crank" xml:space="preserve">
+    <value>crank degrees</value>
+  </data>
+  <data name="Narr_Car_Cam_01" xml:space="preserve">
+    <value>The cam turns on the camshaft. Most of it is round; one side has a smooth bump.</value>
+  </data>
+  <data name="Narr_Car_Cam_02" xml:space="preserve">
+    <value>When the bump comes round, it presses the valve down, and the valve's head lifts off its seat to let gas through.</value>
+  </data>
+  <data name="Narr_Car_Cam_03" xml:space="preserve">
+    <value>The spring pushes back the whole time, so the valve follows the cam and closes again as the bump passes.</value>
+  </data>
+  <data name="Narr_Car_Cam_04" xml:space="preserve">
+    <value>Your turn: give the cam a longer bump, so the valve stays open for more of the cycle.</value>
+  </data>
+  <data name="Narr_Car_Cam_05" xml:space="preserve">
+    <value>For each turn of the crank, how far does the camshaft turn?</value>
+  </data>
+  <data name="Car_Cam_Quiz1" xml:space="preserve">
+    <value>Two turns</value>
+  </data>
+  <data name="Car_Cam_Quiz2" xml:space="preserve">
+    <value>Half a turn</value>
+  </data>
+  <data name="Car_Cam_Quiz3" xml:space="preserve">
+    <value>One turn</value>
+  </data>
+  <data name="Car_Cam_Part_Cam" xml:space="preserve">
+    <value>Cam</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Cam" xml:space="preserve">
+    <value>A round wheel with a bump. Its shape sets when the valve opens, how far, and for how long.</value>
+  </data>
+  <data name="Car_Cam_Part_Valve" xml:space="preserve">
+    <value>Valve</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Valve" xml:space="preserve">
+    <value>A mushroom-shaped plug. Its head seals the port, and lifts off to let gas in or out.</value>
+  </data>
+  <data name="Car_Cam_Part_Spring" xml:space="preserve">
+    <value>Valve spring</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Spring" xml:space="preserve">
+    <value>Keeps the valve shut and makes it follow the cam back down.</value>
+  </data>
+  <data name="Car_Cam_Part_Graph" xml:space="preserve">
+    <value>Valve lift</value>
+  </data>
+  <data name="Narr_Car_Cam_Part_Graph" xml:space="preserve">
+    <value>How far the valve is open through two turns of the crank. The shaded part is when it is open.</value>
+  </data>
+  <data name="Car_Cylinders_Title" xml:space="preserve">
+    <value>Smooth turning</value>
+  </data>
+  <data name="Car_Cylinders_P1" xml:space="preserve">
+    <value>A single cylinder pushes on the crank for only half a turn in every two; for the rest of the cycle it pushes nothing, or even takes a little back to squeeze the next charge. On its own it would jerk the car forward in pulses. A flywheel, a heavy disc on the crankshaft, stores energy during the push and gives it back in between, keeping the crank turning.</value>
+  </data>
+  <data name="Car_Cylinders_P2" xml:space="preserve">
+    <value>More cylinders take turns, so the pushes overlap and fill the gaps. With four cylinders there is always one pushing; with six or eight, the turning force is nearly steady. That is why bigger engines run so smoothly, and why a single-cylinder lawnmower needs a heavy flywheel.</value>
+  </data>
+  <data name="Car_Cylinders_Deeper" xml:space="preserve">
+    <value>The crank speeds up while the turning force is above its average and slows while it is below. The energy it gains and loses over a cycle, over the flywheel's own stored energy (½ × its inertia × speed²), gives the size of the wobble: twice the flywheel, half the wobble.</value>
+  </data>
+  <data name="Car_Cylinders_Count" xml:space="preserve">
+    <value>Cylinders</value>
+  </data>
+  <data name="Car_Cylinders_Flywheel" xml:space="preserve">
+    <value>Flywheel's heft (1 = ordinary)</value>
+  </data>
+  <data name="Car_Cylinders_Readout" xml:space="preserve">
+    <value>The crank's speed swings ±{0}% every cycle.</value>
+  </data>
+  <data name="Car_Cylinders_Picture" xml:space="preserve">
+    <value>The turning force on the crank through a cycle, a flywheel, and a gauge of how its speed swings</value>
+  </data>
+  <data name="Car_Cylinders_FlywheelLabel" xml:space="preserve">
+    <value>flywheel</value>
+  </data>
+  <data name="Car_Cylinders_Slower" xml:space="preserve">
+    <value>slower</value>
+  </data>
+  <data name="Car_Cylinders_Faster" xml:space="preserve">
+    <value>faster</value>
+  </data>
+  <data name="Car_Cylinders_Swing" xml:space="preserve">
+    <value>swings ±{0}%</value>
+  </data>
+  <data name="Car_Cylinders_Force" xml:space="preserve">
+    <value>Turning force on the crank · cylinders: {0}</value>
+  </data>
+  <data name="Car_Cylinders_Average" xml:space="preserve">
+    <value>average</value>
+  </data>
+  <data name="Narr_Car_Cylinders_01" xml:space="preserve">
+    <value>One cylinder: a big push for half a turn, then almost nothing for a turn and a half.</value>
+  </data>
+  <data name="Narr_Car_Cylinders_02" xml:space="preserve">
+    <value>Watch the needle: the crank speeds up during the push and slows down in between.</value>
+  </data>
+  <data name="Narr_Car_Cylinders_03" xml:space="preserve">
+    <value>Your turn: give the engine four cylinders or more.</value>
+  </data>
+  <data name="Narr_Car_Cylinders_04" xml:space="preserve">
+    <value>A heavier flywheel smooths out what is left. It soaks up the surplus and gives it back in the gaps.</value>
+  </data>
+  <data name="Narr_Car_Cylinders_05" xml:space="preserve">
+    <value>Why does a single-cylinder engine need a heavy flywheel?</value>
+  </data>
+  <data name="Car_Cylinders_Quiz1" xml:space="preserve">
+    <value>To carry the crank round between pushes</value>
+  </data>
+  <data name="Car_Cylinders_Quiz2" xml:space="preserve">
+    <value>To make the engine louder</value>
+  </data>
+  <data name="Car_Cylinders_Quiz3" xml:space="preserve">
+    <value>To cool the engine</value>
+  </data>
+  <data name="Car_Cylinders_Part_Graph" xml:space="preserve">
+    <value>Turning force</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Graph" xml:space="preserve">
+    <value>Each cylinder's push is a faint line; the gold line is all of them together, the dashed line their average.</value>
+  </data>
+  <data name="Car_Cylinders_Part_Flywheel" xml:space="preserve">
+    <value>Flywheel</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Flywheel" xml:space="preserve">
+    <value>A heavy disc on the crankshaft. The heavier it is, the less its speed changes.</value>
+  </data>
+  <data name="Car_Cylinders_Part_Gauge" xml:space="preserve">
+    <value>Speed gauge</value>
+  </data>
+  <data name="Narr_Car_Cylinders_Part_Gauge" xml:space="preserve">
+    <value>How much faster or slower than average the crank turns right now. The red marks are the extremes.</value>
+  </data>
+  <data name="Car_Clutch_Title" xml:space="preserve">
+    <value>Moving off</value>
+  </data>
+  <data name="Car_Clutch_P1" xml:space="preserve">
+    <value>An engine cannot turn slower than a certain speed or it stalls, yet the car starts from standing still. Something has to join a spinning engine to still wheels gently. That is the clutch: a disc with a grippy lining, squeezed by strong springs between the engine's flywheel and a pressure plate.</value>
+  </data>
+  <data name="Car_Clutch_P2" xml:space="preserve">
+    <value>Press the pedal and the pressure plate is pulled back: the disc spins free and nothing is passed on. Let the pedal up slowly and the springs squeeze harder and harder; the plates slip, rubbing, and the gearbox side speeds up while the engine labours. Once both turn at the same speed, they grip and turn as one.</value>
+  </data>
+  <data name="Car_Clutch_Deeper" xml:space="preserve">
+    <value>While the plates slip, the energy the engine puts in is partly lost as heat: the turning force passed × the difference in speed. That is why riding the clutch wears it out, and why it can smell hot after a hill start. Once it grips, no energy is lost there at all.</value>
+  </data>
+  <data name="Car_Clutch_Pedal" xml:space="preserve">
+    <value>Clutch pedal pressed</value>
+  </data>
+  <data name="Car_Clutch_Hint" xml:space="preserve">
+    <value>Let the pedal up slowly to move off; let it up at once, and the engine bogs down.</value>
+  </data>
+  <data name="Car_Clutch_Apart" xml:space="preserve">
+    <value>Pedal down: the plates are apart and pass nothing on.</value>
+  </data>
+  <data name="Car_Clutch_Readout" xml:space="preserve">
+    <value>The springs let the plates pass up to {0} N·m of turning force.</value>
+  </data>
+  <data name="Car_Clutch_Picture" xml:space="preserve">
+    <value>A clutch cut in half: the flywheel, the friction plate and the spring-loaded pressure plate, with the speeds of both sides</value>
+  </data>
+  <data name="Car_Clutch_EngineSide" xml:space="preserve">
+    <value>engine's flywheel</value>
+  </data>
+  <data name="Car_Clutch_PlateLabel" xml:space="preserve">
+    <value>friction plate</value>
+  </data>
+  <data name="Car_Clutch_ToGearbox" xml:space="preserve">
+    <value>to the gearbox →</value>
+  </data>
+  <data name="Car_Clutch_EngineSpeed" xml:space="preserve">
+    <value>Engine: {0} turns a minute</value>
+  </data>
+  <data name="Car_Clutch_GearboxSpeed" xml:space="preserve">
+    <value>Gearbox side: {0} turns a minute</value>
+  </data>
+  <data name="Car_Clutch_StateApart" xml:space="preserve">
+    <value>Apart: the car is not driven</value>
+  </data>
+  <data name="Car_Clutch_StateGrip" xml:space="preserve">
+    <value>Gripping: both turn as one</value>
+  </data>
+  <data name="Car_Clutch_StateSlip" xml:space="preserve">
+    <value>Slipping: rubbing, getting hot</value>
+  </data>
+  <data name="Car_Clutch_Heat" xml:space="preserve">
+    <value>heat: {0} kW</value>
+  </data>
+  <data name="Narr_Car_Clutch_01" xml:space="preserve">
+    <value>The engine turns its flywheel. With the pedal down, the plates are apart, and the car stands still.</value>
+  </data>
+  <data name="Narr_Car_Clutch_02" xml:space="preserve">
+    <value>Between them is the friction plate, on the shaft to the gearbox and wheels.</value>
+  </data>
+  <data name="Narr_Car_Clutch_03" xml:space="preserve">
+    <value>Your turn: let the pedal up, slowly, all the way.</value>
+  </data>
+  <data name="Narr_Car_Clutch_04" xml:space="preserve">
+    <value>The gearbox side caught up with the engine. Now they grip, and turn together.</value>
+  </data>
+  <data name="Narr_Car_Clutch_05" xml:space="preserve">
+    <value>While the clutch slips, where does the lost energy go?</value>
+  </data>
+  <data name="Car_Clutch_Quiz1" xml:space="preserve">
+    <value>Into the battery</value>
+  </data>
+  <data name="Car_Clutch_Quiz2" xml:space="preserve">
+    <value>Back into the fuel</value>
+  </data>
+  <data name="Car_Clutch_Quiz3" xml:space="preserve">
+    <value>Into heat in the plates</value>
+  </data>
+  <data name="Car_Clutch_Part_Flywheel" xml:space="preserve">
+    <value>Flywheel</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Flywheel" xml:space="preserve">
+    <value>Bolted to the engine's crankshaft. Its back face is one side of the clutch.</value>
+  </data>
+  <data name="Car_Clutch_Part_Plate" xml:space="preserve">
+    <value>Friction plate</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Plate" xml:space="preserve">
+    <value>A disc with grippy linings, on the gearbox's shaft. Squeezed, it is dragged round by the engine.</value>
+  </data>
+  <data name="Car_Clutch_Part_Springs" xml:space="preserve">
+    <value>Springs and pressure plate</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Springs" xml:space="preserve">
+    <value>The springs push the pressure plate towards the flywheel. The pedal pulls it back.</value>
+  </data>
+  <data name="Car_Clutch_Part_Speeds" xml:space="preserve">
+    <value>Speeds</value>
+  </data>
+  <data name="Narr_Car_Clutch_Part_Speeds" xml:space="preserve">
+    <value>The engine's speed and the gearbox side's. While they differ, the clutch slips.</value>
+  </data>
+  <data name="Car_Bend_Title" xml:space="preserve">
+    <value>Round a bend</value>
+  </data>
+  <data name="Car_Bend_P1" xml:space="preserve">
+    <value>On a bend, the outer wheels go round a bigger circle than the inner ones, so they have further to roll in the same time. If the two driven wheels were fixed to one axle, one of them would have to scrub along the road, wearing the tyre and fighting the steering.</value>
+  </data>
+  <data name="Car_Bend_P2" xml:space="preserve">
+    <value>The differential solves it. The engine turns its case through the big ring gear; inside, small spider gears ride round with the case and mesh with a side gear for each wheel. Going straight, the spiders do not spin and both wheels turn with the case. On a bend, the spiders spin, letting one wheel turn faster and the other slower, while the case turns at their average.</value>
+  </data>
+  <data name="Car_Bend_Deeper" xml:space="preserve">
+    <value>Left wheel turns + right wheel turns = 2 × case turns, always. On a bend of radius R, with the wheels a track t apart, the outer wheel rolls (R + t/2) for every (R − t/2) of the inner. On a tight 5 m turn with a 1.6 m track, that is about 38% more.</value>
+  </data>
+  <data name="Car_Bend_Radius" xml:space="preserve">
+    <value>Radius of the bend</value>
+  </data>
+  <data name="Car_Bend_Readout" xml:space="preserve">
+    <value>On a bend of {0} m, the outer wheel turns {1}% faster than the inner.</value>
+  </data>
+  <data name="Car_Bend_Picture" xml:space="preserve">
+    <value>A car going round a bend from above, its wheels' tracks marked, and its differential edge-on</value>
+  </data>
+  <data name="Car_Bend_Centre" xml:space="preserve">
+    <value>Bend radius {0} m: its centre is off to the left</value>
+  </data>
+  <data name="Car_Bend_Inner" xml:space="preserve">
+    <value>Inner wheel: {0}% of the car's speed</value>
+  </data>
+  <data name="Car_Bend_Outer" xml:space="preserve">
+    <value>Outer wheel: {0}%</value>
+  </data>
+  <data name="Car_Bend_CaseLabel" xml:space="preserve">
+    <value>differential case</value>
+  </data>
+  <data name="Narr_Car_Bend_01" xml:space="preserve">
+    <value>On a gentle bend, both wheels' marks are almost the same distance apart.</value>
+  </data>
+  <data name="Narr_Car_Bend_02" xml:space="preserve">
+    <value>Make the bend tighter: the outer wheel's marks spread out, because it rolls further.</value>
+  </data>
+  <data name="Narr_Car_Bend_03" xml:space="preserve">
+    <value>Inside the differential, the spider gear spins to let the two sides turn at different speeds.</value>
+  </data>
+  <data name="Narr_Car_Bend_04" xml:space="preserve">
+    <value>Your turn: make the bend very tight, under six metres, and watch the spider spin faster.</value>
+  </data>
+  <data name="Narr_Car_Bend_05" xml:space="preserve">
+    <value>The inner wheel turns eight times while the outer turns twelve. How many times does the case turn?</value>
+  </data>
+  <data name="Car_Bend_Quiz1" xml:space="preserve">
+    <value>Ten times</value>
+  </data>
+  <data name="Car_Bend_Quiz2" xml:space="preserve">
+    <value>Twelve times</value>
+  </data>
+  <data name="Car_Bend_Quiz3" xml:space="preserve">
+    <value>Twenty times</value>
+  </data>
+  <data name="Car_Bend_Part_Road" xml:space="preserve">
+    <value>The bend</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Road" xml:space="preserve">
+    <value>Each wheel leaves a mark every metre it rolls. The outer marks are spread further apart.</value>
+  </data>
+  <data name="Car_Bend_Part_Wheels" xml:space="preserve">
+    <value>Inner wheel</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Wheels" xml:space="preserve">
+    <value>On the inside of the bend it rolls less far, so it turns more slowly.</value>
+  </data>
+  <data name="Car_Bend_Part_Case" xml:space="preserve">
+    <value>Case and ring gear</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Case" xml:space="preserve">
+    <value>Turned by the engine. It always turns at the average of the two wheels.</value>
+  </data>
+  <data name="Car_Bend_Part_Spider" xml:space="preserve">
+    <value>Spider gear</value>
+  </data>
+  <data name="Narr_Car_Bend_Part_Spider" xml:space="preserve">
+    <value>Rides round with the case. It spins only when the wheels' speeds differ.</value>
+  </data>
+  <data name="Car_Ice_Title" xml:space="preserve">
+    <value>One wheel on ice</value>
+  </data>
+  <data name="Car_Ice_P1" xml:space="preserve">
+    <value>The differential has a catch. It always shares the turning force equally between the two wheels. That is fine while both grip; but put one wheel on ice, and it can take only a little force before it spins. Since the other wheel gets the same, it gets only a little too: the icy wheel spins madly and the car hardly moves.</value>
+  </data>
+  <data name="Car_Ice_P2" xml:space="preserve">
+    <value>The cure is to stop the wheels turning at different speeds when they need to push. A locked differential joins them together, so the wheel on dry road can push as hard as it can grip. Off-road vehicles have a lock switch; many cars use a limited-slip differential, which locks partly by itself, or brake the spinning wheel to send force across.</value>
+  </data>
+  <data name="Car_Ice_Deeper" xml:space="preserve">
+    <value>With an open differential, the push the car gets is at most twice what the slippier wheel can take. Locked, it is what both can take together. A locked differential fights the car on a dry bend, though, so it is unlocked again once off the ice.</value>
+  </data>
+  <data name="Car_Ice_Grip" xml:space="preserve">
+    <value>Grip of the left wheel</value>
+  </data>
+  <data name="Car_Ice_Lock" xml:space="preserve">
+    <value>Lock the differential</value>
+  </data>
+  <data name="Car_Ice_Spins" xml:space="preserve">
+    <value>The icy wheel spins: the car gets only {0}% of the push the engine could give.</value>
+  </data>
+  <data name="Car_Ice_Readout" xml:space="preserve">
+    <value>The car gets {0}% of the push the engine can give.</value>
+  </data>
+  <data name="Car_Ice_Picture" xml:space="preserve">
+    <value>The back of a car, its left wheel on ice and its right on dry road, with how hard each pushes</value>
+  </data>
+  <data name="Car_Ice_DiffLocked" xml:space="preserve">
+    <value>locked</value>
+  </data>
+  <data name="Car_Ice_DiffOpen" xml:space="preserve">
+    <value>open differential</value>
+  </data>
+  <data name="Car_Ice_Spinning" xml:space="preserve">
+    <value>spinning!</value>
+  </data>
+  <data name="Car_Ice_IceLabel" xml:space="preserve">
+    <value>ice</value>
+  </data>
+  <data name="Car_Ice_DryLabel" xml:space="preserve">
+    <value>dry road</value>
+  </data>
+  <data name="Car_Ice_LeftPush" xml:space="preserve">
+    <value>Left wheel pushes</value>
+  </data>
+  <data name="Car_Ice_RightPush" xml:space="preserve">
+    <value>Right wheel pushes</value>
+  </data>
+  <data name="Car_Ice_Total" xml:space="preserve">
+    <value>Push forward: {0}%</value>
+  </data>
+  <data name="Narr_Car_Ice_01" xml:space="preserve">
+    <value>Both rear wheels on dry road. The differential shares the turning force equally, and both push.</value>
+  </data>
+  <data name="Narr_Car_Ice_02" xml:space="preserve">
+    <value>Now the left wheel is on ice. It can take only a little force before it spins.</value>
+  </data>
+  <data name="Narr_Car_Ice_03" xml:space="preserve">
+    <value>Look at the push: the right wheel gets the same little force as the icy one, so the car hardly moves.</value>
+  </data>
+  <data name="Narr_Car_Ice_04" xml:space="preserve">
+    <value>Your turn: lock the differential.</value>
+  </data>
+  <data name="Narr_Car_Ice_05" xml:space="preserve">
+    <value>With an open differential and one wheel on ice, how hard can the wheel on dry road push?</value>
+  </data>
+  <data name="Car_Ice_Quiz1" xml:space="preserve">
+    <value>As hard as it can grip</value>
+  </data>
+  <data name="Car_Ice_Quiz2" xml:space="preserve">
+    <value>Only as hard as the icy wheel</value>
+  </data>
+  <data name="Car_Ice_Quiz3" xml:space="preserve">
+    <value>Not at all</value>
+  </data>
+  <data name="Car_Ice_Part_Slippy" xml:space="preserve">
+    <value>Wheel on ice</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Slippy" xml:space="preserve">
+    <value>It can take little force before it spins. With an open differential, it sets the limit for both wheels.</value>
+  </data>
+  <data name="Car_Ice_Part_Firm" xml:space="preserve">
+    <value>Wheel on dry road</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Firm" xml:space="preserve">
+    <value>It could push hard, if only it were given the force.</value>
+  </data>
+  <data name="Car_Ice_Part_Diff" xml:space="preserve">
+    <value>Differential</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Diff" xml:space="preserve">
+    <value>Open, it shares the force equally. Locked, it turns both wheels together.</value>
+  </data>
+  <data name="Car_Ice_Part_Push" xml:space="preserve">
+    <value>Push forward</value>
+  </data>
+  <data name="Narr_Car_Ice_Part_Push" xml:space="preserve">
+    <value>How hard each tyre pushes the car along, and the two together.</value>
+  </data>
 </root>

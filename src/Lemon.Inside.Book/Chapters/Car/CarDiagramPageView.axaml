@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:car="using:Lemon.Inside.Book.Chapters.Car"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Car.CarDiagramPageView"
+                         x:DataType="car:CarDiagramPageViewModel">
+    <!-- A right page of the Car chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="car:CrankSpread">
+                            <car:CrankDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Rod="{Binding Rod}" AutomationProperties.Name="{loc:Localize Car_Crank_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="car:CamSpread">
+                            <car:CamDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Lift="{Binding Lift}" Duration="{Binding Duration}" AutomationProperties.Name="{loc:Localize Car_Cam_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="car:CylindersSpread">
+                            <car:CylindersDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Count="{Binding Count}" Flywheel="{Binding Flywheel}" AutomationProperties.Name="{loc:Localize Car_Cylinders_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="car:ClutchSpread">
+                            <car:ClutchDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Pedal="{Binding Pedal}" AutomationProperties.Name="{loc:Localize Car_Clutch_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="car:BendSpread">
+                            <car:BendDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Radius="{Binding Radius}" AutomationProperties.Name="{loc:Localize Car_Bend_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="car:IceSpread">
+                            <car:IceDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     LeftGrip="{Binding LeftGrip}" Locked="{Binding Locked}" AutomationProperties.Name="{loc:Localize Car_Ice_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

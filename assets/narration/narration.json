@@ -1521,6 +1521,714 @@
      ]
     ]
    },
+   "Narr_Car_Bend_01": {
+    "duration": 5.496,
+    "hash": "d45e28d563891c8b",
+    "sentences": [
+     [
+      0.05,
+      5.444,
+      "On a gentle bend, both wheels' marks are almost the same distance apart."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_02": {
+    "duration": 5.736,
+    "hash": "85d7a840aeaad96b",
+    "sentences": [
+     [
+      0.05,
+      5.667,
+      "Make the bend tighter: the outer wheel's marks spread out, because it rolls further."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_03": {
+    "duration": 6.528,
+    "hash": "d9707d44c5076859",
+    "sentences": [
+     [
+      0.05,
+      6.472,
+      "Inside the differential, the spider gear spins to let the two sides turn at different speeds."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_04": {
+    "duration": 7.008,
+    "hash": "b49f9e24bb9eefd7",
+    "sentences": [
+     [
+      0.05,
+      6.958,
+      "Your turn: make the bend very tight, under six metres, and watch the spider spin faster."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_05": {
+    "duration": 6.696,
+    "hash": "b0d63d008564ac9f",
+    "sentences": [
+     [
+      0.05,
+      4.097,
+      "The inner wheel turns eight times while the outer turns twelve."
+     ],
+     [
+      4.097,
+      6.639,
+      "How many times does the case turn?"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Case": {
+    "duration": 5.136,
+    "hash": "50aaee5614316e79",
+    "sentences": [
+     [
+      0.05,
+      1.75,
+      "Turned by the engine."
+     ],
+     [
+      1.75,
+      5.069,
+      "It always turns at the average of the two wheels."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Road": {
+    "duration": 6.48,
+    "hash": "e6f1cd8bcb797065",
+    "sentences": [
+     [
+      0.05,
+      3.389,
+      "Each wheel leaves a mark every metre it rolls."
+     ],
+     [
+      3.389,
+      6.429,
+      "The outer marks are spread further apart."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Spider": {
+    "duration": 5.568,
+    "hash": "48c3e747cf9aeea0",
+    "sentences": [
+     [
+      0.05,
+      1.929,
+      "Rides round with the case."
+     ],
+     [
+      1.929,
+      5.514,
+      "It spins only when the wheels' speeds differ."
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Wheels": {
+    "duration": 4.656,
+    "hash": "9dcdfcba3a21bf2d",
+    "sentences": [
+     [
+      0.05,
+      4.597,
+      "On the inside of the bend it rolls less far, so it turns more slowly."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_01": {
+    "duration": 6.576,
+    "hash": "ef788b02a6457c80",
+    "sentences": [
+     [
+      0.05,
+      2.25,
+      "The cam turns on the camshaft."
+     ],
+     [
+      2.25,
+      6.514,
+      "Most of it is round; one side has a smooth bump."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_02": {
+    "duration": 7.248,
+    "hash": "7830864a6f7f289d",
+    "sentences": [
+     [
+      0.05,
+      7.181,
+      "When the bump comes round, it presses the valve down, and the valve's head lifts off its seat to let gas through."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_03": {
+    "duration": 6.984,
+    "hash": "b05ef78aae197b04",
+    "sentences": [
+     [
+      0.05,
+      6.931,
+      "The spring pushes back the whole time, so the valve follows the cam and closes again as the bump passes."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_04": {
+    "duration": 5.784,
+    "hash": "abeaebbab5f60f3a",
+    "sentences": [
+     [
+      0.05,
+      5.722,
+      "Your turn: give the cam a longer bump, so the valve stays open for more of the cycle."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_05": {
+    "duration": 4.176,
+    "hash": "5cef233c6ea62501",
+    "sentences": [
+     [
+      0.05,
+      4.125,
+      "For each turn of the crank, how far does the camshaft turn?"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Cam": {
+    "duration": 6.72,
+    "hash": "2954b1962bd4d3c7",
+    "sentences": [
+     [
+      0.05,
+      2.056,
+      "A round wheel with a bump."
+     ],
+     [
+      2.056,
+      6.653,
+      "Its shape sets when the valve opens, how far, and for how long."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Graph": {
+    "duration": 6.72,
+    "hash": "9404ef85b1857f4b",
+    "sentences": [
+     [
+      0.05,
+      4.056,
+      "How far the valve is open through two turns of the crank."
+     ],
+     [
+      4.056,
+      6.653,
+      "The shaded part is when it is open."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Spring": {
+    "duration": 4.248,
+    "hash": "72325a2b3edfe107",
+    "sentences": [
+     [
+      0.05,
+      4.194,
+      "Keeps the valve shut and makes it follow the cam back down."
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Valve": {
+    "duration": 6.552,
+    "hash": "bac9c52bbe1814e6",
+    "sentences": [
+     [
+      0.05,
+      1.903,
+      "A mushroom-shaped plug."
+     ],
+     [
+      1.903,
+      6.486,
+      "Its head seals the port, and lifts off to let gas in or out."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_01": {
+    "duration": 6.912,
+    "hash": "8c496285d8ca1a61",
+    "sentences": [
+     [
+      0.05,
+      2.458,
+      "The engine turns its flywheel."
+     ],
+     [
+      2.458,
+      6.847,
+      "With the pedal down, the plates are apart, and the car stands still."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_02": {
+    "duration": 4.944,
+    "hash": "738ccbdb33c6fd46",
+    "sentences": [
+     [
+      0.05,
+      4.889,
+      "Between them is the friction plate, on the shaft to the gearbox and wheels."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_03": {
+    "duration": 4.512,
+    "hash": "151dbaedd50d2984",
+    "sentences": [
+     [
+      0.05,
+      4.457,
+      "Your turn: let the pedal up, slowly, all the way."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_04": {
+    "duration": 5.88,
+    "hash": "75309ea485e66ef9",
+    "sentences": [
+     [
+      0.05,
+      3.181,
+      "The gearbox side caught up with the engine."
+     ],
+     [
+      3.181,
+      5.819,
+      "Now they grip, and turn together."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_05": {
+    "duration": 4.152,
+    "hash": "b85bf0a874a92eba",
+    "sentences": [
+     [
+      0.05,
+      4.083,
+      "While the clutch slips, where does the lost energy go?"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Flywheel": {
+    "duration": 5.976,
+    "hash": "569350039a72a2a4",
+    "sentences": [
+     [
+      0.05,
+      2.486,
+      "Bolted to the engine's crankshaft."
+     ],
+     [
+      2.486,
+      5.917,
+      "Its back face is one side of the clutch."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Plate": {
+    "duration": 7.968,
+    "hash": "d1d8cde8c2251f24",
+    "sentences": [
+     [
+      0.05,
+      4.056,
+      "A disc with grippy linings, on the gearbox's shaft."
+     ],
+     [
+      4.056,
+      7.903,
+      "Squeezed, it is dragged round by the engine."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Speeds": {
+    "duration": 5.856,
+    "hash": "4b5d30703b1bc548",
+    "sentences": [
+     [
+      0.05,
+      3.069,
+      "The engine's speed and the gearbox side's."
+     ],
+     [
+      3.069,
+      5.792,
+      "While they differ, the clutch slips."
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Springs": {
+    "duration": 5.352,
+    "hash": "44b0c93ba8b6e528",
+    "sentences": [
+     [
+      0.05,
+      3.444,
+      "The springs push the pressure plate towards the flywheel."
+     ],
+     [
+      3.444,
+      5.292,
+      "The pedal pulls it back."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_01": {
+    "duration": 6.096,
+    "hash": "3d2b385a3b0a92b0",
+    "sentences": [
+     [
+      0.05,
+      6.028,
+      "The crank turns steadily, round and round, and carries the bottom of the rod with it."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_02": {
+    "duration": 5.616,
+    "hash": "d6fec60561d750d2",
+    "sentences": [
+     [
+      0.05,
+      5.556,
+      "The top of the rod can only go up and down, so it drives the piston along the cylinder."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_03": {
+    "duration": 9.288,
+    "hash": "861abbd6d3d9a425",
+    "sentences": [
+     [
+      0.05,
+      3.764,
+      "The gold curve is how far the piston has come down."
+     ],
+     [
+      3.764,
+      9.236,
+      "It is not quite the dashed wave: steeper at the top, flatter at the bottom."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_04": {
+    "duration": 6.096,
+    "hash": "7269e761cc22f170",
+    "sentences": [
+     [
+      0.05,
+      6.042,
+      "Your turn: make the connecting rod much shorter, and watch the curve get more lopsided."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_05": {
+    "duration": 3.6,
+    "hash": "92906cdcbc6279ad",
+    "sentences": [
+     [
+      0.05,
+      3.528,
+      "When does the piston move fastest on its way down?"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Crank": {
+    "duration": 6.096,
+    "hash": "0bb7b030e328d207",
+    "sentences": [
+     [
+      0.05,
+      6.028,
+      "An arm on the crankshaft with a heavy counterweight opposite the pin, so it spins smoothly."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Graph": {
+    "duration": 5.688,
+    "hash": "66ee3efc5c75c7da",
+    "sentences": [
+     [
+      0.05,
+      4.028,
+      "How far down the piston is through one turn of the crank."
+     ],
+     [
+      4.028,
+      5.625,
+      "The white dot is now."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Piston": {
+    "duration": 5.304,
+    "hash": "b1b0aa45584a4783",
+    "sentences": [
+     [
+      0.05,
+      2.708,
+      "A metal plug sliding in the cylinder."
+     ],
+     [
+      2.708,
+      5.25,
+      "The burning gas above pushes it down."
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Rod": {
+    "duration": 6.984,
+    "hash": "95885834bc34963c",
+    "sentences": [
+     [
+      0.05,
+      2.264,
+      "Joins the piston to the crank."
+     ],
+     [
+      2.264,
+      6.917,
+      "Its top goes up and down, its bottom goes round, and it tilts in between."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_01": {
+    "duration": 6.36,
+    "hash": "9d791af8f7bfed2b",
+    "sentences": [
+     [
+      0.05,
+      6.306,
+      "One cylinder: a big push for half a turn, then almost nothing for a turn and a half."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_02": {
+    "duration": 5.328,
+    "hash": "cc75d2e809b63399",
+    "sentences": [
+     [
+      0.05,
+      5.264,
+      "Watch the needle: the crank speeds up during the push and slows down in between."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_03": {
+    "duration": 3.984,
+    "hash": "6c81afd132671b41",
+    "sentences": [
+     [
+      0.05,
+      3.917,
+      "Your turn: give the engine four cylinders or more."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_04": {
+    "duration": 7.008,
+    "hash": "558b228710fca0a9",
+    "sentences": [
+     [
+      0.05,
+      3.375,
+      "A heavier flywheel smooths out what is left."
+     ],
+     [
+      3.375,
+      6.958,
+      "It soaks up the surplus and gives it back in the gaps."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_05": {
+    "duration": 4.104,
+    "hash": "07097edcc9bc34c7",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "Why does a single-cylinder engine need a heavy flywheel?"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Flywheel": {
+    "duration": 5.832,
+    "hash": "142a14c219b8c4e2",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "A heavy disc on the crankshaft."
+     ],
+     [
+      2.389,
+      5.778,
+      "The heavier it is, the less its speed changes."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Gauge": {
+    "duration": 6.864,
+    "hash": "ced891197e98a166",
+    "sentences": [
+     [
+      0.05,
+      4.306,
+      "How much faster or slower than average the crank turns right now."
+     ],
+     [
+      4.306,
+      6.806,
+      "The red marks are the extremes."
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Graph": {
+    "duration": 7.704,
+    "hash": "9fddad00344d520d",
+    "sentences": [
+     [
+      0.05,
+      7.653,
+      "Each cylinder's push is a faint line; the gold line is all of them together, the dashed line their average."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_01": {
+    "duration": 6.816,
+    "hash": "dd908cb77fccc4cb",
+    "sentences": [
+     [
+      0.05,
+      2.514,
+      "Both rear wheels on dry road."
+     ],
+     [
+      2.514,
+      6.764,
+      "The differential shares the turning force equally, and both push."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_02": {
+    "duration": 6.384,
+    "hash": "e80fc430c88cbff8",
+    "sentences": [
+     [
+      0.05,
+      3.208,
+      "Now the left wheel is on ice."
+     ],
+     [
+      3.208,
+      6.333,
+      "It can take only a little force before it spins."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_03": {
+    "duration": 6.288,
+    "hash": "1d97c7bdc4219bbc",
+    "sentences": [
+     [
+      0.05,
+      6.249,
+      "Look at the push: the right wheel gets the same little force as the icy one, so the car hardly moves."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_04": {
+    "duration": 2.928,
+    "hash": "65fa0cf8e87a172c",
+    "sentences": [
+     [
+      0.05,
+      2.861,
+      "Your turn: lock the differential."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_05": {
+    "duration": 6.192,
+    "hash": "280863721f080f61",
+    "sentences": [
+     [
+      0.05,
+      6.125,
+      "With an open differential and one wheel on ice, how hard can the wheel on dry road push?"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Diff": {
+    "duration": 6.336,
+    "hash": "c96535497664572e",
+    "sentences": [
+     [
+      0.05,
+      3.111,
+      "Open, it shares the force equally."
+     ],
+     [
+      3.111,
+      6.276,
+      "Locked, it turns both wheels together."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Firm": {
+    "duration": 3.72,
+    "hash": "8b09ff057dcfe270",
+    "sentences": [
+     [
+      0.05,
+      3.667,
+      "It could push hard, if only it were given the force."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Push": {
+    "duration": 4.44,
+    "hash": "ed2f2160fc431371",
+    "sentences": [
+     [
+      0.05,
+      4.375,
+      "How hard each tyre pushes the car along, and the two together."
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Slippy": {
+    "duration": 7.392,
+    "hash": "01487a7fa029bf5b",
+    "sentences": [
+     [
+      0.05,
+      2.736,
+      "It can take little force before it spins."
+     ],
+     [
+      2.736,
+      7.319,
+      "With an open differential, it sets the limit for both wheels."
+     ]
+    ]
+   },
    "Narr_Common_MoveOn": {
     "duration": 3.168,
     "hash": "7f92fcf16bdadd37",
@@ -5258,6 +5966,709 @@
       0.1,
       6.633,
       "灌进海水就变重下潜；用空气把水吹出去就变轻上浮。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_01": {
+    "duration": 5.28,
+    "hash": "5ffe459ef44cc78c",
+    "sentences": [
+     [
+      0.1,
+      5.272,
+      "在缓弯上，两个车轮留下的痕迹间距几乎一样。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_02": {
+    "duration": 6.0,
+    "hash": "051fba2bdbffbc3c",
+    "sentences": [
+     [
+      0.1,
+      5.994,
+      "把弯道变急：外侧车轮的痕迹拉开了，因为它滚得更远。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_03": {
+    "duration": 6.552,
+    "hash": "74d4be56918c8c2e",
+    "sentences": [
+     [
+      0.1,
+      6.536,
+      "在差速器里面，行星齿轮转起来，让两边可以用不同的速度转。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_04": {
+    "duration": 6.984,
+    "hash": "13b7448c2e82269b",
+    "sentences": [
+     [
+      0.1,
+      6.981,
+      "轮到你了：把弯道变得很急，小于六米，看行星齿轮转得更快。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_05": {
+    "duration": 6.912,
+    "hash": "1de14d17871dedd0",
+    "sentences": [
+     [
+      0.1,
+      4.342,
+      "内侧车轮转八圈，外侧转十二圈。"
+     ],
+     [
+      4.292,
+      6.847,
+      "差速器壳转了几圈？"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Case": {
+    "duration": 6.0,
+    "hash": "3057cf5a7da9a2a1",
+    "sentences": [
+     [
+      0.1,
+      2.369,
+      "由发动机带着转。"
+     ],
+     [
+      2.319,
+      5.944,
+      "它的转速永远是两个车轮的平均。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Road": {
+    "duration": 6.072,
+    "hash": "d393fb747c21ec78",
+    "sentences": [
+     [
+      0.1,
+      3.633,
+      "每个车轮每滚一米留下一个点。"
+     ],
+     [
+      3.583,
+      6.0,
+      "外侧的点间距更大。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Spider": {
+    "duration": 6.048,
+    "hash": "e3aac0360b8e5f77",
+    "sentences": [
+     [
+      0.1,
+      2.022,
+      "跟着壳一起绕。"
+     ],
+     [
+      1.972,
+      5.986,
+      "只有两个车轮转速不同时，它才自转。"
+     ]
+    ]
+   },
+   "Narr_Car_Bend_Part_Wheels": {
+    "duration": 4.488,
+    "hash": "a8c385f286bac561",
+    "sentences": [
+     [
+      0.1,
+      4.481,
+      "在弯道内侧，它滚的路短，所以转得慢。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_01": {
+    "duration": 6.672,
+    "hash": "48a84d3d087bf035",
+    "sentences": [
+     [
+      0.1,
+      2.619,
+      "凸轮在凸轮轴上转。"
+     ],
+     [
+      2.569,
+      6.611,
+      "它大部分是圆的，一边有个圆滑的鼓包。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_02": {
+    "duration": 7.176,
+    "hash": "6983f23a05e42c43",
+    "sentences": [
+     [
+      0.1,
+      7.161,
+      "鼓包转过来，就把气门往下压，气门头离开气门座，气体就能通过。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_03": {
+    "duration": 6.456,
+    "hash": "338c6971fdad7e99",
+    "sentences": [
+     [
+      0.1,
+      6.453,
+      "弹簧一直往回顶，所以气门紧跟着凸轮，鼓包一过就又关上。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_04": {
+    "duration": 7.032,
+    "hash": "8159f51997935376",
+    "sentences": [
+     [
+      0.1,
+      7.022,
+      "轮到你了：把凸轮的鼓包加长，让气门在一个循环里开得更久。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_05": {
+    "duration": 3.648,
+    "hash": "ef520d951621a4a7",
+    "sentences": [
+     [
+      0.1,
+      3.633,
+      "曲轴转一圈，凸轮轴转多少？"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Cam": {
+    "duration": 7.56,
+    "hash": "580d7e35da8aa31c",
+    "sentences": [
+     [
+      0.1,
+      2.133,
+      "带鼓包的圆轮。"
+     ],
+     [
+      2.083,
+      7.486,
+      "它的形状决定气门什么时候开、开多大、开多久。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Graph": {
+    "duration": 6.624,
+    "hash": "8b48aec42f01b81e",
+    "sentences": [
+     [
+      0.1,
+      3.494,
+      "曲轴转两圈里气门开了多大。"
+     ],
+     [
+      3.444,
+      6.556,
+      "阴影部分是它开着的时候。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Spring": {
+    "duration": 4.536,
+    "hash": "761f3dc096d3e378",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "让气门保持关闭，并让它跟着凸轮落回来。"
+     ]
+    ]
+   },
+   "Narr_Car_Cam_Part_Valve": {
+    "duration": 6.936,
+    "hash": "69547016288e1e2f",
+    "sentences": [
+     [
+      0.1,
+      2.356,
+      "一个蘑菇形的塞子。"
+     ],
+     [
+      2.306,
+      6.875,
+      "它的头部堵住气道，抬起来就让气体进出。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_01": {
+    "duration": 7.488,
+    "hash": "52aeeb40c60a7331",
+    "sentences": [
+     [
+      0.1,
+      2.647,
+      "发动机带着飞轮转。"
+     ],
+     [
+      2.597,
+      7.431,
+      "踏板踩着时，摩擦片分开，车停着不动。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_02": {
+    "duration": 5.784,
+    "hash": "b4d5fedf25bdf3e3",
+    "sentences": [
+     [
+      0.1,
+      5.772,
+      "它们中间是摩擦片，装在通往变速箱和车轮的轴上。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_03": {
+    "duration": 4.056,
+    "hash": "b3efc5a383c11c9d",
+    "sentences": [
+     [
+      0.1,
+      4.036,
+      "轮到你了：慢慢地把踏板完全松开。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_04": {
+    "duration": 6.432,
+    "hash": "6083bab2b6c0de7b",
+    "sentences": [
+     [
+      0.1,
+      3.314,
+      "变速箱这边追上了发动机。"
+     ],
+     [
+      3.264,
+      6.375,
+      "现在它们咬合了，一起转。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_05": {
+    "duration": 4.248,
+    "hash": "4f18cd99acb859ab",
+    "sentences": [
+     [
+      0.1,
+      4.244,
+      "离合器打滑的时候，损失的能量去哪儿了？"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Flywheel": {
+    "duration": 6.84,
+    "hash": "e908b0fb20e57981",
+    "sentences": [
+     [
+      0.1,
+      3.578,
+      "用螺栓固定在发动机曲轴上。"
+     ],
+     [
+      3.528,
+      6.778,
+      "它的背面就是离合器的一面。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Plate": {
+    "duration": 8.304,
+    "hash": "fd5762645d80262f",
+    "sentences": [
+     [
+      0.1,
+      4.675,
+      "带摩擦衬片的圆盘，装在变速箱的轴上。"
+     ],
+     [
+      4.625,
+      8.25,
+      "被压紧时，发动机就拖着它转。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Speeds": {
+    "duration": 7.896,
+    "hash": "1f7e414c9bb2b429",
+    "sentences": [
+     [
+      0.1,
+      4.189,
+      "发动机的转速和变速箱那边的转速。"
+     ],
+     [
+      4.139,
+      7.833,
+      "两个不一样时，离合器就在打滑。"
+     ]
+    ]
+   },
+   "Narr_Car_Clutch_Part_Springs": {
+    "duration": 5.424,
+    "hash": "bbb04e064d27ed77",
+    "sentences": [
+     [
+      0.1,
+      3.314,
+      "弹簧把压盘往飞轮那边推。"
+     ],
+     [
+      3.264,
+      5.361,
+      "踏板把它往回拉。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_01": {
+    "duration": 5.592,
+    "hash": "2a1747161e0d0b77",
+    "sentences": [
+     [
+      0.1,
+      5.592,
+      "曲柄一圈一圈地匀速转动，带着连杆的下端一起转。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_02": {
+    "duration": 7.128,
+    "hash": "9ff251fd49d15921",
+    "sentences": [
+     [
+      0.1,
+      7.119,
+      "连杆的上端只能上下走，所以它推着活塞在气缸里来回运动。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_03": {
+    "duration": 9.504,
+    "hash": "1505690662abb0cd",
+    "sentences": [
+     [
+      0.1,
+      3.731,
+      "金色曲线是活塞下降了多远。"
+     ],
+     [
+      3.681,
+      9.444,
+      "它跟虚线的波浪不太一样：在上面更陡，在下面更平。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_04": {
+    "duration": 5.544,
+    "hash": "652aa28f83984b7e",
+    "sentences": [
+     [
+      0.1,
+      5.536,
+      "轮到你了：把连杆缩得很短，看曲线变得多不对称。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_05": {
+    "duration": 3.792,
+    "hash": "0bfe0fb4bc967ff4",
+    "sentences": [
+     [
+      0.1,
+      3.772,
+      "活塞往下走的时候，什么时候最快？"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Crank": {
+    "duration": 6.792,
+    "hash": "8975e72c6a1f6d54",
+    "sentences": [
+     [
+      0.1,
+      6.772,
+      "曲轴上的一条臂，销子的对面有块重重的配重，让它转得平稳。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Graph": {
+    "duration": 6.696,
+    "hash": "ca2e7338a14407df",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "曲柄转一圈时，活塞往下走了多远。"
+     ],
+     [
+      4.222,
+      6.639,
+      "白点是现在的位置。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Piston": {
+    "duration": 6.6,
+    "hash": "9f889e2b10551923",
+    "sentences": [
+     [
+      0.1,
+      3.175,
+      "在气缸里滑动的金属塞子。"
+     ],
+     [
+      3.125,
+      6.542,
+      "上面燃烧的气体把它往下推。"
+     ]
+    ]
+   },
+   "Narr_Car_Crank_Part_Rod": {
+    "duration": 7.656,
+    "hash": "0ea86b71f4eae121",
+    "sentences": [
+     [
+      0.1,
+      2.772,
+      "把活塞和曲柄连起来。"
+     ],
+     [
+      2.722,
+      7.597,
+      "上端上下走，下端转圈，中间一直在摆。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_01": {
+    "duration": 6.624,
+    "hash": "43d1ae50a53b8623",
+    "sentences": [
+     [
+      0.1,
+      6.619,
+      "一个气缸：半圈里猛推一下，接下来一圈半几乎什么都不推。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_02": {
+    "duration": 5.304,
+    "hash": "07347332b7502b95",
+    "sentences": [
+     [
+      0.1,
+      5.286,
+      "看指针：推的时候曲轴加速，中间又慢下来。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_03": {
+    "duration": 4.488,
+    "hash": "2bb1346cba1276be",
+    "sentences": [
+     [
+      0.1,
+      4.467,
+      "轮到你了：给发动机四个或更多气缸。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_04": {
+    "duration": 9.312,
+    "hash": "c949af7f65bcc6b8",
+    "sentences": [
+     [
+      0.1,
+      4.842,
+      "再换一个更重的飞轮，把剩下的波动也抹平。"
+     ],
+     [
+      4.792,
+      9.25,
+      "它吸收多出来的能量，在空当里再还回去。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_05": {
+    "duration": 4.104,
+    "hash": "74b3517f780e6854",
+    "sentences": [
+     [
+      0.1,
+      4.106,
+      "单缸发动机为什么需要一个很重的飞轮？"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Flywheel": {
+    "duration": 6.216,
+    "hash": "868c1d3c0c56e588",
+    "sentences": [
+     [
+      0.1,
+      3.008,
+      "装在曲轴上的沉重圆盘。"
+     ],
+     [
+      2.958,
+      6.153,
+      "越重，它的转速变化越小。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Gauge": {
+    "duration": 7.704,
+    "hash": "0a0b34152bc2d0f6",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "曲轴现在比平均转速快多少、慢多少。"
+     ],
+     [
+      4.542,
+      7.639,
+      "红色刻度是最快和最慢。"
+     ]
+    ]
+   },
+   "Narr_Car_Cylinders_Part_Graph": {
+    "duration": 7.488,
+    "hash": "d3888e7b1ce824ad",
+    "sentences": [
+     [
+      0.1,
+      7.467,
+      "每个气缸的推力是一条淡线；金线是它们加起来的，虚线是平均值。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_01": {
+    "duration": 7.8,
+    "hash": "ca1f9a0147473577",
+    "sentences": [
+     [
+      0.1,
+      3.3,
+      "两个后轮都在干燥路面上。"
+     ],
+     [
+      3.25,
+      7.75,
+      "差速器把转动力平分，两个轮子都在推。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_02": {
+    "duration": 5.568,
+    "hash": "56d9b6f3c18698b3",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "现在左轮踩到了冰上。"
+     ],
+     [
+      2.708,
+      5.5,
+      "它稍一用力就会打滑。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_03": {
+    "duration": 6.456,
+    "hash": "ec72542155c4e100",
+    "sentences": [
+     [
+      0.1,
+      6.453,
+      "看推力：右轮分到的力跟冰上的一样少，所以车几乎不动。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_04": {
+    "duration": 3.24,
+    "hash": "7003c664a16c47cf",
+    "sentences": [
+     [
+      0.1,
+      3.231,
+      "轮到你了：把差速器锁住。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_05": {
+    "duration": 7.584,
+    "hash": "d52a4b2f14fbc6a7",
+    "sentences": [
+     [
+      0.1,
+      7.578,
+      "用开放式差速器、一个轮子在冰上时，干燥路面上的轮子能推多用力？"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Diff": {
+    "duration": 5.184,
+    "hash": "2901004c8fa87874",
+    "sentences": [
+     [
+      0.1,
+      5.175,
+      "开着时把力平分；锁住时让两个轮子一起转。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Firm": {
+    "duration": 3.864,
+    "hash": "738405e66181db9b",
+    "sentences": [
+     [
+      0.1,
+      3.856,
+      "只要分到力，它本来能推得很用力。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Push": {
+    "duration": 5.016,
+    "hash": "e355b46b9f8b83d9",
+    "sentences": [
+     [
+      0.1,
+      4.994,
+      "每个轮胎推车往前有多用力，以及两个加起来。"
+     ]
+    ]
+   },
+   "Narr_Car_Ice_Part_Slippy": {
+    "duration": 8.424,
+    "hash": "c90e35735050de7d",
+    "sentences": [
+     [
+      0.1,
+      2.842,
+      "它稍一用力就会空转。"
+     ],
+     [
+      2.792,
+      8.361,
+      "用开放式差速器时，两个轮子的推力都被它限制住。"
      ]
     ]
    },
