@@ -9372,4 +9372,604 @@
   <data name="Narr_Colour_Halo_Part_Switch" xml:space="preserve">
     <value>Kept as it is, or already multiplied by its opacity. Tap the switch to change it.</value>
   </data>
+  <data name="Chapter_Tesseract" xml:space="preserve">
+    <value>The tesseract</value>
+  </data>
+  <data name="Tesseract_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Tesseract_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Tesseract_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Tesseract_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Tesseract_Shape_0" xml:space="preserve">
+    <value>point</value>
+  </data>
+  <data name="Tesseract_Shape_1" xml:space="preserve">
+    <value>line</value>
+  </data>
+  <data name="Tesseract_Shape_2" xml:space="preserve">
+    <value>square</value>
+  </data>
+  <data name="Tesseract_Shape_3" xml:space="preserve">
+    <value>cube</value>
+  </data>
+  <data name="Tesseract_Shape_4" xml:space="preserve">
+    <value>tesseract</value>
+  </data>
+  <data name="Tesseract_Grip_Slide" xml:space="preserve">
+    <value>Drag along the new direction</value>
+  </data>
+  <data name="Tesseract_Grip_Next" xml:space="preserve">
+    <value>Tap to add a direction</value>
+  </data>
+  <data name="Tesseract_Grip_Turn" xml:space="preserve">
+    <value>Drag to turn</value>
+  </data>
+  <data name="Tesseract_Grip_Tilt" xml:space="preserve">
+    <value>Drag to tip</value>
+  </data>
+  <data name="Tesseract_Grip_Eye" xml:space="preserve">
+    <value>Drag to move your eye nearer or farther in the fourth direction</value>
+  </data>
+  <data name="Tesseract_Grip_Dial" xml:space="preserve">
+    <value>Drag round to turn</value>
+  </data>
+  <data name="Tesseract_Grip_Depth" xml:space="preserve">
+    <value>Drag to push the shapes through</value>
+  </data>
+  <data name="Tesseract_Grip_First" xml:space="preserve">
+    <value>Tap to switch between face first and corner first</value>
+  </data>
+  <data name="Tesseract_Grip_Fold" xml:space="preserve">
+    <value>Drag to fold</value>
+  </data>
+  <data name="Tesseract_Grip_Choose" xml:space="preserve">
+    <value>Tap to choose the next cube</value>
+  </data>
+  <data name="Tesseract_Build_Title" xml:space="preserve">
+    <value>Sliding into a new direction</value>
+  </data>
+  <data name="Tesseract_Build_P1" xml:space="preserve">
+    <value>Take a point and slide it: its path is a line. Slide the line sideways, at right angles to itself, and it sweeps out a square. Slide the square straight up off the page and it sweeps out a cube. Each time, the shape moves in a direction that is new to it, at right angles to every direction it already has.</value>
+  </data>
+  <data name="Tesseract_Build_P2" xml:space="preserve">
+    <value>Nothing stops the rule there. Slide a cube in a fourth direction, at right angles to all three of ours, and it sweeps out a tesseract. We can't point that way, but we can still count. Every slide leaves the old shape behind, adds a copy, and joins each corner to its copy with a new edge. So the corners double each time: 1, 2, 4, 8, 16. A tesseract has 16 corners and 32 edges.</value>
+  </data>
+  <data name="Tesseract_Build_Deeper" xml:space="preserve">
+    <value>The name tesseract was coined in 1888 by the English writer Charles Howard Hinton, who spent years trying to train himself to imagine four directions. The counting goes further too: a tesseract's surface is made of 24 squares and 8 cubes, just as a cube's is made of 6 squares. In the picture each direction is simply drawn at a new slant across the page; that squashes the shape, but every corner and edge is there.</value>
+  </data>
+  <data name="Tesseract_Build_Dimension" xml:space="preserve">
+    <value>Shape being built</value>
+  </data>
+  <data name="Tesseract_Build_Slide" xml:space="preserve">
+    <value>How far it has slid</value>
+  </data>
+  <data name="Tesseract_Build_Readout" xml:space="preserve">
+    <value>A {0} (corners: {1}, edges: {2}) is two copies of a {3}, every corner joined to its copy.</value>
+  </data>
+  <data name="Tesseract_Build_Sliding" xml:space="preserve">
+    <value>A {0} is sliding in a new direction. When it gets there, it will have swept out a {1}.</value>
+  </data>
+  <data name="Tesseract_Build_Picture" xml:space="preserve">
+    <value>A shape and its copy, slid along a new direction, with every corner joined to its copy</value>
+  </data>
+  <data name="Tesseract_Build_New" xml:space="preserve">
+    <value>new direction</value>
+  </data>
+  <data name="Tesseract_Build_Count" xml:space="preserve">
+    <value>corners {0} · edges {1}</value>
+  </data>
+  <data name="Tesseract_Build_Add" xml:space="preserve">
+    <value>Add a direction</value>
+  </data>
+  <data name="Tesseract_Build_Rule" xml:space="preserve">
+    <value>Slide a shape at right angles to itself: its corners double.</value>
+  </data>
+  <data name="Narr_Tesseract_Build_01" xml:space="preserve">
+    <value>A square is a line slid sideways. The grey line stayed where it was; the gold one is its copy.</value>
+  </data>
+  <data name="Narr_Tesseract_Build_02" xml:space="preserve">
+    <value>Now a square is sliding up, in a direction it didn't have before. Each corner drags a new edge behind it.</value>
+  </data>
+  <data name="Narr_Tesseract_Build_03" xml:space="preserve">
+    <value>Your turn: build the tesseract. Add directions until you reach four, and slide the copy all the way.</value>
+  </data>
+  <data name="Narr_Tesseract_Build_04" xml:space="preserve">
+    <value>Every slide doubles the corners: one, two, four, eight, sixteen. A tesseract has sixteen corners and thirty-two edges.</value>
+  </data>
+  <data name="Narr_Tesseract_Build_05" xml:space="preserve">
+    <value>How many corners would a cube of five directions have?</value>
+  </data>
+  <data name="Tesseract_Build_Quiz1" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Tesseract_Build_Quiz2" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Tesseract_Build_Quiz3" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Tesseract_Build_Part_Original" xml:space="preserve">
+    <value>The shape left behind</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Original" xml:space="preserve">
+    <value>The shape before it slid. It stays where it was.</value>
+  </data>
+  <data name="Tesseract_Build_Part_Copy" xml:space="preserve">
+    <value>The copy</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Copy" xml:space="preserve">
+    <value>The same shape, slid along the new direction. Drag it to slide it further or back.</value>
+  </data>
+  <data name="Tesseract_Build_Part_Joins" xml:space="preserve">
+    <value>The new edges</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Joins" xml:space="preserve">
+    <value>Each corner's path as it slid: one new edge for every corner.</value>
+  </data>
+  <data name="Tesseract_Build_Part_Count" xml:space="preserve">
+    <value>Corners and edges</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Count" xml:space="preserve">
+    <value>Each shape has twice the corners of the one before. Its edges are two copies of the old ones, plus one for each old corner.</value>
+  </data>
+  <data name="Tesseract_Shadow_Title" xml:space="preserve">
+    <value>Shadows lose a direction</value>
+  </data>
+  <data name="Tesseract_Shadow_P1" xml:space="preserve">
+    <value>A cube in sunlight casts a shadow on the floor. The cube has three directions; its shadow has only two. Turn the cube and the shadow changes shape: face on it is a square, tipped it stretches, and stood on a corner it becomes a hexagon. A creature living flat on the floor, who could only see shadows, would find it hard to believe these were all the same cube.</value>
+  </data>
+  <data name="Tesseract_Shadow_P2" xml:space="preserve">
+    <value>We are in that creature's place. Every picture of a tesseract is a shadow of it cast into our three directions, and like the cube's shadow it changes as the tesseract turns. Edges that are all the same length look longer or shorter, and square corners look slanted. A shadow can't show everything, but it keeps one thing honest: which corners are joined to which.</value>
+  </data>
+  <data name="Tesseract_Shadow_Deeper" xml:space="preserve">
+    <value>A unit cube's shadow is smallest face on, exactly one face's worth, and biggest stood on a corner: √3, about 1.73 faces. The idea of a flat creature puzzling over a world with one more direction comes from Flatland, a short novel written by Edwin Abbott Abbott in 1884, in which a square is visited by a sphere that he can only see as a circle growing and shrinking.</value>
+  </data>
+  <data name="Tesseract_Shadow_Turn" xml:space="preserve">
+    <value>Turn</value>
+  </data>
+  <data name="Tesseract_Shadow_Tilt" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Tesseract_Shadow_Readout" xml:space="preserve">
+    <value>The shadow has {0} sides and covers {1} times a face of the cube.</value>
+  </data>
+  <data name="Tesseract_Shadow_Picture" xml:space="preserve">
+    <value>A cube above the floor in light from overhead, and its flat shadow</value>
+  </data>
+  <data name="Tesseract_Shadow_Shape" xml:space="preserve">
+    <value>{0} sides · {1} × a face</value>
+  </data>
+  <data name="Tesseract_Shadow_Rule" xml:space="preserve">
+    <value>Light from straight above: each corner's shadow lies right below it.</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_01" xml:space="preserve">
+    <value>A cube hangs above the floor, lit from straight above. Its shadow is a square, exactly the size of one face.</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_02" xml:space="preserve">
+    <value>Turn and tip the cube, and the shadow changes shape, though the cube itself hasn't changed at all.</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_03" xml:space="preserve">
+    <value>Your turn: find the biggest shadow. Hint: stand the cube on one of its corners.</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_04" xml:space="preserve">
+    <value>A creature living flat on this floor would only ever see the shadow. Every picture of a tesseract is our version: a shadow cast into three directions.</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_05" xml:space="preserve">
+    <value>A flat creature on the floor watches the cube turn. What does it see?</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz1" xml:space="preserve">
+    <value>The cube itself</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz2" xml:space="preserve">
+    <value>A flat shape that changes as the cube turns</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz3" xml:space="preserve">
+    <value>Nothing at all</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Cube" xml:space="preserve">
+    <value>The cube</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Cube" xml:space="preserve">
+    <value>Every edge the same length, every corner square. Its shadow shows neither.</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Shadow" xml:space="preserve">
+    <value>Its shadow</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Shadow" xml:space="preserve">
+    <value>Each corner dropped straight down onto the floor: two directions, where the cube had three.</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Sun" xml:space="preserve">
+    <value>The light</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Sun" xml:space="preserve">
+    <value>Straight overhead, so each corner's shadow lies right below it.</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Floor" xml:space="preserve">
+    <value>The floor</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Floor" xml:space="preserve">
+    <value>A flat world. Anyone living in it sees only what lies in the floor.</value>
+  </data>
+  <data name="Tesseract_Nested_Title" xml:space="preserve">
+    <value>A cube inside a cube</value>
+  </data>
+  <data name="Tesseract_Nested_P1" xml:space="preserve">
+    <value>Look straight at the front of a cube, close up. The near face looks big and the far face small, so you see a square inside a square, joined at the corners by four slanting shapes. Those four are the cube's side faces, as square as the others; perspective squashes them.</value>
+  </data>
+  <data name="Tesseract_Nested_P2" xml:space="preserve">
+    <value>Do the same with a tesseract, looking along its fourth direction. Its near cube looks big and its far cube small: a cube inside a cube. The six shapes joining them, like pyramids with their tops cut off, are the tesseract's other six cubes. All eight are the same size; the nearer your eye, the smaller the far cube looks.</value>
+  </data>
+  <data name="Tesseract_Nested_Deeper" xml:space="preserve">
+    <value>This is the picture of a tesseract most people have seen. It is no stranger than the square-in-a-square picture of a cube: both are perspective views straight along one direction. A cube has 6 faces: the near one, the far one and 4 between. A tesseract has 8 cubes: the near one, the far one and 6 between, one for each face of a cube.</value>
+  </data>
+  <data name="Tesseract_Nested_Distance" xml:space="preserve">
+    <value>Eye's distance along the fourth direction</value>
+  </data>
+  <data name="Tesseract_Nested_Turn" xml:space="preserve">
+    <value>Turn the view</value>
+  </data>
+  <data name="Tesseract_Nested_Readout" xml:space="preserve">
+    <value>The far cube looks {0} the size of the near one. All eight cubes are really the same size; the six between them are squashed by the view.</value>
+  </data>
+  <data name="Tesseract_Nested_Picture" xml:space="preserve">
+    <value>A cube seen as a square inside a square, and a tesseract seen as a cube inside a cube</value>
+  </data>
+  <data name="Tesseract_Nested_Cube" xml:space="preserve">
+    <value>A cube, seen straight on</value>
+  </data>
+  <data name="Tesseract_Nested_Ratio" xml:space="preserve">
+    <value>Far cube: {0}% of the near one</value>
+  </data>
+  <data name="Tesseract_Nested_Rule" xml:space="preserve">
+    <value>Near things look bigger, in the fourth direction too.</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_01" xml:space="preserve">
+    <value>A cube seen straight on, close up: a square inside a square. The slanting shapes between are its side faces, squashed by perspective.</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_02" xml:space="preserve">
+    <value>A tesseract seen the same way, along its fourth direction: the gold cube is near, the blue cube far.</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_03" xml:space="preserve">
+    <value>Your turn: bring your eye closer in the fourth direction, until the far cube looks less than half the size of the near one.</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_04" xml:space="preserve">
+    <value>The six shapes between the two cubes are cubes too, each as big as the others. Only the view squashes them.</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_05" xml:space="preserve">
+    <value>The six shapes between the inner and outer cube look squashed. Are they really?</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz1" xml:space="preserve">
+    <value>Yes, they are smaller</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz2" xml:space="preserve">
+    <value>Yes, they are wedge-shaped</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz3" xml:space="preserve">
+    <value>No: all eight are true cubes, and the view squashes them</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Square" xml:space="preserve">
+    <value>A cube, seen straight on</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Square" xml:space="preserve">
+    <value>The near face big, the far face small, and four squashed side faces between.</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Outer" xml:space="preserve">
+    <value>The near cube</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Outer" xml:space="preserve">
+    <value>The cube nearest your eye in the fourth direction, so it looks biggest.</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Inner" xml:space="preserve">
+    <value>The far cube</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Inner" xml:space="preserve">
+    <value>The same size as the near one, but farther along the fourth direction, so it looks smaller.</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Between" xml:space="preserve">
+    <value>A cube between</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Between" xml:space="preserve">
+    <value>One of six cubes joining the near and far ones, squashed into a wedge by the view.</value>
+  </data>
+  <data name="Tesseract_Spin_Title" xml:space="preserve">
+    <value>Turning in four directions</value>
+  </data>
+  <data name="Tesseract_Spin_P1" xml:space="preserve">
+    <value>When a wheel turns, it turns in a flat plane, and the axle through its middle stays still. In our three directions every turn is like that: it happens in one plane, and the one direction left over, at right angles to the plane, is the axis that doesn't move.</value>
+  </data>
+  <data name="Tesseract_Spin_P2" xml:space="preserve">
+    <value>With four directions, a turn in one plane leaves two directions over, so a whole flat plane stays still instead of a line. Turn the tesseract in the plane of x and its fourth direction, w, and its far cube swings round to the front while the near one swings to the back: in perspective, the inner cube grows out through the outer one. Four directions also allow something with no match in our world: turning in two planes at once, so that every direction moves and only the very centre stays put.</value>
+  </data>
+  <data name="Tesseract_Spin_Deeper" xml:space="preserve">
+    <value>It is better to describe a turn by its plane than by an axis: “turning in the x–y plane” means the same thing in two, three or four directions, while an axis only works in three. In the picture, watch the four arrows: a single turn moves two of them and leaves two alone. In the double turn all four move; it has no still axis or plane at all, a kind of turning that only exists from four directions up.</value>
+  </data>
+  <data name="Tesseract_Spin_Angle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="Tesseract_Spin_BothLabel" xml:space="preserve">
+    <value>Also turn in the y–z plane</value>
+  </data>
+  <data name="Tesseract_Spin_Single" xml:space="preserve">
+    <value>Turned {0}° in the x–w plane: x and w change, y and z stay where they were.</value>
+  </data>
+  <data name="Tesseract_Spin_Both" xml:space="preserve">
+    <value>Turned {0}° in the x–w and y–z planes at once: every direction changes, and only the very centre stays still.</value>
+  </data>
+  <data name="Tesseract_Spin_Picture" xml:space="preserve">
+    <value>A tesseract turning in four directions, with a dial and the four directions</value>
+  </data>
+  <data name="Tesseract_Spin_Plane" xml:space="preserve">
+    <value>in the x–w plane</value>
+  </data>
+  <data name="Tesseract_Spin_Planes" xml:space="preserve">
+    <value>in the x–w and y–z planes</value>
+  </data>
+  <data name="Tesseract_Spin_Still" xml:space="preserve">
+    <value>{0} directions stay still</value>
+  </data>
+  <data name="Tesseract_Spin_Rule" xml:space="preserve">
+    <value>Blue corners started as the far cube, gold as the near one.</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_01" xml:space="preserve">
+    <value>Here is the tesseract as a cube inside a cube. The gold corners belong to the near cube.</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_02" xml:space="preserve">
+    <value>The blue corners belong to the far cube. Turning in the plane of x and w, they start to swing toward us.</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_03" xml:space="preserve">
+    <value>Your turn: drag the dial round to half a turn, and watch the inner cube come out through the outer one.</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_04" xml:space="preserve">
+    <value>Look at the arrows: only x and w moved. In four directions, a single turn leaves a whole plane still.</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_05" xml:space="preserve">
+    <value>In three directions every turn leaves an axis still. In four directions, what does a single turn leave still?</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz1" xml:space="preserve">
+    <value>Nothing</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz2" xml:space="preserve">
+    <value>A single line</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz3" xml:space="preserve">
+    <value>A whole flat plane</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Outer" xml:space="preserve">
+    <value>The near cube</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Outer" xml:space="preserve">
+    <value>Its corners are gold, so you can follow them as the tesseract turns.</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Inner" xml:space="preserve">
+    <value>The far cube</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Inner" xml:space="preserve">
+    <value>Its corners are blue. After half a turn in the x–w plane, it is the near cube.</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Dial" xml:space="preserve">
+    <value>The dial</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Dial" xml:space="preserve">
+    <value>How far the tesseract has turned. Drag its handle round.</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Axes" xml:space="preserve">
+    <value>The four directions</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Axes" xml:space="preserve">
+    <value>Gold arrows are the directions the turn moves; faint ones stay still.</value>
+  </data>
+  <data name="Tesseract_Slice_Title" xml:space="preserve">
+    <value>Passing through our space</value>
+  </data>
+  <data name="Tesseract_Slice_P1" xml:space="preserve">
+    <value>Push a cube slowly through a flat sheet, and a flat creature living in the sheet sees only where the two meet: a slice. Face first, a square appears all at once, stays the same, then vanishes. Corner first, a dot appears and grows into a triangle, then a hexagon, then shrinks back to a triangle and a dot.</value>
+  </data>
+  <data name="Tesseract_Slice_P2" xml:space="preserve">
+    <value>A tesseract passing through our space would look the same to us, one direction up. Face first, a cube would appear from nowhere, hang there and vanish. Corner first, a tiny pyramid with a triangular base, a tetrahedron, would appear and grow; its corners would be cut off, and half-way through it would be an octahedron, like two square pyramids base to base, before shrinking away again.</value>
+  </data>
+  <data name="Tesseract_Slice_Deeper" xml:space="preserve">
+    <value>Each slice is worked out the same way, in the picture too: find where the cut crosses each of the shape's edges, and join the crossings that lie on the same face. A cube has 6 square faces, so its slices have at most 6 sides. A tesseract has 24 squares and 8 cubes, which is how a slice of it can have 12 corners.</value>
+  </data>
+  <data name="Tesseract_Slice_Depth" xml:space="preserve">
+    <value>How far through</value>
+  </data>
+  <data name="Tesseract_Slice_CornerFirst" xml:space="preserve">
+    <value>Corner first</value>
+  </data>
+  <data name="Tesseract_Slice_Readout" xml:space="preserve">
+    <value>The cube's slice is {0}; the tesseract's slice is {1}, with {2} corners.</value>
+  </data>
+  <data name="Tesseract_Flat_Triangle" xml:space="preserve">
+    <value>a triangle</value>
+  </data>
+  <data name="Tesseract_Flat_Square" xml:space="preserve">
+    <value>a square</value>
+  </data>
+  <data name="Tesseract_Flat_Pentagon" xml:space="preserve">
+    <value>a pentagon</value>
+  </data>
+  <data name="Tesseract_Flat_Hexagon" xml:space="preserve">
+    <value>a hexagon</value>
+  </data>
+  <data name="Tesseract_Flat_None" xml:space="preserve">
+    <value>nothing</value>
+  </data>
+  <data name="Tesseract_Solid_Tetrahedron" xml:space="preserve">
+    <value>a tetrahedron</value>
+  </data>
+  <data name="Tesseract_Solid_Octahedron" xml:space="preserve">
+    <value>an octahedron</value>
+  </data>
+  <data name="Tesseract_Solid_Cube" xml:space="preserve">
+    <value>a cube</value>
+  </data>
+  <data name="Tesseract_Solid_Truncated" xml:space="preserve">
+    <value>a tetrahedron with its corners cut off</value>
+  </data>
+  <data name="Tesseract_Solid_None" xml:space="preserve">
+    <value>nothing</value>
+  </data>
+  <data name="Tesseract_Solid_Other" xml:space="preserve">
+    <value>a solid</value>
+  </data>
+  <data name="Tesseract_Slice_Picture" xml:space="preserve">
+    <value>The slice a plane cuts from a cube, and the slice our space cuts from a tesseract</value>
+  </data>
+  <data name="Tesseract_Slice_FlatLabel" xml:space="preserve">
+    <value>Cube cut by a plane</value>
+  </data>
+  <data name="Tesseract_Slice_SolidLabel" xml:space="preserve">
+    <value>Tesseract cut by our space</value>
+  </data>
+  <data name="Tesseract_Slice_Count" xml:space="preserve">
+    <value>{0} corners: {1}</value>
+  </data>
+  <data name="Tesseract_Slice_CornerLabel" xml:space="preserve">
+    <value>Corner first</value>
+  </data>
+  <data name="Tesseract_Slice_FaceLabel" xml:space="preserve">
+    <value>Face first</value>
+  </data>
+  <data name="Tesseract_Slice_Rule" xml:space="preserve">
+    <value>Drag the gauge to push the shapes through the cut.</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_01" xml:space="preserve">
+    <value>This is where a flat cut meets a cube passing through it face first: a square.</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_02" xml:space="preserve">
+    <value>And this is where our space meets a tesseract passing through face first: a cube, turning slowly so you can see it.</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_03" xml:space="preserve">
+    <value>Your turn: switch to corner first, and find the middle, where the slice is an octahedron with six corners.</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_04" xml:space="preserve">
+    <value>Near the start, corner first, the slice is a tiny tetrahedron: the first thing we would see of a tesseract arriving corner first.</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_05" xml:space="preserve">
+    <value>A tesseract slides corner first into our space. What do we see first?</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz1" xml:space="preserve">
+    <value>A tiny cube</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz2" xml:space="preserve">
+    <value>A tiny tetrahedron, a pyramid with a triangular base</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz3" xml:space="preserve">
+    <value>A flat square</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Flat" xml:space="preserve">
+    <value>The cube's slice</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Flat" xml:space="preserve">
+    <value>What a flat creature would see of a cube passing through its world.</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Solid" xml:space="preserve">
+    <value>The tesseract's slice</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Solid" xml:space="preserve">
+    <value>What we would see of a tesseract passing through our space: a solid that grows, changes and shrinks.</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Gauge" xml:space="preserve">
+    <value>How far through</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Gauge" xml:space="preserve">
+    <value>Drag it to push both shapes through the cut.</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Count" xml:space="preserve">
+    <value>Corners of the slice</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Count" xml:space="preserve">
+    <value>Where the cut crosses the tesseract's edges. Each crossing is a corner of the slice.</value>
+  </data>
+  <data name="Tesseract_Net_Title" xml:space="preserve">
+    <value>Unfolding</value>
+  </data>
+  <data name="Tesseract_Net_P1" xml:space="preserve">
+    <value>Cut a cardboard box along some of its edges and it opens flat into a cross of six squares. Fold the cross back up and the squares meet again, edge to edge: the square at the far end of the cross comes round to touch four squares it never touched while flat.</value>
+  </data>
+  <data name="Tesseract_Net_P2" xml:space="preserve">
+    <value>A tesseract unfolds the same way into a cross of eight cubes: a column of four, with four more around the second. In our space it has to stay a cross, because folding it back up needs the fourth direction. But we can still say what would meet what: once folded, each cube shares a face with six of the other seven, and never touches the one opposite it.</value>
+  </data>
+  <data name="Tesseract_Net_Deeper" xml:space="preserve">
+    <value>The Spanish painter Salvador Dalí used this cross of cubes in a 1954 painting, Corpus Hypercubus. A cube has 11 different nets, ways to cut it open into one flat piece of six squares; a tesseract has 261 different ways to unfold into eight cubes. The cross here is only the most famous.</value>
+  </data>
+  <data name="Tesseract_Net_Fold" xml:space="preserve">
+    <value>Fold the cube</value>
+  </data>
+  <data name="Tesseract_Net_Chosen" xml:space="preserve">
+    <value>Chosen cube</value>
+  </data>
+  <data name="Tesseract_Net_Readout" xml:space="preserve">
+    <value>Cube {0} touches {1} in the unfolded cross and {2} once it is folded up in four directions. It never touches cube {3}, opposite it.</value>
+  </data>
+  <data name="Tesseract_Net_Picture" xml:space="preserve">
+    <value>A cross of squares folding into a cube, and the cross of eight cubes a tesseract unfolds into</value>
+  </data>
+  <data name="Tesseract_Net_KeyChosen" xml:space="preserve">
+    <value>chosen cube</value>
+  </data>
+  <data name="Tesseract_Net_KeyTouching" xml:space="preserve">
+    <value>touches it once folded</value>
+  </data>
+  <data name="Tesseract_Net_KeyOpposite" xml:space="preserve">
+    <value>opposite: never touches it</value>
+  </data>
+  <data name="Tesseract_Net_Rule" xml:space="preserve">
+    <value>Folded up, every cube meets all the others but one.</value>
+  </data>
+  <data name="Narr_Tesseract_Net_01" xml:space="preserve">
+    <value>A cross of six squares folds up into a cube. As it folds, squares that were far apart come round to meet.</value>
+  </data>
+  <data name="Narr_Tesseract_Net_02" xml:space="preserve">
+    <value>This is a tesseract unfolded: eight cubes, lettered A to H, in a cross. Cube B is chosen; the blue cubes are the ones it would touch once folded up.</value>
+  </data>
+  <data name="Narr_Tesseract_Net_03" xml:space="preserve">
+    <value>Your turn: choose cube D, at the bottom of the column.</value>
+  </data>
+  <data name="Narr_Tesseract_Net_04" xml:space="preserve">
+    <value>In the cross, D touches only C. Folded up in four directions, it touches six cubes: all but B, the cube opposite it.</value>
+  </data>
+  <data name="Narr_Tesseract_Net_05" xml:space="preserve">
+    <value>Folded up, how many of the other seven cubes does each cube touch?</value>
+  </data>
+  <data name="Tesseract_Net_Quiz1" xml:space="preserve">
+    <value>Three</value>
+  </data>
+  <data name="Tesseract_Net_Quiz2" xml:space="preserve">
+    <value>Six</value>
+  </data>
+  <data name="Tesseract_Net_Quiz3" xml:space="preserve">
+    <value>Seven</value>
+  </data>
+  <data name="Tesseract_Net_Part_Cross" xml:space="preserve">
+    <value>A cube, folding</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Cross" xml:space="preserve">
+    <value>Six squares in a cross. Drag the bar to fold them up into a cube.</value>
+  </data>
+  <data name="Tesseract_Net_Part_Net" xml:space="preserve">
+    <value>The tesseract, unfolded</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Net" xml:space="preserve">
+    <value>Eight cubes: a column of four, and four more round the second one.</value>
+  </data>
+  <data name="Tesseract_Net_Part_Chosen" xml:space="preserve">
+    <value>The chosen cube</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Chosen" xml:space="preserve">
+    <value>Tap it to choose the next one. Gold marks it, and blue the cubes it would touch once folded.</value>
+  </data>
+  <data name="Tesseract_Net_Part_Opposite" xml:space="preserve">
+    <value>The opposite cube</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Opposite" xml:space="preserve">
+    <value>The one cube it never touches, folded or not, like the top and bottom of a box.</value>
+  </data>
 </root>

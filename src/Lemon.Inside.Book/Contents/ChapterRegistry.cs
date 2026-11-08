@@ -14,6 +14,7 @@ using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Locks;
 using Lemon.Inside.Book.Chapters.Watch;
 using Lemon.Inside.Book.Chapters.Weighing;
+using Lemon.Inside.Book.Chapters.Tesseract;
 using Lemon.Inside.Book.ViewModels.Pages;
 
 namespace Lemon.Inside.Book.Contents;
@@ -25,7 +26,7 @@ namespace Lemon.Inside.Book.Contents;
 public static class ChapterRegistry
 {
     /// <summary>Slugs of the chapters that are written (not placeholders).</summary>
-    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting", "Plumbing", "Bridges", "Weighing", "Friction", "Canals", "Sewing", "Colour" };
+    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting", "Plumbing", "Bridges", "Weighing", "Friction", "Canals", "Sewing", "Colour", "Tesseract" };
 
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
         Chapter chapter, int number, int textPage, IBookNavigator navigator, BookServices services)
@@ -42,6 +43,7 @@ public static class ChapterRegistry
             "Canals" => CanalsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Sewing" => SewingChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Colour" => ColourChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
+            "Tesseract" => TesseractChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Locks" => LocksChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Car" => CarChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Boats" => BoatsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),

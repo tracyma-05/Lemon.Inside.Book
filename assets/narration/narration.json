@@ -9485,6 +9485,740 @@
      ]
     ]
    },
+   "Narr_Tesseract_Build_01": {
+    "duration": 7.536,
+    "hash": "ae707a81863cd666",
+    "sentences": [
+     [
+      0.05,
+      3.083,
+      "A square is a line slid sideways."
+     ],
+     [
+      3.083,
+      7.486,
+      "The grey line stayed where it was; the gold one is its copy."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_02": {
+    "duration": 8.184,
+    "hash": "42e346236a6ed6dd",
+    "sentences": [
+     [
+      0.05,
+      4.75,
+      "Now a square is sliding up, in a direction it didn't have before."
+     ],
+     [
+      4.75,
+      8.125,
+      "Each corner drags a new edge behind it."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_03": {
+    "duration": 7.872,
+    "hash": "7f4d5dd0583beeeb",
+    "sentences": [
+     [
+      0.05,
+      2.861,
+      "Your turn: build the tesseract."
+     ],
+     [
+      2.861,
+      7.806,
+      "Add directions until you reach four, and slide the copy all the way."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_04": {
+    "duration": 11.28,
+    "hash": "728759efccb89e3d",
+    "sentences": [
+     [
+      0.05,
+      7.083,
+      "Every slide doubles the corners: one, two, four, eight, sixteen."
+     ],
+     [
+      7.083,
+      11.222,
+      "A tesseract has sixteen corners and thirty-two edges."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_05": {
+    "duration": 3.672,
+    "hash": "c4a5a392a432b01a",
+    "sentences": [
+     [
+      0.05,
+      3.611,
+      "How many corners would a cube of five directions have?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Copy": {
+    "duration": 6.192,
+    "hash": "1798647f5b5119c3",
+    "sentences": [
+     [
+      0.05,
+      3.194,
+      "The same shape, slid along the new direction."
+     ],
+     [
+      3.194,
+      6.125,
+      "Drag it to slide it further or back."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Count": {
+    "duration": 9.096,
+    "hash": "8220a8fabbc3816c",
+    "sentences": [
+     [
+      0.05,
+      3.403,
+      "Each shape has twice the corners of the one before."
+     ],
+     [
+      3.403,
+      9.028,
+      "Its edges are two copies of the old ones, plus one for each old corner."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Joins": {
+    "duration": 5.304,
+    "hash": "48948034379a2b0b",
+    "sentences": [
+     [
+      0.05,
+      5.236,
+      "Each corner's path as it slid: one new edge for every corner."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Original": {
+    "duration": 3.912,
+    "hash": "4d510f9b9b9416a7",
+    "sentences": [
+     [
+      0.05,
+      1.847,
+      "The shape before it slid."
+     ],
+     [
+      1.847,
+      3.861,
+      "It stays where it was."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_01": {
+    "duration": 10.44,
+    "hash": "569a1e3e6a5d1bb1",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "A cube seen straight on, close up: a square inside a square."
+     ],
+     [
+      5.0,
+      10.375,
+      "The slanting shapes between are its side faces, squashed by perspective."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_02": {
+    "duration": 8.256,
+    "hash": "ce05ea53d2be3f89",
+    "sentences": [
+     [
+      0.05,
+      8.194,
+      "A tesseract seen the same way, along its fourth direction: the gold cube is near, the blue cube far."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_03": {
+    "duration": 8.544,
+    "hash": "fb09ca605cbd7b11",
+    "sentences": [
+     [
+      0.05,
+      8.472,
+      "Your turn: bring your eye closer in the fourth direction, until the far cube looks less than half the size of the near one."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_04": {
+    "duration": 7.992,
+    "hash": "8b00839e01486e66",
+    "sentences": [
+     [
+      0.05,
+      5.75,
+      "The six shapes between the two cubes are cubes too, each as big as the others."
+     ],
+     [
+      5.75,
+      7.931,
+      "Only the view squashes them."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_05": {
+    "duration": 5.808,
+    "hash": "52f9ab95c0882406",
+    "sentences": [
+     [
+      0.05,
+      4.361,
+      "The six shapes between the inner and outer cube look squashed."
+     ],
+     [
+      4.361,
+      5.75,
+      "Are they really?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Between": {
+    "duration": 6.456,
+    "hash": "9410d13103de1fc8",
+    "sentences": [
+     [
+      0.05,
+      6.389,
+      "One of six cubes joining the near and far ones, squashed into a wedge by the view."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Inner": {
+    "duration": 5.832,
+    "hash": "b87500b5e1ef9944",
+    "sentences": [
+     [
+      0.05,
+      5.764,
+      "The same size as the near one, but farther along the fourth direction, so it looks smaller."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Outer": {
+    "duration": 5.04,
+    "hash": "85705f90364f41ee",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "The cube nearest your eye in the fourth direction, so it looks biggest."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Square": {
+    "duration": 5.616,
+    "hash": "d907ada1d1c92ca6",
+    "sentences": [
+     [
+      0.05,
+      5.556,
+      "The near face big, the far face small, and four squashed side faces between."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_01": {
+    "duration": 8.64,
+    "hash": "fb0ea45be292fa50",
+    "sentences": [
+     [
+      0.05,
+      3.708,
+      "A cross of six squares folds up into a cube."
+     ],
+     [
+      3.708,
+      8.583,
+      "As it folds, squares that were far apart come round to meet."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_02": {
+    "duration": 12.48,
+    "hash": "c206c9b1a7984284",
+    "sentences": [
+     [
+      0.05,
+      6.472,
+      "This is a tesseract unfolded: eight cubes, lettered A to H, in a cross."
+     ],
+     [
+      6.472,
+      12.431,
+      "Cube B is chosen; the blue cubes are the ones it would touch once folded up."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_03": {
+    "duration": 4.584,
+    "hash": "587e8171e61e369f",
+    "sentences": [
+     [
+      0.05,
+      4.528,
+      "Your turn: choose cube D, at the bottom of the column."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_04": {
+    "duration": 10.488,
+    "hash": "2a008b3e3965d1c5",
+    "sentences": [
+     [
+      0.05,
+      10.431,
+      "In the cross, D touches only C. Folded up in four directions, it touches six cubes: all but B, the cube opposite it."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_05": {
+    "duration": 5.28,
+    "hash": "f4df2decc4dd4aea",
+    "sentences": [
+     [
+      0.05,
+      5.222,
+      "Folded up, how many of the other seven cubes does each cube touch?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Chosen": {
+    "duration": 6.792,
+    "hash": "8326c26201f21ee3",
+    "sentences": [
+     [
+      0.05,
+      2.403,
+      "Tap it to choose the next one."
+     ],
+     [
+      2.403,
+      6.722,
+      "Gold marks it, and blue the cubes it would touch once folded."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Cross": {
+    "duration": 5.088,
+    "hash": "11c7e885236afbb0",
+    "sentences": [
+     [
+      0.05,
+      2.181,
+      "Six squares in a cross."
+     ],
+     [
+      2.181,
+      5.014,
+      "Drag the bar to fold them up into a cube."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Net": {
+    "duration": 5.232,
+    "hash": "239e9260b034bc46",
+    "sentences": [
+     [
+      0.05,
+      5.167,
+      "Eight cubes: a column of four, and four more round the second one."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Opposite": {
+    "duration": 5.88,
+    "hash": "0c5898bc04d9cc5a",
+    "sentences": [
+     [
+      0.05,
+      5.819,
+      "The one cube it never touches, folded or not, like the top and bottom of a box."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_01": {
+    "duration": 8.688,
+    "hash": "3e34bd0189b249b1",
+    "sentences": [
+     [
+      0.05,
+      4.083,
+      "A cube hangs above the floor, lit from straight above."
+     ],
+     [
+      4.083,
+      8.625,
+      "Its shadow is a square, exactly the size of one face."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_02": {
+    "duration": 6.168,
+    "hash": "21fc0a702ae6f74a",
+    "sentences": [
+     [
+      0.05,
+      6.097,
+      "Turn and tip the cube, and the shadow changes shape, though the cube itself hasn't changed at all."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_03": {
+    "duration": 7.128,
+    "hash": "6001667a225cd9eb",
+    "sentences": [
+     [
+      0.05,
+      3.194,
+      "Your turn: find the biggest shadow."
+     ],
+     [
+      3.194,
+      7.056,
+      "Hint: stand the cube on one of its corners."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_04": {
+    "duration": 10.608,
+    "hash": "b0e18819dc042f5f",
+    "sentences": [
+     [
+      0.05,
+      4.75,
+      "A creature living flat on this floor would only ever see the shadow."
+     ],
+     [
+      4.75,
+      10.542,
+      "Every picture of a tesseract is our version: a shadow cast into three directions."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_05": {
+    "duration": 5.304,
+    "hash": "5ec646a96aa02208",
+    "sentences": [
+     [
+      0.05,
+      3.861,
+      "A flat creature on the floor watches the cube turn."
+     ],
+     [
+      3.861,
+      5.236,
+      "What does it see?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Cube": {
+    "duration": 5.736,
+    "hash": "f06909d34819823a",
+    "sentences": [
+     [
+      0.05,
+      3.625,
+      "Every edge the same length, every corner square."
+     ],
+     [
+      3.625,
+      5.667,
+      "Its shadow shows neither."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Floor": {
+    "duration": 5.28,
+    "hash": "618a36f72f4321d9",
+    "sentences": [
+     [
+      0.05,
+      1.528,
+      "A flat world."
+     ],
+     [
+      1.528,
+      5.208,
+      "Anyone living in it sees only what lies in the floor."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Shadow": {
+    "duration": 6.36,
+    "hash": "457a6ee3565ea256",
+    "sentences": [
+     [
+      0.05,
+      6.306,
+      "Each corner dropped straight down onto the floor: two directions, where the cube had three."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Sun": {
+    "duration": 4.944,
+    "hash": "998cf8cef2f0b756",
+    "sentences": [
+     [
+      0.05,
+      4.889,
+      "Straight overhead, so each corner's shadow lies right below it."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_01": {
+    "duration": 5.784,
+    "hash": "f551a7d9e12a1d48",
+    "sentences": [
+     [
+      0.05,
+      5.722,
+      "This is where a flat cut meets a cube passing through it face first: a square."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_02": {
+    "duration": 8.208,
+    "hash": "398fb433cdfc7e0f",
+    "sentences": [
+     [
+      0.05,
+      8.153,
+      "And this is where our space meets a tesseract passing through face first: a cube, turning slowly so you can see it."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_03": {
+    "duration": 7.704,
+    "hash": "8a736294c6818472",
+    "sentences": [
+     [
+      0.05,
+      7.639,
+      "Your turn: switch to corner first, and find the middle, where the slice is an octahedron with six corners."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_04": {
+    "duration": 8.208,
+    "hash": "7535362a0b4c1361",
+    "sentences": [
+     [
+      0.05,
+      8.139,
+      "Near the start, corner first, the slice is a tiny tetrahedron: the first thing we would see of a tesseract arriving corner first."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_05": {
+    "duration": 5.664,
+    "hash": "ceee72ef9f80d158",
+    "sentences": [
+     [
+      0.05,
+      3.833,
+      "A tesseract slides corner first into our space."
+     ],
+     [
+      3.833,
+      5.597,
+      "What do we see first?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Count": {
+    "duration": 6.072,
+    "hash": "1d6d62d4ee865090",
+    "sentences": [
+     [
+      0.05,
+      3.153,
+      "Where the cut crosses the tesseract's edges."
+     ],
+     [
+      3.153,
+      6.014,
+      "Each crossing is a corner of the slice."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Flat": {
+    "duration": 4.512,
+    "hash": "b697068312053b2f",
+    "sentences": [
+     [
+      0.05,
+      4.458,
+      "What a flat creature would see of a cube passing through its world."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Gauge": {
+    "duration": 2.976,
+    "hash": "91175505e34e568e",
+    "sentences": [
+     [
+      0.05,
+      2.917,
+      "Drag it to push both shapes through the cut."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Solid": {
+    "duration": 7.632,
+    "hash": "a403a352c1124b8d",
+    "sentences": [
+     [
+      0.05,
+      7.569,
+      "What we would see of a tesseract passing through our space: a solid that grows, changes and shrinks."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_01": {
+    "duration": 6.456,
+    "hash": "7b958b8caec95628",
+    "sentences": [
+     [
+      0.05,
+      3.486,
+      "Here is the tesseract as a cube inside a cube."
+     ],
+     [
+      3.486,
+      6.389,
+      "The gold corners belong to the near cube."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_02": {
+    "duration": 7.968,
+    "hash": "9f8e899b161b6b79",
+    "sentences": [
+     [
+      0.05,
+      3.0,
+      "The blue corners belong to the far cube."
+     ],
+     [
+      3.0,
+      7.917,
+      "Turning in the plane of x and w, they start to swing toward us."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_03": {
+    "duration": 7.224,
+    "hash": "e04a95c11901f5e2",
+    "sentences": [
+     [
+      0.05,
+      7.153,
+      "Your turn: drag the dial round to half a turn, and watch the inner cube come out through the outer one."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_04": {
+    "duration": 9.0,
+    "hash": "3f7ffd30af1b3d97",
+    "sentences": [
+     [
+      0.05,
+      4.236,
+      "Look at the arrows: only x and w moved."
+     ],
+     [
+      4.236,
+      8.931,
+      "In four directions, a single turn leaves a whole plane still."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_05": {
+    "duration": 7.944,
+    "hash": "203258a87fb0c011",
+    "sentences": [
+     [
+      0.05,
+      3.847,
+      "In three directions every turn leaves an axis still."
+     ],
+     [
+      3.847,
+      7.889,
+      "In four directions, what does a single turn leave still?"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Axes": {
+    "duration": 5.4,
+    "hash": "4e52d482da4b4c49",
+    "sentences": [
+     [
+      0.05,
+      5.333,
+      "Gold arrows are the directions the turn moves; faint ones stay still."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Dial": {
+    "duration": 4.368,
+    "hash": "18660c67818548a4",
+    "sentences": [
+     [
+      0.05,
+      2.514,
+      "How far the tesseract has turned."
+     ],
+     [
+      2.514,
+      4.319,
+      "Drag its handle round."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Inner": {
+    "duration": 6.264,
+    "hash": "0b9b70703d2d7503",
+    "sentences": [
+     [
+      0.05,
+      1.694,
+      "Its corners are blue."
+     ],
+     [
+      1.694,
+      6.194,
+      "After half a turn in the x–w plane, it is the near cube."
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Outer": {
+    "duration": 5.064,
+    "hash": "72283d58e3ac6174",
+    "sentences": [
+     [
+      0.05,
+      5.014,
+      "Its corners are gold, so you can follow them as the tesseract turns."
+     ]
+    ]
+   },
    "Narr_Watch_Balance_01": {
     "duration": 6.456,
     "hash": "da5f7a0c7f651281",
@@ -20232,6 +20966,730 @@
       0.1,
       4.925,
       "把这颗小螺丝稍微拧一点，底线的拉力就变了。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_01": {
+    "duration": 8.04,
+    "hash": "3f8f7d8ce9a157c5",
+    "sentences": [
+     [
+      0.1,
+      3.244,
+      "正方形就是平移过的线段。"
+     ],
+     [
+      3.194,
+      7.972,
+      "灰色的线段留在原地，金色的是它的复制品。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_02": {
+    "duration": 8.664,
+    "hash": "c79d2e6260e946f2",
+    "sentences": [
+     [
+      0.1,
+      5.356,
+      "现在一个正方形在往上滑，朝着它原来没有的方向。"
+     ],
+     [
+      5.306,
+      8.597,
+      "每个角后面都拖出一条新棱。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_03": {
+    "duration": 8.352,
+    "hash": "37944998659acba3",
+    "sentences": [
+     [
+      0.1,
+      3.508,
+      "轮到你了：搭出四维立方体。"
+     ],
+     [
+      3.458,
+      8.292,
+      "一直加方向加到四个，再把复制品滑到头。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_04": {
+    "duration": 10.92,
+    "hash": "72cf8f2bed8edd7a",
+    "sentences": [
+     [
+      0.1,
+      6.536,
+      "每滑一次，角的数目翻一倍：一、二、四、八、十六。"
+     ],
+     [
+      6.486,
+      10.861,
+      "四维立方体有十六个角、三十二条棱。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_05": {
+    "duration": 3.792,
+    "hash": "4be7a2c31bae793d",
+    "sentences": [
+     [
+      0.1,
+      3.772,
+      "五个方向的立方体会有多少个角？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Copy": {
+    "duration": 7.56,
+    "hash": "7b788d4fdc083d81",
+    "sentences": [
+     [
+      0.1,
+      3.717,
+      "同一个图形，沿新方向滑了出去。"
+     ],
+     [
+      3.667,
+      7.5,
+      "拖动它，可以滑远一点或滑回来。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Count": {
+    "duration": 8.112,
+    "hash": "59f7d30a926511ec",
+    "sentences": [
+     [
+      0.1,
+      8.106,
+      "每个图形的角数是前一个的两倍；它的棱是两份旧棱，再加上每个旧角一条。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Joins": {
+    "duration": 4.416,
+    "hash": "f29736ddddc636c4",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "每个角滑动时走过的路：每个角一条新棱。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Build_Part_Original": {
+    "duration": 3.576,
+    "hash": "1989615171bed729",
+    "sentences": [
+     [
+      0.1,
+      3.564,
+      "滑动之前的图形，它留在原地。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_01": {
+    "duration": 10.776,
+    "hash": "b5f111b7d636117f",
+    "sentences": [
+     [
+      0.1,
+      5.703,
+      "凑近正对着看一个立方体：正方形套着正方形。"
+     ],
+     [
+      5.653,
+      10.708,
+      "中间斜斜的图形是它的侧面，被透视压扁了。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_02": {
+    "duration": 8.808,
+    "hash": "75adbb6e66fea6e8",
+    "sentences": [
+     [
+      0.1,
+      8.786,
+      "沿第四个方向用同样的方式看四维立方体：金色的立方体是近的，蓝色的是远的。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_03": {
+    "duration": 8.544,
+    "hash": "27fa9f4289e08947",
+    "sentences": [
+     [
+      0.1,
+      8.536,
+      "轮到你了：在第四个方向上把眼睛凑近，直到远的立方体看起来不到近的一半大。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_04": {
+    "duration": 8.568,
+    "hash": "b453457bb933b521",
+    "sentences": [
+     [
+      0.1,
+      8.564,
+      "两个立方体中间的六个图形也是立方体，每个都和别的一样大，只是被视角压扁了。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_05": {
+    "duration": 6.936,
+    "hash": "42d642fbd61b5ce4",
+    "sentences": [
+     [
+      0.1,
+      4.883,
+      "里外两个立方体中间的六个图形看起来是扁的。"
+     ],
+     [
+      4.833,
+      6.875,
+      "它们真的是扁的吗？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Between": {
+    "duration": 6.864,
+    "hash": "dbf0d3de1cd39473",
+    "sentences": [
+     [
+      0.1,
+      6.842,
+      "连接近、远两个立方体的六个立方体之一，被视角压成了楔形。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Inner": {
+    "duration": 6.24,
+    "hash": "61f138495e5462f6",
+    "sentences": [
+     [
+      0.1,
+      6.231,
+      "和近的一样大，只是在第四个方向上更远，所以看起来更小。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Outer": {
+    "duration": 5.856,
+    "hash": "f774963a632979d1",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "在第四个方向上离眼睛最近的立方体，所以看起来最大。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Nested_Part_Square": {
+    "duration": 5.4,
+    "hash": "6470c0b4f4e42a2b",
+    "sentences": [
+     [
+      0.1,
+      5.383,
+      "近的面大，远的面小，中间是四个被压扁的侧面。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_01": {
+    "duration": 10.248,
+    "hash": "867651db85cee5c7",
+    "sentences": [
+     [
+      0.1,
+      4.564,
+      "六个正方形组成的十字能折成一个立方体。"
+     ],
+     [
+      4.514,
+      10.194,
+      "折的时候，原本离得很远的正方形转过来碰到了一起。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_02": {
+    "duration": 13.344,
+    "hash": "24afe194594e3300",
+    "sentences": [
+     [
+      0.1,
+      7.05,
+      "这是展开的四维立方体：八个立方体，标着 A 到 H，排成十字。"
+     ],
+     [
+      7.0,
+      13.278,
+      "选中的是立方体 B；蓝色的是折好后会碰到它的立方体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_03": {
+    "duration": 4.56,
+    "hash": "7030a93306016533",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "轮到你了：选中这一列最下面的立方体 D。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_04": {
+    "duration": 10.512,
+    "hash": "b92c96e89b42da31",
+    "sentences": [
+     [
+      0.1,
+      3.244,
+      "在十字里，D 只碰到 C。"
+     ],
+     [
+      3.194,
+      10.458,
+      "在四个方向里折好以后，它碰到六个立方体，只有和它相对的 B 碰不到。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_05": {
+    "duration": 5.088,
+    "hash": "b44fcb197232fccc",
+    "sentences": [
+     [
+      0.1,
+      5.078,
+      "折好以后，每个立方体会碰到另外七个中的几个？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Chosen": {
+    "duration": 7.464,
+    "hash": "bec501ec3bde82f3",
+    "sentences": [
+     [
+      0.1,
+      2.231,
+      "点一下选下一个。"
+     ],
+     [
+      2.181,
+      7.403,
+      "金色是它，蓝色是折好后会碰到它的立方体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Cross": {
+    "duration": 6.672,
+    "hash": "aa7bd88f78a4de19",
+    "sentences": [
+     [
+      0.1,
+      2.939,
+      "六个正方形排成十字。"
+     ],
+     [
+      2.889,
+      6.611,
+      "拖动刻度条，把它们折成立方体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Net": {
+    "duration": 5.304,
+    "hash": "c17a00c8e1f9c431",
+    "sentences": [
+     [
+      0.1,
+      5.3,
+      "八个立方体：一列四个，第二个周围再加四个。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Net_Part_Opposite": {
+    "duration": 5.808,
+    "hash": "0cfcbad0da9548f2",
+    "sentences": [
+     [
+      0.1,
+      5.786,
+      "无论折不折，它都碰不到的那一个，就像盒子的顶和底。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_01": {
+    "duration": 9.984,
+    "hash": "84b14c352025df9a",
+    "sentences": [
+     [
+      0.1,
+      5.508,
+      "一个立方体悬在地板上方，光从正上方照下来。"
+     ],
+     [
+      5.458,
+      9.917,
+      "它的影子是一个正方形，正好一个面那么大。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_02": {
+    "duration": 7.488,
+    "hash": "0b93aeec60bf47b9",
+    "sentences": [
+     [
+      0.1,
+      7.481,
+      "把立方体转一转、倾斜一下，影子就变了形，可立方体本身一点也没变。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_03": {
+    "duration": 7.32,
+    "hash": "f27943b58b4d957d",
+    "sentences": [
+     [
+      0.1,
+      3.342,
+      "轮到你了：找出最大的影子。"
+     ],
+     [
+      3.292,
+      7.25,
+      "提示：让立方体立在一个角上。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_04": {
+    "duration": 12.048,
+    "hash": "1707a7870cf48d25",
+    "sentences": [
+     [
+      0.1,
+      4.647,
+      "平躺在这块地板上的生物只能看到影子。"
+     ],
+     [
+      4.597,
+      11.986,
+      "每一张四维立方体的图，就是我们看到的那种影子：投进三个方向里的影子。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_05": {
+    "duration": 5.856,
+    "hash": "6fe6ad2681e26d32",
+    "sentences": [
+     [
+      0.1,
+      4.05,
+      "地板上的扁平生物看着立方体转动。"
+     ],
+     [
+      4.0,
+      5.792,
+      "它看到了什么？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Cube": {
+    "duration": 6.864,
+    "hash": "ff8e048ca80046ff",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "每条棱一样长，每个角都是直角。"
+     ],
+     [
+      3.694,
+      6.806,
+      "它的影子两样都显示不出来。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Floor": {
+    "duration": 6.336,
+    "hash": "4fe345bae34b9dd1",
+    "sentences": [
+     [
+      0.1,
+      2.133,
+      "一个平面世界。"
+     ],
+     [
+      2.083,
+      6.264,
+      "住在里面的生物只能看到地板上的东西。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Shadow": {
+    "duration": 6.624,
+    "hash": "e0662930cdbe3fb0",
+    "sentences": [
+     [
+      0.1,
+      6.606,
+      "每个角笔直落到地板上：立方体有三个方向，影子只有两个。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Shadow_Part_Sun": {
+    "duration": 5.496,
+    "hash": "f62d7b852fbbea71",
+    "sentences": [
+     [
+      0.1,
+      5.494,
+      "在正上方，所以每个角的影子就在它的正下方。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_01": {
+    "duration": 6.816,
+    "hash": "4e91de1c0d524e50",
+    "sentences": [
+     [
+      0.1,
+      6.814,
+      "这是面朝前穿过的立方体和平面切面相交的地方：一个正方形。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_02": {
+    "duration": 10.392,
+    "hash": "9a34779e4c2baf89",
+    "sentences": [
+     [
+      0.1,
+      10.333,
+      "这是面朝前穿过的四维立方体和我们的空间相交的地方：一个立方体，它在慢慢转动，好让你看清楚。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_03": {
+    "duration": 8.064,
+    "hash": "826678731d1e8206",
+    "sentences": [
+     [
+      0.1,
+      8.064,
+      "轮到你了：换成角朝前，找到正中间——那里的截面是有六个角的正八面体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_04": {
+    "duration": 10.344,
+    "hash": "9c1a9e3296cb2680",
+    "sentences": [
+     [
+      0.1,
+      10.278,
+      "角朝前刚开始时，截面是一个小小的正四面体：这是一个角朝前到来的四维立方体最先让我们看到的样子。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_05": {
+    "duration": 6.648,
+    "hash": "f0c8f1f7a0f365eb",
+    "sentences": [
+     [
+      0.1,
+      4.411,
+      "一个四维立方体角朝前滑进我们的空间。"
+     ],
+     [
+      4.361,
+      6.583,
+      "我们最先看到什么？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Count": {
+    "duration": 7.248,
+    "hash": "b146a645bda775a2",
+    "sentences": [
+     [
+      0.1,
+      3.953,
+      "切面和四维立方体的棱相交的地方。"
+     ],
+     [
+      3.903,
+      7.194,
+      "每个交点都是截面的一个角。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Flat": {
+    "duration": 5.688,
+    "hash": "3f9e2454b4a6ea34",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "一个立方体穿过扁平生物的世界时，它能看到的样子。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Gauge": {
+    "duration": 3.744,
+    "hash": "5f9f02e16d19e46b",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "拖动它，把两个图形推过切面。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Slice_Part_Solid": {
+    "duration": 9.336,
+    "hash": "2210c40e068b40a6",
+    "sentences": [
+     [
+      0.1,
+      9.314,
+      "一个四维立方体穿过我们的空间时我们能看到的样子：一个会长大、变形、再缩小的立体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_01": {
+    "duration": 7.584,
+    "hash": "d0673a26f54d4aec",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "这是看成立方体套立方体的四维立方体。"
+     ],
+     [
+      4.333,
+      7.528,
+      "金色的角属于近的立方体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_02": {
+    "duration": 9.384,
+    "hash": "3c68e4fecf571674",
+    "sentences": [
+     [
+      0.1,
+      3.342,
+      "蓝色的角属于远的立方体。"
+     ],
+     [
+      3.292,
+      9.333,
+      "在 x 和 w 组成的平面里转动时，它们开始朝我们转过来。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_03": {
+    "duration": 7.728,
+    "hash": "0e2a3308aed78b55",
+    "sentences": [
+     [
+      0.1,
+      7.717,
+      "轮到你了：把刻度盘拖到半圈，看里面的立方体从外面的立方体中穿出来。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_04": {
+    "duration": 9.888,
+    "hash": "407a8199b1591b7e",
+    "sentences": [
+     [
+      0.1,
+      4.231,
+      "看那几个箭头：只有 x 和 w 动了。"
+     ],
+     [
+      4.181,
+      9.833,
+      "在四个方向里，一次单一的转动会留下一整个平面不动。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_05": {
+    "duration": 9.384,
+    "hash": "1652c7b9d3fb9571",
+    "sentences": [
+     [
+      0.1,
+      4.647,
+      "在三个方向里，每次转动都有一根轴不动。"
+     ],
+     [
+      4.597,
+      9.333,
+      "在四个方向里，一次单一的转动留下什么不动？"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Axes": {
+    "duration": 5.664,
+    "hash": "3842433df2d4a64b",
+    "sentences": [
+     [
+      0.1,
+      5.647,
+      "金色箭头是转动时在动的方向，暗淡的保持不动。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Dial": {
+    "duration": 5.04,
+    "hash": "08e1afc8dcc6a9dd",
+    "sentences": [
+     [
+      0.1,
+      2.758,
+      "四维立方体转了多少。"
+     ],
+     [
+      2.708,
+      4.972,
+      "拖动把手转一转。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Inner": {
+    "duration": 7.656,
+    "hash": "0b1b609023725db9",
+    "sentences": [
+     [
+      0.1,
+      2.244,
+      "它的角是蓝色的。"
+     ],
+     [
+      2.194,
+      7.597,
+      "在 x–w 平面里转半圈后，它就成了近的立方体。"
+     ]
+    ]
+   },
+   "Narr_Tesseract_Spin_Part_Outer": {
+    "duration": 4.752,
+    "hash": "e433ea4f65484e35",
+    "sentences": [
+     [
+      0.1,
+      4.744,
+      "它的角是金色的，转动时你可以盯着它们。"
      ]
     ]
    },

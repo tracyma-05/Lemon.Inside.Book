@@ -9372,4 +9372,604 @@
   <data name="Narr_Colour_Halo_Part_Switch" xml:space="preserve">
     <value>原样存，或者先乘上不透明度再存。点一下开关切换。</value>
   </data>
+  <data name="Chapter_Tesseract" xml:space="preserve">
+    <value>四维立方体</value>
+  </data>
+  <data name="Tesseract_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Tesseract_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Tesseract_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Tesseract_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Tesseract_Shape_0" xml:space="preserve">
+    <value>点</value>
+  </data>
+  <data name="Tesseract_Shape_1" xml:space="preserve">
+    <value>线段</value>
+  </data>
+  <data name="Tesseract_Shape_2" xml:space="preserve">
+    <value>正方形</value>
+  </data>
+  <data name="Tesseract_Shape_3" xml:space="preserve">
+    <value>立方体</value>
+  </data>
+  <data name="Tesseract_Shape_4" xml:space="preserve">
+    <value>四维立方体</value>
+  </data>
+  <data name="Tesseract_Grip_Slide" xml:space="preserve">
+    <value>沿新方向拖动</value>
+  </data>
+  <data name="Tesseract_Grip_Next" xml:space="preserve">
+    <value>点一下，再加一个方向</value>
+  </data>
+  <data name="Tesseract_Grip_Turn" xml:space="preserve">
+    <value>拖动来转动</value>
+  </data>
+  <data name="Tesseract_Grip_Tilt" xml:space="preserve">
+    <value>拖动来倾斜</value>
+  </data>
+  <data name="Tesseract_Grip_Eye" xml:space="preserve">
+    <value>拖动，在第四个方向上把眼睛移近或移远</value>
+  </data>
+  <data name="Tesseract_Grip_Dial" xml:space="preserve">
+    <value>绕圈拖动来转动</value>
+  </data>
+  <data name="Tesseract_Grip_Depth" xml:space="preserve">
+    <value>拖动，把图形推过去</value>
+  </data>
+  <data name="Tesseract_Grip_First" xml:space="preserve">
+    <value>点一下，在面朝前和角朝前之间切换</value>
+  </data>
+  <data name="Tesseract_Grip_Fold" xml:space="preserve">
+    <value>拖动来折</value>
+  </data>
+  <data name="Tesseract_Grip_Choose" xml:space="preserve">
+    <value>点一下，选下一个立方体</value>
+  </data>
+  <data name="Tesseract_Build_Title" xml:space="preserve">
+    <value>朝新的方向滑过去</value>
+  </data>
+  <data name="Tesseract_Build_P1" xml:space="preserve">
+    <value>拿一个点滑动，它走过的路就是一条线段。把线段朝与它垂直的方向平移，它扫出一个正方形。把正方形笔直地抬离纸面，它扫出一个立方体。每一次，图形都朝一个它原来没有的新方向移动，这个方向和它已有的每个方向都成直角。</value>
+  </data>
+  <data name="Tesseract_Build_P2" xml:space="preserve">
+    <value>规则并没有在这里停下。把立方体朝第四个方向平移——这个方向和我们的三个方向都成直角——它就扫出一个四维立方体。我们没法指向那个方向，但仍然可以数数。每滑一次，原来的图形留在原地，多出一个复制品，每个角再用一条新棱连到它的复制品上。所以角的数目每次翻倍：1、2、4、8、16。四维立方体有 16 个角、32 条棱。</value>
+  </data>
+  <data name="Tesseract_Build_Deeper" xml:space="preserve">
+    <value>“tesseract”这个名字是英国作家查尔斯·霍华德·欣顿在 1888 年起的，他花了好多年，想训练自己想象出四个方向。还能接着数：正像立方体的表面由 6 个正方形组成，四维立方体的“表面”由 24 个正方形和 8 个立方体组成。图里每个新方向只是在纸上换一个斜角来画，图形因此被压扁了，但每个角、每条棱都在。</value>
+  </data>
+  <data name="Tesseract_Build_Dimension" xml:space="preserve">
+    <value>正在搭的图形</value>
+  </data>
+  <data name="Tesseract_Build_Slide" xml:space="preserve">
+    <value>滑了多远</value>
+  </data>
+  <data name="Tesseract_Build_Readout" xml:space="preserve">
+    <value>{0}有 {1} 个角、{2} 条棱：它是两个{3}，每个角都连到复制品上对应的角。</value>
+  </data>
+  <data name="Tesseract_Build_Sliding" xml:space="preserve">
+    <value>一个{0}正朝新的方向滑过去。滑到头，它就扫出一个{1}。</value>
+  </data>
+  <data name="Tesseract_Build_Picture" xml:space="preserve">
+    <value>一个图形和沿新方向滑出去的复制品，每个角都连到复制品上</value>
+  </data>
+  <data name="Tesseract_Build_New" xml:space="preserve">
+    <value>新方向</value>
+  </data>
+  <data name="Tesseract_Build_Count" xml:space="preserve">
+    <value>{0} 个角 · {1} 条棱</value>
+  </data>
+  <data name="Tesseract_Build_Add" xml:space="preserve">
+    <value>再加一个方向</value>
+  </data>
+  <data name="Tesseract_Build_Rule" xml:space="preserve">
+    <value>把图形朝垂直方向滑动：角的数目翻倍。</value>
+  </data>
+  <data name="Narr_Tesseract_Build_01" xml:space="preserve">
+    <value>正方形就是平移过的线段。灰色的线段留在原地，金色的是它的复制品。</value>
+  </data>
+  <data name="Narr_Tesseract_Build_02" xml:space="preserve">
+    <value>现在一个正方形在往上滑，朝着它原来没有的方向。每个角后面都拖出一条新棱。</value>
+  </data>
+  <data name="Narr_Tesseract_Build_03" xml:space="preserve">
+    <value>轮到你了：搭出四维立方体。一直加方向加到四个，再把复制品滑到头。</value>
+  </data>
+  <data name="Narr_Tesseract_Build_04" xml:space="preserve">
+    <value>每滑一次，角的数目翻一倍：一、二、四、八、十六。四维立方体有十六个角、三十二条棱。</value>
+  </data>
+  <data name="Narr_Tesseract_Build_05" xml:space="preserve">
+    <value>五个方向的立方体会有多少个角？</value>
+  </data>
+  <data name="Tesseract_Build_Quiz1" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Tesseract_Build_Quiz2" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Tesseract_Build_Quiz3" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Tesseract_Build_Part_Original" xml:space="preserve">
+    <value>留在原地的图形</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Original" xml:space="preserve">
+    <value>滑动之前的图形，它留在原地。</value>
+  </data>
+  <data name="Tesseract_Build_Part_Copy" xml:space="preserve">
+    <value>复制品</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Copy" xml:space="preserve">
+    <value>同一个图形，沿新方向滑了出去。拖动它，可以滑远一点或滑回来。</value>
+  </data>
+  <data name="Tesseract_Build_Part_Joins" xml:space="preserve">
+    <value>新的棱</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Joins" xml:space="preserve">
+    <value>每个角滑动时走过的路：每个角一条新棱。</value>
+  </data>
+  <data name="Tesseract_Build_Part_Count" xml:space="preserve">
+    <value>角和棱</value>
+  </data>
+  <data name="Narr_Tesseract_Build_Part_Count" xml:space="preserve">
+    <value>每个图形的角数是前一个的两倍；它的棱是两份旧棱，再加上每个旧角一条。</value>
+  </data>
+  <data name="Tesseract_Shadow_Title" xml:space="preserve">
+    <value>影子少了一个方向</value>
+  </data>
+  <data name="Tesseract_Shadow_P1" xml:space="preserve">
+    <value>阳光下的立方体在地板上投下影子。立方体有三个方向，影子只有两个。转动立方体，影子就变形：正对着时是正方形，倾斜时被拉长，立在一个角上时变成六边形。一个平躺在地板上、只看得见影子的生物，很难相信这些都是同一个立方体。</value>
+  </data>
+  <data name="Tesseract_Shadow_P2" xml:space="preserve">
+    <value>我们就处在那个生物的位置上。每一张四维立方体的图，都是它投进我们三个方向里的影子；就像立方体的影子一样，它随着四维立方体的转动而变形。本来一样长的棱看起来有长有短，本来是直角的地方看起来是斜的。影子不能把一切都显示出来，但有一件事它不会弄错：哪个角和哪个角相连。</value>
+  </data>
+  <data name="Tesseract_Shadow_Deeper" xml:space="preserve">
+    <value>单位立方体的影子正对着时最小，正好一个面那么大；立在一个角上时最大，是 √3，约 1.73 个面。一个扁平的生物为多一个方向的世界而困惑，这个想法来自埃德温·阿博特·阿博特 1884 年写的小说《平面国》：书里一个正方形遇到了一个球，在它眼里，那只是一个忽大忽小的圆。</value>
+  </data>
+  <data name="Tesseract_Shadow_Turn" xml:space="preserve">
+    <value>转动</value>
+  </data>
+  <data name="Tesseract_Shadow_Tilt" xml:space="preserve">
+    <value>倾斜</value>
+  </data>
+  <data name="Tesseract_Shadow_Readout" xml:space="preserve">
+    <value>影子有 {0} 条边，面积是立方体一个面的 {1} 倍。</value>
+  </data>
+  <data name="Tesseract_Shadow_Picture" xml:space="preserve">
+    <value>地板上方的立方体在头顶的光下投出扁平的影子</value>
+  </data>
+  <data name="Tesseract_Shadow_Shape" xml:space="preserve">
+    <value>{0} 条边 · {1} 个面</value>
+  </data>
+  <data name="Tesseract_Shadow_Rule" xml:space="preserve">
+    <value>光从正上方照下：每个角的影子就在它正下方。</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_01" xml:space="preserve">
+    <value>一个立方体悬在地板上方，光从正上方照下来。它的影子是一个正方形，正好一个面那么大。</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_02" xml:space="preserve">
+    <value>把立方体转一转、倾斜一下，影子就变了形，可立方体本身一点也没变。</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_03" xml:space="preserve">
+    <value>轮到你了：找出最大的影子。提示：让立方体立在一个角上。</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_04" xml:space="preserve">
+    <value>平躺在这块地板上的生物只能看到影子。每一张四维立方体的图，就是我们看到的那种影子：投进三个方向里的影子。</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_05" xml:space="preserve">
+    <value>地板上的扁平生物看着立方体转动。它看到了什么？</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz1" xml:space="preserve">
+    <value>立方体本身</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz2" xml:space="preserve">
+    <value>一个随立方体转动而变形的平面图形</value>
+  </data>
+  <data name="Tesseract_Shadow_Quiz3" xml:space="preserve">
+    <value>什么也看不到</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Cube" xml:space="preserve">
+    <value>立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Cube" xml:space="preserve">
+    <value>每条棱一样长，每个角都是直角。它的影子两样都显示不出来。</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Shadow" xml:space="preserve">
+    <value>它的影子</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Shadow" xml:space="preserve">
+    <value>每个角笔直落到地板上：立方体有三个方向，影子只有两个。</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Sun" xml:space="preserve">
+    <value>光</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Sun" xml:space="preserve">
+    <value>在正上方，所以每个角的影子就在它的正下方。</value>
+  </data>
+  <data name="Tesseract_Shadow_Part_Floor" xml:space="preserve">
+    <value>地板</value>
+  </data>
+  <data name="Narr_Tesseract_Shadow_Part_Floor" xml:space="preserve">
+    <value>一个平面世界。住在里面的生物只能看到地板上的东西。</value>
+  </data>
+  <data name="Tesseract_Nested_Title" xml:space="preserve">
+    <value>立方体里的立方体</value>
+  </data>
+  <data name="Tesseract_Nested_P1" xml:space="preserve">
+    <value>凑近一个立方体，正对着它的前面看。近的面看起来大，远的面看起来小，于是你看到一个正方形套着另一个正方形，四个角由四个斜斜的图形连着。那四个图形就是立方体的侧面，和别的面一样是正方形，只是被透视压扁了。</value>
+  </data>
+  <data name="Tesseract_Nested_P2" xml:space="preserve">
+    <value>对四维立方体做同样的事，沿着它的第四个方向看过去。近的那个立方体看起来大，远的那个看起来小：立方体里套着立方体。连接它们的六个图形，像削掉尖顶的金字塔，其实是四维立方体的另外六个立方体。八个立方体一样大；眼睛离得越近，远的那个就显得越小。</value>
+  </data>
+  <data name="Tesseract_Nested_Deeper" xml:space="preserve">
+    <value>这就是大多数人见过的四维立方体的样子。它并不比“正方形套正方形”的立方体图更奇怪：两者都是沿某个方向正对着看的透视图。立方体有 6 个面：近的一个、远的一个，加上中间 4 个。四维立方体有 8 个立方体：近的一个、远的一个，加上中间 6 个——正好对应立方体的 6 个面。</value>
+  </data>
+  <data name="Tesseract_Nested_Distance" xml:space="preserve">
+    <value>眼睛在第四个方向上的距离</value>
+  </data>
+  <data name="Tesseract_Nested_Turn" xml:space="preserve">
+    <value>转动视角</value>
+  </data>
+  <data name="Tesseract_Nested_Readout" xml:space="preserve">
+    <value>远的立方体看起来只有近的 {0} 大。其实八个立方体一样大，中间六个是被视角压扁的。</value>
+  </data>
+  <data name="Tesseract_Nested_Picture" xml:space="preserve">
+    <value>看成正方形套正方形的立方体，和看成立方体套立方体的四维立方体</value>
+  </data>
+  <data name="Tesseract_Nested_Cube" xml:space="preserve">
+    <value>正对着看的立方体</value>
+  </data>
+  <data name="Tesseract_Nested_Ratio" xml:space="preserve">
+    <value>远立方体：近立方体的 {0}%</value>
+  </data>
+  <data name="Tesseract_Nested_Rule" xml:space="preserve">
+    <value>近大远小，在第四个方向上也一样。</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_01" xml:space="preserve">
+    <value>凑近正对着看一个立方体：正方形套着正方形。中间斜斜的图形是它的侧面，被透视压扁了。</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_02" xml:space="preserve">
+    <value>沿第四个方向用同样的方式看四维立方体：金色的立方体是近的，蓝色的是远的。</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_03" xml:space="preserve">
+    <value>轮到你了：在第四个方向上把眼睛凑近，直到远的立方体看起来不到近的一半大。</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_04" xml:space="preserve">
+    <value>两个立方体中间的六个图形也是立方体，每个都和别的一样大，只是被视角压扁了。</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_05" xml:space="preserve">
+    <value>里外两个立方体中间的六个图形看起来是扁的。它们真的是扁的吗？</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz1" xml:space="preserve">
+    <value>是的，它们更小</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz2" xml:space="preserve">
+    <value>是的，它们是楔形的</value>
+  </data>
+  <data name="Tesseract_Nested_Quiz3" xml:space="preserve">
+    <value>不是：八个都是真正的立方体，是视角把它们压扁了</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Square" xml:space="preserve">
+    <value>正对着看的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Square" xml:space="preserve">
+    <value>近的面大，远的面小，中间是四个被压扁的侧面。</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Outer" xml:space="preserve">
+    <value>近的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Outer" xml:space="preserve">
+    <value>在第四个方向上离眼睛最近的立方体，所以看起来最大。</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Inner" xml:space="preserve">
+    <value>远的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Inner" xml:space="preserve">
+    <value>和近的一样大，只是在第四个方向上更远，所以看起来更小。</value>
+  </data>
+  <data name="Tesseract_Nested_Part_Between" xml:space="preserve">
+    <value>中间的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Nested_Part_Between" xml:space="preserve">
+    <value>连接近、远两个立方体的六个立方体之一，被视角压成了楔形。</value>
+  </data>
+  <data name="Tesseract_Spin_Title" xml:space="preserve">
+    <value>在四个方向里转动</value>
+  </data>
+  <data name="Tesseract_Spin_P1" xml:space="preserve">
+    <value>轮子转动时，是在一个平面里转，穿过中心的轴保持不动。在我们的三个方向里，每一次转动都是这样：它发生在一个平面里，剩下的那个和平面垂直的方向，就是不动的轴。</value>
+  </data>
+  <data name="Tesseract_Spin_P2" xml:space="preserve">
+    <value>有了四个方向，在一个平面里转动后还剩下两个方向，所以不动的不再是一条线，而是整整一个平面。让四维立方体在 x 和第四个方向 w 组成的平面里转动，远的立方体转到前面，近的转到后面：在透视图里，里面的立方体从外面的立方体中“长”了出来。四个方向还允许一件我们世界里没有的事：同时在两个平面里转动，这样每个方向都在动，只有正中心保持不动。</value>
+  </data>
+  <data name="Tesseract_Spin_Deeper" xml:space="preserve">
+    <value>用平面来描述转动比用轴更好：“在 x–y 平面里转动”这句话，在二维、三维、四维里意思都一样，而“绕轴转”只在三维里说得通。看图里的四个箭头：单一的转动移动其中两个，另外两个不动。在双重转动里四个都在动，既没有不动的轴，也没有不动的平面——这种转动只在四个及以上的方向里才有。</value>
+  </data>
+  <data name="Tesseract_Spin_Angle" xml:space="preserve">
+    <value>角度</value>
+  </data>
+  <data name="Tesseract_Spin_BothLabel" xml:space="preserve">
+    <value>同时在 y–z 平面里转动</value>
+  </data>
+  <data name="Tesseract_Spin_Single" xml:space="preserve">
+    <value>在 x–w 平面里转了 {0}°：x 和 w 在变，y 和 z 保持不动。</value>
+  </data>
+  <data name="Tesseract_Spin_Both" xml:space="preserve">
+    <value>同时在 x–w 和 y–z 平面里转了 {0}°：每个方向都在变，只有正中心不动。</value>
+  </data>
+  <data name="Tesseract_Spin_Picture" xml:space="preserve">
+    <value>在四个方向里转动的四维立方体，旁边是刻度盘和四个方向</value>
+  </data>
+  <data name="Tesseract_Spin_Plane" xml:space="preserve">
+    <value>在 x–w 平面里</value>
+  </data>
+  <data name="Tesseract_Spin_Planes" xml:space="preserve">
+    <value>在 x–w 和 y–z 平面里</value>
+  </data>
+  <data name="Tesseract_Spin_Still" xml:space="preserve">
+    <value>{0} 个方向不动</value>
+  </data>
+  <data name="Tesseract_Spin_Rule" xml:space="preserve">
+    <value>蓝色的角原本是远立方体，金色的原本是近立方体。</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_01" xml:space="preserve">
+    <value>这是看成立方体套立方体的四维立方体。金色的角属于近的立方体。</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_02" xml:space="preserve">
+    <value>蓝色的角属于远的立方体。在 x 和 w 组成的平面里转动时，它们开始朝我们转过来。</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_03" xml:space="preserve">
+    <value>轮到你了：把刻度盘拖到半圈，看里面的立方体从外面的立方体中穿出来。</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_04" xml:space="preserve">
+    <value>看那几个箭头：只有 x 和 w 动了。在四个方向里，一次单一的转动会留下一整个平面不动。</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_05" xml:space="preserve">
+    <value>在三个方向里，每次转动都有一根轴不动。在四个方向里，一次单一的转动留下什么不动？</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz1" xml:space="preserve">
+    <value>什么也没有</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz2" xml:space="preserve">
+    <value>一条线</value>
+  </data>
+  <data name="Tesseract_Spin_Quiz3" xml:space="preserve">
+    <value>一整个平面</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Outer" xml:space="preserve">
+    <value>近的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Outer" xml:space="preserve">
+    <value>它的角是金色的，转动时你可以盯着它们。</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Inner" xml:space="preserve">
+    <value>远的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Inner" xml:space="preserve">
+    <value>它的角是蓝色的。在 x–w 平面里转半圈后，它就成了近的立方体。</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Dial" xml:space="preserve">
+    <value>刻度盘</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Dial" xml:space="preserve">
+    <value>四维立方体转了多少。拖动把手转一转。</value>
+  </data>
+  <data name="Tesseract_Spin_Part_Axes" xml:space="preserve">
+    <value>四个方向</value>
+  </data>
+  <data name="Narr_Tesseract_Spin_Part_Axes" xml:space="preserve">
+    <value>金色箭头是转动时在动的方向，暗淡的保持不动。</value>
+  </data>
+  <data name="Tesseract_Slice_Title" xml:space="preserve">
+    <value>穿过我们的空间</value>
+  </data>
+  <data name="Tesseract_Slice_P1" xml:space="preserve">
+    <value>把一个立方体慢慢推过一张平面，住在平面里的扁平生物只能看到两者相交的地方：一个截面。面朝前推过去，一个正方形突然出现，保持不变，然后消失。角朝前推过去，先出现一个点，长成三角形，再变成六边形，又缩回三角形和一个点。</value>
+  </data>
+  <data name="Tesseract_Slice_P2" xml:space="preserve">
+    <value>一个穿过我们空间的四维立方体，在我们看来也会是这样，只是高了一维。面朝前，一个立方体会凭空出现，停在那里，然后消失。角朝前，先出现一个小小的、底面是三角形的金字塔——正四面体，它慢慢长大，角被削掉，走到一半时变成正八面体，像两个四棱锥底对底粘在一起，然后又缩小消失。</value>
+  </data>
+  <data name="Tesseract_Slice_Deeper" xml:space="preserve">
+    <value>每个截面都用同样的办法求出来，图里也是这样：找出切面和图形每条棱的交点，再把同一个面上的交点连起来。立方体有 6 个正方形面，所以它的截面最多 6 条边。四维立方体有 24 个正方形和 8 个立方体，所以它的截面可以有 12 个角。</value>
+  </data>
+  <data name="Tesseract_Slice_Depth" xml:space="preserve">
+    <value>穿过了多少</value>
+  </data>
+  <data name="Tesseract_Slice_CornerFirst" xml:space="preserve">
+    <value>角朝前</value>
+  </data>
+  <data name="Tesseract_Slice_Readout" xml:space="preserve">
+    <value>立方体的截面是{0}；四维立方体的截面是{1}，有 {2} 个角。</value>
+  </data>
+  <data name="Tesseract_Flat_Triangle" xml:space="preserve">
+    <value>三角形</value>
+  </data>
+  <data name="Tesseract_Flat_Square" xml:space="preserve">
+    <value>正方形</value>
+  </data>
+  <data name="Tesseract_Flat_Pentagon" xml:space="preserve">
+    <value>五边形</value>
+  </data>
+  <data name="Tesseract_Flat_Hexagon" xml:space="preserve">
+    <value>六边形</value>
+  </data>
+  <data name="Tesseract_Flat_None" xml:space="preserve">
+    <value>空的</value>
+  </data>
+  <data name="Tesseract_Solid_Tetrahedron" xml:space="preserve">
+    <value>正四面体</value>
+  </data>
+  <data name="Tesseract_Solid_Octahedron" xml:space="preserve">
+    <value>正八面体</value>
+  </data>
+  <data name="Tesseract_Solid_Cube" xml:space="preserve">
+    <value>立方体</value>
+  </data>
+  <data name="Tesseract_Solid_Truncated" xml:space="preserve">
+    <value>削掉了角的四面体</value>
+  </data>
+  <data name="Tesseract_Solid_None" xml:space="preserve">
+    <value>空的</value>
+  </data>
+  <data name="Tesseract_Solid_Other" xml:space="preserve">
+    <value>一个立体</value>
+  </data>
+  <data name="Tesseract_Slice_Picture" xml:space="preserve">
+    <value>平面切立方体得到的截面，和我们的空间切四维立方体得到的截面</value>
+  </data>
+  <data name="Tesseract_Slice_FlatLabel" xml:space="preserve">
+    <value>平面切立方体</value>
+  </data>
+  <data name="Tesseract_Slice_SolidLabel" xml:space="preserve">
+    <value>我们的空间切四维立方体</value>
+  </data>
+  <data name="Tesseract_Slice_Count" xml:space="preserve">
+    <value>{0} 个角：{1}</value>
+  </data>
+  <data name="Tesseract_Slice_CornerLabel" xml:space="preserve">
+    <value>角朝前</value>
+  </data>
+  <data name="Tesseract_Slice_FaceLabel" xml:space="preserve">
+    <value>面朝前</value>
+  </data>
+  <data name="Tesseract_Slice_Rule" xml:space="preserve">
+    <value>拖动刻度条，把图形推过切面。</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_01" xml:space="preserve">
+    <value>这是面朝前穿过的立方体和平面切面相交的地方：一个正方形。</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_02" xml:space="preserve">
+    <value>这是面朝前穿过的四维立方体和我们的空间相交的地方：一个立方体，它在慢慢转动，好让你看清楚。</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_03" xml:space="preserve">
+    <value>轮到你了：换成角朝前，找到正中间——那里的截面是有六个角的正八面体。</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_04" xml:space="preserve">
+    <value>角朝前刚开始时，截面是一个小小的正四面体：这是一个角朝前到来的四维立方体最先让我们看到的样子。</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_05" xml:space="preserve">
+    <value>一个四维立方体角朝前滑进我们的空间。我们最先看到什么？</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz1" xml:space="preserve">
+    <value>一个小立方体</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz2" xml:space="preserve">
+    <value>一个小小的正四面体，底面是三角形的金字塔</value>
+  </data>
+  <data name="Tesseract_Slice_Quiz3" xml:space="preserve">
+    <value>一个扁平的正方形</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Flat" xml:space="preserve">
+    <value>立方体的截面</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Flat" xml:space="preserve">
+    <value>一个立方体穿过扁平生物的世界时，它能看到的样子。</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Solid" xml:space="preserve">
+    <value>四维立方体的截面</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Solid" xml:space="preserve">
+    <value>一个四维立方体穿过我们的空间时我们能看到的样子：一个会长大、变形、再缩小的立体。</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Gauge" xml:space="preserve">
+    <value>穿过了多少</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Gauge" xml:space="preserve">
+    <value>拖动它，把两个图形推过切面。</value>
+  </data>
+  <data name="Tesseract_Slice_Part_Count" xml:space="preserve">
+    <value>截面的角</value>
+  </data>
+  <data name="Narr_Tesseract_Slice_Part_Count" xml:space="preserve">
+    <value>切面和四维立方体的棱相交的地方。每个交点都是截面的一个角。</value>
+  </data>
+  <data name="Tesseract_Net_Title" xml:space="preserve">
+    <value>展开</value>
+  </data>
+  <data name="Tesseract_Net_P1" xml:space="preserve">
+    <value>沿着几条棱剪开一个纸盒，它能摊平成六个正方形组成的十字。把十字重新折起来，正方形又一条边一条边地碰到一起：十字最远一头的那个正方形转过来，碰到了四个摊平时根本碰不到的正方形。</value>
+  </data>
+  <data name="Tesseract_Net_P2" xml:space="preserve">
+    <value>四维立方体也能这样展开，变成八个立方体组成的十字：一列四个，第二个周围再加四个。在我们的空间里它只能一直是十字，因为要把它折回去需要第四个方向。不过我们还是能说出哪个会碰到哪个：折好以后，每个立方体都和另外七个中的六个共享一个面，唯独碰不到和它相对的那一个。</value>
+  </data>
+  <data name="Tesseract_Net_Deeper" xml:space="preserve">
+    <value>西班牙画家萨尔瓦多·达利在 1954 年的画作《受难（超立方体）》（Corpus Hypercubus）里，用的就是这个立方体十字。立方体有 11 种不同的展开图，也就是剪开成六个正方形连成一片的方法；四维立方体展开成八个立方体的方法有 261 种。这里的十字只是最有名的一种。</value>
+  </data>
+  <data name="Tesseract_Net_Fold" xml:space="preserve">
+    <value>折起立方体</value>
+  </data>
+  <data name="Tesseract_Net_Chosen" xml:space="preserve">
+    <value>选中的立方体</value>
+  </data>
+  <data name="Tesseract_Net_Readout" xml:space="preserve">
+    <value>立方体 {0} 在展开的十字里碰到 {1} 个立方体，在四个方向里折好以后碰到 {2} 个。它永远碰不到和它相对的立方体 {3}。</value>
+  </data>
+  <data name="Tesseract_Net_Picture" xml:space="preserve">
+    <value>折成立方体的正方形十字，和四维立方体展开成的八个立方体十字</value>
+  </data>
+  <data name="Tesseract_Net_KeyChosen" xml:space="preserve">
+    <value>选中的立方体</value>
+  </data>
+  <data name="Tesseract_Net_KeyTouching" xml:space="preserve">
+    <value>折好后和它相碰</value>
+  </data>
+  <data name="Tesseract_Net_KeyOpposite" xml:space="preserve">
+    <value>相对的：永远碰不到</value>
+  </data>
+  <data name="Tesseract_Net_Rule" xml:space="preserve">
+    <value>折好后，每个立方体都和其余的相碰，只差一个。</value>
+  </data>
+  <data name="Narr_Tesseract_Net_01" xml:space="preserve">
+    <value>六个正方形组成的十字能折成一个立方体。折的时候，原本离得很远的正方形转过来碰到了一起。</value>
+  </data>
+  <data name="Narr_Tesseract_Net_02" xml:space="preserve">
+    <value>这是展开的四维立方体：八个立方体，标着 A 到 H，排成十字。选中的是立方体 B；蓝色的是折好后会碰到它的立方体。</value>
+  </data>
+  <data name="Narr_Tesseract_Net_03" xml:space="preserve">
+    <value>轮到你了：选中这一列最下面的立方体 D。</value>
+  </data>
+  <data name="Narr_Tesseract_Net_04" xml:space="preserve">
+    <value>在十字里，D 只碰到 C。在四个方向里折好以后，它碰到六个立方体，只有和它相对的 B 碰不到。</value>
+  </data>
+  <data name="Narr_Tesseract_Net_05" xml:space="preserve">
+    <value>折好以后，每个立方体会碰到另外七个中的几个？</value>
+  </data>
+  <data name="Tesseract_Net_Quiz1" xml:space="preserve">
+    <value>三个</value>
+  </data>
+  <data name="Tesseract_Net_Quiz2" xml:space="preserve">
+    <value>六个</value>
+  </data>
+  <data name="Tesseract_Net_Quiz3" xml:space="preserve">
+    <value>七个</value>
+  </data>
+  <data name="Tesseract_Net_Part_Cross" xml:space="preserve">
+    <value>正在折的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Cross" xml:space="preserve">
+    <value>六个正方形排成十字。拖动刻度条，把它们折成立方体。</value>
+  </data>
+  <data name="Tesseract_Net_Part_Net" xml:space="preserve">
+    <value>展开的四维立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Net" xml:space="preserve">
+    <value>八个立方体：一列四个，第二个周围再加四个。</value>
+  </data>
+  <data name="Tesseract_Net_Part_Chosen" xml:space="preserve">
+    <value>选中的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Chosen" xml:space="preserve">
+    <value>点一下选下一个。金色是它，蓝色是折好后会碰到它的立方体。</value>
+  </data>
+  <data name="Tesseract_Net_Part_Opposite" xml:space="preserve">
+    <value>相对的立方体</value>
+  </data>
+  <data name="Narr_Tesseract_Net_Part_Opposite" xml:space="preserve">
+    <value>无论折不折，它都碰不到的那一个，就像盒子的顶和底。</value>
+  </data>
 </root>

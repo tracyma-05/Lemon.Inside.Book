@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:tesseract="using:Lemon.Inside.Book.Chapters.Tesseract"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Tesseract.TesseractDiagramPageView"
+                         x:DataType="tesseract:TesseractDiagramPageViewModel">
+    <!-- A right page of the Tesseract chapter: the spread's picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="tesseract:BuildSpread">
+                            <tesseract:BuildDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Dimension="{Binding Dimension}" Slide="{Binding Slide}" AutomationProperties.Name="{loc:Localize Tesseract_Build_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="tesseract:ShadowSpread">
+                            <tesseract:ShadowDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Turn="{Binding Turn}" Tilt="{Binding Tilt}" AutomationProperties.Name="{loc:Localize Tesseract_Shadow_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="tesseract:NestedSpread">
+                            <tesseract:NestedDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Distance="{Binding Distance}" Turn="{Binding Turn}" AutomationProperties.Name="{loc:Localize Tesseract_Nested_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="tesseract:SpinSpread">
+                            <tesseract:SpinDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Angle="{Binding Angle}" Both="{Binding Both}" AutomationProperties.Name="{loc:Localize Tesseract_Spin_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="tesseract:SliceSpread">
+                            <tesseract:SliceDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Depth="{Binding Depth}" CornerFirst="{Binding CornerFirst}" AutomationProperties.Name="{loc:Localize Tesseract_Slice_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="tesseract:NetSpread">
+                            <tesseract:NetDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Fold="{Binding Fold}" Chosen="{Binding Chosen}" AutomationProperties.Name="{loc:Localize Tesseract_Net_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>
