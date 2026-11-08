@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,14 +12,19 @@ namespace Lemon.Inside.Book.Chapters.Car;
 /// Spread 6: the back of a car, its left rear wheel on a patch of ice and the right on dry road. Bars under each tyre
 /// show how hard it pushes the car along. With the differential open, the icy wheel spins and both push only as hard as
 /// the ice allows; locked, the wheels turn together and the dry one does the work.
+/// The reader drags across the patch under the left wheel to ice it over (back for a grittier road) and taps the
+/// differential to lock it; the wheels and the bars run up to their new speeds and pushes rather than jumping.
 /// </summary>
 public sealed class IceDiagram : GearPicture
 {
     public static readonly StyledProperty<double> LeftGripProperty =
-        AvaloniaProperty.Register<IceDiagram, double>(nameof(LeftGrip), IceSpread.DryGrip);
+        AvaloniaProperty.Register<IceDiagram, double>(nameof(LeftGrip), IceSpread.DryGrip, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> LockedProperty =
-        AvaloniaProperty.Register<IceDiagram, bool>(nameof(Locked));
+        AvaloniaProperty.Register<IceDiagram, bool>(nameof(Locked), defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The slipperiest the left wheel's road gets (the slider's end).</summary>
+    private const double LeastGrip = 0.05;
 
     private static readonly IImmutableBrush Asphalt = new ImmutableSolidColorBrush(Color.FromRgb(0x3A, 0x40, 0x4C));
     private static readonly IImmutableBrush TyreBrush = new ImmutableSolidColorBrush(Color.FromRgb(0x2A, 0x2E, 0x36));
@@ -26,6 +33,10 @@ public sealed class IceDiagram : GearPicture
 
     private double _left;
     private double _right;
+
+    /// <summary>Each wheel's speed and push as drawn, easing toward the model's; NaN until the first frame.</summary>
+    private (double Left, double Right) _speed = (double.NaN, double.NaN);
+    private (double Left, double Right) _push = (double.NaN, double.NaN);
 
     static IceDiagram()
     {
@@ -57,12 +68,25 @@ public sealed class IceDiagram : GearPicture
         return ((2 * 1.4) - right, right);
     }
 
+    /// <summary>How hard each tyre pushes the car along: an open differential gives both the same, no more than the ice takes.</summary>
+    private (double Left, double Right) Pushes() => Locked
+        ? (Math.Min(LeftGrip, 1), Math.Min(IceSpread.DryGrip, Math.Max(0, 1 - LeftGrip)))
+        : (Math.Min(LeftGrip, 0.5), Math.Min(LeftGrip, 0.5));
+
     protected override void Advance(double seconds)
     {
+        // A wheel that breaks free spins up in a moment; the pushes follow as quickly.
         var (left, right) = Speeds();
-        _left += left * seconds;
-        _right += right * seconds;
+        var (leftPush, rightPush) = Pushes();
+        _speed = double.IsNaN(_speed.Left) ? (left, right) : (Glide(_speed.Left, left, seconds, 0.2), Glide(_speed.Right, right, seconds, 0.2));
+        _push = double.IsNaN(_push.Left) ? (leftPush, rightPush) : (Glide(_push.Left, leftPush, seconds, 0.12), Glide(_push.Right, rightPush, seconds, 0.12));
+        _left += _speed.Left * seconds;
+        _right += _speed.Right * seconds;
     }
+
+    /// <summary>The left wheel's grip (to a hundredth) with the ice spread <paramref name="share"/> of the way across its patch.</summary>
+    internal static double GripForIce(double share) =>
+        Math.Clamp(Math.Round((IceSpread.DryGrip - (Math.Clamp(share, 0, 1) * (IceSpread.DryGrip - LeastGrip))) * 100) / 100, LeastGrip, IceSpread.DryGrip);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -75,8 +99,8 @@ public sealed class IceDiagram : GearPicture
         // The road: ice under the left wheel, dry asphalt under the right.
         context.FillRectangle(Asphalt, new Rect(bounds.X, ground, bounds.Width, bounds.Height * 0.08));
         var icy = Math.Clamp(1 - (LeftGrip / IceSpread.DryGrip), 0, 1);
-        context.FillRectangle(new ImmutableSolidColorBrush(Color.FromArgb((byte)(0xD0 * icy), 0xBF, 0xE8, 0xFF)),
-            new Rect(leftX - (wheelWidth * 1.5), ground, wheelWidth * 4, bounds.Height * 0.03), 4);
+        var patch = new Rect(leftX - (wheelWidth * 1.5), ground, wheelWidth * 4, bounds.Height * 0.03);
+        context.FillRectangle(new ImmutableSolidColorBrush(Color.FromArgb((byte)(0xD0 * icy), 0xBF, 0xE8, 0xFF)), patch, 4);
 
         // The body and axle, the differential in the middle.
         var axle = ground - (wheelHeight / 2);
@@ -110,14 +134,19 @@ public sealed class IceDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Get("Car_Ice_DryLabel"), new Point(right.Center.X, ground + (bounds.Height * 0.03) + 6), 11.5, DiagramText.Faint, 0.5);
 
         // How hard each tyre pushes the car along: an open differential gives both the same, no more than the ice takes.
-        var (leftPush, rightPush) = Locked
-            ? (Math.Min(LeftGrip, 1), Math.Min(IceSpread.DryGrip, Math.Max(0, 1 - LeftGrip)))
-            : (Math.Min(LeftGrip, 0.5), Math.Min(LeftGrip, 0.5));
+        var (leftPush, rightPush) = double.IsNaN(_push.Left) ? Pushes() : _push;
         var bars = new Rect(bounds.X + 24, bounds.Height * 0.78, bounds.Width - 48, bounds.Height * 0.16);
         DrawPush(context, new Rect(bars.X, bars.Y, bars.Width * 0.45, bars.Height), leftPush, DiagramText.Get("Car_Ice_LeftPush"));
         DrawPush(context, new Rect(bars.X + (bars.Width * 0.55), bars.Y, bars.Width * 0.45, bars.Height), rightPush, DiagramText.Get("Car_Ice_RightPush"));
         DiagramText.Draw(context, DiagramText.Format("Car_Ice_Total", ((leftPush + rightPush) * 100).ToString("0")), new Point(bars.X, bars.Bottom + 4), 13, DiagramText.Gold, bold: true);
         Mark("push", bars);
+
+        // The reader's handles: the ice, spread across the left wheel's patch (how far across says how icy), and the
+        // differential, tapped to lock or free it.
+        var spread = (LeftGrip - IceSpread.DryGrip) / (LeastGrip - IceSpread.DryGrip);
+        Grip("ice", new Point(patch.X + 12 + (Math.Clamp(spread, 0, 1) * (patch.Width - 24)), patch.Center.Y), GripAxis.Horizontal,
+            DiagramText.Get("Car_Grip_Ice"), at => LeftGrip = GripForIce((at.X - patch.X - 12) / (patch.Width - 24)));
+        Grip("lock", diff.Center, GripAxis.Tap, DiagramText.Get(Locked ? "Car_Grip_Unlock" : "Car_Grip_Lock"), _ => Locked = !Locked);
     }
 
     private static void DrawPush(DrawingContext context, Rect area, double share, string label)

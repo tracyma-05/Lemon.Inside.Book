@@ -3,6 +3,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Locks;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -156,6 +157,111 @@ public sealed class LocksTests
                 Assert.Contains(key, keys);
             }
         }
+    }
+
+    [Fact]
+    public void TheGrips_WorkBackFromWhereTheyAreDragged()
+    {
+        // The key's bow: its middle 6.5 mm before the shoulder, the shoulder a key's length out when the key is out.
+        Assert.Equal(1, PinsDiagram.InsertFor(-6.5), 9);
+        Assert.Equal(0, PinsDiagram.InsertFor(-6.5 - PinTumbler.KeyLength), 9);
+        Assert.Equal(0, PinsDiagram.InsertFor(-500), 9);
+
+        // The lever key's bit: left at 0°, up at 90°, right at 180°, and below it back at either end.
+        var c = new Avalonia.Point(100, 100);
+        Assert.Equal(0, LeverDiagram.AngleAt(c, new Avalonia.Point(50, 100)), 9);
+        Assert.Equal(90, LeverDiagram.AngleAt(c, new Avalonia.Point(100, 50)), 9);
+        Assert.Equal(180, LeverDiagram.AngleAt(c, new Avalonia.Point(150, 100)), 9);
+        Assert.Equal(180, LeverDiagram.AngleAt(c, new Avalonia.Point(130, 150)), 9);
+        Assert.Equal(0, LeverDiagram.AngleAt(c, new Avalonia.Point(70, 150)), 9);
+
+        // A wheel's tab, opposite its notch: at the bottom (the notch at the top) it shows the code, each tenth of a turn
+        // clockwise one number more.
+        for (var w = 0; w < 3; w++)
+        {
+            Assert.Equal(Dials.Code[w], DialsDiagram.NumberAt(w, c, new Avalonia.Point(100, 160)));
+            Assert.Equal((Dials.Code[w] + 3) % Dials.Numbers, DialsDiagram.NumberAt(w, c, c - (new Avalonia.Vector(Math.Sin(0.6 * Math.PI), -Math.Cos(0.6 * Math.PI)) * 50)));
+        }
+
+        // A key sliding into the master-keyed lock: its pins ride the blade, and once it is home they sit where the
+        // lock's model puts them.
+        var master = MasterKeyed.Keys[1];
+        for (var i = 0; i < PinTumbler.Pins; i++)
+        {
+            Assert.Equal(MasterKeyed.KeyPinTop(master, i), MasterDiagram.KeyPinTop(master, i, 1), 9);
+            Assert.Equal(PinTumbler.Floor + MasterKeyed.KeyPin(i), MasterDiagram.KeyPinTop(master, i, 0), 9);
+        }
+    }
+
+    /// <summary>Every picture has grips, and dragging or tapping them moves the spread's own values (the sliders follow).</summary>
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Locks");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Locks");
+        var locks = Assert.IsType<LocksTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Locks;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var pins = Open(0);
+        pins.DragGrip("insert", Far(pins, "insert", 2000, 0));
+        Assert.Equal(1, locks.Pins.Insert, 9);
+        Assert.True(locks.Pins.Turns);
+        pins.DragGrip("swap", default);
+        Assert.True(locks.Pins.Wrong);
+
+        var keys = Open(1);
+        keys.DragGrip("cuts", Far(keys, "cuts", 2000, 0));
+        Assert.Equal(7, locks.Keys.Cuts);
+        keys.DragGrip("depths", Far(keys, "depths", 0, -2000));
+        Assert.Equal(4, locks.Keys.Depths);
+        Assert.Equal(3, locks.Keys.Steepest);
+        Frames(2);
+        keys.DragGrip("steepest", Far(keys, "steepest", 0, 2000));
+        Assert.Equal(3, locks.Keys.Steepest);
+        locks.Keys.Depths = 10;
+        locks.Keys.Steepest = 2;
+        Frames(2);
+        keys.DragGrip("steepest", Far(keys, "steepest", 0, 2000));
+        Assert.Equal(9, locks.Keys.Steepest);
+
+        var master = Open(2);
+        master.DragGrip("key", default);
+        Assert.Equal(1, locks.Master.KeyChoice);
+
+        var binding = Open(3);
+        binding.DragGrip("pick", default);
+        binding.DragGrip("pick", default);
+        Assert.Equal(2, locks.Binding.Set);
+        binding.DragGrip("tension", default);
+        Assert.Equal(0, locks.Binding.Set);
+        binding.DragGrip("perfect", default);
+        Assert.True(locks.Binding.Perfect);
+
+        var lever = Open(4);
+        lever.DragGrip("turn", Far(lever, "turn", 2000, 0));
+        Assert.Equal(180, locks.Lever.Angle, 9);
+        lever.DragGrip("swap", default);
+        Assert.True(locks.Lever.Wrong);
+
+        var dials = Open(5);
+        dials.DragGrip("first", Far(dials, "first", 0, 2000));
+        dials.DragGrip("second", Far(dials, "second", 0, 2000));
+        dials.DragGrip("third", Far(dials, "third", 0, 2000));
+        Assert.True(locks.Dials.Opens);
+        dials.DragGrip("sloppy", default);
+        Assert.True(locks.Dials.Sloppy);
+
+        window.Close();
     }
 
     [AvaloniaFact]

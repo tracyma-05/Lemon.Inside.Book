@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,20 @@ namespace Lemon.Inside.Book.Chapters.Bicycle;
 
 /// <summary>
 /// Spread 3: a rider climbing a road of the chosen slope at a steady pedalling rhythm. The back sprockets show which
-/// one the chain is on; a bar shows how hard each push on the pedals is, against what a rider can keep up.
+/// one the chain is on; a bar shows how hard each push on the pedals is, against what a rider can keep up. The reader
+/// drags the top of the slope triangle up for a steeper road and the chain along the cassette to change gear; the chain
+/// shifts across the cogs as a derailleur moves it.
 /// </summary>
 public sealed class HillDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SlopeProperty =
-        AvaloniaProperty.Register<HillDiagram, double>(nameof(Slope));
+        AvaloniaProperty.Register<HillDiagram, double>(nameof(Slope), defaultBindingMode: BindingMode.TwoWay);
 
-    public static readonly StyledProperty<int> SprocketProperty =
-        AvaloniaProperty.Register<HillDiagram, int>(nameof(Sprocket), 15);
+    public static readonly StyledProperty<int> GearProperty =
+        AvaloniaProperty.Register<HillDiagram, int>(nameof(Gear), 2, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The slider's steepest road, percent.</summary>
+    private const double MostSlope = 15;
 
     /// <summary>The picture runs at this share of real time, so the legs can be followed.</summary>
     private const double TimeScale = 0.5;
@@ -34,9 +41,12 @@ public sealed class HillDiagram : GearPicture
     private double _metres;
     private double _crank;
 
+    /// <summary>Where the chain is across the cassette (a gear number, between two while it shifts).</summary>
+    private double _shift = 2;
+
     static HillDiagram()
     {
-        AffectsRender<HillDiagram>(SlopeProperty, SprocketProperty);
+        AffectsRender<HillDiagram>(SlopeProperty, GearProperty);
     }
 
     /// <summary>The road's slope, percent.</summary>
@@ -46,18 +56,22 @@ public sealed class HillDiagram : GearPicture
         set => SetValue(SlopeProperty, value);
     }
 
-    /// <summary>The back sprocket the chain is on.</summary>
-    public int Sprocket
+    /// <summary>The gear: 0 for the smallest back sprocket, up to the biggest.</summary>
+    public int Gear
     {
-        get => GetValue(SprocketProperty);
-        set => SetValue(SprocketProperty, value);
+        get => GetValue(GearProperty);
+        set => SetValue(GearProperty, value);
     }
+
+    /// <summary>The back sprocket the chain is on.</summary>
+    public int Sprocket => Climb.Cassette[Math.Clamp(Gear, 0, Climb.Cassette.Count - 1)];
 
     protected override void Advance(double seconds)
     {
         var t = seconds * TimeScale;
         _metres += Climb.Speed(Sprocket) * t;
         _crank += 2 * Math.PI * Climb.Cadence / 60 * t;
+        _shift = Glide(_shift, Math.Clamp(Gear, 0, Climb.Cassette.Count - 1), seconds, 0.1);
     }
 
     protected override void Draw(DrawingContext context, Rect bounds)
@@ -93,15 +107,20 @@ public sealed class HillDiagram : GearPicture
             context.DrawLine(Dash, a + new Point(0, 8), b + new Point(0, 8));
         }
 
-        // The slope's size, as a little rise-over-run triangle ahead of the bike.
-        var start = Along(1.6);
-        var end = Along(2.6);
+        // The slope's size, as a little rise-over-run triangle on the road behind the bike (ahead of it runs off the
+        // page on a narrow picture).
+        var start = Along(-1.45);
+        var end = Along(-0.55);
         var foot = new Point(end.X, start.Y);
         var faint = new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([3, 3], 0));
         context.DrawLine(faint, start, foot);
         context.DrawLine(faint, foot, end);
-        DiagramText.Draw(context, DiagramText.Format("Bicycle_Percent", Slope.ToString("0.#")), new Point(foot.X + 6, (foot.Y + end.Y) / 2), 13, DiagramText.Ink, 0, 0.5, bold: true);
+        DiagramText.Draw(context, DiagramText.Format("Bicycle_Percent", Slope.ToString("0.#")), new Point(foot.X + 17, (foot.Y + end.Y) / 2), 13, DiagramText.Ink, 0, 0.5, bold: true);
         Mark("slope", [start, foot, end], 8);
+
+        // The top of the rise is the reader's grip: up for a steeper road, its rise over its run the slope.
+        Grip("slope", end, GripAxis.Vertical, DiagramText.Get("Bicycle_Grip_Slope"),
+            at => Slope = Math.Round(Math.Clamp((start.Y - at.Y) / Math.Max(1, end.X - start.X) * 100, 0, MostSlope) * 2) / 2);
 
         // The bike, its back tyre on the road at the anchor.
         Point Map(Point metres) => new(
@@ -129,6 +148,9 @@ public sealed class HillDiagram : GearPicture
         var mid = top + (height / 2);
         var step = area.Width / cogs.Count;
         var biggest = cogs[^1];
+
+        // Gear g's cog is drawn in column Count - 1 - g (biggest on the left); its middle is where the chain runs.
+        double Column(double gear) => area.X + ((cogs.Count - 1 - gear) * step) + (step * 0.5);
         for (var i = 0; i < cogs.Count; i++)
         {
             var cog = cogs[cogs.Count - 1 - i];
@@ -138,12 +160,22 @@ public sealed class HillDiagram : GearPicture
             context.FillRectangle(new ImmutableSolidColorBrush(on ? Gold : Steel, on ? 1 : 0.6), new Rect(x, mid - (h / 2), step * 0.6, h), 2);
             if (on)
             {
-                context.DrawLine(new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xC8, 0xCE, 0xD8)), 3), new Point(x + (step * 0.3), mid - (h / 2) - 6), new Point(x + (step * 0.3), mid + (h / 2) + 6));
                 DiagramText.Draw(context, DiagramText.Format("Bicycle_TeethCount", cog), new Point(x + (step * 0.3), mid + (height / 2) + 4), 11, DiagramText.Gold, 0.5);
             }
         }
 
+        // The chain, moving across from cog to cog as the derailleur pushes it, as tall as the cog it is passing.
+        var lower = (int)Math.Floor(_shift);
+        var upper = Math.Min(lower + 1, cogs.Count - 1);
+        var between = cogs[lower] + ((cogs[upper] - cogs[lower]) * (_shift - lower));
+        var chainX = Column(_shift);
+        var reach = (height * between / biggest / 2) + 6;
+        context.DrawLine(new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xC8, 0xCE, 0xD8)), 3), new Point(chainX, mid - reach), new Point(chainX, mid + reach));
+
         Mark("cassette", new Rect(area.X, top, area.Width, height + 16));
+        var gear = Math.Clamp(Gear, 0, cogs.Count - 1);
+        Grip("gear", new Point(Column(gear), mid), GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_Gear"),
+            at => Gear = Math.Clamp((int)Math.Round(cogs.Count - 1 - ((at.X - area.X - (step * 0.5)) / step)), 0, cogs.Count - 1));
     }
 
     /// <summary>The push on each pedal, against the most a rider can keep up for a long climb.</summary>

@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -17,10 +19,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class TrapDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SuctionProperty =
-        AvaloniaProperty.Register<TrapDiagram, double>(nameof(Suction));
+        AvaloniaProperty.Register<TrapDiagram, double>(nameof(Suction), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> VentProperty =
-        AvaloniaProperty.Register<TrapDiagram, bool>(nameof(Vent));
+        AvaloniaProperty.Register<TrapDiagram, bool>(nameof(Vent), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The drain's lip (where water spills on), the bend's dip and the bore, cm.</summary>
     private const double Lip = 3;
@@ -46,11 +48,18 @@ public sealed class TrapDiagram : GearPicture
         set => SetValue(VentProperty, value);
     }
 
+    /// <summary>How far the sink side's water has fallen, cm: it is pulled down, or settles back, over a moment.</summary>
+    private double _drop = double.NaN;
+
+    private double Drop => double.IsNaN(_drop) ? _drop = Trap.Drop(Math.Clamp(Suction, 0, 12), Vent) : _drop;
+
+    protected override void Advance(double seconds) => _drop = Glide(Drop, Trap.Drop(Math.Clamp(Suction, 0, 12), Vent), seconds, 0.25);
+
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var suction = Math.Clamp(Suction, 0, 12);
         var broken = Trap.Broken(suction, Vent);
-        var sinkLevel = Lip - Trap.Drop(suction, Vent);
+        var sinkLevel = Lip - Drop;
         var scale = Math.Min((bounds.Width - 40) / 76, (bounds.Height - 70) / 48);
         var v = new View(new Point(bounds.Center.X - (20 * scale), bounds.Bottom - 30 - (10 * scale)), scale);
         var bore = Bore * scale;
@@ -96,7 +105,8 @@ public sealed class TrapDiagram : GearPicture
         if (suction > 0.05)
         {
             var arrowPen = new ImmutablePen(AirArrow, 2);
-            for (var x = 13.0; x < 42; x += 9)
+            // The arrows drift toward the sewer, faster the harder it pulls.
+            for (var x = 13.0 + (Seconds * (1 + suction) % 9); x < 42; x += 9)
             {
                 if (Math.Abs(x - VentX) < 2) continue;
                 var from = v.At(x, Lip + (Bore / 2) - 0.3);
@@ -170,5 +180,10 @@ public sealed class TrapDiagram : GearPicture
         }
 
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Trap_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: a grip slid along the drain for more suction (toward the sewer, harder), and the vent tapped.
+        Grip("suction", v.At(13 + (28 * suction / 12), Lip + (Bore / 2) - 0.4), GripAxis.Horizontal, DiagramText.Get("Plumbing_Grip_Suction"),
+            at => Suction = Snap((v.X(at) - 13) / 28 * 12, 0.25, 0, 12));
+        Grip("vent", new Point(top.X, top.Y - 16), GripAxis.Tap, DiagramText.Get("Plumbing_Grip_Vent"), _ => Vent = !Vent);
     }
 }

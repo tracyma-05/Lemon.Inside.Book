@@ -1,5 +1,7 @@
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -7,12 +9,13 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 5: a gear train. A small gold gear drives a big one; a small gear on the big one's axle drives the next big
-/// one, and so on. Each step turns the speed down <see cref="StepRatio"/> times.
+/// one, and so on. Each step turns the speed down <see cref="StepRatio"/> times. The reader can turn the gold input by
+/// hand (the motor waits while it is held) and feel how little the last gear moves, and tap the last gear to add a step.
 /// </summary>
 public sealed class TrainDiagram : GearPicture
 {
     public static readonly StyledProperty<int> StepsProperty =
-        AvaloniaProperty.Register<TrainDiagram, int>(nameof(Steps), 2);
+        AvaloniaProperty.Register<TrainDiagram, int>(nameof(Steps), 2, defaultBindingMode: BindingMode.TwoWay);
 
     public const int SmallTeeth = 12;
     public const int BigTeeth = 36;
@@ -45,7 +48,22 @@ public sealed class TrainDiagram : GearPicture
         }
     }
 
-    protected override void Advance(double seconds) => _turns += InputSpeed * seconds;
+    /// <summary>The slider's range of steps.</summary>
+    private const int MostSteps = 4;
+
+    /// <summary>Turns of the input so far (for the tests).</summary>
+    internal double Turns => _turns;
+
+    protected override void Advance(double seconds)
+    {
+        if (!Gripping)
+        {
+            _turns += InputSpeed * seconds;
+        }
+    }
+
+    /// <summary>The steps after a tap on the last gear: one more, and back to one after the most.</summary>
+    internal static int NextSteps(int steps) => (Math.Clamp(steps, 1, MostSteps) % MostSteps) + 1;
 
     /// <summary>The axles' centres (in modules) and the direction from each to the next: right, zig-zagging up and down.</summary>
     public static (Point[] Axles, double[] Towards) Layout(int steps)
@@ -78,7 +96,7 @@ public sealed class TrainDiagram : GearPicture
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var steps = Math.Clamp(Steps, 1, 4);
+        var steps = Math.Clamp(Steps, 1, MostSteps);
         var (axles, _) = Layout(steps);
         var angles = Angles(steps, _turns);
         var big = GearGeometry.PitchRadius(BigTeeth) + 1;
@@ -112,6 +130,14 @@ public sealed class TrainDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Format("Gears_Train_Out", (_turns / Math.Pow(StepRatio, steps)).ToString("0.000")),
             new Point(bounds.Right - 16, low), text, DiagramText.Ink, 1);
         DiagramText.Draw(context, DiagramText.Get("Gears_Train_InLabel"), input + new Point(0, -(GearGeometry.PitchRadius(SmallTeeth) + 2) * scale), 12, DiagramText.Gold, 0.5, 1);
+
+        // A handle on the gold gear, along its marked tooth, to turn the input by hand; a tap on the last gear's middle
+        // adds a step.
+        var reach = GearGeometry.PitchRadius(SmallTeeth) * 0.55;
+        var handle = ToScreen(new Point(Math.Cos(angles[0]) * reach, Math.Sin(angles[0]) * reach), input, scale);
+        Grip("turn", handle, GripAxis.Free, DiagramText.Get("Gears_Grip_TurnInput"),
+            at => _turns = -GearsGrips.Follow(-2 * Math.PI * _turns, GearsGrips.AngleOf(input, at)) / (2 * Math.PI));
+        Grip("step", output, GripAxis.Tap, DiagramText.Get("Gears_Grip_AddStep"), _ => Steps = NextSteps(Steps));
     }
 
     /// <summary>A pointer on the output gear, like a clock hand.</summary>

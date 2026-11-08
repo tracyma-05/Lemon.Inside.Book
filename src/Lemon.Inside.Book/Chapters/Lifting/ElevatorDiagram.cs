@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -10,17 +12,26 @@ namespace Lemon.Inside.Book.Chapters.Lifting;
 /// <summary>
 /// Spread 6: a lift shaft cut open. At the top the motor turns a grooved wheel; the ropes run over it, the car hanging
 /// on one side and the counterweight on the other (shown as an outline when it is taken away). Along the bottom, a bar
-/// for what the motor must hold, against the whole car's weight.
+/// for what the motor must hold, against the whole car's weight. The lift runs up and down the shaft: as the car
+/// rises the counterweight comes down by as much, and the wheel turns with the ropes. The reader drags along the car's
+/// roof to let riders in or out and taps the counterweight to hang it on or take it off; the motor's bar eases to its
+/// new load.
 /// </summary>
 public sealed class ElevatorDiagram : GearPicture
 {
     public static readonly StyledProperty<int> RidersProperty =
-        AvaloniaProperty.Register<ElevatorDiagram, int>(nameof(Riders));
+        AvaloniaProperty.Register<ElevatorDiagram, int>(nameof(Riders), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> CounterweightProperty =
-        AvaloniaProperty.Register<ElevatorDiagram, bool>(nameof(Counterweight));
+        AvaloniaProperty.Register<ElevatorDiagram, bool>(nameof(Counterweight), defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly IPen Ghost = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 1.4, new ImmutableDashStyle([4, 3], 0));
+
+    /// <summary>One trip down and back up the shaft, s.</summary>
+    private const double Trip = 14;
+
+    /// <summary>The motor's load as drawn on the bar, kg, easing toward the true one.</summary>
+    private double _bar = double.NaN;
 
     static ElevatorDiagram()
     {
@@ -39,7 +50,22 @@ public sealed class ElevatorDiagram : GearPicture
         set => SetValue(CounterweightProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double MotorLoad => Elevator.Motor(Math.Clamp(Riders, 0, Elevator.MostRiders), Counterweight);
+
+    protected override void Advance(double seconds) =>
+        _bar = double.IsNaN(_bar) ? MotorLoad : Glide(_bar, MotorLoad, seconds, 0.1);
+
+    /// <summary>
+    /// Where the car is on its trip, 0 (at the top) to 1 (at the bottom), <paramref name="seconds"/> in: it sets off
+    /// gently, runs, and slows to stop at each end, waiting there a moment.
+    /// </summary>
+    internal static double Travel(double seconds)
+    {
+        var t = (seconds / Trip % 1 + 1) % 1;
+        var leg = t < 0.5 ? t * 2 : (1 - t) * 2; // 0 → 1 → 0
+        var moving = Math.Clamp((leg - 0.1) / 0.8, 0, 1); // a pause at each end
+        return 0.5 - (0.5 * Math.Cos(Math.PI * moving));
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -59,12 +85,14 @@ public sealed class ElevatorDiagram : GearPicture
         context.DrawLine(new ImmutablePen(DarkSteelBrush, 5), wheelCentre, new Point(motor.X, wheelCentre.Y));
         DiagramText.Draw(context, DiagramText.Get("Lifting_Elevator_Motor"), motor.Center, 11, Dark, 0.5, 0.5, bold: true);
 
-        // The car on the left rope, the counterweight on the right.
+        // The car on the left rope, the counterweight on the right, each going down as far as the other comes up.
+        var travel = Travel(Seconds);
+        var run = h * 0.28;
         var left = wheelCentre.X - r;
         var right = wheelCentre.X + r;
         var carRight = Math.Min(left + (w * 0.12), right - (w * 0.045) - 8);
-        var car = new Rect(carRight - (w * 0.24), shaft.Y + (h * 0.22), w * 0.24, h * 0.24);
-        var weight = new Rect(right - (w * 0.045), shaft.Y + (h * 0.08), w * 0.09, h * 0.2);
+        var car = new Rect(carRight - (w * 0.24), shaft.Y + (h * 0.06) + (run * travel), w * 0.24, h * 0.24);
+        var weight = new Rect(right - (w * 0.045), shaft.Y + (h * 0.06) + (run * (1 - travel)), w * 0.09, h * 0.2);
         var ropes = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xE9, 0xD8, 0xA6)), 2);
         context.DrawLine(ropes, new Point(left, wheelCentre.Y), new Point(left, car.Top));
         context.DrawLine(ropes, new Point(left - 3, wheelCentre.Y), new Point(left - 3, car.Top));
@@ -77,6 +105,16 @@ public sealed class ElevatorDiagram : GearPicture
         Mark("ropes", [new Point(left - 3, wheelCentre.Y), new Point(left, car.Top)], 6);
         DrawWheel(context, wheelCentre, r);
         context.DrawEllipse(null, ropes, wheelCentre, r * 0.98, r * 0.98);
+
+        // Spokes on the wheel: it turns by the rope that has run over it (the car going down turns it anticlockwise).
+        var turn = -run * travel / r;
+        var spoke = new ImmutablePen(Dark, 2.2);
+        for (var k = 0; k < 3; k++)
+        {
+            var (s, c) = Math.SinCos(turn + (k * Math.PI / 3));
+            context.DrawLine(spoke, new Point(wheelCentre.X - (c * r * 0.6), wheelCentre.Y - (s * r * 0.6)), new Point(wheelCentre.X + (c * r * 0.6), wheelCentre.Y + (s * r * 0.6)));
+        }
+
         Mark("sheave", wheelCentre, r);
 
         // The car with its riders standing in rows.
@@ -114,8 +152,19 @@ public sealed class ElevatorDiagram : GearPicture
         var most = Elevator.Motor(Elevator.MostRiders, false);
         var bar = new Rect(bounds.X + (w * 0.1), bounds.Bottom - 30, w * 0.8, 10);
         context.FillRectangle(new ImmutableSolidColorBrush(Color.FromArgb(0x30, 0xE6, 0xEA, 0xF2)), bar, 5);
-        var motorLoad = Elevator.Motor(riders, Counterweight);
-        context.FillRectangle(motorLoad > 0 ? DiagramText.Gold : LiftingParts.Push, new Rect(bar.X, bar.Y, Math.Max(4, bar.Width * motorLoad / most), bar.Height), 5);
+        var motorLoad = MotorLoad;
+        var shown = double.IsNaN(_bar) ? motorLoad : _bar;
+        context.FillRectangle(motorLoad > 0 ? DiagramText.Gold : LiftingParts.Push, new Rect(bar.X, bar.Y, Math.Max(4, bar.Width * shown / most), bar.Height), 5);
         DiagramText.Draw(context, DiagramText.Format("Lifting_Elevator_Bar", Kg(motorLoad)), new Point(bar.X, bar.Y - 4), 12.5, DiagramText.Ink, 0, 1, bold: true);
+
+        // The reader's handles: a slider along the car's roof (more riders to the right), and a tap on the
+        // counterweight's place to hang it on or take it off.
+        var roofY = car.Top + 3;
+        var (roofLeft, roofRight) = (car.Left + 12, car.Right - 12);
+        Grip("riders", new Point(roofLeft + ((roofRight - roofLeft) * riders / Elevator.MostRiders), roofY), GripAxis.Horizontal,
+            DiagramText.Get("Lifting_Grip_Riders"),
+            at => Riders = Math.Clamp((int)Math.Round((at.X - roofLeft) / (roofRight - roofLeft) * Elevator.MostRiders), 0, Elevator.MostRiders));
+        Grip("counterweight", weight.Center, GripAxis.Tap, DiagramText.Get(Counterweight ? "Lifting_Grip_TakeWeight" : "Lifting_Grip_HangWeight"),
+            _ => Counterweight = !Counterweight);
     }
 }

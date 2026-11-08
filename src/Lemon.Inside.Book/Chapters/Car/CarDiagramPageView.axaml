@@ -21,7 +21,7 @@
                         </DataTemplate>
                         <DataTemplate DataType="car:CylindersSpread">
                             <car:CylindersDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
-                                     Count="{Binding Count}" Flywheel="{Binding Flywheel}" AutomationProperties.Name="{loc:Localize Car_Cylinders_Picture}" />
+                                     CountStep="{Binding CountStep}" Flywheel="{Binding Flywheel}" AutomationProperties.Name="{loc:Localize Car_Cylinders_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="car:ClutchSpread">
                             <car:ClutchDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"

@@ -35,7 +35,7 @@
                         </DataTemplate>
                         <DataTemplate DataType="gears:PlanetarySpread">
                             <gears:PlanetaryDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
-                                     SunTeeth="{Binding SunTeeth}" Held="{Binding Held}"
+                                     SunStep="{Binding SunStep}" Held="{Binding Held}"
                                                     AutomationProperties.Name="{loc:Localize Gears_Planet_Picture}" />
                         </DataTemplate>
                     </ContentControl.DataTemplates>

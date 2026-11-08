@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,12 +11,20 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 /// <summary>
 /// Spread 4: a boat seen end-on, tipped over by the chosen angle. The water it pushes aside is outlined; its centre
 /// (where the water's push acts) has moved to the low side, while the weight still pulls down through the boat's own
-/// centre. The sideways gap between them is the lever that turns the boat back.
+/// centre. The sideways gap between them is the lever that turns the boat back. The reader pulls the mast over
+/// to tip the boat; it rolls over to the new angle rather than jumping, the centres and the lever moving with it.
 /// </summary>
 public sealed class HeelDiagram : GearPicture
 {
     public static readonly StyledProperty<double> HeelAngleProperty =
-        AvaloniaProperty.Register<HeelDiagram, double>(nameof(HeelAngle), 15);
+        AvaloniaProperty.Register<HeelDiagram, double>(nameof(HeelAngle), 15, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The slider's most tip, degrees.</summary>
+    private const double MostHeel = 60;
+
+    /// <summary>The tip as drawn, radians, rolling toward <see cref="HeelAngle"/>.</summary>
+    private double _heel;
+    private bool _placed;
 
     static HeelDiagram()
     {
@@ -28,16 +38,29 @@ public sealed class HeelDiagram : GearPicture
         set => SetValue(HeelAngleProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double Asked => Math.Clamp(HeelAngle, 0, MostHeel) * Math.PI / 180;
+
+    protected override void Advance(double seconds)
+    {
+        _heel = _placed ? Glide(_heel, Asked, seconds, 0.12) : Asked;
+        _placed = true;
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var boat = HeelSpread.Boat;
-        var heel = HeelAngle * Math.PI / 180;
+        var heel = _placed ? _heel : Asked;
         var scale = Math.Min(bounds.Width * 0.6 / boat.Beam, bounds.Height * 0.62 / (boat.HullDepth + 3));
         var waterline = bounds.Height * 0.52;
         var drawn = BoatSection.Draw(context, boat, heel, new Point(bounds.Width * 0.5, waterline), scale, bounds);
         Mark("hull", drawn.Hull);
+
+        // High on the mast, pulled over to tip the boat: the mast leans as far as the boat does. (Not its very top, which
+        // leaves the picture at the steepest tip.)
+        var mast = boat.Beam * 0.55 * 0.7 * scale;
+        var mastTop = drawn.Deck + new Point(mast * Math.Sin(heel), -mast * Math.Cos(heel));
+        Grip("mast", mastTop, GripAxis.Horizontal, DiagramText.Get("Boats_Grip_Heel"),
+            at => HeelAngle = Math.Round(Math.Clamp(Math.Asin(Math.Clamp((at.X - drawn.Deck.X) / mast, -1, 1)) * 180 / Math.PI, 0, MostHeel)));
 
         // The push of the water up through its centre; the weight down through the boat's.
         var arrow = Math.Min(80, scale * 1.2);

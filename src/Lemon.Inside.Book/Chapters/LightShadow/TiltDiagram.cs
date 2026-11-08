@@ -1,43 +1,50 @@
 using Avalonia;
-using Avalonia.Controls;
+using Avalonia.Data;
 using Avalonia.Media;
-using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
+using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
 
 /// <summary>
 /// Spread 2, seen from the side: a torch shining straight down on a board that tips. The same beam lands on a
-/// longer patch, so each bit of it gets less light; below, the patch seen face on.
+/// longer patch, so each bit of it gets less light; below, the patch seen face on. Bits of light rain down the beam
+/// evenly, so on a tipped board they land further apart. The reader tips the board by dragging its low arm; it
+/// swings to a new angle rather than jumping.
 /// </summary>
-public sealed class TiltDiagram : Picture
+public sealed class TiltDiagram : GearPicture
 {
     public static readonly StyledProperty<double> TiltProperty =
-        AvaloniaProperty.Register<TiltDiagram, double>(nameof(Tilt), 30);
+        AvaloniaProperty.Register<TiltDiagram, double>(nameof(Tilt), 30, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The slider's range, in degrees.</summary>
+    private const double MostTilt = 85;
 
     private const int Rays = 7;
 
-    private static readonly IImmutableBrush Plate = new ImmutableLinearGradientBrush(
-        [new ImmutableGradientStop(0, Color.FromRgb(0x14, 0x1B, 0x2A)), new ImmutableGradientStop(1, Color.FromRgb(0x08, 0x0B, 0x12))],
-        startPoint: new RelativePoint(0, 0, RelativeUnit.Relative),
-        endPoint: new RelativePoint(0, 1, RelativeUnit.Relative));
+    /// <summary>Where the grip sits on the board's low arm, as a share of the arm from the pivot.</summary>
+    private const double GripAlong = 0.78;
+
+    /// <summary>How fast the bits of light fall, in beam widths a second, and how far apart they are.</summary>
+    private const double FallSpeed = 0.9;
+    private const double BitGap = 0.28;
 
     private static readonly IImmutableBrush TorchBrush = new ImmutableSolidColorBrush(Color.FromRgb(0x5A, 0x63, 0x75));
     private static readonly IImmutableBrush BeamBrush = new ImmutableSolidColorBrush(Color.FromArgb(0x26, 0xF2, 0xC9, 0x4C));
-    private static readonly IPen RayPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xC0, 0xF2, 0xC9, 0x4C)), 1.5);
+    private static readonly IImmutableBrush BitBrush = new ImmutableSolidColorBrush(Color.FromRgb(0xFF, 0xE8, 0x9A));
+    private static readonly IPen RayPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x80, 0xF2, 0xC9, 0x4C)), 1.2);
     private static readonly IPen BoardPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x9A, 0x86, 0x6A)), 8, lineCap: PenLineCap.Round);
     private static readonly IPen GuidePen = new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([4, 4], 0));
     private static readonly IPen OutlinePen = new ImmutablePen(DiagramText.Faint, 1.2, new ImmutableDashStyle([4, 3], 0));
 
+    /// <summary>The angle drawn, easing toward <see cref="Tilt"/> (NaN until the first frame, which starts there).</summary>
+    private double _shown = double.NaN;
+
     static TiltDiagram()
     {
         AffectsRender<TiltDiagram>(TiltProperty);
-    }
-
-    public TiltDiagram()
-    {
-        ClipToBounds = true;
     }
 
     /// <summary>How far the board is tipped from flat, in degrees.</summary>
@@ -47,16 +54,14 @@ public sealed class TiltDiagram : Picture
         set => SetValue(TiltProperty, value);
     }
 
-    protected override void Paint(DrawingContext context)
-    {
-        var bounds = new Rect(Bounds.Size);
-        context.FillRectangle(Plate, bounds);
-        if (bounds.Width < 50 || bounds.Height < 50)
-        {
-            return;
-        }
+    protected override void Advance(double seconds) =>
+        _shown = Gripping ? Tilt : LightGrips.Ease(_shown, Tilt, seconds, 0.12);
 
-        var angle = Math.Clamp(Tilt, 0, 89) * Math.PI / 180;
+    protected override void Draw(DrawingContext context, Rect bounds)
+    {
+        if (double.IsNaN(_shown)) _shown = Tilt;
+        var tilt = Math.Clamp(_shown, 0, 89);
+        var angle = tilt * Math.PI / 180;
         var cos = Math.Cos(angle);
         var tan = Math.Tan(angle);
         var unit = Math.Min(bounds.Width, bounds.Height * 0.9);
@@ -86,10 +91,19 @@ public sealed class TiltDiagram : Picture
         }
 
         context.DrawGeometry(BeamBrush, null, beamShape);
+
+        // Each ray, and bits of light falling down it at the same pace: on a tipped board they land further apart.
+        var gap = beam * BitGap;
+        var fallen = Seconds * FallSpeed * beam;
         for (var i = 0; i < Rays; i++)
         {
             var x = left + (beam * i / (Rays - 1));
-            context.DrawLine(RayPen, new Point(x, torchBottom), new Point(x, BoardY(x)));
+            var bottom = BoardY(x);
+            context.DrawLine(RayPen, new Point(x, torchBottom), new Point(x, bottom));
+            for (var y = torchBottom + ((fallen + (i * gap * 0.37)) % gap); y < bottom - 2; y += gap)
+            {
+                context.DrawEllipse(BitBrush, null, new Point(x, y), 2.2, 2.2);
+            }
         }
 
         // The flat position, dashed, and the angle between it and the board.
@@ -100,7 +114,7 @@ public sealed class TiltDiagram : Picture
         Mark("torch", new Rect(left - 8, torchTop, beam + 16, torchBottom - torchTop));
         Mark("patch", [new Point(left, BoardY(left)), new Point(right, BoardY(right))]);
         Mark("board", [boardA, boardB], pad: 2);
-        if (Tilt >= 3)
+        if (tilt >= 3)
         {
             var arcRadius = reach * 0.8;
             var arc = new StreamGeometry();
@@ -114,11 +128,17 @@ public sealed class TiltDiagram : Picture
 
             context.DrawGeometry(null, new Pen(DiagramText.Faint, 1), arc);
             var mid = angle / 2;
-            DiagramText.Draw(context, DiagramText.Format("Light_Degrees", Tilt.ToString("0")),
+            DiagramText.Draw(context, DiagramText.Format("Light_Degrees", tilt.ToString("0")),
                 new Point(pivot.X + ((arcRadius + 8) * Math.Cos(mid)), pivot.Y - ((arcRadius + 8) * Math.Sin(mid))), 13, DiagramText.Ink, 0, 0.5);
         }
 
         DrawFaceOn(context, bounds, beam, cos);
+
+        // Near the board's low end (in from it, clear of the face-on patch below): pushed down or lifted, the board turns
+        // about its middle.
+        var handle = new Point(pivot.X - (GripAlong * reach * cos), pivot.Y + (GripAlong * reach * Math.Sin(angle)));
+        Grip("board", handle, GripAxis.Free, DiagramText.Get("Light_Grip_Board"), at =>
+            Tilt = LightGrips.Snap(Math.Atan2(at.Y - pivot.Y, pivot.X - at.X) * 180 / Math.PI, 0, MostTilt, 1));
     }
 
     /// <summary>The lit patch seen face on: as wide as the beam, 1/cos as long, and cos as bright.</summary>

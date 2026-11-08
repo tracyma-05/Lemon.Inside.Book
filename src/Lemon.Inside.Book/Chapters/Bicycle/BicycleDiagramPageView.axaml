@@ -21,7 +21,7 @@
                         </DataTemplate>
                         <DataTemplate DataType="bicycle:HillSpread">
                             <bicycle:HillDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
-                                     Slope="{Binding Slope}" Sprocket="{Binding Sprocket}" AutomationProperties.Name="{loc:Localize Bicycle_Hill_Picture}" />
+                                     Slope="{Binding Slope}" Gear="{Binding Gear}" AutomationProperties.Name="{loc:Localize Bicycle_Hill_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="bicycle:FreewheelSpread">
                             <bicycle:FreewheelDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"

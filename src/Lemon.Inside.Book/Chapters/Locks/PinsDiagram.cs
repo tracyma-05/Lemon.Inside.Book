@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,17 +11,22 @@ namespace Lemon.Inside.Book.Chapters.Locks;
 /// <summary>
 /// Spread 1: a pin-tumbler lock cut open from the side, the key sliding in from the left. Each key pin rides up and
 /// down on the key's cuts; under the lock, a dot for each pin shows how far its top is from the shear line. When all
-/// five are on it, the plug turns (shown from the front, top left).
+/// five are on it, the plug turns (shown from the front, top left). The reader slides the key in and out by its bow and
+/// taps under the bow to swap it for the other key; the key glides rather than jumps, so each pin is seen riding up
+/// and down the slopes of the cuts on its way.
 /// </summary>
 public sealed class PinsDiagram : GearPicture
 {
     public static readonly StyledProperty<double> InsertProperty =
-        AvaloniaProperty.Register<PinsDiagram, double>(nameof(Insert), 0.35);
+        AvaloniaProperty.Register<PinsDiagram, double>(nameof(Insert), 0.35, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> WrongProperty =
-        AvaloniaProperty.Register<PinsDiagram, bool>(nameof(Wrong));
+        AvaloniaProperty.Register<PinsDiagram, bool>(nameof(Wrong), defaultBindingMode: BindingMode.TwoWay);
 
     private double _turn;
+
+    /// <summary>How far the key is in as drawn, easing toward the value set.</summary>
+    private double _insert = double.NaN;
 
     static PinsDiagram()
     {
@@ -42,12 +49,17 @@ public sealed class PinsDiagram : GearPicture
 
     private int[] Key => Wrong ? PinsSpread.WrongCuts : PinsSpread.LockCuts;
 
-    protected override void Advance(double seconds) =>
-        _turn = LocksParts.Ease(_turn, PinTumbler.Turns(PinsSpread.LockCuts, Key, Insert) ? 1 : 0, 1.5, seconds);
+    private double SetInsert => Math.Clamp(Insert, 0, 1);
+
+    protected override void Advance(double seconds)
+    {
+        _insert = double.IsNaN(_insert) ? SetInsert : LocksParts.Ease(_insert, SetInsert, Math.Max(0.4, Math.Abs(SetInsert - _insert) * 3), seconds);
+        _turn = LocksParts.Ease(_turn, PinTumbler.Turns(PinsSpread.LockCuts, Key, _insert) ? 1 : 0, 1.5, seconds);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var insert = Math.Clamp(Insert, 0, 1);
+        var insert = double.IsNaN(_insert) ? SetInsert : _insert;
 
         // The lock on the right, the key coming in from the left (its bow may run off the edge while it is out).
         var span = LocksParts.LockEnd + PinTumbler.KeyLength + 6;
@@ -58,7 +70,8 @@ public sealed class PinsDiagram : GearPicture
         var (plug, shell) = LocksParts.DrawBody(context, s);
         Mark("shell", shell);
         Mark("plug", plug);
-        LocksParts.DrawKey(context, s, Key, -(1 - insert) * PinTumbler.KeyLength);
+        var shoulder = -(1 - insert) * PinTumbler.KeyLength;
+        LocksParts.DrawKey(context, s, Key, shoulder);
 
         var gaps = PinTumbler.Gaps(PinsSpread.LockCuts, Key, insert);
         for (var i = 0; i < PinTumbler.Pins; i++)
@@ -98,5 +111,16 @@ public sealed class PinsDiagram : GearPicture
         LocksParts.DrawFront(context, front, radius, _turn);
         DiagramText.Draw(context, DiagramText.Get(_turn > 0.5 ? "Locks_Pins_Turns" : "Locks_Pins_Front"),
             new Point(front.X + radius + 10, front.Y), 12, _turn > 0.5 ? DiagramText.Gold : DiagramText.Faint, 0, 0.5, bold: _turn > 0.5);
+
+        // The reader's handles: the key's bow, slid in or out (kept on the picture while the key is nearly out), and a
+        // tap just under it to swap the key for the other one.
+        var bowX = Math.Max(bounds.X + 16, s.At(shoulder - 6.5, 0).X);
+        Grip("insert", new Point(bowX, s.At(0, PinTumbler.Blade / 2).Y), GripAxis.Horizontal, DiagramText.Get("Locks_Grip_Insert"),
+            at => Insert = InsertFor((at.X - origin.X) / scale));
+        Grip("swap", new Point(bowX, s.At(0, -6.5).Y), GripAxis.Tap, DiagramText.Get("Locks_Grip_SwapKey"), _ => Wrong = !Wrong);
     }
+
+    /// <summary>How far the key is in with its bow's middle <paramref name="bowX"/> mm from the lock's face, snapped like the slider.</summary>
+    internal static double InsertFor(double bowX) =>
+        Math.Clamp(Math.Round((1 + ((bowX + 6.5) / PinTumbler.KeyLength)) / 0.02) * 0.02, 0, 1);
 }

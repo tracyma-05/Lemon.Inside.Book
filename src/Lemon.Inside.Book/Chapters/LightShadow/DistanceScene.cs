@@ -1,19 +1,23 @@
 using System.Numerics;
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
 
 /// <summary>
 /// Spread 3, in 3D: a small lamp and the light that goes through one square a metre away. Further out the same
-/// light covers a bigger frame: 4 squares at 2 m, 9 at 3 m, so each square gets less. Drag to look round.
+/// light covers a bigger frame: 4 squares at 2 m, 9 at 3 m, so each square gets less. Drag to look round; drag the
+/// grip on the frame's top edge to slide it along the light. The scene has nothing to light (all of it is drawn flat
+/// on top), so the frame can glide to a new distance cheaply: it eases there over a moment, then stops redrawing.
 /// </summary>
 public sealed class DistanceScene : SceneView
 {
     public static readonly StyledProperty<double> DistanceProperty =
-        AvaloniaProperty.Register<DistanceScene, double>(nameof(Distance), 2);
+        AvaloniaProperty.Register<DistanceScene, double>(nameof(Distance), 2, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Side of the square the light passes through at 1 m.</summary>
     private const float Square = 0.5f;
@@ -23,6 +27,14 @@ public sealed class DistanceScene : SceneView
     private static readonly IPen GridPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 1);
     private static readonly IPen GhostPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x40, 0xE6, 0xEA, 0xF2)), 1, new ImmutableDashStyle([3, 4], 0));
     private static readonly IPen AxisPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x60, 0xE6, 0xEA, 0xF2)), 1);
+
+    /// <summary>The slider's range, in metres.</summary>
+    private const double MinDistance = 1;
+    private const double MaxDistance = 4;
+
+    /// <summary>The distance drawn, easing toward <see cref="Distance"/> (NaN until the first frame, which starts there).</summary>
+    private double _shown = double.NaN;
+    private double _lastTick = double.NaN;
 
     static DistanceScene()
     {
@@ -46,9 +58,24 @@ public sealed class DistanceScene : SceneView
 
     protected override Vector3[] ComputeRadiance(bool coarse) => [];
 
+    /// <summary>Eases the frame toward the chosen distance; redraws only while it is on its way.</summary>
+    protected override void Tick(double seconds)
+    {
+        var step = double.IsNaN(_lastTick) ? 0 : Math.Min(seconds - _lastTick, 0.1);
+        _lastTick = seconds;
+        if (double.IsNaN(_shown) || Math.Abs(_shown - Distance) < 1e-4) return;
+
+        _shown = Gripping || Math.Abs(_shown - Distance) < 0.003 ? Distance : LightGrips.Ease(_shown, Distance, step, 0.1);
+        InvalidateVisual();
+    }
+
+    /// <summary>The middle of the frame's top edge <paramref name="metres"/> from the lamp, where its grip is.</summary>
+    private static Vector3 TopMiddle(double metres) => Lamp + new Vector3((float)metres, (float)metres * Square / 2, 0);
+
     protected override void DrawOverlay(DrawingContext context, Rect bounds)
     {
-        var d = (float)Math.Clamp(Distance, 0.5, 4.5);
+        if (double.IsNaN(_shown)) _shown = Distance;
+        var d = (float)Math.Clamp(_shown, 0.5, 4.5);
         Point? P(Vector3 v) => Project(v, bounds);
 
         // The line along which the light travels, with a dashed frame at each whole metre.
@@ -94,6 +121,13 @@ public sealed class DistanceScene : SceneView
         DiagramText.Draw(context,
             DiagramText.Format("Light_Distance_Readout", (d * d).ToString("0.0"), (share * 100).ToString("0")),
             new Point(bounds.X + 16, bounds.Bottom - 16), 13, DiagramText.Ink, 0, 1);
+
+        // Slide the frame along the light by its top edge.
+        if (P(TopMiddle(d)) is { } handle)
+        {
+            Grip("frame", LightGrips.Inside(handle, bounds), GripAxis.Free, DiagramText.Get("Light_Grip_Frame"), at =>
+                Distance = LightGrips.Snap(LightGrips.Nearest(m => P(TopMiddle(m)), MinDistance, MaxDistance, at), MinDistance, MaxDistance, 0.1));
+        }
     }
 
     /// <summary>The corners of the light's frame <paramref name="metres"/> from the lamp.</summary>

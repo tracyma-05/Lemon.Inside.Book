@@ -121,6 +121,100 @@ public sealed class CarTests
         }
     }
 
+    [Fact]
+    public void TheGrips_TurnWhereTheyAreDraggedIntoTheSpreadsValues()
+    {
+        // The crank's bearing drops as the rod grows, so a lower drag means a longer rod, within the slider's ends.
+        var bounds = new Avalonia.Rect(0, 0, 600, 700);
+        var shortest = CrankDiagram.RodForBearing(bounds, -1000);
+        var longest = CrankDiagram.RodForBearing(bounds, 5000);
+        Assert.Equal(1.5, shortest, 9);
+        Assert.Equal(5, longest, 9);
+        Assert.True(CrankDiagram.RodForBearing(bounds, 400) < CrankDiagram.RodForBearing(bounds, 450));
+
+        // A flywheel's mass goes as its radius squared: half the widest rim is a quarter of the heaviest.
+        var widest = Math.Min(600 * 0.24, 700 * 0.2);
+        Assert.Equal(3, CylindersDiagram.HeftForRim(bounds, widest), 9);
+        Assert.Equal(0.8, CylindersDiagram.HeftForRim(bounds, widest / 2), 9);
+        Assert.Equal(0.2, CylindersDiagram.HeftForRim(bounds, 0), 9);
+
+        // The pressure plate is fully back a little before the pedal reaches the floor.
+        Assert.Equal(0, ClutchDiagram.PedalForGap(-1), 9);
+        Assert.Equal(0.8, ClutchDiagram.PedalForGap(1), 9);
+        Assert.Equal(1, ClutchDiagram.PedalForGap(2), 9);
+
+        // Steering goes as one over the radius: half as far over is twice as wide a bend.
+        Assert.Equal(4, BendDiagram.RadiusForSteer(100, 100), 9);
+        Assert.Equal(8, BendDiagram.RadiusForSteer(50, 100), 9);
+        Assert.Equal(40, BendDiagram.RadiusForSteer(0, 100), 9);
+        Assert.Equal(40, BendDiagram.RadiusForSteer(-30, 100), 9);
+
+        Assert.Equal(IceSpread.DryGrip, IceDiagram.GripForIce(0), 9);
+        Assert.Equal(0.05, IceDiagram.GripForIce(1), 9);
+        Assert.Equal(0.05, IceDiagram.GripForIce(3), 9);
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Car");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Car");
+        var car = Assert.IsType<CarTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Car;
+        Avalonia.Point Far(Lemon.Inside.Book.Controls.Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Lemon.Inside.Book.Controls.Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Lemon.Inside.Book.Controls.Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var crank = Open(0);
+        crank.DragGrip("rod", Far(crank, "rod", 0, 2000));
+        Assert.Equal(5, car.Crank.Rod, 9);
+        crank.DragGrip("rod", Far(crank, "rod", 0, -2000));
+        Assert.Equal(1.5, car.Crank.Rod, 9);
+
+        var cam = Open(1);
+        cam.DragGrip("lift", Far(cam, "lift", 0, -2000));
+        Assert.Equal(12, car.Cam.Lift, 9);
+        cam.DragGrip("duration", Far(cam, "duration", -2000, 0));
+        Assert.Equal(180, car.Cam.Duration, 9);
+
+        var cylinders = Open(2);
+        cylinders.DragGrip("count", default);
+        Assert.Equal(2, car.Cylinders.Count);
+        cylinders.DragGrip("flywheel", Far(cylinders, "flywheel", 0, -2000));
+        Assert.Equal(3, car.Cylinders.Flywheel, 9);
+
+        var clutch = Open(3);
+        clutch.DragGrip("pedal", Far(clutch, "pedal", -2000, 0));
+        Assert.Equal(0, car.Clutch.Pedal, 9);
+        clutch.DragGrip("pedal", Far(clutch, "pedal", 2000, 0));
+        Assert.Equal(1, car.Clutch.Pedal, 9);
+
+        var bend = Open(4);
+        bend.DragGrip("steer", Far(bend, "steer", -2000, 0));
+        Assert.Equal(4, car.Bend.Radius, 9);
+        bend.DragGrip("steer", Far(bend, "steer", 2000, 0));
+        Assert.Equal(40, car.Bend.Radius, 9);
+
+        var ice = Open(5);
+        ice.DragGrip("ice", Far(ice, "ice", 2000, 0));
+        Assert.Equal(0.05, car.Ice.LeftGrip, 9);
+        ice.DragGrip("lock", default);
+        Assert.True(car.Ice.Locked);
+
+        // Every part the walkthroughs ring is still marked with the grips on top.
+        Frames(5);
+        Assert.Contains("diff", ice.MarkedParts);
+        Snapshot(window, "car-6-gripped");
+        window.Close();
+    }
+
     [AvaloniaFact]
     public void EverySpread_DrawsItsPicture()
     {

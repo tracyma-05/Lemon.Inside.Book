@@ -1,6 +1,8 @@
 using Avalonia.Media.Immutable;
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,15 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 1: a gold gear turning a grey one, their rolling circles dashed, and how many turns each has made since the
-/// teeth were last changed.
+/// teeth were last changed. A grip on top of each gear's rolling circle drags it bigger or smaller (more or fewer teeth).
 /// </summary>
 public sealed class RatioDiagram : GearPicture
 {
     public static readonly StyledProperty<int> DriverTeethProperty =
-        AvaloniaProperty.Register<RatioDiagram, int>(nameof(DriverTeeth), 12);
+        AvaloniaProperty.Register<RatioDiagram, int>(nameof(DriverTeeth), 12, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<int> DrivenTeethProperty =
-        AvaloniaProperty.Register<RatioDiagram, int>(nameof(DrivenTeeth), 30);
+        AvaloniaProperty.Register<RatioDiagram, int>(nameof(DrivenTeeth), 30, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Turns of the gold gear per second.</summary>
     public const double DriverSpeed = 0.2;
@@ -54,15 +56,26 @@ public sealed class RatioDiagram : GearPicture
 
     protected override void Advance(double seconds) => _turns += DriverSpeed * seconds;
 
-    protected override void Draw(DrawingContext context, Rect bounds)
+    /// <summary>The slider ranges of the two gears' teeth.</summary>
+    private const int FewestTeeth = 8, MostDriver = 30, MostDriven = 60;
+
+    /// <summary>Pixels per module and the two axles for these teeth.</summary>
+    private static (double Scale, Point C1, Point C2) Layout(Rect bounds, int z1, int z2)
     {
-        int z1 = DriverTeeth, z2 = DrivenTeeth;
         double r1 = GearGeometry.PitchRadius(z1), r2 = GearGeometry.PitchRadius(z2);
         var width = r1 + r2 + r1 + r2 + 4;
         var scale = Math.Min(bounds.Width * 0.9 / width, bounds.Height * 0.66 / ((2 * Math.Max(r1, r2)) + 2));
         var y = bounds.Height * 0.44;
         var c1 = new Point(bounds.Center.X - ((r1 + r2 + r1 + r2) * scale / 2) + (r1 * scale), y);
-        var c2 = new Point(c1.X + ((r1 + r2) * scale), y);
+        return (scale, c1, new Point(c1.X + ((r1 + r2) * scale), y));
+    }
+
+    protected override void Draw(DrawingContext context, Rect bounds)
+    {
+        int z1 = DriverTeeth, z2 = DrivenTeeth;
+        double r1 = GearGeometry.PitchRadius(z1), r2 = GearGeometry.PitchRadius(z2);
+        var (scale, c1, c2) = Layout(bounds, z1, z2);
+        var y = c1.Y;
 
         // The gold gear turns clockwise on screen; the grey one follows the other way.
         var a1 = -2 * Math.PI * _turns;
@@ -73,6 +86,14 @@ public sealed class RatioDiagram : GearPicture
         DrawCircle(context, c2, r2 * scale, Circle);
         Mark("driver", c1, (r1 + 1) * scale);
         Mark("driven", c2, (r2 + 1) * scale);
+
+        // A grip on top of each rolling circle: drag it up for a bigger gear, down for a smaller one.
+        Grip("driverTeeth", new Point(c1.X, y - (r1 * scale)), GripAxis.Vertical, DiagramText.Get("Gears_Grip_DriverTeeth"),
+            at => DriverTeeth = GearsGrips.Nearest(FewestTeeth, MostDriver, y - at.Y,
+                z => GearGeometry.PitchRadius(z) * Layout(bounds, z, DrivenTeeth).Scale));
+        Grip("drivenTeeth", new Point(c2.X, y - (r2 * scale)), GripAxis.Vertical, DiagramText.Get("Gears_Grip_DrivenTeeth"),
+            at => DrivenTeeth = GearsGrips.Nearest(FewestTeeth, MostDriven, y - at.Y,
+                z => GearGeometry.PitchRadius(z) * Layout(bounds, DriverTeeth, z).Scale));
 
         var label = y + ((Math.Max(r1, r2) + 2.5) * scale);
         var text = Math.Max(12, Math.Min(15, bounds.Width / 40));

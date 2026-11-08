@@ -1,25 +1,30 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
 using static Lemon.Inside.Book.Chapters.Weighing.WeighingParts;
+using Bounce = Lemon.Inside.Book.Chapters.Bridges.Bounce;
 
 namespace Lemon.Inside.Book.Chapters.Weighing;
 
 /// <summary>
 /// Spread 6: the same bag weighed two ways, on the Earth, the Moon or Mars, in centimetres. On the left a spring scale
 /// stretches as far as gravity pulls; on the right a balance compares the bag with iron weights, both pulled alike, and
-/// stays level wherever it is.
+/// stays level wherever it is. Travel to another world and the bag bobs on the spring to its new stretch (at the
+/// same pace everywhere: a spring's bobbing hangs on the mass, not on gravity), while the balance does not stir. The
+/// reader drags the bag's bottom down for a heavier bag and taps the ground to travel on.
 /// </summary>
 public sealed class MoonDiagram : GearPicture
 {
     public static readonly StyledProperty<double> MassProperty =
-        AvaloniaProperty.Register<MoonDiagram, double>(nameof(Mass), 1);
+        AvaloniaProperty.Register<MoonDiagram, double>(nameof(Mass), 1, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<int> PlaceProperty =
-        AvaloniaProperty.Register<MoonDiagram, int>(nameof(Place));
+        AvaloniaProperty.Register<MoonDiagram, int>(nameof(Place), defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly IImmutableBrush[] Grounds =
     [
@@ -27,6 +32,9 @@ public sealed class MoonDiagram : GearPicture
         new ImmutableSolidColorBrush(Color.FromRgb(0x84, 0x84, 0x8A)),
         new ImmutableSolidColorBrush(Color.FromRgb(0x9A, 0x52, 0x32)),
     ];
+
+    /// <summary>What the spring is drawn reading, kg, bobbing toward what it reads; null until the first frame.</summary>
+    private Bounce? _reads;
 
     static MoonDiagram()
     {
@@ -47,13 +55,21 @@ public sealed class MoonDiagram : GearPicture
         set => SetValue(PlaceProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double Settled => Worlds.SpringReads(Math.Clamp(Mass, 0.5, 5), Math.Clamp(Place, 0, 2));
+
+    /// <summary>The bag bobs at √(stiffness / mass), slowed to be seen: the same on every world, slower for a heavier bag.</summary>
+    protected override void Advance(double seconds)
+    {
+        var frequency = Math.Clamp(Math.Sqrt(9.81 / (Spring.PerKg / 100)) / 4 / Math.Sqrt(Math.Clamp(Mass, 0.5, 5)), 2, 10);
+        _reads = (_reads ?? Bounce.At(Settled)).Step(Settled, seconds, frequency, 0.08);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var mass = Math.Clamp(Mass, 0.5, 5);
         var place = Math.Clamp(Place, 0, 2);
         var springReads = Worlds.SpringReads(mass, place);
+        var bobbing = Math.Max(0, (_reads ??= Bounce.At(Settled)).Value);
         var scale = Math.Min((bounds.Width - 50) / 84, (bounds.Height - 150) / 54);
         var v = new View(new Point(bounds.Center.X, bounds.Center.Y + (24 * scale)), scale);
         var bagSize = 6 + (mass * 1.2);
@@ -68,7 +84,7 @@ public sealed class MoonDiagram : GearPicture
         // Left: a spring scale on a stand.
         context.DrawRectangle(Wood, Edge, v.Box(-38, 0, -36, 46));
         context.DrawRectangle(Wood, Edge, v.Box(-38, 44, -20, 46));
-        var bottom = 38 - (springReads * Spring.PerKg);
+        var bottom = 38 - (bobbing * Spring.PerKg);
         var coil = DrawCoil(context, v.At(-26, 44), v.At(-26, bottom), 3 * scale, 10, SteelBrush);
         Mark("spring", coil, 4);
         var plate = v.Box(-20, 38 - (10 * Spring.PerKg) - 1, -16, 44);
@@ -112,5 +128,14 @@ public sealed class MoonDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Format("Weighing_Moon_BalanceLabel", Kilos(Worlds.BalanceReads(mass), "0.##")), new Point(v.At(cx, 0).X, v.At(0, 52).Y), 13,
             DiagramText.Gold, 0.5, 0, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Weighing_Moon_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the bag's bottom, dragged down for a heavier bag (it settles where the pointer is), and
+        // the ground, tapped to travel on to the next world.
+        double BagBottom(double kg) =>
+            v.At(0, 38 - (Worlds.SpringReads(kg, place) * Spring.PerKg) - 2.5).Y + ((6 + (kg * 1.2)) * 1.1 * scale);
+        Grip("mass", new Point(bag.Center.X, bag.Bottom), GripAxis.Vertical, DiagramText.Get("Weighing_Grip_Bag"),
+            at => Mass = Math.Round(Solve(BagBottom, at.Y, 0.5, 5) * 10) / 10);
+        Grip("place", new Point(bounds.Right - 34, ground.Top + 22), GripAxis.Tap, DiagramText.Get("Weighing_Grip_Travel"),
+            _ => Place = (Math.Clamp(Place, 0, 2) + 1) % 3);
     }
 }

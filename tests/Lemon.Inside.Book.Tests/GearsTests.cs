@@ -4,6 +4,7 @@ using Avalonia.VisualTree;
 using Avalonia;
 using Lemon.Inside.Book.Chapters.Gears;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
@@ -211,6 +212,129 @@ public sealed class GearsTests
         model.GoToPage(BookContents.SpreadPage(chapter, 5));
         Frames(3);
         Snapshot(window, "gears-6-carrier-held");
+        window.Close();
+    }
+
+    [Fact]
+    public void AGearDraggedRound_FollowsTheFinger_WithoutJumpingATurn()
+    {
+        Assert.Equal((6 * Math.PI) + 0.3, GearsGrips.Follow((6 * Math.PI) + 0.1, 0.3), 9);
+        Assert.Equal(Math.PI + 0.1, GearsGrips.Follow(Math.PI - 0.1, -Math.PI + 0.1), 9); // across the left, on round
+        Assert.Equal(Math.PI / 2, GearsGrips.AngleOf(new Point(10, 10), new Point(10, 0)), 9); // straight up the screen
+        Assert.Equal(17, GearsGrips.Nearest(8, 30, 17 * 3.04, z => z * 3));
+        Assert.Equal(8, GearsGrips.Nearest(8, 30, -40, z => z * 3));
+    }
+
+    [Fact]
+    public void ThePencilsDistance_SaysHowMuchStringIsOff()
+    {
+        foreach (var degrees in new[] { 0.0, 45, 120, 200 })
+        {
+            var t = degrees * Math.PI / 180;
+            var (end, _) = GearGeometry.Unwind(1, t);
+            Assert.Equal(degrees, InvoluteDiagram.UnwoundAt(Length(end)), 6);
+        }
+
+        Assert.Equal(0, InvoluteDiagram.UnwoundAt(0.5)); // inside the can
+        Assert.Equal(240, InvoluteDiagram.UnwoundAt(50)); // the slider's top
+    }
+
+    [Fact]
+    public void TheLineOfActionsSlant_IsThePressureAngle_AndATapAddsATrainStep()
+    {
+        var twenty = 20 * Math.PI / 180;
+        Assert.Equal(20, MeshDiagram.PressureToward(new Vector(Math.Sin(twenty), Math.Cos(twenty))), 9);
+        Assert.Equal(20, MeshDiagram.PressureToward(new Vector(-Math.Sin(twenty), -Math.Cos(twenty))), 9);
+        Assert.Equal(30, MeshDiagram.PressureToward(new Vector(1, 0)));
+        Assert.Equal(14, MeshDiagram.PressureToward(new Vector(0, 1)));
+        Assert.Equal([2, 3, 4, 1], new[] { 1, 2, 3, 4 }.Select(TrainDiagram.NextSteps));
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Gears");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Gears");
+        var gears = Assert.IsType<GearsTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Gears;
+        Point Far(Picture picture, string grip, double dx, double dy) => picture.GripCentre(grip)!.Value + new Vector(dx, dy);
+
+        // A quarter turn clockwise on screen about the part's middle.
+        Point Quarter(Picture picture, string grip, string part)
+        {
+            var c = picture.PartCentre(part)!.Value;
+            var d = picture.GripCentre(grip)!.Value - c;
+            return c + new Vector(-d.Y, d.X);
+        }
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var ratio = Open(0);
+        ratio.DragGrip("driverTeeth", Far(ratio, "driverTeeth", 0, -2000));
+        Assert.Equal(30, gears.Ratio.DriverTeeth);
+        Frames(1);
+        ratio.DragGrip("drivenTeeth", Far(ratio, "drivenTeeth", 0, 2000));
+        Assert.Equal(8, gears.Ratio.DrivenTeeth);
+
+        var torque = Assert.IsType<TorqueDiagram>(Open(1));
+        torque.DragGrip("drivenTeeth", Far(torque, "drivenTeeth", 0, 2000));
+        Assert.Equal(12, gears.Torque.DrivenTeeth);
+        Frames(1);
+        var cranked = torque.Turns;
+        torque.DragGrip("crank", Quarter(torque, "crank", "crank"));
+        Assert.InRange(torque.Turns - cranked, 0.23, 0.27);
+
+        var involute = Open(2);
+        involute.DragGrip("pencil", Far(involute, "pencil", 2000, 0));
+        Assert.Equal(240, gears.Involute.Unwound, 9);
+        Frames(1);
+        involute.DragGrip("pencil", involute.PartCentre("can")!.Value);
+        Assert.Equal(0, gears.Involute.Unwound, 9);
+
+        var mesh = Assert.IsType<MeshDiagram>(Open(3));
+        mesh.DragGrip("pressure", Far(mesh, "pressure", 0, -2000));
+        Assert.Equal(14, gears.Mesh.PressureAngle, 9);
+        Frames(1);
+        mesh.DragGrip("pressure", Far(mesh, "pressure", 2000, 0));
+        Assert.Equal(30, gears.Mesh.PressureAngle, 9);
+        Frames(1);
+        var angle = mesh.Angle;
+        mesh.DragGrip("turn", Far(mesh, "turn", 0, 60));
+        Assert.Equal(0, gears.Mesh.Speed, 9);
+        Assert.NotEqual(angle, mesh.Angle);
+
+        var train = Assert.IsType<TrainDiagram>(Open(4));
+        gears.Train.Steps = 2;
+        Frames(1);
+        train.DragGrip("step", default);
+        Assert.Equal(3, gears.Train.Steps);
+        Frames(1);
+        var turned = train.Turns;
+        train.DragGrip("turn", Quarter(train, "turn", "input"));
+        Assert.InRange(train.Turns - turned, 0.23, 0.27);
+
+        var planets = Open(5);
+        planets.DragGrip("holdSun", default);
+        Assert.Equal(PlanetHeld.Sun, gears.Planetary.Held);
+        Frames(1);
+        planets.DragGrip("holdCarrier", default);
+        Assert.Equal(PlanetHeld.Carrier, gears.Planetary.Held);
+        Frames(1);
+        planets.DragGrip("holdRing", default);
+        Assert.True(gears.Planetary.IsRingHeld);
+        Frames(1);
+        planets.DragGrip("sunTeeth", Far(planets, "sunTeeth", 0, -2000));
+        Assert.Equal(4, gears.Planetary.SunStep);
+        Frames(1);
+        planets.DragGrip("sunTeeth", Far(planets, "sunTeeth", 0, 2000));
+        Assert.Equal(0, gears.Planetary.SunStep);
+
         window.Close();
     }
 

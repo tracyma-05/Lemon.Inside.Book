@@ -6990,4 +6990,1087 @@
   <data name="Narr_Friction_Oil_Part_Chart" xml:space="preserve">
     <value>Friction against speed for the oiled surfaces, with the speed you have chosen marked.</value>
   </data>
+  <data name="Chapter_Canals" xml:space="preserve">
+    <value>Canals and locks</value>
+  </data>
+  <data name="Canals_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Canals_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Canals_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Canals_Tonnes" xml:space="preserve">
+    <value>{0} t</value>
+  </data>
+  <data name="Canals_Cubic" xml:space="preserve">
+    <value>{0} m³</value>
+  </data>
+  <data name="Canals_Minutes" xml:space="preserve">
+    <value>{0} min</value>
+  </data>
+  <data name="Canals_Centimetres" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Canals_Speed" xml:space="preserve">
+    <value>{0} km/h</value>
+  </data>
+  <data name="Canals_Kgf" xml:space="preserve">
+    <value>{0} kg</value>
+  </data>
+  <data name="Canals_Lock_Title" xml:space="preserve">
+    <value>A step of water</value>
+  </data>
+  <data name="Canals_Lock_P1" xml:space="preserve">
+    <value>Water will not run uphill, so a canal climbs a hill in steps. Each step is a lock: a stone chamber with gates at both ends. A boat going up sails in from the lower canal, the gates close behind it, and then the chamber is filled from the canal above until its water, and the boat floating on it, reach the upper level.</value>
+  </data>
+  <data name="Canals_Lock_P2" xml:space="preserve">
+    <value>The water comes in through paddles, small openings low in the upper gate. No pump is needed: the upper canal's own weight pushes water through them. At first the difference is big and the water rushes in; as the levels close the push weakens, and the last metre takes three times as long as the first. More paddles fill the lock faster, but stir the boat about more.</value>
+  </data>
+  <data name="Canals_Lock_Deeper" xml:space="preserve">
+    <value>Going down is the same in reverse: the paddles in the lower gate let the chamber's water out into the canal below. The gates can only be opened once the levels on both sides are equal, so the lock keeper always waits for the water to settle. The water speed through a paddle depends only on the difference in level, just like a tap under a water tower: about seven and a half metres a second for a three-metre difference.</value>
+  </data>
+  <data name="Canals_Lock_Paddles" xml:space="preserve">
+    <value>Paddles open</value>
+  </data>
+  <data name="Canals_Lock_Fill" xml:space="preserve">
+    <value>Open the upper paddles</value>
+  </data>
+  <data name="Canals_Lock_Readout" xml:space="preserve">
+    <value>With these paddles the lock fills in about {0}: the first metre takes {1}, the last {2}.</value>
+  </data>
+  <data name="Canals_Lock_Picture" xml:space="preserve">
+    <value>A lock cut lengthways: the lower canal, the chamber with a boat in it, and the upper canal, with paddles in the gates</value>
+  </data>
+  <data name="Canals_Lock_Upper" xml:space="preserve">
+    <value>upper canal</value>
+  </data>
+  <data name="Canals_Lock_Lower" xml:space="preserve">
+    <value>lower canal</value>
+  </data>
+  <data name="Canals_Lock_LevelLabel" xml:space="preserve">
+    <value>up {0} of {1} m (time 30× faster)</value>
+  </data>
+  <data name="Canals_Lock_Rule" xml:space="preserve">
+    <value>the weight of the upper canal does the lifting</value>
+  </data>
+  <data name="Narr_Canals_Lock_01" xml:space="preserve">
+    <value>A boat has sailed into the chamber from the lower canal.</value>
+  </data>
+  <data name="Narr_Canals_Lock_02" xml:space="preserve">
+    <value>The lower gates are shut behind it. The upper gates hold back the canal above, three metres higher.</value>
+  </data>
+  <data name="Narr_Canals_Lock_03" xml:space="preserve">
+    <value>Your turn: open the paddles in the upper gate.</value>
+  </data>
+  <data name="Narr_Canals_Lock_04" xml:space="preserve">
+    <value>With four paddles open the lock fills four times as fast, in about two minutes.</value>
+  </data>
+  <data name="Narr_Canals_Lock_05" xml:space="preserve">
+    <value>Why does the last metre take so much longer than the first?</value>
+  </data>
+  <data name="Canals_Lock_Quiz1" xml:space="preserve">
+    <value>The paddles slowly close by themselves</value>
+  </data>
+  <data name="Canals_Lock_Quiz2" xml:space="preserve">
+    <value>The difference in level is smaller, so the water is pushed through more gently</value>
+  </data>
+  <data name="Canals_Lock_Quiz3" xml:space="preserve">
+    <value>The boat gets in the way of the water</value>
+  </data>
+  <data name="Canals_Lock_Part_Boat" xml:space="preserve">
+    <value>Boat</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Boat" xml:space="preserve">
+    <value>It simply floats, and rises with the water.</value>
+  </data>
+  <data name="Canals_Lock_Part_Gates" xml:space="preserve">
+    <value>Gates</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Gates" xml:space="preserve">
+    <value>Heavy timber gates at each end. Only one end is ever open at a time.</value>
+  </data>
+  <data name="Canals_Lock_Part_Paddles" xml:space="preserve">
+    <value>Paddles</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Paddles" xml:space="preserve">
+    <value>Small openings low in the gates, wound open with a handle to let water through.</value>
+  </data>
+  <data name="Canals_Lock_Part_Chamber" xml:space="preserve">
+    <value>Chamber</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Chamber" xml:space="preserve">
+    <value>Thirty metres of stone-lined water that rises or falls three metres.</value>
+  </data>
+  <data name="Canals_Gates_Title" xml:space="preserve">
+    <value>Gates that the water shuts</value>
+  </data>
+  <data name="Canals_Gates_P1" xml:space="preserve">
+    <value>A lock's gates hold back a wall of water. Three metres of water presses on each leaf of the gates with about sixteen tonnes. No latch could hold that, so the gates are made so that the water does the holding: the two leaves meet in the middle at an angle, pointing upstream, like an arrowhead aimed into the higher water.</value>
+  </data>
+  <data name="Canals_Gates_P2" xml:space="preserve">
+    <value>The water pushes each leaf toward the other, and the harder it pushes, the tighter the two press together at their meeting edge, the mitre. Each leaf is squeezed along its length, as an arch is, and passes the push to the stone wall at its hinge. Point them the other way, and the same push would swing them open.</value>
+  </data>
+  <data name="Canals_Gates_Deeper" xml:space="preserve">
+    <value>Because of this, a lock gate cannot be opened while the levels differ: sixteen tonnes hold it shut. Once the water is level on both sides, the push vanishes and one person can swing a gate by leaning on its long balance beam, which reaches back over the towpath and also balances the gate's own weight on its hinge. The push grows with the square of the depth: twice the difference, four times the push.</value>
+  </data>
+  <data name="Canals_Gates_Head" xml:space="preserve">
+    <value>Difference in level</value>
+  </data>
+  <data name="Canals_Gates_Downstream" xml:space="preserve">
+    <value>Point the gates downstream instead</value>
+  </data>
+  <data name="Canals_Gates_Level" xml:space="preserve">
+    <value>The water is level on both sides: nothing pushes, and a person can open the gates.</value>
+  </data>
+  <data name="Canals_Gates_Readout" xml:space="preserve">
+    <value>The water presses each leaf with about {0}, squeezing them tighter together.</value>
+  </data>
+  <data name="Canals_Gates_Burst" xml:space="preserve">
+    <value>Pointed downstream, the {0} on each leaf swings the gates open, and the canal pours through.</value>
+  </data>
+  <data name="Canals_Gates_Picture" xml:space="preserve">
+    <value>A pair of mitre gates seen from above, meeting in a V that points into the higher water, with arrows of the water's push and long balance beams</value>
+  </data>
+  <data name="Canals_Gates_UpperSide" xml:space="preserve">
+    <value>higher water</value>
+  </data>
+  <data name="Canals_Gates_LowerSide" xml:space="preserve">
+    <value>{0} m lower</value>
+  </data>
+  <data name="Canals_Gates_SameSide" xml:space="preserve">
+    <value>the same level</value>
+  </data>
+  <data name="Canals_Gates_PushLabel" xml:space="preserve">
+    <value>about {0} t on each leaf</value>
+  </data>
+  <data name="Canals_Gates_BurstLabel" xml:space="preserve">
+    <value>pushed open!</value>
+  </data>
+  <data name="Canals_Gates_Rule" xml:space="preserve">
+    <value>pointed upstream, the push only shuts them tighter</value>
+  </data>
+  <data name="Narr_Canals_Gates_01" xml:space="preserve">
+    <value>Two gate leaves meet in the middle, pointing into the higher water.</value>
+  </data>
+  <data name="Narr_Canals_Gates_02" xml:space="preserve">
+    <value>Three metres of water presses on each leaf with about sixteen tonnes, pushing them together.</value>
+  </data>
+  <data name="Narr_Canals_Gates_03" xml:space="preserve">
+    <value>Your turn: point the gates downstream instead.</value>
+  </data>
+  <data name="Narr_Canals_Gates_04" xml:space="preserve">
+    <value>Pointed the right way again, and the levels made equal: now nothing pushes, and a person can open a gate with its balance beam.</value>
+  </data>
+  <data name="Narr_Canals_Gates_05" xml:space="preserve">
+    <value>Why do lock gates point upstream?</value>
+  </data>
+  <data name="Canals_Gates_Quiz1" xml:space="preserve">
+    <value>So that boats can see them from far away</value>
+  </data>
+  <data name="Canals_Gates_Quiz2" xml:space="preserve">
+    <value>So that they are easier to build</value>
+  </data>
+  <data name="Canals_Gates_Quiz3" xml:space="preserve">
+    <value>So that the water's push presses them together instead of swinging them open</value>
+  </data>
+  <data name="Canals_Gates_Part_Leaves" xml:space="preserve">
+    <value>Leaves</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Leaves" xml:space="preserve">
+    <value>Each is squeezed along its length, like a stone in an arch, and passes the push to the wall.</value>
+  </data>
+  <data name="Canals_Gates_Part_Mitre" xml:space="preserve">
+    <value>Mitre</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Mitre" xml:space="preserve">
+    <value>Where the leaves meet. The water's push presses them together here and seals the joint.</value>
+  </data>
+  <data name="Canals_Gates_Part_Water" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Water" xml:space="preserve">
+    <value>The higher water pushes harder the deeper it is: twice the difference, four times the push.</value>
+  </data>
+  <data name="Canals_Gates_Part_Beam" xml:space="preserve">
+    <value>Balance beam</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Beam" xml:space="preserve">
+    <value>A long timber arm to push on, which also balances the gate's weight on its hinge.</value>
+  </data>
+  <data name="Canals_Water_Title" xml:space="preserve">
+    <value>Every boat costs water</value>
+  </data>
+  <data name="Canals_Water_P1" xml:space="preserve">
+    <value>Each time a boat goes down through a lock, a chamberful of water goes down with it, and each time a boat comes up, a chamberful comes down from above to lift it. Here that is about five hundred and forty cubic metres a boat. All of it must be made up at the canal's highest stretch, the summit, from reservoirs, streams or pumps.</value>
+  </data>
+  <data name="Canals_Water_P2" xml:space="preserve">
+    <value>Some locks save water with side ponds: basins beside the chamber at different heights. Emptying the lock, the top slices of water are let into the ponds instead of down the canal; filling it, they are let back in. With two ponds the same size as the chamber, a boat uses only half a chamberful; with three, two-fifths.</value>
+  </data>
+  <data name="Canals_Water_Deeper" xml:space="preserve">
+    <value>Each pond can only take water from the slice of the chamber above it and give it back to the slice below that, so some water always has to go downhill: here, two slices' worth however many ponds there are. Water was often a canal's biggest worry. In dry summers, busy canals had to make boats wait so that several could share one filling of a lock.</value>
+  </data>
+  <data name="Canals_Water_Ponds" xml:space="preserve">
+    <value>Side ponds</value>
+  </data>
+  <data name="Canals_Water_Boats" xml:space="preserve">
+    <value>Boats a day</value>
+  </data>
+  <data name="Canals_Water_Readout" xml:space="preserve">
+    <value>Each boat uses {0} ({1}% of a chamberful); a day's boats use {2}.</value>
+  </data>
+  <data name="Canals_Water_Picture" xml:space="preserve">
+    <value>A lock chamber drawn full and cut into slices, side ponds beside it at the heights of the upper slices, the summit pound above, and a bar of the water each boat uses</value>
+  </data>
+  <data name="Canals_Water_SummitLabel" xml:space="preserve">
+    <value>summit: made up from reservoirs</value>
+  </data>
+  <data name="Canals_Water_LowerLabel" xml:space="preserve">
+    <value>lower canal</value>
+  </data>
+  <data name="Canals_Water_LostLabel" xml:space="preserve">
+    <value>goes downhill</value>
+  </data>
+  <data name="Canals_Water_PondLabel" xml:space="preserve">
+    <value>pond {0}</value>
+  </data>
+  <data name="Canals_Water_NoPonds" xml:space="preserve">
+    <value>no side ponds</value>
+  </data>
+  <data name="Canals_Water_BarLabel" xml:space="preserve">
+    <value>{0} m³ a boat · {1}%</value>
+  </data>
+  <data name="Canals_Water_DayLabel" xml:space="preserve">
+    <value>{0} boats a day: {1} m³</value>
+  </data>
+  <data name="Canals_Water_Rule" xml:space="preserve">
+    <value>side ponds keep the top slices for next time</value>
+  </data>
+  <data name="Narr_Canals_Water_01" xml:space="preserve">
+    <value>Without side ponds, every boat sends a whole chamberful of water downhill.</value>
+  </data>
+  <data name="Narr_Canals_Water_02" xml:space="preserve">
+    <value>That water must be made up at the summit, from reservoirs that collect rain and streams.</value>
+  </data>
+  <data name="Narr_Canals_Water_03" xml:space="preserve">
+    <value>Your turn: give the lock two side ponds.</value>
+  </data>
+  <data name="Narr_Canals_Water_04" xml:space="preserve">
+    <value>With three side ponds, a boat uses only two-fifths of a chamberful. The last two slices always go downhill.</value>
+  </data>
+  <data name="Narr_Canals_Water_05" xml:space="preserve">
+    <value>How do side ponds save water?</value>
+  </data>
+  <data name="Canals_Water_Quiz1" xml:space="preserve">
+    <value>They keep the chamber's upper slices of water to use again, instead of letting them go downhill</value>
+  </data>
+  <data name="Canals_Water_Quiz2" xml:space="preserve">
+    <value>They make the boats lighter</value>
+  </data>
+  <data name="Canals_Water_Quiz3" xml:space="preserve">
+    <value>They pump water back up to the summit</value>
+  </data>
+  <data name="Canals_Water_Part_Chamber" xml:space="preserve">
+    <value>Chamber</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Chamber" xml:space="preserve">
+    <value>Drawn full and cut into slices: what each slice of water does when the lock empties.</value>
+  </data>
+  <data name="Canals_Water_Part_Ponds" xml:space="preserve">
+    <value>Side ponds</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Ponds" xml:space="preserve">
+    <value>Each takes one slice on the way down and gives it back on the way up.</value>
+  </data>
+  <data name="Canals_Water_Part_Summit" xml:space="preserve">
+    <value>Summit</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Summit" xml:space="preserve">
+    <value>The highest stretch of the canal. Every drop that goes down must be put back here.</value>
+  </data>
+  <data name="Canals_Water_Part_Bar" xml:space="preserve">
+    <value>Water per boat</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Bar" xml:space="preserve">
+    <value>The water one boat uses, against a whole chamberful.</value>
+  </data>
+  <data name="Canals_Flight_Title" xml:space="preserve">
+    <value>Climbing a hill</value>
+  </data>
+  <data name="Canals_Flight_P1" xml:space="preserve">
+    <value>A hill twenty-four metres high could in principle be climbed in a single lock. But its chamber would be as deep as an eight-storey building, its gates enormous, and every boat would send twenty-four metres of water down. So canals climb hills in a flight of smaller locks, one after another, each with a short stretch of water between.</value>
+  </data>
+  <data name="Canals_Flight_P2" xml:space="preserve">
+    <value>With six locks each lifts four metres. A boat going down carries a chamberful of four metres with it, and that same water flows on down through every lock below, so a boat needs only a sixth of the water a single great lock would. The price is time: each lock takes about twelve minutes to work, so six take over an hour.</value>
+  </data>
+  <data name="Canals_Flight_Deeper" xml:space="preserve">
+    <value>In some flights the locks are built right against each other, the top gate of one being the bottom gate of the next, like a staircase. These save land but make passing harder: boats going up and boats going down cannot cross in the middle. Where a hill was too high even for a flight, engineers dug a tunnel through it or built a boat lift instead.</value>
+  </data>
+  <data name="Canals_Flight_Locks" xml:space="preserve">
+    <value>Locks in the flight</value>
+  </data>
+  <data name="Canals_Flight_Readout" xml:space="preserve">
+    <value>Each lock rises {0}; a boat takes {1} of water down from the top, and about {2} minutes to climb.</value>
+  </data>
+  <data name="Canals_Flight_Picture" xml:space="preserve">
+    <value>A canal climbing a 24-metre hill in a flight of locks, each a step of water between gates, with a boat at the bottom</value>
+  </data>
+  <data name="Canals_Flight_StepLabel" xml:space="preserve">
+    <value>{0} m a step</value>
+  </data>
+  <data name="Canals_Flight_BarLabel" xml:space="preserve">
+    <value>{0} m³ a boat</value>
+  </data>
+  <data name="Canals_Flight_TimeLabel" xml:space="preserve">
+    <value>about {0} minutes to climb</value>
+  </data>
+  <data name="Canals_Flight_Rule" xml:space="preserve">
+    <value>heights drawn three times steeper than life</value>
+  </data>
+  <data name="Narr_Canals_Flight_01" xml:space="preserve">
+    <value>This hill is twenty-four metres high. One lock would need a chamber as deep as an eight-storey building.</value>
+  </data>
+  <data name="Narr_Canals_Flight_02" xml:space="preserve">
+    <value>Two locks: each rises twelve metres, and a boat takes half the water.</value>
+  </data>
+  <data name="Narr_Canals_Flight_03" xml:space="preserve">
+    <value>Your turn: build a flight of at least six locks.</value>
+  </data>
+  <data name="Narr_Canals_Flight_04" xml:space="preserve">
+    <value>Each boat now takes a chamberful of only four metres down from the top, but the climb takes over an hour.</value>
+  </data>
+  <data name="Narr_Canals_Flight_05" xml:space="preserve">
+    <value>Why does a flight of small locks use less water than one big lock?</value>
+  </data>
+  <data name="Canals_Flight_Quiz1" xml:space="preserve">
+    <value>Small locks leak less</value>
+  </data>
+  <data name="Canals_Flight_Quiz2" xml:space="preserve">
+    <value>The boats in small locks are smaller</value>
+  </data>
+  <data name="Canals_Flight_Quiz3" xml:space="preserve">
+    <value>A boat takes down one small chamberful, which then passes through every lock below</value>
+  </data>
+  <data name="Canals_Flight_Part_Hill" xml:space="preserve">
+    <value>Hill</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Hill" xml:space="preserve">
+    <value>Twenty-four metres from bottom to top.</value>
+  </data>
+  <data name="Canals_Flight_Part_Locks" xml:space="preserve">
+    <value>Locks</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Locks" xml:space="preserve">
+    <value>Each a step of water between two gates. More locks, smaller steps.</value>
+  </data>
+  <data name="Canals_Flight_Part_Boat" xml:space="preserve">
+    <value>Boat</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Boat" xml:space="preserve">
+    <value>Waiting at the bottom for the first lock.</value>
+  </data>
+  <data name="Canals_Flight_Part_Water" xml:space="preserve">
+    <value>Water per boat</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Water" xml:space="preserve">
+    <value>One chamberful of one step's height, compared with a single lock the whole height of the hill.</value>
+  </data>
+  <data name="Canals_Lift_Title" xml:space="preserve">
+    <value>A lift for boats</value>
+  </data>
+  <data name="Canals_Lift_P1" xml:space="preserve">
+    <value>Instead of steps, a boat lift carries boats straight up and down in tanks of water. Two tanks hang from the ends of ropes over a great wheel, like the two sides of a lift and its counterweight, but here each tank is the other's counterweight. As one goes up, the other comes down.</value>
+  </data>
+  <data name="Canals_Lift_P2" xml:space="preserve">
+    <value>Surely a tank with a boat in it is heavier than one without? It is not. A floating boat pushes aside its own weight of water, and that water spills out over the tank's gate as the boat sails in. So the tank with a boat weighs exactly what it did before, and the two stay balanced. The motor only has to overcome friction, unless the water levels are allowed to differ.</value>
+  </data>
+  <data name="Canals_Lift_Deeper" xml:space="preserve">
+    <value>This is the same rule that makes boats float, used in reverse: whatever floats in the tank, its weight is exactly that of the water it pushed out. That is why the lift's operators watch the water level, not the boats: a few centimetres too much water in one tank adds many tonnes. A few great boat lifts have worked this way for over a century, some on wheels, some on pistons, some tilting like a seesaw.</value>
+  </data>
+  <data name="Canals_Lift_Boat" xml:space="preserve">
+    <value>Sail a boat into the left tank</value>
+  </data>
+  <data name="Canals_Lift_Extra" xml:space="preserve">
+    <value>Extra water in the left tank</value>
+  </data>
+  <data name="Canals_Lift_Even" xml:space="preserve">
+    <value>The tanks balance, {0} each: the motor only has to overcome friction.</value>
+  </data>
+  <data name="Canals_Lift_Uneven" xml:space="preserve">
+    <value>The left tank is {0} heavier: the motor must hold it.</value>
+  </data>
+  <data name="Canals_Lift_Picture" xml:space="preserve">
+    <value>A boat lift: two water-filled tanks hanging from a great wheel with a motor at its axle, a boat floating in the left one</value>
+  </data>
+  <data name="Canals_Lift_MotorLabel" xml:space="preserve">
+    <value>the motor holds {0} t</value>
+  </data>
+  <data name="Canals_Lift_EvenLabel" xml:space="preserve">
+    <value>balanced</value>
+  </data>
+  <data name="Canals_Lift_SpilledLabel" xml:space="preserve">
+    <value>its weight of water spilled out</value>
+  </data>
+  <data name="Canals_Lift_Rule" xml:space="preserve">
+    <value>a floating boat weighs the water it pushed out</value>
+  </data>
+  <data name="Narr_Canals_Lift_01" xml:space="preserve">
+    <value>Two tanks of water, each about five hundred and forty tonnes, hang from either side of this wheel.</value>
+  </data>
+  <data name="Narr_Canals_Lift_02" xml:space="preserve">
+    <value>Each is the other's counterweight: one goes up as the other comes down.</value>
+  </data>
+  <data name="Narr_Canals_Lift_03" xml:space="preserve">
+    <value>Your turn: sail a boat into the left tank.</value>
+  </data>
+  <data name="Narr_Canals_Lift_04" xml:space="preserve">
+    <value>The tanks still balance. But ten centimetres of extra water in one tank, and the motor must hold eighteen tonnes.</value>
+  </data>
+  <data name="Narr_Canals_Lift_05" xml:space="preserve">
+    <value>Why doesn't the boat make its tank heavier?</value>
+  </data>
+  <data name="Canals_Lift_Quiz1" xml:space="preserve">
+    <value>Boats are very light</value>
+  </data>
+  <data name="Canals_Lift_Quiz2" xml:space="preserve">
+    <value>It pushed out its own weight of water, which spilled over the gate</value>
+  </data>
+  <data name="Canals_Lift_Quiz3" xml:space="preserve">
+    <value>The wheel takes its weight</value>
+  </data>
+  <data name="Canals_Lift_Part_Tanks" xml:space="preserve">
+    <value>Tanks</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Tanks" xml:space="preserve">
+    <value>Watertight boxes with gates at their ends, carrying boats and water together.</value>
+  </data>
+  <data name="Canals_Lift_Part_Boat" xml:space="preserve">
+    <value>Boat</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Boat" xml:space="preserve">
+    <value>Floating, it weighs exactly as much as the water it pushed aside.</value>
+  </data>
+  <data name="Canals_Lift_Part_Wheel" xml:space="preserve">
+    <value>Wheel</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Wheel" xml:space="preserve">
+    <value>The two tanks hang from its ropes and balance each other.</value>
+  </data>
+  <data name="Canals_Lift_Part_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Motor" xml:space="preserve">
+    <value>With the tanks balanced, it only has to overcome friction to turn the wheel.</value>
+  </data>
+  <data name="Canals_Towing_Title" xml:space="preserve">
+    <value>One horse, one barge</value>
+  </data>
+  <data name="Canals_Towing_P1" xml:space="preserve">
+    <value>Before railways, heavy goods such as coal and stone went by canal, and a barge was pulled by a single horse walking along the towpath. On a road the same horse could pull a cart of only about a tonne and a half; on the canal it could pull a barge of thirty tonnes or more, at a walking pace.</value>
+  </data>
+  <data name="Canals_Towing_P2" xml:space="preserve">
+    <value>Water holds the barge up, so there is no rolling or sliding friction to fight, only the water's drag as the hull pushes through it. At a walking pace that drag is small. But it grows with the square of the speed: walk twice as fast and the horse must pull four times as hard, which it cannot keep up.</value>
+  </data>
+  <data name="Canals_Towing_Deeper" xml:space="preserve">
+    <value>The wake shows where the work goes: the faster the barge, the bigger the waves it makes, and the more they wash against the banks. Canals often had speed limits to protect their banks. A loaded barge also sits deeper and pushes more water aside, so its drag grows with its load too, though more slowly than its weight.</value>
+  </data>
+  <data name="Canals_Towing_Load" xml:space="preserve">
+    <value>The barge's load</value>
+  </data>
+  <data name="Canals_Towing_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Canals_Towing_Readout" xml:space="preserve">
+    <value>The barge needs a pull of {0}: within a horse's steady {1}. On a road that horse could pull about {2}.</value>
+  </data>
+  <data name="Canals_Towing_TooFast" xml:space="preserve">
+    <value>The barge needs a pull of {0}, more than a horse's steady {1}: it cannot keep this up. (On a road it could pull about {2}.)</value>
+  </data>
+  <data name="Canals_Towing_Picture" xml:space="preserve">
+    <value>A horse on a towpath pulling a loaded barge, seen from above, its wake spreading behind, and a bar of the pull needed against a horse's steady pull</value>
+  </data>
+  <data name="Canals_Towing_NeedsLabel" xml:space="preserve">
+    <value>the barge needs {0}</value>
+  </data>
+  <data name="Canals_Towing_HorseLabel" xml:space="preserve">
+    <value>a horse: {0}</value>
+  </data>
+  <data name="Canals_Towing_Rule" xml:space="preserve">
+    <value>twice the speed, four times the pull</value>
+  </data>
+  <data name="Narr_Canals_Towing_01" xml:space="preserve">
+    <value>Thirty tonnes of coal in one barge.</value>
+  </data>
+  <data name="Narr_Canals_Towing_02" xml:space="preserve">
+    <value>One horse pulls it at a walking pace, with about sixty kilograms of force. On a road it could pull only a tonne and a half.</value>
+  </data>
+  <data name="Narr_Canals_Towing_03" xml:space="preserve">
+    <value>Your turn: double the speed to eight kilometres an hour.</value>
+  </data>
+  <data name="Narr_Canals_Towing_04" xml:space="preserve">
+    <value>Four times the pull, more than a horse can keep up. Back at a walking pace, the wake is small and the horse can go all day.</value>
+  </data>
+  <data name="Narr_Canals_Towing_05" xml:space="preserve">
+    <value>Why could a horse pull so much more on a canal than on a road?</value>
+  </data>
+  <data name="Canals_Towing_Quiz1" xml:space="preserve">
+    <value>The water holds the barge up, and at a walking pace its drag is tiny</value>
+  </data>
+  <data name="Canals_Towing_Quiz2" xml:space="preserve">
+    <value>Canal horses were stronger</value>
+  </data>
+  <data name="Canals_Towing_Quiz3" xml:space="preserve">
+    <value>The current carried the barge along</value>
+  </data>
+  <data name="Canals_Towing_Part_Barge" xml:space="preserve">
+    <value>Barge</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Barge" xml:space="preserve">
+    <value>Held up by the water. Only the drag of pushing through it holds it back.</value>
+  </data>
+  <data name="Canals_Towing_Part_Horse" xml:space="preserve">
+    <value>Horse</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Horse" xml:space="preserve">
+    <value>It can pull about eighty kilograms of force steadily, all day.</value>
+  </data>
+  <data name="Canals_Towing_Part_Rope" xml:space="preserve">
+    <value>Towrope</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Rope" xml:space="preserve">
+    <value>Tied near the bow and run to the horse on the towpath.</value>
+  </data>
+  <data name="Canals_Towing_Part_Wake" xml:space="preserve">
+    <value>Wake</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Wake" xml:space="preserve">
+    <value>The waves the barge makes. The faster it goes, the bigger they grow, and the more pull they cost.</value>
+  </data>
+  <data name="Canals_Lock_Taller" xml:space="preserve">
+    <value>heights drawn three times taller than life</value>
+  </data>
+  <data name="Canals_Grip_FillUpper" xml:space="preserve">
+    <value>Tap to let water in from above</value>
+  </data>
+  <data name="Canals_Grip_EmptyLower" xml:space="preserve">
+    <value>Tap to let water out below</value>
+  </data>
+  <data name="Canals_Grip_Paddles" xml:space="preserve">
+    <value>Drag to open more paddles or fewer</value>
+  </data>
+  <data name="Canals_Grip_Head" xml:space="preserve">
+    <value>Drag the higher water up or down</value>
+  </data>
+  <data name="Canals_Grip_Flip" xml:space="preserve">
+    <value>Tap to turn the gates round</value>
+  </data>
+  <data name="Canals_Grip_AddPond" xml:space="preserve">
+    <value>Tap to dig a side pond here</value>
+  </data>
+  <data name="Canals_Grip_RemovePond" xml:space="preserve">
+    <value>Tap to fill in this side pond</value>
+  </data>
+  <data name="Canals_Grip_Boats" xml:space="preserve">
+    <value>Drag for more boats a day or fewer</value>
+  </data>
+  <data name="Canals_Grip_Step" xml:space="preserve">
+    <value>Drag the first step higher or lower</value>
+  </data>
+  <data name="Canals_Grip_Boat" xml:space="preserve">
+    <value>Tap to float a boat in or out</value>
+  </data>
+  <data name="Canals_Grip_Extra" xml:space="preserve">
+    <value>Drag to pour in extra water</value>
+  </data>
+  <data name="Canals_Grip_Load" xml:space="preserve">
+    <value>Drag to load more or less</value>
+  </data>
+  <data name="Canals_Grip_Speed" xml:space="preserve">
+    <value>Drag the horse to walk faster or slower</value>
+  </data>
+  <data name="Bicycle_Grip_Load" xml:space="preserve">
+    <value>Drag the arrow up to put more weight on the wheel</value>
+  </data>
+  <data name="Bicycle_Grip_Tension" xml:space="preserve">
+    <value>Drag along the colours to build the spokes tighter or looser</value>
+  </data>
+  <data name="Bicycle_Grip_Chainring" xml:space="preserve">
+    <value>Drag the chainring's edge out for more teeth</value>
+  </data>
+  <data name="Bicycle_Grip_Sprocket" xml:space="preserve">
+    <value>Drag the sprocket's edge out for more teeth</value>
+  </data>
+  <data name="Bicycle_Grip_Slope" xml:space="preserve">
+    <value>Drag up for a steeper road</value>
+  </data>
+  <data name="Bicycle_Grip_Gear" xml:space="preserve">
+    <value>Drag the chain across to change gear</value>
+  </data>
+  <data name="Bicycle_Grip_Pedals" xml:space="preserve">
+    <value>Drag right to pedal forwards, left to pedal backwards</value>
+  </data>
+  <data name="Bicycle_Grip_Speed" xml:space="preserve">
+    <value>Drag the arrow out to ride faster</value>
+  </data>
+  <data name="Bicycle_Grip_FrontBrake" xml:space="preserve">
+    <value>Tap to use or leave the front brake</value>
+  </data>
+  <data name="Bicycle_Grip_RearBrake" xml:space="preserve">
+    <value>Tap to use or leave the back brake</value>
+  </data>
+  <data name="Bicycle_Grip_Strength" xml:space="preserve">
+    <value>Drag the lever towards the bar to brake harder</value>
+  </data>
+  <data name="Bicycle_Grip_Offset" xml:space="preserve">
+    <value>Drag the fork's bend forwards or back</value>
+  </data>
+  <data name="Bicycle_Grip_HeadAngle" xml:space="preserve">
+    <value>Drag the head tube to lean it back or stand it up</value>
+  </data>
+  <data name="Boats_Grip_Density" xml:space="preserve">
+    <value>Drag the weight down for a heavier block, up for a lighter one</value>
+  </data>
+  <data name="Boats_Grip_Depth" xml:space="preserve">
+    <value>Drag the cube up or down</value>
+  </data>
+  <data name="Boats_Grip_Cargo" xml:space="preserve">
+    <value>Drag along the deck to load more crates</value>
+  </data>
+  <data name="Boats_Grip_Heel" xml:space="preserve">
+    <value>Drag the mast over to tip the boat</value>
+  </data>
+  <data name="Boats_Grip_Centre" xml:space="preserve">
+    <value>Drag the weight's centre up or down</value>
+  </data>
+  <data name="Boats_Grip_Beam" xml:space="preserve">
+    <value>Drag the side out for a wider boat</value>
+  </data>
+  <data name="Boats_Grip_Ballast" xml:space="preserve">
+    <value>Drag the water up to flood the tanks, down to blow them</value>
+  </data>
+  <data name="Bridges_Grip_Span" xml:space="preserve">
+    <value>Drag the bank to widen or narrow the stream</value>
+  </data>
+  <data name="Bridges_Grip_Depth" xml:space="preserve">
+    <value>Drag to make the plank deeper or thinner</value>
+  </data>
+  <data name="Bridges_Grip_Push" xml:space="preserve">
+    <value>Drag the hand to push the top harder</value>
+  </data>
+  <data name="Bridges_Grip_BraceIn" xml:space="preserve">
+    <value>Tap to fit a diagonal brace</value>
+  </data>
+  <data name="Bridges_Grip_BraceOut" xml:space="preserve">
+    <value>Tap to take the brace out</value>
+  </data>
+  <data name="Bridges_Grip_Lorry" xml:space="preserve">
+    <value>Drag the lorry along the deck</value>
+  </data>
+  <data name="Bridges_Grip_TrussHeight" xml:space="preserve">
+    <value>Drag to make the truss taller or lower</value>
+  </data>
+  <data name="Bridges_Grip_Rise" xml:space="preserve">
+    <value>Drag the keystone to raise or lower the arch</value>
+  </data>
+  <data name="Bridges_Grip_AbutmentsOut" xml:space="preserve">
+    <value>Tap to take the abutments away</value>
+  </data>
+  <data name="Bridges_Grip_AbutmentsIn" xml:space="preserve">
+    <value>Tap to build the abutments back</value>
+  </data>
+  <data name="Bridges_Grip_Sag" xml:space="preserve">
+    <value>Drag the cable to hang it lower or flatter</value>
+  </data>
+  <data name="Bridges_Grip_AnchorOff" xml:space="preserve">
+    <value>Tap to let the cable ends go</value>
+  </data>
+  <data name="Bridges_Grip_AnchorOn" xml:space="preserve">
+    <value>Tap to tie the cable ends to the anchors</value>
+  </data>
+  <data name="Bridges_Grip_Temperature" xml:space="preserve">
+    <value>Drag for a hotter or colder day</value>
+  </data>
+  <data name="Bridges_Grip_JointWeld" xml:space="preserve">
+    <value>Tap to weld the deck to the abutment</value>
+  </data>
+  <data name="Bridges_Grip_JointCut" xml:space="preserve">
+    <value>Tap to cut an expansion joint again</value>
+  </data>
+  <data name="Car_Grip_Rod" xml:space="preserve">
+    <value>Drag the crank down for a longer rod</value>
+  </data>
+  <data name="Car_Grip_Lift" xml:space="preserve">
+    <value>Drag the peak up to open the valve wider</value>
+  </data>
+  <data name="Car_Grip_Duration" xml:space="preserve">
+    <value>Drag to keep the valve open longer</value>
+  </data>
+  <data name="Car_Grip_Count" xml:space="preserve">
+    <value>Tap for another cylinder</value>
+  </data>
+  <data name="Car_Grip_Flywheel" xml:space="preserve">
+    <value>Drag the rim out for a heavier flywheel</value>
+  </data>
+  <data name="Car_Grip_Pedal" xml:space="preserve">
+    <value>Drag the pressure plate back, as the pedal does</value>
+  </data>
+  <data name="Car_Grip_Steer" xml:space="preserve">
+    <value>Drag left to steer round a tighter bend</value>
+  </data>
+  <data name="Car_Grip_Ice" xml:space="preserve">
+    <value>Drag across to ice the road under the wheel</value>
+  </data>
+  <data name="Car_Grip_Lock" xml:space="preserve">
+    <value>Tap to lock the differential</value>
+  </data>
+  <data name="Car_Grip_Unlock" xml:space="preserve">
+    <value>Tap to free the differential</value>
+  </data>
+  <data name="Friction_Grip_Angle" xml:space="preserve">
+    <value>Lift the board's end to make it steeper</value>
+  </data>
+  <data name="Friction_Grip_Surface" xml:space="preserve">
+    <value>Tap for another surface</value>
+  </data>
+  <data name="Friction_Grip_Pull" xml:space="preserve">
+    <value>Drag the hand back to pull harder</value>
+  </data>
+  <data name="Friction_Grip_Box" xml:space="preserve">
+    <value>Drag the box's top up for a heavier box</value>
+  </data>
+  <data name="Friction_Grip_Stop" xml:space="preserve">
+    <value>Drag where the car stops to set its speed</value>
+  </data>
+  <data name="Friction_Grip_Lock" xml:space="preserve">
+    <value>Tap to lock the wheels</value>
+  </data>
+  <data name="Friction_Grip_Unlock" xml:space="preserve">
+    <value>Tap to let the wheels turn</value>
+  </data>
+  <data name="Friction_Grip_Turns" xml:space="preserve">
+    <value>Drag the rope round the post</value>
+  </data>
+  <data name="Friction_Grip_Wet" xml:space="preserve">
+    <value>Tap to wet the rope</value>
+  </data>
+  <data name="Friction_Grip_Dry" xml:space="preserve">
+    <value>Tap to dry the rope</value>
+  </data>
+  <data name="Friction_Grip_Way" xml:space="preserve">
+    <value>Tap for another way of moving it</value>
+  </data>
+  <data name="Friction_Grip_Crate" xml:space="preserve">
+    <value>Drag the crate's top up for a heavier crate</value>
+  </data>
+  <data name="Friction_Grip_Slide" xml:space="preserve">
+    <value>Drag the arrow out for a faster slide</value>
+  </data>
+  <data name="Friction_Grip_Oil" xml:space="preserve">
+    <value>Tap to put oil between them</value>
+  </data>
+  <data name="Friction_Grip_Wipe" xml:space="preserve">
+    <value>Tap to wipe the oil away</value>
+  </data>
+  <data name="Gears_Grip_DriverTeeth" xml:space="preserve">
+    <value>Drag the rim up or down to give the gold gear more or fewer teeth</value>
+  </data>
+  <data name="Gears_Grip_DrivenTeeth" xml:space="preserve">
+    <value>Drag the rim up or down to give the grey gear more or fewer teeth</value>
+  </data>
+  <data name="Gears_Grip_Crank" xml:space="preserve">
+    <value>Drag the handle round to turn the crank by hand</value>
+  </data>
+  <data name="Gears_Grip_DrumTeeth" xml:space="preserve">
+    <value>Drag the rim up or down to change the big gear's teeth</value>
+  </data>
+  <data name="Gears_Grip_Pencil" xml:space="preserve">
+    <value>Drag the pencil out to unwind the string, in to wind it up</value>
+  </data>
+  <data name="Gears_Grip_Pressure" xml:space="preserve">
+    <value>Drag the end of the line to tilt it (the pressure angle)</value>
+  </data>
+  <data name="Gears_Grip_TurnGold" xml:space="preserve">
+    <value>Drag round to turn the gold gear by hand (stops the motor)</value>
+  </data>
+  <data name="Gears_Grip_TurnInput" xml:space="preserve">
+    <value>Drag round to turn the gold input by hand</value>
+  </data>
+  <data name="Gears_Grip_AddStep" xml:space="preserve">
+    <value>Tap to add a step (after four, back to one)</value>
+  </data>
+  <data name="Gears_Grip_HoldSun" xml:space="preserve">
+    <value>Tap to hold the sun still</value>
+  </data>
+  <data name="Gears_Grip_HoldRing" xml:space="preserve">
+    <value>Tap to hold the ring still</value>
+  </data>
+  <data name="Gears_Grip_HoldCarrier" xml:space="preserve">
+    <value>Tap to hold the carrier still</value>
+  </data>
+  <data name="Gears_Grip_SunTeeth" xml:space="preserve">
+    <value>Drag the sun's rim out or in for a bigger or smaller sun</value>
+  </data>
+  <data name="Lifting_Grip_Pivot" xml:space="preserve">
+    <value>Drag the pivot along under the bar</value>
+  </data>
+  <data name="Lifting_Grip_Push" xml:space="preserve">
+    <value>Drag the hand to press the long end down</value>
+  </data>
+  <data name="Lifting_Grip_Pull" xml:space="preserve">
+    <value>Drag the hand to pull the rope</value>
+  </data>
+  <data name="Lifting_Grip_Wheel" xml:space="preserve">
+    <value>Tap to move the pulley between the beam and the bucket</value>
+  </data>
+  <data name="Lifting_Grip_Strands" xml:space="preserve">
+    <value>Drag the last strand sideways for more or fewer strands</value>
+  </data>
+  <data name="Lifting_Grip_Friction" xml:space="preserve">
+    <value>Tap to make the wheels rub, or run free</value>
+  </data>
+  <data name="Lifting_Grip_Handle" xml:space="preserve">
+    <value>Drag the hand for a longer or shorter handle</value>
+  </data>
+  <data name="Lifting_Grip_Worm" xml:space="preserve">
+    <value>Tap to put the worm in or take it out</value>
+  </data>
+  <data name="Lifting_Grip_LetGo" xml:space="preserve">
+    <value>Tap to let go of the handle</value>
+  </data>
+  <data name="Lifting_Grip_TakeBack" xml:space="preserve">
+    <value>Tap to take the handle and wind the load up</value>
+  </data>
+  <data name="Lifting_Grip_PumpOnce" xml:space="preserve">
+    <value>Tap to pump the handle once</value>
+  </data>
+  <data name="Lifting_Grip_Release" xml:space="preserve">
+    <value>Tap to open the release valve and let the oil back</value>
+  </data>
+  <data name="Lifting_Grip_Ram" xml:space="preserve">
+    <value>Drag the ram's side for a wider or narrower ram</value>
+  </data>
+  <data name="Lifting_Grip_Riders" xml:space="preserve">
+    <value>Drag along the roof to let riders in or out</value>
+  </data>
+  <data name="Lifting_Grip_HangWeight" xml:space="preserve">
+    <value>Tap to hang the counterweight on</value>
+  </data>
+  <data name="Lifting_Grip_TakeWeight" xml:space="preserve">
+    <value>Tap to take the counterweight off</value>
+  </data>
+  <data name="Light_Grip_Power" xml:space="preserve">
+    <value>Drag the dot along the curve to change the lamp's power</value>
+  </data>
+  <data name="Light_Grip_Board" xml:space="preserve">
+    <value>Drag the board to tip it</value>
+  </data>
+  <data name="Light_Grip_Frame" xml:space="preserve">
+    <value>Drag the frame nearer or further</value>
+  </data>
+  <data name="Light_Grip_Car" xml:space="preserve">
+    <value>Drag the car along the road</value>
+  </data>
+  <data name="Light_Grip_Elevation" xml:space="preserve">
+    <value>Drag the lamp higher or lower in the sky</value>
+  </data>
+  <data name="Light_Grip_SkyDistance" xml:space="preserve">
+    <value>Pull the lamp nearer or further</value>
+  </data>
+  <data name="Light_Grip_Eye" xml:space="preserve">
+    <value>Drag the eye nearer or further</value>
+  </data>
+  <data name="Light_Grip_Panel" xml:space="preserve">
+    <value>Drag the panel's end to turn it</value>
+  </data>
+  <data name="Light_Grip_Lamp" xml:space="preserve">
+    <value>Drag the lamp round to change where the light comes from</value>
+  </data>
+  <data name="Light_Grip_Look" xml:space="preserve">
+    <value>Drag the eye round to look from elsewhere</value>
+  </data>
+  <data name="Light_Grip_Roughness" xml:space="preserve">
+    <value>Drag from mirror to matte</value>
+  </data>
+  <data name="Light_Grip_LampSide" xml:space="preserve">
+    <value>Drag the lamp sideways</value>
+  </data>
+  <data name="Light_Grip_LampHeight" xml:space="preserve">
+    <value>Drag the cord to raise or lower the lamp</value>
+  </data>
+  <data name="Light_Grip_LampSize" xml:space="preserve">
+    <value>Drag the tab to make the lamp bigger or smaller</value>
+  </data>
+  <data name="Light_Grip_Wall" xml:space="preserve">
+    <value>Tap to paint the wall another colour</value>
+  </data>
+  <data name="Light_Grip_Bounce" xml:space="preserve">
+    <value>Tap to let the light bounce once more</value>
+  </data>
+  <data name="Locks_Grip_Insert" xml:space="preserve">
+    <value>Drag the key in or out by its bow</value>
+  </data>
+  <data name="Locks_Grip_SwapKey" xml:space="preserve">
+    <value>Tap to swap the key</value>
+  </data>
+  <data name="Locks_Grip_Cuts" xml:space="preserve">
+    <value>Drag the tip for a longer key with more cuts</value>
+  </data>
+  <data name="Locks_Grip_Depths" xml:space="preserve">
+    <value>Drag the deepest line down for more depths</value>
+  </data>
+  <data name="Locks_Grip_Steepest" xml:space="preserve">
+    <value>Drag this cut to allow a steeper or gentler step</value>
+  </data>
+  <data name="Locks_Grip_NextKey" xml:space="preserve">
+    <value>Tap the key to try the next one</value>
+  </data>
+  <data name="Locks_Grip_Pick" xml:space="preserve">
+    <value>Tap to lift the stuck pin to the line</value>
+  </data>
+  <data name="Locks_Grip_LetGo" xml:space="preserve">
+    <value>Tap to let go of the turning tool</value>
+  </data>
+  <data name="Locks_Grip_Perfect" xml:space="preserve">
+    <value>Tap to drill the holes perfectly in line</value>
+  </data>
+  <data name="Locks_Grip_AsMade" xml:space="preserve">
+    <value>Tap to drill the holes as a real lock has them</value>
+  </data>
+  <data name="Locks_Grip_TurnKey" xml:space="preserve">
+    <value>Drag the bit round to turn the key</value>
+  </data>
+  <data name="Locks_Grip_Wheel" xml:space="preserve">
+    <value>Drag the tab round to turn the wheel</value>
+  </data>
+  <data name="Locks_Grip_Loose" xml:space="preserve">
+    <value>Tap to make the notches loose</value>
+  </data>
+  <data name="Locks_Grip_Tight" xml:space="preserve">
+    <value>Tap to make the notches tight again</value>
+  </data>
+  <data name="Plumbing_Grip_Tank" xml:space="preserve">
+    <value>Drag the tank up or down</value>
+  </data>
+  <data name="Plumbing_Grip_Tap" xml:space="preserve">
+    <value>Drag the tap up or down the building</value>
+  </data>
+  <data name="Plumbing_Grip_Handle" xml:space="preserve">
+    <value>Drag along the handle to turn it</value>
+  </data>
+  <data name="Plumbing_Grip_Washer" xml:space="preserve">
+    <value>Tap to wear the washer out or fit a new one</value>
+  </data>
+  <data name="Plumbing_Grip_Prime" xml:space="preserve">
+    <value>Tap to fill the hose or let air in</value>
+  </data>
+  <data name="Plumbing_Grip_Outlet" xml:space="preserve">
+    <value>Drag the end of the hose up or down</value>
+  </data>
+  <data name="Plumbing_Grip_Set" xml:space="preserve">
+    <value>Drag to set where the float shuts the valve</value>
+  </data>
+  <data name="Plumbing_Grip_Flush" xml:space="preserve">
+    <value>Tap the lever to flush, or to let go</value>
+  </data>
+  <data name="Plumbing_Grip_Suction" xml:space="preserve">
+    <value>Drag along the drain to pull harder</value>
+  </data>
+  <data name="Plumbing_Grip_Vent" xml:space="preserve">
+    <value>Tap to open or cap the vent</value>
+  </data>
+  <data name="Plumbing_Grip_Depth" xml:space="preserve">
+    <value>Drag to make the well deeper or shallower</value>
+  </data>
+  <data name="Plumbing_Grip_Down" xml:space="preserve">
+    <value>Tap to lower the pump to the water, or lift it back up</value>
+  </data>
+  <data name="Watch_Grip_Arbor" xml:space="preserve">
+    <value>Drag the key round to wind the spring</value>
+  </data>
+  <data name="Watch_Grip_Hours" xml:space="preserve">
+    <value>Drag up for more hours in the spring</value>
+  </data>
+  <data name="Watch_Grip_Minute" xml:space="preserve">
+    <value>Drag the minute hand round to set the time</value>
+  </data>
+  <data name="Watch_Grip_Crown" xml:space="preserve">
+    <value>Tap to run time faster (then back to real time)</value>
+  </data>
+  <data name="Watch_Grip_SlowMotion" xml:space="preserve">
+    <value>Drag right for faster, left for slower</value>
+  </data>
+  <data name="Watch_Grip_SwingBalance" xml:space="preserve">
+    <value>Drag the balance round to swing it through a beat by hand</value>
+  </data>
+  <data name="Watch_Grip_PullBalance" xml:space="preserve">
+    <value>Pull the balance round and let go to set its swing</value>
+  </data>
+  <data name="Watch_Grip_Regulator" xml:space="preserve">
+    <value>Drag the index: clockwise stiffens the hairspring</value>
+  </data>
+  <data name="Watch_Grip_Rotor" xml:space="preserve">
+    <value>Drag the rotor to swing it by hand</value>
+  </data>
+  <data name="Watch_Grip_Reverser" xml:space="preserve">
+    <value>Tap to put the reverser in or take it out</value>
+  </data>
+  <data name="Watch_Grip_Explode" xml:space="preserve">
+    <value>Drag the dial up to pull the layers apart</value>
+  </data>
+  <data name="Watch_Grip_Layer" xml:space="preserve">
+    <value>Tap to hide or show this layer</value>
+  </data>
+  <data name="Weighing_Grip_Difference" xml:space="preserve">
+    <value>Drag the right pan down to add grams</value>
+  </data>
+  <data name="Weighing_Grip_Drop" xml:space="preserve">
+    <value>Drag the centre of mass up or down</value>
+  </data>
+  <data name="Weighing_Grip_Poise" xml:space="preserve">
+    <value>Drag the weight along the arm</value>
+  </data>
+  <data name="Weighing_Grip_Sack" xml:space="preserve">
+    <value>Drag the sack's bottom down to fill it</value>
+  </data>
+  <data name="Weighing_Grip_Load" xml:space="preserve">
+    <value>Drag the load's bottom down to hang more on</value>
+  </data>
+  <data name="Weighing_Grip_LiftOff" xml:space="preserve">
+    <value>Tap to lift the load off</value>
+  </data>
+  <data name="Weighing_Grip_HangOn" xml:space="preserve">
+    <value>Tap to hang the load back on</value>
+  </data>
+  <data name="Weighing_Grip_Offset" xml:space="preserve">
+    <value>Drag the load across the pan</value>
+  </data>
+  <data name="Weighing_Grip_TwoLinks" xml:space="preserve">
+    <value>Tap to hold the pan on two parallel links</value>
+  </data>
+  <data name="Weighing_Grip_OneArm" xml:space="preserve">
+    <value>Tap to go back to a single arm</value>
+  </data>
+  <data name="Weighing_Grip_StrainMass" xml:space="preserve">
+    <value>Drag the rod down to hang more on the bar</value>
+  </data>
+  <data name="Weighing_Grip_Warm" xml:space="preserve">
+    <value>Tap to warm the gauge</value>
+  </data>
+  <data name="Weighing_Grip_Cool" xml:space="preserve">
+    <value>Tap to let the gauge cool</value>
+  </data>
+  <data name="Weighing_Grip_FourGauges" xml:space="preserve">
+    <value>Tap to wire four gauges into the bridge</value>
+  </data>
+  <data name="Weighing_Grip_OneGauge" xml:space="preserve">
+    <value>Tap to go back to one gauge</value>
+  </data>
+  <data name="Weighing_Grip_Bag" xml:space="preserve">
+    <value>Drag the bag's bottom down for a heavier bag</value>
+  </data>
+  <data name="Weighing_Grip_Travel" xml:space="preserve">
+    <value>Tap to travel on to the next world</value>
+  </data>
 </root>

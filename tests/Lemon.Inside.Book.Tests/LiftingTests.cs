@@ -3,6 +3,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Lifting;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -144,6 +145,118 @@ public sealed class LiftingTests
                 Assert.Contains(key, keys);
             }
         }
+    }
+
+    [Fact]
+    public void TheGrips_WorkBackFromWhereTheHandIs()
+    {
+        // The seesaw's hand: dragged right down, the push is full; held where it starts, none.
+        Assert.Equal(1, SeesawDiagram.PushFor(0.8, -5), 9);
+        Assert.Equal(0, SeesawDiagram.PushFor(0.8, 5), 9);
+        Assert.InRange(SeesawDiagram.PushFor(2, Seesaw.PivotHeight + 0.09 + 0.13), 0.4, 0.6); // the bar level: halfway
+
+        // The pulley's hand goes down past a fixed wheel and up from a moving one.
+        Assert.Equal(1, PulleyDiagram.PullFor(false, 2.2), 9);
+        Assert.Equal(1, PulleyDiagram.PullFor(true, 2.9), 9);
+        Assert.Equal(PulleySpread.MostPull, PulleyDiagram.PullFor(false, -9), 9);
+
+        // The tackle's last strand sits n half-gaps right of the middle; its first wheel runs with the hand's rope,
+        // the last with only a strand's share.
+        Assert.Equal(4, TackleDiagram.StrandsAt(4 * 0.13 * 100, 100));
+        Assert.Equal(1, TackleDiagram.StrandsAt(-500, 100));
+        Assert.Equal(Tackle.MostStrands, TackleDiagram.StrandsAt(5000, 100));
+        Assert.Equal(1.2, TackleDiagram.WheelTurn(4, 0, 1.2), 9);
+        Assert.Equal(0.3, TackleDiagram.WheelTurn(4, 3, 1.2), 9);
+    }
+
+    [Fact]
+    public void AStroke_PushesOilToTheRam_ThenRefillsFromTheTank()
+    {
+        var down = JackDiagram.Stroke(0.25);
+        Assert.True(down.Outlet && !down.Inlet);
+        Assert.Equal(0.5, down.Depth, 9);
+        Assert.Equal(0.5, down.RamShare, 9); // the ram rises while the piston goes down
+        var up = JackDiagram.Stroke(0.75);
+        Assert.True(up.Inlet && !up.Outlet);
+        Assert.Equal(1, up.RamShare, 9); // and holds while it comes back
+        Assert.Equal(0, JackDiagram.Stroke(0).Depth, 9);
+    }
+
+    [Fact]
+    public void TheLift_RunsDownAndBack_PausingAtEachEnd()
+    {
+        Assert.Equal(0, ElevatorDiagram.Travel(0), 9);
+        Assert.Equal(1, ElevatorDiagram.Travel(7), 9);
+        Assert.Equal(0, ElevatorDiagram.Travel(14), 9);
+        Assert.Equal(0, ElevatorDiagram.Travel(0.5), 9); // still waiting at the top
+        Assert.InRange(ElevatorDiagram.Travel(3.5), 0.4, 0.6);
+    }
+
+    /// <summary>Every picture has grips, and dragging or tapping them moves the spread's own values (the sliders follow).</summary>
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Lifting");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Lifting");
+        var lifting = Assert.IsType<LiftingTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Lifting;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var seesaw = Open(0);
+        seesaw.DragGrip("pivot", Far(seesaw, "pivot", -2000, 0));
+        Assert.Equal(0.6, lifting.Seesaw.Pivot, 9);
+        seesaw.DragGrip("pivot", Far(seesaw, "pivot", 2000, 0));
+        Assert.Equal(2, lifting.Seesaw.Pivot, 9);
+        seesaw.DragGrip("push", Far(seesaw, "push", 0, 2000));
+        Assert.Equal(1, lifting.Seesaw.Push, 9);
+
+        var pulley = Open(1);
+        pulley.DragGrip("pull", Far(pulley, "pull", 0, 2000));
+        Assert.Equal(PulleySpread.MostPull, lifting.Pulley.Pull, 9);
+        pulley.DragGrip("wheel", default);
+        Assert.True(lifting.Pulley.Moving);
+
+        var tackle = Open(2);
+        tackle.DragGrip("strands", Far(tackle, "strands", 2000, 0));
+        Assert.Equal(Tackle.MostStrands, lifting.Tackle.Strands);
+        tackle.DragGrip("friction", default);
+        Assert.True(lifting.Tackle.Friction);
+        tackle.DragGrip("pull", Far(tackle, "pull", 0, 2000));
+        Assert.Equal(TackleSpread.MostPull, lifting.Tackle.Pull, 9);
+
+        var winch = Open(3);
+        winch.DragGrip("handle", Far(winch, "handle", -2000, 2000));
+        Assert.Equal(0.5, lifting.Winch.Handle, 9);
+        winch.DragGrip("letgo", default);
+        Assert.True(lifting.Winch.LetGo);
+        winch.DragGrip("worm", default);
+        Assert.True(lifting.Winch.Worm);
+
+        var jack = Open(4);
+        jack.DragGrip("pump", default);
+        jack.DragGrip("pump", default);
+        Assert.Equal(2, lifting.Jack.Strokes);
+        jack.DragGrip("ram", Far(jack, "ram", 2000, 0));
+        Assert.Equal(10, lifting.Jack.Ram, 9);
+        jack.DragGrip("release", default);
+        Assert.Equal(0, lifting.Jack.Strokes);
+
+        var elevator = Open(5);
+        elevator.DragGrip("riders", Far(elevator, "riders", 2000, 0));
+        Assert.Equal(Elevator.MostRiders, lifting.Elevator.Riders);
+        elevator.DragGrip("counterweight", default);
+        Assert.True(lifting.Elevator.Counterweight);
+
+        window.Close();
     }
 
     [AvaloniaFact]

@@ -1,7 +1,9 @@
 using System.Globalization;
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -11,18 +13,20 @@ namespace Lemon.Inside.Book.Chapters.Lifting;
 /// <summary>
 /// Spread 4: a hand winch from the side. The rope winds on a small drum; the crank turns it straight, or turns a worm
 /// under a toothed wheel on the drum. Let go, the load falls and spins the crank, unless the worm holds it; taken
-/// back, the crank winds it up again.
+/// back, the crank winds it up again. The reader drags the hand on the crank in or out for a longer or shorter crank,
+/// taps the worm's place to put the worm in or take it out, and taps beside the load to let go of the crank or take it
+/// back; the load drops, or stays, or is wound up, with the drum and the crank turning as the rope moves.
 /// </summary>
 public sealed class WinchDiagram : GearPicture
 {
     public static readonly StyledProperty<double> HandleProperty =
-        AvaloniaProperty.Register<WinchDiagram, double>(nameof(Handle), 0.3);
+        AvaloniaProperty.Register<WinchDiagram, double>(nameof(Handle), 0.3, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> WormProperty =
-        AvaloniaProperty.Register<WinchDiagram, bool>(nameof(Worm));
+        AvaloniaProperty.Register<WinchDiagram, bool>(nameof(Worm), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> LetGoProperty =
-        AvaloniaProperty.Register<WinchDiagram, bool>(nameof(LetGo));
+        AvaloniaProperty.Register<WinchDiagram, bool>(nameof(LetGo), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The load's height when wound up, m; how fast it falls, and how fast the hand winds it.</summary>
     private const double Up = 1.4;
@@ -61,7 +65,8 @@ public sealed class WinchDiagram : GearPicture
     protected override void Advance(double seconds)
     {
         var falling = LetGo && !Winch.Holds(Worm);
-        _height = Ease(_height, falling ? 0 : Up, falling ? FallRate : WindRate, seconds);
+        // LiftingParts.Ease, a steady rate (the picture's own Ease, inherited, would take the rate for a time and jump).
+        _height = LiftingParts.Ease(_height, falling ? 0 : Up, falling ? FallRate : WindRate, seconds);
     }
 
     protected override void Draw(DrawingContext context, Rect bounds)
@@ -118,6 +123,9 @@ public sealed class WinchDiagram : GearPicture
             context.DrawLine(new ImmutablePen(DarkSteelBrush, 6), axle, end);
             knob = DrawHand(context, end, 0.2 * scale);
             Mark("handle", [axle, end], 8);
+
+            // Where the worm would go: an outline, for the reader's tap.
+            context.DrawRectangle(null, Dashed, new Rect(axle.X - (0.48 * scale), axle.Y - (0.54 * scale), 0.84 * scale, 0.18 * scale), 4, 4);
         }
         else
         {
@@ -153,5 +161,19 @@ public sealed class WinchDiagram : GearPicture
             LetGo && !Winch.Holds(worm) ? Weight : DiagramText.Ink, bold: true);
         DiagramText.Draw(context, DiagramText.Format("Lifting_Winch_Turns", Winch.TurnsPerMetre(worm).ToString("0", CultureInfo.CurrentCulture)),
             new Point(bounds.X + 16, bounds.Y + 40), 12.5, DiagramText.Faint);
+
+        // The reader's handles: the hand on the crank, dragged out or in for a longer or shorter crank (measured from
+        // the drum's axle, or along the worm's crank, which swings across the page); a tap on the worm's place puts the
+        // worm in or takes it out; a tap beside the load lets go of the crank, or takes it back to wind the load up.
+        var pivot = worm ? new Point(axle.X - (0.06 * scale) - (0.67 * scale), axle.Y - (0.45 * scale)) : axle;
+        Grip("handle", knob.Center, worm ? GripAxis.Vertical : GripAxis.Free, DiagramText.Get("Lifting_Grip_Handle"), at =>
+        {
+            var reach = worm ? Math.Abs(at.Y - pivot.Y) : Math.Sqrt(((at.X - pivot.X) * (at.X - pivot.X)) + ((at.Y - pivot.Y) * (at.Y - pivot.Y)));
+            Handle = Math.Clamp(Math.Round(reach / scale / 0.01) * 0.01, 0.1, 0.5);
+        });
+        Grip("worm", new Point(axle.X - (0.06 * scale), axle.Y - (0.45 * scale)), GripAxis.Tap, DiagramText.Get("Lifting_Grip_Worm"),
+            _ => Worm = !Worm);
+        Grip("letgo", new Point(load.Left - 18, load.Center.Y), GripAxis.Tap, DiagramText.Get(LetGo ? "Lifting_Grip_TakeBack" : "Lifting_Grip_LetGo"),
+            _ => LetGo = !LetGo);
     }
 }

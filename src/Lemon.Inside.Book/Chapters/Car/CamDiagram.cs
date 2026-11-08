@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,14 +11,22 @@ namespace Lemon.Inside.Book.Chapters.Car;
 /// <summary>
 /// Spread 2: a cam on the camshaft pressing a valve open against its spring, the valve's head lifting off its seat in
 /// the cylinder head. Below, the valve's lift through the crank's two turns, open for the cam's duration.
+/// The reader drags the curve's peak up for a taller cam and the open stretch's closing edge out for a longer one; the
+/// cam reshapes smoothly while it turns.
 /// </summary>
 public sealed class CamDiagram : GearPicture
 {
     public static readonly StyledProperty<double> LiftProperty =
-        AvaloniaProperty.Register<CamDiagram, double>(nameof(Lift), 9);
+        AvaloniaProperty.Register<CamDiagram, double>(nameof(Lift), 9, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> DurationProperty =
-        AvaloniaProperty.Register<CamDiagram, double>(nameof(Duration), 240);
+        AvaloniaProperty.Register<CamDiagram, double>(nameof(Duration), 240, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The sliders' ends: lift in millimetres, duration in crank degrees.</summary>
+    private const double LeastLift = 4;
+    private const double MostLift = 12;
+    private const double ShortestOpen = 180;
+    private const double LongestOpen = 300;
 
     /// <summary>Crank degrees a second (slowed right down).</summary>
     private const double Speed = 150;
@@ -27,6 +37,10 @@ public sealed class CamDiagram : GearPicture
     private static readonly IPen SpringPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x8F, 0xD8, 0xF0)), 2);
 
     private double _crank;
+
+    /// <summary>The cam as drawn, easing toward <see cref="Lift"/> and <see cref="Duration"/>; NaN until the first frame.</summary>
+    private double _lift = double.NaN;
+    private double _duration = double.NaN;
 
     static CamDiagram()
     {
@@ -47,20 +61,32 @@ public sealed class CamDiagram : GearPicture
         set => SetValue(DurationProperty, value);
     }
 
-    protected override void Advance(double seconds) => _crank = (_crank + (Speed * seconds)) % 720;
+    protected override void Advance(double seconds)
+    {
+        _crank = (_crank + (Speed * seconds)) % 720;
+        var (lift, duration) = (Math.Clamp(Lift, LeastLift, MostLift), Math.Clamp(Duration, ShortestOpen, LongestOpen));
+        _lift = double.IsNaN(_lift) ? lift : Glide(_lift, lift, seconds, 0.12);
+        _duration = double.IsNaN(_duration) ? duration : Glide(_duration, duration, seconds, 0.12);
+    }
+
+    /// <summary>The lift and duration as drawn this frame.</summary>
+    private (double Lift, double Duration) Shown => (
+        double.IsNaN(_lift) ? Math.Clamp(Lift, LeastLift, MostLift) : _lift,
+        double.IsNaN(_duration) ? Math.Clamp(Duration, ShortestOpen, LongestOpen) : _duration);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
+        var (liftMm, duration) = Shown;
         var mm = Math.Min(bounds.Width * 0.14 / (Cam.BaseRadius + 12), bounds.Height * 0.5 / 140);
         var camCentre = new Point(bounds.Width * 0.5, (bounds.Height * 0.06) + ((Cam.BaseRadius + 12) * mm));
-        var lift = Cam.Lift(_crank, Lift, Duration);
+        var lift = Cam.Lift(_crank, liftMm, duration);
 
         // The cam: its outline turned so the nose points straight down at crank 360°.
         var nose = (Math.PI / 2) + ((_crank - 360) / 2 * Math.PI / 180);
         var outline = new List<Point>();
         for (var d = 0; d < 360; d += 3)
         {
-            var radius = Cam.Radius(d, Lift, Duration) * mm;
+            var radius = Cam.Radius(d, liftMm, duration) * mm;
             var a = nose + (d * Math.PI / 180);
             outline.Add(new Point(camCentre.X + (radius * Math.Cos(a)), camCentre.Y + (radius * Math.Sin(a))));
         }
@@ -99,31 +125,38 @@ public sealed class CamDiagram : GearPicture
         context.DrawGeometry(DiagramText.Gold, CarParts.Edge, Outline(outline));
         context.DrawEllipse(CarParts.Dark, null, camCentre, 4 * mm, 4 * mm);
 
-        Mark("cam", camCentre, (Cam.BaseRadius + Lift) * mm);
+        Mark("cam", camCentre, (Cam.BaseRadius + liftMm) * mm);
         Mark("valve", [new Point(camCentre.X - (16 * mm), stemBottom - (6 * mm)), new Point(camCentre.X + (16 * mm), stemBottom + (4 * mm))], 4);
         Mark("spring", [new Point(camCentre.X - (11 * mm), springTop), new Point(camCentre.X + (11 * mm), springBottom)], 2);
 
         var graphTop = headPlate.Bottom + (40 * mm) + 30;
-        DrawGraph(context, new Rect(bounds.X + 30, graphTop, bounds.Width - 54, bounds.Bottom - graphTop - 30));
+        DrawGraph(context, new Rect(bounds.X + 30, graphTop, bounds.Width - 54, bounds.Bottom - graphTop - 30), liftMm, duration);
     }
 
     /// <summary>The valve's lift through the crank's two turns, the open stretch shaded, a dot for now.</summary>
-    private void DrawGraph(DrawingContext context, Rect area)
+    private void DrawGraph(DrawingContext context, Rect area, double liftMm, double duration)
     {
         if (area.Height < 30) return;
 
         double X(double crank) => area.X + (crank / 720 * area.Width);
         double Y(double lift) => area.Bottom - (lift / 12 * area.Height);
         context.FillRectangle(new ImmutableSolidColorBrush(Color.FromArgb(0x24, 0x6F, 0xD8, 0xFF)),
-            new Rect(X(360 - (Duration / 2)), area.Y, Duration / 720 * area.Width, area.Height));
+            new Rect(X(360 - (duration / 2)), area.Y, duration / 720 * area.Width, area.Height));
         CarParts.DrawCycleAxis(context, area, 720, area.Bottom);
         var curve = new List<Point>();
-        for (var d = 0.0; d <= 720; d += 4) curve.Add(new Point(X(d), Y(Cam.Lift(d, Lift, Duration))));
+        for (var d = 0.0; d <= 720; d += 4) curve.Add(new Point(X(d), Y(Cam.Lift(d, liftMm, duration))));
         CarParts.DrawLine(context, curve, new ImmutablePen(DiagramText.Gold, 2.5));
         Mark("graph", curve, 4);
-        context.DrawEllipse(Brushes.White, CarParts.Edge, new Point(X(_crank), Y(Cam.Lift(_crank, Lift, Duration))), 5, 5);
+        context.DrawEllipse(Brushes.White, CarParts.Edge, new Point(X(_crank), Y(Cam.Lift(_crank, liftMm, duration))), 5, 5);
         DiagramText.Draw(context, DiagramText.Format("Car_Cam_Graph", Lift.ToString("0.0")), new Point(area.X, area.Y - 4), 11, DiagramText.Faint, 0, 1);
         DiagramText.Draw(context, DiagramText.Get("Car_Cam_Crank"), new Point(area.Right, area.Y - 4), 11, DiagramText.Faint, 1, 1);
+
+        // The reader's handles: the curve's peak, dragged up for a taller cam; the open stretch's closing edge, dragged
+        // out for a longer one (it opens as early before the peak as it closes after).
+        Grip("lift", new Point(X(360), Y(liftMm)), GripAxis.Vertical, DiagramText.Get("Car_Grip_Lift"),
+            at => Lift = Math.Clamp(Math.Round((area.Bottom - at.Y) / area.Height * 12 * 2) / 2, LeastLift, MostLift));
+        Grip("duration", new Point(X(360 + (duration / 2)), area.Bottom - (area.Height * 0.3)), GripAxis.Horizontal, DiagramText.Get("Car_Grip_Duration"),
+            at => Duration = Math.Clamp(Math.Round((at.X - X(360)) / area.Width * 720 * 2 / 5) * 5, ShortestOpen, LongestOpen));
     }
 
     private static void DrawSpring(DrawingContext context, double x, double top, double bottom, double half)

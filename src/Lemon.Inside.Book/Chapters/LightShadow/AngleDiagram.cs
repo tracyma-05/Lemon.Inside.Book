@@ -1,25 +1,33 @@
 using Avalonia;
-using Avalonia.Controls;
+using Avalonia.Data;
 using Avalonia.Media;
-using Lemon.Inside.Book.Controls;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
+using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
 
 /// <summary>
 /// Spread 4, from above: an eye, a car side on down the road, and the angle between the car's two ends. An arc
-/// round the eye turns the angle into a length (radians); the inset shows how big the car looks.
+/// round the eye turns the angle into a length (radians); the inset shows how big the car looks. The reader drags
+/// the car along the road; sent somewhere new, it drives there, so the angle closes or opens as it goes.
 /// </summary>
-public sealed class AngleDiagram : Picture
+public sealed class AngleDiagram : GearPicture
 {
     public static readonly StyledProperty<double> DistanceProperty =
-        AvaloniaProperty.Register<AngleDiagram, double>(nameof(Distance), 10);
+        AvaloniaProperty.Register<AngleDiagram, double>(nameof(Distance), 10, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The furthest the slider goes, so the scale stays the same while the car moves.</summary>
     public const double MaxDistance = 40;
 
-    private static readonly IImmutableBrush Plate = new ImmutableSolidColorBrush(Color.FromRgb(0x10, 0x16, 0x22));
+    /// <summary>The slider's nearest, in metres.</summary>
+    private const double MinDistance = 3;
+
+    private static readonly IImmutableBrush Flat = new ImmutableSolidColorBrush(Color.FromRgb(0x10, 0x16, 0x22));
+
+    /// <summary>The distance drawn, easing toward <see cref="Distance"/> (NaN until the first frame, which starts there).</summary>
+    private double _shown = double.NaN;
     private static readonly IImmutableBrush RoadBrush = new ImmutableSolidColorBrush(Color.FromRgb(0x24, 0x2B, 0x38));
     private static readonly IImmutableBrush CarBrush = new ImmutableSolidColorBrush(Color.FromRgb(0xD9, 0x5D, 0x4B));
     private static readonly IImmutableBrush WedgeBrush = new ImmutableSolidColorBrush(Color.FromArgb(0x22, 0x6F, 0xD8, 0xFF));
@@ -33,11 +41,6 @@ public sealed class AngleDiagram : Picture
         AffectsRender<AngleDiagram>(DistanceProperty);
     }
 
-    public AngleDiagram()
-    {
-        ClipToBounds = true;
-    }
-
     /// <summary>How far the car is from the eye, in metres.</summary>
     public double Distance
     {
@@ -45,20 +48,24 @@ public sealed class AngleDiagram : Picture
         set => SetValue(DistanceProperty, value);
     }
 
-    protected override void Paint(DrawingContext context)
+    protected override void Advance(double seconds) =>
+        _shown = Gripping ? Distance : LightGrips.Ease(_shown, Distance, seconds, 0.12);
+
+    protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var bounds = new Rect(Bounds.Size);
-        context.FillRectangle(Plate, bounds);
+        context.FillRectangle(Flat, bounds);
         if (bounds.Width < 80 || bounds.Height < 80)
         {
             return;
         }
 
+        if (double.IsNaN(_shown)) _shown = Distance;
+        var distance = Math.Max(_shown, 0.5);
         var eye = new Point(bounds.X + 36, bounds.Height * 0.62);
         var perMetre = (bounds.Width - 70) / (MaxDistance + 2);
         var half = AngleSpread.CarLength / 2 * perMetre;
-        var carX = eye.X + (Distance * perMetre);
-        var radians = 2 * Math.Atan(AngleSpread.CarLength / 2 / Distance);
+        var carX = eye.X + (distance * perMetre);
+        var radians = 2 * Math.Atan(AngleSpread.CarLength / 2 / distance);
 
         // The road, the car (side on, seen from above) and the two lines of sight to its ends.
         context.FillRectangle(RoadBrush, new Rect(bounds.X, eye.Y - (half * 1.6), bounds.Width, half * 3.2));
@@ -96,10 +103,14 @@ public sealed class AngleDiagram : Picture
         Mark("car", new Rect(carX - Math.Max(3, perMetre * 0.9), front.Y, Math.Max(6, perMetre * 1.8), half * 2));
         Mark("arc", [eye, new Point(eye.X + radius, eye.Y - (radius * Math.Sin(radians / 2))), new Point(eye.X + radius, eye.Y + (radius * Math.Sin(radians / 2)))]);
         DiagramText.Draw(context, DiagramText.Get("Light_Angle_Arc"), new Point(eye.X + radius + 6, eye.Y - radius - 4), 11.5, DiagramText.Gold, 0, 1);
-        DiagramText.Draw(context, DiagramText.Format("Light_Metres", Distance.ToString("0.0")),
+        DiagramText.Draw(context, DiagramText.Format("Light_Metres", distance.ToString("0.0")),
             new Point((eye.X + carX) / 2, eye.Y + (half * 1.6) + 6), 12, DiagramText.Faint, 0.5, 0);
 
         DrawView(context, bounds, radians);
+
+        // The car's grip: drive it up or down the road.
+        Grip("car", new Point(carX, eye.Y), GripAxis.Horizontal, DiagramText.Get("Light_Grip_Car"), at =>
+            Distance = LightGrips.Snap((at.X - eye.X) / perMetre, MinDistance, MaxDistance, 0.5));
     }
 
     /// <summary>What the eye sees: a 60° view with the car as wide as its angle.</summary>

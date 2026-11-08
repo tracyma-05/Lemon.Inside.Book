@@ -3,6 +3,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Plumbing;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -133,6 +134,86 @@ public sealed class PlumbingTests
                 Assert.Contains(key, keys);
             }
         }
+    }
+
+    [Fact]
+    public void ThePicturesHelpers_SnapGlideAndCutLines()
+    {
+        Assert.Equal(2.5, PlumbingParts.Snap(2.6, 0.5, 0, 3), 9);
+        Assert.Equal(3, PlumbingParts.Snap(9, 0.5, 0, 3), 9);
+        Assert.Equal(0, PlumbingParts.Snap(-1, 0.05, 0, 3), 9);
+        Assert.Equal(0.3, PlumbingParts.Toward(0, 1, 3, 0.1), 9);
+        Assert.Equal(1, PlumbingParts.Toward(0.9, 1, 3, 0.1), 9); // never past the target
+        Assert.Equal(-0.3, PlumbingParts.Toward(0, -1, 3, 0.1), 9);
+
+        Avalonia.Point[] line = [new(0, 0), new(10, 0), new(10, 10)];
+        var half = PlumbingParts.Part(line, 0.5);
+        Assert.Equal(new Avalonia.Point(10, 0), half[^1]);
+        Assert.Equal(new Avalonia.Point(10, 5), PlumbingParts.Part(line, 0.75)[^1]);
+        Assert.Equal(line, PlumbingParts.Part(line, 1));
+        Assert.Single(PlumbingParts.Part(line, 0));
+    }
+
+    /// <summary>Every picture has grips, and dragging or tapping them moves the spread's own values (the sliders follow).</summary>
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Plumbing");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Plumbing");
+        var plumbing = Assert.IsType<PlumbingTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Plumbing;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var tower = Open(0);
+        tower.DragGrip("surface", Far(tower, "surface", 0, -2000));
+        Assert.Equal(40, plumbing.Tower.Surface, 9);
+        tower.DragGrip("tap", Far(tower, "tap", 0, -2000));
+        Assert.Equal(37, plumbing.Tower.TapHeight, 9);
+        tower.DragGrip("tap", Far(tower, "tap", 0, 2000));
+        Assert.Equal(1, plumbing.Tower.TapHeight, 9);
+
+        var tap = Open(1);
+        tap.DragGrip("handle", Far(tap, "handle", 2000, 0));
+        Assert.Equal(3, plumbing.Tap.Turns, 9);
+        tap.DragGrip("washer", default);
+        Assert.True(plumbing.Tap.Worn);
+
+        var siphon = Open(2);
+        siphon.DragGrip("prime", default);
+        Assert.True(plumbing.Siphon.Primed);
+        siphon.DragGrip("outlet", Far(siphon, "outlet", 0, -2000));
+        Assert.Equal(3, plumbing.Siphon.Outlet, 9);
+        Assert.False(plumbing.Siphon.Flows);
+
+        var cistern = Open(3);
+        cistern.DragGrip("set", Far(cistern, "set", 0, 2000));
+        Assert.Equal(20, plumbing.Cistern.Set, 9);
+        cistern.DragGrip("flush", default);
+        Assert.True(plumbing.Cistern.Flushing);
+
+        var trap = Open(4);
+        trap.DragGrip("suction", Far(trap, "suction", 2000, 0));
+        Assert.Equal(12, plumbing.Trap.Suction, 9);
+        Assert.True(plumbing.Trap.Broken);
+        trap.DragGrip("vent", default);
+        Assert.True(plumbing.Trap.Vent);
+
+        var pump = Open(5);
+        pump.DragGrip("depth", Far(pump, "depth", 0, 2000));
+        Assert.Equal(14, plumbing.Pump.Depth, 9);
+        pump.DragGrip("down", default);
+        Assert.True(plumbing.Pump.Down);
+
+        window.Close();
     }
 
     [AvaloniaFact]

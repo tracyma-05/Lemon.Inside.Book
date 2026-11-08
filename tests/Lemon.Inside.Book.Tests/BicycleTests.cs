@@ -3,6 +3,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Bicycle;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -185,6 +186,121 @@ public sealed class BicycleTests
                 Assert.Contains(key, keys);
             }
         }
+    }
+
+    [Fact]
+    public void TheGripsSums_FindTheValuesTheyWereDrawnFrom()
+    {
+        // A sprocket's edge back to its teeth, each count in the sliders' ranges; too small a circle is the fewest.
+        for (var teeth = 11; teeth <= 53; teeth++)
+        {
+            Assert.Equal(teeth, ChainDiagram.TeethFor(Drive.PitchRadius(teeth), 11, 53));
+        }
+
+        Assert.Equal(11, ChainDiagram.TeethFor(0, 11, 34));
+        Assert.Equal(34, ChainDiagram.TeethFor(1, 11, 34));
+
+        // A tapped lever takes its brake up or leaves it; the only brake left alone hands over to the other.
+        Assert.Equal(BrakeUse.Rear, BrakeDiagram.Toggle(BrakeUse.Both, front: true));
+        Assert.Equal(BrakeUse.Both, BrakeDiagram.Toggle(BrakeUse.Rear, front: true));
+        Assert.Equal(BrakeUse.Rear, BrakeDiagram.Toggle(BrakeUse.Front, front: true));
+        Assert.Equal(BrakeUse.Front, BrakeDiagram.Toggle(BrakeUse.Both, front: false));
+        Assert.Equal(BrakeUse.Both, BrakeDiagram.Toggle(BrakeUse.Front, front: false));
+
+        // The head tube's top back to its angle, for any offset; out of reach it stops at the slider's ends.
+        foreach (var offset in new[] { 0.0, 0.045, 0.08 })
+        {
+            foreach (var angle in new[] { 62.0, 68.5, 72, 80 })
+            {
+                Assert.Equal(angle, SteerDiagram.AngleFor(SteerDiagram.Geometry(angle, offset).HeadTop.X, offset), 3);
+            }
+        }
+
+        Assert.Equal(80, SteerDiagram.AngleFor(10, 0.045), 3);
+        Assert.Equal(62, SteerDiagram.AngleFor(-10, 0.045), 3);
+    }
+
+    /// <summary>Every picture has grips, and dragging or tapping them moves the spread's own values (the sliders follow).</summary>
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Bicycle");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Bicycle");
+        var bicycle = Assert.IsType<BicycleTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Bicycle;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var wheel = Open(0);
+        wheel.DragGrip("load", Far(wheel, "load", 0, -2000));
+        Assert.Equal(150, bicycle.Wheel.Load, 9);
+        wheel.DragGrip("load", Far(wheel, "load", 0, 2000));
+        Assert.Equal(0, bicycle.Wheel.Load, 9);
+        wheel.DragGrip("tension", Far(wheel, "tension", -2000, 0));
+        Assert.Equal(100, bicycle.Wheel.Tension, 9);
+        wheel.DragGrip("tension", Far(wheel, "tension", 2000, 0));
+        Assert.Equal(1500, bicycle.Wheel.Tension, 9);
+
+        var chain = Open(1);
+        chain.DragGrip("chainring", Far(chain, "chainring", 2000, 0));
+        Assert.Equal(53, bicycle.Chain.Chainring);
+        chain.DragGrip("chainring", Far(chain, "chainring", -2000, 0));
+        Assert.Equal(28, bicycle.Chain.Chainring);
+        chain.DragGrip("sprocket", Far(chain, "sprocket", -2000, 0));
+        Assert.Equal(34, bicycle.Chain.Sprocket);
+        chain.DragGrip("sprocket", Far(chain, "sprocket", 2000, 0));
+        Assert.Equal(11, bicycle.Chain.Sprocket);
+
+        var hill = Open(2);
+        hill.DragGrip("slope", Far(hill, "slope", 0, -2000));
+        Assert.Equal(15, bicycle.Hill.Slope, 9);
+        hill.DragGrip("gear", Far(hill, "gear", -2000, 0));
+        Assert.Equal(Climb.Cassette.Count - 1, bicycle.Hill.Gear);
+        hill.DragGrip("gear", Far(hill, "gear", 2000, 0));
+        Assert.Equal(0, bicycle.Hill.Gear);
+
+        var freewheel = Open(3);
+        freewheel.DragGrip("pedals", Far(freewheel, "pedals", -2000, 0));
+        Assert.Equal(-0.4, bicycle.Freewheel.PedalSpeed, 9);
+        freewheel.DragGrip("pedals", Far(freewheel, "pedals", 2000, 0));
+        Assert.Equal(1, bicycle.Freewheel.PedalSpeed, 9);
+
+        var brakes = Open(4);
+        brakes.DragGrip("speed", Far(brakes, "speed", 2000, 0));
+        Assert.Equal(40, bicycle.Brakes.Speed, 9);
+        brakes.DragGrip("speed", Far(brakes, "speed", -2000, 0));
+        Assert.Equal(10, bicycle.Brakes.Speed, 9);
+        brakes.DragGrip("rear-lever", default);
+        Assert.Equal(BrakeUse.Front, bicycle.Brakes.Use);
+        Frames(2);
+        brakes.DragGrip("rear-lever", default);
+        Assert.Equal(BrakeUse.Both, bicycle.Brakes.Use);
+        Frames(2);
+        brakes.DragGrip("strength", Far(brakes, "strength", 0, -2000));
+        Assert.Equal(0.8, bicycle.Brakes.Strength, 9);
+        brakes.DragGrip("strength", Far(brakes, "strength", 0, 2000));
+        Assert.Equal(0.1, bicycle.Brakes.Strength, 9);
+
+        var steer = Open(5);
+        steer.DragGrip("offset", Far(steer, "offset", -2000, 0));
+        Assert.Equal(80, bicycle.Steer.Offset, 9);
+        steer.DragGrip("offset", Far(steer, "offset", 2000, 0));
+        Assert.Equal(0, bicycle.Steer.Offset, 9);
+        steer.DragGrip("angle", Far(steer, "angle", 2000, 0));
+        Assert.Equal(80, bicycle.Steer.HeadAngle, 9);
+        Frames(2);
+        steer.DragGrip("angle", Far(steer, "angle", -2000, 0));
+        Assert.Equal(62, bicycle.Steer.HeadAngle, 9);
+
+        window.Close();
     }
 
     [AvaloniaFact]

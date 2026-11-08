@@ -1,0 +1,147 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:canals="using:Lemon.Inside.Book.Chapters.Canals"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Canals.CanalsTextPageView"
+                              x:DataType="canals:CanalsTextPageViewModel">
+    <!-- A left page of the Canals chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="canals:LockSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PaddlesText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Lock_Paddles}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="4" Value="{Binding Paddles}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Canals_Lock_Paddles}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Filling}" Content="{loc:Localize Canals_Lock_Fill}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="canals:GatesSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding HeadText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Gates_Head}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="4" Value="{Binding Head}" SmallChange="0.1" LargeChange="0.5"
+                                        AutomationProperties.Name="{loc:Localize Canals_Gates_Head}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Downstream}" Content="{loc:Localize Canals_Gates_Downstream}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="canals:WaterSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SidePondsText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Water_Ponds}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="3" Value="{Binding SidePonds}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Canals_Water_Ponds}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BoatsText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Water_Boats}" />
+                                </DockPanel>
+                                <Slider Minimum="10" Maximum="100" Value="{Binding Boats}" SmallChange="1" LargeChange="10"
+                                        AutomationProperties.Name="{loc:Localize Canals_Water_Boats}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="canals:FlightSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding LocksText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Flight_Locks}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="8" Value="{Binding Locks}" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1"
+                                        AutomationProperties.Name="{loc:Localize Canals_Flight_Locks}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="canals:LiftSpread">
+                            <StackPanel>
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Boat}" Content="{loc:Localize Canals_Lift_Boat}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding ExtraText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Lift_Extra}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="20" Value="{Binding Extra}" SmallChange="0.5" LargeChange="2"
+                                        AutomationProperties.Name="{loc:Localize Canals_Lift_Extra}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="canals:TowingSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding LoadText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Towing_Load}" />
+                                </DockPanel>
+                                <Slider Minimum="10" Maximum="60" Value="{Binding Load}" SmallChange="1" LargeChange="5"
+                                        AutomationProperties.Name="{loc:Localize Canals_Towing_Load}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding SpeedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Canals_Towing_Speed}" />
+                                </DockPanel>
+                                <Slider Minimum="1" Maximum="8" Value="{Binding Speed}" SmallChange="0.1" LargeChange="1"
+                                        AutomationProperties.Name="{loc:Localize Canals_Towing_Speed}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

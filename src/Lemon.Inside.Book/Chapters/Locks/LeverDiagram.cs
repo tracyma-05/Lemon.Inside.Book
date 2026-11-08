@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,15 +11,17 @@ namespace Lemon.Inside.Book.Chapters.Locks;
 /// <summary>
 /// Spread 5: a lever lock with its three levers pulled apart into rows, so each can be seen. Every lever has a window
 /// the bolt's stump sits in and a gate running left from it; the key's bit (left) lifts each lever by its own step.
-/// While every gate is level with the stump the bit can draw the bolt back out of the door frame (bottom).
+/// While every gate is level with the stump the bit can draw the bolt back out of the door frame (bottom). The reader
+/// turns the key by dragging its bit round and taps the key's barrel to swap it for one with a step too high; the key
+/// turns smoothly to where it is set, so the levers are seen rising on the bit and the bolt sliding as it goes.
 /// </summary>
 public sealed class LeverDiagram : GearPicture
 {
     public static readonly StyledProperty<double> AngleProperty =
-        AvaloniaProperty.Register<LeverDiagram, double>(nameof(Angle));
+        AvaloniaProperty.Register<LeverDiagram, double>(nameof(Angle), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> WrongProperty =
-        AvaloniaProperty.Register<LeverDiagram, bool>(nameof(Wrong));
+        AvaloniaProperty.Register<LeverDiagram, bool>(nameof(Wrong), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>A lever's plate, mm: its width and height, the stump's place when locked, how far the bolt travels.</summary>
     private const double PlateWidth = 30;
@@ -37,6 +41,9 @@ public sealed class LeverDiagram : GearPicture
         Color.FromRgb(0xC9, 0xA2, 0x4E), Color.FromRgb(0x5F, 0xC2, 0xB0), Color.FromRgb(0xD8, 0x84, 0x52),
     ];
 
+    /// <summary>The key's turn as drawn, degrees, easing toward the angle set.</summary>
+    private double _angle = double.NaN;
+
     static LeverDiagram()
     {
         AffectsRender<LeverDiagram>(AngleProperty, WrongProperty);
@@ -55,12 +62,27 @@ public sealed class LeverDiagram : GearPicture
         set => SetValue(WrongProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double SetAngle => Math.Clamp(Angle, 0, 180);
+
+    protected override void Advance(double seconds) =>
+        _angle = double.IsNaN(_angle) ? SetAngle : LocksParts.Ease(_angle, SetAngle, Math.Max(90, Math.Abs(SetAngle - _angle) * 4), seconds);
+
+    /// <summary>
+    /// The key's angle, degrees, with its bit pointing at <paramref name="pointer"/> from <paramref name="centre"/>: at
+    /// 0 the bit points left, at 90 up, at 180 right (the way the picture turns it); pointing lower down on either
+    /// side holds it at that end. Snapped like the slider.
+    /// </summary>
+    internal static double AngleAt(Point centre, Point pointer)
+    {
+        var (dx, dy) = (pointer.X - centre.X, pointer.Y - centre.Y);
+        var degrees = (Math.Atan2(dx, -dy) * 180 / Math.PI) + 90; // −90 (down, from the left) … 270 (down, from the right)
+        return Math.Clamp(Math.Round(degrees / 2) * 2, 0, 180);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var key = Wrong ? LeverLock.WrongKey : LeverLock.Gates;
-        var angle = Math.Clamp(Angle, 0, 180);
+        var angle = double.IsNaN(_angle) ? SetAngle : _angle;
         var bolt = LeverLock.Bolt(key, angle);
         var scale = Math.Min((bounds.Width - 24) / 66, (bounds.Height - 30) / 96);
         var left = bounds.X + 12 + (26 * scale);
@@ -140,5 +162,10 @@ public sealed class LeverDiagram : GearPicture
         context.DrawEllipse(LocksParts.Dark, null, centre, radius * 0.35, radius * 0.35);
         Mark("bit", bit, 8);
         DiagramText.Draw(context, DiagramText.Get("Locks_Lever_Exploded"), new Point(left, bounds.Bottom - 10), 11, DiagramText.Faint, 0, 1);
+
+        // The reader's handles: the bit's far end, dragged round to turn the key, and a tap on the barrel to swap keys.
+        var gripReach = radius + (5.5 * scale);
+        Grip("turn", centre + (along * gripReach), GripAxis.Free, DiagramText.Get("Locks_Grip_TurnKey"), at => Angle = AngleAt(centre, at));
+        Grip("swap", centre, GripAxis.Tap, DiagramText.Get("Locks_Grip_SwapKey"), _ => Wrong = !Wrong);
     }
 }

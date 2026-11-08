@@ -6990,4 +6990,1087 @@
   <data name="Narr_Friction_Oil_Part_Chart" xml:space="preserve">
     <value>加了油的表面摩擦力随速度的变化，标出了你选的速度。</value>
   </data>
+  <data name="Chapter_Canals" xml:space="preserve">
+    <value>运河与船闸</value>
+  </data>
+  <data name="Canals_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Canals_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Canals_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Canals_Tonnes" xml:space="preserve">
+    <value>{0} 吨</value>
+  </data>
+  <data name="Canals_Cubic" xml:space="preserve">
+    <value>{0} 立方米</value>
+  </data>
+  <data name="Canals_Minutes" xml:space="preserve">
+    <value>{0} 分钟</value>
+  </data>
+  <data name="Canals_Centimetres" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Canals_Speed" xml:space="preserve">
+    <value>{0} 千米/时</value>
+  </data>
+  <data name="Canals_Kgf" xml:space="preserve">
+    <value>{0} 千克</value>
+  </data>
+  <data name="Canals_Lock_Title" xml:space="preserve">
+    <value>水做的台阶</value>
+  </data>
+  <data name="Canals_Lock_P1" xml:space="preserve">
+    <value>水不会往高处流，所以运河要一级一级地爬坡。每一级就是一座船闸：一个两头都有闸门的石砌闸室。上行的船从下游驶进闸室，身后的闸门关上，再从上游往闸室里灌水，直到水面和浮在上面的船都升到上游的水位。</value>
+  </data>
+  <data name="Canals_Lock_P2" xml:space="preserve">
+    <value>水从闸门下部的小闸孔里进来。不需要水泵：上游河水自身的重量就把水推进来。一开始两边水位相差很大，水冲得很急；水位越来越接近，推力就越来越小，最后一米要花的时间是第一米的三倍。闸孔开得越多，灌得越快，但船也被搅得越厉害。</value>
+  </data>
+  <data name="Canals_Lock_Deeper" xml:space="preserve">
+    <value>下行正好反过来：打开下游闸门上的闸孔，把闸室里的水放到下游去。只有两边水位相同时，闸门才打得开，所以闸工总要等水面平静下来。水流过闸孔的速度只取决于水位差，就像水塔下面的水龙头一样：三米的水位差，大约每秒七米半。</value>
+  </data>
+  <data name="Canals_Lock_Paddles" xml:space="preserve">
+    <value>打开的闸孔</value>
+  </data>
+  <data name="Canals_Lock_Fill" xml:space="preserve">
+    <value>打开上游闸孔</value>
+  </data>
+  <data name="Canals_Lock_Readout" xml:space="preserve">
+    <value>开这么多闸孔，大约 {0} 灌满：第一米要 {1}，最后一米要 {2}。</value>
+  </data>
+  <data name="Canals_Lock_Picture" xml:space="preserve">
+    <value>纵向剖开的船闸：下游运河、里面有船的闸室和上游运河，闸门上有闸孔</value>
+  </data>
+  <data name="Canals_Lock_Upper" xml:space="preserve">
+    <value>上游运河</value>
+  </data>
+  <data name="Canals_Lock_Lower" xml:space="preserve">
+    <value>下游运河</value>
+  </data>
+  <data name="Canals_Lock_LevelLabel" xml:space="preserve">
+    <value>已升 {0} / {1} 米（时间快 30 倍）</value>
+  </data>
+  <data name="Canals_Lock_Rule" xml:space="preserve">
+    <value>上游河水的重量完成抬升</value>
+  </data>
+  <data name="Narr_Canals_Lock_01" xml:space="preserve">
+    <value>一条船从下游驶进了闸室。</value>
+  </data>
+  <data name="Narr_Canals_Lock_02" xml:space="preserve">
+    <value>身后的下游闸门关上了。上游闸门挡着高出三米的上游河水。</value>
+  </data>
+  <data name="Narr_Canals_Lock_03" xml:space="preserve">
+    <value>轮到你了：打开上游闸门上的闸孔。</value>
+  </data>
+  <data name="Narr_Canals_Lock_04" xml:space="preserve">
+    <value>打开四个闸孔，灌水快四倍，大约两分钟就满了。</value>
+  </data>
+  <data name="Narr_Canals_Lock_05" xml:space="preserve">
+    <value>为什么最后一米比第一米慢得多？</value>
+  </data>
+  <data name="Canals_Lock_Quiz1" xml:space="preserve">
+    <value>闸孔自己慢慢关上了</value>
+  </data>
+  <data name="Canals_Lock_Quiz2" xml:space="preserve">
+    <value>水位差变小了，水被推进来的力就小了</value>
+  </data>
+  <data name="Canals_Lock_Quiz3" xml:space="preserve">
+    <value>船挡住了水</value>
+  </data>
+  <data name="Canals_Lock_Part_Boat" xml:space="preserve">
+    <value>船</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Boat" xml:space="preserve">
+    <value>它只是浮着，随着水面一起升高。</value>
+  </data>
+  <data name="Canals_Lock_Part_Gates" xml:space="preserve">
+    <value>闸门</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Gates" xml:space="preserve">
+    <value>两头厚重的木闸门。任何时候都只有一头是开着的。</value>
+  </data>
+  <data name="Canals_Lock_Part_Paddles" xml:space="preserve">
+    <value>闸孔</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Paddles" xml:space="preserve">
+    <value>闸门下部的小开口，用摇柄摇开，让水通过。</value>
+  </data>
+  <data name="Canals_Lock_Part_Chamber" xml:space="preserve">
+    <value>闸室</value>
+  </data>
+  <data name="Narr_Canals_Lock_Part_Chamber" xml:space="preserve">
+    <value>三十米长、石砌的水槽，水面能升降三米。</value>
+  </data>
+  <data name="Canals_Gates_Title" xml:space="preserve">
+    <value>水把闸门关紧</value>
+  </data>
+  <data name="Canals_Gates_P1" xml:space="preserve">
+    <value>船闸的闸门挡着一堵水墙。三米深的水压在每扇门上，力量约有十六吨。没有哪个门闩扛得住，所以闸门的设计是让水自己把门顶住：两扇门在中间以一个角度相交，尖端指向上游，就像一个箭头对准高处的水。</value>
+  </data>
+  <data name="Canals_Gates_P2" xml:space="preserve">
+    <value>水把每扇门都推向另一扇，推得越用力，两扇门在相交的边缘，也就是斜接处，就压得越紧。每扇门都像拱一样顺着长度方向受压，再把推力传给门轴处的石墙。要是把门反过来指向下游，同样的推力就会把它们推开。</value>
+  </data>
+  <data name="Canals_Gates_Deeper" xml:space="preserve">
+    <value>正因为这样，两边水位不同时，闸门是打不开的：有十六吨的力把它压着。一旦两边水位持平，推力就没了，一个人靠在长长的平衡梁上就能推开闸门。平衡梁伸到纤道上方，也在门轴处平衡着闸门自身的重量。推力随水深的平方增加：水位差加倍，推力变四倍。</value>
+  </data>
+  <data name="Canals_Gates_Head" xml:space="preserve">
+    <value>水位差</value>
+  </data>
+  <data name="Canals_Gates_Downstream" xml:space="preserve">
+    <value>把闸门改成指向下游</value>
+  </data>
+  <data name="Canals_Gates_Level" xml:space="preserve">
+    <value>两边水位持平：没有推力，一个人就能推开闸门。</value>
+  </data>
+  <data name="Canals_Gates_Readout" xml:space="preserve">
+    <value>水以大约 {0} 的力压着每扇门，把它们压得更紧。</value>
+  </data>
+  <data name="Canals_Gates_Burst" xml:space="preserve">
+    <value>指向下游时，每扇门上 {0} 的力把闸门推开，河水一涌而出。</value>
+  </data>
+  <data name="Canals_Gates_Picture" xml:space="preserve">
+    <value>从上方看的一对人字闸门，相交成一个指向高水位的 V 形，箭头表示水的推力，还有长长的平衡梁</value>
+  </data>
+  <data name="Canals_Gates_UpperSide" xml:space="preserve">
+    <value>高水位</value>
+  </data>
+  <data name="Canals_Gates_LowerSide" xml:space="preserve">
+    <value>低 {0} 米</value>
+  </data>
+  <data name="Canals_Gates_SameSide" xml:space="preserve">
+    <value>同样的水位</value>
+  </data>
+  <data name="Canals_Gates_PushLabel" xml:space="preserve">
+    <value>每扇门约 {0} 吨</value>
+  </data>
+  <data name="Canals_Gates_BurstLabel" xml:space="preserve">
+    <value>被推开了！</value>
+  </data>
+  <data name="Canals_Gates_Rule" xml:space="preserve">
+    <value>指向上游时，推力只会把门关得更紧</value>
+  </data>
+  <data name="Narr_Canals_Gates_01" xml:space="preserve">
+    <value>两扇闸门在中间相交，尖端指向高水位。</value>
+  </data>
+  <data name="Narr_Canals_Gates_02" xml:space="preserve">
+    <value>三米深的水以大约十六吨的力压着每扇门，把它们推到一起。</value>
+  </data>
+  <data name="Narr_Canals_Gates_03" xml:space="preserve">
+    <value>轮到你了：把闸门改成指向下游。</value>
+  </data>
+  <data name="Narr_Canals_Gates_04" xml:space="preserve">
+    <value>重新指向正确的方向，两边水位也持平了：现在没有推力，一个人用平衡梁就能推开闸门。</value>
+  </data>
+  <data name="Narr_Canals_Gates_05" xml:space="preserve">
+    <value>船闸的闸门为什么要指向上游？</value>
+  </data>
+  <data name="Canals_Gates_Quiz1" xml:space="preserve">
+    <value>让船从远处就能看见</value>
+  </data>
+  <data name="Canals_Gates_Quiz2" xml:space="preserve">
+    <value>这样更容易建造</value>
+  </data>
+  <data name="Canals_Gates_Quiz3" xml:space="preserve">
+    <value>让水的推力把它们压紧，而不是推开</value>
+  </data>
+  <data name="Canals_Gates_Part_Leaves" xml:space="preserve">
+    <value>门扇</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Leaves" xml:space="preserve">
+    <value>每扇门都顺着长度方向受压，就像拱里的石块，把推力传给石墙。</value>
+  </data>
+  <data name="Canals_Gates_Part_Mitre" xml:space="preserve">
+    <value>斜接处</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Mitre" xml:space="preserve">
+    <value>两扇门相交的地方。水的推力在这里把它们压紧，封住接缝。</value>
+  </data>
+  <data name="Canals_Gates_Part_Water" xml:space="preserve">
+    <value>河水</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Water" xml:space="preserve">
+    <value>高水位越深推得越厉害：水位差加倍，推力变四倍。</value>
+  </data>
+  <data name="Canals_Gates_Part_Beam" xml:space="preserve">
+    <value>平衡梁</value>
+  </data>
+  <data name="Narr_Canals_Gates_Part_Beam" xml:space="preserve">
+    <value>一根可以推的长木臂，也在门轴处平衡着闸门的重量。</value>
+  </data>
+  <data name="Canals_Water_Title" xml:space="preserve">
+    <value>每条船都要用水</value>
+  </data>
+  <data name="Canals_Water_P1" xml:space="preserve">
+    <value>每有一条船从船闸下行，就有一闸室的水跟着流下去；每有一条船上行，也要从上面放下一闸室的水把它抬起来。这里每条船大约用五百四十立方米。这些水都要在运河最高的一段，也就是顶峰段，用水库、溪流或水泵补上。</value>
+  </data>
+  <data name="Canals_Water_P2" xml:space="preserve">
+    <value>有些船闸用侧池来省水：侧池是闸室旁边高度不同的水池。闸室放水时，上面几层水先放进侧池，而不是放到下游；灌水时再把它们放回来。两个和闸室一样大的侧池，能让每条船只用半闸室的水；三个侧池，只用五分之二。</value>
+  </data>
+  <data name="Canals_Water_Deeper" xml:space="preserve">
+    <value>每个侧池只能从比它高的那层水里取水，再还给比它低的那层，所以总有一些水必须流到下游去：这里不管有几个侧池，都要流走两层。水常常是运河最头疼的事。干旱的夏天，繁忙的运河只好让船等着，好让几条船共用一次灌水。</value>
+  </data>
+  <data name="Canals_Water_Ponds" xml:space="preserve">
+    <value>侧池</value>
+  </data>
+  <data name="Canals_Water_Boats" xml:space="preserve">
+    <value>每天的船数</value>
+  </data>
+  <data name="Canals_Water_Readout" xml:space="preserve">
+    <value>每条船用 {0}（一闸室的 {1}%）；一天的船共用 {2}。</value>
+  </data>
+  <data name="Canals_Water_Picture" xml:space="preserve">
+    <value>画满水的闸室被切成几层，旁边是与上面几层同高的侧池，上方是顶峰段，还有一条表示每条船用水量的横条</value>
+  </data>
+  <data name="Canals_Water_SummitLabel" xml:space="preserve">
+    <value>顶峰段：靠水库补水</value>
+  </data>
+  <data name="Canals_Water_LowerLabel" xml:space="preserve">
+    <value>下游运河</value>
+  </data>
+  <data name="Canals_Water_LostLabel" xml:space="preserve">
+    <value>流向下游</value>
+  </data>
+  <data name="Canals_Water_PondLabel" xml:space="preserve">
+    <value>侧池 {0}</value>
+  </data>
+  <data name="Canals_Water_NoPonds" xml:space="preserve">
+    <value>没有侧池</value>
+  </data>
+  <data name="Canals_Water_BarLabel" xml:space="preserve">
+    <value>每船 {0} 立方米 · {1}%</value>
+  </data>
+  <data name="Canals_Water_DayLabel" xml:space="preserve">
+    <value>每天 {0} 条船：{1} 立方米</value>
+  </data>
+  <data name="Canals_Water_Rule" xml:space="preserve">
+    <value>侧池把上面几层水留到下一次</value>
+  </data>
+  <data name="Narr_Canals_Water_01" xml:space="preserve">
+    <value>没有侧池时，每条船都会让一整闸室的水流到下游。</value>
+  </data>
+  <data name="Narr_Canals_Water_02" xml:space="preserve">
+    <value>这些水要在顶峰段补上，靠的是收集雨水和溪流的水库。</value>
+  </data>
+  <data name="Narr_Canals_Water_03" xml:space="preserve">
+    <value>轮到你了：给船闸加两个侧池。</value>
+  </data>
+  <data name="Narr_Canals_Water_04" xml:space="preserve">
+    <value>有三个侧池时，每条船只用五分之二闸室的水。最下面两层总是要流走的。</value>
+  </data>
+  <data name="Narr_Canals_Water_05" xml:space="preserve">
+    <value>侧池是怎么省水的？</value>
+  </data>
+  <data name="Canals_Water_Quiz1" xml:space="preserve">
+    <value>它们把闸室上面几层水存起来再用，而不是放到下游</value>
+  </data>
+  <data name="Canals_Water_Quiz2" xml:space="preserve">
+    <value>它们让船变轻</value>
+  </data>
+  <data name="Canals_Water_Quiz3" xml:space="preserve">
+    <value>它们把水抽回顶峰段</value>
+  </data>
+  <data name="Canals_Water_Part_Chamber" xml:space="preserve">
+    <value>闸室</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Chamber" xml:space="preserve">
+    <value>画满了水并切成几层：表示闸室放水时每层水的去向。</value>
+  </data>
+  <data name="Canals_Water_Part_Ponds" xml:space="preserve">
+    <value>侧池</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Ponds" xml:space="preserve">
+    <value>每个侧池在放水时接住一层，灌水时再还回来。</value>
+  </data>
+  <data name="Canals_Water_Part_Summit" xml:space="preserve">
+    <value>顶峰段</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Summit" xml:space="preserve">
+    <value>运河最高的一段。每一滴流下去的水，都得在这里补回来。</value>
+  </data>
+  <data name="Canals_Water_Part_Bar" xml:space="preserve">
+    <value>每船用水</value>
+  </data>
+  <data name="Narr_Canals_Water_Part_Bar" xml:space="preserve">
+    <value>一条船用的水，和一整闸室相比。</value>
+  </data>
+  <data name="Canals_Flight_Title" xml:space="preserve">
+    <value>爬上山坡</value>
+  </data>
+  <data name="Canals_Flight_P1" xml:space="preserve">
+    <value>一座二十四米高的山坡，原则上可以只用一座船闸爬上去。可那样的闸室会有八层楼那么深，闸门大得吓人，而且每条船都会让二十四米深的一闸室水流下去。所以运河用一串较小的船闸来爬坡，一座接一座，中间隔着一小段水面。</value>
+  </data>
+  <data name="Canals_Flight_P2" xml:space="preserve">
+    <value>用六座船闸，每座抬升四米。下行的船带走一闸室四米深的水，这些水再一路流过下面每座船闸，所以一条船只需要一座大船闸六分之一的水。代价是时间：每座船闸操作一次大约要十二分钟，六座就要一个多小时。</value>
+  </data>
+  <data name="Canals_Flight_Deeper" xml:space="preserve">
+    <value>有些船闸群把船闸一座紧挨一座地建，上一座的上游闸门就是下一座的下游闸门，像楼梯一样。这样省地方，但会车很麻烦：上行和下行的船没法在中间错开。山坡高得连船闸群也爬不上去时，工程师就挖隧道穿过去，或者干脆建一座升船机。</value>
+  </data>
+  <data name="Canals_Flight_Locks" xml:space="preserve">
+    <value>船闸的座数</value>
+  </data>
+  <data name="Canals_Flight_Readout" xml:space="preserve">
+    <value>每座船闸抬升 {0}；一条船从顶上带走 {1} 的水，爬坡大约要 {2} 分钟。</value>
+  </data>
+  <data name="Canals_Flight_Picture" xml:space="preserve">
+    <value>运河用一串船闸爬上 24 米高的山坡，每座船闸都是两道闸门之间的一级水台阶，坡底有一条船</value>
+  </data>
+  <data name="Canals_Flight_StepLabel" xml:space="preserve">
+    <value>每级 {0} 米</value>
+  </data>
+  <data name="Canals_Flight_BarLabel" xml:space="preserve">
+    <value>每船 {0} 立方米</value>
+  </data>
+  <data name="Canals_Flight_TimeLabel" xml:space="preserve">
+    <value>爬坡大约 {0} 分钟</value>
+  </data>
+  <data name="Canals_Flight_Rule" xml:space="preserve">
+    <value>高度画得比实际陡三倍</value>
+  </data>
+  <data name="Narr_Canals_Flight_01" xml:space="preserve">
+    <value>这座山坡有二十四米高。一座船闸的闸室得有八层楼那么深。</value>
+  </data>
+  <data name="Narr_Canals_Flight_02" xml:space="preserve">
+    <value>两座船闸：每座抬升十二米，每条船用一半的水。</value>
+  </data>
+  <data name="Narr_Canals_Flight_03" xml:space="preserve">
+    <value>轮到你了：建一串至少六座的船闸。</value>
+  </data>
+  <data name="Narr_Canals_Flight_04" xml:space="preserve">
+    <value>现在每条船只从顶上带走四米深的一闸室水，可是爬坡要一个多小时。</value>
+  </data>
+  <data name="Narr_Canals_Flight_05" xml:space="preserve">
+    <value>为什么一串小船闸比一座大船闸省水？</value>
+  </data>
+  <data name="Canals_Flight_Quiz1" xml:space="preserve">
+    <value>小船闸漏水少</value>
+  </data>
+  <data name="Canals_Flight_Quiz2" xml:space="preserve">
+    <value>小船闸里的船比较小</value>
+  </data>
+  <data name="Canals_Flight_Quiz3" xml:space="preserve">
+    <value>一条船只带走一小闸室的水，这些水再流过下面每座船闸</value>
+  </data>
+  <data name="Canals_Flight_Part_Hill" xml:space="preserve">
+    <value>山坡</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Hill" xml:space="preserve">
+    <value>从坡底到坡顶二十四米。</value>
+  </data>
+  <data name="Canals_Flight_Part_Locks" xml:space="preserve">
+    <value>船闸</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Locks" xml:space="preserve">
+    <value>每座都是两道闸门之间的一级水台阶。船闸越多，台阶越小。</value>
+  </data>
+  <data name="Canals_Flight_Part_Boat" xml:space="preserve">
+    <value>船</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Boat" xml:space="preserve">
+    <value>在坡底等着进第一座船闸。</value>
+  </data>
+  <data name="Canals_Flight_Part_Water" xml:space="preserve">
+    <value>每船用水</value>
+  </data>
+  <data name="Narr_Canals_Flight_Part_Water" xml:space="preserve">
+    <value>一级台阶高的一闸室水，和一座整个山坡那么高的船闸相比。</value>
+  </data>
+  <data name="Canals_Lift_Title" xml:space="preserve">
+    <value>给船坐的电梯</value>
+  </data>
+  <data name="Canals_Lift_P1" xml:space="preserve">
+    <value>升船机不用台阶，而是把船装在水槽里直接上下运送。两个水槽挂在一个大轮子两边的绳子上，就像电梯和它的配重，只不过在这里，两个水槽互为配重。一个上去，另一个就下来。</value>
+  </data>
+  <data name="Canals_Lift_P2" xml:space="preserve">
+    <value>装了船的水槽难道不比空的重吗？并不会。浮着的船会排开和自己一样重的水，船驶进来时，这些水就从水槽的门上溢出去了。所以装了船的水槽和原来一样重，两边照样平衡。电动机只需要克服摩擦，除非让两边水位不一样。</value>
+  </data>
+  <data name="Canals_Lift_Deeper" xml:space="preserve">
+    <value>这正是船能浮起来的那个道理，只是反过来用：水槽里浮着什么东西，它的重量都恰好等于它排开的水。所以升船机的操作员盯着的是水位，而不是船：一个水槽里多几厘米水，就多出好几吨。有几座大型升船机已经这样运转了一百多年，有的靠轮子，有的靠活塞，有的像跷跷板一样倾斜。</value>
+  </data>
+  <data name="Canals_Lift_Boat" xml:space="preserve">
+    <value>把一条船开进左边的水槽</value>
+  </data>
+  <data name="Canals_Lift_Extra" xml:space="preserve">
+    <value>左边水槽多出的水</value>
+  </data>
+  <data name="Canals_Lift_Even" xml:space="preserve">
+    <value>两个水槽平衡，各重 {0}：电动机只需克服摩擦。</value>
+  </data>
+  <data name="Canals_Lift_Uneven" xml:space="preserve">
+    <value>左边水槽重了 {0}：电动机得拉住它。</value>
+  </data>
+  <data name="Canals_Lift_Picture" xml:space="preserve">
+    <value>升船机：两个装满水的水槽挂在一个大轮子上，轮轴处有电动机，左边水槽里浮着一条船</value>
+  </data>
+  <data name="Canals_Lift_MotorLabel" xml:space="preserve">
+    <value>电动机拉住 {0} 吨</value>
+  </data>
+  <data name="Canals_Lift_EvenLabel" xml:space="preserve">
+    <value>平衡</value>
+  </data>
+  <data name="Canals_Lift_SpilledLabel" xml:space="preserve">
+    <value>和它一样重的水溢出去了</value>
+  </data>
+  <data name="Canals_Lift_Rule" xml:space="preserve">
+    <value>浮着的船重量等于它排开的水</value>
+  </data>
+  <data name="Narr_Canals_Lift_01" xml:space="preserve">
+    <value>两个水槽，各重大约五百四十吨，挂在这个轮子的两边。</value>
+  </data>
+  <data name="Narr_Canals_Lift_02" xml:space="preserve">
+    <value>它们互为配重：一个上去，另一个就下来。</value>
+  </data>
+  <data name="Narr_Canals_Lift_03" xml:space="preserve">
+    <value>轮到你了：把一条船开进左边的水槽。</value>
+  </data>
+  <data name="Narr_Canals_Lift_04" xml:space="preserve">
+    <value>两个水槽还是平衡的。可一个水槽里多十厘米的水，电动机就得拉住十八吨。</value>
+  </data>
+  <data name="Narr_Canals_Lift_05" xml:space="preserve">
+    <value>为什么船没有让水槽变重？</value>
+  </data>
+  <data name="Canals_Lift_Quiz1" xml:space="preserve">
+    <value>船很轻</value>
+  </data>
+  <data name="Canals_Lift_Quiz2" xml:space="preserve">
+    <value>它排开了和自己一样重的水，这些水从门上溢出去了</value>
+  </data>
+  <data name="Canals_Lift_Quiz3" xml:space="preserve">
+    <value>轮子承担了它的重量</value>
+  </data>
+  <data name="Canals_Lift_Part_Tanks" xml:space="preserve">
+    <value>水槽</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Tanks" xml:space="preserve">
+    <value>两头有门的不漏水的箱子，把船和水一起运送。</value>
+  </data>
+  <data name="Canals_Lift_Part_Boat" xml:space="preserve">
+    <value>船</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Boat" xml:space="preserve">
+    <value>浮着的时候，它的重量正好等于它推开的水。</value>
+  </data>
+  <data name="Canals_Lift_Part_Wheel" xml:space="preserve">
+    <value>大轮子</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Wheel" xml:space="preserve">
+    <value>两个水槽挂在它的绳子上，互相平衡。</value>
+  </data>
+  <data name="Canals_Lift_Part_Motor" xml:space="preserve">
+    <value>电动机</value>
+  </data>
+  <data name="Narr_Canals_Lift_Part_Motor" xml:space="preserve">
+    <value>两个水槽平衡时，它只需克服摩擦来转动轮子。</value>
+  </data>
+  <data name="Canals_Towing_Title" xml:space="preserve">
+    <value>一匹马，一条驳船</value>
+  </data>
+  <data name="Canals_Towing_P1" xml:space="preserve">
+    <value>在有铁路之前，煤和石头这样的重货都走运河，一条驳船由一匹沿纤道行走的马拉着。在路上，同一匹马只能拉动一吨半左右的车；在运河上，它能以步行的速度拉动三十吨甚至更重的驳船。</value>
+  </data>
+  <data name="Canals_Towing_P2" xml:space="preserve">
+    <value>水把驳船托住，所以没有滚动或滑动的摩擦要克服，只有船体推开水时水的阻力。以步行的速度，这个阻力很小。但它随速度的平方增加：走快一倍，马就得拉四倍的力，那它可坚持不了。</value>
+  </data>
+  <data name="Canals_Towing_Deeper" xml:space="preserve">
+    <value>尾浪显示了力气花在哪儿：驳船越快，掀起的浪越大，冲刷河岸也越厉害。运河常常有限速，就是为了保护河岸。装满货的驳船吃水更深，推开的水更多，所以阻力也随载重增大，不过比重量增加得慢。</value>
+  </data>
+  <data name="Canals_Towing_Load" xml:space="preserve">
+    <value>驳船的载重</value>
+  </data>
+  <data name="Canals_Towing_Speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="Canals_Towing_Readout" xml:space="preserve">
+    <value>驳船需要 {0} 的拉力：一匹马持续能出 {1}，拉得动。在路上，这匹马只能拉大约 {2}。</value>
+  </data>
+  <data name="Canals_Towing_TooFast" xml:space="preserve">
+    <value>驳船需要 {0} 的拉力，超过了一匹马持续能出的 {1}：它坚持不了。（在路上它只能拉大约 {2}。）</value>
+  </data>
+  <data name="Canals_Towing_Picture" xml:space="preserve">
+    <value>从上方看，一匹马在纤道上拉着一条满载的驳船，船后尾浪散开，下面的横条比较所需拉力和马的持续拉力</value>
+  </data>
+  <data name="Canals_Towing_NeedsLabel" xml:space="preserve">
+    <value>驳船需要 {0}</value>
+  </data>
+  <data name="Canals_Towing_HorseLabel" xml:space="preserve">
+    <value>一匹马：{0}</value>
+  </data>
+  <data name="Canals_Towing_Rule" xml:space="preserve">
+    <value>速度加倍，拉力变四倍</value>
+  </data>
+  <data name="Narr_Canals_Towing_01" xml:space="preserve">
+    <value>一条驳船装着三十吨煤。</value>
+  </data>
+  <data name="Narr_Canals_Towing_02" xml:space="preserve">
+    <value>一匹马以步行的速度拉着它，大约用六十千克的力。在路上，它只能拉一吨半。</value>
+  </data>
+  <data name="Narr_Canals_Towing_03" xml:space="preserve">
+    <value>轮到你了：把速度加倍到每小时八千米。</value>
+  </data>
+  <data name="Narr_Canals_Towing_04" xml:space="preserve">
+    <value>拉力变成四倍，马坚持不了。回到步行的速度，尾浪很小，马能走上一整天。</value>
+  </data>
+  <data name="Narr_Canals_Towing_05" xml:space="preserve">
+    <value>为什么马在运河上能拉的东西比在路上多得多？</value>
+  </data>
+  <data name="Canals_Towing_Quiz1" xml:space="preserve">
+    <value>水托住了驳船，以步行的速度，水的阻力很小</value>
+  </data>
+  <data name="Canals_Towing_Quiz2" xml:space="preserve">
+    <value>运河上的马更强壮</value>
+  </data>
+  <data name="Canals_Towing_Quiz3" xml:space="preserve">
+    <value>水流推着驳船走</value>
+  </data>
+  <data name="Canals_Towing_Part_Barge" xml:space="preserve">
+    <value>驳船</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Barge" xml:space="preserve">
+    <value>被水托着。拉住它的只有推开水时的阻力。</value>
+  </data>
+  <data name="Canals_Towing_Part_Horse" xml:space="preserve">
+    <value>马</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Horse" xml:space="preserve">
+    <value>它能持续拉大约八十千克的力，拉上一整天。</value>
+  </data>
+  <data name="Canals_Towing_Part_Rope" xml:space="preserve">
+    <value>纤绳</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Rope" xml:space="preserve">
+    <value>系在船头附近，一直连到纤道上的马。</value>
+  </data>
+  <data name="Canals_Towing_Part_Wake" xml:space="preserve">
+    <value>尾浪</value>
+  </data>
+  <data name="Narr_Canals_Towing_Part_Wake" xml:space="preserve">
+    <value>驳船掀起的浪。走得越快，浪越大，花的拉力也越多。</value>
+  </data>
+  <data name="Canals_Lock_Taller" xml:space="preserve">
+    <value>高度画得比实际高三倍</value>
+  </data>
+  <data name="Canals_Grip_FillUpper" xml:space="preserve">
+    <value>点一下：从上游放水进闸室</value>
+  </data>
+  <data name="Canals_Grip_EmptyLower" xml:space="preserve">
+    <value>点一下：把闸室的水放到下游</value>
+  </data>
+  <data name="Canals_Grip_Paddles" xml:space="preserve">
+    <value>拖动：多开或少开几个闸孔</value>
+  </data>
+  <data name="Canals_Grip_Head" xml:space="preserve">
+    <value>拖动：升高或降低上游的水</value>
+  </data>
+  <data name="Canals_Grip_Flip" xml:space="preserve">
+    <value>点一下：把闸门调个方向</value>
+  </data>
+  <data name="Canals_Grip_AddPond" xml:space="preserve">
+    <value>点一下：在这里挖一个侧池</value>
+  </data>
+  <data name="Canals_Grip_RemovePond" xml:space="preserve">
+    <value>点一下：填掉这个侧池</value>
+  </data>
+  <data name="Canals_Grip_Boats" xml:space="preserve">
+    <value>拖动：每天多过或少过几条船</value>
+  </data>
+  <data name="Canals_Grip_Step" xml:space="preserve">
+    <value>拖动：把第一级台阶升高或降低</value>
+  </data>
+  <data name="Canals_Grip_Boat" xml:space="preserve">
+    <value>点一下：让船开进或开出水槽</value>
+  </data>
+  <data name="Canals_Grip_Extra" xml:space="preserve">
+    <value>拖动：往水槽里多灌些水</value>
+  </data>
+  <data name="Canals_Grip_Load" xml:space="preserve">
+    <value>拖动：多装或少装些货</value>
+  </data>
+  <data name="Canals_Grip_Speed" xml:space="preserve">
+    <value>拖动马：走快些或慢些</value>
+  </data>
+  <data name="Bicycle_Grip_Load" xml:space="preserve">
+    <value>拖动：把箭头往上拉，轮子承受的重量更大</value>
+  </data>
+  <data name="Bicycle_Grip_Tension" xml:space="preserve">
+    <value>拖动：沿着颜色条把辐条装得更紧或更松</value>
+  </data>
+  <data name="Bicycle_Grip_Chainring" xml:space="preserve">
+    <value>拖动：把牙盘的边往外拉，齿更多</value>
+  </data>
+  <data name="Bicycle_Grip_Sprocket" xml:space="preserve">
+    <value>拖动：把小齿轮的边往外拉，齿更多</value>
+  </data>
+  <data name="Bicycle_Grip_Slope" xml:space="preserve">
+    <value>拖动：往上拉，坡更陡</value>
+  </data>
+  <data name="Bicycle_Grip_Gear" xml:space="preserve">
+    <value>拖动：把链条拨到另一个齿轮上换挡</value>
+  </data>
+  <data name="Bicycle_Grip_Pedals" xml:space="preserve">
+    <value>拖动：往右是向前蹬，往左是往后蹬</value>
+  </data>
+  <data name="Bicycle_Grip_Speed" xml:space="preserve">
+    <value>拖动：把箭头拉长，骑得更快</value>
+  </data>
+  <data name="Bicycle_Grip_FrontBrake" xml:space="preserve">
+    <value>点一下：用或不用前刹</value>
+  </data>
+  <data name="Bicycle_Grip_RearBrake" xml:space="preserve">
+    <value>点一下：用或不用后刹</value>
+  </data>
+  <data name="Bicycle_Grip_Strength" xml:space="preserve">
+    <value>拖动：把刹车把往车把捏紧，刹得更猛</value>
+  </data>
+  <data name="Bicycle_Grip_Offset" xml:space="preserve">
+    <value>拖动：把前叉的弯往前或往后拉</value>
+  </data>
+  <data name="Bicycle_Grip_HeadAngle" xml:space="preserve">
+    <value>拖动：让车头管往后倾或立直</value>
+  </data>
+  <data name="Boats_Grip_Density" xml:space="preserve">
+    <value>拖动：把重量往下拉，木块更重；往上推，更轻</value>
+  </data>
+  <data name="Boats_Grip_Depth" xml:space="preserve">
+    <value>拖动：把方块往上或往下拉</value>
+  </data>
+  <data name="Boats_Grip_Cargo" xml:space="preserve">
+    <value>拖动：沿着甲板拉，装上更多货箱</value>
+  </data>
+  <data name="Boats_Grip_Heel" xml:space="preserve">
+    <value>拖动：把桅杆往一边拉，让船歪过去</value>
+  </data>
+  <data name="Boats_Grip_Centre" xml:space="preserve">
+    <value>拖动：把重心往上或往下拉</value>
+  </data>
+  <data name="Boats_Grip_Beam" xml:space="preserve">
+    <value>拖动：把船舷往外拉，船更宽</value>
+  </data>
+  <data name="Boats_Grip_Ballast" xml:space="preserve">
+    <value>拖动：把水往上拉，压载水舱进水；往下拉，把水排出去</value>
+  </data>
+  <data name="Bridges_Grip_Span" xml:space="preserve">
+    <value>拖动：把对岸移远或移近</value>
+  </data>
+  <data name="Bridges_Grip_Depth" xml:space="preserve">
+    <value>拖动：把木板加厚或减薄</value>
+  </data>
+  <data name="Bridges_Grip_Push" xml:space="preserve">
+    <value>拖动：用手更用力地推顶角</value>
+  </data>
+  <data name="Bridges_Grip_BraceIn" xml:space="preserve">
+    <value>点一下：装上斜撑</value>
+  </data>
+  <data name="Bridges_Grip_BraceOut" xml:space="preserve">
+    <value>点一下：拆掉斜撑</value>
+  </data>
+  <data name="Bridges_Grip_Lorry" xml:space="preserve">
+    <value>拖动：让卡车在桥面上开来开去</value>
+  </data>
+  <data name="Bridges_Grip_TrussHeight" xml:space="preserve">
+    <value>拖动：把桁架加高或降低</value>
+  </data>
+  <data name="Bridges_Grip_Rise" xml:space="preserve">
+    <value>拖动：拉高或压低拱顶石</value>
+  </data>
+  <data name="Bridges_Grip_AbutmentsOut" xml:space="preserve">
+    <value>点一下：拆掉桥台</value>
+  </data>
+  <data name="Bridges_Grip_AbutmentsIn" xml:space="preserve">
+    <value>点一下：把桥台砌回去</value>
+  </data>
+  <data name="Bridges_Grip_Sag" xml:space="preserve">
+    <value>拖动：让主缆垂得更低或更平</value>
+  </data>
+  <data name="Bridges_Grip_AnchorOff" xml:space="preserve">
+    <value>点一下：松开主缆两头的锚碇</value>
+  </data>
+  <data name="Bridges_Grip_AnchorOn" xml:space="preserve">
+    <value>点一下：把主缆两头拴回锚碇</value>
+  </data>
+  <data name="Bridges_Grip_Temperature" xml:space="preserve">
+    <value>拖动：让天气更热或更冷</value>
+  </data>
+  <data name="Bridges_Grip_JointWeld" xml:space="preserve">
+    <value>点一下：把桥面焊死在桥台上</value>
+  </data>
+  <data name="Bridges_Grip_JointCut" xml:space="preserve">
+    <value>点一下：重新留出伸缩缝</value>
+  </data>
+  <data name="Car_Grip_Rod" xml:space="preserve">
+    <value>拖动：把曲柄往下拉，连杆就更长</value>
+  </data>
+  <data name="Car_Grip_Lift" xml:space="preserve">
+    <value>拖动：把峰顶往上拉，气门开得更大</value>
+  </data>
+  <data name="Car_Grip_Duration" xml:space="preserve">
+    <value>拖动：让气门开得更久</value>
+  </data>
+  <data name="Car_Grip_Count" xml:space="preserve">
+    <value>点一下：多加一个气缸</value>
+  </data>
+  <data name="Car_Grip_Flywheel" xml:space="preserve">
+    <value>拖动：把轮缘往外拉，飞轮更重</value>
+  </data>
+  <data name="Car_Grip_Pedal" xml:space="preserve">
+    <value>拖动：像踩下踏板那样把压盘往后拉</value>
+  </data>
+  <data name="Car_Grip_Steer" xml:space="preserve">
+    <value>拖动：往左转向，弯道更急</value>
+  </data>
+  <data name="Car_Grip_Ice" xml:space="preserve">
+    <value>拖动：让左轮下的路面结冰</value>
+  </data>
+  <data name="Car_Grip_Lock" xml:space="preserve">
+    <value>点一下：锁住差速器</value>
+  </data>
+  <data name="Car_Grip_Unlock" xml:space="preserve">
+    <value>点一下：松开差速器</value>
+  </data>
+  <data name="Friction_Grip_Angle" xml:space="preserve">
+    <value>拖动：抬起木板的一头，坡更陡</value>
+  </data>
+  <data name="Friction_Grip_Surface" xml:space="preserve">
+    <value>点一下：换一种表面</value>
+  </data>
+  <data name="Friction_Grip_Pull" xml:space="preserve">
+    <value>拖动：把手往后拉，拉力更大</value>
+  </data>
+  <data name="Friction_Grip_Box" xml:space="preserve">
+    <value>拖动：把箱子的顶往上拉，箱子更重</value>
+  </data>
+  <data name="Friction_Grip_Stop" xml:space="preserve">
+    <value>拖动：拖动停车的位置来设定车速</value>
+  </data>
+  <data name="Friction_Grip_Lock" xml:space="preserve">
+    <value>点一下：让车轮抱死</value>
+  </data>
+  <data name="Friction_Grip_Unlock" xml:space="preserve">
+    <value>点一下：让车轮重新转动</value>
+  </data>
+  <data name="Friction_Grip_Turns" xml:space="preserve">
+    <value>拖动：把绳子绕着系船桩缠</value>
+  </data>
+  <data name="Friction_Grip_Wet" xml:space="preserve">
+    <value>点一下：把绳子弄湿</value>
+  </data>
+  <data name="Friction_Grip_Dry" xml:space="preserve">
+    <value>点一下：把绳子弄干</value>
+  </data>
+  <data name="Friction_Grip_Way" xml:space="preserve">
+    <value>点一下：换一种移动方式</value>
+  </data>
+  <data name="Friction_Grip_Crate" xml:space="preserve">
+    <value>拖动：把箱子的顶往上拉，箱子更重</value>
+  </data>
+  <data name="Friction_Grip_Slide" xml:space="preserve">
+    <value>拖动：把箭头拉长，滑得更快</value>
+  </data>
+  <data name="Friction_Grip_Oil" xml:space="preserve">
+    <value>点一下：在中间加油</value>
+  </data>
+  <data name="Friction_Grip_Wipe" xml:space="preserve">
+    <value>点一下：把油擦掉</value>
+  </data>
+  <data name="Gears_Grip_DriverTeeth" xml:space="preserve">
+    <value>拖动：上下拖轮缘，给金色主动轮加减齿数</value>
+  </data>
+  <data name="Gears_Grip_DrivenTeeth" xml:space="preserve">
+    <value>拖动：上下拖轮缘，给灰色从动轮加减齿数</value>
+  </data>
+  <data name="Gears_Grip_Crank" xml:space="preserve">
+    <value>拖动：转动摇把，亲手摇起重物</value>
+  </data>
+  <data name="Gears_Grip_DrumTeeth" xml:space="preserve">
+    <value>拖动：上下拖轮缘，改变绞盘齿轮的齿数</value>
+  </data>
+  <data name="Gears_Grip_Pencil" xml:space="preserve">
+    <value>拖动：把铅笔往外拉放线，往里推收线</value>
+  </data>
+  <data name="Gears_Grip_Pressure" xml:space="preserve">
+    <value>拖动：拖啮合线的端点，改变压力角</value>
+  </data>
+  <data name="Gears_Grip_TurnGold" xml:space="preserve">
+    <value>拖动：绕圈拖动，亲手转金色齿轮（马达停下）</value>
+  </data>
+  <data name="Gears_Grip_TurnInput" xml:space="preserve">
+    <value>拖动：绕圈拖动，亲手转金色输入齿轮</value>
+  </data>
+  <data name="Gears_Grip_AddStep" xml:space="preserve">
+    <value>点一下：多加一级（四级之后回到一级）</value>
+  </data>
+  <data name="Gears_Grip_HoldSun" xml:space="preserve">
+    <value>点一下：固定太阳轮</value>
+  </data>
+  <data name="Gears_Grip_HoldRing" xml:space="preserve">
+    <value>点一下：固定齿圈</value>
+  </data>
+  <data name="Gears_Grip_HoldCarrier" xml:space="preserve">
+    <value>点一下：固定行星架</value>
+  </data>
+  <data name="Gears_Grip_SunTeeth" xml:space="preserve">
+    <value>拖动：往外或往里拖太阳轮的轮缘，换大或换小</value>
+  </data>
+  <data name="Lifting_Grip_Pivot" xml:space="preserve">
+    <value>拖动：把支点沿着棒底下移动</value>
+  </data>
+  <data name="Lifting_Grip_Push" xml:space="preserve">
+    <value>拖动：用手把长的一头压下去</value>
+  </data>
+  <data name="Lifting_Grip_Pull" xml:space="preserve">
+    <value>拖动：用手拉绳子</value>
+  </data>
+  <data name="Lifting_Grip_Wheel" xml:space="preserve">
+    <value>点一下：把滑轮挂到横梁上或水桶上</value>
+  </data>
+  <data name="Lifting_Grip_Strands" xml:space="preserve">
+    <value>拖动：把最后一股绳子往旁边拉，增减绳股</value>
+  </data>
+  <data name="Lifting_Grip_Friction" xml:space="preserve">
+    <value>点一下：让轮子有摩擦，或没有摩擦</value>
+  </data>
+  <data name="Lifting_Grip_Handle" xml:space="preserve">
+    <value>拖动：把摇把拉长或缩短</value>
+  </data>
+  <data name="Lifting_Grip_Worm" xml:space="preserve">
+    <value>点一下：装上或拿掉蜗杆</value>
+  </data>
+  <data name="Lifting_Grip_LetGo" xml:space="preserve">
+    <value>点一下：松开摇把</value>
+  </data>
+  <data name="Lifting_Grip_TakeBack" xml:space="preserve">
+    <value>点一下：握住摇把，把重物摇上去</value>
+  </data>
+  <data name="Lifting_Grip_PumpOnce" xml:space="preserve">
+    <value>点一下：压一下泵的手柄</value>
+  </data>
+  <data name="Lifting_Grip_Release" xml:space="preserve">
+    <value>点一下：打开回油阀，让油流回油箱</value>
+  </data>
+  <data name="Lifting_Grip_Ram" xml:space="preserve">
+    <value>拖动：把顶杆变粗或变细</value>
+  </data>
+  <data name="Lifting_Grip_Riders" xml:space="preserve">
+    <value>拖动：沿着轿厢顶让乘客进出</value>
+  </data>
+  <data name="Lifting_Grip_HangWeight" xml:space="preserve">
+    <value>点一下：挂上配重</value>
+  </data>
+  <data name="Lifting_Grip_TakeWeight" xml:space="preserve">
+    <value>点一下：拿掉配重</value>
+  </data>
+  <data name="Light_Grip_Power" xml:space="preserve">
+    <value>拖动：沿着曲线移动蓝点，改变灯的功率</value>
+  </data>
+  <data name="Light_Grip_Board" xml:space="preserve">
+    <value>拖动：把木板斜过来</value>
+  </data>
+  <data name="Light_Grip_Frame" xml:space="preserve">
+    <value>拖动：把方框拉近或推远</value>
+  </data>
+  <data name="Light_Grip_Car" xml:space="preserve">
+    <value>拖动：让汽车沿着路开近或开远</value>
+  </data>
+  <data name="Light_Grip_Elevation" xml:space="preserve">
+    <value>拖动：让灯在天上升高或降低</value>
+  </data>
+  <data name="Light_Grip_SkyDistance" xml:space="preserve">
+    <value>拖动：把灯拉近或推远</value>
+  </data>
+  <data name="Light_Grip_Eye" xml:space="preserve">
+    <value>拖动：让眼睛走近或退远</value>
+  </data>
+  <data name="Light_Grip_Panel" xml:space="preserve">
+    <value>拖动：抓住发光的板的一端把它转开</value>
+  </data>
+  <data name="Light_Grip_Lamp" xml:space="preserve">
+    <value>拖动：转动灯，改变光照进来的角度</value>
+  </data>
+  <data name="Light_Grip_Look" xml:space="preserve">
+    <value>拖动：转动眼睛，改变眼睛看的角度</value>
+  </data>
+  <data name="Light_Grip_Roughness" xml:space="preserve">
+    <value>拖动：从镜面到毛面</value>
+  </data>
+  <data name="Light_Grip_LampSide" xml:space="preserve">
+    <value>拖动：把灯往旁边移</value>
+  </data>
+  <data name="Light_Grip_LampHeight" xml:space="preserve">
+    <value>拖动：拉灯绳，把灯升高或放低</value>
+  </data>
+  <data name="Light_Grip_LampSize" xml:space="preserve">
+    <value>拖动：拉这个把手，把灯变大或变小</value>
+  </data>
+  <data name="Light_Grip_Wall" xml:space="preserve">
+    <value>点一下：给墙换个颜色</value>
+  </data>
+  <data name="Light_Grip_Bounce" xml:space="preserve">
+    <value>点一下：让光再多反弹一次</value>
+  </data>
+  <data name="Locks_Grip_Insert" xml:space="preserve">
+    <value>拖动：捏住钥匙柄把钥匙插进或拔出</value>
+  </data>
+  <data name="Locks_Grip_SwapKey" xml:space="preserve">
+    <value>点一下：换一把钥匙</value>
+  </data>
+  <data name="Locks_Grip_Cuts" xml:space="preserve">
+    <value>拖动：拉长钥匙尖，加更多齿</value>
+  </data>
+  <data name="Locks_Grip_Depths" xml:space="preserve">
+    <value>拖动：把最深的线往下拉，增加深度</value>
+  </data>
+  <data name="Locks_Grip_Steepest" xml:space="preserve">
+    <value>拖动：这个齿，让相邻齿可以相差更多或更少</value>
+  </data>
+  <data name="Locks_Grip_NextKey" xml:space="preserve">
+    <value>点一下：换下一把钥匙试试</value>
+  </data>
+  <data name="Locks_Grip_Pick" xml:space="preserve">
+    <value>点一下：把卡住的弹子抬到分界线</value>
+  </data>
+  <data name="Locks_Grip_LetGo" xml:space="preserve">
+    <value>点一下：松开转动工具</value>
+  </data>
+  <data name="Locks_Grip_Perfect" xml:space="preserve">
+    <value>点一下：把孔钻得完全对齐</value>
+  </data>
+  <data name="Locks_Grip_AsMade" xml:space="preserve">
+    <value>点一下：把孔钻成真锁那样</value>
+  </data>
+  <data name="Locks_Grip_TurnKey" xml:space="preserve">
+    <value>拖动：转动钥匙齿</value>
+  </data>
+  <data name="Locks_Grip_Wheel" xml:space="preserve">
+    <value>拖动：转动套筒上的拨片，拨动数字轮</value>
+  </data>
+  <data name="Locks_Grip_Loose" xml:space="preserve">
+    <value>点一下：把缺口做松</value>
+  </data>
+  <data name="Locks_Grip_Tight" xml:space="preserve">
+    <value>点一下：把缺口做紧</value>
+  </data>
+  <data name="Plumbing_Grip_Tank" xml:space="preserve">
+    <value>拖动：把水塔的水箱升高或降低</value>
+  </data>
+  <data name="Plumbing_Grip_Tap" xml:space="preserve">
+    <value>拖动：把水龙头沿楼上下移动</value>
+  </data>
+  <data name="Plumbing_Grip_Handle" xml:space="preserve">
+    <value>拖动：顺着手柄拖，把它拧开或拧紧</value>
+  </data>
+  <data name="Plumbing_Grip_Washer" xml:space="preserve">
+    <value>点一下：换成磨损的垫圈，或换回新的</value>
+  </data>
+  <data name="Plumbing_Grip_Prime" xml:space="preserve">
+    <value>点一下：把软管灌满水，或放进空气</value>
+  </data>
+  <data name="Plumbing_Grip_Outlet" xml:space="preserve">
+    <value>拖动：把管口升高或降低</value>
+  </data>
+  <data name="Plumbing_Grip_Set" xml:space="preserve">
+    <value>拖动：调节浮球在什么水位关阀</value>
+  </data>
+  <data name="Plumbing_Grip_Flush" xml:space="preserve">
+    <value>点一下：按下冲水手柄，或松开</value>
+  </data>
+  <data name="Plumbing_Grip_Suction" xml:space="preserve">
+    <value>拖动：顺着下水道拖，吸力更大</value>
+  </data>
+  <data name="Plumbing_Grip_Vent" xml:space="preserve">
+    <value>点一下：打开或盖上通气管</value>
+  </data>
+  <data name="Plumbing_Grip_Depth" xml:space="preserve">
+    <value>拖动：让井水更深或更浅</value>
+  </data>
+  <data name="Plumbing_Grip_Down" xml:space="preserve">
+    <value>点一下：把泵放到井水里，或提回地面</value>
+  </data>
+  <data name="Watch_Grip_Arbor" xml:space="preserve">
+    <value>拖动：转动条轴上的钥匙，上紧发条</value>
+  </data>
+  <data name="Watch_Grip_Hours" xml:space="preserve">
+    <value>拖动：往上拉，发条存下更多小时</value>
+  </data>
+  <data name="Watch_Grip_Minute" xml:space="preserve">
+    <value>拖动：转动分针来对时</value>
+  </data>
+  <data name="Watch_Grip_Crown" xml:space="preserve">
+    <value>点一下：让时间走得更快（最快之后回到真实时间）</value>
+  </data>
+  <data name="Watch_Grip_SlowMotion" xml:space="preserve">
+    <value>拖动：往右更快，往左更慢</value>
+  </data>
+  <data name="Watch_Grip_SwingBalance" xml:space="preserve">
+    <value>拖动：亲手转动摆轮，走过一拍</value>
+  </data>
+  <data name="Watch_Grip_PullBalance" xml:space="preserve">
+    <value>拖动：把摆轮拉开再松手，定下摆幅</value>
+  </data>
+  <data name="Watch_Grip_Regulator" xml:space="preserve">
+    <value>拖动：拨动快慢针，顺时针让游丝更硬</value>
+  </data>
+  <data name="Watch_Grip_Rotor" xml:space="preserve">
+    <value>拖动：亲手摆动自动陀</value>
+  </data>
+  <data name="Watch_Grip_Reverser" xml:space="preserve">
+    <value>点一下：装上或拿掉换向轮</value>
+  </data>
+  <data name="Watch_Grip_Explode" xml:space="preserve">
+    <value>拖动：把表盘往上拉，拉开各层</value>
+  </data>
+  <data name="Watch_Grip_Layer" xml:space="preserve">
+    <value>点一下：隐藏或显示这一层</value>
+  </data>
+  <data name="Weighing_Grip_Difference" xml:space="preserve">
+    <value>拖动：把右盘往下拉，多加几克</value>
+  </data>
+  <data name="Weighing_Grip_Drop" xml:space="preserve">
+    <value>拖动：把重心往上或往下移</value>
+  </data>
+  <data name="Weighing_Grip_Poise" xml:space="preserve">
+    <value>拖动：把秤砣沿着秤杆挪</value>
+  </data>
+  <data name="Weighing_Grip_Sack" xml:space="preserve">
+    <value>拖动：把袋底往下拉，多装一些</value>
+  </data>
+  <data name="Weighing_Grip_Load" xml:space="preserve">
+    <value>拖动：把重物底部往下拉，多挂一些</value>
+  </data>
+  <data name="Weighing_Grip_LiftOff" xml:space="preserve">
+    <value>点一下：把东西拿下来</value>
+  </data>
+  <data name="Weighing_Grip_HangOn" xml:space="preserve">
+    <value>点一下：把东西挂回去</value>
+  </data>
+  <data name="Weighing_Grip_Offset" xml:space="preserve">
+    <value>拖动：把东西在秤盘上挪来挪去</value>
+  </data>
+  <data name="Weighing_Grip_TwoLinks" xml:space="preserve">
+    <value>点一下：用两根平行连杆托住秤盘</value>
+  </data>
+  <data name="Weighing_Grip_OneArm" xml:space="preserve">
+    <value>点一下：换回一根杠杆</value>
+  </data>
+  <data name="Weighing_Grip_StrainMass" xml:space="preserve">
+    <value>拖动：把吊杆往下拉，在金属梁上多挂一些</value>
+  </data>
+  <data name="Weighing_Grip_Warm" xml:space="preserve">
+    <value>点一下：给应变片加热</value>
+  </data>
+  <data name="Weighing_Grip_Cool" xml:space="preserve">
+    <value>点一下：让应变片凉下来</value>
+  </data>
+  <data name="Weighing_Grip_FourGauges" xml:space="preserve">
+    <value>点一下：电桥换成四片应变片</value>
+  </data>
+  <data name="Weighing_Grip_OneGauge" xml:space="preserve">
+    <value>点一下：换回一片应变片</value>
+  </data>
+  <data name="Weighing_Grip_Bag" xml:space="preserve">
+    <value>拖动：把袋底往下拉，换个更重的袋子</value>
+  </data>
+  <data name="Weighing_Grip_Travel" xml:space="preserve">
+    <value>点一下：到下一个星球去</value>
+  </data>
 </root>

@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,12 +11,14 @@ namespace Lemon.Inside.Book.Chapters.Bicycle;
 /// <summary>
 /// Spread 4: the back hub cut open. The inner driver (turned by the sprocket and so the pedals) carries two pawls
 /// pressed outwards by springs; the wheel's shell has ratchet teeth inside. The pawls push the shell round, or, when
-/// the wheel runs ahead, slide up its teeth and drop off each one with a click.
+/// the wheel runs ahead, slide up its teeth and drop off each one with a click. The reader works the pedals with a grip
+/// on the driver, dragged the way its top turns: to the right to pedal forwards, faster the further, to the left to
+/// pedal backwards, at the middle to stop.
 /// </summary>
 public sealed class FreewheelDiagram : GearPicture
 {
     public static readonly StyledProperty<double> PedalSpeedProperty =
-        AvaloniaProperty.Register<FreewheelDiagram, double>(nameof(PedalSpeed), 0.6);
+        AvaloniaProperty.Register<FreewheelDiagram, double>(nameof(PedalSpeed), 0.6, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The picture runs at this share of real time, so the pawls can be followed.</summary>
     private const double TimeScale = 0.35;
@@ -27,6 +31,10 @@ public sealed class FreewheelDiagram : GearPicture
     private static readonly IImmutableBrush PawlFill = new ImmutableSolidColorBrush(Color.FromRgb(0xF2, 0xC9, 0x4C));
     private static readonly IPen SpringPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x8F, 0xD8, 0xF0)), 1.4);
     private static readonly IImmutableBrush Click = new ImmutableSolidColorBrush(Color.FromRgb(0xFF, 0xE6, 0x8A));
+
+    /// <summary>The slider's range of pedalling, turns a second.</summary>
+    private const double LeastPedal = -0.4;
+    private const double MostPedal = 1;
 
     private readonly Freewheel _hub = new();
     private int _clicksSeen;
@@ -118,6 +126,16 @@ public sealed class FreewheelDiagram : GearPicture
         context.DrawEllipse(new ImmutableSolidColorBrush(Gold), null, centre, driverRadius * 0.25, driverRadius * 0.25);
         DiagramText.Draw(context, DiagramText.Get("Bicycle_Freewheel_Driver"), centre + new Point(0, driverRadius * 0.45), 11.5, DiagramText.Ink, 0.5, 0.5);
         Mark("driver", centre, driverRadius * 0.6);
+
+        // The pedals' grip, on the driver above its axle: as far right of the middle as the pedals turn forwards.
+        var reach = driverRadius * 0.85;
+        var gripY = centre.Y - (driverRadius * 0.45);
+        var gripAt = new Point(centre.X + (reach * Math.Clamp(PedalSpeed, LeastPedal, MostPedal)), gripY);
+        var track = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x70, 0xFF, 0xF4, 0xD6)), 2, new ImmutableDashStyle([3, 3], 0));
+        context.DrawLine(track, new Point(centre.X + (reach * LeastPedal), gripY), new Point(centre.X + reach, gripY));
+        context.DrawLine(track, new Point(centre.X, gripY - 5), new Point(centre.X, gripY + 5));
+        Grip("pedals", gripAt, GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_Pedals"),
+            at => PedalSpeed = Math.Round(Math.Clamp((at.X - centre.X) / reach, LeastPedal, MostPedal) * 20) / 20);
 
         var tipRadius = valley - (_hub.Lift * (valley - tip)) - 1.5;
         for (var n = 0; n < 2; n++)

@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Bridges.BridgesParts;
@@ -11,18 +13,22 @@ namespace Lemon.Inside.Book.Chapters.Bridges;
 /// <summary>
 /// Spread 1: a plank across a stream, from the side, with a load in the middle. The plank bends (drawn five times
 /// deeper than it is); its upper half is squeezed and its lower half stretched. The same scale for every span, so a
-/// longer plank is drawn longer.
+/// longer plank is drawn longer. Change the span or the depth and the plank springs to its new sag and settles, a
+/// stiff one quickly, a floppy one slowly. The reader drags the right bank to move it and the plank's end to thicken it.
 /// </summary>
 public sealed class BeamDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SpanProperty =
-        AvaloniaProperty.Register<BeamDiagram, double>(nameof(Span), 6);
+        AvaloniaProperty.Register<BeamDiagram, double>(nameof(Span), 6, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> DepthProperty =
-        AvaloniaProperty.Register<BeamDiagram, double>(nameof(Depth), 0.4);
+        AvaloniaProperty.Register<BeamDiagram, double>(nameof(Depth), 0.4, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>How much bigger than life the sag is drawn.</summary>
     public const double Exaggeration = 5;
+
+    /// <summary>The drawn sag, m, bouncing toward the plank's sag (drawn); null until the first frame.</summary>
+    private Bounce? _sag;
 
     static BeamDiagram()
     {
@@ -41,14 +47,26 @@ public sealed class BeamDiagram : GearPicture
         set => SetValue(DepthProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>The drawn sag the plank settles to, m: the real sag made bigger, clamped for the worst case.</summary>
+    private double Settled => Math.Min(Beam.Sag(Math.Clamp(Span, 4, 12), Math.Clamp(Depth, 0.2, 0.8)) * Exaggeration, 2);
+
+    /// <summary>
+    /// The plank bounces like a weight on a spring: the less it sags under the load, the stiffer and so the quicker it
+    /// rings (as the square root of 1 / sag), slowed down so the eye can follow, and the wood's own damping settles it.
+    /// </summary>
+    protected override void Advance(double seconds)
+    {
+        var real = Beam.Sag(Math.Clamp(Span, 4, 12), Math.Clamp(Depth, 0.2, 0.8));
+        var frequency = Math.Clamp(Math.Sqrt(9.81 / real) / 6, 3, 12);
+        _sag = (_sag ?? Bounce.At(Settled)).Step(Settled, seconds, frequency, 0.12);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var span = Math.Clamp(Span, 4, 12);
         var depth = Math.Clamp(Depth, 0.2, 0.8);
         var sag = Beam.Sag(span, depth);
-        var drawn = Math.Min(sag * Exaggeration, 2);
+        var drawn = (_sag ??= Bounce.At(Settled)).Value;
         var scale = Math.Min((bounds.Width - 60) / 15.5, (bounds.Height - 120) / 7);
         var v = new View(new Point(bounds.Center.X - (span / 2 * scale), bounds.Center.Y - (0.3 * scale)), scale);
 
@@ -110,5 +128,12 @@ public sealed class BeamDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Format("Bridges_Metres", Number(span)), v.At(mid, -3.6), 12, DiagramText.Ink, 0.5, 0.5);
         DiagramText.Draw(context, DiagramText.Get("Bridges_Beam_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
         DrawLegend(context, bounds);
+
+        // The reader's handles: the right bank, dragged out for a longer span, and the plank's end, dragged down for a deeper plank.
+        var centre = bounds.Center.X;
+        Grip("span", v.At(span + 1.2, -depth - 2), GripAxis.Horizontal, DiagramText.Get("Bridges_Grip_Span"),
+            at => Span = Math.Clamp(Math.Round(2 * (((at.X - centre) / scale) - 1.2) * 4) / 4, 4, 12));
+        Grip("depth", v.At(-0.75, -depth), GripAxis.Vertical, DiagramText.Get("Bridges_Grip_Depth"),
+            at => Depth = Math.Clamp(Math.Round(-v.Y(at), 2), 0.2, 0.8));
     }
 }

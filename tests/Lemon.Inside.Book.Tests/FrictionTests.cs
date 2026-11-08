@@ -110,6 +110,119 @@ public sealed class FrictionTests
         }
     }
 
+    [Fact]
+    public void TheGrips_TurnWhereTheyAreDraggedIntoTheSpreadsValues()
+    {
+        // The board's far end under the pointer: level, forty-five degrees, and no steeper than the slider.
+        Assert.Equal(0, RampDiagram.AngleFor(5, 0), 9);
+        Assert.Equal(45, RampDiagram.AngleFor(1, 1), 9);
+        Assert.Equal(45, RampDiagram.AngleFor(0.1, 5), 9);
+        Assert.Equal(26.5, RampDiagram.AngleFor(2, 1), 9);
+
+        Assert.Equal(40, StartDiagram.BoxForSide(50 + (40 * 0.9)), 9);
+        Assert.Equal(20, StartDiagram.BoxForSide(0), 9);
+        Assert.Equal(40, StartDiagram.PullForLean(70), 9);
+        Assert.Equal(0, StartDiagram.PullForLean(-10), 9);
+
+        // Dragging the end of the stop gives back the speed that stops there.
+        foreach (var locked in new[] { false, true })
+        {
+            Assert.Equal(50, SkidDiagram.SpeedFor(Skid.Distance(50, locked), locked), 9);
+            Assert.Equal(120, SkidDiagram.SpeedFor(1000, locked), 9);
+        }
+
+        // Round the post: a quarter turn ends on its left; a drag winds on from the wrap there is, not from nothing.
+        Assert.Equal(0, CapstanDiagram.TurnsAt(-Math.PI / 2, 0), 9);
+        Assert.Equal(0.25, CapstanDiagram.TurnsAt(Math.PI, 0), 9);
+        Assert.Equal(2.25, CapstanDiagram.TurnsAt(Math.PI, 2.1), 9);
+        Assert.Equal(3, CapstanDiagram.TurnsAt(-Math.PI / 2, 2.9), 9);
+
+        Assert.Equal(200, RollingDiagram.CrateForSide(90 + (200 * 0.12)), 9);
+        Assert.Equal(500, RollingDiagram.CrateForSide(1000), 9);
+        Assert.Equal(50, OilDiagram.SpeedForArrow(80), 9);
+        Assert.Equal(0, OilDiagram.SpeedForArrow(-5), 9);
+    }
+
+    [Fact]
+    public void TheMotion_FollowsTheModels()
+    {
+        // A braking car slows steadily and stops where the model says, a locked one farther on.
+        foreach (var locked in new[] { false, true })
+        {
+            Assert.Equal((0.0, 50 / 3.6), SkidDiagram.Stop(50, locked, 0));
+            var (travelled, speed) = SkidDiagram.Stop(50, locked, 100);
+            Assert.Equal(Skid.Distance(50, locked), travelled, 9);
+            Assert.Equal(0, speed, 9);
+            Assert.True(SkidDiagram.Stop(50, locked, 0.5).Travelled < 2 * SkidDiagram.Stop(50, locked, 0.25).Travelled); // slowing
+        }
+
+        // A sliding block speeds up: twice the time, four times the distance; steeper, faster.
+        Assert.Equal(0, RampDiagram.SlidDown(30, 1, 0), 9);
+        Assert.Equal(4 * RampDiagram.SlidDown(30, 1, 1), RampDiagram.SlidDown(30, 1, 2), 9);
+        Assert.True(RampDiagram.SlidDown(40, 1, 2) > RampDiagram.SlidDown(25, 1, 2));
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Friction");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Friction");
+        var friction = Assert.IsType<FrictionTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Friction;
+        Avalonia.Point Far(Lemon.Inside.Book.Controls.Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Lemon.Inside.Book.Controls.Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Lemon.Inside.Book.Controls.Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var ramp = Open(0);
+        ramp.DragGrip("angle", Far(ramp, "angle", 0, -2000));
+        Assert.Equal(45, friction.Ramp.Angle, 9);
+        ramp.DragGrip("surface", default);
+        Assert.Equal(2, friction.Ramp.Surface);
+
+        var start = Open(1);
+        start.DragGrip("pull", Far(start, "pull", 2000, 0));
+        Assert.Equal(40, friction.Start.Pulling, 9);
+        start.DragGrip("box", Far(start, "box", 0, -2000));
+        Assert.Equal(80, friction.Start.Box, 9);
+
+        var skid = Open(2);
+        skid.DragGrip("speed", Far(skid, "speed", 2000, 0));
+        Assert.Equal(120, friction.Skid.Speed, 9);
+        skid.DragGrip("lock", default);
+        Assert.True(friction.Skid.Locked);
+
+        var capstan = Open(3);
+        capstan.DragGrip("turns", capstan.PartCentre("post")!.Value + new Avalonia.Vector(-100, 0));
+        Assert.Equal(0.25, friction.Capstan.Turns, 9);
+        capstan.DragGrip("wet", default);
+        Assert.True(friction.Capstan.Wet);
+
+        var rolling = Open(4);
+        rolling.DragGrip("way", default);
+        Assert.Equal(1, friction.Rolling.Way);
+        rolling.DragGrip("crate", Far(rolling, "crate", 0, -2000));
+        Assert.Equal(500, friction.Rolling.Crate, 9);
+
+        var oil = Open(5);
+        oil.DragGrip("speed", Far(oil, "speed", -2000, 0));
+        Assert.Equal(0, friction.Oil.Speed, 9);
+        oil.DragGrip("speed", Far(oil, "speed", 2000, 0));
+        Assert.Equal(100, friction.Oil.Speed, 9);
+        oil.DragGrip("oil", default);
+        Assert.True(friction.Oil.Oiled);
+
+        Frames(5);
+        Snapshot(window, "friction-6-gripped");
+        window.Close();
+    }
+
     [AvaloniaFact]
     public void EverySpread_DrawsItsPicture()
     {

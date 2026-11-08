@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -16,10 +18,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class SiphonDiagram : GearPicture
 {
     public static readonly StyledProperty<bool> PrimedProperty =
-        AvaloniaProperty.Register<SiphonDiagram, bool>(nameof(Primed));
+        AvaloniaProperty.Register<SiphonDiagram, bool>(nameof(Primed), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> OutletProperty =
-        AvaloniaProperty.Register<SiphonDiagram, double>(nameof(Outlet), 0.5);
+        AvaloniaProperty.Register<SiphonDiagram, double>(nameof(Outlet), 0.5, defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly IImmutableBrush HoseWall = new ImmutableSolidColorBrush(Color.FromRgb(0x4E, 0x7A, 0x58));
 
@@ -45,10 +47,28 @@ public sealed class SiphonDiagram : GearPicture
         set => SetValue(OutletProperty, value);
     }
 
+    /// <summary>How far along the hose the water has got, 0..1: priming fills it from the tank end, unpriming lets it run back.</summary>
+    private double _fill = double.NaN;
+
+    /// <summary>The hose's end as drawn: it is lowered or raised smoothly (a grip's drag moves it at once).</summary>
+    private double _outlet = double.NaN;
+
+    private double Fill => double.IsNaN(_fill) ? _fill = Primed ? 1 : 0 : _fill;
+
+    private double Shown => double.IsNaN(_outlet) ? _outlet = Math.Clamp(Outlet, 0, Siphon.Crest - 0.3) : _outlet;
+
+    protected override void Advance(double seconds)
+    {
+        _fill = Toward(Fill, Primed ? 1 : 0, 0.8, seconds);
+        _outlet = Glide(Shown, Math.Clamp(Outlet, 0, Siphon.Crest - 0.3), seconds, 0.2);
+    }
+
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var outlet = Math.Clamp(Outlet, 0, Siphon.Crest - 0.3);
-        var flows = Siphon.Flows(Primed, outlet);
+        var outlet = Shown;
+        var fill = Fill;
+        var filling = fill is > 0 and < 1;
+        var flows = Siphon.Flows(Primed, outlet) && !filling;
         var scale = Math.Min((bounds.Width - 40) / 5.2, (bounds.Height - 70) / 3.7);
         var v = new View(new Point(bounds.Center.X - (2.3 * scale), bounds.Bottom - 24), scale);
         var bore = Math.Max(5, 0.07 * scale);
@@ -93,8 +113,10 @@ public sealed class SiphonDiagram : GearPicture
         }
         else
         {
-            // Only the leg in the tank holds water, as high as the tank's own surface.
+            // Only the leg in the tank holds water, as high as the tank's own surface; while it is being primed, the
+            // water creeps on along the hose (or runs back out of it).
             DrawPipe(context, [v.At(InLeg, 1.3), v.At(InLeg, surface)], bore, full: true, HoseWall);
+            if (filling) DrawPipe(context, Part(hose, fill), bore, full: true, HoseWall);
             DiagramText.Draw(context, DiagramText.Get(Primed ? "Plumbing_Siphon_StoppedLabel" : "Plumbing_Siphon_AirLabel"),
                 v.At((InLeg + OutLeg) / 2, crest + 0.12), 12, DiagramText.Faint, 0.5, 1, bold: true);
         }
@@ -120,5 +142,13 @@ public sealed class SiphonDiagram : GearPicture
         }
 
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Siphon_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the crest tapped to fill the hose (or let air in), and the hose's end raised or lowered.
+        Grip("prime", v.At((InLeg + OutLeg) / 2, crest), GripAxis.Tap, DiagramText.Get("Plumbing_Grip_Prime"), _ => Primed = !Primed);
+        Grip("outlet", v.At(OutLeg, outlet), GripAxis.Vertical, DiagramText.Get("Plumbing_Grip_Outlet"), at =>
+        {
+            Outlet = Snap(v.Y(at), 0.05, 0, 3);
+            _outlet = Math.Clamp(Outlet, 0, Siphon.Crest - 0.3);
+        });
     }
 }

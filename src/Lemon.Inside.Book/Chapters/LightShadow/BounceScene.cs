@@ -1,6 +1,8 @@
 using System.Numerics;
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -8,17 +10,22 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 /// <summary>
 /// Spread 9: a lamp, a white floor, a white box and a coloured wall. With no bounces only what the lamp reaches is
 /// lit; each bounce lets the lit surfaces light the others, so the floor by the wall takes on its colour and the
-/// box's shadow side is no longer black.
+/// box's shadow side is no longer black. Tapping the wall paints it the next colour; tapping the floor by it lets the
+/// light bounce once more (after three, back to none). Each change means working the light out again, so the scene
+/// does not move by itself.
 /// </summary>
 public sealed class BounceScene : SceneView
 {
     public static readonly StyledProperty<int> BouncesProperty =
-        AvaloniaProperty.Register<BounceScene, int>(nameof(Bounces), 2);
+        AvaloniaProperty.Register<BounceScene, int>(nameof(Bounces), 2, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<WallColor> WallProperty =
-        AvaloniaProperty.Register<BounceScene, WallColor>(nameof(Wall), WallColor.Red);
+        AvaloniaProperty.Register<BounceScene, WallColor>(nameof(Wall), WallColor.Red, defaultBindingMode: BindingMode.TwoWay);
 
     internal static readonly Box Block = new(new Vector3(0.1f, 0, -0.35f), new Vector3(0.8f, 0.7f, 0.35f));
+
+    /// <summary>The most bounces the slider offers.</summary>
+    private const int MostBounces = 3;
 
     private static readonly Vector3 White = new(0.8f);
     private readonly AreaLight _lamp = new() { Center = new Vector3(0.4f, 2.4f, 0), Size = 0.7f, Power = 30 };
@@ -96,6 +103,19 @@ public sealed class BounceScene : SceneView
         Mark("floor", Seen(new(-1.5f, 0, -1), new(-0.6f, 0, -1), new(-1.5f, 0, 1), new(-0.6f, 0, 1)), pad: 2);
         Mark("box", Seen([.. ShadowScene.BoxCorners(Block)]), pad: 2);
         Mark("lamp", Seen(_lamp.Center), pad: 14);
+
+        // Tap the wall for another colour; tap the floor by it for one more bounce.
+        if (Project(new Vector3(-1.5f, 1.75f, 0.9f), bounds) is { } wall)
+        {
+            Grip("wall", LightGrips.Inside(wall, bounds), GripAxis.Tap, DiagramText.Get("Light_Grip_Wall"), _ =>
+                Wall = (WallColor)(((int)Wall + 1) % 3));
+        }
+
+        if (Project(new Vector3(-0.9f, 0, 1.3f), bounds) is { } floor)
+        {
+            Grip("bounce", LightGrips.Inside(floor, bounds), GripAxis.Tap, DiagramText.Get("Light_Grip_Bounce"), _ =>
+                Bounces = (Math.Clamp(Bounces, 0, MostBounces) + 1) % (MostBounces + 1));
+        }
     }
 }
 

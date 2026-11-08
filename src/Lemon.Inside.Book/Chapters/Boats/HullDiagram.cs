@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,24 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 
 /// <summary>
 /// Spread 3: a small steel boat from the side, loaded with crates, its draft marks on the bow; on the seabed, the same
-/// steel made into a lump. Overloaded, the sea comes over the deck and the boat goes down.
+/// steel made into a lump. Overloaded, the sea comes over the deck and the boat goes down. The reader drags the grip
+/// over the crates along the deck to load more (they stack two high, filling from the stern); the boat settles slowly
+/// down to its new draft instead of jumping there.
 /// </summary>
 public sealed class HullDiagram : GearPicture
 {
     public static readonly StyledProperty<double> CargoProperty =
-        AvaloniaProperty.Register<HullDiagram, double>(nameof(Cargo), 20);
+        AvaloniaProperty.Register<HullDiagram, double>(nameof(Cargo), 20, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Tonnes in each crate.</summary>
     private const double Crate = 5;
+
+    /// <summary>The slider's most cargo, tonnes: sixteen crates, eight stacks of two along the deck.</summary>
+    private const double MostCargo = 80;
+
+    /// <summary>Metres of deck a tonne of cargo takes (a stack of two crates, 10 t, every 1.25 m), and where the first stands.</summary>
+    private const double DeckPerTonne = 1.25 / (2 * Crate);
+    private const double FirstStack = 1.0;
 
     private static readonly IImmutableBrush CrateFill = new ImmutableSolidColorBrush(Color.FromRgb(0xD9, 0xB3, 0x5B));
     private static readonly IImmutableBrush SteelFill = new ImmutableSolidColorBrush(Color.FromRgb(0x7A, 0x84, 0x96));
@@ -25,6 +36,9 @@ public sealed class HullDiagram : GearPicture
 
     private double _seconds;
     private double _sunk;
+
+    /// <summary>The draft as drawn, metres, settling toward the cargo's.</summary>
+    private double _draft = Hull.Draft(20);
 
     static HullDiagram()
     {
@@ -42,6 +56,7 @@ public sealed class HullDiagram : GearPicture
     {
         _seconds += seconds;
         _sunk = Hull.Sinks(Cargo) ? _sunk + (seconds * 1.2) : 0;
+        _draft = Glide(_draft, Math.Min(Hull.Draft(Math.Clamp(Cargo, 0, MostCargo)), Hull.Depth), seconds, 0.25);
     }
 
     protected override void Draw(DrawingContext context, Rect bounds)
@@ -52,21 +67,21 @@ public sealed class HullDiagram : GearPicture
         var left = bounds.Width * 0.08;
 
         // The boat, its keel Draft metres down, bobbing a little; sinking, it goes on down to the seabed.
-        var draft = Math.Min(Hull.Draft(Cargo), Hull.Depth) + _sunk;
+        var draft = _draft + _sunk;
         var keel = Math.Min(seabed, surface + (draft * scale) + (Math.Sin(_seconds * 1.6) * 1.5));
         Point P(double x, double y) => new(left + (x * scale), keel - (y * scale));
         var hull = new[] { P(0, Hull.Depth), P(0, 0.35), P(0.5, 0), P(Hull.Length - 1.6, 0), P(Hull.Length, Hull.Depth) };
         var deckY = keel - (Hull.Depth * scale);
 
-        // The crates on deck, a row of eight, then another on top.
+        // The crates on deck, in stacks of two from the stern forwards.
         var crates = (int)Math.Ceiling((Cargo / Crate) - 1e-9);
         var box = 1.2 * scale;
         var crateBoxes = new List<Point>();
         for (var i = 0; i < crates; i++)
         {
-            var row = i / 8;
-            var column = i % 8;
-            var r = new Rect(left + ((1.0 + (column * 1.25)) * scale), deckY - ((row + 1) * box) - (row * 2), box, box);
+            var row = i % 2;
+            var column = i / 2;
+            var r = new Rect(left + ((FirstStack + (column * 1.25)) * scale), deckY - ((row + 1) * box) - (row * 2), box, box);
             context.DrawRectangle(CrateFill, new ImmutablePen(BoatsParts.Dark, 1), r, 2, 2);
             context.DrawLine(new ImmutablePen(BoatsParts.Dark, 1), r.TopLeft, r.BottomRight);
             crateBoxes.Add(r.TopLeft);
@@ -102,6 +117,11 @@ public sealed class HullDiagram : GearPicture
         Mark("draft", marks, 4);
         Mark("lump", lumpBox);
         DiagramText.Draw(context, DiagramText.Format("Boats_Hull_Lump", Hull.Steel.ToString("0")), new Point(lumpBox.Center.X, lumpBox.Y - 8), 11.5, DiagramText.Ink, 0.5, 1);
+
+        // The loading grip, above the stacks at the end of the cargo: along the deck for more.
+        Grip("cargo", new Point(left + ((FirstStack + (Math.Clamp(Cargo, 0, MostCargo) * DeckPerTonne)) * scale), deckY - (2 * box) - 16),
+            GripAxis.Horizontal, DiagramText.Get("Boats_Grip_Cargo"),
+            at => Cargo = Math.Round(Math.Clamp((((at.X - left) / scale) - FirstStack) / DeckPerTonne, 0, MostCargo)));
 
         var info = new Point(bounds.X + 18, seabed + 14);
         if (Hull.Sinks(Cargo))

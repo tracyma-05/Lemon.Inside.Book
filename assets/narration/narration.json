@@ -2205,6 +2205,660 @@
      ]
     ]
    },
+   "Narr_Canals_Flight_01": {
+    "duration": 7.32,
+    "hash": "210770afc3194b79",
+    "sentences": [
+     [
+      0.05,
+      2.819,
+      "This hill is twenty-four metres high."
+     ],
+     [
+      2.819,
+      7.264,
+      "One lock would need a chamber as deep as an eight-storey building."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_02": {
+    "duration": 5.544,
+    "hash": "f882d63eadd8644d",
+    "sentences": [
+     [
+      0.05,
+      5.486,
+      "Two locks: each rises twelve metres, and a boat takes half the water."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_03": {
+    "duration": 3.96,
+    "hash": "3c553bf4806c1e6a",
+    "sentences": [
+     [
+      0.05,
+      3.903,
+      "Your turn: build a flight of at least six locks."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_04": {
+    "duration": 7.08,
+    "hash": "4cf78b9ad59ef56f",
+    "sentences": [
+     [
+      0.05,
+      7.028,
+      "Each boat now takes a chamberful of only four metres down from the top, but the climb takes over an hour."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_05": {
+    "duration": 4.848,
+    "hash": "564a9bebfccdea3f",
+    "sentences": [
+     [
+      0.05,
+      4.792,
+      "Why does a flight of small locks use less water than one big lock?"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Boat": {
+    "duration": 2.64,
+    "hash": "095b1d397c8a65cc",
+    "sentences": [
+     [
+      0.05,
+      2.569,
+      "Waiting at the bottom for the first lock."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Hill": {
+    "duration": 3.168,
+    "hash": "5f3199181150a352",
+    "sentences": [
+     [
+      0.05,
+      3.111,
+      "Twenty-four metres from bottom to top."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Locks": {
+    "duration": 5.352,
+    "hash": "5a46e3f946cf0c6e",
+    "sentences": [
+     [
+      0.05,
+      2.833,
+      "Each a step of water between two gates."
+     ],
+     [
+      2.833,
+      5.304,
+      "More locks, smaller steps."
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Water": {
+    "duration": 6.288,
+    "hash": "c8562a1d92f28f1f",
+    "sentences": [
+     [
+      0.05,
+      6.236,
+      "One chamberful of one step's height, compared with a single lock the whole height of the hill."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_01": {
+    "duration": 4.968,
+    "hash": "85c9b0c745e213d1",
+    "sentences": [
+     [
+      0.05,
+      4.903,
+      "Two gate leaves meet in the middle, pointing into the higher water."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_02": {
+    "duration": 6.936,
+    "hash": "4875f2acef50dca2",
+    "sentences": [
+     [
+      0.05,
+      6.875,
+      "Three metres of water presses on each leaf with about sixteen tonnes, pushing them together."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_03": {
+    "duration": 3.672,
+    "hash": "c25f404b1b8d6b0e",
+    "sentences": [
+     [
+      0.05,
+      3.624,
+      "Your turn: point the gates downstream instead."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_04": {
+    "duration": 8.64,
+    "hash": "a262b40cb21bbb81",
+    "sentences": [
+     [
+      0.05,
+      8.583,
+      "Pointed the right way again, and the levels made equal: now nothing pushes, and a person can open a gate with its balance beam."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_05": {
+    "duration": 2.784,
+    "hash": "55039cbf46b42e66",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "Why do lock gates point upstream?"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Beam": {
+    "duration": 5.688,
+    "hash": "64b59c061abbe0c0",
+    "sentences": [
+     [
+      0.05,
+      5.625,
+      "A long timber arm to push on, which also balances the gate's weight on its hinge."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Leaves": {
+    "duration": 6.552,
+    "hash": "557d37e19aa77868",
+    "sentences": [
+     [
+      0.05,
+      6.486,
+      "Each is squeezed along its length, like a stone in an arch, and passes the push to the wall."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Mitre": {
+    "duration": 6.072,
+    "hash": "371d54ccee6875d8",
+    "sentences": [
+     [
+      0.05,
+      1.667,
+      "Where the leaves meet."
+     ],
+     [
+      1.667,
+      6.0,
+      "The water's push presses them together here and seals the joint."
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Water": {
+    "duration": 6.192,
+    "hash": "4a1ed954f4be5b01",
+    "sentences": [
+     [
+      0.05,
+      6.125,
+      "The higher water pushes harder the deeper it is: twice the difference, four times the push."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_01": {
+    "duration": 6.768,
+    "hash": "5327433850e96715",
+    "sentences": [
+     [
+      0.05,
+      6.708,
+      "Two tanks of water, each about five hundred and forty tonnes, hang from either side of this wheel."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_02": {
+    "duration": 4.896,
+    "hash": "51886deebd8cc687",
+    "sentences": [
+     [
+      0.05,
+      4.847,
+      "Each is the other's counterweight: one goes up as the other comes down."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_03": {
+    "duration": 3.912,
+    "hash": "8b2730a0ae3a8c83",
+    "sentences": [
+     [
+      0.05,
+      3.861,
+      "Your turn: sail a boat into the left tank."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_04": {
+    "duration": 8.808,
+    "hash": "58e535409dbc813f",
+    "sentences": [
+     [
+      0.05,
+      2.014,
+      "The tanks still balance."
+     ],
+     [
+      2.014,
+      8.75,
+      "But ten centimetres of extra water in one tank, and the motor must hold eighteen tonnes."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_05": {
+    "duration": 2.76,
+    "hash": "3a14ba5c2f2cc26a",
+    "sentences": [
+     [
+      0.05,
+      2.708,
+      "Why doesn't the boat make its tank heavier?"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Boat": {
+    "duration": 5.352,
+    "hash": "281314a1d3685bc8",
+    "sentences": [
+     [
+      0.05,
+      5.292,
+      "Floating, it weighs exactly as much as the water it pushed aside."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Motor": {
+    "duration": 5.016,
+    "hash": "a0e111d130bb30ea",
+    "sentences": [
+     [
+      0.05,
+      4.958,
+      "With the tanks balanced, it only has to overcome friction to turn the wheel."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Tanks": {
+    "duration": 5.448,
+    "hash": "0a48c1bc4f4a7002",
+    "sentences": [
+     [
+      0.05,
+      5.389,
+      "Watertight boxes with gates at their ends, carrying boats and water together."
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Wheel": {
+    "duration": 4.008,
+    "hash": "d324a1673b2290ec",
+    "sentences": [
+     [
+      0.05,
+      3.944,
+      "The two tanks hang from its ropes and balance each other."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_01": {
+    "duration": 3.888,
+    "hash": "9f56f7031a8ad564",
+    "sentences": [
+     [
+      0.05,
+      3.819,
+      "A boat has sailed into the chamber from the lower canal."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_02": {
+    "duration": 6.816,
+    "hash": "8005ac680539c202",
+    "sentences": [
+     [
+      0.05,
+      2.5,
+      "The lower gates are shut behind it."
+     ],
+     [
+      2.5,
+      6.764,
+      "The upper gates hold back the canal above, three metres higher."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_03": {
+    "duration": 3.72,
+    "hash": "f6fa99d95d939211",
+    "sentences": [
+     [
+      0.05,
+      3.667,
+      "Your turn: open the paddles in the upper gate."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_04": {
+    "duration": 5.616,
+    "hash": "eca661a3c4afc276",
+    "sentences": [
+     [
+      0.05,
+      5.556,
+      "With four paddles open the lock fills four times as fast, in about two minutes."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_05": {
+    "duration": 3.96,
+    "hash": "06ec60509b53df1e",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "Why does the last metre take so much longer than the first?"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Boat": {
+    "duration": 3.744,
+    "hash": "829ae00cabbb6100",
+    "sentences": [
+     [
+      0.05,
+      3.694,
+      "It simply floats, and rises with the water."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Chamber": {
+    "duration": 5.208,
+    "hash": "e8dfc45873f03e04",
+    "sentences": [
+     [
+      0.05,
+      5.153,
+      "Thirty metres of stone-lined water that rises or falls three metres."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Gates": {
+    "duration": 6.072,
+    "hash": "bae59fd8082811c7",
+    "sentences": [
+     [
+      0.05,
+      2.792,
+      "Heavy timber gates at each end."
+     ],
+     [
+      2.792,
+      6.013,
+      "Only one end is ever open at a time."
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Paddles": {
+    "duration": 5.808,
+    "hash": "9b3cedbfbe9ec28c",
+    "sentences": [
+     [
+      0.05,
+      5.736,
+      "Small openings low in the gates, wound open with a handle to let water through."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_01": {
+    "duration": 3.0,
+    "hash": "7d18d3c8ba28b5b3",
+    "sentences": [
+     [
+      0.05,
+      2.944,
+      "Thirty tonnes of coal in one barge."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_02": {
+    "duration": 9.072,
+    "hash": "a23ad6db90e8de7b",
+    "sentences": [
+     [
+      0.05,
+      5.542,
+      "One horse pulls it at a walking pace, with about sixty kilograms of force."
+     ],
+     [
+      5.542,
+      9.0,
+      "On a road it could pull only a tonne and a half."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_03": {
+    "duration": 3.936,
+    "hash": "e72fc4aeca73f681",
+    "sentences": [
+     [
+      0.05,
+      3.875,
+      "Your turn: double the speed to eight kilometres an hour."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_04": {
+    "duration": 9.048,
+    "hash": "7b5a362bd96befc9",
+    "sentences": [
+     [
+      0.05,
+      3.5,
+      "Four times the pull, more than a horse can keep up."
+     ],
+     [
+      3.5,
+      8.986,
+      "Back at a walking pace, the wake is small and the horse can go all day."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_05": {
+    "duration": 4.824,
+    "hash": "1a8f0d89876a0671",
+    "sentences": [
+     [
+      0.05,
+      4.764,
+      "Why could a horse pull so much more on a canal than on a road?"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Barge": {
+    "duration": 4.92,
+    "hash": "ff7254e059714c38",
+    "sentences": [
+     [
+      0.05,
+      1.639,
+      "Held up by the water."
+     ],
+     [
+      1.639,
+      4.861,
+      "Only the drag of pushing through it holds it back."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Horse": {
+    "duration": 4.248,
+    "hash": "b515a15479fbfe46",
+    "sentences": [
+     [
+      0.05,
+      4.194,
+      "It can pull about eighty kilograms of force steadily, all day."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Rope": {
+    "duration": 3.792,
+    "hash": "beb64ab69fc0b441",
+    "sentences": [
+     [
+      0.05,
+      3.736,
+      "Tied near the bow and run to the horse on the towpath."
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Wake": {
+    "duration": 6.6,
+    "hash": "a86c8fecc8071d5a",
+    "sentences": [
+     [
+      0.05,
+      2.097,
+      "The waves the barge makes."
+     ],
+     [
+      2.097,
+      6.542,
+      "The faster it goes, the bigger they grow, and the more pull they cost."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_01": {
+    "duration": 5.928,
+    "hash": "3d3e8d6ce5ae6b0e",
+    "sentences": [
+     [
+      0.05,
+      5.861,
+      "Without side ponds, every boat sends a whole chamberful of water downhill."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_02": {
+    "duration": 6.504,
+    "hash": "c53b2329332b415e",
+    "sentences": [
+     [
+      0.05,
+      6.444,
+      "That water must be made up at the summit, from reservoirs that collect rain and streams."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_03": {
+    "duration": 3.672,
+    "hash": "d7a9d54de869e643",
+    "sentences": [
+     [
+      0.05,
+      3.624,
+      "Your turn: give the lock two side ponds."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_04": {
+    "duration": 8.76,
+    "hash": "6475471aed2d2aa5",
+    "sentences": [
+     [
+      0.05,
+      5.5,
+      "With three side ponds, a boat uses only two-fifths of a chamberful."
+     ],
+     [
+      5.5,
+      8.708,
+      "The last two slices always go downhill."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_05": {
+    "duration": 2.4,
+    "hash": "e68ba75b5fd01e50",
+    "sentences": [
+     [
+      0.05,
+      2.333,
+      "How do side ponds save water?"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Bar": {
+    "duration": 4.344,
+    "hash": "a9946028855d9f5b",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "The water one boat uses, against a whole chamberful."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Chamber": {
+    "duration": 6.384,
+    "hash": "aacda04742d883fb",
+    "sentences": [
+     [
+      0.05,
+      6.319,
+      "Drawn full and cut into slices: what each slice of water does when the lock empties."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Ponds": {
+    "duration": 4.776,
+    "hash": "2daecf141f88dff5",
+    "sentences": [
+     [
+      0.05,
+      4.722,
+      "Each takes one slice on the way down and gives it back on the way up."
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Summit": {
+    "duration": 5.448,
+    "hash": "e63760d44a6b0850",
+    "sentences": [
+     [
+      0.05,
+      2.264,
+      "The highest stretch of the canal."
+     ],
+     [
+      2.264,
+      5.389,
+      "Every drop that goes down must be put back here."
+     ]
+    ]
+   },
    "Narr_Car_Bend_01": {
     "duration": 5.496,
     "hash": "d45e28d563891c8b",
@@ -10955,6 +11609,660 @@
       0.1,
       4.731,
       "最上面那一排杆子，受压，跨中最厉害。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_01": {
+    "duration": 7.08,
+    "hash": "d45b760b6c0c7e48",
+    "sentences": [
+     [
+      0.1,
+      3.147,
+      "这座山坡有二十四米高。"
+     ],
+     [
+      3.097,
+      7.014,
+      "一座船闸的闸室得有八层楼那么深。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_02": {
+    "duration": 5.688,
+    "hash": "eb1afc7c10605b80",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "两座船闸：每座抬升十二米，每条船用一半的水。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_03": {
+    "duration": 4.104,
+    "hash": "140daa8a3c4674b7",
+    "sentences": [
+     [
+      0.1,
+      4.092,
+      "轮到你了：建一串至少六座的船闸。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_04": {
+    "duration": 7.656,
+    "hash": "8979c63fd74fd5ce",
+    "sentences": [
+     [
+      0.1,
+      7.633,
+      "现在每条船只从顶上带走四米深的一闸室水，可是爬坡要一个多小时。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_05": {
+    "duration": 4.248,
+    "hash": "067106eb9035b19c",
+    "sentences": [
+     [
+      0.1,
+      4.244,
+      "为什么一串小船闸比一座大船闸省水？"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Boat": {
+    "duration": 3.288,
+    "hash": "203570cbfe75fe12",
+    "sentences": [
+     [
+      0.1,
+      3.272,
+      "在坡底等着进第一座船闸。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Hill": {
+    "duration": 3.0,
+    "hash": "59848d530afcfcc2",
+    "sentences": [
+     [
+      0.1,
+      2.994,
+      "从坡底到坡顶二十四米。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Locks": {
+    "duration": 7.032,
+    "hash": "0c24bfcdfb542902",
+    "sentences": [
+     [
+      0.1,
+      4.147,
+      "每座都是两道闸门之间的一级水台阶。"
+     ],
+     [
+      4.097,
+      6.972,
+      "船闸越多，台阶越小。"
+     ]
+    ]
+   },
+   "Narr_Canals_Flight_Part_Water": {
+    "duration": 6.336,
+    "hash": "c12283d387a57b2c",
+    "sentences": [
+     [
+      0.1,
+      6.328,
+      "一级台阶高的一闸室水，和一座整个山坡那么高的船闸相比。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_01": {
+    "duration": 4.992,
+    "hash": "2c436f12808b6c3f",
+    "sentences": [
+     [
+      0.1,
+      4.981,
+      "两扇闸门在中间相交，尖端指向高水位。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_02": {
+    "duration": 6.336,
+    "hash": "d2f4659a8f765f57",
+    "sentences": [
+     [
+      0.1,
+      6.328,
+      "三米深的水以大约十六吨的力压着每扇门，把它们推到一起。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_03": {
+    "duration": 3.984,
+    "hash": "9f37ffd7aeaad419",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "轮到你了：把闸门改成指向下游。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_04": {
+    "duration": 9.648,
+    "hash": "b6e8119ec47c2adf",
+    "sentences": [
+     [
+      0.1,
+      9.633,
+      "重新指向正确的方向，两边水位也持平了：现在没有推力，一个人用平衡梁就能推开闸门。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_05": {
+    "duration": 3.6,
+    "hash": "9c93e3e1f959def4",
+    "sentences": [
+     [
+      0.1,
+      3.578,
+      "船闸的闸门为什么要指向上游？"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Beam": {
+    "duration": 5.88,
+    "hash": "1a5c31af6de8380d",
+    "sentences": [
+     [
+      0.1,
+      5.869,
+      "一根可以推的长木臂，也在门轴处平衡着闸门的重量。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Leaves": {
+    "duration": 7.272,
+    "hash": "7b8b7352a571c0a5",
+    "sentences": [
+     [
+      0.1,
+      7.272,
+      "每扇门都顺着长度方向受压，就像拱里的石块，把推力传给石墙。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Mitre": {
+    "duration": 7.224,
+    "hash": "a40c46dfbe3f73ee",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "两扇门相交的地方。"
+     ],
+     [
+      2.514,
+      7.167,
+      "水的推力在这里把它们压紧，封住接缝。"
+     ]
+    ]
+   },
+   "Narr_Canals_Gates_Part_Water": {
+    "duration": 6.216,
+    "hash": "0d872f264c9d6698",
+    "sentences": [
+     [
+      0.1,
+      6.217,
+      "高水位越深推得越厉害：水位差加倍，推力变四倍。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_01": {
+    "duration": 6.192,
+    "hash": "637d7e623e9ce128",
+    "sentences": [
+     [
+      0.1,
+      6.175,
+      "两个水槽，各重大约五百四十吨，挂在这个轮子的两边。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_02": {
+    "duration": 4.44,
+    "hash": "694db4f4f80c9af1",
+    "sentences": [
+     [
+      0.1,
+      4.425,
+      "它们互为配重：一个上去，另一个就下来。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_03": {
+    "duration": 4.368,
+    "hash": "04c477e119221694",
+    "sentences": [
+     [
+      0.1,
+      4.369,
+      "轮到你了：把一条船开进左边的水槽。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_04": {
+    "duration": 8.736,
+    "hash": "83d175124eb5c76b",
+    "sentences": [
+     [
+      0.1,
+      2.8,
+      "两个水槽还是平衡的。"
+     ],
+     [
+      2.75,
+      8.667,
+      "可一个水槽里多十厘米的水，电动机就得拉住十八吨。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_05": {
+    "duration": 3.168,
+    "hash": "695fbf2c0b4eec18",
+    "sentences": [
+     [
+      0.1,
+      3.161,
+      "为什么船没有让水槽变重？"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Boat": {
+    "duration": 5.04,
+    "hash": "3be00b92ea6680fe",
+    "sentences": [
+     [
+      0.1,
+      5.036,
+      "浮着的时候，它的重量正好等于它推开的水。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Motor": {
+    "duration": 5.496,
+    "hash": "aabd9d1e4937cc01",
+    "sentences": [
+     [
+      0.1,
+      5.481,
+      "两个水槽平衡时，它只需克服摩擦来转动轮子。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Tanks": {
+    "duration": 5.16,
+    "hash": "0d3dd270a4348c9e",
+    "sentences": [
+     [
+      0.1,
+      5.147,
+      "两头有门的不漏水的箱子，把船和水一起运送。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lift_Part_Wheel": {
+    "duration": 4.392,
+    "hash": "97975a2af4d07723",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "两个水槽挂在它的绳子上，互相平衡。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_01": {
+    "duration": 3.216,
+    "hash": "6b27b97c09ad0de5",
+    "sentences": [
+     [
+      0.1,
+      3.217,
+      "一条船从下游驶进了闸室。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_02": {
+    "duration": 7.056,
+    "hash": "d9b68a4e6dcb97e4",
+    "sentences": [
+     [
+      0.1,
+      2.883,
+      "身后的下游闸门关上了。"
+     ],
+     [
+      2.833,
+      7.0,
+      "上游闸门挡着高出三米的上游河水。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_03": {
+    "duration": 4.08,
+    "hash": "9234ff15cb597750",
+    "sentences": [
+     [
+      0.1,
+      4.078,
+      "轮到你了：打开上游闸门上的闸孔。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_04": {
+    "duration": 5.472,
+    "hash": "17ff14f8dc66a162",
+    "sentences": [
+     [
+      0.1,
+      5.453,
+      "打开四个闸孔，灌水快四倍，大约两分钟就满了。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_05": {
+    "duration": 3.624,
+    "hash": "3552b992b56b0999",
+    "sentences": [
+     [
+      0.1,
+      3.619,
+      "为什么最后一米比第一米慢得多？"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Boat": {
+    "duration": 3.912,
+    "hash": "57f9c95b3121e211",
+    "sentences": [
+     [
+      0.1,
+      3.897,
+      "它只是浮着，随着水面一起升高。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Chamber": {
+    "duration": 5.184,
+    "hash": "fc670395b76fb699",
+    "sentences": [
+     [
+      0.1,
+      5.175,
+      "三十米长、石砌的水槽，水面能升降三米。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Gates": {
+    "duration": 6.0,
+    "hash": "d9731ca098597fdc",
+    "sentences": [
+     [
+      0.1,
+      2.55,
+      "两头厚重的木闸门。"
+     ],
+     [
+      2.5,
+      5.931,
+      "任何时候都只有一头是开着的。"
+     ]
+    ]
+   },
+   "Narr_Canals_Lock_Part_Paddles": {
+    "duration": 5.064,
+    "hash": "fb492a11c00cb9bc",
+    "sentences": [
+     [
+      0.1,
+      5.05,
+      "闸门下部的小开口，用摇柄摇开，让水通过。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_01": {
+    "duration": 3.12,
+    "hash": "9ddd68b5b3c86c72",
+    "sentences": [
+     [
+      0.1,
+      3.106,
+      "一条驳船装着三十吨煤。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_02": {
+    "duration": 8.304,
+    "hash": "465532e260a288a3",
+    "sentences": [
+     [
+      0.1,
+      5.342,
+      "一匹马以步行的速度拉着它，大约用六十千克的力。"
+     ],
+     [
+      5.292,
+      8.25,
+      "在路上，它只能拉一吨半。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_03": {
+    "duration": 4.536,
+    "hash": "b9f68d1f67230f3f",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "轮到你了：把速度加倍到每小时八千米。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_04": {
+    "duration": 8.568,
+    "hash": "6da2ff1fa354d9b3",
+    "sentences": [
+     [
+      0.1,
+      3.522,
+      "拉力变成四倍，马坚持不了。"
+     ],
+     [
+      3.472,
+      8.514,
+      "回到步行的速度，尾浪很小，马能走上一整天。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_05": {
+    "duration": 4.92,
+    "hash": "a78e2cfa4950da0f",
+    "sentences": [
+     [
+      0.1,
+      4.911,
+      "为什么马在运河上能拉的东西比在路上多得多？"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Barge": {
+    "duration": 5.424,
+    "hash": "29f634f25c5b03c6",
+    "sentences": [
+     [
+      0.1,
+      1.786,
+      "被水托着。"
+     ],
+     [
+      1.736,
+      5.375,
+      "拉住它的只有推开水时的阻力。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Horse": {
+    "duration": 4.92,
+    "hash": "d7e98af1bc165f19",
+    "sentences": [
+     [
+      0.1,
+      4.911,
+      "它能持续拉大约八十千克的力，拉上一整天。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Rope": {
+    "duration": 4.176,
+    "hash": "6ffca52e0d9dd01e",
+    "sentences": [
+     [
+      0.1,
+      4.175,
+      "系在船头附近，一直连到纤道上的马。"
+     ]
+    ]
+   },
+   "Narr_Canals_Towing_Part_Wake": {
+    "duration": 6.336,
+    "hash": "a0603b08bf59a1b6",
+    "sentences": [
+     [
+      0.1,
+      2.147,
+      "驳船掀起的浪。"
+     ],
+     [
+      2.097,
+      6.278,
+      "走得越快，浪越大，花的拉力也越多。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_01": {
+    "duration": 5.928,
+    "hash": "26468daf6adee197",
+    "sentences": [
+     [
+      0.1,
+      5.925,
+      "没有侧池时，每条船都会让一整闸室的水流到下游。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_02": {
+    "duration": 6.408,
+    "hash": "85ede7d8bf334338",
+    "sentences": [
+     [
+      0.1,
+      6.397,
+      "这些水要在顶峰段补上，靠的是收集雨水和溪流的水库。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_03": {
+    "duration": 3.744,
+    "hash": "6721f49b17069f1e",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "轮到你了：给船闸加两个侧池。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_04": {
+    "duration": 8.496,
+    "hash": "1d268c9d7d83613f",
+    "sentences": [
+     [
+      0.1,
+      5.3,
+      "有三个侧池时，每条船只用五分之二闸室的水。"
+     ],
+     [
+      5.25,
+      8.444,
+      "最下面两层总是要流走的。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_05": {
+    "duration": 2.592,
+    "hash": "5e455aaa04102dc9",
+    "sentences": [
+     [
+      0.1,
+      2.578,
+      "侧池是怎么省水的？"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Bar": {
+    "duration": 3.888,
+    "hash": "a35149401610924f",
+    "sentences": [
+     [
+      0.1,
+      3.869,
+      "一条船用的水，和一整闸室相比。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Chamber": {
+    "duration": 6.504,
+    "hash": "0dbdc57322fc800a",
+    "sentences": [
+     [
+      0.1,
+      6.494,
+      "画满了水并切成几层：表示闸室放水时每层水的去向。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Ponds": {
+    "duration": 5.472,
+    "hash": "f03cc1d1a7d98162",
+    "sentences": [
+     [
+      0.1,
+      5.453,
+      "每个侧池在放水时接住一层，灌水时再还回来。"
+     ]
+    ]
+   },
+   "Narr_Canals_Water_Part_Summit": {
+    "duration": 6.408,
+    "hash": "ce75dfcfcfe5aad5",
+    "sentences": [
+     [
+      0.1,
+      2.3,
+      "运河最高的一段。"
+     ],
+     [
+      2.25,
+      6.347,
+      "每一滴流下去的水，都得在这里补回来。"
      ]
     ]
    },

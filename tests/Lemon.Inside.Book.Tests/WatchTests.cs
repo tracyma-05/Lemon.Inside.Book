@@ -4,6 +4,7 @@ using Avalonia.VisualTree;
 using Lemon.Book.Shell.Infrastructures.Timing;
 using Lemon.Inside.Book.Chapters.Watch;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -133,6 +134,134 @@ public sealed class WatchTests
                 Assert.Contains(key, keys);
             }
         }
+    }
+
+    [Fact]
+    public void TheGripsModels_FollowTheFinger()
+    {
+        // Five turns of the key from flat to full; a quarter turn on from half way is a twentieth more.
+        var full = GoingTrain.SpringTurns * 2 * Math.PI;
+        Assert.Equal(0.55, SpringDiagram.WoundAt(0.5, (0.5 * full) + (Math.PI / 2)), 9);
+        Assert.Equal(0.55, SpringDiagram.WoundAt(0.5, Math.IEEERemainder((0.5 * full) + (Math.PI / 2), 2 * Math.PI)), 9);
+        Assert.Equal(1, SpringDiagram.WoundAt(1, 0.3));
+
+        // The minute hand a quarter turn on is a quarter of an hour later, past 12 too.
+        var at = HandsDiagram.StartSeconds;
+        Assert.Equal(at + 900, HandsDiagram.SetTo(at, (GoingTrain.Hands(at).Minute + 90) * Math.PI / 180), 6);
+        Assert.Equal(11 * 3600.0 + 300, HandsDiagram.SetTo(10 * 3600 + (55 * 60), 30 * Math.PI / 180), 6);
+        Assert.Equal([1, 2, 3, 0], new[] { 0, 1, 2, 3 }.Select(HandsDiagram.NextStep));
+
+        // The balance put at an angle by hand: the moment it is there, in the same half swing.
+        foreach (var t in new[] { 0.05, 0.31, 0.77 })
+        {
+            foreach (var degrees in new[] { -200.0, -20, 0, 90 })
+            {
+                var moment = EscapementDiagram.TimeAt(t, degrees);
+                Assert.Equal(degrees, Escapement.At(moment).Balance, 6);
+                Assert.True(Math.Abs(moment - t) <= 0.5 / GoingTrain.Frequency, $"{t}, {degrees}");
+            }
+        }
+
+        Assert.Equal(1.25, BalanceDiagram.StiffnessAt(Math.PI / 2));
+        Assert.Equal(0.8, BalanceDiagram.StiffnessAt(-Math.PI / 2));
+        Assert.Equal(1.025, BalanceDiagram.StiffnessAt(0), 9);
+
+        var page = new Avalonia.Rect(0, 0, 480, 600);
+        Assert.Equal(0.37, MovementDiagram.ExplodeFor(page, MovementDiagram.DialY(page, 0.37)), 9);
+        Assert.True(MovementDiagram.DialY(page, 1) < MovementDiagram.DialY(page, 0));
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Watch");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Watch");
+        var watch = Assert.IsType<WatchTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Watch;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        // A quarter turn clockwise on screen about a part's middle.
+        Avalonia.Point Quarter(Picture picture, string grip, string part)
+        {
+            var c = picture.PartCentre(part)!.Value;
+            var d = picture.GripCentre(grip)!.Value - c;
+            return c + new Avalonia.Vector(-d.Y, d.X);
+        }
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var spring = Assert.IsType<SpringDiagram>(Open(0));
+        spring.DragGrip("hours", Far(spring, "hours", 0, -2000));
+        Assert.Equal(1, watch.Spring.Wound, 9);
+        Frames(1);
+        spring.DragGrip("hours", Far(spring, "hours", 0, 2000));
+        Assert.Equal(0, watch.Spring.Wound, 9);
+        watch.Spring.Wound = 0.5;
+        Frames(2);
+        var drawn = spring.Shown;
+        spring.DragGrip("arbor", Quarter(spring, "arbor", "arbor"));
+        Assert.Equal(drawn + 0.05, watch.Spring.Wound, 3); // a quarter turn of five: a twentieth on from the key as drawn
+
+        var hands = Assert.IsType<HandsDiagram>(Open(1));
+        hands.DragGrip("crown", default);
+        Assert.Equal(2, watch.Hands.SpeedStep);
+        Frames(1);
+        var time = hands.Time;
+        hands.DragGrip("minute", Quarter(hands, "minute", "dial"));
+        Assert.InRange(hands.Time - time, 890, 910);
+
+        var escapement = Assert.IsType<EscapementDiagram>(Open(2));
+        escapement.DragGrip("speed", Far(escapement, "speed", 2000, 0));
+        Assert.Equal(0.5, watch.Escapement.SlowMotion, 9);
+        Frames(1);
+        escapement.DragGrip("speed", Far(escapement, "speed", -2000, 0));
+        Assert.Equal(0.02, watch.Escapement.SlowMotion, 9);
+        Frames(1);
+        var beat = escapement.Time;
+        escapement.DragGrip("balance", Far(escapement, "balance", 30, 0));
+        Assert.NotEqual(beat, escapement.Time);
+
+        var balance = Open(3);
+        balance.DragGrip("regulator", Far(balance, "regulator", 0, 2000));
+        Assert.Equal(1.25, watch.Balance.Stiffness, 9);
+        Frames(1);
+        balance.DragGrip("regulator", Far(balance, "regulator", 0, -2000));
+        Assert.Equal(0.8, watch.Balance.Stiffness, 9);
+        watch.Balance.Amplitude = 270;
+        Frames(1);
+        var middle = balance.PartCentre("balance")!.Value;
+        var rim = balance.GripCentre("swing")!.Value - middle;
+        var reach = Math.Sqrt((rim.X * rim.X) + (rim.Y * rim.Y));
+        var pulled = (90 + 150) * Math.PI / 180; // 150° round from where the pin rests, straight down
+        balance.DragGrip("swing", middle + new Avalonia.Vector(reach * Math.Cos(pulled), reach * Math.Sin(pulled)));
+        Assert.Contains(watch.Balance.Amplitude, new[] { 150.0, 210 });
+
+        var rotor = Assert.IsType<RotorDiagram>(Open(4));
+        rotor.DragGrip("reverser", default);
+        Assert.False(watch.Rotor.Reverser);
+        Frames(1);
+        var wound = rotor.Winding.Wound;
+        rotor.DragGrip("rotor", Quarter(rotor, "rotor", "rotor"));
+        Assert.True(rotor.Winding.Wound > wound);
+
+        var movement = Open(5);
+        movement.DragGrip("explode", Far(movement, "explode", 0, -2000));
+        Assert.Equal(1, watch.Movement.Explode, 9);
+        Frames(1);
+        movement.DragGrip("layerDial", default);
+        Assert.False(watch.Movement.ShowDial);
+        Frames(1);
+        movement.DragGrip("layerDial", default);
+        Assert.True(watch.Movement.ShowDial);
+
+        window.Close();
     }
 
     [AvaloniaFact]

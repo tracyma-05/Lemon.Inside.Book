@@ -2,7 +2,9 @@ using Avalonia.Controls;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Bridges;
+using Lemon.Book.Shell.Infrastructures.Timing;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -87,6 +89,36 @@ public sealed class BridgesTests
     }
 
     [Fact]
+    public void ABounce_OvershootsThenSettlesOnItsTarget()
+    {
+        var bounce = Bounce.At(0);
+        var most = 0.0;
+        for (var i = 0; i < 300; i++)
+        {
+            bounce = bounce.Step(1, 1.0 / 60, 6, 0.15);
+            most = Math.Max(most, bounce.Value);
+        }
+
+        Assert.True(most > 1.2, "a lightly damped spring overshoots");
+        Assert.Equal(1, bounce.Value, 2); // five seconds on, it has settled
+        Assert.Equal(1, Bounce.At(0).Step(1, 0.1, 6, 0.15).Step(1, 4.9, 6, 0.15).Value, 2); // a slow frame changes nothing
+    }
+
+    [Fact]
+    public void TheFramesHand_IsWhereItsPushPutsIt()
+    {
+        foreach (var brace in new[] { false, true })
+        {
+            foreach (var push in new[] { 0, 0.5, 1.25, 2 })
+            {
+                Assert.Equal(push, FrameDiagram.PushFor(FrameDiagram.HandAt(push, brace), brace), 6);
+            }
+        }
+
+        Assert.True(FrameDiagram.HandAt(2, false) > FrameDiagram.HandAt(2, true)); // unbraced, the frame goes over too
+    }
+
+    [Fact]
     public void TheSpreads_SayWhatTheirPicturesShow()
     {
         var bridges = new BridgesViewModel();
@@ -145,12 +177,91 @@ public sealed class BridgesTests
         (bridges.Arch.Rise, bridges.Arch.Abutments) = (2, false);
         (bridges.Cable.Sag, bridges.Cable.Anchored) = (8, false);
         (bridges.Expansion.Temperature, bridges.Expansion.Joint) = (40, false);
-        for (var s = 0; s < pictures.Length; s++)
+        BookClock.BeginStepping();
+        try
         {
-            model.GoToPage(BookContents.SpreadPage(chapter, s));
-            Frames(10);
-            Snapshot(window, $"bridges-{s + 1}-changed");
+            for (var s = 0; s < pictures.Length; s++)
+            {
+                model.GoToPage(BookContents.SpreadPage(chapter, s));
+                Frames(2);
+
+                // Let the moving pictures settle: the plank stop bouncing, the arch land, the lorry arrive.
+                for (var i = 0; i < 120; i++)
+                {
+                    BookClock.Advance(1.0 / 30);
+                    Frames(1);
+                }
+
+                Snapshot(window, $"bridges-{s + 1}-changed");
+            }
         }
+        finally
+        {
+            BookClock.EndStepping();
+            window.Close();
+        }
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Bridges");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Bridges");
+        var bridges = Assert.IsType<BridgesTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Bridges;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var beam = Open(0);
+        beam.DragGrip("span", Far(beam, "span", 2000, 0));
+        Assert.Equal(12, bridges.Beam.Span, 9);
+        Frames(2);
+        beam.DragGrip("depth", Far(beam, "depth", 0, 2000));
+        Assert.Equal(0.8, bridges.Beam.Depth, 9);
+        Frames(2);
+        beam.DragGrip("span", Far(beam, "span", -2000, 0));
+        Assert.Equal(4, bridges.Beam.Span, 9);
+
+        var frame = Open(1);
+        frame.DragGrip("push", Far(frame, "push", 2000, 0));
+        Assert.Equal(Frame.MostPush, bridges.Frame.Push, 9);
+        frame.DragGrip("brace", default);
+        Assert.True(bridges.Frame.Brace);
+        Frames(2);
+        frame.DragGrip("push", Far(frame, "push", -2000, 0));
+        Assert.Equal(0, bridges.Frame.Push, 9);
+
+        var truss = Open(2);
+        truss.DragGrip("lorry", Far(truss, "lorry", -2000, 0));
+        Assert.Equal(0, bridges.Truss.Position, 9);
+        truss.DragGrip("height", Far(truss, "height", 0, -2000));
+        Assert.Equal(4, bridges.Truss.Height, 9);
+
+        var arch = Open(3);
+        arch.DragGrip("rise", Far(arch, "rise", 0, 2000));
+        Assert.Equal(1, bridges.Arch.Rise, 9);
+        arch.DragGrip("abutments", default);
+        Assert.False(bridges.Arch.Abutments);
+
+        var cable = Open(4);
+        cable.DragGrip("sag", Far(cable, "sag", 0, -2000));
+        Assert.Equal(5, bridges.Cable.Sag, 9);
+        cable.DragGrip("anchor", default);
+        Assert.False(bridges.Cable.Anchored);
+
+        var expansion = Open(5);
+        expansion.DragGrip("temperature", Far(expansion, "temperature", 0, -2000));
+        Assert.Equal(45, bridges.Expansion.Temperature, 9);
+        expansion.DragGrip("joint", default);
+        Assert.False(bridges.Expansion.Joint);
 
         window.Close();
     }

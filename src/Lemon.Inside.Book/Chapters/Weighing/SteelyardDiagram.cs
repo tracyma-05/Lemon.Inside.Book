@@ -1,27 +1,38 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
 using static Lemon.Inside.Book.Chapters.Weighing.WeighingParts;
+using Bounce = Lemon.Inside.Book.Chapters.Bridges.Bounce;
 
 namespace Lemon.Inside.Book.Chapters.Weighing;
 
 /// <summary>
 /// Spread 2: a steelyard hanging from a beam, in centimetres. The sack hangs 5 cm left of the pivot; the 1 kg weight
 /// slides along the long arm, which is marked in kilograms. Out of balance, the arm tips toward the heavier side.
+/// The weight slides rather than jumps, and the arm swings to its new tilt and settles. The reader drags the weight
+/// along the arm and the sack's bottom down to fill it.
 /// </summary>
 public sealed class SteelyardDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SackProperty =
-        AvaloniaProperty.Register<SteelyardDiagram, double>(nameof(Sack), 8);
+        AvaloniaProperty.Register<SteelyardDiagram, double>(nameof(Sack), 8, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> PositionProperty =
-        AvaloniaProperty.Register<SteelyardDiagram, double>(nameof(Position), 20);
+        AvaloniaProperty.Register<SteelyardDiagram, double>(nameof(Position), 20, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The pivot's height, cm.</summary>
     private const double Pivot = 40;
+
+    /// <summary>Where the weight is drawn, cm out, sliding toward where it was put; NaN until the first frame.</summary>
+    private double _position = double.NaN;
+
+    /// <summary>The arm's drawn tilt, degrees, swinging toward its tilt for the weight where it is drawn.</summary>
+    private Bounce? _tilt;
 
     static SteelyardDiagram()
     {
@@ -42,13 +53,27 @@ public sealed class SteelyardDiagram : GearPicture
         set => SetValue(PositionProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>The weight slides at up to 60 cm a second; the arm, a long pendulum, swings slowly and settles.</summary>
+    protected override void Advance(double seconds)
+    {
+        Start();
+        _position = Lifting.LiftingParts.Ease(_position, Math.Clamp(Position, 0, Steelyard.LongArm), 60, seconds);
+        var target = Steelyard.Tilt(Math.Clamp(Sack, 2, 18), _position);
+        _tilt = _tilt!.Value.Step(target, seconds, 3, 0.18);
+    }
+
+    private void Start()
+    {
+        if (double.IsNaN(_position)) _position = Math.Clamp(Position, 0, Steelyard.LongArm);
+        _tilt ??= Bounce.At(Steelyard.Tilt(Math.Clamp(Sack, 2, 18), _position));
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
+        Start();
         var sack = Math.Clamp(Sack, 2, 18);
-        var position = Math.Clamp(Position, 0, Steelyard.LongArm);
-        var tilt = -Steelyard.Tilt(sack, position) * Math.PI / 180; // the sack's side down is the arm turning anticlockwise
+        var position = _position;
+        var tilt = -_tilt!.Value.Value * Math.PI / 180; // the sack's side down is the arm turning anticlockwise
         var scale = Math.Min((bounds.Width - 70) / 128, (bounds.Height - 140) / 56);
         var v = new View(new Point(bounds.Center.X - (42 * scale), bounds.Center.Y + (26 * scale)), scale);
 
@@ -91,11 +116,19 @@ public sealed class SteelyardDiagram : GearPicture
         context.DrawLine(new ImmutablePen(SteelBrush, 1.5), ring, weightTop);
         var weight = new Rect(weightTop.X - (2.5 * scale), weightTop.Y, 5 * scale, 6 * scale);
         context.DrawRectangle(Iron, Edge, weight, 3, 3);
-        DiagramText.Draw(context, Kilos(Steelyard.Poise), weight.Center, 10.5, DiagramText.Ink, 0.5, 0.5, bold: true);
+        DiagramText.Draw(context, Kilos(Steelyard.Poise), new Point(weight.Left - 14, weight.Center.Y), 10.5, DiagramText.Ink, 1, 0.5, bold: true);
         Mark("poise", weight.Union(new Rect(ring, ring).Inflate(1.2 * scale)));
 
         DiagramText.Draw(context, DiagramText.Format("Weighing_Steelyard_ReadsLabel", Kilos(Steelyard.Reading(position), "0.#")),
             new Point(weight.Center.X, weight.Bottom + 6), 13, Steelyard.Balanced(sack, position) ? DiagramText.Gold : DiagramText.Ink, 0.5, 0, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Weighing_Steelyard_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the sliding weight, dragged along the arm, and the sack's bottom, dragged down to fill it.
+        var cos = Math.Cos(tilt);
+        Grip("poise", weight.Center, GripAxis.Horizontal, DiagramText.Get("Weighing_Grip_Poise"),
+            at => Position = Math.Clamp(Math.Round(v.X(at) / cos * 2) / 2, 0, Steelyard.LongArm));
+        var top = sackTop.Y;
+        Grip("sack", new Point(sackBox.Center.X, sackBox.Bottom), GripAxis.Vertical, DiagramText.Get("Weighing_Grip_Sack"),
+            at => Sack = Math.Clamp(Math.Round((((at.Y - top) / (1.2 * scale)) - 8) / 0.5 * 2) / 2, 2, 18));
     }
 }

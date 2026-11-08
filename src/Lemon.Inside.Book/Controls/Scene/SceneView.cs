@@ -197,6 +197,10 @@ public abstract class SceneView : Picture
     protected override void OnPointerPressed(PointerPressedEventArgs e)
     {
         base.OnPointerPressed(e);
+
+        // A press on one of the picture's grips moves that grip, not the camera.
+        if (Gripping) return;
+
         _dragFrom = e.GetPosition(this);
         e.Pointer.Capture(this);
         e.Handled = true;

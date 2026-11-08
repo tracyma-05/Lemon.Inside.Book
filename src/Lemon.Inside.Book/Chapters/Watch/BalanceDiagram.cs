@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -8,15 +10,17 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 
 /// <summary>
 /// Spread 4: the balance and its hairspring swinging, five times slower than life, and below, a trace of its angle
-/// over time. A stiffer spring swings faster; a wider swing takes just as long.
+/// over time. A stiffer spring swings faster; a wider swing takes just as long. The reader can pull the balance round
+/// by its rim and let go (how far is the swing), and move the regulator's index on the right, which shortens or
+/// lengthens the working hairspring as a watchmaker does (how stiff it is).
 /// </summary>
 public sealed class BalanceDiagram : GearPicture
 {
     public static readonly StyledProperty<double> StiffnessProperty =
-        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Stiffness), 1);
+        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Stiffness), 1, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> AmplitudeProperty =
-        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Amplitude), 270);
+        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Amplitude), 270, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The picture runs this much slower than life.</summary>
     public const double Slower = 5;
@@ -47,10 +51,32 @@ public sealed class BalanceDiagram : GearPicture
         set => SetValue(AmplitudeProperty, value);
     }
 
+    /// <summary>The sliders' ranges.</summary>
+    private const double Softest = 0.8, Stiffest = 1.25, Narrowest = 120, Widest = 300;
+
+    /// <summary>The regulator's index sweeps this far either side of 3 o'clock, radians.</summary>
+    private static readonly double IndexSweep = 35 * Math.PI / 180;
+
+    private static readonly IPen IndexPen = new ImmutablePen(new ImmutableSolidColorBrush(WatchParts.Steel), 3, lineCap: PenLineCap.Round);
+    private static readonly IPen ScalePen = new ImmutablePen(DiagramText.Faint, 1.5);
+
+    /// <summary>The stiffness the regulator's index sets at <paramref name="angle"/> (radians clockwise from 3 o'clock).</summary>
+    internal static double StiffnessAt(double angle) =>
+        Math.Round((Softest + ((Stiffest - Softest) * (Math.Clamp(angle, -IndexSweep, IndexSweep) + IndexSweep) / (2 * IndexSweep))) * 200) / 200;
+
+    /// <summary>Where the regulator's index points for <paramref name="stiffness"/>, radians clockwise from 3 o'clock.</summary>
+    private static double IndexAngle(double stiffness) =>
+        -IndexSweep + (2 * IndexSweep * (Math.Clamp(stiffness, Softest, Stiffest) - Softest) / (Stiffest - Softest));
+
+    /// <summary>The balance swings on; held by the reader, it waits where it is put.</summary>
     protected override void Advance(double seconds)
     {
         var watchSeconds = seconds / Slower;
-        _phase += 2 * Math.PI * Balance.Frequency(Stiffness) * watchSeconds;
+        if (!Gripping)
+        {
+            _phase += 2 * Math.PI * Balance.Frequency(Stiffness) * watchSeconds;
+        }
+
         _trace.Enqueue((_time += watchSeconds, Amplitude * Math.Sin(_phase)));
         while (_trace.Count > 0 && _trace.Peek().Time < _time - TraceSeconds)
         {
@@ -72,6 +98,31 @@ public sealed class BalanceDiagram : GearPicture
         // A mark on the frame where the balance rests, and the swing either side.
         var rest = new Point(centre.X, centre.Y - (radius * 1.22));
         context.DrawLine(new ImmutablePen(DiagramText.Faint, 2), rest, rest + new Point(0, -10));
+
+        // The regulator: an index over the hairspring, its tip on a little scale to the right. Clockwise, it shortens
+        // the working spring: stiffer, faster.
+        var reach = radius * 1.32;
+        for (var i = 0; i <= 6; i++)
+        {
+            var a = -IndexSweep + (2 * IndexSweep * i / 6);
+            context.DrawLine(ScalePen, WatchParts.At(centre, reach + 4, a), WatchParts.At(centre, reach + (i % 3 == 0 ? 12 : 8), a));
+        }
+
+        var index = WatchParts.At(centre, reach, IndexAngle(Stiffness));
+        context.DrawLine(IndexPen, WatchParts.At(centre, radius * 0.5, IndexAngle(Stiffness)), index);
+        Grip("regulator", index, GripAxis.Free, DiagramText.Get("Watch_Grip_Regulator"),
+            at => Stiffness = StiffnessAt(Math.Atan2(at.Y - centre.Y, at.X - centre.X)));
+
+        // The rim where the roller's pin points: pulled round and let go, the balance swings that far.
+        var held = angle * Math.PI / 180;
+        Grip("swing", WatchParts.At(centre, radius, held + (Math.PI / 2)), GripAxis.Free, DiagramText.Get("Watch_Grip_PullBalance"), at =>
+        {
+            var towards = Math.Atan2(at.Y - centre.Y, at.X - centre.X) - (Math.PI / 2);
+            var degrees = (held + Math.IEEERemainder(towards - held, 2 * Math.PI)) * 180 / Math.PI;
+            held = degrees * Math.PI / 180;
+            Amplitude = Math.Round(Math.Clamp(Math.Abs(degrees), Narrowest, Widest));
+            _phase = degrees >= 0 ? Math.PI / 2 : -Math.PI / 2; // at the end of its swing, about to come back
+        });
 
         // The trace: angle against time, newest on the right.
         var area = new Rect(bounds.X + 24, centre.Y + radius + 44, bounds.Width - 48, bounds.Bottom - centre.Y - radius - 72);

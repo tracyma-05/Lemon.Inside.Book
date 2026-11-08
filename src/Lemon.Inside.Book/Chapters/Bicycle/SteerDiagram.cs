@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,15 +11,21 @@ namespace Lemon.Inside.Book.Chapters.Bicycle;
 /// <summary>
 /// Spread 6: the front of a bike from the side, with its steering axis drawn down to the ground and the trail between
 /// that point and the tyre's touch. Below, the same wheel from above, knocked by a bump every few seconds: with trail
-/// it swings back straight; without, it does not; with negative trail it swings away to full lock.
+/// it swings back straight; without, it does not; with negative trail it swings away to full lock. The reader leans the
+/// head tube by its top (to the right stands it up steeper) and drags the fork's bend forwards or back for its offset.
 /// </summary>
 public sealed class SteerDiagram : GearPicture
 {
     public static readonly StyledProperty<double> HeadAngleProperty =
-        AvaloniaProperty.Register<SteerDiagram, double>(nameof(HeadAngle), 72);
+        AvaloniaProperty.Register<SteerDiagram, double>(nameof(HeadAngle), 72, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> OffsetProperty =
-        AvaloniaProperty.Register<SteerDiagram, double>(nameof(Offset), 45);
+        AvaloniaProperty.Register<SteerDiagram, double>(nameof(Offset), 45, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The sliders' ranges: degrees of head angle, millimetres of offset.</summary>
+    private const double LeastAngle = 62;
+    private const double MostAngle = 80;
+    private const double MostOffset = 80;
 
     /// <summary>Seconds between bumps.</summary>
     private const double BumpEvery = 3.5;
@@ -51,6 +59,38 @@ public sealed class SteerDiagram : GearPicture
 
     private double Trail => Steering.Trail(HeadAngle, Offset / 1000);
 
+    /// <summary>
+    /// The side view's steering geometry, in metres from the tyre's touch (x forwards, y up), for a head angle in
+    /// degrees and an offset in metres: the axis's direction up, the point on it nearest the axle, and the head tube's top.
+    /// </summary>
+    internal static (Point Up, Point Nearest, Point HeadTop) Geometry(double headAngle, double offset)
+    {
+        var r = Bike.WheelRadius;
+        var a = headAngle * Math.PI / 180;
+        var up = new Point(-Math.Cos(a), Math.Sin(a));
+        var forward = new Point(Math.Sin(a), Math.Cos(a));
+        var nearest = new Point(0, r) - (forward * offset);
+        var crown = nearest + (up * ((2 * r) + 0.04 - nearest.Y) / up.Y);
+        return (up, nearest, crown + (up * 0.16));
+    }
+
+    /// <summary>
+    /// The head angle (degrees, in the slider's range) that puts the head tube's top <paramref name="x"/> metres ahead
+    /// of the tyre's touch: the top moves forwards as the tube stands up, so halving the range finds it.
+    /// </summary>
+    internal static double AngleFor(double x, double offset)
+    {
+        double low = LeastAngle, high = MostAngle;
+        for (var i = 0; i < 30; i++)
+        {
+            var mid = (low + high) / 2;
+            if (Geometry(mid, offset).HeadTop.X < x) low = mid;
+            else high = mid;
+        }
+
+        return (low + high) / 2;
+    }
+
     protected override void Advance(double seconds)
     {
         _roll += seconds * 2;
@@ -68,7 +108,6 @@ public sealed class SteerDiagram : GearPicture
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var r = Bike.WheelRadius;
-        var a = HeadAngle * Math.PI / 180;
         var offset = Offset / 1000;
         var trail = Trail;
 
@@ -77,13 +116,10 @@ public sealed class SteerDiagram : GearPicture
         var floor = (bounds.Height * 0.06) + (0.98 * scale);
         var origin = new Point(bounds.Width * 0.56, floor);
         Point Map(Point m) => new(origin.X + (m.X * scale), origin.Y - (m.Y * scale));
-        var up = new Point(-Math.Cos(a), Math.Sin(a));
-        var forward = new Point(Math.Sin(a), Math.Cos(a));
+        var (up, nearest, headTop) = Geometry(HeadAngle, offset);
         var axle = new Point(0, r);
-        var nearest = axle - (forward * offset);
         var ground = nearest - (up * (nearest.Y / up.Y));
-        var crown = nearest + (up * ((2 * r) + 0.04 - nearest.Y) / up.Y);
-        var headTop = crown + (up * 0.16);
+        var crown = headTop - (up * 0.16);
 
         context.DrawLine(Ground, new Point(bounds.X + 8, floor), new Point(bounds.Right - 8, floor));
         BicycleParts.DrawWheel(context, Map(axle), r * scale, _roll, spokes: 24);
@@ -111,6 +147,14 @@ public sealed class SteerDiagram : GearPicture
         context.DrawGeometry(null, new ImmutablePen(new ImmutableSolidColorBrush(GearPicture.Steel), Math.Max(3, scale * 0.024), lineCap: PenLineCap.Round), fork);
         context.DrawEllipse(BicycleParts.Dark, new ImmutablePen(new ImmutableSolidColorBrush(GearPicture.Steel), 1.5), Map(axle), 4, 4);
         Mark("fork", [Map(crown), Map(bend), Map(axle)], 6);
+
+        // The reader's handles: the fork's bend, forwards or back for its offset (its line from the axle runs at right
+        // angles to the axis), and the head tube's top, leaned back or stood up.
+        var forward = new Point(up.Y, -up.X);
+        Grip("offset", Map(bend), GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_Offset"),
+            at => Offset = Math.Round(Math.Clamp((((at.X - origin.X) / scale) - (up.X * 0.12)) / -forward.X * 1000, 0, MostOffset)));
+        Grip("angle", Map(headTop - (up * 0.06)), GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_HeadAngle"),
+            at => HeadAngle = Math.Round(AngleFor(((at.X - origin.X) / scale) + (up.X * 0.06), offset) * 2) / 2);
 
         // The steering axis, dashed, from above the bars down to the ground.
         var axisTop = headTop + (up * 0.12);

@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -19,15 +21,17 @@ public enum MovementLayer
 
 /// <summary>
 /// Spread 6: the whole movement taken apart, layer above layer, seen from the side and above. The reader pulls the
-/// layers apart and hides the ones in the way; the wheels keep turning.
+/// layers apart and hides the ones in the way; the wheels keep turning. The dial on top is a grip: dragged up it pulls
+/// the layers apart, down it puts them together, and they glide there from the slider too. Once apart, a tap on a
+/// layer's right edge hides it or brings it back.
 /// </summary>
 public sealed class MovementDiagram : GearPicture
 {
     public static readonly StyledProperty<double> ExplodeProperty =
-        AvaloniaProperty.Register<MovementDiagram, double>(nameof(Explode), 0.6);
+        AvaloniaProperty.Register<MovementDiagram, double>(nameof(Explode), 0.6, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<int> HiddenProperty =
-        AvaloniaProperty.Register<MovementDiagram, int>(nameof(Hidden));
+        AvaloniaProperty.Register<MovementDiagram, int>(nameof(Hidden), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Layers seen from above at a slant: circles look this much flatter.</summary>
     private const double Squash = 0.4;
@@ -42,6 +46,12 @@ public sealed class MovementDiagram : GearPicture
 
     private double _seconds = HandsDiagram.StartSeconds;
     private double _real;
+
+    /// <summary>How far apart the layers are drawn: they glide toward <see cref="Explode"/>; NaN until first drawn.</summary>
+    private double _explode = double.NaN;
+
+    /// <summary>Layers closer than this (pixels) are too close to tap one by one.</summary>
+    private const double TapRoom = 28;
 
     /// <summary>How far apart the layers are, 0 (put together) to 1.</summary>
     public double Explode
@@ -61,6 +71,38 @@ public sealed class MovementDiagram : GearPicture
     {
         _real += seconds;
         _seconds += seconds * Faster;
+        var target = Math.Clamp(Explode, 0, 1);
+        _explode = double.IsNaN(_explode) ? target : Glide(_explode, target, seconds, 0.12);
+    }
+
+    /// <summary>The plate's size (pixels from the middle) and the height of its middle on screen, for this much pulling apart.</summary>
+    private static (double Size, double BaseY) Fit(Rect bounds, double explode)
+    {
+        var top = LayerHeight(MovementLayer.Dial, explode) + (2 * Squash) + 0.25;
+        var size = Math.Min(bounds.Width * 0.36, bounds.Height * 0.86 / top);
+        return (size, bounds.Bottom - (size * Squash) - (bounds.Height * 0.06));
+    }
+
+    /// <summary>Where the dial sits on screen (its middle's height) for this much pulling apart.</summary>
+    internal static double DialY(Rect bounds, double explode)
+    {
+        var (size, baseY) = Fit(bounds, explode);
+        return baseY - (LayerHeight(MovementLayer.Dial, explode) * size);
+    }
+
+    /// <summary>How far apart to pull the layers so the dial sits at <paramref name="y"/>: the nearest hundredth.</summary>
+    internal static double ExplodeFor(Rect bounds, double y)
+    {
+        var best = 0.0;
+        for (var i = 0; i <= 100; i++)
+        {
+            if (Math.Abs(DialY(bounds, i / 100.0) - y) < Math.Abs(DialY(bounds, best) - y))
+            {
+                best = i / 100.0;
+            }
+        }
+
+        return best;
     }
 
     /// <summary>How high each layer sits, in units of the plate's radius, for this much pulling apart.</summary>
@@ -69,17 +111,28 @@ public sealed class MovementDiagram : GearPicture
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var layers = Enum.GetValues<MovementLayer>();
+        if (double.IsNaN(_explode))
+        {
+            _explode = Math.Clamp(Explode, 0, 1);
+        }
+
         // As big as fits: putting the layers together leaves room to look closer.
-        var top = LayerHeight(MovementLayer.Dial, Explode) + (2 * Squash) + 0.25;
-        var size = Math.Min(bounds.Width * 0.36, bounds.Height * 0.86 / top);
+        var explode = _explode;
+        var (size, baseY) = Fit(bounds, explode);
         var cx = bounds.Width * 0.6;
-        var baseY = bounds.Bottom - (size * Squash) - (bounds.Height * 0.06);
+        var apart = (LayerHeight(MovementLayer.Barrel, explode) * size) >= TapRoom;
 
         // The axis the layers stack along.
-        context.DrawLine(GuidePen, new Point(cx, baseY), new Point(cx, baseY - (LayerHeight(MovementLayer.Dial, Explode) * size)));
+        context.DrawLine(GuidePen, new Point(cx, baseY), new Point(cx, baseY - (LayerHeight(MovementLayer.Dial, explode) * size)));
         foreach (var layer in layers)
         {
-            var y = baseY - (LayerHeight(layer, Explode) * size);
+            var y = baseY - (LayerHeight(layer, explode) * size);
+            var bit = 1 << (int)layer;
+            if (apart)
+            {
+                Grip($"layer{layer}", new Point(cx + size, y), GripAxis.Tap, DiagramText.Get("Watch_Grip_Layer"), _ => Hidden ^= bit);
+            }
+
             var label = new Point(bounds.X + 16, y);
             var hidden = (Hidden & (1 << (int)layer)) != 0;
             DiagramText.Draw(context, DiagramText.Get($"Watch_Layer_{layer}"), label, 12.5, hidden ? DiagramText.Faint : DiagramText.Ink, 0, 0.5, bold: !hidden);
@@ -98,6 +151,14 @@ public sealed class MovementDiagram : GearPicture
                 DrawLayer(context, layer, centre, size);
             }
         }
+
+        // The dial (or where it would be): dragged up, the layers come apart.
+        var dial = baseY - (LayerHeight(MovementLayer.Dial, explode) * size);
+        Grip("explode", new Point(cx, dial), GripAxis.Vertical, DiagramText.Get("Watch_Grip_Explode"), at =>
+        {
+            Explode = ExplodeFor(bounds, at.Y);
+            _explode = Explode;
+        });
     }
 
     /// <summary>One layer laid flat, centred on <paramref name="centre"/>, the plate <paramref name="size"/> across from the middle.</summary>

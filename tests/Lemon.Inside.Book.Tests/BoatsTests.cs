@@ -3,6 +3,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -161,6 +162,79 @@ public sealed class BoatsTests
                 Assert.Contains(material, keys);
             }
         }
+    }
+
+    [Fact]
+    public void ADraggedBallast_SettlesOnTheBalance_WhenItComesClose()
+    {
+        Assert.Equal(Submarine.Neutral, SubmarineDiagram.Settle(Submarine.Neutral + 0.02), 9);
+        Assert.Equal(Submarine.Neutral, SubmarineDiagram.Settle(Submarine.Neutral - 0.02), 9);
+        Assert.Equal(0.6, SubmarineDiagram.Settle(0.6), 9);
+        Assert.Equal(0.33, SubmarineDiagram.Settle(0.3333), 9);
+        Assert.Equal(0, SubmarineDiagram.Settle(-1), 9);
+        Assert.Equal(1, SubmarineDiagram.Settle(2), 9);
+    }
+
+    /// <summary>Every picture has grips, and dragging them moves the spread's own values (the sliders follow).</summary>
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Boats");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Boats");
+        var boats = Assert.IsType<BoatsTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Boats;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var block = Open(0);
+        block.DragGrip("weight", Far(block, "weight", 0, 2000));
+        Assert.Equal(2000, boats.Float.Density, 9);
+        block.DragGrip("weight", Far(block, "weight", 0, -2000));
+        Assert.Equal(100, boats.Float.Density, 9);
+
+        var pressure = Open(1);
+        pressure.DragGrip("cube", Far(pressure, "cube", 0, 2000));
+        Assert.Equal(10, boats.Pressure.Depth, 9);
+        pressure.DragGrip("cube", Far(pressure, "cube", 0, -2000));
+        Assert.Equal(0.5, boats.Pressure.Depth, 9);
+
+        var hull = Open(2);
+        hull.DragGrip("cargo", Far(hull, "cargo", 2000, 0));
+        Assert.Equal(80, boats.Hull.Cargo, 9);
+        hull.DragGrip("cargo", Far(hull, "cargo", -2000, 0));
+        Assert.Equal(0, boats.Hull.Cargo, 9);
+
+        var heel = Open(3);
+        heel.DragGrip("mast", Far(heel, "mast", 2000, 0));
+        Assert.Equal(60, boats.Heel.HeelAngle, 9);
+        heel.DragGrip("mast", Far(heel, "mast", -2000, 0));
+        Assert.Equal(0, boats.Heel.HeelAngle, 9);
+
+        var stability = Open(4);
+        stability.DragGrip("weight", Far(stability, "weight", 0, -2000));
+        Assert.Equal(4, boats.Stability.CentreHeight, 9);
+        stability.DragGrip("weight", Far(stability, "weight", 0, 2000));
+        Assert.Equal(1, boats.Stability.CentreHeight, 9);
+        stability.DragGrip("beam", Far(stability, "beam", 2000, 0));
+        Assert.Equal(8, boats.Stability.Beam, 9);
+        stability.DragGrip("beam", Far(stability, "beam", -2000, 0));
+        Assert.Equal(4, boats.Stability.Beam, 9);
+
+        var submarine = Open(5);
+        submarine.DragGrip("ballast", Far(submarine, "ballast", 0, -2000));
+        Assert.Equal(1, boats.Submarine.Ballast, 9);
+        submarine.DragGrip("ballast", Far(submarine, "ballast", 0, 2000));
+        Assert.Equal(0, boats.Submarine.Ballast, 9);
+
+        window.Close();
     }
 
     [AvaloniaFact]

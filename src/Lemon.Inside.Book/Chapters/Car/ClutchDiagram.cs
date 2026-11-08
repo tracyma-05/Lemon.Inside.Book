@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,11 +12,13 @@ namespace Lemon.Inside.Book.Chapters.Car;
 /// Spread 4: the clutch cut in half, edge-on: the engine's flywheel, the friction plate on the gearbox shaft, and the
 /// pressure plate pushed by the springs. The pedal draws the pressure plate back. Below, the two sides' speeds and the
 /// heat while they slip.
+/// The reader drags the pressure plate back against its springs, as the pedal does; let go of the pedal on the left
+/// page and the plate slides home rather than jumping.
 /// </summary>
 public sealed class ClutchDiagram : GearPicture
 {
     public static readonly StyledProperty<double> PedalProperty =
-        AvaloniaProperty.Register<ClutchDiagram, double>(nameof(Pedal), 1);
+        AvaloniaProperty.Register<ClutchDiagram, double>(nameof(Pedal), 1, defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly IImmutableBrush Lining = new ImmutableSolidColorBrush(Color.FromRgb(0x8A, 0x6E, 0x4E));
     private static readonly IImmutableBrush Stripe = new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0x10, 0x14, 0x1E));
@@ -23,6 +27,9 @@ public sealed class ClutchDiagram : GearPicture
     private readonly Clutch _clutch = new();
     private double _engineTurns;
     private double _gearboxTurns;
+
+    /// <summary>How far apart the plates are drawn, 0 to 1 of the widest gap, easing toward the pedal's; NaN until the first frame.</summary>
+    private double _apart = double.NaN;
 
     static ClutchDiagram()
     {
@@ -45,14 +52,22 @@ public sealed class ClutchDiagram : GearPicture
         // Drawn turning a tenth as fast, so the stripes can be followed.
         _engineTurns += _clutch.Engine * seconds * 0.1;
         _gearboxTurns += _clutch.Gearbox * seconds * 0.1;
+        _apart = double.IsNaN(_apart) ? Apart(Pedal) : Glide(_apart, Apart(Pedal), seconds, 0.08);
     }
+
+    /// <summary>The share of the widest gap the pedal opens: the gap is full a little before the pedal reaches the floor.</summary>
+    private static double Apart(double pedal) => Math.Clamp(pedal * 1.25, 0, 1);
+
+    /// <summary>The pedal (to a fiftieth) that draws the pressure plate back <paramref name="travel"/> of the widest gap.</summary>
+    internal static double PedalForGap(double travel) => Math.Clamp(Math.Round(travel / 1.25 * 50) / 50, 0, 1);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var mid = new Point(bounds.Width * 0.5, bounds.Height * 0.34);
         var tall = bounds.Height * 0.44;
         var unit = Math.Min(bounds.Width / 14, 40);
-        var gap = Math.Clamp(Pedal * 1.25, 0, 1) * unit * 0.6;
+        var widest = unit * 0.6;
+        var gap = (double.IsNaN(_apart) ? Apart(Pedal) : _apart) * widest;
 
         // Shafts: the engine's from the left, the gearbox's to the right.
         context.DrawLine(new ImmutablePen(CarParts.DarkMetalBrush, unit * 0.5), new Point(bounds.X + 10, mid.Y), new Point(mid.X - (unit * 1.5), mid.Y));
@@ -77,6 +92,11 @@ public sealed class ClutchDiagram : GearPicture
             springs.Add(new Point(pressure.Right, y - (unit * 0.3)));
             springs.Add(new Point(cover.X, y + (unit * 0.3)));
         }
+
+        // The reader's handle on the pressure plate: drawn back against the springs as the pedal goes down. Past the
+        // widest gap the pedal still goes on to the floor.
+        Grip("pedal", new Point(pressure.Center.X, mid.Y), GripAxis.Horizontal, DiagramText.Get("Car_Grip_Pedal"),
+            at => Pedal = PedalForGap((at.X - (pressure.Width / 2) - flywheel.Right - (unit * 0.5)) / widest));
 
         Mark("flywheel", flywheel);
         Mark("plate", plate);

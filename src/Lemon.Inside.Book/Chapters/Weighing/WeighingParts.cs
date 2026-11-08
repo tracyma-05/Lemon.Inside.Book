@@ -91,6 +91,25 @@ internal static class WeighingParts
         return box.Inflate(4);
     }
 
+    /// <summary>
+    /// The value between <paramref name="low"/> and <paramref name="high"/> where <paramref name="rising"/> (which must
+    /// not fall as the value grows) reaches <paramref name="target"/>: the way back from a drawing to the value that
+    /// drew it, for a grip whose place is not a straight line of its value.
+    /// </summary>
+    public static double Solve(Func<double, double> rising, double target, double low, double high)
+    {
+        if (target <= rising(low)) return low;
+        if (target >= rising(high)) return high;
+        for (var i = 0; i < 40; i++)
+        {
+            var mid = (low + high) / 2;
+            if (rising(mid) < target) low = mid;
+            else high = mid;
+        }
+
+        return (low + high) / 2;
+    }
+
     public static string Number(double value, string format = "0.#") => value.ToString(format, CultureInfo.CurrentCulture);
 
     public static string Kilos(double value, string format = "0.##") => DiagramText.Format("Weighing_Kg", Number(value, format));

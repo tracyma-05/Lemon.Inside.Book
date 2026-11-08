@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,23 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 
 /// <summary>
 /// Spread 5: a boat rolling as waves knock it, end-on, with its cargo stacked as high as the weight's centre asks.
-/// Below, its righting lever against the angle of tip: above the line it rights itself, below it tips further.
+/// Below, its righting lever against the angle of tip: above the line it rights itself, below it tips further. The
+/// reader drags the weight's centre up or down and the hull's side out for a wider boat; each change sets it upright to
+/// meet the next wave.
 /// </summary>
 public sealed class StabilityDiagram : GearPicture
 {
     public static readonly StyledProperty<double> CentreHeightProperty =
-        AvaloniaProperty.Register<StabilityDiagram, double>(nameof(CentreHeight), 1.6);
+        AvaloniaProperty.Register<StabilityDiagram, double>(nameof(CentreHeight), 1.6, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> BeamProperty =
-        AvaloniaProperty.Register<StabilityDiagram, double>(nameof(Beam), 6);
+        AvaloniaProperty.Register<StabilityDiagram, double>(nameof(Beam), 6, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The sliders' ranges, metres: the weight's height over the keel, and the beam.</summary>
+    private const double LowestCentre = 1;
+    private const double HighestCentre = 4;
+    private const double Narrowest = 4;
+    private const double Widest = 8;
 
     /// <summary>Seconds between waves, and how long a capsized boat stays over before it is set upright again.</summary>
     private const double WaveEvery = 4;
@@ -92,6 +102,18 @@ public sealed class StabilityDiagram : GearPicture
         Mark("boat", drawn.Hull);
         BoatsParts.DrawCentre(context, drawn.Weight, 7);
         Mark("weight", drawn.Weight, 10);
+
+        // The grips sit where the parts are with the boat upright (as it is set after each change): the weight's
+        // centre, up or down; the deck's corner, out or in.
+        var keelAtWater = new Point(top.Center.X, top.Height * 0.6);
+        var level = boat.At(0).Waterline;
+        double Up(double metres) => keelAtWater.Y - ((metres - level) * scale);
+        var centre = Math.Clamp(CentreHeight, LowestCentre, HighestCentre);
+        Grip("weight", new Point(keelAtWater.X, Up(centre)), GripAxis.Vertical, DiagramText.Get("Boats_Grip_Centre"),
+            at => CentreHeight = Math.Round(Math.Clamp(level + ((keelAtWater.Y - at.Y) / scale), LowestCentre, HighestCentre) * 20) / 20);
+        Grip("beam", new Point(keelAtWater.X + (Math.Clamp(Beam, Narrowest, Widest) / 2 * scale), Up(boat.HullDepth)), GripAxis.Horizontal,
+            DiagramText.Get("Boats_Grip_Beam"),
+            at => Beam = Math.Round(Math.Clamp(2 * (at.X - keelAtWater.X) / scale, Narrowest, Widest), 1));
 
         var words = _roll.Capsized ? DiagramText.Get("Boats_Stability_Capsized")
             : DiagramText.Format("Boats_Stability_Tipped", Math.Abs(_roll.Angle * 180 / Math.PI).ToString("0"));

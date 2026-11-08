@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,14 +12,21 @@ namespace Lemon.Inside.Book.Chapters.Car;
 /// Spread 3: the crank's turning force through the two turns of a cycle, each cylinder's push faint and their sum in
 /// gold, the average dashed. Below, the flywheel turning, a little faster when the force is above average and slower
 /// when below, and a gauge showing how far its speed swings.
+/// The reader taps beside the graph for another cylinder (round from eight back to one) and drags the flywheel's rim
+/// up for a heavier wheel, which grows smoothly.
 /// </summary>
 public sealed class CylindersDiagram : GearPicture
 {
-    public static readonly StyledProperty<int> CountProperty =
-        AvaloniaProperty.Register<CylindersDiagram, int>(nameof(Count), 1);
+    /// <summary>Which of <see cref="Cylinders.Choices"/> (0 for one cylinder), as the spread's slider sets it.</summary>
+    public static readonly StyledProperty<int> CountStepProperty =
+        AvaloniaProperty.Register<CylindersDiagram, int>(nameof(CountStep), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> FlywheelProperty =
-        AvaloniaProperty.Register<CylindersDiagram, double>(nameof(Flywheel), 1);
+        AvaloniaProperty.Register<CylindersDiagram, double>(nameof(Flywheel), 1, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The flywheel's lightest and heaviest (the slider's ends).</summary>
+    private const double LightestFlywheel = 0.2;
+    private const double HeaviestFlywheel = 3;
 
     /// <summary>Crank degrees a second on average (slowed right down).</summary>
     private const double Speed = 160;
@@ -29,16 +38,22 @@ public sealed class CylindersDiagram : GearPicture
     private double[] _speeds = [];
     private (int, double) _speedsFor = (-1, 0);
 
+    /// <summary>The flywheel's heft as drawn, easing toward <see cref="Flywheel"/>; NaN until the first frame.</summary>
+    private double _heft = double.NaN;
+
     static CylindersDiagram()
     {
-        AffectsRender<CylindersDiagram>(CountProperty, FlywheelProperty);
+        AffectsRender<CylindersDiagram>(CountStepProperty, FlywheelProperty);
     }
 
-    public int Count
+    public int CountStep
     {
-        get => GetValue(CountProperty);
-        set => SetValue(CountProperty, value);
+        get => GetValue(CountStepProperty);
+        set => SetValue(CountStepProperty, value);
     }
+
+    /// <summary>How many cylinders.</summary>
+    public int Count => Cylinders.Choices[Math.Clamp(CountStep, 0, Cylinders.Choices.Count - 1)];
 
     /// <summary>The flywheel's heft, 1 being an ordinary one.</summary>
     public double Flywheel
@@ -64,15 +79,36 @@ public sealed class CylindersDiagram : GearPicture
     /// <summary>The crank's speed now, as a share above or below its average.</summary>
     private double Now => Speeds[(int)(_crank / 720 * Speeds.Length) % Speeds.Length];
 
-    protected override void Advance(double seconds) => _crank = (_crank + (Speed * (1 + Now) * seconds)) % 720;
+    protected override void Advance(double seconds)
+    {
+        _crank = (_crank + (Speed * (1 + Now) * seconds)) % 720;
+        var heft = Math.Clamp(Flywheel, LightestFlywheel, HeaviestFlywheel);
+        _heft = double.IsNaN(_heft) ? heft : Glide(_heft, heft, seconds, 0.15);
+    }
+
+    /// <summary>The flywheel's radius on screen for a heft of <paramref name="heft"/>: its mass goes as the square.</summary>
+    private static double FlywheelRadius(Rect bounds, double heft) => Math.Min(bounds.Width * 0.24, bounds.Height * 0.2) * Math.Sqrt(heft / 3);
+
+    /// <summary>The heft (to a tenth) whose rim reaches <paramref name="reach"/> pixels from the flywheel's middle.</summary>
+    internal static double HeftForRim(Rect bounds, double reach)
+    {
+        var most = FlywheelRadius(bounds, 3);
+        var ratio = Math.Max(0, reach) / most;
+        return Math.Clamp(Math.Round(3 * ratio * ratio, 1), LightestFlywheel, HeaviestFlywheel);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        DrawForce(context, new Rect(bounds.X + 40, bounds.Y + 44, bounds.Width - 64, bounds.Height * 0.36));
+        var force = new Rect(bounds.X + 40, bounds.Y + 44, bounds.Width - 64, bounds.Height * 0.36);
+        DrawForce(context, force);
+
+        // The reader's handle on the graph: tap for another cylinder, round from the most back to one.
+        Grip("count", new Point(force.X - 20, force.Center.Y), GripAxis.Tap, DiagramText.Get("Car_Grip_Count"),
+            _ => CountStep = (Math.Clamp(CountStep, 0, Cylinders.Choices.Count - 1) + 1) % Cylinders.Choices.Count);
 
         // The flywheel, bigger for a heavier one, turning with the crank.
         var centre = new Point(bounds.Width * 0.32, bounds.Height * 0.72);
-        var radius = Math.Min(bounds.Width * 0.24, bounds.Height * 0.2) * Math.Sqrt(Flywheel / 3);
+        var radius = FlywheelRadius(bounds, double.IsNaN(_heft) ? Math.Clamp(Flywheel, LightestFlywheel, HeaviestFlywheel) : _heft);
         var angle = _crank * Math.PI / 180;
         context.DrawEllipse(CarParts.DarkMetalBrush, CarParts.Edge, centre, radius, radius);
         context.DrawEllipse(null, new ImmutablePen(CarParts.MetalBrush, Math.Max(2, radius * 0.12)), centre, radius * 0.9, radius * 0.9);
@@ -86,6 +122,8 @@ public sealed class CylindersDiagram : GearPicture
         context.DrawEllipse(DiagramText.Gold, null, new Point(centre.X + (radius * 0.9 * Math.Cos(angle)), centre.Y + (radius * 0.9 * Math.Sin(angle))), 4, 4);
         Mark("flywheel", centre, Math.Max(radius, 14));
         DiagramText.Draw(context, DiagramText.Get("Car_Cylinders_FlywheelLabel"), new Point(centre.X, bounds.Bottom - 24), 12, DiagramText.Faint, 0.5, 1);
+        Grip("flywheel", new Point(centre.X, centre.Y - radius), GripAxis.Vertical, DiagramText.Get("Car_Grip_Flywheel"),
+            at => Flywheel = HeftForRim(bounds, centre.Y - at.Y));
 
         // The gauge: the crank's speed now against its average.
         var dial = new Point(bounds.Width * 0.74, bounds.Height * 0.76);

@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,16 @@ namespace Lemon.Inside.Book.Chapters.Bicycle;
 
 /// <summary>
 /// Spread 2: the drive side of a bike, true to size. The pedals turn the chainring; the chain carries its teeth's turn
-/// back to the sprocket on the wheel. Counters show the turns of each.
+/// back to the sprocket on the wheel. Counters show the turns of each. The reader drags the edge of either sprocket
+/// out for more teeth or in for fewer; a changed sprocket grows or shrinks to its new size instead of jumping.
 /// </summary>
 public sealed class ChainDiagram : GearPicture
 {
     public static readonly StyledProperty<int> ChainringProperty =
-        AvaloniaProperty.Register<ChainDiagram, int>(nameof(Chainring), 44);
+        AvaloniaProperty.Register<ChainDiagram, int>(nameof(Chainring), 44, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<int> SprocketProperty =
-        AvaloniaProperty.Register<ChainDiagram, int>(nameof(Sprocket), 22);
+        AvaloniaProperty.Register<ChainDiagram, int>(nameof(Sprocket), 22, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>From the crank's axle to the wheel's, metres.</summary>
     private const double Chainstay = 0.41;
@@ -50,12 +53,28 @@ public sealed class ChainDiagram : GearPicture
     /// <summary>Chain moved so far, in links.</summary>
     private double _links;
 
+    /// <summary>The sprockets' sizes as drawn (pitch radii, metres), easing toward their tooth counts' own.</summary>
+    private double _ringRadius = Drive.PitchRadius(44);
+    private double _cogRadius = Drive.PitchRadius(22);
+
     protected override void Advance(double seconds)
     {
         _pedalTurns += PedalSpeed * seconds;
         _links += PedalSpeed * seconds * Chainring;
         _wheelTurns += PedalSpeed * seconds * Drive.Ratio(Chainring, Sprocket);
+        _ringRadius = Glide(_ringRadius, Drive.PitchRadius(Math.Clamp(Chainring, LeastRing, MostRing)), seconds, 0.08);
+        _cogRadius = Glide(_cogRadius, Drive.PitchRadius(Math.Clamp(Sprocket, LeastCog, MostCog)), seconds, 0.08);
     }
+
+    /// <summary>The sliders' ranges of teeth.</summary>
+    private const int LeastRing = 28;
+    private const int MostRing = 53;
+    private const int LeastCog = 11;
+    private const int MostCog = 34;
+
+    /// <summary>The number of teeth whose rollers sit on a circle of <paramref name="radius"/> metres.</summary>
+    internal static int TeethFor(double radius, int least, int most) =>
+        radius <= Drive.Pitch / 2 ? least : Math.Clamp((int)Math.Round(Math.PI / Math.Asin(Drive.Pitch / (2 * radius))), least, most);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -64,8 +83,8 @@ public sealed class ChainDiagram : GearPicture
         var wheel = new Point(bounds.X + ((Bike.WheelRadius + 0.03) * scale), y);
         var ring = new Point(wheel.X + (Chainstay * scale), y);
         var pitch = Drive.Pitch * scale;
-        var ra = Drive.PitchRadius(Sprocket) * scale;
-        var rb = Drive.PitchRadius(Chainring) * scale;
+        var ra = _cogRadius * scale;
+        var rb = _ringRadius * scale;
 
         // The back wheel behind it all.
         var wheelAngle = 2 * Math.PI * _wheelTurns;
@@ -112,6 +131,15 @@ public sealed class ChainDiagram : GearPicture
         Mark("pedal", pedal, Math.Max(10, scale * 0.05));
 
         DiagramText.Draw(context, DiagramText.Get("Bicycle_Chain_Ring"), new Point(ring.X, ring.Y + rb + 10), 12, DiagramText.Gold, 0.5, 0);
+
+        // The reader's handles: each sprocket's edge, pulled out for more teeth (the chainring's on its right, the
+        // sprocket's on its left, both where the chain wraps round). They sit at the size asked for, not the one drawn.
+        var ringEdge = Drive.PitchRadius(Math.Clamp(Chainring, LeastRing, MostRing)) * scale;
+        Grip("chainring", new Point(ring.X + ringEdge + (pitch * 0.4), ring.Y), GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_Chainring"),
+            at => Chainring = TeethFor((at.X - ring.X - (pitch * 0.4)) / scale, LeastRing, MostRing));
+        var cogEdge = Drive.PitchRadius(Math.Clamp(Sprocket, LeastCog, MostCog)) * scale;
+        Grip("sprocket", new Point(wheel.X - cogEdge - (pitch * 0.4), wheel.Y), GripAxis.Horizontal, DiagramText.Get("Bicycle_Grip_Sprocket"),
+            at => Sprocket = TeethFor((wheel.X - at.X - (pitch * 0.4)) / scale, LeastCog, MostCog));
         DiagramText.Draw(context, DiagramText.Get("Bicycle_Chain_Cog"), new Point(wheel.X, wheel.Y - ra - 8), 12, DiagramText.Ink, 0.5, 1);
 
         // Turns so far: the pedals' and the wheel's.

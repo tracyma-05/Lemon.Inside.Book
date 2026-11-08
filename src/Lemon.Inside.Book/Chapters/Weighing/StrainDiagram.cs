@@ -1,10 +1,13 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
 using static Lemon.Inside.Book.Chapters.Weighing.WeighingParts;
+using Bounce = Lemon.Inside.Book.Chapters.Bridges.Bounce;
 
 namespace Lemon.Inside.Book.Chapters.Weighing;
 
@@ -12,18 +15,24 @@ namespace Lemon.Inside.Book.Chapters.Weighing;
 /// Spread 5: a load cell. Above, a metal bar clamped at one end with the load hanging from the other, its bending
 /// drawn far bigger than it is; a gauge on its top is stretched (and with four gauges, two more underneath are
 /// squeezed). Below, the gauges wired as a bridge between the 5 V supply and the meter, and the display it drives.
-/// One gauge warmed reads too much; four warmed alike cancel.
+/// One gauge warmed reads too much; four warmed alike cancel. Change the load and the bar springs to its new bend and
+/// rings down, the display's digits following it until they settle, as a real scale's do before they hold still. The
+/// reader drags the load's rod down for more, taps beside the gauge to warm it, and taps the bridge to wire in one
+/// gauge or four.
 /// </summary>
 public sealed class StrainDiagram : GearPicture
 {
     public static readonly StyledProperty<double> MassProperty =
-        AvaloniaProperty.Register<StrainDiagram, double>(nameof(Mass), 2);
+        AvaloniaProperty.Register<StrainDiagram, double>(nameof(Mass), 2, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> WarmProperty =
-        AvaloniaProperty.Register<StrainDiagram, bool>(nameof(Warm));
+        AvaloniaProperty.Register<StrainDiagram, bool>(nameof(Warm), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> BridgeProperty =
-        AvaloniaProperty.Register<StrainDiagram, bool>(nameof(Bridge));
+        AvaloniaProperty.Register<StrainDiagram, bool>(nameof(Bridge), defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The load the bar is drawn bent by, kg, springing toward the load on it; null until the first frame.</summary>
+    private Bounce? _bent;
 
     static StrainDiagram()
     {
@@ -48,20 +57,25 @@ public sealed class StrainDiagram : GearPicture
         set => SetValue(BridgeProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double Load => Math.Clamp(Mass, 0, Gauge.FullLoad);
+
+    /// <summary>A stiff steel bar rings quickly; the load cell's own damping settles it in a second or so.</summary>
+    protected override void Advance(double seconds) =>
+        _bent = (_bent ?? Bounce.At(Load)).Step(Load, seconds, 11, 0.12);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var mass = Math.Clamp(Mass, 0, Gauge.FullLoad);
+        var mass = Load;
+        var bent = (_bent ??= Bounce.At(Load)).Value;
         var bridge = Bridge;
         var warm = Warm;
-        DrawBar(context, bounds, mass, warm, bridge);
-        DrawCircuit(context, bounds, mass, warm, bridge);
+        DrawBar(context, bounds, mass, bent, warm, bridge);
+        DrawCircuit(context, bounds, Math.Max(0, bent), warm, bridge);
         DiagramText.Draw(context, DiagramText.Get("Weighing_Strain_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
     }
 
     /// <summary>The bar, its gauges and its load.</summary>
-    private void DrawBar(DrawingContext context, Rect bounds, double mass, bool warm, bool bridge)
+    private void DrawBar(DrawingContext context, Rect bounds, double mass, double bent, bool warm, bool bridge)
     {
         var clamp = new Rect(bounds.X + 40, bounds.Y + 70, 46, 150);
         context.DrawRectangle(Iron, Edge, clamp, 4, 4);
@@ -69,7 +83,7 @@ public sealed class StrainDiagram : GearPicture
         var length = bounds.Width * 0.55;
         var y0 = clamp.Center.Y;
         const double thick = 28;
-        var deflection = mass / Gauge.FullLoad * 46;
+        var deflection = bent / Gauge.FullLoad * 46;
         double Down(double x)
         {
             var u = x / length;
@@ -105,7 +119,7 @@ public sealed class StrainDiagram : GearPicture
 
         // The load hanging from the free end.
         var end = new Point(x0 + length - 10, y0 + (thick / 2) + Down(length - 10));
-        var weightTop = new Point(end.X, end.Y + 18);
+        var weightTop = new Point(end.X, end.Y + 30);
         context.DrawLine(new ImmutablePen(SteelBrush, 2), end, weightTop);
         if (mass > 0.01)
         {
@@ -116,6 +130,16 @@ public sealed class StrainDiagram : GearPicture
         }
 
         DiagramText.Draw(context, DiagramText.Get("Weighing_Strain_Drawn"), new Point(x0 + (length / 2), y0 - (thick / 2) - 30), 11, DiagramText.Faint, 0.5, 1);
+
+        // The reader's handles: the load's rod, dragged down to hang more on (the rod settles where the pointer is), and
+        // beside the gauge, tapped to warm it or let it cool.
+        var u = (length - 10) / length;
+        var perKg = 46 / Gauge.FullLoad * u * u * (3 - u) / 2;
+        var rest = y0 + (thick / 2) + 13;
+        Grip("mass", new Point(end.X, end.Y + 13), GripAxis.Vertical, DiagramText.Get("Weighing_Grip_StrainMass"),
+            at => Mass = Math.Clamp(Math.Round((at.Y - rest) / perKg, 1), 0, Gauge.FullLoad));
+        Grip("warm", new Point(gauge.Right + 16, y0 - (thick / 2) + 8 + Down(gauge.Right + 16 - x0)), GripAxis.Tap,
+            DiagramText.Get(warm ? "Weighing_Grip_Cool" : "Weighing_Grip_Warm"), _ => Warm = !Warm);
     }
 
     /// <summary>A zigzag gauge lying on the bar's face at <paramref name="face"/>, bent with it. Returns its box.</summary>
@@ -168,6 +192,8 @@ public sealed class StrainDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Get("Weighing_Strain_Supply"), new Point(nodes[0].X, nodes[0].Y - 6), 11.5, DiagramText.Ink, 0.5, 1);
         DiagramText.Draw(context, "0 V", new Point(nodes[2].X, nodes[2].Y + 6), 11.5, DiagramText.Ink, 0.5, 0);
         Mark("bridge", new Rect(nodes[3].X, nodes[0].Y, 2 * r, 2 * r));
+        Grip("bridge", new Point(nodes[3].X - 20, nodes[3].Y), GripAxis.Tap,
+            DiagramText.Get(bridge ? "Weighing_Grip_OneGauge" : "Weighing_Grip_FourGauges"), _ => Bridge = !Bridge);
 
         // The meter across the middle, and the display it drives.
         var meterAt = new Point(centre.X, centre.Y);

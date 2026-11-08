@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -16,10 +18,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class CisternDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SetProperty =
-        AvaloniaProperty.Register<CisternDiagram, double>(nameof(Set), 28);
+        AvaloniaProperty.Register<CisternDiagram, double>(nameof(Set), 28, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> FlushingProperty =
-        AvaloniaProperty.Register<CisternDiagram, bool>(nameof(Flushing));
+        AvaloniaProperty.Register<CisternDiagram, bool>(nameof(Flushing), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The float arm's pivot on the valve, and its length, cm.</summary>
     private const double PivotX = 11;
@@ -48,7 +50,16 @@ public sealed class CisternDiagram : GearPicture
 
     private double Level => double.IsNaN(_level) ? _level = Cistern.Settles(Set) : _level;
 
-    protected override void Advance(double seconds) => _level = Cistern.Step(Level, Set, Flushing, seconds);
+    /// <summary>How far the flush lever is pulled down, 0..1: it swings over, lifting the flap, rather than jumping.</summary>
+    private double _pull = double.NaN;
+
+    private double Pull => double.IsNaN(_pull) ? _pull = Flushing ? 1 : 0 : _pull;
+
+    protected override void Advance(double seconds)
+    {
+        _level = Cistern.Step(Level, Set, Flushing, seconds);
+        _pull = Toward(Pull, Flushing ? 1 : 0, 4, seconds);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -71,12 +82,13 @@ public sealed class CisternDiagram : GearPicture
         DrawPipe(context, [v.At(25, 0), v.At(25, -12)], 9 * scale, draining, SteelBrush);
         if (draining) DrawFlow(context, [v.At(25, 0), v.At(25, -12)], 3 * scale, Seconds * 140);
         var hinge = v.At(19, 1);
-        var tilt = flushing ? -50 * Math.PI / 180 : 0;
+        var pull = Pull;
+        var tilt = -50 * pull * Math.PI / 180;
         Point Turned(double along, double up) => new(hinge.X + (along * scale * Math.Cos(tilt)) + (up * scale * Math.Sin(tilt)),
             hinge.Y + (along * scale * Math.Sin(tilt)) - (up * scale * Math.Cos(tilt)));
         Point[] flap = [Turned(0, -0.6), Turned(12, -0.6), Turned(12, 1.2), Turned(0, 1.2)];
         DrawPolygon(context, Rubber, Edge, flap);
-        var leverEnd = v.At(28, flushing ? 47 : Cistern.Depth + 4.5);
+        var leverEnd = v.At(28, Cistern.Depth + 4.5 + (2.5 * pull));
         context.DrawLine(new ImmutablePen(SteelBrush, 3, null, PenLineCap.Round), v.At(-5, Cistern.Depth + 4.5), leverEnd);
         context.DrawRectangle(SteelBrush, Edge, v.Box(-8, Cistern.Depth + 3, -3, Cistern.Depth + 6), 2, 2);
         context.DrawLine(new ImmutablePen(DiagramText.Faint, 1.2, new ImmutableDashStyle([1.5, 1.5], 0)), leverEnd, Turned(10, 1.2));
@@ -125,5 +137,9 @@ public sealed class CisternDiagram : GearPicture
             DiagramText.Ink, 0, 0, bold: true);
         DiagramText.Draw(context, DiagramText.Format("Plumbing_Centimetres", Number(level, "0")), v.At(53.5, level), 12, DiagramText.Cyan, 0, 0.5, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Cistern_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the level the float shuts at, dragged up or down at the tank's wall, and the flush lever tapped.
+        Grip("set", v.At(50, set), GripAxis.Vertical, DiagramText.Get("Plumbing_Grip_Set"), at => Set = Snap(v.Y(at), 0.5, 20, 38));
+        Grip("flush", leverEnd, GripAxis.Tap, DiagramText.Get("Plumbing_Grip_Flush"), _ => Flushing = !Flushing);
     }
 }

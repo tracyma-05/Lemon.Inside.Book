@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,14 +11,23 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 /// <summary>
 /// Spread 2: a cube held under water. Arrows on each face show how hard the water presses there: harder the deeper.
 /// The sides' pushes cancel; the bottom is pushed up harder than the top is pushed down, by the same amount at any depth.
+/// The reader drags the cube up or down; it glides to its new depth, the arrows growing and shrinking on the way.
 /// </summary>
 public sealed class PressureDiagram : GearPicture
 {
     public static readonly StyledProperty<double> DepthProperty =
-        AvaloniaProperty.Register<PressureDiagram, double>(nameof(Depth), 2);
+        AvaloniaProperty.Register<PressureDiagram, double>(nameof(Depth), 2, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The water shown, metres.</summary>
     private const double Shown = 16;
+
+    /// <summary>The slider's range of depths for the cube's top, metres.</summary>
+    private const double LeastDepth = 0.5;
+    private const double MostDepth = 10;
+
+    /// <summary>The cube's depth as drawn, gliding toward <see cref="Depth"/>.</summary>
+    private double _depth = 2;
+    private bool _placed;
 
     private static readonly IPen Tick = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xA0, 0xE6, 0xEA, 0xF2)), 1);
     private static readonly IImmutableBrush Cube = new ImmutableSolidColorBrush(Color.FromRgb(0x8A, 0x94, 0xA8));
@@ -33,7 +44,12 @@ public sealed class PressureDiagram : GearPicture
         set => SetValue(DepthProperty, value);
     }
 
-    protected override bool Animates => false;
+    protected override void Advance(double seconds)
+    {
+        var target = Math.Clamp(Depth, LeastDepth, MostDepth);
+        _depth = _placed ? Glide(_depth, target, seconds, 0.1) : target;
+        _placed = true;
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -53,7 +69,8 @@ public sealed class PressureDiagram : GearPicture
 
         // The cube, PressureSpread.Side metres a side, its top Depth metres down.
         var side = PressureSpread.Side * perMetre;
-        var top = surface + (Depth * perMetre);
+        var drawn = _placed ? _depth : Math.Clamp(Depth, LeastDepth, MostDepth);
+        var top = surface + (drawn * perMetre);
         var cube = new Rect((bounds.Width * 0.58) - (side / 2), top, side, side);
         context.DrawRectangle(Cube, new ImmutablePen(BoatsParts.Dark, 1.5), cube, 2, 2);
         Mark("cube", cube);
@@ -96,12 +113,17 @@ public sealed class PressureDiagram : GearPicture
         Mark("sides", sidePoints, 4);
 
         // The difference: the lift, the same at every depth.
-        var lift = (Water.Pressure(Depth + PressureSpread.Side) - Water.Pressure(Depth)) * PressureSpread.Side * PressureSpread.Side / 1000;
-        DiagramText.Draw(context, DiagramText.Format("Boats_Pressure_Kpa", (Water.Pressure(Depth) / 1000).ToString("0")),
+        var lift = (Water.Pressure(drawn + PressureSpread.Side) - Water.Pressure(drawn)) * PressureSpread.Side * PressureSpread.Side / 1000;
+        DiagramText.Draw(context, DiagramText.Format("Boats_Pressure_Kpa", (Water.Pressure(drawn) / 1000).ToString("0")),
             new Point(cube.Right + 10, cube.Top - 18), 12, BoatsParts.Weight, 0, 1);
-        DiagramText.Draw(context, DiagramText.Format("Boats_Pressure_Kpa", (Water.Pressure(Depth + PressureSpread.Side) / 1000).ToString("0")),
+        DiagramText.Draw(context, DiagramText.Format("Boats_Pressure_Kpa", (Water.Pressure(drawn + PressureSpread.Side) / 1000).ToString("0")),
             new Point(cube.Right + 10, cube.Bottom + 18), 12, BoatsParts.Lift, 0, 0);
         DiagramText.Draw(context, DiagramText.Format("Boats_Pressure_Lift", lift.ToString("0.0")),
             new Point(bounds.Right - 18, bottom + 14), 13, DiagramText.Ink, 1, 0, bold: true);
+
+        // The cube's grip, where the reader asked it to be (it glides there): its middle, dragged up or down.
+        var asked = surface + ((Math.Clamp(Depth, LeastDepth, MostDepth) + (PressureSpread.Side / 2)) * perMetre);
+        Grip("cube", new Point(cube.Center.X, asked), GripAxis.Vertical, DiagramText.Get("Boats_Grip_Depth"),
+            at => Depth = Math.Round(Math.Clamp(((at.Y - surface) / perMetre) - (PressureSpread.Side / 2), LeastDepth, MostDepth), 1));
     }
 }

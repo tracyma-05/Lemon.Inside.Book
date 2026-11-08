@@ -17,7 +17,7 @@
                         </DataTemplate>
                         <DataTemplate DataType="watch:HandsSpread">
                             <watch:HandsDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
-                                     Speed="{Binding Speed}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
+                                     SpeedStep="{Binding SpeedStep}" AutomationProperties.Name="{loc:Localize Watch_Hands_Picture}" />
                         </DataTemplate>
                         <DataTemplate DataType="watch:EscapementSpread">
                             <watch:EscapementDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"

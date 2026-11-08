@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -9,12 +11,14 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 /// <summary>
 /// Spread 3: the lever escapement in slow motion. The balance (top) swings; as it passes the middle its pin flicks the
 /// lever (centre) across; one red stone lets go of the escape wheel (bottom), which jumps half a tooth until the other
-/// stone catches it. Everything comes from <see cref="Escapement.At"/>.
+/// stone catches it. Everything comes from <see cref="Escapement.At"/>. The reader can take the balance's rim and swing
+/// it by hand through a beat (time waits while it is held), and drag along the speed track at the top to slow time more
+/// or less.
 /// </summary>
 public sealed class EscapementDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SlowMotionProperty =
-        AvaloniaProperty.Register<EscapementDiagram, double>(nameof(SlowMotion), 0.1);
+        AvaloniaProperty.Register<EscapementDiagram, double>(nameof(SlowMotion), 0.1, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Where the two stones sit round the escape wheel, from 3 o'clock anticlockwise: 2.5 teeth apart.</summary>
     private const double ExitStone = 60, EntryStone = 120;
@@ -41,7 +45,32 @@ public sealed class EscapementDiagram : GearPicture
     /// <summary>The watch's own time in the picture, in seconds.</summary>
     internal double Time => _seconds;
 
-    protected override void Advance(double seconds) => _seconds += seconds * SlowMotion;
+    /// <summary>The slider's range of the slow motion.</summary>
+    private const double Slowest = 0.02, Fastest = 0.5;
+
+    private static readonly IPen TrackPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x50, 0xE6, 0xEA, 0xF2)), 4, lineCap: PenLineCap.Round);
+
+    /// <summary>Time runs on, except while the reader holds the balance.</summary>
+    protected override void Advance(double seconds)
+    {
+        if (!Gripping)
+        {
+            _seconds += seconds * SlowMotion;
+        }
+    }
+
+    /// <summary>
+    /// The moment, nearest <paramref name="seconds"/>, at which the balance stands at <paramref name="degrees"/>: in
+    /// the same half swing (between one end of the swing and the other), so a drag moves it back and forth through the
+    /// beat; beyond the swing's ends it stops there.
+    /// </summary>
+    internal static double TimeAt(double seconds, double degrees, double frequency = GoingTrain.Frequency)
+    {
+        var phase = 2 * Math.PI * frequency * seconds;
+        var half = Math.Round(phase / Math.PI);
+        var along = Math.Asin(Math.Clamp(degrees / Escapement.Amplitude, -0.999, 0.999));
+        return ((half * Math.PI) + (((long)half % 2 == 0) ? along : -along)) / (2 * Math.PI * frequency);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -101,6 +130,24 @@ public sealed class EscapementDiagram : GearPicture
 
         DiagramText.Draw(context, DiagramText.Format("Watch_Escape_Slow", (1 / Math.Max(0.001, SlowMotion)).ToString("0")),
             new Point(bounds.X + 16, bounds.Y + 14), 12.5, DiagramText.Ink);
+
+        // The speed track under the words: left slower, right faster.
+        var track = new Rect(bounds.X + 24, bounds.Y + 56, Math.Min(140, bounds.Width * 0.3), 0);
+        context.DrawLine(TrackPen, track.TopLeft, track.TopRight);
+        var slow = Math.Clamp(SlowMotion, Slowest, Fastest);
+        Grip("speed", new Point(track.X + (track.Width * (slow - Slowest) / (Fastest - Slowest)), track.Y), GripAxis.Horizontal,
+            DiagramText.Get("Watch_Grip_SlowMotion"),
+            at => SlowMotion = Math.Round(Slowest + ((Fastest - Slowest) * Math.Clamp((at.X - track.X) / track.Width, 0, 1)), 2));
+
+        // The balance's rim, where its pin points: dragged round, the balance swings by hand and the beat follows.
+        Grip("balance", WatchParts.At(balanceCentre, balanceRadius, (balance * Math.PI / 180) + (Math.PI / 2)), GripAxis.Free,
+            DiagramText.Get("Watch_Grip_SwingBalance"), at =>
+            {
+                var now = Escapement.At(_seconds).Balance * Math.PI / 180;
+                var towards = Math.Atan2(at.Y - balanceCentre.Y, at.X - balanceCentre.X) - (Math.PI / 2);
+                var degrees = (now + Math.IEEERemainder(towards - now, 2 * Math.PI)) * 180 / Math.PI;
+                _seconds = TimeAt(_seconds, degrees);
+            });
     }
 
     /// <summary>A point <paramref name="radius"/> from the wheel's centre at <paramref name="degrees"/> anticlockwise from 3 o'clock.</summary>

@@ -1,6 +1,8 @@
 using Avalonia.Media.Immutable;
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,16 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 4: two gears turning slowly, with their base circles, the line of action between them, and a gold dot
-/// wherever a pair of teeth is touching. The dots slide along the line.
+/// wherever a pair of teeth is touching. The dots slide along the line. The reader tilts the line by its lower end
+/// (the pressure angle) and can stop the motor and turn the gold gear by hand, to watch a pair of teeth meet and part.
 /// </summary>
 public sealed class MeshDiagram : GearPicture
 {
     public static readonly StyledProperty<double> PressureAngleProperty =
-        AvaloniaProperty.Register<MeshDiagram, double>(nameof(PressureAngle), 20);
+        AvaloniaProperty.Register<MeshDiagram, double>(nameof(PressureAngle), 20, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> SpeedProperty =
-        AvaloniaProperty.Register<MeshDiagram, double>(nameof(Speed), 0.5);
+        AvaloniaProperty.Register<MeshDiagram, double>(nameof(Speed), 0.5, defaultBindingMode: BindingMode.TwoWay);
 
     public const int DriverTeeth = 16;
     public const int DrivenTeeth = 26;
@@ -50,7 +53,29 @@ public sealed class MeshDiagram : GearPicture
         set => SetValue(SpeedProperty, value);
     }
 
-    protected override void Advance(double seconds) => _angle += 2 * Math.PI * FullSpeed * Speed * seconds;
+    /// <summary>The slider's range of the pressure angle, degrees.</summary>
+    private const double LeastPressure = 14, MostPressure = 30;
+
+    /// <summary>The gold gear's angle (for the tests).</summary>
+    internal double Angle => _angle;
+
+    protected override void Advance(double seconds)
+    {
+        if (!Gripping)
+        {
+            _angle += 2 * Math.PI * FullSpeed * Speed * seconds;
+        }
+    }
+
+    /// <summary>
+    /// The pressure angle, degrees, for a line of action through the pitch point and <paramref name="towards"/> (as a
+    /// step from it, y up, either way along the line): the line's slant from upright. Kept to the slider's range, in halves.
+    /// </summary>
+    internal static double PressureToward(Vector towards)
+    {
+        var slant = Math.Atan2(Math.Abs(towards.X), Math.Max(1e-6, Math.Abs(towards.Y))) * 180 / Math.PI;
+        return Math.Round(Math.Clamp(slant, LeastPressure, MostPressure) * 2) / 2;
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -86,7 +111,20 @@ public sealed class MeshDiagram : GearPicture
         context.DrawEllipse(Brushes.White, null, pitch, 3, 3);
         DiagramText.Draw(context, DiagramText.Get("Gears_Mesh_Pitch"), pitch + new Point(-8, 8), 12, DiagramText.Faint, 1, 0);
         var labelAt = At(between);
-        DiagramText.Draw(context, DiagramText.Get("Gears_Mesh_Line"), labelAt + new Point(6, -4), 12, DiagramText.Cyan, 0, 1);
+        DiagramText.Draw(context, DiagramText.Get("Gears_Mesh_Line"), labelAt + new Point(16, -12), 12, DiagramText.Cyan, 0, 1);
         DiagramText.Draw(context, DiagramText.Format("Gears_Degrees", PressureAngle.ToString("0.#")), new Point(bounds.X + 16, bounds.Y + 14), 13, DiagramText.Ink);
+
+        // The line's upper end, where it meets the grey gear's base circle, tilts it about the pitch point.
+        Grip("pressure", labelAt, GripAxis.Free, DiagramText.Get("Gears_Grip_Pressure"),
+            at => PressureAngle = PressureToward(new Vector(at.X - pitch.X, pitch.Y - at.Y)));
+
+        // A handle halfway out on the gold gear, along its marked tooth: turning it stops the motor, and the gears
+        // follow the finger.
+        var handle = ToScreen(new Point(Math.Cos(_angle) * r1 * 0.5, Math.Sin(_angle) * r1 * 0.5), c1, scale);
+        Grip("turn", handle, GripAxis.Free, DiagramText.Get("Gears_Grip_TurnGold"), at =>
+        {
+            Speed = 0;
+            _angle = GearsGrips.Follow(_angle, GearsGrips.AngleOf(c1, at));
+        });
     }
 }

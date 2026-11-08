@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,12 +10,14 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 
 /// <summary>
 /// Spread 6: a submarine in a 60-metre sea, its ballast tanks as full as the slider says. It rises, sinks or hangs
-/// as its weight compares with the water it pushes aside; a gauge on the right shows its depth.
+/// as its weight compares with the water it pushes aside; a gauge on the right shows its depth. The reader drags the
+/// water level in the rear tank up to flood the tanks or down to blow them; the sea takes a moment to come in or be
+/// pushed out, and the submarine answers to the water actually in them. Near the balance the grip settles on it.
 /// </summary>
 public sealed class SubmarineDiagram : GearPicture
 {
     public static readonly StyledProperty<double> BallastProperty =
-        AvaloniaProperty.Register<SubmarineDiagram, double>(nameof(Ballast));
+        AvaloniaProperty.Register<SubmarineDiagram, double>(nameof(Ballast), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The picture runs this many times faster than real time, so a dive takes seconds.</summary>
     private const double TimeScale = 4;
@@ -24,8 +28,14 @@ public sealed class SubmarineDiagram : GearPicture
     private static readonly IImmutableBrush Seabed = new ImmutableSolidColorBrush(Color.FromRgb(0x3A, 0x34, 0x2A));
     private static readonly IPen Tick = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0xA0, 0xE6, 0xEA, 0xF2)), 1);
 
+    /// <summary>How close to the balance a drag must come to settle on it.</summary>
+    private const double Detent = 0.03;
+
     private readonly Submarine _sub = new();
     private double _seconds;
+
+    /// <summary>How full the tanks are now, 0 to 1, following <see cref="Ballast"/> as the sea comes in or is blown out.</summary>
+    private double _fill;
 
     static SubmarineDiagram()
     {
@@ -44,7 +54,8 @@ public sealed class SubmarineDiagram : GearPicture
     protected override void Advance(double seconds)
     {
         _seconds += seconds;
-        _sub.Step(seconds * TimeScale, Ballast);
+        _fill = Glide(_fill, Math.Clamp(Ballast, 0, 1), seconds, 0.15);
+        _sub.Step(seconds * TimeScale, _fill);
     }
 
     protected override void Draw(DrawingContext context, Rect bounds)
@@ -65,11 +76,13 @@ public sealed class SubmarineDiagram : GearPicture
 
         // The ballast tanks, low in the hull at each end, filled from below.
         var tankBoxes = new List<Point>();
+        var rearTank = default(Rect);
         foreach (var x in new[] { body.X + (length * 0.08), body.X + (length * 0.66) })
         {
             var tank = new Rect(x, body.Y + (height * 0.45), length * 0.26, height * 0.42);
             context.DrawRectangle(TankAir, null, tank, 4, 4);
-            var water = tank.Height * Math.Clamp(Ballast, 0, 1);
+            var water = tank.Height * Math.Clamp(_fill, 0, 1);
+            rearTank = tank;
             context.DrawRectangle(TankWater, null, new Rect(tank.X, tank.Bottom - water, tank.Width, water), 4, 4);
             context.DrawRectangle(null, new ImmutablePen(BoatsParts.Dark, 1.2), tank, 4, 4);
             tankBoxes.Add(tank.TopLeft);
@@ -87,7 +100,7 @@ public sealed class SubmarineDiagram : GearPicture
         Mark("tanks", tankBoxes, 2);
 
         // Weight down, the water's push up, as long as each is.
-        var weight = Submarine.Weight(Ballast);
+        var weight = Submarine.Weight(_fill);
         var arrow = height * 1.4;
         var middle = body.Center;
         BoatsParts.DrawArrow(context, middle + new Point(-length * 0.05, 0), middle + new Point(-length * 0.05, weight * arrow), BoatsParts.Weight, 4);
@@ -112,6 +125,17 @@ public sealed class SubmarineDiagram : GearPicture
             : Math.Abs(_sub.Speed) < 0.02 ? "Boats_Submarine_Hanging"
             : _sub.Speed > 0 ? "Boats_Submarine_Sinking" : "Boats_Submarine_Rising";
         var first = DiagramText.Draw(context, DiagramText.Get(state), new Point(bounds.X + 18, bounds.Y + 16), 15, DiagramText.Ink, bold: true);
+
+        // The rear tank's water level, where the reader asked it to be: up to flood the tanks, down to blow them.
+        Grip("ballast", new Point(rearTank.Center.X, rearTank.Bottom - (rearTank.Height * Math.Clamp(Ballast, 0, 1))), GripAxis.Vertical,
+            DiagramText.Get("Boats_Grip_Ballast"), at => Ballast = Settle((rearTank.Bottom - at.Y) / rearTank.Height));
         DiagramText.Draw(context, DiagramText.Format("Boats_Submarine_Depth", depth.ToString("0")), new Point(bounds.X + 18, first.Bottom + 4), 12.5, DiagramText.Faint);
+    }
+
+    /// <summary>A dragged fill, 0 to 1 in hundredths, settling on the balance when it comes close.</summary>
+    internal static double Settle(double fill)
+    {
+        fill = Math.Clamp(fill, 0, 1);
+        return Math.Abs(fill - Submarine.Neutral) < Detent ? Submarine.Neutral : Math.Round(fill, 2);
     }
 }

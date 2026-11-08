@@ -73,6 +73,40 @@ internal static class PlumbingParts
         }
     }
 
+    /// <summary>A value a grip was dragged to, rounded to the slider's <paramref name="step"/> and kept in its range.</summary>
+    public static double Snap(double value, double step, double min, double max) =>
+        Math.Clamp(Math.Round(value / step) * step, min, max);
+
+    /// <summary>Moves <paramref name="value"/> toward <paramref name="target"/> at <paramref name="rate"/> a second, never past it.</summary>
+    public static double Toward(double value, double target, double rate, double seconds)
+    {
+        var step = rate * seconds;
+        return Math.Abs(target - value) <= step ? target : value + (Math.Sign(target - value) * step);
+    }
+
+    /// <summary>The first <paramref name="share"/> (0..1) of the line through <paramref name="points"/>, by length.</summary>
+    public static List<Point> Part(IReadOnlyList<Point> points, double share)
+    {
+        var total = 0.0;
+        for (var i = 1; i < points.Count; i++) total += Point.Distance(points[i - 1], points[i]);
+        var left = Math.Clamp(share, 0, 1) * total;
+        List<Point> part = [points[0]];
+        for (var i = 1; i < points.Count && left > 0; i++)
+        {
+            var length = Point.Distance(points[i - 1], points[i]);
+            if (length >= left)
+            {
+                part.Add(points[i - 1] + ((points[i] - points[i - 1]) * (left / length)));
+                break;
+            }
+
+            part.Add(points[i]);
+            left -= length;
+        }
+
+        return part;
+    }
+
     /// <summary>"12.5" in the reader's culture.</summary>
     public static string Number(double value, string format = "0.#") => value.ToString(format, CultureInfo.CurrentCulture);
 }

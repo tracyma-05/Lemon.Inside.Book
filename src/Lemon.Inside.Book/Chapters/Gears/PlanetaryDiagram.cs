@@ -1,6 +1,8 @@
 using Avalonia.Media.Immutable;
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,15 +10,16 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 6: a planetary gear set seen face on. The part the reader chose is held still (and says so); the input is
-/// turned steadily and the output follows at its own speed.
+/// turned steadily and the output follows at its own speed. The reader taps a part to hold it, and drags the sun's rim
+/// to pick a bigger or smaller sun (the planets grow or shrink to fill the ring).
 /// </summary>
 public sealed class PlanetaryDiagram : GearPicture
 {
-    public static readonly StyledProperty<int> SunTeethProperty =
-        AvaloniaProperty.Register<PlanetaryDiagram, int>(nameof(SunTeeth), 24);
+    public static readonly StyledProperty<int> SunStepProperty =
+        AvaloniaProperty.Register<PlanetaryDiagram, int>(nameof(SunStep), 2, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<PlanetHeld> HeldProperty =
-        AvaloniaProperty.Register<PlanetaryDiagram, PlanetHeld>(nameof(Held));
+        AvaloniaProperty.Register<PlanetaryDiagram, PlanetHeld>(nameof(Held), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Turns per second of the input part.</summary>
     private const double InputSpeed = 0.12;
@@ -30,14 +33,17 @@ public sealed class PlanetaryDiagram : GearPicture
 
     static PlanetaryDiagram()
     {
-        AffectsRender<PlanetaryDiagram>(SunTeethProperty, HeldProperty);
+        AffectsRender<PlanetaryDiagram>(SunStepProperty, HeldProperty);
     }
 
-    public int SunTeeth
+    /// <summary>Which of <see cref="PlanetarySpread.SunChoices"/> the sun has, as the slider steps through them.</summary>
+    public int SunStep
     {
-        get => GetValue(SunTeethProperty);
-        set => SetValue(SunTeethProperty, value);
+        get => GetValue(SunStepProperty);
+        set => SetValue(SunStepProperty, value);
     }
+
+    public int SunTeeth => PlanetarySpread.SunChoices[Math.Clamp(SunStep, 0, PlanetarySpread.SunChoices.Count - 1)];
 
     public PlanetHeld Held
     {
@@ -49,7 +55,7 @@ public sealed class PlanetaryDiagram : GearPicture
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var sunTeeth = Math.Clamp(SunTeeth, 12, 36);
+        var sunTeeth = SunTeeth;
         var planetTeeth = Planetary.PlanetTeeth(sunTeeth);
         var ringRadius = GearGeometry.PitchRadius(Planetary.RingTeeth);
         var outer = ringRadius + RingRim;
@@ -103,13 +109,25 @@ public sealed class PlanetaryDiagram : GearPicture
         var held = Held switch
         {
             PlanetHeld.Ring => ToScreen(new Point(0, -outer), centre, scale) + new Point(0, 6),
-            PlanetHeld.Sun => centre + new Point(0, GearGeometry.PitchRadius(sunTeeth) * scale * 0.45),
+            PlanetHeld.Sun => centre + new Point(0, Math.Max(GearGeometry.PitchRadius(sunTeeth) * scale * 0.45, 18)),
             _ => axles.OrderByDescending(a => a.Y).First() + new Point(0, Math.Max(8, scale * 1.6)),
         };
         DiagramText.Draw(context, DiagramText.Get("Gears_Planet_HeldLabel"), held, text, DiagramText.Ink, 0.5, 0, bold: true);
         var legend = new Point(bounds.X + 16, bounds.Y + 14);
         var r = DiagramText.Draw(context, DiagramText.Format("Gears_Planet_InLabel", DiagramText.Get($"Gears_Planet_{input}Name")), legend, text, DiagramText.Gold);
         DiagramText.Draw(context, DiagramText.Format("Gears_Planet_OutLabel", DiagramText.Get($"Gears_Planet_{output}Name")), new Point(legend.X, r.Bottom + 4), text, new ImmutableSolidColorBrush(Copper));
+
+        // Tap a part to hold it: the sun at its hub, the ring on its rim (low on the right), the carrier at an axle.
+        Grip("holdSun", centre, GripAxis.Tap, DiagramText.Get("Gears_Grip_HoldSun"), _ => Held = PlanetHeld.Sun);
+        var rim = -40 * Math.PI / 180;
+        Grip("holdRing", ToScreen(new Point(Math.Cos(rim) * (ringRadius + (RingRim / 2)), Math.Sin(rim) * (ringRadius + (RingRim / 2))), centre, scale),
+            GripAxis.Tap, DiagramText.Get("Gears_Grip_HoldRing"), _ => Held = PlanetHeld.Ring);
+        Grip("holdCarrier", axles[0], GripAxis.Tap, DiagramText.Get("Gears_Grip_HoldCarrier"), _ => Held = PlanetHeld.Carrier);
+
+        // The sun's rim, straight up from its middle: drag it out for a bigger sun, in for a smaller one.
+        Grip("sunTeeth", centre - new Vector(0, GearGeometry.PitchRadius(sunTeeth) * scale), GripAxis.Vertical, DiagramText.Get("Gears_Grip_SunTeeth"),
+            at => SunStep = GearsGrips.Nearest(0, PlanetarySpread.SunChoices.Count - 1, centre.Y - at.Y,
+                i => GearGeometry.PitchRadius(PlanetarySpread.SunChoices[i]) * scale));
     }
 
     /// <summary>Gold for the part turned by hand, copper for the one that comes out, grey for the one held.</summary>

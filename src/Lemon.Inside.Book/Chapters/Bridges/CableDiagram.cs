@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Bridges.BridgesParts;
@@ -11,20 +13,29 @@ namespace Lemon.Inside.Book.Chapters.Bridges;
 /// <summary>
 /// Spread 5: a suspension bridge from the side. The main cable hangs in a parabola between two towers, the deck hung
 /// from it by hangers, its ends running back down to anchor blocks in the ground. Without the anchors the cable's pull
-/// drags the tower tops inward. The cable's pull is written on it.
+/// drags the tower tops inward. The cable's pull is written on it. The cable eases to a new sag and the towers bend
+/// in or straighten as the anchors are let go or tied back, swaying a little before they settle. The reader drags the
+/// cable's lowest point up or down and taps an anchor block to let the cable go or tie it back.
 /// </summary>
 public sealed class CableDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SagProperty =
-        AvaloniaProperty.Register<CableDiagram, double>(nameof(Sag), 20);
+        AvaloniaProperty.Register<CableDiagram, double>(nameof(Sag), 20, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> AnchoredProperty =
-        AvaloniaProperty.Register<CableDiagram, bool>(nameof(Anchored), true);
+        AvaloniaProperty.Register<CableDiagram, bool>(nameof(Anchored), true, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The towers' tops above the deck, m; where the anchors are, m from the middle; hangers apart, m.</summary>
     private const double TowerTop = 62;
     private const double AnchorX = 135;
     private const double HangerGap = 12.5;
+
+    /// <summary>How far the tower tops are pulled in with nothing holding the cable back, m.</summary>
+    private const double MostPullIn = 6;
+
+    /// <summary>The drawn sag, m, and how far the tower tops are drawn pulled in, m; null until the first frame.</summary>
+    private double _sag = double.NaN;
+    private Bounce? _pullIn;
 
     static CableDiagram()
     {
@@ -44,11 +55,23 @@ public sealed class CableDiagram : GearPicture
         set => SetValue(AnchoredProperty, value);
     }
 
-    protected override bool Animates => false;
+    protected override void Advance(double seconds)
+    {
+        Start();
+        _sag = Glide(_sag, Math.Clamp(Sag, 5, 50), seconds, 0.15);
+        _pullIn = _pullIn!.Value.Step(Anchored ? 0 : MostPullIn, seconds, 5, 0.25);
+    }
+
+    private void Start()
+    {
+        if (double.IsNaN(_sag)) _sag = Math.Clamp(Sag, 5, 50);
+        _pullIn ??= Bounce.At(Anchored ? 0 : MostPullIn);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var sag = Math.Clamp(Sag, 5, 50);
+        Start();
+        var sag = _sag;
         var anchored = Anchored;
         var scale = Math.Min((bounds.Width - 40) / 295, (bounds.Height - 150) / 95);
         var v = new View(new Point(bounds.Center.X, bounds.Center.Y + (25 * scale)), scale);
@@ -64,7 +87,7 @@ public sealed class CableDiagram : GearPicture
         }
 
         // Unanchored, the tops are pulled in and the cable hangs lower.
-        var pullIn = anchored ? 0 : 6.0;
+        var pullIn = _pullIn!.Value.Value;
         var topX = half - pullIn;
         var lowSag = sag;
         double CableY(double x) => TowerTop - lowSag + Cable.Height(x * half / topX, lowSag);
@@ -134,7 +157,7 @@ public sealed class CableDiagram : GearPicture
         context.DrawLine(new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([4, 4], 0)), v.At(-topX, TowerTop), v.At(topX, TowerTop));
         context.DrawLine(new ImmutablePen(DiagramText.Gold, 1.5), new Point(lowest.X, topLine), lowest);
         DiagramText.DrawArrowAlong(context, new Point(lowest.X, topLine), lowest, DiagramText.Gold, 7);
-        DiagramText.Draw(context, DiagramText.Format("Bridges_Cable_SagLabel", Number(lowSag, "0")), new Point(lowest.X + 8, (topLine + lowest.Y) / 2), 12.5,
+        DiagramText.Draw(context, DiagramText.Format("Bridges_Cable_SagLabel", Number(lowSag, "0")), new Point(lowest.X + 20, (topLine + lowest.Y) / 2), 12.5,
             DiagramText.Gold, 0, 0.5, bold: true);
         DiagramText.Draw(context, DiagramText.Format("Bridges_Cable_PullLabel", Tonnes(Cable.Pull(lowSag))), v.At(-half * 0.55, CableY(-half * 0.55) + 3), 12.5,
             StretchBrush, 0.5, 1, bold: true);
@@ -145,5 +168,11 @@ public sealed class CableDiagram : GearPicture
 
         DiagramText.Draw(context, DiagramText.Get("Bridges_Cable_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
         DrawLegend(context, bounds);
+
+        // The reader's handles: the cable's lowest point, dragged up or down, and the right anchor block, tapped.
+        Grip("sag", lowest, GripAxis.Vertical, DiagramText.Get("Bridges_Grip_Sag"),
+            at => Sag = Math.Clamp(Math.Round((TowerTop - v.Y(at)) * 2) / 2, 5, 50));
+        Grip("anchor", v.At(AnchorX, -1), GripAxis.Tap, DiagramText.Get(anchored ? "Bridges_Grip_AnchorOff" : "Bridges_Grip_AnchorOn"),
+            _ => Anchored = !Anchored);
     }
 }

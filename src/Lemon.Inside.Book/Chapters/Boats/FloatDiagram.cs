@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,12 +10,13 @@ namespace Lemon.Inside.Book.Chapters.Boats;
 
 /// <summary>
 /// Spread 1: a block in a tank of water, bobbing until it settles. Its weight pulls down from its middle; the water's
-/// push comes up from the middle of the part under water, as big as the weight of that much water.
+/// push comes up from the middle of the part under water, as big as the weight of that much water. The reader drags the
+/// tip of the weight arrow down for a heavier block of the same size, up for a lighter one.
 /// </summary>
 public sealed class FloatDiagram : GearPicture
 {
     public static readonly StyledProperty<double> DensityProperty =
-        AvaloniaProperty.Register<FloatDiagram, double>(nameof(Density), 500);
+        AvaloniaProperty.Register<FloatDiagram, double>(nameof(Density), 500, defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly IImmutableBrush Glass = new ImmutableSolidColorBrush(Color.FromArgb(0x30, 0xE6, 0xEA, 0xF2));
     private static readonly IPen GlassEdge = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 2);
@@ -36,6 +39,10 @@ public sealed class FloatDiagram : GearPicture
     }
 
     internal FloatingBlock Block => _block;
+
+    /// <summary>The slider's range of densities, kg/m³.</summary>
+    private const double LeastDensity = 100;
+    private const double MostDensity = 2000;
 
     /// <summary>How far the tank's floor is below the surface, in block heights.</summary>
     private const double Floor = 2.2;
@@ -73,7 +80,7 @@ public sealed class FloatDiagram : GearPicture
         Mark("waterline", [new Point(block.X - 10, surface), line + new Point(4, 0)], 4);
 
         // Weight down from the block's middle; the water's push up from the middle of the wet part.
-        var perUnit = size * 0.9;
+        var perUnit = size * 0.6;
         var heaviness = Density / Water.Fresh;
         var middle = block.Center;
         var weightEnd = middle + new Point(-10, heaviness * perUnit);
@@ -86,6 +93,10 @@ public sealed class FloatDiagram : GearPicture
 
         DiagramText.Draw(context, DiagramText.Get("Boats_Float_WeightLabel"), weightEnd + new Point(-16, 0), 12, BoatsParts.Weight, 1, 1);
         DiagramText.Draw(context, DiagramText.Get("Boats_Float_LiftLabel"), liftEnd + new Point(16, 0), 12, BoatsParts.Lift, 0, 0);
+
+        // The weight arrow's tip: down for a heavier block (the arrow as long as the block's weight), up for a lighter.
+        Grip("weight", weightEnd + new Point(0, 12), GripAxis.Vertical, DiagramText.Get("Boats_Grip_Density"),
+            at => Density = Math.Round(Math.Clamp((at.Y - 12 - middle.Y) / perUnit * Water.Fresh, LeastDensity, MostDensity) / 10) * 10);
 
         // How much of it is under water now.
         var info = new Point(bounds.X + 18, tank.Bottom + 18);

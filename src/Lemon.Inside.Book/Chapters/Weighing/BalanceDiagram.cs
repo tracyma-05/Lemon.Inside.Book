@@ -1,10 +1,13 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
 using static Lemon.Inside.Book.Chapters.Weighing.WeighingParts;
+using Bounce = Lemon.Inside.Book.Chapters.Bridges.Bounce;
 
 namespace Lemon.Inside.Book.Chapters.Weighing;
 
@@ -12,20 +15,26 @@ namespace Lemon.Inside.Book.Chapters.Weighing;
 /// Spread 1: an equal-arm balance, in centimetres. The beam turns on a knife edge at the top of its post; its centre
 /// of mass (the dark dot) hangs a little below the edge and swings back under it, which is what makes the beam settle
 /// at a tilt instead of tipping right over. The pans hang straight down on their threads; a long pointer reads the tilt
-/// on a scale at the foot of the post.
+/// on a scale at the foot of the post. Change the weights or the drop and the beam swings past its new tilt and back,
+/// settling like a real balance: slowly when its centre of mass hangs only just below the edge (that is what makes a
+/// sensitive balance slow), quickly when it hangs far below. The reader drags the right pan down to add grams and the
+/// centre of mass up or down.
 /// </summary>
 public sealed class BalanceDiagram : GearPicture
 {
     public static readonly StyledProperty<double> DifferenceProperty =
-        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Difference));
+        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Difference), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> DropProperty =
-        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Drop), 2);
+        AvaloniaProperty.Register<BalanceDiagram, double>(nameof(Drop), 2, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The knife edge's height, cm; the pans' threads, cm; the pointer's length, cm.</summary>
     private const double Edge0 = 34;
     private const double Thread0 = 16;
     private const double Needle = 24;
+
+    /// <summary>The drawn tilt, degrees, swinging toward the balance's tilt; null until the first frame.</summary>
+    private Bounce? _tilt;
 
     static BalanceDiagram()
     {
@@ -46,13 +55,27 @@ public sealed class BalanceDiagram : GearPicture
         set => SetValue(DropProperty, value);
     }
 
-    protected override bool Animates => false;
+    private double Settled => Balance.Tilt(Math.Clamp(Difference, 0, 20), Math.Clamp(Drop, -1, 4));
+
+    /// <summary>
+    /// The beam swings like a pendulum whose length is the drop: about √drop times as fast, lightly damped by the air
+    /// and the edge. With nothing pulling it back (the centre of mass at or above the edge) it simply falls over and
+    /// lands on its stop without swinging.
+    /// </summary>
+    protected override void Advance(double seconds)
+    {
+        var drop = Math.Clamp(Drop, -1, 4);
+        var tilt = _tilt ?? Bounce.At(Settled);
+        _tilt = Balance.Topples(drop)
+            ? tilt.Step(Settled, seconds, 4, 1)
+            : tilt.Step(Settled, seconds, Math.Clamp(2.2 * Math.Sqrt(drop), 1.2, 5), 0.1);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var difference = Math.Clamp(Difference, 0, 20);
         var drop = Math.Clamp(Drop, -1, 4);
-        var tilt = Balance.Tilt(difference, drop) * Math.PI / 180;
+        var tilt = Math.Clamp((_tilt ??= Bounce.At(Settled)).Value, -Balance.MostTilt, Balance.MostTilt) * Math.PI / 180;
         var scale = Math.Min((bounds.Width - 60) / 46, (bounds.Height - 140) / 46);
         var v = new View(new Point(bounds.Center.X, bounds.Center.Y + (24 * scale)), scale);
         const double arm = Balance.Arm * 100;
@@ -76,6 +99,7 @@ public sealed class BalanceDiagram : GearPicture
 
         // The pans on their threads, straight down from the beam's ends.
         var pans = new List<Point>();
+        var rightRim = default(Point);
         foreach (var side in new[] { -1, 1 })
         {
             var hang = OnBeam(side * arm, 0);
@@ -83,6 +107,7 @@ public sealed class BalanceDiagram : GearPicture
             context.DrawLine(ThreadPen, hang, new Point(rim.X - (5 * scale), rim.Y));
             context.DrawLine(ThreadPen, hang, new Point(rim.X + (5 * scale), rim.Y));
             var pan = DrawPan(context, rim, 12 * scale);
+            if (side > 0) rightRim = rim;
             pans.AddRange([pan.TopLeft, pan.BottomRight]);
 
             // A 100 g weight on each pan, and the extra on the right.
@@ -113,11 +138,21 @@ public sealed class BalanceDiagram : GearPicture
         Mark("pointer", [OnBeam(0, -Needle * 0.55), needleTip], 6);
         var mass = OnBeam(0, -drop);
         context.DrawEllipse(Dark, new ImmutablePen(DiagramText.Ink, 1.2), mass, 0.7 * scale, 0.7 * scale);
-        DiagramText.Draw(context, DiagramText.Get("Weighing_Balance_MassLabel"), new Point(mass.X + (1.4 * scale), mass.Y + (1.2 * scale)), 11, DiagramText.Faint, 0, 0);
+        DiagramText.Draw(context, DiagramText.Get("Weighing_Balance_MassLabel"), new Point(mass.X + (2 * scale), mass.Y + (1.2 * scale)), 11, DiagramText.Faint, 0, 0);
 
         DiagramText.Draw(context,
             Balance.Topples(drop) ? DiagramText.Get("Weighing_Balance_ToppleLabel") : DiagramText.Format("Weighing_Balance_TiltLabel", Number(tilt * 180 / Math.PI)),
             new Point(needleTip.X + 10, needleTip.Y + 6), 13, Balance.Topples(drop) ? Warn : DiagramText.Gold, 0, 0.5, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Weighing_Balance_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: under the right pan, dragged down for more grams on it (the pan settles where the
+        // pointer is), and on the centre of mass, dragged down or up the beam.
+        var below = (12 * scale * 0.18) + 12;
+        double RimY(double grams) => v.At(0, Edge0 - (Math.Sin(Balance.Tilt(grams, drop) * Math.PI / 180) * arm)).Y + (Thread0 * scale);
+        Grip("difference", new Point(rightRim.X, rightRim.Y + below), GripAxis.Vertical, DiagramText.Get("Weighing_Grip_Difference"),
+            at => Difference = Math.Round(Solve(RimY, at.Y - below, 0, 20) * 2) / 2);
+        var cos = Math.Cos(tilt);
+        Grip("drop", mass, GripAxis.Vertical, DiagramText.Get("Weighing_Grip_Drop"),
+            at => Drop = Math.Clamp(Math.Round((Edge0 - v.Y(at)) / cos, 1), -1, 4));
     }
 }

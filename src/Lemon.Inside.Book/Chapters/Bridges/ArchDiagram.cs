@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Bridges.BridgesParts;
@@ -11,20 +13,26 @@ namespace Lemon.Inside.Book.Chapters.Bridges;
 /// <summary>
 /// Spread 4: a stone arch over a river, its wedge-shaped stones following a parabola, the keystone at the top, the
 /// road on fill above. At each foot an arrow shows the push down and the push outward, which the abutments take; take
-/// them away and the feet slide apart and the crown drops.
+/// them away and the feet slide apart and the crown drops, falling faster as it goes; put them back and the arch is
+/// built up again. The reader drags the keystone up or down and taps an abutment to take it away or put it back.
 /// </summary>
 public sealed class ArchDiagram : GearPicture
 {
     public static readonly StyledProperty<double> RiseProperty =
-        AvaloniaProperty.Register<ArchDiagram, double>(nameof(Rise), 3);
+        AvaloniaProperty.Register<ArchDiagram, double>(nameof(Rise), 3, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> AbutmentsProperty =
-        AvaloniaProperty.Register<ArchDiagram, bool>(nameof(Abutments), true);
+        AvaloniaProperty.Register<ArchDiagram, bool>(nameof(Abutments), true, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The ring's thickness, m; the number of stones; the road above the crown, m.</summary>
     private const double Ring = 0.7;
     private const int Stones = 13;
     private const double Cover = 0.8;
+
+    /// <summary>The drawn rise, m; how far the arch has fallen, 0 (standing) to 1 (down); and how fast it is falling.</summary>
+    private double _rise = double.NaN;
+    private double _fall = double.NaN;
+    private double _falling;
 
     static ArchDiagram()
     {
@@ -44,21 +52,48 @@ public sealed class ArchDiagram : GearPicture
         set => SetValue(AbutmentsProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>
+    /// Without abutments the arch falls, gathering speed as under gravity until it lands; with them it is built back
+    /// up, easing into place. The rise eases to its new height.
+    /// </summary>
+    protected override void Advance(double seconds)
+    {
+        Start();
+        _rise = Glide(_rise, Math.Clamp(Rise, 1, 5), seconds, 0.15);
+        if (Abutments)
+        {
+            _falling = 0;
+            _fall = Glide(_fall, 0, seconds, 0.2);
+        }
+        else
+        {
+            _falling += 3 * seconds;
+            _fall = Math.Min(1, _fall + (_falling * seconds));
+        }
+    }
+
+    private void Start()
+    {
+        if (double.IsNaN(_rise)) _rise = Math.Clamp(Rise, 1, 5);
+        if (double.IsNaN(_fall)) _fall = Abutments ? 0 : 1;
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var rise = Math.Clamp(Rise, 1, 5);
+        Start();
+        var rise = _rise;
         var held = Abutments;
+        var fall = _fall;
+        var standing = fall < 0.02;
         var scale = Math.Min((bounds.Width - 60) / 17, (bounds.Height - 150) / 9);
         var v = new View(new Point(bounds.Center.X, bounds.Center.Y + (2.6 * scale)), scale);
         const double half = Arch.Span / 2;
 
         // Without abutments the feet slide out and the crown sinks.
-        var spread = held ? 0 : 0.9;
-        var shape = held ? rise : rise * 0.45;
+        var spread = 0.9 * fall;
+        var shape = rise * (1 - (0.55 * fall));
         var span = half + spread;
-        var drop = held ? 0 : 1.6;
+        var drop = 1.6 * fall;
         (double X, double Y) Centre(double t) => (t * span, (shape * (1 - (t * t))) - drop);
         (double X, double Y) Normal(double t)
         {
@@ -97,10 +132,11 @@ public sealed class ArchDiagram : GearPicture
 
         // The fill and the road, then the ring of stones.
         var extrados = Enumerable.Range(0, 41).Select(i => Face(-1 + (i / 20.0), 1)).ToList();
-        var roadLeft = v.At(-span, held ? road : shape + (Ring / 2) + Cover - drop);
-        var roadRight = v.At(span, held ? road : shape + (Ring / 2) + Cover - drop);
+        var roadLeft = v.At(-span, shape + (Ring / 2) + Cover - drop);
+        var roadRight = v.At(span, shape + (Ring / 2) + Cover - drop);
         DrawPolygon(context, StoneLight, null, [.. extrados, roadRight, roadLeft]);
-        var roadBox = new Rect(roadLeft.X - (held ? 3 * scale : 0), roadLeft.Y - (0.25 * scale), roadRight.X - roadLeft.X + (held ? 6 * scale : 0), 0.25 * scale);
+        var reach = (1 - fall) * 3 * scale;
+        var roadBox = new Rect(roadLeft.X - reach, roadLeft.Y - (0.25 * scale), roadRight.X - roadLeft.X + (2 * reach), 0.25 * scale);
         context.DrawRectangle(Concrete, Edge, roadBox);
         Mark("road", roadBox);
 
@@ -123,7 +159,7 @@ public sealed class ArchDiagram : GearPicture
         Mark("stones", stonePoints, 2);
         Mark("keystone", keystone.Inflate(4));
 
-        if (held)
+        if (held && standing)
         {
             // At each foot: the weight's half pushing down, and the thrust pushing out into the abutment.
             var thrust = Arch.Thrust(rise);
@@ -136,15 +172,22 @@ public sealed class ArchDiagram : GearPicture
                     DiagramText.Ink, Tonnes(Arch.Weight / 2), side > 0 ? 1.15 : -0.15, 0.5);
             }
         }
-        else
+        else if (fall > 0.5)
         {
             DiagramText.Draw(context, DiagramText.Get("Bridges_Arch_FallsLabel"), v.At(0, shape + Ring + Cover + 0.9 - drop), 14, SqueezeBrush, 0.5, 1, bold: true);
             var crack = new ImmutablePen(Dark, 2);
             context.DrawLine(crack, Face(0, -1), Face(0.02, 1));
         }
 
-        if (held) DiagramText.Draw(context, DiagramText.Format("Bridges_Arch_RiseLabel", Number(rise)), v.At(0, -0.5), 12, DiagramText.Ink, 0.5, 0.5);
+        if (held && standing) DiagramText.Draw(context, DiagramText.Format("Bridges_Arch_RiseLabel", Number(rise)), v.At(0, -0.5), 12, DiagramText.Ink, 0.5, 0.5);
         DiagramText.Draw(context, DiagramText.Get("Bridges_Arch_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
         DrawLegend(context, bounds);
+
+        // The reader's handles: the keystone, dragged up for a taller arch, and the right abutment, tapped away or back.
+        var crown = v.At(0, shape - drop);
+        Grip("rise", crown, GripAxis.Vertical, DiagramText.Get("Bridges_Grip_Rise"),
+            at => Rise = Math.Clamp(Math.Round((v.Y(at) + drop) / (1 - (0.55 * fall)), 1), 1, 5));
+        Grip("abutments", v.At(half + 1.5, Math.Max(road - 1, 1.5)), GripAxis.Tap,
+            DiagramText.Get(held ? "Bridges_Grip_AbutmentsOut" : "Bridges_Grip_AbutmentsIn"), _ => Abutments = !Abutments);
     }
 }

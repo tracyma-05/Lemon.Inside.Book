@@ -1,6 +1,8 @@
 using Avalonia.Media.Immutable;
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,17 +10,21 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 3: a string unwound from a can; its end draws an involute. Faintly behind, a gear whose tooth has that very
-/// curve as its side, so the reader sees where tooth shapes come from.
+/// curve as its side, so the reader sees where tooth shapes come from. The reader drags the pencil to unwind or wind
+/// the string; set from the slider or the walkthrough, the string unwinds smoothly to its new length, drawing as it goes.
 /// </summary>
 public sealed class InvoluteDiagram : GearPicture
 {
     public static readonly StyledProperty<double> UnwoundProperty =
-        AvaloniaProperty.Register<InvoluteDiagram, double>(nameof(Unwound), 70);
+        AvaloniaProperty.Register<InvoluteDiagram, double>(nameof(Unwound), 70, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The ghost gear: its base circle is the can.</summary>
     private const int GhostTeeth = 12;
 
     private const double MaxUnwound = 150;
+
+    /// <summary>The slider's top: the picture stops drawing at <see cref="MaxUnwound"/>, the value goes on.</summary>
+    private const double MostUnwound = 240;
 
     private static readonly double Pressure = 20 * Math.PI / 180;
     private static readonly IImmutableBrush Can = new ImmutableSolidColorBrush(Color.FromRgb(0x3A, 0x46, 0x5C));
@@ -40,7 +46,21 @@ public sealed class InvoluteDiagram : GearPicture
         set => SetValue(UnwoundProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>The string as drawn, in degrees: it unwinds toward <see cref="Unwound"/> rather than jumping; NaN until first drawn.</summary>
+    private double _shown = double.NaN;
+
+    protected override void Advance(double seconds)
+    {
+        var target = Math.Clamp(Unwound, 0, MaxUnwound);
+        _shown = double.IsNaN(_shown) ? target : Glide(_shown, target, seconds, 0.1);
+    }
+
+    /// <summary>
+    /// How far the string is unwound for a pencil at <paramref name="distance"/> from the can's middle (both in the
+    /// can's radii): the string's end is √(1 + θ²) radii out, whatever the angle.
+    /// </summary>
+    internal static double UnwoundAt(double distance) =>
+        Math.Clamp(Math.Sqrt(Math.Max(0, (distance * distance) - 1)) * 180 / Math.PI, 0, MostUnwound);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -65,7 +85,12 @@ public sealed class InvoluteDiagram : GearPicture
         context.DrawEllipse(Can, CanPen, centre, baseRadius * scale, baseRadius * scale);
 
         // The whole curve the pencil will draw (dashed), and the part drawn so far.
-        var unwound = Math.Clamp(Unwound, 0, MaxUnwound) * Math.PI / 180;
+        if (double.IsNaN(_shown))
+        {
+            _shown = Math.Clamp(Unwound, 0, MaxUnwound);
+        }
+
+        var unwound = _shown * Math.PI / 180;
         context.DrawGeometry(null, FuturePen, Curve(baseRadius, MaxUnwound * Math.PI / 180, centre, scale));
         if (unwound > 0.01)
         {
@@ -103,8 +128,17 @@ public sealed class InvoluteDiagram : GearPicture
             DiagramText.Draw(context, DiagramText.Get("Gears_Involute_String"), mid + new Point(8, -6), 12, DiagramText.Gold, 0, 1);
         }
 
-        DiagramText.Draw(context, DiagramText.Get("Gears_Involute_Pencil"), p + new Point(10, 4), 12, DiagramText.Cyan);
+        DiagramText.Draw(context, DiagramText.Get("Gears_Involute_Pencil"), p + new Point(20, 4), 12, DiagramText.Cyan);
         DiagramText.Draw(context, DiagramText.Get("Gears_Involute_Ghost"), new Point(bounds.X + 16, bounds.Y + 14), 12, DiagramText.Faint);
+
+        // The pencil: pulled away from the can it unwinds more string, pushed back it winds some up. The drawing
+        // follows the finger at once.
+        Grip("pencil", p, GripAxis.Free, DiagramText.Get("Gears_Grip_Pencil"), at =>
+        {
+            var d = at - centre;
+            Unwound = Math.Round(UnwoundAt(Math.Sqrt((d.X * d.X) + (d.Y * d.Y)) / (baseRadius * scale)));
+            _shown = Math.Clamp(Unwound, 0, MaxUnwound);
+        });
     }
 
     private static StreamGeometry Curve(double radius, double upTo, Point centre, double scale)

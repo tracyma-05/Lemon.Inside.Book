@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -16,10 +18,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class TowerDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SurfaceProperty =
-        AvaloniaProperty.Register<TowerDiagram, double>(nameof(Surface), 30);
+        AvaloniaProperty.Register<TowerDiagram, double>(nameof(Surface), 30, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> TapHeightProperty =
-        AvaloniaProperty.Register<TowerDiagram, double>(nameof(TapHeight), 1);
+        AvaloniaProperty.Register<TowerDiagram, double>(nameof(TapHeight), 1, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The building's top floor and roof, m; where it stands, m.</summary>
     private const double Top = 36;
@@ -47,11 +49,16 @@ public sealed class TowerDiagram : GearPicture
         set => SetValue(TapHeightProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>The tank's height as drawn: it glides to a new setting rather than jumping (a grip's drag moves it at once).</summary>
+    private double _shown = double.NaN;
+
+    private double Shown => double.IsNaN(_shown) ? _shown = Math.Clamp(Surface, 15, 40) : _shown;
+
+    protected override void Advance(double seconds) => _shown = Glide(Shown, Math.Clamp(Surface, 15, 40), seconds, 0.25);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var surface = Math.Clamp(Surface, 15, 40);
+        var surface = Shown;
         var tapAt = Math.Clamp(TapHeight, 1, Top + 1);
         var scale = Math.Min((bounds.Height - 60) / 44, (bounds.Width - 40) / 33);
         var v = new View(new Point(bounds.Center.X - (16 * scale), bounds.Bottom - (3 * scale) - 16), scale);
@@ -77,6 +84,12 @@ public sealed class TowerDiagram : GearPicture
         DrawPipe(context, pipe, bore, full: false);
         var wet = Math.Min(surface, Top + 1.5);
         DrawPipe(context, [v.At(6, tankBottom), v.At(6, -1.6), v.At(Riser, -1.6), v.At(Riser, wet)], bore, full: true);
+        if (flows)
+        {
+            // Water on its way from the tank to the open tap, the faster the more head there is behind it.
+            DrawFlow(context, [v.At(6, tankBottom), v.At(6, -1.6), v.At(Riser, -1.6), v.At(Riser, tapAt)], bore, Seconds * 8 * Water.Speed(head));
+        }
+
         Mark("pipe", pipe, 8);
 
         context.DrawRectangle(AirBrush, Edge, tank, 4, 4);
@@ -122,7 +135,9 @@ public sealed class TowerDiagram : GearPicture
                 stream.Add(new Point(start.X + (reach * t), start.Y + (drop * t * t) + (drop * 0.15 * t)));
             }
 
-            context.DrawGeometry(null, new ImmutablePen(WaterBrush, Math.Clamp(speed / 6, 1.5, 4.5), null, PenLineCap.Round), Polyline(stream));
+            var streamWidth = Math.Clamp(speed / 6, 1.5, 4.5);
+            context.DrawGeometry(null, new ImmutablePen(WaterBrush, streamWidth, null, PenLineCap.Round), Polyline(stream));
+            DrawFlow(context, stream, streamWidth + 1, Seconds * 6 * speed);
             DiagramText.Draw(context, DiagramText.Format("Plumbing_Bar", Number(Water.Pressure(head), "0.0")), bubbleAt, 12.5, DiagramText.Gold, 0, 0.5, bold: true);
             DiagramText.Draw(context, DiagramText.Format("Plumbing_Speed", Number(speed, "0")), new Point(bubbleAt.X, bubbleAt.Y + 15), 11.5, DiagramText.Ink, 0, 0.5);
 
@@ -142,5 +157,14 @@ public sealed class TowerDiagram : GearPicture
         }
 
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Tower_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the tank's water lifted or lowered on its tower, and the tap slid up or down the riser.
+        Grip("surface", v.At(6, surface), GripAxis.Vertical, DiagramText.Get("Plumbing_Grip_Tank"), at =>
+        {
+            Surface = Snap(v.Y(at), 0.5, 15, 40);
+            _shown = Surface;
+        });
+        Grip("tap", new Point(tapPoint.X + (0.5 * scale), tapPoint.Y - (0.35 * scale)), GripAxis.Vertical, DiagramText.Get("Plumbing_Grip_Tap"),
+            at => TapHeight = Snap(v.Y(at) - 0.35, 1, 1, 37));
     }
 }

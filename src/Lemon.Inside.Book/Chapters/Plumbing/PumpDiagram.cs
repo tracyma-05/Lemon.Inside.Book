@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -16,10 +18,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class PumpDiagram : GearPicture
 {
     public static readonly StyledProperty<double> DepthProperty =
-        AvaloniaProperty.Register<PumpDiagram, double>(nameof(Depth), 4);
+        AvaloniaProperty.Register<PumpDiagram, double>(nameof(Depth), 4, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> DownProperty =
-        AvaloniaProperty.Register<PumpDiagram, bool>(nameof(Down));
+        AvaloniaProperty.Register<PumpDiagram, bool>(nameof(Down), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The spout's height, the shaft's floor, m; how fast the water in the pipe climbs, m a second.</summary>
     private const double Spout = 1.25;
@@ -51,11 +53,21 @@ public sealed class PumpDiagram : GearPicture
 
     private double Column => double.IsNaN(_column) ? _column = Target : _column;
 
-    protected override void Advance(double seconds) => _column = Ease(Column, Target, ClimbRate, seconds);
+    /// <summary>The well's depth as drawn: the water settles to a new depth rather than jumping (a grip's drag moves it at once).</summary>
+    private double _depth = double.NaN;
+
+    private double Shown => double.IsNaN(_depth) ? _depth = Math.Clamp(Depth, 2, 14) : _depth;
+
+    protected override void Advance(double seconds)
+    {
+        // The water climbs the pipe stroke by stroke (or sinks back) at a steady pace.
+        _column = Toward(Column, Target, ClimbRate, seconds);
+        _depth = Glide(Shown, Math.Clamp(Depth, 2, 14), seconds, 0.25);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var depth = Math.Clamp(Depth, 2, 14);
+        var depth = Shown;
         var down = Down;
         var surface = -depth;
         var scale = Math.Min((bounds.Height - 60) / 18.6, (bounds.Width - 40) / 8);
@@ -134,5 +146,14 @@ public sealed class PumpDiagram : GearPicture
         }
 
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Pump_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the well's water dragged deeper or shallower by its depth line, and the pump tapped to
+        // lower it to the water (or bring it back up).
+        Grip("depth", b, GripAxis.Vertical, DiagramText.Get("Plumbing_Grip_Depth"), at =>
+        {
+            Depth = Snap(-v.Y(at), 0.25, 2, 14);
+            _depth = Depth;
+        });
+        Grip("down", v.At(-0.75, cylinderBottom + 0.65), GripAxis.Tap, DiagramText.Get("Plumbing_Grip_Down"), _ => Down = !Down);
     }
 }

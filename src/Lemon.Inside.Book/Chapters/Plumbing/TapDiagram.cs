@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Lifting.LiftingParts;
@@ -17,10 +19,10 @@ namespace Lemon.Inside.Book.Chapters.Plumbing;
 public sealed class TapDiagram : GearPicture
 {
     public static readonly StyledProperty<double> TurnsProperty =
-        AvaloniaProperty.Register<TapDiagram, double>(nameof(Turns));
+        AvaloniaProperty.Register<TapDiagram, double>(nameof(Turns), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> WornProperty =
-        AvaloniaProperty.Register<TapDiagram, bool>(nameof(Worn));
+        AvaloniaProperty.Register<TapDiagram, bool>(nameof(Worn), defaultBindingMode: BindingMode.TwoWay);
 
     static TapDiagram()
     {
@@ -39,9 +41,16 @@ public sealed class TapDiagram : GearPicture
         set => SetValue(WornProperty, value);
     }
 
+    /// <summary>The turns as drawn: the handle winds round to a new setting rather than jumping (a grip's drag turns it at once).</summary>
+    private double _shown = double.NaN;
+
+    private double Shown => double.IsNaN(_shown) ? _shown = Math.Clamp(Turns, 0, 3) : _shown;
+
+    protected override void Advance(double seconds) => _shown = Glide(Shown, Math.Clamp(Turns, 0, 3), seconds, 0.2);
+
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var turns = Math.Clamp(Turns, 0, 3);
+        var turns = Shown;
         var lift = Tap.Lift(turns);
         var opening = Tap.Opening(turns);
         var flow = Tap.Flow(turns, Worn);
@@ -129,5 +138,14 @@ public sealed class TapDiagram : GearPicture
             DiagramText.Ink, 0.5, 1, bold: true);
 
         DiagramText.Draw(context, DiagramText.Get("Plumbing_Tap_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the crosshead turned by dragging along it (left shut, right three turns open), and the
+        // washer tapped to wear it out or fit a new one.
+        Grip("handle", v.At(-20 + (40 * turns / 3), lift + 53), GripAxis.Horizontal, DiagramText.Get("Plumbing_Grip_Handle"), at =>
+        {
+            Turns = Snap((v.X(at) + 20) / 40 * 3, 0.05, 0, 3);
+            _shown = Turns;
+        });
+        Grip("washer", v.At(9, lift + 1.5), GripAxis.Tap, DiagramText.Get("Plumbing_Grip_Washer"), _ => Worn = !Worn);
     }
 }

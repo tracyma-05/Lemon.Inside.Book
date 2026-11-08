@@ -1,7 +1,9 @@
 using System.Numerics;
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Scene;
 
 namespace Lemon.Inside.Book.Chapters.LightShadow;
@@ -13,7 +15,7 @@ namespace Lemon.Inside.Book.Chapters.LightShadow;
 public sealed class BrightnessScene : SceneView
 {
     public static readonly StyledProperty<double> PowerProperty =
-        AvaloniaProperty.Register<BrightnessScene, double>(nameof(Power), 30);
+        AvaloniaProperty.Register<BrightnessScene, double>(nameof(Power), 30, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>How the light on screen is scaled before the screen's curve: 100 W under the lamp is about white.</summary>
     internal const float Exposure = 0.3f;
@@ -30,6 +32,9 @@ public sealed class BrightnessScene : SceneView
     private readonly AreaLight _lamp = new() { Center = new Vector3(0, LampHeight, 0), Size = LampSize };
     private readonly int _lampFirstVertex;
     private float _underLamp;
+
+    /// <summary>The light under the lamp per watt (the light grows in step with the power), for the chart's grip.</summary>
+    private double _perWatt;
 
     static BrightnessScene()
     {
@@ -75,6 +80,7 @@ public sealed class BrightnessScene : SceneView
 
         // The floor's middle vertex (40 × 40 cells) is straight under the lamp.
         _underLamp = radiance[(20 * 41) + 20].X * Exposure;
+        _perWatt = Power > 0 ? _underLamp / Power : 0;
         Raster.Exposure = Exposure;
         return radiance;
     }
@@ -127,6 +133,15 @@ public sealed class BrightnessScene : SceneView
         context.DrawGeometry(null, CurvePen, curve);
         var dot = new Point(X(Math.Min(_underLamp, maxLight)), Y(Looks(_underLamp)));
         context.DrawEllipse(DiagramText.Cyan, null, dot, 5, 5);
+
+        // The dot is the floor under the lamp: dragging it along the curve sets the power that puts that much light there.
+        Grip("power", dot, GripAxis.Horizontal, DiagramText.Get("Light_Grip_Power"), at =>
+        {
+            if (_perWatt <= 0) return;
+
+            var light = Math.Clamp((at.X - plot.X) / plot.Width * maxLight, 0, maxLight);
+            Power = LightGrips.Snap(light / _perWatt, BrightnessSpread.MinPower, BrightnessSpread.MaxPower, 1);
+        }, radius: 9);
 
         DiagramText.Draw(context, DiagramText.Get("Light_Brightness_LightIn"), new Point(plot.Center.X, plot.Bottom + 6), 10.5, DiagramText.Faint, 0.5, 0);
         DiagramText.Draw(context, DiagramText.Get("Light_Brightness_Looks"), new Point(plot.X + 6, plot.Y), 10.5, DiagramText.Faint);

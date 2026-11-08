@@ -4,6 +4,7 @@ using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Scene;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
@@ -218,6 +219,178 @@ public sealed class LightShadowTests
         Assert.True(scene.IsSharp); // smooth once still
         Snapshot(window, "light-shadow-8-big-lamp");
         window.Close();
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Light-Shadow");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
+        var light = Assert.IsType<LightShadowTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Light;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        // Between drags on a scene, a frame so its grips are drawn where the last drag left them (and a look at the result).
+        void Drag(Picture picture, string grip, double dx, double dy)
+        {
+            picture.DragGrip(grip, Far(picture, grip, dx, dy));
+            Frames(2);
+        }
+
+        // Lets a picture glide to where the drags sent it (about a second on the book's clock), then saves a frame.
+        void Look(string name)
+        {
+            for (var i = 0; i < 16; i++)
+            {
+                Thread.Sleep(100);
+                Frames(1);
+            }
+
+            Snapshot(window, $"light-shadow-dragged-{name}");
+        }
+
+        var brightness = Open(0);
+        Drag(brightness, "power", 2000, 0);
+        Assert.Equal(BrightnessSpread.MaxPower, light.Brightness.Power, 9);
+        Drag(brightness, "power", -2000, 0);
+        Assert.Equal(BrightnessSpread.MinPower, light.Brightness.Power, 9);
+
+        var tilt = Open(1);
+        Drag(tilt, "board", 0, 20000);
+        Assert.Equal(85, light.Tilt.Tilt, 9);
+        Look("tilt-85");
+        Drag(tilt, "board", -2000, -2000);
+        Assert.Equal(0, light.Tilt.Tilt, 9);
+
+        var distance = Open(2);
+        Drag(distance, "frame", 2000, -1000);
+        Assert.Equal(4, light.Distance.Distance, 9);
+        Drag(distance, "frame", -2000, 1000);
+        Assert.Equal(1, light.Distance.Distance, 9);
+
+        var angle = Open(3);
+        Drag(angle, "car", 2000, 0);
+        Assert.Equal(40, light.Angle.Distance, 9);
+        Look("car-40");
+        Drag(angle, "car", -2000, 0);
+        Assert.Equal(3, light.Angle.Distance, 9);
+
+        var sky = Open(4);
+        Drag(sky, "lamp", 0, -2000);
+        Assert.Equal(90, light.Sky.Elevation, 9);
+        Drag(sky, "reach", 0, -2000);
+        Assert.Equal(5, light.Sky.Distance, 9);
+        Look("sky-overhead-far");
+        Drag(sky, "reach", 0, 2000);
+        Assert.Equal(1.6, light.Sky.Distance, 9);
+
+        var radiance = Open(5);
+        Drag(radiance, "eye", -2000, 0);
+        Assert.Equal(RadianceDiagram.MaxDistance, light.Radiance.Distance, 9);
+        Drag(radiance, "panel", -2000, 0);
+        Assert.Equal(80, light.Radiance.Tilt, 9);
+        Look("radiance-far-turned");
+
+        var reflection = Open(6);
+        Drag(reflection, "lamp", -2000, 0);
+        Assert.Equal(80, light.Reflection.LightAngle, 9);
+        Drag(reflection, "eye", 2000, 0);
+        Assert.Equal(80, light.Reflection.EyeAngle, 9);
+        Drag(reflection, "rough", 2000, 0);
+        Assert.Equal(1, light.Reflection.Roughness, 9);
+        Look("reflection-matte");
+
+        var shadow = Open(7);
+        Drag(shadow, "lamp", 2000, 0);
+        Assert.Equal(2, light.Shadow.LightX, 9);
+        Drag(shadow, "height", 0, -2000);
+        Assert.Equal(4, light.Shadow.LightHeight, 9);
+        Drag(shadow, "size", 2000, 0);
+        Assert.Equal(2, light.Shadow.LightSize, 9);
+        Look("shadow-big-high-aside");
+
+        var bounce = Open(8);
+        light.Bounce.Bounces = 0;
+        light.Bounce.Wall = WallColor.Red;
+        Frames(2);
+        Drag(bounce, "wall", 0, 0);
+        Assert.Equal(WallColor.Green, light.Bounce.Wall);
+        Drag(bounce, "bounce", 0, 0);
+        Assert.Equal(1, light.Bounce.Bounces);
+
+        window.Close();
+    }
+
+    [AvaloniaFact]
+    public void TheGrips_StayInsideThePicture_AndApart()
+    {
+        var (window, model) = OpenAt("Light-Shadow");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Light-Shadow");
+        for (var s = 0; s < 9; s++)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, s));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            var centres = picture.MarkedGrips.Select(g => picture.GripCentre(g)!.Value).ToList();
+            foreach (var c in centres)
+            {
+                Assert.InRange(c.X, 11, picture.Bounds.Width - 11);
+                Assert.InRange(c.Y, 11, picture.Bounds.Height - 11);
+            }
+
+            for (var i = 0; i < centres.Count; i++)
+            {
+                for (var j = i + 1; j < centres.Count; j++)
+                {
+                    Assert.True(((Avalonia.Vector)(centres[i] - centres[j])).Length > 24, $"spread {s + 1}: grips overlap");
+                }
+            }
+
+            Snapshot(window, $"light-shadow-grips-{s + 1}");
+        }
+
+        window.Close();
+    }
+
+    [Fact]
+    public void AGrip_FindsTheValueDrawnNearestThePointer_AndSnapsLikeItsSlider()
+    {
+        // A path drawn along a slant: value v is drawn at (10 v, 5 v).
+        Avalonia.Point? Path(double v) => new Avalonia.Point(10 * v, 5 * v);
+        Assert.Equal(3, LightGrips.Nearest(Path, 0, 4, new Avalonia.Point(30, 15)), 2);
+        Assert.Equal(4, LightGrips.Nearest(Path, 0, 4, new Avalonia.Point(900, 0)), 9);
+        Assert.Equal(0, LightGrips.Nearest(Path, 0, 4, new Avalonia.Point(-900, 0)), 9);
+
+        Assert.Equal(2.45, LightGrips.Snap(2.4361, 1.2, 4, 0.05));
+        Assert.Equal(4, LightGrips.Snap(9, 1.2, 4, 0.05));
+        Assert.Equal(90, LightGrips.FromUp(new Avalonia.Point(0, 0), new Avalonia.Point(5, 0)), 9);
+        Assert.Equal(-45, LightGrips.FromUp(new Avalonia.Point(0, 0), new Avalonia.Point(-5, -5)), 9);
+
+        // Easing closes part of the gap each step, never overshoots, and starts at the target.
+        var eased = LightGrips.Ease(0, 10, 0.05);
+        Assert.InRange(eased, 0.1, 9.9);
+        Assert.Equal(10, LightGrips.Ease(double.NaN, 10, 0.05));
+        Assert.Equal(10, LightGrips.Ease(0, 10, 100), 6);
+    }
+
+    [Fact]
+    public void TheSkyLampsMiddle_IsTheMiddleOfItsOutline()
+    {
+        foreach (var (elevation, distance) in new[] { (50.0, 2.5), (90.0, 5.0), (5.0, 1.6) })
+        {
+            var outline = SkyScene.LampOutline(elevation, distance);
+            var middle = outline.Aggregate(Vector3.Zero, (a, b) => a + b) / outline.Length;
+            Assert.True(Vector3.Distance(middle, SkyScene.LampCentre(elevation, distance)) < 1e-4);
+        }
     }
 
     /// <summary>The light on the floor at (<paramref name="x"/>, 0, 0).</summary>

@@ -1,4 +1,4 @@
-"""Draws the book's icon, a lamp shining on two gears, and writes every size the apps use.
+"""Draws the book's icon, a planetary gear set, and writes every size the apps use.
 
     python -I scripts/appicon/make-icons.py
 
@@ -7,9 +7,12 @@ Writes (all committed):
     src/Lemon.Inside.Book/Assets/book.ico                       16-256 px, the Windows exe and window icon
     src/Lemon.Inside.Book.Browser/wwwroot/icons/icon-*.png      the web edition's favicon, PWA and Apple touch icons
 
-A rounded square of dusk blue with a small lamp in the top-left corner. Its light falls on a gold gear meshing with a
-smaller silver one, and both cast a soft shadow away from the lamp: the book's two volumes, light and machines, in one
-picture. Below 48 px only the lamp's glow and the gold gear are drawn, so it still reads in a title bar.
+Drawn as a sibling of Lemon.Explore.Book's solar system: a rounded square of night blue with a few stars, and in the
+middle a glowing gold sun gear. Three planet gears (blue, red and cream, the Explore book's planet colours) mesh with
+it and roll inside a ring gear with inner teeth; a thin circle through the planets' axles is the carrier, drawn like
+an orbit. It is a real mechanism (bicycle hub gears and car gearboxes use it) and the teeth truly mesh: the sun has
+18 teeth, the planets 9, the ring 36, all of one module, and (18 + 36) / 3 is whole, so three evenly spaced planets
+fit. Below 48 px the stars and the carrier are left out and the gears get fewer, larger teeth.
 Needs Pillow (``pip install pillow``).
 """
 from __future__ import annotations
@@ -26,44 +29,23 @@ WEB = ROOT / "src" / "Lemon.Inside.Book.Browser" / "wwwroot" / "icons"
 # Drawn at this size and scaled down, which smooths every edge.
 BIG = 2048
 
-BACK_TOP = (34, 46, 78)
-BACK_BOTTOM = (14, 18, 36)
-LAMP = (255, 240, 196)
-GLOW = (255, 206, 120)
-GOLD_LIT = (255, 214, 120)
-GOLD_DARK = (196, 128, 40)
-SILVER_LIT = (236, 240, 246)
-SILVER_DARK = (128, 140, 160)
+SKY_TOP = (22, 32, 66)
+SKY_BOTTOM = (12, 16, 36)
+SUN_CORE = (255, 236, 170)
+SUN_EDGE = (246, 176, 66)
+RING = (170, 196, 255)
+PLANETS = [(102, 178, 255), (232, 112, 82), (232, 200, 140)]
 
-LAMP_AT = (0.20, 0.20)  # in units of the icon's width
-MODULE = 0.030          # tooth size: both gears share it, so they mesh
-# Gears as (centre, teeth, turn in teeth); the small one sits up and to the right of the big one, at the distance
-# where their pitch circles touch, turned half a tooth so its teeth fall in the big one's gaps.
-BIG_GEAR = ((0.40, 0.60), 16, 0.0)
-SMALL_TEETH = 10
-SMALL_ANGLE = math.radians(-45)
+RING_PITCH = 0.33  # the ring gear's pitch radius, in units of the icon's width
+TURN_DEGREES = -30  # where the first planet sits, so the set is not square to the page
 
 
-def pitch_radius(teeth: int) -> float:
-    return MODULE * teeth / 2
-
-
-def small_gear() -> tuple[tuple[float, float], int, float]:
-    (bx, by), big_teeth, _ = BIG_GEAR
-    distance = pitch_radius(big_teeth) + pitch_radius(SMALL_TEETH)
-    centre = (bx + distance * math.cos(SMALL_ANGLE), by + distance * math.sin(SMALL_ANGLE))
-    # The big gear is turned so a gap faces the small one (draw_icon); the small one needs a tooth pointing straight
-    # back into that gap.
-    turn = ((SMALL_ANGLE + math.pi) / (2 * math.pi / SMALL_TEETH)) % 1.0
-    return centre, SMALL_TEETH, turn
-
-
-def background(size: int, rounded: bool) -> Image.Image:
-    """A vertical gradient, in a rounded square (or full bleed for the maskable and Apple icons)."""
+def sky(size: int, rounded: bool) -> Image.Image:
+    """The background: a vertical gradient, in a rounded square (or full bleed for the maskable and Apple icons)."""
     gradient = Image.new("RGB", (1, size))
     for y in range(size):
         t = y / (size - 1)
-        gradient.putpixel((0, y), tuple(round(a + (b - a) * t) for a, b in zip(BACK_TOP, BACK_BOTTOM)))
+        gradient.putpixel((0, y), tuple(round(a + (b - a) * t) for a, b in zip(SKY_TOP, SKY_BOTTOM)))
     image = gradient.resize((size, size)).convert("RGBA")
     if rounded:
         mask = Image.new("L", (size, size), 0)
@@ -72,125 +54,121 @@ def background(size: int, rounded: bool) -> Image.Image:
     return image
 
 
-def gear_outline(centre: tuple[float, float], teeth: int, turn: float, size: int) -> list[tuple[float, float]]:
-    """A gear's outline in pixels: trapezoid teeth between the root and tip circles; ``turn`` is in teeth."""
-    pitch = pitch_radius(teeth)
-    tip, root = (pitch + MODULE) * size, (pitch - 1.25 * MODULE) * size
-    cx, cy = centre[0] * size, centre[1] * size
+def stars(image: Image.Image, count: int, keep_out: float) -> None:
+    draw = ImageDraw.Draw(image)
+    size = image.width
+    # A seeded scatter, so the icon is the same on every run; none behind the gears.
+    seed = 20261107
+    for i in range(count):
+        seed = (seed * 1103515245 + 12345) % 2**31
+        x = 0.06 + 0.88 * seed / 2**31
+        seed = (seed * 1103515245 + 12345) % 2**31
+        y = 0.06 + 0.88 * seed / 2**31
+        if math.hypot(x - 0.5, y - 0.5) < keep_out:
+            continue
+        r = size * (0.004 + 0.003 * (i % 3))
+        alpha = 110 + 40 * (i % 4)
+        draw.ellipse((x * size - r, y * size - r, x * size + r, y * size + r), fill=(255, 255, 255, alpha))
+
+
+def outline(cx: float, cy: float, pitch: float, module: float, teeth: int, turn: float, inner: bool) -> list:
+    """A gear's toothed edge in pixels; ``turn`` is in teeth, a tooth is centred on it. ``inner`` makes the teeth
+    point inwards, for the ring gear."""
+    tip = pitch - module if inner else pitch + module
+    root = pitch + 1.25 * module if inner else pitch - 1.25 * module
     step = 2 * math.pi / teeth
-    points = []
     # Per tooth, as fractions of one pitch: root, start of the flank, tip land, end of the flank.
     profile = [(-0.50, root), (-0.30, root), (-0.15, tip), (0.15, tip), (0.30, root)]
+    points = []
     for i in range(teeth):
-        centre_angle = (i + turn) * step
+        centre = (i + turn) * step
         for fraction, radius in profile:
-            a = centre_angle + fraction * step
+            a = centre + fraction * step
             points.append((cx + radius * math.cos(a), cy + radius * math.sin(a)))
     return points
 
 
-def gear_mask(centre, teeth: int, turn: float, size: int, holes: bool) -> Image.Image:
-    mask = Image.new("L", (size, size), 0)
-    draw = ImageDraw.Draw(mask)
-    draw.polygon(gear_outline(centre, teeth, turn, size), fill=255)
-    cx, cy = centre[0] * size, centre[1] * size
-    pitch = pitch_radius(teeth) * size
-    # The axle hole, and on the big gear four round windows that lighten it, as real wheels have.
-    hub = pitch * 0.22
-    draw.ellipse((cx - hub, cy - hub, cx + hub, cy + hub), fill=0)
-    if holes:
-        for k in range(4):
-            a = math.radians(45 + 90 * k)
-            hx, hy, hr = cx + pitch * 0.55 * math.cos(a), cy + pitch * 0.55 * math.sin(a), pitch * 0.19
-            draw.ellipse((hx - hr, hy - hr, hx + hr, hy + hr), fill=0)
-    return mask
+def disc(draw: ImageDraw.ImageDraw, cx: float, cy: float, r: float, fill) -> None:
+    draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=fill)
 
 
-def lit_fill(size: int, lit, dark) -> Image.Image:
-    """Metal lit from the lamp: brightest near the lamp, darker away from it."""
-    small = 64
-    fill = Image.new("RGBA", (small, small))
-    lx, ly = LAMP_AT
-    for y in range(small):
-        for x in range(small):
-            d = math.hypot(x / small - lx, y / small - ly)
-            t = min(1.0, max(0.0, (d - 0.2) / 0.75))
-            fill.putpixel((x, y), tuple(round(a + (b - a) * t) for a, b in zip(lit, dark)) + (255,))
-    return fill.resize((size, size), Image.BICUBIC)
+def gear_set(size: int, simple: bool) -> Image.Image:
+    sun_teeth, planet_teeth = (12, 6) if simple else (18, 9)
+    ring_teeth = sun_teeth + 2 * planet_teeth
+    module = 2 * RING_PITCH / ring_teeth * size
+    sun_pitch, planet_pitch = module * sun_teeth / 2, module * planet_teeth / 2
+    carrier = sun_pitch + planet_pitch
+    c = size / 2
+    step_sun, step_planet, step_ring = (2 * math.pi / n for n in (sun_teeth, planet_teeth, ring_teeth))
+    first = math.radians(TURN_DEGREES)
+    picture = Image.new("RGBA", (size, size))
 
+    # The ring gear: a band with teeth on its inside, pale like the Explore book's orbits. Each planet has a tooth
+    # pointing at the sun, so towards the ring it has a tooth (even count) or a gap (odd), and the ring the opposite.
+    ring_turn = first / step_ring + (0.5 if planet_teeth % 2 == 0 else 0.0)
+    band = Image.new("L", (size, size), 0)
+    bd = ImageDraw.Draw(band)
+    disc(bd, c, c, carrier + planet_pitch + module * (2.6 if simple else 2.2), 255)
+    bd.polygon(outline(c, c, carrier + planet_pitch, module, ring_teeth, ring_turn, inner=True), fill=0)
+    ring = Image.new("RGBA", (size, size), RING + (255,))
+    ring.putalpha(band.point(lambda v: v * 110 // 255))
+    picture.alpha_composite(ring)
 
-def glow(image: Image.Image, simple: bool, safe: float) -> None:
-    """A warm glow round the lamp, wide enough to wash over the gears' near side. It is drawn on the background, not
-    shrunk with the picture for the maskable icon (which would leave its edge as a visible box)."""
-    size = image.width
-    lx, ly = (0.5 + (c - 0.5) * safe for c in LAMP_AT)
-    # A radial falloff worked out on a small grid and scaled up, so it fades smoothly with no edge.
-    small = 128
-    reach = 0.62 if simple else 0.55
-    layer = Image.new("RGBA", (small, small))
-    for y in range(small):
-        for x in range(small):
-            d = math.hypot(x / small - lx, y / small - ly) / reach
-            layer.putpixel((x, y), GLOW + (round(120 * max(0.0, 1 - d) ** 2),))
-    image.alpha_composite(layer.resize((size, size), Image.BICUBIC))
+    if not simple:
+        # The carrier, a thin circle through the planets' axles, drawn like an orbit.
+        ImageDraw.Draw(picture).ellipse((c - carrier, c - carrier, c + carrier, c + carrier),
+                                        outline=RING + (120,), width=max(1, round(size * 0.006)))
 
+    # The sun gear's glow, then the gear: a radial gradient from a pale core to an orange rim, as Explore's Sun.
+    glow = Image.new("RGBA", (size, size))
+    disc(ImageDraw.Draw(glow), c, c, sun_pitch * 2.0, SUN_EDGE + (120,))
+    picture.alpha_composite(glow.filter(ImageFilter.GaussianBlur(sun_pitch * 0.8)))
+    sun_mask = Image.new("L", (size, size), 0)
+    # A gap faces the first planet, which then has a tooth pointing straight back into it; the planets are a whole
+    # number of sun teeth apart, so the same holds for all three.
+    ImageDraw.Draw(sun_mask).polygon(outline(c, c, sun_pitch, module, sun_teeth, first / step_sun + 0.5, False), fill=255)
+    sun = Image.new("RGBA", (size, size))
+    sd = ImageDraw.Draw(sun)
+    reach = sun_pitch + module
+    for i in range(48, 0, -1):
+        t = i / 48
+        disc(sd, c, c, reach * t, tuple(round(a + (b - a) * t) for a, b in zip(SUN_CORE, SUN_EDGE)) + (255,))
+    sun.putalpha(sun_mask)
+    picture.alpha_composite(sun)
 
-def lamp(image: Image.Image) -> None:
-    size = image.width
-    cx, cy, r = LAMP_AT[0] * size, LAMP_AT[1] * size, size * 0.045
-    ImageDraw.Draw(image).ellipse((cx - r, cy - r, cx + r, cy + r), fill=LAMP + (255,))
-
-
-def shadow(image: Image.Image, mask: Image.Image) -> None:
-    """The gears' shadow, cast away from the lamp and softened, as the lamp has a size."""
-    size = image.width
-    dx = dy = round(size * 0.028)
-    moved = ImageChops.offset(mask, dx, dy).filter(ImageFilter.GaussianBlur(size * 0.014))
-    dark = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    dark.putalpha(moved.point(lambda v: v * 150 // 255))
-    image.alpha_composite(dark)
+    for k, colour in enumerate(PLANETS):
+        angle = first + k * 2 * math.pi / 3
+        px, py = c + carrier * math.cos(angle), c + carrier * math.sin(angle)
+        mask = Image.new("L", (size, size), 0)
+        md = ImageDraw.Draw(mask)
+        md.polygon(outline(px, py, planet_pitch, module, planet_teeth, (angle + math.pi) / step_planet, False), fill=255)
+        if not simple:
+            disc(md, px, py, planet_pitch * 0.28, 0)
+        body = Image.new("RGBA", (size, size), colour + (255,))
+        body.putalpha(mask)
+        picture.alpha_composite(body)
+        # The side facing the sun is lit: a soft lighter patch, as on Explore's planets.
+        light = Image.new("RGBA", (size, size))
+        hx, hy = px - math.cos(angle) * planet_pitch * 0.35, py - math.sin(angle) * planet_pitch * 0.35
+        disc(ImageDraw.Draw(light), hx, hy, planet_pitch * 0.7, tuple(min(255, v + 70) for v in colour) + (170,))
+        light = light.filter(ImageFilter.GaussianBlur(planet_pitch * 0.3))
+        light.putalpha(ImageChops.multiply(light.getchannel("A"), mask))
+        picture.alpha_composite(light)
+    return picture
 
 
 def draw_icon(size: int, *, rounded: bool = True, simple: bool = False, safe: float = 1.0) -> Image.Image:
-    """The icon at ``size`` px; ``safe`` shrinks the picture to fit a maskable icon's safe zone."""
-    image = background(BIG, rounded)
-    corners = image.getchannel("A")
-    glow(image, simple, safe)
-    picture = Image.new("RGBA", (BIG, BIG))
+    """The icon at ``size`` px; ``safe`` shrinks the gears to fit a maskable icon's safe zone."""
+    image = sky(BIG, rounded)
     if not simple:
-        lamp(picture)
-
-    big_centre, big_teeth, _ = BIG_GEAR
-    # Turn the big gear so a gap, not a tooth, faces the small gear.
-    big_turn = (SMALL_ANGLE / (2 * math.pi / big_teeth)) % 1.0 + 0.5
-    big = gear_mask(big_centre, big_teeth, big_turn, BIG, holes=not simple)
-    if simple:
-        # Larger teeth, so the gear reads at 16-32 px.
-        big = gear_mask((0.5, 0.56), big_teeth, big_turn, BIG, holes=False)
-        big = big.resize((round(BIG * 1.25),) * 2, Image.LANCZOS).crop(
-            (round(BIG * 0.125), round(BIG * 0.125), round(BIG * 1.125), round(BIG * 1.125)))
-    masks = [(big, GOLD_LIT, GOLD_DARK)]
-    if not simple:
-        centre, teeth, turn = small_gear()
-        masks.append((gear_mask(centre, teeth, turn, BIG, holes=False), SILVER_LIT, SILVER_DARK))
-
-    together = Image.new("L", (BIG, BIG), 0)
-    for mask, _, _ in masks:
-        together = ImageChops.lighter(together, mask)
-    shadow(picture, together)
-    for mask, lit, dark in masks:
-        metal = lit_fill(BIG, lit, dark)
-        metal.putalpha(mask)
-        picture.alpha_composite(metal)
-
+        stars(image, 34, keep_out=0.40 * safe)
+    picture = gear_set(BIG, simple)
     if safe != 1.0:
         scaled = picture.resize((round(BIG * safe),) * 2, Image.LANCZOS)
         picture = Image.new("RGBA", (BIG, BIG))
         offset = (BIG - scaled.width) // 2
         picture.alpha_composite(scaled, (offset, offset))
     image.alpha_composite(picture)
-    # Keep the glow and the shadow inside the rounded corners.
-    image.putalpha(ImageChops.multiply(image.getchannel("A"), corners))
     return image.resize((size, size), Image.LANCZOS)
 
 
@@ -201,7 +179,7 @@ def main() -> None:
     draw_icon(192).save(WEB / "icon-192.png")
     # Apple touch icons are square: iOS rounds the corners itself.
     draw_icon(180, rounded=False).save(WEB / "icon-180.png")
-    # Maskable: full bleed, the picture inside the central 80 % that every mask keeps.
+    # Maskable: full bleed, the gears inside the central 80 % that every mask keeps.
     draw_icon(512, rounded=False, safe=0.8).save(WEB / "icon-512-maskable.png")
 
     sizes = [16, 24, 32, 48, 64, 128, 256]

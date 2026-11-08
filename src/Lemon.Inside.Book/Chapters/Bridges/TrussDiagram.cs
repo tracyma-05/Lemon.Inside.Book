@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Bridges.BridgesParts;
@@ -11,15 +13,24 @@ namespace Lemon.Inside.Book.Chapters.Bridges;
 /// <summary>
 /// Spread 3: a Warren truss over a river, with a lorry on its deck. Every member is coloured by whether it is
 /// squeezed or stretched and drawn as thick as its share of the biggest force, its force written beside it; the banks
-/// push up under each end with their share of the lorry.
+/// push up under each end with their share of the lorry. Move the lorry and it drives there, wheels turning, the
+/// forces in the members changing under it as it goes; the truss grows or shrinks smoothly. The reader drags the lorry
+/// along the deck and a joint of the top chord up or down.
 /// </summary>
 public sealed class TrussDiagram : GearPicture
 {
     public static readonly StyledProperty<double> TrussHeightProperty =
-        AvaloniaProperty.Register<TrussDiagram, double>(nameof(TrussHeight), 2);
+        AvaloniaProperty.Register<TrussDiagram, double>(nameof(TrussHeight), 2, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> PositionProperty =
-        AvaloniaProperty.Register<TrussDiagram, double>(nameof(Position), 0.5);
+        AvaloniaProperty.Register<TrussDiagram, double>(nameof(Position), 0.5, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>How fast the lorry drives, m a second.</summary>
+    private const double Drive = 5;
+
+    /// <summary>Where the lorry is drawn, 0..1 of the span, and the truss's drawn height, m; NaN until the first frame.</summary>
+    private double _position = double.NaN;
+    private double _height = double.NaN;
 
     static TrussDiagram()
     {
@@ -40,12 +51,25 @@ public sealed class TrussDiagram : GearPicture
         set => SetValue(PositionProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>The lorry drives to where it was put at a steady speed; the truss eases to its new height.</summary>
+    protected override void Advance(double seconds)
+    {
+        Start();
+        _position = Lifting.LiftingParts.Ease(_position, Math.Clamp(Position, 0, 1), Drive / Truss.Span, seconds);
+        _height = Glide(_height, Math.Clamp(TrussHeight, 1, 4), seconds, 0.15);
+    }
+
+    private void Start()
+    {
+        if (double.IsNaN(_position)) _position = Math.Clamp(Position, 0, 1);
+        if (double.IsNaN(_height)) _height = Math.Clamp(TrussHeight, 1, 4);
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var height = Math.Clamp(TrussHeight, 1, 4);
-        var position = Math.Clamp(Position, 0, 1);
+        Start();
+        var height = _height;
+        var position = _position;
         var scale = Math.Min((bounds.Width - 60) / 19, (bounds.Height - 150) / 8);
         var v = new View(new Point(bounds.Center.X - (Truss.Span / 2 * scale), bounds.Center.Y + (1.6 * scale)), scale);
 
@@ -69,7 +93,19 @@ public sealed class TrussDiagram : GearPicture
         var lorryX = Math.Clamp(position * Truss.Span, 1.1, Truss.Span - 1.1);
         var lorry = v.Box(lorryX - 1.1, 0, lorryX + 1.1, 1.3);
         context.DrawRectangle(Load, Edge, lorry, 4, 4);
-        DiagramText.Draw(context, Tonnes(Truss.Lorry), lorry.Center, 12, Dark, 0.5, 0.5, bold: true);
+
+        // Its wheels, turning as it drives (a mark on each shows the turn).
+        var wheel = 0.28;
+        foreach (var x in new[] { lorryX - 0.65, lorryX + 0.65 })
+        {
+            var hub = v.At(x, wheel - 0.08);
+            context.DrawEllipse(Dark, new ImmutablePen(Idle, 1.2), hub, wheel * scale, wheel * scale);
+            var turn = -lorryX / wheel;
+            var spoke = new Vector(Math.Cos(turn), -Math.Sin(turn)) * (wheel * scale * 0.75);
+            context.DrawLine(new ImmutablePen(Idle, 1.5), hub - spoke, hub + spoke);
+        }
+
+        DiagramText.Draw(context, Tonnes(Truss.Lorry), new Point(lorry.Center.X, lorry.Top - 2), 11.5, Load, 0.5, 1, bold: true);
         Mark("load", lorry);
 
         // The members, by the force in each.
@@ -116,6 +152,15 @@ public sealed class TrussDiagram : GearPicture
 
         DiagramText.Draw(context, DiagramText.Get("Bridges_Truss_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
         DrawLegend(context, bounds);
+
+        // The reader's handles: the lorry, dragged along the deck, and a joint of the top chord (the one away from the
+        // lorry, so the two never sit on each other), dragged up for a taller truss.
+        var origin = v;
+        Grip("lorry", v.At(lorryX, 0.65), GripAxis.Horizontal, DiagramText.Get("Bridges_Grip_Lorry"),
+            at => Position = Math.Clamp(Math.Round(origin.X(at) / Truss.Span, 2), 0, 1));
+        var joint = lorryX < Truss.Span / 2 ? 7 : 6;
+        Grip("height", At(v, joint, height), GripAxis.Vertical, DiagramText.Get("Bridges_Grip_TrussHeight"),
+            at => TrussHeight = Math.Clamp(Math.Round(origin.Y(at), 1), 1, 4));
     }
 
     private static Point At(View v, int joint, double height)

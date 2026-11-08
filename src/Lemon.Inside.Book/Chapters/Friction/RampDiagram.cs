@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Friction.FrictionParts;
@@ -12,18 +14,29 @@ namespace Lemon.Inside.Book.Chapters.Friction;
 /// Spread 1: a block on a board hinged at its foot, in metres. Arrows show the block's weight, the part of it pulling
 /// downhill, and the friction holding it back, beside a dashed arrow for the most the surface could give. Past the
 /// steepest angle the friction cannot keep up, and the block slides.
+/// The reader lifts the board's far end to tilt it and taps the board to change its surface. The board swings to its
+/// new slope; past the steepest angle the block slides off down it, faster and faster, and is set back on to try again.
 /// </summary>
 public sealed class RampDiagram : GearPicture
 {
     public static readonly StyledProperty<double> AngleProperty =
-        AvaloniaProperty.Register<RampDiagram, double>(nameof(Angle), 10);
+        AvaloniaProperty.Register<RampDiagram, double>(nameof(Angle), 10, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<int> SurfaceProperty =
-        AvaloniaProperty.Register<RampDiagram, int>(nameof(Surface), 1);
+        AvaloniaProperty.Register<RampDiagram, int>(nameof(Surface), 1, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The board's length and where the block sits on it, m.</summary>
     private const double Board = 6;
     private const double Along = 3.4;
+
+    /// <summary>The steepest slope the slider gives, degrees.</summary>
+    private const double Steepest = 45;
+
+    /// <summary>The board's slope as drawn, easing toward <see cref="Angle"/>; NaN until the first frame.</summary>
+    private double _angle = double.NaN;
+
+    /// <summary>Seconds since the block was last set on the board, while it slides.</summary>
+    private double _sliding;
 
     static RampDiagram()
     {
@@ -44,11 +57,43 @@ public sealed class RampDiagram : GearPicture
         set => SetValue(SurfaceProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>
+    /// How far a sliding block has gone down the board, m, <paramref name="seconds"/> after it was let go: it speeds up
+    /// as the slope's pull beats the (smaller) sliding friction, slowed four times so it can be followed. Sliding grip is
+    /// taken as three quarters of the grip at rest.
+    /// </summary>
+    internal static double SlidDown(double angle, int surface, double seconds)
+    {
+        var a = angle * Math.PI / 180;
+        var pull = Math.Max(0.4, Math.Sin(a) - (0.75 * Ramp.Surface(surface) * Math.Cos(a))) * 9.81;
+        var t = seconds / 4;
+        return 0.5 * pull * t * t;
+    }
+
+    /// <summary>The slope (to half a degree) that puts the board's far end under a point <paramref name="across"/> and <paramref name="up"/> m from the hinge.</summary>
+    internal static double AngleFor(double across, double up) =>
+        Math.Clamp(Math.Round(Math.Atan2(Math.Max(0, up), Math.Max(1e-6, across)) * 180 / Math.PI * 2) / 2, 0, Steepest);
+
+    protected override void Advance(double seconds)
+    {
+        var angle = Math.Clamp(Angle, 0, Steepest);
+        _angle = double.IsNaN(_angle) ? angle : Glide(_angle, angle, seconds, 0.12);
+
+        // A block that slides goes on down the board, rests a moment at the bottom, and is set back to try again.
+        if (Ramp.Slides(_angle, Math.Clamp(Surface, 0, 2)))
+        {
+            _sliding += seconds;
+            if (SlidDown(_angle, Surface, _sliding) > Along - 0.5 + 1.5) _sliding = 0;
+        }
+        else
+        {
+            _sliding = 0;
+        }
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var angle = Math.Clamp(Angle, 0, 45);
+        var angle = double.IsNaN(_angle) ? Math.Clamp(Angle, 0, Steepest) : _angle;
         var surface = Math.Clamp(Surface, 0, 2);
         var slides = Ramp.Slides(angle, surface);
         var a = angle * Math.PI / 180;
@@ -70,8 +115,8 @@ public sealed class RampDiagram : GearPicture
         if (angle > 1) context.DrawGeometry(null, new ImmutablePen(DiagramText.Gold, 1.5), Plumbing.PlumbingParts.Polyline(arc));
         DiagramText.Draw(context, DiagramText.Format("Friction_Degrees", Number(angle, "0")), v.At(1.3, 0.25), 12.5, DiagramText.Gold, 0, 0.5, bold: true);
 
-        // The block, a little downhill and with motion lines once it slides.
-        var at = slides ? Along - 0.9 : Along;
+        // The block, going on down the board with motion lines once it slides (and stopping at its foot).
+        var at = slides ? Math.Max(0.5, Along - SlidDown(angle, surface, _sliding)) : Along;
         Point[] block = [On(at - 0.45, 0), On(at + 0.45, 0), On(at + 0.45, 0.6), On(at - 0.45, 0.6)];
         DrawPolygon(context, Load, Edge, block);
         Mark("block", block, 2);
@@ -109,5 +154,11 @@ public sealed class RampDiagram : GearPicture
         Mark("grip", [top, mostEnd, On(at + 0.45 + (friction * perKg), 0.85)], 8);
         DiagramText.Draw(context, DiagramText.Format("Friction_Ramp_MostLabel", Kgf(most)), new Point(mostEnd.X + 6, mostEnd.Y), 11, GripBrush, 0, 0.5);
         DiagramText.Draw(context, DiagramText.Get("Friction_Ramp_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the board's far end, lifted for a steeper slope, and the board itself, tapped for
+        // another surface (ice, wood, rubber, round again).
+        Grip("angle", On(Board, 0.1), GripAxis.Free, DiagramText.Get("Friction_Grip_Angle"),
+            p => Angle = AngleFor(v.X(p), v.Y(p)));
+        Grip("surface", On(4.8, -0.09), GripAxis.Tap, DiagramText.Get("Friction_Grip_Surface"), _ => Surface = (surface + 1) % 3);
     }
 }

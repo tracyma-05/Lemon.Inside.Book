@@ -17,6 +17,12 @@ namespace Lemon.Inside.Book.Controls;
 /// turned or moved it. The parts named in <see cref="PartNames"/> can also be pointed at (their name shows) and clicked,
 /// which sets <see cref="SelectedPart"/>; the spread's card then explains that part. From the keyboard: Tab to the
 /// picture, the arrow keys step through its parts, Enter or Space opens the card and Escape closes it.
+/// <para>
+/// A picture can also offer grips (<see cref="Grip"/>): round handles drawn on the thing they move, which the reader
+/// drags (a gate's paddles, a water level, a horse) or taps (a switch), so the picture itself is played with and not
+/// only the sliders beside it. A grip is marked while painting, like a part, with what a drag or a tap does; the drag
+/// is handed the pointer in the picture's pixels and works the value out from the drawing it came from.
+/// </para>
 /// </summary>
 public abstract class Picture : Control
 {
@@ -41,8 +47,18 @@ public abstract class Picture : Control
     private static readonly IBrush SelectedFill = new ImmutableSolidColorBrush(Color.FromArgb(0x1C, 0x8E, 0xC5, 0xFF));
     private static readonly IBrush PillBrush = new ImmutableSolidColorBrush(Color.FromArgb(0xE0, 0x0B, 0x10, 0x19));
 
+    private static readonly IBrush GripFill = new ImmutableSolidColorBrush(Color.FromRgb(0xFF, 0xF4, 0xD6));
+    private static readonly IBrush GripDot = new ImmutableSolidColorBrush(Color.FromRgb(0x6A, 0x4A, 0x10));
+    private static readonly IPen GripEdge = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xE0, 0xA8, 0x2E)), 2.5);
+    private static readonly IPen GripMark = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x6A, 0x4A, 0x10)), 1.8,
+        lineCap: PenLineCap.Round);
+    private static readonly IPen GripGlow = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x70, 0xFF, 0xD8, 0x6A)), 5);
+
     private readonly Dictionary<string, Rect> _parts = new(StringComparer.Ordinal);
+    private readonly Dictionary<string, GripMarks> _grips = new(StringComparer.Ordinal);
     private string? _hover;
+    private string? _hoverGrip;
+    private string? _dragging;
     private Point? _pressedAt;
 
     /// <summary>Focus came from the keyboard: the outline and the key hint show.</summary>
@@ -81,10 +97,21 @@ public abstract class Picture : Control
     /// <summary>The part the pointer or the keyboard is on (for the tests).</summary>
     internal string? HoveredPart => _hover;
 
+    /// <summary>Whether a grip is being held: a picture that drags by itself (a scene's camera) leaves the press alone.</summary>
+    protected bool Gripping => _dragging is not null;
+
+    /// <summary>The grips drawn in the last frame (for the tests).</summary>
+    internal IReadOnlyCollection<string> MarkedGrips => _grips.Keys;
+
+    /// <summary>A gentle pulse, 0 to 1, that breathes round the grips of a moving picture so they invite a touch.</summary>
+    protected virtual double GripPulse => 0;
+
     public sealed override void Render(DrawingContext context)
     {
         _parts.Clear();
+        _grips.Clear();
         Paint(context);
+        DrawGrips(context);
         if (SelectedPart is { } selected && _parts.TryGetValue(selected, out var chosen))
         {
             DrawRing(context, chosen, SelectedRing, SelectedFill);
@@ -100,8 +127,12 @@ public abstract class Picture : Control
             DrawRing(context, box, Ring, null);
         }
 
-        // Names go on top of every ring.
-        if (_hover is { } named && _parts.TryGetValue(named, out var at) && PartNames?.TryGetValue(named, out var name) == true)
+        // Names go on top of every ring; a grip's says what it does.
+        if (_hoverGrip is { } grip && _dragging is null && _grips.TryGetValue(grip, out var held))
+        {
+            DrawName(context, held.Label, held.Box);
+        }
+        else if (_hover is { } named && _parts.TryGetValue(named, out var at) && PartNames?.TryGetValue(named, out var name) == true)
         {
             DrawName(context, name, at);
         }
@@ -144,6 +175,46 @@ public abstract class Picture : Control
 
         var box = new Rect(left, top, right - left, bottom - top);
         Mark(id, pad >= 0 ? box.Inflate(pad) : box.Deflate(Math.Min(-pad, Math.Min(box.Width, box.Height) / 2)));
+    }
+
+    /// <summary>
+    /// Offers a grip at <paramref name="centre"/>: the reader drags it along <paramref name="axis"/> and
+    /// <paramref name="drag"/> is handed each pointer position, or (<see cref="GripAxis.Tap"/>) taps it and
+    /// <paramref name="drag"/> is handed the centre once. <paramref name="label"/> shows while it is pointed at.
+    /// </summary>
+    protected void Grip(string id, Point centre, GripAxis axis, string label, Action<Point> drag, double radius = 11) =>
+        _grips[id] = new GripMarks(new Rect(centre.X - radius, centre.Y - radius, 2 * radius, 2 * radius), axis, label, drag);
+
+    /// <summary>The grip under <paramref name="point"/>, with a little to spare for a finger.</summary>
+    internal string? GripAt(Point point)
+    {
+        foreach (var (id, grip) in _grips)
+        {
+            var box = grip.Box.Inflate(6);
+            var dx = (point.X - box.Center.X) / (box.Width / 2);
+            var dy = (point.Y - box.Center.Y) / (box.Height / 2);
+            if ((dx * dx) + (dy * dy) <= 1) return id;
+        }
+
+        return null;
+    }
+
+    /// <summary>The middle of a grip (for the tests).</summary>
+    internal Point? GripCentre(string id) => _grips.TryGetValue(id, out var grip) ? grip.Box.Center : null;
+
+    /// <summary>Drags a grip to <paramref name="to"/> (or taps it) as a reader would.</summary>
+    internal void DragGrip(string id, Point to)
+    {
+        if (!_grips.TryGetValue(id, out var grip)) return;
+
+        grip.Drag(grip.Axis switch
+        {
+            GripAxis.Tap => grip.Box.Center,
+            GripAxis.Horizontal => new Point(to.X, grip.Box.Center.Y),
+            GripAxis.Vertical => new Point(grip.Box.Center.X, to.Y),
+            _ => to,
+        });
+        InvalidateVisual();
     }
 
     /// <summary>
@@ -247,14 +318,40 @@ public abstract class Picture : Control
     protected override void OnPointerPressed(PointerPressedEventArgs e)
     {
         base.OnPointerPressed(e);
-        _pressedAt = e.GetPosition(this);
         _keyboard = false;
+        if (GripAt(e.GetPosition(this)) is { } grip && e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+        {
+            // A grip takes the press: it is not a click on a part, nor a swipe that turns the page.
+            _dragging = grip;
+            _pressedAt = null;
+            e.Pointer.Capture(this);
+            e.Handled = true;
+            SetHover(null);
+            InvalidateVisual();
+            return;
+        }
+
+        _pressedAt = e.GetPosition(this);
     }
 
     protected override void OnPointerMoved(PointerEventArgs e)
     {
         base.OnPointerMoved(e);
         var at = e.GetPosition(this);
+        if (_dragging is { } held)
+        {
+            if (_grips.TryGetValue(held, out var grip) && grip.Axis != GripAxis.Tap) DragGrip(held, at);
+            e.Handled = true;
+            return;
+        }
+
+        SetHoverGrip(GripAt(at));
+        if (_hoverGrip is not null)
+        {
+            SetHover(null);
+            return;
+        }
+
         if (_pressedAt is { } from && ((Vector)(at - from)).Length > ClickSlop) _pressedAt = null;
 
         // No name pills while the reader drags the picture round.
@@ -265,6 +362,20 @@ public abstract class Picture : Control
     protected override void OnPointerReleased(PointerReleasedEventArgs e)
     {
         base.OnPointerReleased(e);
+        if (_dragging is { } held)
+        {
+            if (_grips.TryGetValue(held, out var grip) && grip.Axis == GripAxis.Tap && GripAt(e.GetPosition(this)) == held)
+            {
+                DragGrip(held, grip.Box.Center);
+            }
+
+            _dragging = null;
+            e.Pointer.Capture(null);
+            e.Handled = true;
+            InvalidateVisual();
+            return;
+        }
+
         if (_pressedAt is { } from && ((Vector)(e.GetPosition(this) - from)).Length <= ClickSlop)
         {
             ClickAt(from);
@@ -273,10 +384,81 @@ public abstract class Picture : Control
         _pressedAt = null;
     }
 
+    protected override void OnPointerCaptureLost(PointerCaptureLostEventArgs e)
+    {
+        base.OnPointerCaptureLost(e);
+        _dragging = null;
+    }
+
     protected override void OnPointerExited(PointerEventArgs e)
     {
         base.OnPointerExited(e);
+        if (_dragging is null) SetHoverGrip(null);
         if (!_keyboard) SetHover(null);
+    }
+
+    private void SetHoverGrip(string? id)
+    {
+        if (id == _hoverGrip) return;
+
+        _hoverGrip = id;
+        Cursor = id is null || !_grips.TryGetValue(id, out var grip) ? null : new Cursor(grip.Axis switch
+        {
+            GripAxis.Horizontal => StandardCursorType.SizeWestEast,
+            GripAxis.Vertical => StandardCursorType.SizeNorthSouth,
+            GripAxis.Free => StandardCursorType.SizeAll,
+            _ => StandardCursorType.Hand,
+        });
+        InvalidateVisual();
+    }
+
+    /// <summary>
+    /// The grips on top of the picture: a cream disc ringed in gold, with arrows for the way it drags or a dot for a
+    /// tap; a soft glow breathes round it, brighter while pointed at or held.
+    /// </summary>
+    private void DrawGrips(DrawingContext context)
+    {
+        foreach (var (id, grip) in _grips)
+        {
+            var c = grip.Box.Center;
+            var r = grip.Box.Width / 2;
+            var lit = id == _hoverGrip || id == _dragging;
+            var glow = r + 3 + (lit ? 3 : 2 * GripPulse);
+            context.DrawEllipse(null, GripGlow, c, glow, glow);
+            context.DrawEllipse(GripFill, Halo, c, r, r);
+            context.DrawEllipse(null, GripEdge, c, r, r);
+            var reach = r * 0.55;
+            var half = r * 0.28;
+            switch (grip.Axis)
+            {
+                case GripAxis.Horizontal:
+                    Chevrons(context, c, new Vector(1, 0), reach, half);
+                    break;
+                case GripAxis.Vertical:
+                    Chevrons(context, c, new Vector(0, 1), reach, half);
+                    break;
+                case GripAxis.Free:
+                    Chevrons(context, c, new Vector(1, 0), reach, half);
+                    Chevrons(context, c, new Vector(0, 1), reach, half);
+                    break;
+                default:
+                    context.DrawEllipse(GripDot, null, c, r * 0.32, r * 0.32);
+                    break;
+            }
+        }
+    }
+
+    /// <summary>A pair of little arrowheads pointing out along <paramref name="along"/>, either side of the middle.</summary>
+    private static void Chevrons(DrawingContext context, Point c, Vector along, double reach, double half)
+    {
+        var across = new Vector(-along.Y, along.X);
+        foreach (var sign in new[] { -1, 1 })
+        {
+            var tip = c + (along * reach * sign);
+            var back = c + (along * (reach - half) * sign);
+            context.DrawLine(GripMark, back + (across * half), tip);
+            context.DrawLine(GripMark, back - (across * half), tip);
+        }
     }
 
     private void SetHover(string? id)
@@ -345,4 +527,15 @@ public abstract class Picture : Control
             Math.Clamp(box.Center.Y, bounds.Top + ry, bounds.Bottom - ry));
         return new Rect(centre.X - rx, centre.Y - ry, 2 * rx, 2 * ry);
     }
+
+    private sealed record GripMarks(Rect Box, GripAxis Axis, string Label, Action<Point> Drag);
+}
+
+/// <summary>Which way a picture's grip moves: along a line, anywhere, or not at all (a switch that is tapped).</summary>
+public enum GripAxis
+{
+    Horizontal,
+    Vertical,
+    Free,
+    Tap,
 }

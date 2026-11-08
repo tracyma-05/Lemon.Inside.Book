@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Friction.FrictionParts;
@@ -12,14 +14,25 @@ namespace Lemon.Inside.Book.Chapters.Friction;
 /// Spread 6: two metal surfaces magnified until their bumps show, the top one sliding to the right. Dry, they press
 /// together and touch at their peaks (marked in red); oiled, a film between them thickens with speed until the bumps
 /// no longer meet. Below, friction against speed for the oiled pair, with the present speed marked.
+/// The reader drags the arrow on the top surface out for a faster slide and taps the gap to oil it (or wipe it dry).
+/// The film thickens and thins gradually, lifting the top surface off its bumps or letting it settle back.
 /// </summary>
 public sealed class OilDiagram : GearPicture
 {
     public static readonly StyledProperty<double> SpeedProperty =
-        AvaloniaProperty.Register<OilDiagram, double>(nameof(Speed), 50);
+        AvaloniaProperty.Register<OilDiagram, double>(nameof(Speed), 50, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> OiledProperty =
-        AvaloniaProperty.Register<OilDiagram, bool>(nameof(Oiled));
+        AvaloniaProperty.Register<OilDiagram, bool>(nameof(Oiled), defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The speed arrow's length at full speed, pixels.</summary>
+    private const double Reach = 160;
+
+    /// <summary>The film as drawn, µm (the dry surfaces' squeeze when not oiled), easing toward the model's; NaN until the first frame.</summary>
+    private double _film = double.NaN;
+
+    /// <summary>How far the top surface has slid, pixels.</summary>
+    private double _slid;
 
     static OilDiagram()
     {
@@ -37,6 +50,20 @@ public sealed class OilDiagram : GearPicture
     {
         get => GetValue(OiledProperty);
         set => SetValue(OiledProperty, value);
+    }
+
+    /// <summary>The film the surfaces settle to: the oil's at this speed, or the dry pair pressed together.</summary>
+    private static double FilmFor(double speed, bool oiled) => oiled ? Lubrication.Film(speed) : Lubrication.Roughness * 0.6;
+
+    /// <summary>The speed (to 1%) for the arrow drawn <paramref name="length"/> pixels long.</summary>
+    internal static double SpeedForArrow(double length) => Math.Clamp(Math.Round(length / Reach * 100), 0, 100);
+
+    protected override void Advance(double seconds)
+    {
+        var speed = Math.Clamp(Speed, 0, 100);
+        var film = FilmFor(speed, Oiled);
+        _film = double.IsNaN(_film) ? film : Glide(_film, film, seconds, 0.15);
+        _slid += speed * 0.8 * seconds;
     }
 
     protected override void Draw(DrawingContext context, Rect bounds)
@@ -61,9 +88,9 @@ public sealed class OilDiagram : GearPicture
 
         // One micrometre to this many pixels; bumps one micrometre tall; the film between the surfaces' middles.
         var unit = box.Height * 0.12;
-        var film = oiled ? Lubrication.Film(speed) : Lubrication.Roughness * 0.6;
+        var film = double.IsNaN(_film) ? FilmFor(speed, oiled) : _film;
         var baseY = box.Bottom - (box.Height * 0.22);
-        var shift = Seconds * speed * 0.8;
+        var shift = _slid;
         var x0 = box.X + 2;
         var x1 = box.Right - 2;
         var bottom = new List<Point>();
@@ -99,10 +126,16 @@ public sealed class OilDiagram : GearPicture
             Mark("oil", new Rect(x1 - 80, baseY - (unit * 2), 70, unit));
         }
 
+        // The top surface's speed as an arrow along it, with the reader's handle at its head; the gap, tapped to oil it.
+        var tail = new Point(box.Center.X - (Reach / 2), topEdge + 18);
+        var head = new Point(tail.X + (speed / 100 * Reach), tail.Y);
         if (speed > 0.5)
         {
-            Arrow(context, new Point(box.Center.X - 50, topEdge + 18), new Point(box.Center.X + 50, topEdge + 18), PullBrush, string.Empty, 0.5, 1);
+            Arrow(context, tail, head, PullBrush, string.Empty, 0.5, 1);
         }
+
+        Grip("speed", head, GripAxis.Horizontal, DiagramText.Get("Friction_Grip_Slide"), p => Speed = SpeedForArrow(p.X - tail.X));
+        Grip("oil", new Point(x1 - 45, baseY - unit), GripAxis.Tap, DiagramText.Get(oiled ? "Friction_Grip_Wipe" : "Friction_Grip_Oil"), _ => Oiled = !Oiled);
 
         var label = !oiled ? DiagramText.Get("Friction_Oil_DryLabel")
             : contacts.Count > 0 ? DiagramText.Format("Friction_Oil_TouchLabel", Number(Lubrication.Film(speed), "0.0"))

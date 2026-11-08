@@ -34,6 +34,11 @@ internal static class LiftingParts
         public Point At(double x, double y) => new(Origin.X + (x * Scale), Origin.Y - (y * Scale));
 
         public Rect Box(double x0, double y0, double x1, double y1) => new(At(x0, y1), At(x1, y0));
+
+        /// <summary>The metres across and up of a point on screen (the way back from <see cref="At"/>, for a dragged grip).</summary>
+        public double X(Point screen) => (screen.X - Origin.X) / Scale;
+
+        public double Y(Point screen) => (Origin.Y - screen.Y) / Scale;
     }
 
     /// <summary>A force said as the weight it would hold up: "50 kg".</summary>

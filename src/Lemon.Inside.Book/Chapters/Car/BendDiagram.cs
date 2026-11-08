@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -10,11 +12,18 @@ namespace Lemon.Inside.Book.Chapters.Car;
 /// Spread 5: a car going round a left-hand bend, seen from above, its rear wheels' tracks marked as they roll (the outer
 /// one longer). Below, the differential edge-on: the case with the ring gear, a side gear for each wheel, and the spider
 /// gear between them, which spins whenever the wheels' speeds differ.
+/// The reader drags the steering, just ahead of the car, to the left for a tighter bend; the front wheels turn with it
+/// and the road eases round to its new curve.
 /// </summary>
 public sealed class BendDiagram : GearPicture
 {
     public static readonly StyledProperty<double> RadiusProperty =
-        AvaloniaProperty.Register<BendDiagram, double>(nameof(Radius), 12);
+        AvaloniaProperty.Register<BendDiagram, double>(nameof(Radius), 12, defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>The tightest and widest bends (the slider's ends), m; the car's wheelbase, m.</summary>
+    private const double Tightest = 4;
+    private const double Widest = 40;
+    private const double Wheelbase = 2.6;
 
     /// <summary>The car's speed, metres a second (slowed down for the picture).</summary>
     private const double Speed = 2;
@@ -27,6 +36,9 @@ public sealed class BendDiagram : GearPicture
     private double _metres;
     private double _inner;
     private double _outer;
+
+    /// <summary>The bend as drawn, easing toward <see cref="Radius"/>; NaN until the first frame.</summary>
+    private double _radius = double.NaN;
 
     static BendDiagram()
     {
@@ -46,38 +58,72 @@ public sealed class BendDiagram : GearPicture
         _metres += Speed * seconds;
         _inner += Speed * inner * seconds;
         _outer += Speed * outer * seconds;
+
+        // Eased in curvature (1 / radius), as a steering wheel turns, so a wide bend does not lag behind a tight one.
+        var target = Math.Clamp(Radius, Tightest, Widest);
+        _radius = double.IsNaN(_radius) ? target : 1 / Glide(1 / _radius, 1 / target, seconds, 0.12);
     }
+
+    /// <summary>
+    /// How far left of the car's middle the steering handle sits for a bend of <paramref name="radius"/>, pixels: in
+    /// proportion to how sharply it turns, <paramref name="reach"/> at the tightest bend.
+    /// </summary>
+    private static double Steer(double radius, double reach) => reach * Tightest / radius;
+
+    /// <summary>The bend (to half a metre) for the steering handle <paramref name="left"/> pixels left of the car's middle.</summary>
+    internal static double RadiusForSteer(double left, double reach) =>
+        left <= reach * Tightest / Widest ? Widest : Math.Clamp(Math.Round(reach * Tightest / left * 2) / 2, Tightest, Widest);
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
+        var radius = double.IsNaN(_radius) ? Math.Clamp(Radius, Tightest, Widest) : _radius;
         var top = new Rect(bounds.X, bounds.Y, bounds.Width, bounds.Height * 0.52);
         var perMetre = top.Width * 0.04;
         var car = new Point(top.Width * 0.62, top.Height * 0.62);
-        var centre = new Point(car.X - (Radius * perMetre), car.Y);
+        var centre = new Point(car.X - (radius * perMetre), car.Y);
         var half = Differential.Track / 2;
 
         // The road: a ring round the bend's centre, the car's rear axle on its line, heading up the page.
         using (context.PushClip(top))
         {
             var lane = 3.6 * perMetre;
-            context.DrawEllipse(null, new ImmutablePen(Road, lane), centre, Radius * perMetre, Radius * perMetre);
-            foreach (var (r, travelled, brush) in new[] { (Radius - half, _inner, DiagramText.Cyan), (Radius + half, _outer, DiagramText.Gold) })
+            context.DrawEllipse(null, new ImmutablePen(Road, lane), centre, radius * perMetre, radius * perMetre);
+            foreach (var (r, travelled, brush) in new[] { (radius - half, _inner, DiagramText.Cyan), (radius + half, _outer, DiagramText.Gold) })
             {
                 // Marks left by each wheel every metre it rolls: farther apart on the outside.
-                var radius = r * perMetre;
+                var track = r * perMetre;
                 for (var k = -30; k < 30; k++)
                 {
                     var along = k - (travelled % 1);
                     var a = -(along / r);
-                    var p = new Point(centre.X + (radius * Math.Cos(a)), centre.Y + (radius * Math.Sin(a)));
+                    var p = new Point(centre.X + (track * Math.Cos(a)), centre.Y + (track * Math.Sin(a)));
                     context.DrawEllipse(brush, null, p, 2.2, 2.2);
                 }
             }
 
             context.DrawRectangle(Body, new ImmutablePen(CarParts.Dark, 1.5), new Rect(car.X - (0.9 * perMetre), car.Y - (3.6 * perMetre), 1.8 * perMetre, 4.2 * perMetre), 6, 6);
+
+            // The front wheels, turned toward the bend's centre.
+            var turn = Math.Atan(Wheelbase / radius) * 180 / Math.PI;
+            foreach (var sideways in new[] { -half, half })
+            {
+                var hub = new Point(car.X + (sideways * perMetre), car.Y - (Wheelbase * perMetre));
+                using (context.PushTransform(Matrix.CreateTranslation(-hub.X, -hub.Y) * Matrix.CreateRotation(-turn * Math.PI / 180) * Matrix.CreateTranslation(hub.X, hub.Y)))
+                {
+                    context.FillRectangle(TyreBrush, new Rect(hub.X - (0.12 * perMetre), hub.Y - (0.3 * perMetre), 0.24 * perMetre, 0.6 * perMetre));
+                }
+            }
+
             context.FillRectangle(TyreBrush, new Rect(car.X - ((half + 0.12) * perMetre), car.Y - (0.3 * perMetre), 0.24 * perMetre, 0.6 * perMetre));
             context.FillRectangle(TyreBrush, new Rect(car.X + ((half - 0.12) * perMetre), car.Y - (0.3 * perMetre), 0.24 * perMetre, 0.6 * perMetre));
         }
+
+        // The reader's handle: the steering, just ahead of the bonnet, dragged left for a tighter bend.
+        var reach = Math.Min(top.Width * 0.3, car.X - top.X - 24);
+        var steerY = car.Y - (3.6 * perMetre) - 18;
+        context.DrawLine(new ImmutablePen(DiagramText.Faint, 1, new ImmutableDashStyle([3, 3], 0)), new Point(car.X - reach, steerY), new Point(car.X, steerY));
+        Grip("steer", new Point(car.X - Steer(radius, reach), steerY), GripAxis.Horizontal, DiagramText.Get("Car_Grip_Steer"),
+            at => Radius = RadiusForSteer(car.X - at.X, reach));
 
         Mark("road", [new Point(car.X - (half * perMetre), car.Y - (4 * perMetre)), new Point(car.X + (half * perMetre), car.Y + (4 * perMetre))], 10);
         DiagramText.Draw(context, DiagramText.Format("Car_Bend_Centre", Radius.ToString("0")), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);

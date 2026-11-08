@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -8,15 +10,17 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 
 /// <summary>
 /// Spread 5: the back of an automatic watch. The rotor swings as the wrist moves; through the reverser it turns the
-/// winding wheel, always forwards, and the mainspring fills; meanwhile the watch keeps using it.
+/// winding wheel, always forwards, and the mainspring fills; meanwhile the watch keeps using it. The reader can take the
+/// rotor and swing it by hand (it winds just the same), then let go and watch it swing back down under its own weight;
+/// a tap on the winding wheel puts the reverser in or takes it out.
 /// </summary>
 public sealed class RotorDiagram : GearPicture
 {
     public static readonly StyledProperty<double> ActivityProperty =
-        AvaloniaProperty.Register<RotorDiagram, double>(nameof(Activity), 0.6);
+        AvaloniaProperty.Register<RotorDiagram, double>(nameof(Activity), 0.6, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> ReverserProperty =
-        AvaloniaProperty.Register<RotorDiagram, bool>(nameof(Reverser), true);
+        AvaloniaProperty.Register<RotorDiagram, bool>(nameof(Reverser), true, defaultBindingMode: BindingMode.TwoWay);
 
     private static readonly double Pressure = 20 * Math.PI / 180;
     private static readonly IImmutableBrush Case = new ImmutableSolidColorBrush(Color.FromRgb(0x2A, 0x30, 0x3C));
@@ -25,6 +29,13 @@ public sealed class RotorDiagram : GearPicture
     private readonly AutoWinding _winding = new();
     private double _seconds;
     private double? _rotor;
+
+    /// <summary>How far the rotor is from where the wrist would have it (radians), and how fast that is changing: a hand
+    /// leaves it off, and it swings back like a pendulum, dying away.</summary>
+    private double _offset, _offsetSpeed;
+
+    /// <summary>The rotor's swing back after a hand lets go: its spring (per s²) and damping (per s).</summary>
+    private const double Pull = 18, Damping = 2.2;
 
     /// <summary>How lively the wrist is, 0 (still) to 1.</summary>
     public double Activity
@@ -45,7 +56,34 @@ public sealed class RotorDiagram : GearPicture
     protected override void Advance(double seconds)
     {
         _seconds += seconds;
-        var rotor = AutoWinding.RotorAngle(_seconds, Activity);
+        var wrist = AutoWinding.RotorAngle(_seconds, Activity);
+        if (Gripping)
+        {
+            // Held, it stays where the hand has it.
+            _offset = (_rotor ?? wrist) - wrist;
+            _offsetSpeed = 0;
+        }
+        else
+        {
+            // Let go, the weight swings back toward where the wrist would have it, the short way round (the same
+            // place on the dial, so nothing is wound by the change).
+            if (Math.Abs(_offset) > Math.PI)
+            {
+                var wrapped = Math.IEEERemainder(_offset, 2 * Math.PI);
+                _rotor += wrapped - _offset;
+                _offset = wrapped;
+            }
+
+            _offsetSpeed += ((-Pull * _offset) - (Damping * _offsetSpeed)) * seconds;
+            _offset += _offsetSpeed * seconds;
+        }
+
+        Turn(wrist + _offset, seconds);
+    }
+
+    /// <summary>Moves the rotor to <paramref name="rotor"/>, winding the spring by however far it went.</summary>
+    private void Turn(double rotor, double seconds)
+    {
         _winding.Reverser = Reverser;
         _winding.Step(rotor - (_rotor ?? rotor), seconds);
         _rotor = rotor;
@@ -83,7 +121,19 @@ public sealed class RotorDiagram : GearPicture
         Mark("wheel", wheel, radius * 0.22);
         Mark("barrel", barrel, radius * 0.28);
 
-        DiagramText.Draw(context, DiagramText.Get("Watch_Rotor_Rotor"), WatchParts.At(centre, radius * 0.6, down), 12, DiagramText.Ink, 0.5, 0.5, bold: true);
+        // The rotor's weight, to swing by hand: it follows the finger and winds as it goes.
+        Grip("rotor", WatchParts.At(centre, radius * 0.4, down), GripAxis.Free, DiagramText.Get("Watch_Grip_Rotor"), at =>
+        {
+            var now = _rotor ?? 0;
+            var towards = Math.Atan2(at.Y - centre.Y, at.X - centre.X) - (Math.PI / 2);
+            var rotor = now + Math.IEEERemainder(towards - now, 2 * Math.PI);
+            _offset = rotor - AutoWinding.RotorAngle(_seconds, Activity);
+            _offsetSpeed = 0;
+            Turn(rotor, 0);
+        });
+        Grip("reverser", wheel, GripAxis.Tap, DiagramText.Get("Watch_Grip_Reverser"), _ => Reverser = !Reverser);
+
+        DiagramText.Draw(context, DiagramText.Get("Watch_Rotor_Rotor"), WatchParts.At(centre, radius * 0.66, down), 12, DiagramText.Ink, 0.5, 0.5, bold: true);
         DiagramText.Draw(context, DiagramText.Get("Watch_Rotor_Wheel"), wheel + new Point(0, -(radius * 0.24)), 11.5, DiagramText.Faint, 0.5, 1);
 
         // The spring's reserve, as a bar.

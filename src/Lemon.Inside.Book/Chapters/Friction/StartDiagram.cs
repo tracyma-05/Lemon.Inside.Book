@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 using static Lemon.Inside.Book.Chapters.Friction.FrictionParts;
@@ -12,17 +14,32 @@ namespace Lemon.Inside.Book.Chapters.Friction;
 /// Spread 2: a hand pulling a box along a floor through a rope, the pull and the floor's friction drawn as arrows;
 /// below, the friction against the pull: it rises with the pull until the box breaks away, then drops to the smaller
 /// sliding friction and stays there.
+/// The reader drags the hand back to pull harder (it leans further the harder it pulls) and the box's top up for a
+/// heavier box. The pull eases to its new size, so the dot on the chart runs along the line and drops at the breakaway.
 /// </summary>
 public sealed class StartDiagram : GearPicture
 {
     public static readonly StyledProperty<double> BoxProperty =
-        AvaloniaProperty.Register<StartDiagram, double>(nameof(Box), 40);
+        AvaloniaProperty.Register<StartDiagram, double>(nameof(Box), 40, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> PullingProperty =
-        AvaloniaProperty.Register<StartDiagram, double>(nameof(Pulling));
+        AvaloniaProperty.Register<StartDiagram, double>(nameof(Pulling), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The chart's widest pull, kg-force.</summary>
     private const double MostPull = 40;
+
+    /// <summary>The lightest and heaviest box (the slider's ends), kg.</summary>
+    private const double Lightest = 20;
+    private const double Heaviest = 80;
+
+    /// <summary>How far the hand leans back at the hardest pull, pixels.</summary>
+    private const double Lean = 70;
+
+    /// <summary>The pull as drawn, easing toward <see cref="Pulling"/>; NaN until the first frame.</summary>
+    private double _pull = double.NaN;
+
+    /// <summary>How far the box has slid, pixels (it slides while the pull beats the floor's grip).</summary>
+    private double _slid;
 
     static StartDiagram()
     {
@@ -43,10 +60,37 @@ public sealed class StartDiagram : GearPicture
         set => SetValue(PullingProperty, value);
     }
 
+    /// <summary>The box's side, pixels, for a box of <paramref name="kg"/>.</summary>
+    private static double Side(double kg) => 50 + (kg * 0.9);
+
+    /// <summary>The box (to a kilogram) whose side is <paramref name="side"/> pixels.</summary>
+    internal static double BoxForSide(double side) => Math.Clamp(Math.Round((side - 50) / 0.9), Lightest, Heaviest);
+
+    /// <summary>The pull (to half a kilogram) for the hand leaning back <paramref name="lean"/> pixels.</summary>
+    internal static double PullForLean(double lean) => Math.Clamp(Math.Round(lean / Lean * MostPull * 2) / 2, 0, MostPull);
+
+    protected override void Advance(double seconds)
+    {
+        var pull = Math.Clamp(Pulling, 0, MostPull);
+        _pull = double.IsNaN(_pull) ? pull : Glide(_pull, pull, seconds, 0.1);
+
+        // Once it breaks free the box slides, faster the more the pull beats the sliding friction; it is set back after a while.
+        var box = Math.Clamp(Box, Lightest, Heaviest);
+        if (Drag.Moving(box, _pull))
+        {
+            _slid += (20 + ((_pull - Drag.Friction(box, _pull)) * 6)) * seconds;
+            if (_slid > 60) _slid = 0;
+        }
+        else
+        {
+            _slid = 0;
+        }
+    }
+
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var box = Math.Clamp(Box, 20, 80);
-        var pull = Math.Clamp(Pulling, 0, MostPull);
+        var box = Math.Clamp(Box, Lightest, Heaviest);
+        var pull = double.IsNaN(_pull) ? Math.Clamp(Pulling, 0, MostPull) : _pull;
         var moving = Drag.Moving(box, pull);
         var friction = Drag.Friction(box, pull);
 
@@ -55,14 +99,14 @@ public sealed class StartDiagram : GearPicture
         var floor = new Rect(bounds.X + 16, floorY, bounds.Width - 32, 14);
         context.DrawRectangle(Wood, Edge, floor, 3, 3);
         Mark("floor", floor);
-        var size = 50 + (box * 0.9);
-        var shift = moving ? (Seconds * 40) % 60 : 0;
+        var size = Side(box);
+        var shift = moving ? _slid : 0;
         var boxRect = new Rect(bounds.X + 50 + shift, floorY - size, size, size);
         context.DrawRectangle(Crate, Edge, boxRect, 4, 4);
         DiagramText.Draw(context, Kgf(box), boxRect.Center, 13, Dark, 0.5, 0.5, bold: true);
         Mark("box", boxRect);
         var ropeY = boxRect.Center.Y + (size * 0.15);
-        var handAt = new Point(bounds.Right - 70, ropeY);
+        var handAt = new Point(bounds.Right - 70 - Lean + (pull / MostPull * Lean), ropeY);
         context.DrawLine(Rope, new Point(boxRect.Right, ropeY), handAt);
         var hand = DrawHand(context, handAt, 34);
         Mark("hand", hand);
@@ -81,7 +125,7 @@ public sealed class StartDiagram : GearPicture
 
         if (moving)
         {
-            DiagramText.Draw(context, DiagramText.Get("Friction_Start_MovingLabel"), new Point(boxRect.Center.X, boxRect.Top - 10), 13, PullBrush, 0.5, 1, bold: true);
+            DiagramText.Draw(context, DiagramText.Get("Friction_Start_MovingLabel"), new Point(boxRect.Center.X, boxRect.Top - 16), 13, PullBrush, 0.5, 1, bold: true);
         }
 
         // The chart: friction against pull.
@@ -98,5 +142,12 @@ public sealed class StartDiagram : GearPicture
         DiagramText.Draw(context, DiagramText.Format("Friction_Start_SlidingLabel", Kgf(sliding)), new Point(plot.Right - 4, P(0, sliding).Y - 4), 11.5, DiagramText.Ink, 1, 1);
         Mark("chart", chartBox);
         DiagramText.Draw(context, DiagramText.Get("Friction_Start_Rule"), new Point(bounds.X + 16, bounds.Y + 16), 12, DiagramText.Faint);
+
+        // The reader's handles: the hand, leaned back to pull harder, and the box's top corner, raised for a bigger, heavier box.
+        var restX = bounds.Right - 70 - Lean;
+        Grip("pull", new Point(restX + (Math.Clamp(Pulling, 0, MostPull) / MostPull * Lean), ropeY), GripAxis.Horizontal,
+            DiagramText.Get("Friction_Grip_Pull"), p => Pulling = PullForLean(p.X - restX));
+        Grip("box", new Point(boxRect.X, boxRect.Top), GripAxis.Vertical, DiagramText.Get("Friction_Grip_Box"),
+            p => Box = BoxForSide(floorY - p.Y));
     }
 }

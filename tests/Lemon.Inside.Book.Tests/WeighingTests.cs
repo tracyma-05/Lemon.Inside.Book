@@ -2,7 +2,9 @@ using Avalonia.Controls;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using Lemon.Inside.Book.Chapters.Weighing;
+using Lemon.Book.Shell.Infrastructures.Timing;
 using Lemon.Inside.Book.Contents;
+using Lemon.Inside.Book.Controls;
 using Xunit;
 using static Lemon.Inside.Book.Tests.ChapterTestKit;
 
@@ -115,6 +117,15 @@ public sealed class WeighingTests
         }
     }
 
+    [Fact]
+    public void Solve_FindsTheValueThatDrawsAPlace()
+    {
+        Assert.Equal(3, WeighingParts.Solve(x => x * x, 9, 0, 5), 6);
+        Assert.Equal(0, WeighingParts.Solve(x => x * x, -4, 0, 5)); // beyond either end, the end
+        Assert.Equal(5, WeighingParts.Solve(x => x * x, 400, 0, 5));
+        Assert.Equal(1.5, WeighingParts.Solve(x => Math.Min(x, 2), 1.5, 0, 5), 6); // a drawing that stops moving (a beam on its stop) still works below the stop
+    }
+
     [AvaloniaFact]
     public void EverySpread_DrawsItsPicture()
     {
@@ -142,12 +153,96 @@ public sealed class WeighingTests
         (weighing.Roberval.Offset, weighing.Roberval.Parallel) = (5, true);
         (weighing.Strain.Mass, weighing.Strain.Warm, weighing.Strain.Bridge) = (4, true, false);
         (weighing.Moon.Place, weighing.Moon.Mass) = (1, 3);
-        for (var s = 0; s < pictures.Length; s++)
+        BookClock.BeginStepping();
+        try
         {
-            model.GoToPage(BookContents.SpreadPage(chapter, s));
-            Frames(10);
-            Snapshot(window, $"weighing-{s + 1}-changed");
+            for (var s = 0; s < pictures.Length; s++)
+            {
+                model.GoToPage(BookContents.SpreadPage(chapter, s));
+                Frames(2);
+
+                // Let the moving pictures settle: the beams stop swinging, the loads stop bobbing.
+                for (var i = 0; i < 240; i++)
+                {
+                    BookClock.Advance(1.0 / 30);
+                    Frames(1);
+                }
+
+                Snapshot(window, $"weighing-{s + 1}-changed");
+            }
         }
+        finally
+        {
+            BookClock.EndStepping();
+            window.Close();
+        }
+    }
+
+    [AvaloniaFact]
+    public void ThePictures_AreWorkedByTheirGrips()
+    {
+        var (window, model) = OpenAt("Weighing");
+        var chapter = BookContents.Chapters.ToList().FindIndex(c => c.Slug == "Weighing");
+        var weighing = Assert.IsType<WeighingTextPageViewModel>(model.Pages[BookContents.SpreadPage(chapter, 0)]).Weighing;
+        Avalonia.Point Far(Picture picture, string grip, double dx, double dy) =>
+            picture.GripCentre(grip)!.Value + new Avalonia.Vector(dx, dy);
+
+        Picture Open(int spread)
+        {
+            model.GoToPage(BookContents.SpreadPage(chapter, spread));
+            Frames(5);
+            var picture = window.GetVisualDescendants().OfType<Picture>().First(p => p.IsEffectivelyVisible);
+            Assert.NotEmpty(picture.MarkedGrips);
+            return picture;
+        }
+
+        var balance = Open(0);
+        balance.DragGrip("difference", Far(balance, "difference", 0, 2000));
+        Assert.Equal(20, weighing.Balance.Difference, 9);
+        balance.DragGrip("drop", Far(balance, "drop", 0, 2000));
+        Assert.Equal(4, weighing.Balance.Drop, 9);
+        Frames(2);
+        balance.DragGrip("difference", Far(balance, "difference", 0, -2000));
+        Assert.Equal(0, weighing.Balance.Difference, 9);
+
+        var steelyard = Open(1);
+        steelyard.DragGrip("poise", Far(steelyard, "poise", 2000, 0));
+        Assert.Equal(Steelyard.LongArm, weighing.Steelyard.Position, 9);
+        steelyard.DragGrip("sack", Far(steelyard, "sack", 0, 2000));
+        Assert.Equal(18, weighing.Steelyard.Sack, 9);
+        Frames(2);
+        steelyard.DragGrip("sack", Far(steelyard, "sack", 0, -2000));
+        Assert.Equal(2, weighing.Steelyard.Sack, 9);
+
+        var spring = Open(2);
+        spring.DragGrip("load", Far(spring, "load", 0, 2000));
+        Assert.Equal(8, weighing.Spring.Mass, 9);
+        spring.DragGrip("off", default);
+        Assert.True(weighing.Spring.Off);
+        Frames(2);
+        Assert.DoesNotContain("load", spring.MarkedGrips); // nothing hangs to drag
+        spring.DragGrip("off", default);
+        Assert.False(weighing.Spring.Off);
+
+        var roberval = Open(3);
+        roberval.DragGrip("offset", Far(roberval, "offset", 2000, 0));
+        Assert.Equal(6, weighing.Roberval.Offset, 9);
+        roberval.DragGrip("parallel", default);
+        Assert.True(weighing.Roberval.Parallel);
+
+        var strain = Open(4);
+        strain.DragGrip("mass", Far(strain, "mass", 0, 2000));
+        Assert.Equal(Gauge.FullLoad, weighing.Strain.Mass, 9);
+        strain.DragGrip("warm", default);
+        Assert.True(weighing.Strain.Warm);
+        strain.DragGrip("bridge", default);
+        Assert.True(weighing.Strain.Bridge);
+
+        var moon = Open(5);
+        moon.DragGrip("mass", Far(moon, "mass", 0, 2000));
+        Assert.Equal(5, weighing.Moon.Mass, 9);
+        moon.DragGrip("place", default);
+        Assert.Equal(1, weighing.Moon.Place);
 
         window.Close();
     }

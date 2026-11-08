@@ -1,5 +1,7 @@
 using System.Globalization;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -9,12 +11,14 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 
 /// <summary>
 /// Spread 2: the dial and, below, the going train laid out in a row, from the barrel to the escape wheel, each wheel
-/// with how fast it turns. Time runs at the speed the reader picks.
+/// with how fast it turns. Time runs at the speed the reader picks, speeding up and slowing down rather than jumping. The
+/// reader can set the watch by dragging the minute hand round (the whole train turns with it) and tap the crown to run
+/// time faster.
 /// </summary>
 public sealed class HandsDiagram : GearPicture
 {
-    public static readonly StyledProperty<double> SpeedProperty =
-        AvaloniaProperty.Register<HandsDiagram, double>(nameof(Speed), 60);
+    public static readonly StyledProperty<int> SpeedStepProperty =
+        AvaloniaProperty.Register<HandsDiagram, int>(nameof(SpeedStep), 1, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The time the picture starts at: 10:08:30, a watchmaker's favourite.</summary>
     public const double StartSeconds = (10 * 3600) + (8 * 60) + 30;
@@ -24,24 +28,57 @@ public sealed class HandsDiagram : GearPicture
     private static readonly IPen TickPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x30, 0x34, 0x3C)), 1);
     private static readonly IPen HourTickPen = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0x30, 0x34, 0x3C)), 3);
 
+    private static readonly IImmutableBrush Crown = new ImmutableSolidColorBrush(WatchParts.Brass);
+
     private double _seconds = StartSeconds;
 
-    /// <summary>How many times faster than real time the watch runs.</summary>
-    public double Speed
+    /// <summary>The speed time runs at now: it eases toward <see cref="Speed"/>; NaN until the first frame.</summary>
+    private double _speed = double.NaN;
+
+    /// <summary>Which of <see cref="HandsSpread.Speeds"/> the watch runs at, as the slider steps through them.</summary>
+    public int SpeedStep
     {
-        get => GetValue(SpeedProperty);
-        set => SetValue(SpeedProperty, value);
+        get => GetValue(SpeedStepProperty);
+        set => SetValue(SpeedStepProperty, value);
+    }
+
+    /// <summary>How many times faster than real time the watch runs.</summary>
+    public double Speed => HandsSpread.Speeds[Math.Clamp(SpeedStep, 0, HandsSpread.Speeds.Count - 1)];
+
+    /// <summary>The speed after a tap on the crown: the next faster, and back to real time after the fastest.</summary>
+    internal static int NextStep(int step) => (Math.Clamp(step, 0, HandsSpread.Speeds.Count - 1) + 1) % HandsSpread.Speeds.Count;
+
+    /// <summary>
+    /// The time with the minute hand turned to <paramref name="minuteAngle"/> (radians clockwise from 12), from
+    /// <paramref name="seconds"/>: the nearest way round, so the hour hand moves on as the minute hand goes past 12.
+    /// </summary>
+    internal static double SetTo(double seconds, double minuteAngle)
+    {
+        var now = GoingTrain.Hands(seconds).Minute * Math.PI / 180;
+        return seconds + (Math.IEEERemainder(minuteAngle - now, 2 * Math.PI) / (2 * Math.PI) * 3600);
     }
 
     /// <summary>The watch's time of day, in seconds.</summary>
     internal double Time => _seconds;
 
-    protected override void Advance(double seconds) => _seconds += seconds * Speed;
+    /// <summary>Time runs on, except while the reader holds the minute hand.</summary>
+    protected override void Advance(double seconds)
+    {
+        // Speeds span 1 to 3600, so ease on a log scale: each step up feels alike.
+        _speed = double.IsNaN(_speed) ? Speed : Math.Exp(Glide(Math.Log(_speed), Math.Log(Speed), seconds, 0.15));
+        if (!Gripping)
+        {
+            _seconds += seconds * _speed;
+        }
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var dial = Math.Min(bounds.Width * 0.2, bounds.Height * 0.2);
         var centre = new Point(bounds.Center.X, (bounds.Height * 0.06) + dial + 8);
+        // The crown at 3 o'clock, under the dial's edge.
+        var crown = new Point(centre.X + dial + 9, centre.Y);
+        context.FillRectangle(Crown, new Rect(crown.X - 9, crown.Y - 9, 14, 18), 3);
         DrawDial(context, centre, dial, _seconds);
         Mark("dial", centre, dial);
         var clock = TimeSpan.FromSeconds(_seconds % 86400);
@@ -49,6 +86,12 @@ public sealed class HandsDiagram : GearPicture
         var train = new Rect(bounds.X + 12, centre.Y + dial + 16, bounds.Width - 24, bounds.Bottom - centre.Y - dial - 24);
         DrawTrain(context, train, _seconds);
         Mark("train", train.Deflate(8));
+
+        // The minute hand's tip sets the time; a tap on the crown runs it faster.
+        var minute = GoingTrain.Hands(_seconds).Minute * Math.PI / 180;
+        Grip("minute", Hand(centre, dial * 0.66, minute), GripAxis.Free, DiagramText.Get("Watch_Grip_Minute"),
+            at => _seconds = SetTo(_seconds, Math.Atan2(at.X - centre.X, centre.Y - at.Y)));
+        Grip("crown", crown + new Point(4, 0), GripAxis.Tap, DiagramText.Get("Watch_Grip_Crown"), _ => SpeedStep = NextStep(SpeedStep));
     }
 
     /// <summary>A white dial with hour and minute marks and three hands.</summary>

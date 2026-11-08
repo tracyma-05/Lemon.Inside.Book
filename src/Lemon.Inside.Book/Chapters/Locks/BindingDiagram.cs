@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -9,15 +11,18 @@ namespace Lemon.Inside.Book.Chapters.Locks;
 /// <summary>
 /// Spread 4: the lock cut open with no key, a gentle turning force on the plug. The pin holding the plug is outlined in
 /// gold and nudged up and down; set pins have their drivers caught above the shear line. Under the lock, the plug's
-/// holes seen from above, their errors made a hundred times bigger.
+/// holes seen from above, their errors made a hundred times bigger. The reader taps the pick to lift the pin that holds
+/// up to the line, taps the turning tool to let go of it (the set pins drop), and taps the holes to drill them
+/// perfectly or as made. A pin being set rises with its driver until the driver catches on the plug's edge and the key
+/// pin falls back; let go, the drivers drop back down.
 /// </summary>
 public sealed class BindingDiagram : GearPicture
 {
     public static readonly StyledProperty<int> SetProperty =
-        AvaloniaProperty.Register<BindingDiagram, int>(nameof(Set));
+        AvaloniaProperty.Register<BindingDiagram, int>(nameof(Set), defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<bool> PerfectProperty =
-        AvaloniaProperty.Register<BindingDiagram, bool>(nameof(Perfect));
+        AvaloniaProperty.Register<BindingDiagram, bool>(nameof(Perfect), defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>How much bigger the holes' errors are drawn.</summary>
     private const double Exaggerate = 100;
@@ -27,6 +32,10 @@ public sealed class BindingDiagram : GearPicture
     private static readonly IPen Line = new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x90, 0xE6, 0xEA, 0xF2)), 1, new ImmutableDashStyle([4, 3], 0));
 
     private double _turn;
+
+    /// <summary>How far each pin's driver has been pushed up toward the line (1 caught), as drawn.</summary>
+    private readonly double[] _rise = new double[PinTumbler.Pins];
+    private bool _started;
 
     static BindingDiagram()
     {
@@ -47,8 +56,24 @@ public sealed class BindingDiagram : GearPicture
         set => SetValue(PerfectProperty, value);
     }
 
-    protected override void Advance(double seconds) =>
+    private HashSet<int> SetPins()
+    {
+        var offsets = Perfect ? new double[PinTumbler.Pins] : Binding.Offsets;
+        return Binding.Order(offsets).Take(Math.Clamp(Set, 0, PinTumbler.Pins)).ToHashSet();
+    }
+
+    protected override void Advance(double seconds)
+    {
         _turn = LocksParts.Ease(_turn, Set >= PinTumbler.Pins ? 1 : 0.06, 1.5, seconds);
+        var set = SetPins();
+        for (var i = 0; i < PinTumbler.Pins; i++)
+        {
+            var target = set.Contains(i) ? 1 : 0;
+            _rise[i] = _started ? LocksParts.Ease(_rise[i], target, target > _rise[i] ? 2.5 : 6, seconds) : target;
+        }
+
+        _started = true;
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
@@ -80,8 +105,20 @@ public sealed class BindingDiagram : GearPicture
             var room = PinTumbler.ShearLine - PinTumbler.Floor - length - 0.15;
             var bottom = PinTumbler.Floor + (i == pickAt ? room * lift : 0);
             var pen = holding.Contains(i) ? (holding.Count > 1 ? Jammed : HoldingPen) : null;
-            var (keyPin, _, driver, _) = LocksParts.DrawStack(context, s, i, bottom, length, 0, pen,
-                isSet.Contains(i) ? PinTumbler.ShearLine + 0.05 : null);
+
+            // A pin being set: pushed up whole until its driver clears the line, then the key pin drops back. Let go,
+            // the driver falls back onto its key pin.
+            var rise = _started ? _rise[i] : isSet.Contains(i) ? 1 : 0;
+            double? driverBottom = isSet.Contains(i) ? PinTumbler.ShearLine + 0.05 : null;
+            if (rise is > 0 and < 1)
+            {
+                var low = PinTumbler.Floor + length;
+                var at = low + ((PinTumbler.ShearLine + 0.05 - low) * rise);
+                driverBottom = at;
+                if (isSet.Contains(i)) bottom = at - length;
+            }
+
+            var (keyPin, _, driver, _) = LocksParts.DrawStack(context, s, i, bottom, length, 0, pen, driverBottom);
             if (holding.Contains(i)) Mark("binding", keyPin.Union(driver));
             if (isSet.Contains(i)) Mark("set", driver);
         }
@@ -119,5 +156,27 @@ public sealed class BindingDiagram : GearPicture
 
         DiagramText.Draw(context, DiagramText.Format("Locks_Binding_HolesLabel", Exaggerate), new Point(bounds.X + 16, row.Bottom + 6), 11.5, DiagramText.Faint);
         Mark("holes", row.Inflate(new Thickness(scale * 1.4)));
+
+        // The reader's handles: the pick's handle (a tap lifts the pin that holds to the line; with every pin jammed
+        // it can do nothing), the turning tool's handle (a tap lets go: every set pin drops), and the holes (a tap drills
+        // them perfectly in line, or as made).
+        if (set < PinTumbler.Pins)
+        {
+            if (pickAt < 0)
+            {
+                // Every pin jammed: the pick rests under the first, unable to lift it.
+                var pick = new ImmutablePen(LocksParts.KeyBrush, Math.Max(2, scale * 0.4), lineCap: PenLineCap.Round);
+                context.DrawLine(pick, s.At(-9, 1.2), s.At(PinTumbler.PinAt(0) - 1.6, 1.2));
+                context.DrawLine(pick, s.At(PinTumbler.PinAt(0) - 1.6, 1.2), s.At(PinTumbler.PinAt(0), PinTumbler.Floor));
+            }
+
+            var jammed = pickAt < 0;
+            Grip("pick", s.At(-9, 1.2), GripAxis.Tap, DiagramText.Get("Locks_Grip_Pick"),
+                _ => { if (!jammed) Set = Math.Min(PinTumbler.Pins, Set + 1); });
+        }
+
+        Grip("tension", s.At(-3, LocksParts.ShellBottom - 5), GripAxis.Tap, DiagramText.Get("Locks_Grip_LetGo"), _ => Set = 0);
+        Grip("perfect", new Point(row.X - (scale * 1.4) - 16, mid), GripAxis.Tap,
+            DiagramText.Get(Perfect ? "Locks_Grip_AsMade" : "Locks_Grip_Perfect"), _ => Perfect = !Perfect);
     }
 }

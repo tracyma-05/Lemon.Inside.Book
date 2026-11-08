@@ -1,6 +1,8 @@
 using Avalonia.Media.Immutable;
 using Avalonia.Media;
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,12 +10,13 @@ namespace Lemon.Inside.Book.Chapters.Gears;
 
 /// <summary>
 /// Spread 2: a hand crank on a small gold gear turns a big gear with a drum on its axle; the drum winds up a rope and
-/// lifts a weight. Below, bars compare the two axles' speed and turning force.
+/// lifts a weight. Below, bars compare the two axles' speed and turning force. The reader can take the crank's handle and
+/// wind the weight up by hand (the motor waits while the handle is held), and drag the big gear's rim to change its teeth.
 /// </summary>
 public sealed class TorqueDiagram : GearPicture
 {
     public static readonly StyledProperty<int> DrivenTeethProperty =
-        AvaloniaProperty.Register<TorqueDiagram, int>(nameof(DrivenTeeth), 36);
+        AvaloniaProperty.Register<TorqueDiagram, int>(nameof(DrivenTeeth), 36, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>Teeth on the crank's gear.</summary>
     public const int CrankTeeth = 12;
@@ -41,14 +44,33 @@ public sealed class TorqueDiagram : GearPicture
         set => SetValue(DrivenTeethProperty, value);
     }
 
-    protected override void Advance(double seconds) => _turns += CrankSpeed * seconds;
+    /// <summary>The slider's range of the big gear's teeth.</summary>
+    private const int FewestTeeth = 12, MostTeeth = 60;
+
+    /// <summary>Turns of the crank so far (for the tests).</summary>
+    internal double Turns => _turns;
+
+    /// <summary>The crank turns by itself, except while the reader holds a grip (the handle turns it by hand then).</summary>
+    protected override void Advance(double seconds)
+    {
+        if (!Gripping)
+        {
+            _turns += CrankSpeed * seconds;
+        }
+    }
+
+    private static double ScaleFor(Rect bounds, int drivenTeeth)
+    {
+        double r1 = GearGeometry.PitchRadius(CrankTeeth), r2 = GearGeometry.PitchRadius(drivenTeeth);
+        return Math.Min(bounds.Width * 0.8 / ((2 * r1) + (2 * r2) + 10), bounds.Height * 0.5 / ((2 * r2) + 2));
+    }
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
         var z2 = DrivenTeeth;
         double r1 = GearGeometry.PitchRadius(CrankTeeth), r2 = GearGeometry.PitchRadius(z2);
         var ratio = (double)z2 / CrankTeeth;
-        var scale = Math.Min(bounds.Width * 0.8 / ((2 * r1) + (2 * r2) + 10), bounds.Height * 0.5 / ((2 * r2) + 2));
+        var scale = ScaleFor(bounds, z2);
         var y = bounds.Height * 0.36;
         var c2 = new Point(bounds.Width * 0.6, y);
         var c1 = new Point(c2.X - ((r1 + r2) * scale), y);
@@ -70,7 +92,8 @@ public sealed class TorqueDiagram : GearPicture
         var box = Math.Max(16, Math.Min(40, scale * 4));
         var top = c2.Y + drum + 8;
         var travel = Math.Max(1, floor - box - top);
-        var climbed = 2 * Math.PI * drum * (_turns / ratio) % travel;
+        var wound = 2 * Math.PI * drum * (_turns / ratio);
+        var climbed = ((wound % travel) + travel) % travel; // cranked backwards, it lowers (and wraps the same way)
         var boxTop = floor - box - climbed;
         var ropeX = c2.X + drum;
         context.DrawLine(RopePen, new Point(ropeX, c2.Y), new Point(ropeX, boxTop));
@@ -82,7 +105,13 @@ public sealed class TorqueDiagram : GearPicture
         var handle = ToScreen(new Point(Math.Cos(a1) * (r1 + 3), Math.Sin(a1) * (r1 + 3)), c1, scale);
         context.DrawLine(HandlePen, c1, handle);
         context.DrawEllipse(DiagramText.Gold, null, handle, 6, 6);
-        DiagramText.Draw(context, DiagramText.Get("Gears_Torque_Hand"), new Point(c1.X, c1.Y - ((r1 + 5) * scale)), 12, DiagramText.Gold, 0.5, 1);
+        DiagramText.Draw(context, DiagramText.Get("Gears_Torque_Hand"), new Point(c1.X, c1.Y - ((r1 + 3) * scale) - 20), 12, DiagramText.Gold, 0.5, 1);
+
+        // The handle turns the crank by hand; the big gear's rim drags it bigger or smaller.
+        Grip("crank", handle, GripAxis.Free, DiagramText.Get("Gears_Grip_Crank"),
+            at => _turns = -GearsGrips.Follow(-2 * Math.PI * _turns, GearsGrips.AngleOf(c1, at)) / (2 * Math.PI));
+        Grip("drivenTeeth", new Point(c2.X, y - (r2 * scale)), GripAxis.Vertical, DiagramText.Get("Gears_Grip_DrumTeeth"),
+            at => DrivenTeeth = GearsGrips.Nearest(FewestTeeth, MostTeeth, y - at.Y, z => GearGeometry.PitchRadius(z) * ScaleFor(bounds, z)));
 
         var bars = new Rect(bounds.X + 18, floor + 10, bounds.Width - 36, bounds.Height - floor - 18);
         DrawBars(context, bars, ratio);

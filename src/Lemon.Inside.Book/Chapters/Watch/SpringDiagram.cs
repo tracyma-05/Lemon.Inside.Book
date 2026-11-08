@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.Data;
+using Lemon.Inside.Book.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
 using Lemon.Inside.Book.Controls.Mechanics;
@@ -8,12 +10,14 @@ namespace Lemon.Inside.Book.Chapters.Watch;
 
 /// <summary>
 /// Spread 1: the mainspring in its barrel, seen from above. Wound, its coils wrap tight round the arbor in the middle;
-/// run down, they lie against the barrel's wall. Beside it, how hard it pulls and how long it will run.
+/// run down, they lie against the barrel's wall. Beside it, how hard it pulls and how long it will run. The reader winds
+/// it by dragging round the arbor's key (five turns from flat to full, as in the watch) or pulls the hours gauge up; set
+/// from the slider or the walkthrough, the coils tighten or slacken smoothly instead of jumping.
 /// </summary>
 public sealed class SpringDiagram : GearPicture
 {
     public static readonly StyledProperty<double> WoundProperty =
-        AvaloniaProperty.Register<SpringDiagram, double>(nameof(Wound), 0.6);
+        AvaloniaProperty.Register<SpringDiagram, double>(nameof(Wound), 0.6, defaultBindingMode: BindingMode.TwoWay);
 
     private const int Coils = 11;
     private static readonly double Pressure = 20 * Math.PI / 180;
@@ -32,7 +36,33 @@ public sealed class SpringDiagram : GearPicture
         set => SetValue(WoundProperty, value);
     }
 
-    protected override bool Animates => false;
+    /// <summary>How wound the spring is drawn: it eases toward <see cref="Wound"/>; NaN until first drawn.</summary>
+    private double _shown = double.NaN;
+
+    /// <summary>How wound the spring is drawn now (for the tests).</summary>
+    internal double Shown => _shown;
+
+    /// <summary>The spring's outline for <see cref="_shownFor"/>, kept while the spring is still (900 points a frame is not free).</summary>
+    private StreamGeometry? _spring;
+    private (double Wound, Point Centre, double Radius) _shownFor;
+
+    protected override void Advance(double seconds)
+    {
+        var target = Math.Clamp(Wound, 0, 1);
+        _shown = double.IsNaN(_shown) || Math.Abs(_shown - target) < 0.0005 ? target : Glide(_shown, target, seconds, 0.1);
+    }
+
+    /// <summary>
+    /// How wound the spring is when the arbor has turned to <paramref name="towards"/> (radians, clockwise on screen),
+    /// counted on from <paramref name="wound"/>: the nearest way round, so a drag follows the finger turn after turn.
+    /// </summary>
+    internal static double WoundAt(double wound, double towards)
+    {
+        var full = GoingTrain.SpringTurns * 2 * Math.PI;
+        var turned = wound * full;
+        turned += Math.IEEERemainder(towards - turned, 2 * Math.PI);
+        return Math.Clamp(turned / full, 0, 1);
+    }
 
     /// <summary>How far from the centre the spring is at <paramref name="along"/> (0 inner end to 1 outer end), as a share of the barrel's radius.</summary>
     public static double CoilRadius(double along, double wound)
@@ -45,7 +75,12 @@ public sealed class SpringDiagram : GearPicture
 
     protected override void Draw(DrawingContext context, Rect bounds)
     {
-        var wound = Math.Clamp(Wound, 0, 1);
+        if (double.IsNaN(_shown))
+        {
+            _shown = Math.Clamp(Wound, 0, 1);
+        }
+
+        var wound = _shown;
         var radius = Math.Min(bounds.Width * 0.3, bounds.Height * 0.32);
         var centre = new Point(bounds.Width * 0.38, bounds.Height * 0.46);
 
@@ -55,21 +90,27 @@ public sealed class SpringDiagram : GearPicture
 
         // The spring: its inner end hooks on the arbor, which winding turns; the coils outside it turn less.
         var turned = wound * GoingTrain.SpringTurns * 2 * Math.PI;
-        var spring = new StreamGeometry();
-        using (var g = spring.Open())
+        if (_spring is null || _shownFor != (wound, centre, radius))
         {
-            const int Steps = 900;
-            for (var i = 0; i <= Steps; i++)
+            _spring = new StreamGeometry();
+            using (var g = _spring.Open())
             {
-                var s = (double)i / Steps;
-                var p = WatchParts.At(centre, radius * CoilRadius(s, wound), (s * Coils * 2 * Math.PI) + (turned * (1 - s)));
-                if (i == 0) g.BeginFigure(p, false);
-                else g.LineTo(p);
+                const int Steps = 900;
+                for (var i = 0; i <= Steps; i++)
+                {
+                    var s = (double)i / Steps;
+                    var p = WatchParts.At(centre, radius * CoilRadius(s, wound), (s * Coils * 2 * Math.PI) + (turned * (1 - s)));
+                    if (i == 0) g.BeginFigure(p, false);
+                    else g.LineTo(p);
+                }
+
+                g.EndFigure(false);
             }
 
-            g.EndFigure(false);
+            _shownFor = (wound, centre, radius);
         }
 
+        var spring = _spring;
         context.DrawGeometry(null, new ImmutablePen(new ImmutableSolidColorBrush(Color.FromRgb(0xA8, 0xC4, 0xE8)), Math.Max(1.4, radius * 0.012)), spring);
         context.DrawEllipse(new ImmutableSolidColorBrush(WatchParts.Steel), null, centre, radius * 0.18, radius * 0.18);
         var square = radius * 0.08;
@@ -92,6 +133,24 @@ public sealed class SpringDiagram : GearPicture
         Gauge(context, new Rect(x - width - 14, top, width, height), wound, DiagramText.Gold, DiagramText.Get("Watch_Spring_Pull"));
         Gauge(context, new Rect(x + 14, top, width, height), wound, DiagramText.Cyan,
             DiagramText.Format("Watch_Spring_Hours", (wound * GoingTrain.ReserveHours).ToString("0")));
+
+        // The winding key on the arbor: dragged round (clockwise winds), the spring follows the finger at once.
+        var key = WatchParts.At(centre, radius * 0.5, turned);
+        context.DrawLine(new ImmutablePen(new ImmutableSolidColorBrush(WatchParts.Steel), Math.Max(3, radius * 0.05), lineCap: PenLineCap.Round),
+            WatchParts.At(centre, radius * 0.18, turned), key);
+        Grip("arbor", key, GripAxis.Free, DiagramText.Get("Watch_Grip_Arbor"), at =>
+        {
+            Wound = WoundAt(_shown, Math.Atan2(at.Y - centre.Y, at.X - centre.X)); // on from the key under the finger
+            _shown = Wound;
+        });
+
+        // The hours gauge's top: pulled up, more hours.
+        var hours = new Rect(x + 14, top, width, height);
+        Grip("hours", new Point(hours.Center.X, hours.Bottom - (hours.Height * wound)), GripAxis.Vertical, DiagramText.Get("Watch_Grip_Hours"), at =>
+        {
+            Wound = Math.Round(Math.Clamp((hours.Bottom - at.Y) / hours.Height, 0, 1), 2);
+            _shown = Wound;
+        });
     }
 
     private static void Gauge(DrawingContext context, Rect area, double share, IBrush brush, string label)

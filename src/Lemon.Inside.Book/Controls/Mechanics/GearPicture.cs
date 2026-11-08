@@ -40,6 +40,12 @@ public abstract class GearPicture : Picture
     /// <summary>Seconds on the book's clock since the picture came on screen.</summary>
     protected double Seconds => _clock.Elapsed.TotalSeconds;
 
+    protected override double GripPulse => Animates ? 0.5 + (0.5 * Math.Sin(Seconds * 3)) : 0;
+
+    /// <summary>Eases <paramref name="value"/> toward <paramref name="target"/>, about a third of the way in <paramref name="time"/> seconds.</summary>
+    protected static double Glide(double value, double target, double seconds, double time = 0.12) =>
+        value + ((target - value) * (1 - Math.Exp(-seconds / time * 0.4)));
+
     /// <summary>Called every frame while on screen with the seconds since the last one (for motion that can change speed).</summary>
     protected virtual void Advance(double seconds)
     {

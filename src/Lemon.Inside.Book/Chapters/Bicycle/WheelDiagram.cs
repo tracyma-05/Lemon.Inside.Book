@@ -1,6 +1,8 @@
 using Avalonia;
+using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
+using Lemon.Inside.Book.Controls;
 using Lemon.Inside.Book.Controls.Mechanics;
 using Lemon.Inside.Book.Controls.Scene;
 
@@ -8,21 +10,26 @@ namespace Lemon.Inside.Book.Chapters.Bicycle;
 
 /// <summary>
 /// Spread 1: a wheel rolling slowly under a load, its spokes coloured by how hard each one pulls. The spokes passing
-/// under the hub pull less; with spokes built too loose they go slack (red, bowed).
+/// under the hub pull less; with spokes built too loose they go slack (red, bowed). The reader drags the load arrow's
+/// tail up for more weight and the grip on the colour key along to build the spokes tighter or looser.
 /// </summary>
 public sealed class WheelDiagram : GearPicture
 {
     public static readonly StyledProperty<double> TensionProperty =
-        AvaloniaProperty.Register<WheelDiagram, double>(nameof(Tension), 1000);
+        AvaloniaProperty.Register<WheelDiagram, double>(nameof(Tension), 1000, defaultBindingMode: BindingMode.TwoWay);
 
     public static readonly StyledProperty<double> LoadProperty =
-        AvaloniaProperty.Register<WheelDiagram, double>(nameof(Load), 60);
+        AvaloniaProperty.Register<WheelDiagram, double>(nameof(Load), 60, defaultBindingMode: BindingMode.TwoWay);
 
     /// <summary>The wheel's roll, radians per second.</summary>
     private const double RollSpeed = 0.18;
 
     /// <summary>The pull the colours run up to, newtons.</summary>
     private const double MostPull = 1500;
+
+    /// <summary>The sliders' ranges: kilograms on the wheel, newtons in each spoke.</summary>
+    private const double MostLoad = 150;
+    private const double LeastTension = 100;
 
     private static readonly Color Loose = Color.FromRgb(0x4A, 0x55, 0x6A);
     private static readonly Color Taut = Color.FromRgb(0xF2, 0xC9, 0x4C);
@@ -106,10 +113,13 @@ public sealed class WheelDiagram : GearPicture
         Mark("bottom", Sector(centre, hubRadius, rim, Math.PI / 2));
         Mark("top", Sector(centre, hubRadius * 1.5, rim, -Math.PI / 2));
 
-        // The load pressing on the axle.
-        var arrowTop = new Point(centre.X, centre.Y - (radius * 0.42));
+        // The load pressing on the axle: the heavier, the longer the arrow (its tail is the reader's grip).
         var arrowTip = new Point(centre.X, centre.Y - hubRadius - 3);
-        var width = 3 + (Load / 150 * 6);
+        var shortest = hubRadius + 26;
+        var longest = radius * 0.8;
+        double TailY(double kilograms) => centre.Y - shortest - ((longest - shortest) * Math.Clamp(kilograms, 0, MostLoad) / MostLoad);
+        var arrowTop = new Point(centre.X, TailY(Load));
+        var width = 3 + (Load / MostLoad * 6);
         if (Load > 0.5)
         {
             context.DrawLine(new ImmutablePen(new ImmutableSolidColorBrush(Color.FromArgb(0x99, 0x05, 0x08, 0x10)), width + 4), arrowTop, arrowTip);
@@ -117,8 +127,10 @@ public sealed class WheelDiagram : GearPicture
             DiagramText.DrawArrowAlong(context, arrowTop, arrowTip, new ImmutableSolidColorBrush(GearPicture.Copper), 10 + width);
         }
 
-        DiagramText.Draw(context, DiagramText.Format("Bicycle_Kilograms", Load.ToString("0")), arrowTop - new Point(0, 4), 13, DiagramText.Ink, 0.5, 1, bold: true);
-        Mark("load", [arrowTop - new Point(0, 18), arrowTip], 6);
+        DiagramText.Draw(context, DiagramText.Format("Bicycle_Kilograms", Load.ToString("0")), arrowTop + new Point(17, 0), 13, DiagramText.Ink, 0, 0.5, bold: true);
+        Mark("load", [arrowTop - new Point(0, 12), arrowTip], 6);
+        Grip("load", arrowTop, GripAxis.Vertical, DiagramText.Get("Bicycle_Grip_Load"),
+            at => Load = Math.Round(Math.Clamp((centre.Y - shortest - at.Y) / (longest - shortest) * MostLoad, 0, MostLoad)));
 
         // The spokes now straight up and straight down, and what they pull.
         int Nearest(double target)
@@ -146,8 +158,13 @@ public sealed class WheelDiagram : GearPicture
         context.FillRectangle(new ImmutableLinearGradientBrush(
             [new ImmutableGradientStop(0, Slack), new ImmutableGradientStop(0.08, Slack), new ImmutableGradientStop(0.1, Loose), new ImmutableGradientStop(1, Taut)],
             startPoint: new RelativePoint(0, 0, RelativeUnit.Relative), endPoint: new RelativePoint(1, 0, RelativeUnit.Relative)), key, 3);
-        DiagramText.Draw(context, DiagramText.Get("Bicycle_Wheel_KeySlack"), new Point(key.X, key.Bottom + 3), 11.5, DiagramText.Faint);
-        DiagramText.Draw(context, DiagramText.Get("Bicycle_Wheel_KeyTight"), new Point(key.Right, key.Bottom + 3), 11.5, DiagramText.Faint, 1);
+        DiagramText.Draw(context, DiagramText.Get("Bicycle_Wheel_KeySlack"), new Point(key.X, key.Bottom + 9), 11.5, DiagramText.Faint);
+        DiagramText.Draw(context, DiagramText.Get("Bicycle_Wheel_KeyTight"), new Point(key.Right, key.Bottom + 9), 11.5, DiagramText.Faint, 1);
+
+        // How tight the spokes were built, dragged along the key: the grip sits on the colour of a spoke at rest.
+        Grip("tension", new Point(key.X + (key.Width * Math.Clamp(Tension, LeastTension, MostPull) / MostPull), key.Center.Y), GripAxis.Horizontal,
+            DiagramText.Get("Bicycle_Grip_Tension"),
+            at => Tension = Math.Round(Math.Clamp((at.X - key.X) / key.Width * MostPull, LeastTension, MostPull) / 10) * 10);
     }
 
     /// <summary>The points of a slice of the wheel 70° wide round <paramref name="angle"/> (screen), from <paramref name="inner"/> to <paramref name="outer"/>.</summary>

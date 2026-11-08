@@ -185,3 +185,32 @@ public static class Deck
     public static double Push(double temperature) =>
         Math.Abs(Stiffness * Growth * (temperature - Mild) * Section) / 9810;
 }
+
+/// <summary>
+/// A value on a damped spring, for the pictures: pulled toward its target, it overshoots and settles the way a loaded
+/// plank or a pushed frame does. <see cref="Step"/> moves it on by the book's clock in small steps, so a slow frame
+/// cannot make it fly apart.
+/// </summary>
+public readonly record struct Bounce(double Value, double Speed)
+{
+    /// <summary>
+    /// The value <paramref name="seconds"/> later, sprung toward <paramref name="target"/> at <paramref name="frequency"/>
+    /// (radians a second) with <paramref name="damping"/> (0: rings for ever, 1: just no overshoot).
+    /// </summary>
+    public Bounce Step(double target, double seconds, double frequency, double damping)
+    {
+        var (x, v) = (Value, Speed);
+        var steps = Math.Max(1, (int)Math.Ceiling(seconds * 240));
+        var dt = seconds / steps;
+        for (var i = 0; i < steps; i++)
+        {
+            v += ((-frequency * frequency * (x - target)) - (2 * damping * frequency * v)) * dt;
+            x += v * dt;
+        }
+
+        return new Bounce(x, v);
+    }
+
+    /// <summary>At rest on <paramref name="target"/>.</summary>
+    public static Bounce At(double target) => new(target, 0);
+}
