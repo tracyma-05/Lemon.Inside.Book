@@ -9972,4 +9972,610 @@
   <data name="Narr_Tesseract_Net_Part_Opposite" xml:space="preserve">
     <value>The one cube it never touches, folded or not, like the top and bottom of a box.</value>
   </data>
+  <data name="Chapter_Gps" xml:space="preserve">
+    <value>How GPS finds you</value>
+  </data>
+  <data name="Gps_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Gps_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Gps_Km" xml:space="preserve">
+    <value>{0} km</value>
+  </data>
+  <data name="Gps_Ms" xml:space="preserve">
+    <value>{0} ms</value>
+  </data>
+  <data name="Gps_Us" xml:space="preserve">
+    <value>{0} µs</value>
+  </data>
+  <data name="Gps_Days" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="Gps_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Gps_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Gps_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Gps_Period" xml:space="preserve">
+    <value>{0} h {1} min</value>
+  </data>
+  <data name="Gps_Grip_Delay" xml:space="preserve">
+    <value>Drag to change the travel time</value>
+  </data>
+  <data name="Gps_Grip_You" xml:space="preserve">
+    <value>Drag to move yourself on the map</value>
+  </data>
+  <data name="Gps_Grip_Count" xml:space="preserve">
+    <value>Tap to use one, two or three satellites</value>
+  </data>
+  <data name="Gps_Grip_Offset" xml:space="preserve">
+    <value>Drag to set the receiver's clock fast or slow</value>
+  </data>
+  <data name="Gps_Grip_Days" xml:space="preserve">
+    <value>Drag to let the days go by</value>
+  </data>
+  <data name="Gps_Grip_Corrected" xml:space="preserve">
+    <value>Tap to correct the clock before launch, or not</value>
+  </data>
+  <data name="Gps_Grip_Height" xml:space="preserve">
+    <value>Drag to raise or lower the orbit</value>
+  </data>
+  <data name="Gps_Grip_Satellite" xml:space="preserve">
+    <value>Drag the satellite round the sky</value>
+  </data>
+  <data name="Gps_Grip_Error" xml:space="preserve">
+    <value>Drag to change the error</value>
+  </data>
+  <data name="Gps_Echo_Title" xml:space="preserve">
+    <value>A delay is a distance</value>
+  </data>
+  <data name="Gps_Echo_P1" xml:space="preserve">
+    <value>A GPS satellite does one thing over and over: it sends out a radio message saying which satellite it is, where it is, and exactly what time it was when the message left. Your phone listens, and notes when the message arrives. Radio travels at the speed of light, about 300,000 kilometres a second, so the delay between the two times says how far the message came.</value>
+  </data>
+  <data name="Gps_Echo_P2" xml:space="preserve">
+    <value>A satellite overhead is 20,200 kilometres up, and its message takes about 67 thousandths of a second to reach you; one near the horizon is farther away, about 86 thousandths. Knowing that distance puts you somewhere on a huge sphere around the satellite: on the ground, somewhere on the circle where the sphere meets the Earth. One satellite can't say more than that.</value>
+  </data>
+  <data name="Gps_Echo_Deeper" xml:space="preserve">
+    <value>Your phone never sends anything to the satellites; it only listens, which is why GPS works for any number of people at once, and why it works with no phone signal at all. Because light is so fast, the timing has to be extraordinary: a millionth of a second of error is 300 metres, and a thousandth of a second is 300 kilometres. The satellites carry atomic clocks so that their times are right to a few billionths of a second.</value>
+  </data>
+  <data name="Gps_Echo_Delay" xml:space="preserve">
+    <value>Signal's travel time</value>
+  </data>
+  <data name="Gps_Echo_Readout" xml:space="preserve">
+    <value>The signal took {0} ms, so the satellite is {1} away. You are somewhere on a sphere that size around it.</value>
+  </data>
+  <data name="Gps_Echo_Overhead" xml:space="preserve">
+    <value>That is its height: it is straight overhead.</value>
+  </data>
+  <data name="Gps_Echo_Nowhere" xml:space="preserve">
+    <value>No place on the ground is that far from it.</value>
+  </data>
+  <data name="Gps_Echo_Picture" xml:space="preserve">
+    <value>A GPS satellite above the Earth, to scale, with the circle of places its signal could have reached</value>
+  </data>
+  <data name="Gps_Echo_Sent" xml:space="preserve">
+    <value>Sent at 0 ms</value>
+  </data>
+  <data name="Gps_Echo_Arrived" xml:space="preserve">
+    <value>Arrived {0} ms later</value>
+  </data>
+  <data name="Gps_Echo_Distance" xml:space="preserve">
+    <value>{0} away</value>
+  </data>
+  <data name="Gps_Echo_Height" xml:space="preserve">
+    <value>height {0}</value>
+  </data>
+  <data name="Gps_Echo_Rule" xml:space="preserve">
+    <value>Distance = time × the speed of light</value>
+  </data>
+  <data name="Narr_Gps_Echo_01" xml:space="preserve">
+    <value>A GPS satellite, twenty thousand two hundred kilometres up, drawn to scale with the Earth.</value>
+  </data>
+  <data name="Narr_Gps_Echo_02" xml:space="preserve">
+    <value>It sends out a message saying when it left. Radio goes at the speed of light, so the time it takes is a distance.</value>
+  </data>
+  <data name="Narr_Gps_Echo_03" xml:space="preserve">
+    <value>Your turn: set the travel time so that the satellite is straight overhead.</value>
+  </data>
+  <data name="Narr_Gps_Echo_04" xml:space="preserve">
+    <value>Usually the sphere meets the ground in a whole ring below the satellite; in this cut through the Earth, the ring shows as two points. One satellite can't tell you where on it you are.</value>
+  </data>
+  <data name="Narr_Gps_Echo_05" xml:space="preserve">
+    <value>A receiver's clock is a thousandth of a second wrong. How far off is the distance it works out?</value>
+  </data>
+  <data name="Gps_Echo_Quiz1" xml:space="preserve">
+    <value>30 metres</value>
+  </data>
+  <data name="Gps_Echo_Quiz2" xml:space="preserve">
+    <value>300 metres</value>
+  </data>
+  <data name="Gps_Echo_Quiz3" xml:space="preserve">
+    <value>300 kilometres</value>
+  </data>
+  <data name="Gps_Echo_Part_Satellite" xml:space="preserve">
+    <value>The satellite</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Satellite" xml:space="preserve">
+    <value>One of about thirty GPS satellites. It keeps sending its position and the exact time.</value>
+  </data>
+  <data name="Gps_Echo_Part_Pulse" xml:space="preserve">
+    <value>The signal</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Pulse" xml:space="preserve">
+    <value>Spreading out at the speed of light, about 300,000 kilometres a second.</value>
+  </data>
+  <data name="Gps_Echo_Part_Circle" xml:space="preserve">
+    <value>Every place that far</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Circle" xml:space="preserve">
+    <value>All the places the signal could have reached in the time it took.</value>
+  </data>
+  <data name="Gps_Echo_Part_Places" xml:space="preserve">
+    <value>Where you could be</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Places" xml:space="preserve">
+    <value>Where that circle meets the ground.</value>
+  </data>
+  <data name="Gps_Fix_Title" xml:space="preserve">
+    <value>Circles crossing</value>
+  </data>
+  <data name="Gps_Fix_P1" xml:space="preserve">
+    <value>Picture the ground as a flat map, with the satellites above it. Your distance from one satellite puts you somewhere on a circle around it. A second satellite gives a second circle, and you must be on both: two circles cross at just two points. A third circle passes through only one of them, and that is where you are.</value>
+  </data>
+  <data name="Gps_Fix_P2" xml:space="preserve">
+    <value>In real space the circles are spheres. Two spheres cross in a circle, and a third sphere cuts that circle at two points; usually one of them is far out in space or deep inside the Earth, so a receiver can throw it away. Finding a place from distances like this is called trilateration. It needs no angles and no compass, only distances.</value>
+  </data>
+  <data name="Gps_Fix_Deeper" xml:space="preserve">
+    <value>People found their way with distances long before satellites. A ship that sees a lighthouse's flash and hears its foghorn sounded at the same moment can tell how far away it is from the gap between them, since sound is much slower than light; two such lighthouses fix its place on a chart. GPS does the same with radio from satellites, timed by clocks far more precise than any foghorn.</value>
+  </data>
+  <data name="Gps_Fix_Count" xml:space="preserve">
+    <value>Satellites used</value>
+  </data>
+  <data name="Gps_Fix_East" xml:space="preserve">
+    <value>East–west</value>
+  </data>
+  <data name="Gps_Fix_North" xml:space="preserve">
+    <value>North–south</value>
+  </data>
+  <data name="Gps_Fix_One" xml:space="preserve">
+    <value>Knowing your distance from one satellite, you could be anywhere on a circle around it.</value>
+  </data>
+  <data name="Gps_Fix_Two" xml:space="preserve">
+    <value>With two, the circles cross at two points: you are at one of them.</value>
+  </data>
+  <data name="Gps_Fix_Three" xml:space="preserve">
+    <value>With three, only one point is on all three circles: you are here.</value>
+  </data>
+  <data name="Gps_Fix_Picture" xml:space="preserve">
+    <value>A flat map with three satellites, a circle round each one used, and where the circles cross</value>
+  </data>
+  <data name="Gps_Fix_Using" xml:space="preserve">
+    <value>Using {0} of 3 satellites</value>
+  </data>
+  <data name="Gps_Fix_ShowOne" xml:space="preserve">
+    <value>Anywhere on the circle</value>
+  </data>
+  <data name="Gps_Fix_ShowTwo" xml:space="preserve">
+    <value>One of two points</value>
+  </data>
+  <data name="Gps_Fix_ShowThree" xml:space="preserve">
+    <value>Just one point</value>
+  </data>
+  <data name="Gps_Fix_Rule" xml:space="preserve">
+    <value>Each circle: every place as far from that satellite as you are.</value>
+  </data>
+  <data name="Narr_Gps_Fix_01" xml:space="preserve">
+    <value>Knowing how far you are from one satellite puts you somewhere on this circle.</value>
+  </data>
+  <data name="Narr_Gps_Fix_02" xml:space="preserve">
+    <value>A second satellite adds a second circle. You must be on both, so you are at one of the two places where they cross.</value>
+  </data>
+  <data name="Narr_Gps_Fix_03" xml:space="preserve">
+    <value>Your turn: use a third satellite.</value>
+  </data>
+  <data name="Narr_Gps_Fix_04" xml:space="preserve">
+    <value>Only one point is on all three circles: that is where you are. Drag yourself about the map, and the circles follow.</value>
+  </data>
+  <data name="Narr_Gps_Fix_05" xml:space="preserve">
+    <value>Two satellites' circles cross. Where could you be?</value>
+  </data>
+  <data name="Gps_Fix_Quiz1" xml:space="preserve">
+    <value>Anywhere on a circle</value>
+  </data>
+  <data name="Gps_Fix_Quiz2" xml:space="preserve">
+    <value>At one of two points</value>
+  </data>
+  <data name="Gps_Fix_Quiz3" xml:space="preserve">
+    <value>At exactly one point</value>
+  </data>
+  <data name="Gps_Fix_Part_Satellites" xml:space="preserve">
+    <value>The satellites</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Satellites" xml:space="preserve">
+    <value>Drawn where each one is straight above the map. Each gives one distance.</value>
+  </data>
+  <data name="Gps_Fix_Part_Circle" xml:space="preserve">
+    <value>A distance circle</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Circle" xml:space="preserve">
+    <value>Every place on the map as far from this satellite as you are.</value>
+  </data>
+  <data name="Gps_Fix_Part_You" xml:space="preserve">
+    <value>You</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_You" xml:space="preserve">
+    <value>Drag yourself anywhere on the map; the circles always pass through you.</value>
+  </data>
+  <data name="Gps_Fix_Part_Crossing" xml:space="preserve">
+    <value>The other possibility</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Crossing" xml:space="preserve">
+    <value>A place that fits the distances used so far just as well as where you really are.</value>
+  </data>
+  <data name="Gps_Clock_Title" xml:space="preserve">
+    <value>The clock problem</value>
+  </data>
+  <data name="Gps_Clock_P1" xml:space="preserve">
+    <value>All this needs your phone to know the exact time, and it doesn't: its clock is a cheap one that may be off by a thousandth of a second. That would put every distance 300 kilometres out. But the error is the same for every satellite, so all the circles grow or shrink together, and then they no longer meet at a single point.</value>
+  </data>
+  <data name="Gps_Clock_P2" xml:space="preserve">
+    <value>That is the way out. The receiver tries clock settings until the circles all meet at one point; the right time is the one that makes them agree. So the receiver works out its own time along with its position, to within a small fraction of a millionth of a second. On a flat map that takes three satellites; in real space, with three directions and the clock, it takes four, which is why a phone needs at least four in view.</value>
+  </data>
+  <data name="Gps_Clock_Deeper" xml:space="preserve">
+    <value>This makes every GPS receiver a very good clock, for free. Mobile phone networks, power grids and banks use GPS time to keep their equipment in step. A receiver uses every satellite it can see, often more than ten, and finds the position and time that fit all their distances best; the extra satellites make the answer steadier.</value>
+  </data>
+  <data name="Gps_Clock_Offset" xml:space="preserve">
+    <value>Receiver's clock error</value>
+  </data>
+  <data name="Gps_Clock_Right" xml:space="preserve">
+    <value>Your clock is right: all three circles meet at one point.</value>
+  </data>
+  <data name="Gps_Clock_Long" xml:space="preserve">
+    <value>Your clock is {0} µs slow, so every distance comes out {1} too long, and the circles miss each other by {2}.</value>
+  </data>
+  <data name="Gps_Clock_Short" xml:space="preserve">
+    <value>Your clock is {0} µs fast, so every distance comes out {1} too short, and the circles miss each other by {2}.</value>
+  </data>
+  <data name="Gps_Clock_Picture" xml:space="preserve">
+    <value>Three distance circles that only meet at one point when the receiver's clock is right</value>
+  </data>
+  <data name="Gps_Clock_Here" xml:space="preserve">
+    <value>really here</value>
+  </data>
+  <data name="Gps_Clock_Miss" xml:space="preserve">
+    <value>Circles miss by {0}</value>
+  </data>
+  <data name="Gps_Clock_Rule" xml:space="preserve">
+    <value>A wrong clock makes every distance wrong by the same amount.</value>
+  </data>
+  <data name="Narr_Gps_Clock_01" xml:space="preserve">
+    <value>The receiver's clock is a little slow, so every signal seems to take longer, and every circle is too big.</value>
+  </data>
+  <data name="Narr_Gps_Clock_02" xml:space="preserve">
+    <value>Now the three circles don't meet. They leave this little triangle between them.</value>
+  </data>
+  <data name="Narr_Gps_Clock_03" xml:space="preserve">
+    <value>Your turn: set the clock right, so that the triangle shrinks to a point.</value>
+  </data>
+  <data name="Narr_Gps_Clock_04" xml:space="preserve">
+    <value>There: only one clock setting makes all the circles meet, and that is the right time. The receiver finds its time and its place together.</value>
+  </data>
+  <data name="Narr_Gps_Clock_05" xml:space="preserve">
+    <value>Your phone has no atomic clock. How does it get its time right?</value>
+  </data>
+  <data name="Gps_Clock_Quiz1" xml:space="preserve">
+    <value>It asks the phone network</value>
+  </data>
+  <data name="Gps_Clock_Quiz2" xml:space="preserve">
+    <value>It moves its clock until all the circles meet at one point</value>
+  </data>
+  <data name="Gps_Clock_Quiz3" xml:space="preserve">
+    <value>It doesn't need the right time</value>
+  </data>
+  <data name="Gps_Clock_Part_Circles" xml:space="preserve">
+    <value>The distance circles</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Circles" xml:space="preserve">
+    <value>Each one drawn with the distance the receiver worked out, using its own clock.</value>
+  </data>
+  <data name="Gps_Clock_Part_Gap" xml:space="preserve">
+    <value>The triangle</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Gap" xml:space="preserve">
+    <value>Where each pair of circles agrees. It shrinks to a point only when the clock is right.</value>
+  </data>
+  <data name="Gps_Clock_Part_Clock" xml:space="preserve">
+    <value>The receiver's clock</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Clock" xml:space="preserve">
+    <value>A cheap clock. Drag the bar below to set it fast or slow.</value>
+  </data>
+  <data name="Gps_Clock_Part_You" xml:space="preserve">
+    <value>Where you really are</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_You" xml:space="preserve">
+    <value>The circles only meet here when the clock is right.</value>
+  </data>
+  <data name="Gps_Drift_Title" xml:space="preserve">
+    <value>Clocks that run fast</value>
+  </data>
+  <data name="Gps_Drift_P1" xml:space="preserve">
+    <value>The satellites' own clocks have a strange problem. Einstein worked out that time passes a little faster where gravity is weaker, and a little slower for anything moving fast. Both happen to a GPS satellite: it is 20,200 kilometres up, where the Earth's gravity is much weaker, and it moves at nearly 4 kilometres a second.</value>
+  </data>
+  <data name="Gps_Drift_P2" xml:space="preserve">
+    <value>Weaker gravity makes its clock gain about 46 millionths of a second a day; its speed makes it lose about 7. Together it runs about 38 millionths of a second a day fast. That sounds tiny, but each millionth is 300 metres, so positions would drift by more than 11 kilometres a day. So the clocks are made to tick slightly slow before launch, by just the right amount, and up in orbit they keep time with clocks on the ground.</value>
+  </data>
+  <data name="Gps_Drift_Deeper" xml:space="preserve">
+    <value>The satellites' clocks are built to beat 10.23 million times a second, but before launch they are set to 10.22999999543 million, slower by less than half a billionth. GPS is one of the few everyday things that would visibly fail without Einstein's theories of relativity; you rely on them every time you open a map on your phone.</value>
+  </data>
+  <data name="Gps_Drift_Days" xml:space="preserve">
+    <value>Days in orbit</value>
+  </data>
+  <data name="Gps_Drift_CorrectedLabel" xml:space="preserve">
+    <value>Corrected before launch</value>
+  </data>
+  <data name="Gps_Drift_Readout" xml:space="preserve">
+    <value>After {0}, the satellite's clock is {1} µs ahead, and positions worked out from it would drift by about {2}.</value>
+  </data>
+  <data name="Gps_Drift_Corrected" xml:space="preserve">
+    <value>Its clock was set before launch to tick slightly slow, so in orbit it keeps time with clocks on the ground.</value>
+  </data>
+  <data name="Gps_Drift_Picture" xml:space="preserve">
+    <value>A clock on the ground and a clock in orbit, the orbit clock creeping ahead</value>
+  </data>
+  <data name="Gps_Drift_Ground" xml:space="preserve">
+    <value>On the ground</value>
+  </data>
+  <data name="Gps_Drift_Orbit" xml:space="preserve">
+    <value>In orbit</value>
+  </data>
+  <data name="Gps_Drift_Ahead" xml:space="preserve">
+    <value>+{0} µs</value>
+  </data>
+  <data name="Gps_Drift_PerDay" xml:space="preserve">
+    <value>Each day, in µs</value>
+  </data>
+  <data name="Gps_Drift_Gravity" xml:space="preserve">
+    <value>weaker gravity: +{0}</value>
+  </data>
+  <data name="Gps_Drift_Motion" xml:space="preserve">
+    <value>speed: −{0}</value>
+  </data>
+  <data name="Gps_Drift_Net" xml:space="preserve">
+    <value>together: +{0} µs a day</value>
+  </data>
+  <data name="Gps_Drift_Kept" xml:space="preserve">
+    <value>Positions stay right ({0} off)</value>
+  </data>
+  <data name="Gps_Drift_Off" xml:space="preserve">
+    <value>Positions drift by {0}</value>
+  </data>
+  <data name="Gps_Drift_SwitchOn" xml:space="preserve">
+    <value>Corrected before launch</value>
+  </data>
+  <data name="Gps_Drift_SwitchOff" xml:space="preserve">
+    <value>Not corrected</value>
+  </data>
+  <data name="Gps_Drift_Rule" xml:space="preserve">
+    <value>One turn of the hand: 100 µs.</value>
+  </data>
+  <data name="Narr_Gps_Drift_01" xml:space="preserve">
+    <value>This clock is on the ground. The other is on a GPS satellite. They were started together, and each turn of the hands is a hundred millionths of a second.</value>
+  </data>
+  <data name="Narr_Gps_Drift_02" xml:space="preserve">
+    <value>Up there gravity is weaker, and that makes time pass faster: about forty-six millionths of a second a day.</value>
+  </data>
+  <data name="Narr_Gps_Drift_03" xml:space="preserve">
+    <value>Your turn: correct the satellite's clock before launch.</value>
+  </data>
+  <data name="Narr_Gps_Drift_04" xml:space="preserve">
+    <value>Its speed works the other way, slowing the clock by about seven millionths a day. Engineers allow for both, so the clocks agree.</value>
+  </data>
+  <data name="Narr_Gps_Drift_05" xml:space="preserve">
+    <value>A satellite's clock runs fast mostly because of what?</value>
+  </data>
+  <data name="Gps_Drift_Quiz1" xml:space="preserve">
+    <value>It moves very fast</value>
+  </data>
+  <data name="Gps_Drift_Quiz2" xml:space="preserve">
+    <value>Gravity is weaker so high up</value>
+  </data>
+  <data name="Gps_Drift_Quiz3" xml:space="preserve">
+    <value>It is colder in space</value>
+  </data>
+  <data name="Gps_Drift_Part_Ground" xml:space="preserve">
+    <value>Clock on the ground</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Ground" xml:space="preserve">
+    <value>Our time, down here in the Earth's full gravity.</value>
+  </data>
+  <data name="Gps_Drift_Part_Orbit" xml:space="preserve">
+    <value>Clock in orbit</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Orbit" xml:space="preserve">
+    <value>An atomic clock on the satellite. Left alone, it gains on the ground clock every day.</value>
+  </data>
+  <data name="Gps_Drift_Part_Gravity" xml:space="preserve">
+    <value>Weaker gravity</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Gravity" xml:space="preserve">
+    <value>Time passes faster where gravity is weaker: about 46 millionths of a second a day up there.</value>
+  </data>
+  <data name="Gps_Drift_Part_Motion" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Motion" xml:space="preserve">
+    <value>Time passes slower for something moving fast: about 7 millionths a day, at nearly 4 kilometres a second.</value>
+  </data>
+  <data name="Gps_Orbit_Title" xml:space="preserve">
+    <value>Why so high</value>
+  </data>
+  <data name="Gps_Orbit_P1" xml:space="preserve">
+    <value>The higher a satellite flies, the more slowly it goes round. The space station, 400 kilometres up, circles the Earth in about an hour and a half. GPS satellites, at 20,200 kilometres, take almost exactly twelve hours. At about 36,000 kilometres a round takes a whole day, so a satellite there hangs over the same spot as the Earth turns.</value>
+  </data>
+  <data name="Gps_Orbit_P2" xml:space="preserve">
+    <value>Height also decides how much of the Earth a satellite can see. From the space station's height you see a small patch; from GPS height, more than a third of the whole surface. So about thirty satellites, spread round six tilted orbits, are enough for anyone, anywhere, to see at least four at once.</value>
+  </data>
+  <data name="Gps_Orbit_Deeper" xml:space="preserve">
+    <value>Twelve hours is half the time the Earth takes to turn once against the stars, so each GPS satellite passes over the same places twice a day. The United States runs GPS; Europe's Galileo, China's BeiDou and Russia's GLONASS work the same way, and most phones listen to several of them, which puts dozens of satellites in view.</value>
+  </data>
+  <data name="Gps_Orbit_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="Gps_Orbit_Readout" xml:space="preserve">
+    <value>At {0} up, a satellite goes round once every {1}, at {2} km a second, and can see {3} of the Earth's surface.</value>
+  </data>
+  <data name="Gps_Orbit_Picture" xml:space="preserve">
+    <value>The Earth and a satellite's orbit to scale, with the part of the Earth it can see</value>
+  </data>
+  <data name="Gps_Orbit_Round" xml:space="preserve">
+    <value>One round: {0}</value>
+  </data>
+  <data name="Gps_Orbit_Station" xml:space="preserve">
+    <value>space station</value>
+  </data>
+  <data name="Gps_Orbit_Gps" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="Gps_Orbit_Geo" xml:space="preserve">
+    <value>stays over one spot</value>
+  </data>
+  <data name="Gps_Orbit_Rule" xml:space="preserve">
+    <value>Gold: the ground inside the satellite's horizon.</value>
+  </data>
+  <data name="Narr_Gps_Orbit_01" xml:space="preserve">
+    <value>This is the space station's height, four hundred kilometres. It races round the Earth in about an hour and a half.</value>
+  </data>
+  <data name="Narr_Gps_Orbit_02" xml:space="preserve">
+    <value>The gold arc is the ground it can see, inside its horizon: only a small patch of the Earth.</value>
+  </data>
+  <data name="Narr_Gps_Orbit_03" xml:space="preserve">
+    <value>Your turn: raise the orbit until one round takes twelve hours.</value>
+  </data>
+  <data name="Narr_Gps_Orbit_04" xml:space="preserve">
+    <value>This is where GPS satellites fly. Each one sees more than a third of the Earth, so a few dozen cover all of it.</value>
+  </data>
+  <data name="Narr_Gps_Orbit_05" xml:space="preserve">
+    <value>Why are GPS satellites so high, and not low like the space station?</value>
+  </data>
+  <data name="Gps_Orbit_Quiz1" xml:space="preserve">
+    <value>To keep out of the air</value>
+  </data>
+  <data name="Gps_Orbit_Quiz2" xml:space="preserve">
+    <value>Each one sees much more of the Earth, so a few dozen cover it all</value>
+  </data>
+  <data name="Gps_Orbit_Quiz3" xml:space="preserve">
+    <value>Radio can't get through from low orbits</value>
+  </data>
+  <data name="Gps_Orbit_Part_Earth" xml:space="preserve">
+    <value>The Earth</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Earth" xml:space="preserve">
+    <value>Drawn to the same scale as the orbit.</value>
+  </data>
+  <data name="Gps_Orbit_Part_Orbit" xml:space="preserve">
+    <value>The orbit</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Orbit" xml:space="preserve">
+    <value>The satellite's path. Drag the bar to raise or lower it.</value>
+  </data>
+  <data name="Gps_Orbit_Part_Satellite" xml:space="preserve">
+    <value>The satellite</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Satellite" xml:space="preserve">
+    <value>Going round; in this picture a second stands for half an hour.</value>
+  </data>
+  <data name="Gps_Orbit_Part_Seen" xml:space="preserve">
+    <value>What it can see</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Seen" xml:space="preserve">
+    <value>The ground inside its horizon. Only here can a receiver hear it.</value>
+  </data>
+  <data name="Gps_Angle_Title" xml:space="preserve">
+    <value>Where the satellites are matters</value>
+  </data>
+  <data name="Gps_Angle_P1" xml:space="preserve">
+    <value>No distance is perfect. The signal is slowed a little by the air, clocks are never exactly right, and signals bounce off buildings, so each distance is only good to within a few metres. Close up, each circle is then not a thin line but a band a few metres wide, and you could be anywhere in the patch where the bands overlap.</value>
+  </data>
+  <data name="Gps_Angle_P2" xml:space="preserve">
+    <value>How big that patch is depends on where the satellites are in the sky. If they are at right angles as seen from you, the bands cross squarely and the patch is small. If they are close together, the bands cross at a shallow angle and the patch stretches into a long thin diamond, many times longer than any one error. So a receiver picks satellites spread widely round the sky.</value>
+  </data>
+  <data name="Gps_Angle_Deeper" xml:space="preserve">
+    <value>Engineers call this the dilution of precision: a number that says how much the satellites' layout multiplies the errors. It is why GPS is worst in a street between tall buildings, where only a narrow strip of sky shows, and best in open country. Height is usually less accurate than position across the ground, because all the satellites are above you and none below.</value>
+  </data>
+  <data name="Gps_Angle_Angle" xml:space="preserve">
+    <value>Angle between the satellites</value>
+  </data>
+  <data name="Gps_Angle_Error" xml:space="preserve">
+    <value>Error in each distance</value>
+  </data>
+  <data name="Gps_Angle_Readout" xml:space="preserve">
+    <value>Each distance is good to ±{0} m. Crossing at {1}°, you could be anywhere in a patch {2} m long.</value>
+  </data>
+  <data name="Gps_Angle_Picture" xml:space="preserve">
+    <value>Two distance bands crossing near the receiver, and the diamond where they overlap</value>
+  </data>
+  <data name="Gps_Angle_Patch" xml:space="preserve">
+    <value>Patch {0} m long</value>
+  </data>
+  <data name="Gps_Angle_Rule" xml:space="preserve">
+    <value>Close up, each distance circle is a band as wide as its error.</value>
+  </data>
+  <data name="Narr_Gps_Angle_01" xml:space="preserve">
+    <value>Close up, each distance is a band a few metres wide, because no distance is perfect.</value>
+  </data>
+  <data name="Narr_Gps_Angle_02" xml:space="preserve">
+    <value>You could be anywhere in this gold diamond, where the two bands overlap. With the satellites close together in the sky, it is long and thin.</value>
+  </data>
+  <data name="Narr_Gps_Angle_03" xml:space="preserve">
+    <value>Your turn: drag the second satellite round until the two are at about right angles.</value>
+  </data>
+  <data name="Narr_Gps_Angle_04" xml:space="preserve">
+    <value>At right angles the bands cross squarely, and the diamond is as small as it can be.</value>
+  </data>
+  <data name="Narr_Gps_Angle_05" xml:space="preserve">
+    <value>Your phone sees four satellites, all low down in the same part of the sky. Is that good?</value>
+  </data>
+  <data name="Gps_Angle_Quiz1" xml:space="preserve">
+    <value>Yes, four is enough</value>
+  </data>
+  <data name="Gps_Angle_Quiz2" xml:space="preserve">
+    <value>No: their bands cross at shallow angles, so the fix is poor</value>
+  </data>
+  <data name="Gps_Angle_Quiz3" xml:space="preserve">
+    <value>It makes no difference</value>
+  </data>
+  <data name="Gps_Angle_Part_Band" xml:space="preserve">
+    <value>A distance band</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Band" xml:space="preserve">
+    <value>Every place the distance from one satellite allows, give or take the error.</value>
+  </data>
+  <data name="Gps_Angle_Part_Patch" xml:space="preserve">
+    <value>Where you could be</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Patch" xml:space="preserve">
+    <value>Where the two bands overlap. Its length is how far off the fix might be.</value>
+  </data>
+  <data name="Gps_Angle_Part_Satellite" xml:space="preserve">
+    <value>The satellites</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Satellite" xml:space="preserve">
+    <value>Their directions as seen from you. Drag the right-hand one round.</value>
+  </data>
+  <data name="Gps_Angle_Part_Angle" xml:space="preserve">
+    <value>The angle between them</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Angle" xml:space="preserve">
+    <value>Near a right angle is best; small angles stretch the patch.</value>
+  </data>
+  <data name="Gps_Day" xml:space="preserve">
+    <value>1 day</value>
+  </data>
 </root>

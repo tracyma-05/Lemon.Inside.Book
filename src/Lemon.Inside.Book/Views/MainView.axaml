@@ -24,6 +24,7 @@
              xmlns:sewing="using:Lemon.Inside.Book.Chapters.Sewing"
              xmlns:colour="using:Lemon.Inside.Book.Chapters.Colour"
              xmlns:tesseract="using:Lemon.Inside.Book.Chapters.Tesseract"
+             xmlns:gps="using:Lemon.Inside.Book.Chapters.Gps"
              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
              x:Class="Lemon.Inside.Book.Views.MainView"
@@ -67,6 +68,8 @@
         <DataTemplate DataType="colour:ColourDiagramPageViewModel"><colour:ColourDiagramPageView /></DataTemplate>
         <DataTemplate DataType="tesseract:TesseractTextPageViewModel"><tesseract:TesseractTextPageView /></DataTemplate>
         <DataTemplate DataType="tesseract:TesseractDiagramPageViewModel"><tesseract:TesseractDiagramPageView /></DataTemplate>
+        <DataTemplate DataType="gps:GpsTextPageViewModel"><gps:GpsTextPageView /></DataTemplate>
+        <DataTemplate DataType="gps:GpsDiagramPageViewModel"><gps:GpsDiagramPageView /></DataTemplate>
         <DataTemplate DataType="pages:CoverPageViewModel"><pageViews:CoverPageView /></DataTemplate>
         <DataTemplate DataType="pages:HowToUsePageViewModel"><pageViews:HowToUsePageView /></DataTemplate>
         <DataTemplate DataType="pages:TitlePageViewModel"><pageViews:TitlePageView /></DataTemplate>

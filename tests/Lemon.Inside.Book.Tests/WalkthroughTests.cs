@@ -19,6 +19,7 @@ using Lemon.Inside.Book.Chapters.LightShadow;
 using Lemon.Inside.Book.Chapters.Watch;
 using Lemon.Inside.Book.Chapters.Weighing;
 using Lemon.Inside.Book.Chapters.Tesseract;
+using Lemon.Inside.Book.Chapters.Gps;
 using Lemon.Inside.Book.Contents;
 using Lemon.Inside.Book.Controls;
 using Xunit;
@@ -47,6 +48,7 @@ public sealed class WalkthroughTests
         .. new SewingViewModel(narration).AllSpreads,
         .. new ColourViewModel(narration).AllSpreads,
         .. new TesseractViewModel(narration).AllSpreads,
+        .. new GpsViewModel(narration).AllSpreads,
     ];
 
     [Fact]
@@ -132,6 +134,7 @@ public sealed class WalkthroughTests
     [InlineData("Sewing")]
     [InlineData("Colour")]
     [InlineData("Tesseract")]
+    [InlineData("Gps")]
     public void EveryRing_SitsOnAPartThePictureDrew(string slug)
     {
         var (window, model) = OpenAt(slug);
@@ -187,6 +190,7 @@ public sealed class WalkthroughTests
     [InlineData("Sewing")]
     [InlineData("Colour")]
     [InlineData("Tesseract")]
+    [InlineData("Gps")]
     public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
     {
         var (window, model) = OpenAt(slug);

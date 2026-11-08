@@ -5688,6 +5688,725 @@
      ]
     ]
    },
+   "Narr_Gps_Angle_01": {
+    "duration": 6.912,
+    "hash": "caf9c2cc186e2ab2",
+    "sentences": [
+     [
+      0.05,
+      6.861,
+      "Close up, each distance is a band a few metres wide, because no distance is perfect."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_02": {
+    "duration": 10.248,
+    "hash": "8e308951b41c9afa",
+    "sentences": [
+     [
+      0.05,
+      5.153,
+      "You could be anywhere in this gold diamond, where the two bands overlap."
+     ],
+     [
+      5.153,
+      10.194,
+      "With the satellites close together in the sky, it is long and thin."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_03": {
+    "duration": 6.36,
+    "hash": "b1152aa33eaecb6f",
+    "sentences": [
+     [
+      0.05,
+      6.306,
+      "Your turn: drag the second satellite round until the two are at about right angles."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_04": {
+    "duration": 5.856,
+    "hash": "1fc496783d7088f1",
+    "sentences": [
+     [
+      0.05,
+      5.792,
+      "At right angles the bands cross squarely, and the diamond is as small as it can be."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_05": {
+    "duration": 6.792,
+    "hash": "fb2a0a7af079061b",
+    "sentences": [
+     [
+      0.05,
+      5.5,
+      "Your phone sees four satellites, all low down in the same part of the sky."
+     ],
+     [
+      5.5,
+      6.736,
+      "Is that good?"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Angle": {
+    "duration": 4.536,
+    "hash": "384f7cd87863ce6d",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "Near a right angle is best; small angles stretch the patch."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Band": {
+    "duration": 5.376,
+    "hash": "356925ad7fc13eea",
+    "sentences": [
+     [
+      0.05,
+      5.306,
+      "Every place the distance from one satellite allows, give or take the error."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Patch": {
+    "duration": 6.12,
+    "hash": "5c429713da661457",
+    "sentences": [
+     [
+      0.05,
+      2.417,
+      "Where the two bands overlap."
+     ],
+     [
+      2.417,
+      6.069,
+      "Its length is how far off the fix might be."
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Satellite": {
+    "duration": 4.872,
+    "hash": "8979c73c155c080b",
+    "sentences": [
+     [
+      0.05,
+      2.375,
+      "Their directions as seen from you."
+     ],
+     [
+      2.375,
+      4.831,
+      "Drag the right-hand one round."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_01": {
+    "duration": 7.488,
+    "hash": "83097ef1c13488ca",
+    "sentences": [
+     [
+      0.05,
+      7.431,
+      "The receiver's clock is a little slow, so every signal seems to take longer, and every circle is too big."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_02": {
+    "duration": 5.832,
+    "hash": "60178d94d210a879",
+    "sentences": [
+     [
+      0.05,
+      3.014,
+      "Now the three circles don't meet."
+     ],
+     [
+      3.014,
+      5.778,
+      "They leave this little triangle between them."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_03": {
+    "duration": 5.352,
+    "hash": "61705b77e1d81c98",
+    "sentences": [
+     [
+      0.05,
+      5.292,
+      "Your turn: set the clock right, so that the triangle shrinks to a point."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_04": {
+    "duration": 10.416,
+    "hash": "ce3db897c61a7fa9",
+    "sentences": [
+     [
+      0.05,
+      6.417,
+      "There: only one clock setting makes all the circles meet, and that is the right time."
+     ],
+     [
+      6.417,
+      10.361,
+      "The receiver finds its time and its place together."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_05": {
+    "duration": 4.512,
+    "hash": "da66c7481803ea17",
+    "sentences": [
+     [
+      0.05,
+      2.556,
+      "Your phone has no atomic clock."
+     ],
+     [
+      2.556,
+      4.458,
+      "How does it get its time right?"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Circles": {
+    "duration": 5.328,
+    "hash": "517e49853d697825",
+    "sentences": [
+     [
+      0.05,
+      5.278,
+      "Each one drawn with the distance the receiver worked out, using its own clock."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Clock": {
+    "duration": 4.848,
+    "hash": "e1d4d703c4acebce",
+    "sentences": [
+     [
+      0.05,
+      1.444,
+      "A cheap clock."
+     ],
+     [
+      1.444,
+      4.778,
+      "Drag the bar below to set it fast or slow."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Gap": {
+    "duration": 5.712,
+    "hash": "5010a85118cbb4ed",
+    "sentences": [
+     [
+      0.05,
+      2.5,
+      "Where each pair of circles agrees."
+     ],
+     [
+      2.5,
+      5.639,
+      "It shrinks to a point only when the clock is right."
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_You": {
+    "duration": 3.168,
+    "hash": "174334184ea801e1",
+    "sentences": [
+     [
+      0.05,
+      3.097,
+      "The circles only meet here when the clock is right."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_01": {
+    "duration": 11.376,
+    "hash": "5fceb53936c8fcb4",
+    "sentences": [
+     [
+      0.05,
+      2.042,
+      "This clock is on the ground."
+     ],
+     [
+      2.042,
+      5.139,
+      "The other is on a GPS satellite."
+     ],
+     [
+      5.139,
+      11.306,
+      "They were started together, and each turn of the hands is a hundred millionths of a second."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_02": {
+    "duration": 7.128,
+    "hash": "e308dc3feb591660",
+    "sentences": [
+     [
+      0.05,
+      7.056,
+      "Up there gravity is weaker, and that makes time pass faster: about forty-six millionths of a second a day."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_03": {
+    "duration": 4.128,
+    "hash": "6ace767055e3a728",
+    "sentences": [
+     [
+      0.05,
+      4.069,
+      "Your turn: correct the satellite's clock before launch."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_04": {
+    "duration": 9.0,
+    "hash": "1511efe16d091246",
+    "sentences": [
+     [
+      0.05,
+      5.472,
+      "Its speed works the other way, slowing the clock by about seven millionths a day."
+     ],
+     [
+      5.472,
+      8.931,
+      "Engineers allow for both, so the clocks agree."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_05": {
+    "duration": 4.104,
+    "hash": "8adfcdb27a9f20d3",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "A satellite's clock runs fast mostly because of what?"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Gravity": {
+    "duration": 6.696,
+    "hash": "8699245d66f2412f",
+    "sentences": [
+     [
+      0.05,
+      6.625,
+      "Time passes faster where gravity is weaker: about 46 millionths of a second a day up there."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Ground": {
+    "duration": 4.032,
+    "hash": "08cdfb5d4d9680dd",
+    "sentences": [
+     [
+      0.05,
+      3.972,
+      "Our time, down here in the Earth's full gravity."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Motion": {
+    "duration": 8.4,
+    "hash": "64b08ac1f825daad",
+    "sentences": [
+     [
+      0.05,
+      8.333,
+      "Time passes slower for something moving fast: about 7 millionths a day, at nearly 4 kilometres a second."
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Orbit": {
+    "duration": 6.888,
+    "hash": "2eb96472fecd7f5e",
+    "sentences": [
+     [
+      0.05,
+      2.458,
+      "An atomic clock on the satellite."
+     ],
+     [
+      2.458,
+      6.819,
+      "Left alone, it gains on the ground clock every day."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_01": {
+    "duration": 6.576,
+    "hash": "57f854287ed25d40",
+    "sentences": [
+     [
+      0.05,
+      6.514,
+      "A GPS satellite, twenty thousand two hundred kilometres up, drawn to scale with the Earth."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_02": {
+    "duration": 7.512,
+    "hash": "2a9f2b68a0efcca3",
+    "sentences": [
+     [
+      0.05,
+      2.903,
+      "It sends out a message saying when it left."
+     ],
+     [
+      2.903,
+      7.469,
+      "Radio goes at the speed of light, so the time it takes is a distance."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_03": {
+    "duration": 5.184,
+    "hash": "eca0f20403b18c00",
+    "sentences": [
+     [
+      0.05,
+      5.125,
+      "Your turn: set the travel time so that the satellite is straight overhead."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_04": {
+    "duration": 12.528,
+    "hash": "d9c464eec12833f5",
+    "sentences": [
+     [
+      0.05,
+      9.083,
+      "Usually the sphere meets the ground in a whole ring below the satellite; in this cut through the Earth, the ring shows as two points."
+     ],
+     [
+      9.083,
+      12.458,
+      "One satellite can't tell you where on it you are."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_05": {
+    "duration": 6.552,
+    "hash": "13f28802c3f2563e",
+    "sentences": [
+     [
+      0.05,
+      3.639,
+      "A receiver's clock is a thousandth of a second wrong."
+     ],
+     [
+      3.639,
+      6.486,
+      "How far off is the distance it works out?"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Circle": {
+    "duration": 3.768,
+    "hash": "686a07c5426016a8",
+    "sentences": [
+     [
+      0.05,
+      3.708,
+      "All the places the signal could have reached in the time it took."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Places": {
+    "duration": 2.376,
+    "hash": "53d2adeafdc2a996",
+    "sentences": [
+     [
+      0.05,
+      2.319,
+      "Where that circle meets the ground."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Pulse": {
+    "duration": 5.448,
+    "hash": "1f36d0ca3ce4a9e2",
+    "sentences": [
+     [
+      0.05,
+      5.389,
+      "Spreading out at the speed of light, about 300,000 kilometres a second."
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Satellite": {
+    "duration": 6.576,
+    "hash": "e15b72e1c7f938e4",
+    "sentences": [
+     [
+      0.05,
+      2.833,
+      "One of about thirty GPS satellites."
+     ],
+     [
+      2.833,
+      6.514,
+      "It keeps sending its position and the exact time."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_01": {
+    "duration": 4.944,
+    "hash": "863101aa80593a1f",
+    "sentences": [
+     [
+      0.05,
+      4.889,
+      "Knowing how far you are from one satellite puts you somewhere on this circle."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_02": {
+    "duration": 8.232,
+    "hash": "6a84061f82550e15",
+    "sentences": [
+     [
+      0.05,
+      3.097,
+      "A second satellite adds a second circle."
+     ],
+     [
+      3.097,
+      8.181,
+      "You must be on both, so you are at one of the two places where they cross."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_03": {
+    "duration": 3.096,
+    "hash": "ebb3c8e5d563d556",
+    "sentences": [
+     [
+      0.05,
+      3.042,
+      "Your turn: use a third satellite."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_04": {
+    "duration": 8.448,
+    "hash": "dfbbd36b849e9002",
+    "sentences": [
+     [
+      0.05,
+      4.778,
+      "Only one point is on all three circles: that is where you are."
+     ],
+     [
+      4.778,
+      8.439,
+      "Drag yourself about the map, and the circles follow."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_05": {
+    "duration": 4.056,
+    "hash": "fbf385f69ea2733f",
+    "sentences": [
+     [
+      0.05,
+      2.556,
+      "Two satellites' circles cross."
+     ],
+     [
+      2.556,
+      3.986,
+      "Where could you be?"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Circle": {
+    "duration": 4.176,
+    "hash": "9cde33baf7230695",
+    "sentences": [
+     [
+      0.05,
+      4.111,
+      "Every place on the map as far from this satellite as you are."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Crossing": {
+    "duration": 5.568,
+    "hash": "bfb247393ac2e906",
+    "sentences": [
+     [
+      0.05,
+      5.514,
+      "A place that fits the distances used so far just as well as where you really are."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Satellites": {
+    "duration": 5.16,
+    "hash": "e4f0fa868cd46c29",
+    "sentences": [
+     [
+      0.05,
+      2.986,
+      "Drawn where each one is straight above the map."
+     ],
+     [
+      2.986,
+      5.111,
+      "Each gives one distance."
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_You": {
+    "duration": 5.04,
+    "hash": "26ca10d98c284cae",
+    "sentences": [
+     [
+      0.05,
+      4.986,
+      "Drag yourself anywhere on the map; the circles always pass through you."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_01": {
+    "duration": 7.896,
+    "hash": "e30f54e7ef9f84c4",
+    "sentences": [
+     [
+      0.05,
+      4.194,
+      "This is the space station's height, four hundred kilometres."
+     ],
+     [
+      4.194,
+      7.833,
+      "It races round the Earth in about an hour and a half."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_02": {
+    "duration": 7.104,
+    "hash": "fc6d3608fbc9801a",
+    "sentences": [
+     [
+      0.05,
+      7.042,
+      "The gold arc is the ground it can see, inside its horizon: only a small patch of the Earth."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_03": {
+    "duration": 5.04,
+    "hash": "7fb2ffc10e4469ae",
+    "sentences": [
+     [
+      0.05,
+      4.972,
+      "Your turn: raise the orbit until one round takes twelve hours."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_04": {
+    "duration": 8.376,
+    "hash": "0fbb31288a3b6f86",
+    "sentences": [
+     [
+      0.05,
+      2.833,
+      "This is where GPS satellites fly."
+     ],
+     [
+      2.833,
+      8.319,
+      "Each one sees more than a third of the Earth, so a few dozen cover all of it."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_05": {
+    "duration": 4.944,
+    "hash": "1b88af7ea9c1f6d0",
+    "sentences": [
+     [
+      0.05,
+      4.875,
+      "Why are GPS satellites so high, and not low like the space station?"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Earth": {
+    "duration": 3.168,
+    "hash": "bee31282d8753c98",
+    "sentences": [
+     [
+      0.05,
+      3.161,
+      "Drawn to the same scale as the orbit."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Orbit": {
+    "duration": 4.344,
+    "hash": "710886d001ea5d08",
+    "sentences": [
+     [
+      0.05,
+      1.819,
+      "The satellite's path."
+     ],
+     [
+      1.819,
+      4.278,
+      "Drag the bar to raise or lower it."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Satellite": {
+    "duration": 4.752,
+    "hash": "3cfc8e7c739936b3",
+    "sentences": [
+     [
+      0.05,
+      4.694,
+      "Going round; in this picture a second stands for half an hour."
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Seen": {
+    "duration": 4.8,
+    "hash": "a475c83e6f0ead4f",
+    "sentences": [
+     [
+      0.05,
+      2.389,
+      "The ground inside its horizon."
+     ],
+     [
+      2.389,
+      4.75,
+      "Only here can a receiver hear it."
+     ]
+    ]
+   },
    "Narr_Lifting_Elevator_01": {
     "duration": 3.888,
     "hash": "4d36cc23f940ab72",
@@ -17194,6 +17913,710 @@
       2.764,
       6.292,
       "中间每多一级，它就再慢三倍。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_01": {
+    "duration": 7.152,
+    "hash": "6f091b8bbac0041b",
+    "sentences": [
+     [
+      0.1,
+      7.147,
+      "凑近看，每个距离都是一条几米宽的带子，因为没有哪个距离是完美的。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_02": {
+    "duration": 10.944,
+    "hash": "edbb58c6ffa2505e",
+    "sentences": [
+     [
+      0.1,
+      6.647,
+      "你可能在这个金色菱形里的任何地方，也就是两条带子重叠的地方。"
+     ],
+     [
+      6.597,
+      10.889,
+      "卫星在天空中挨得近，它就又长又细。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_03": {
+    "duration": 7.032,
+    "hash": "18b87e5fe905ac47",
+    "sentences": [
+     [
+      0.1,
+      7.022,
+      "轮到你了：把第二颗卫星拖开，直到两颗卫星差不多互成直角。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_04": {
+    "duration": 6.336,
+    "hash": "abf23cf8baf719b8",
+    "sentences": [
+     [
+      0.1,
+      6.328,
+      "互成直角时，两条带子正正地交叉，菱形小到不能再小。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_05": {
+    "duration": 7.2,
+    "hash": "ac2eb29ab1c22944",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "你的手机看到四颗卫星，都低低地挤在天空的同一边。"
+     ],
+     [
+      5.625,
+      7.139,
+      "这样好吗？"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Angle": {
+    "duration": 4.896,
+    "hash": "9824be48665205e5",
+    "sentences": [
+     [
+      0.1,
+      4.897,
+      "接近直角最好；角度小了，范围就被拉长。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Band": {
+    "duration": 5.496,
+    "hash": "76c5cdf6233c4147",
+    "sentences": [
+     [
+      0.1,
+      5.481,
+      "考虑到误差，离一颗卫星的距离所允许的所有地方。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Patch": {
+    "duration": 6.672,
+    "hash": "9d52808edbd78708",
+    "sentences": [
+     [
+      0.1,
+      2.647,
+      "两条带子重叠的地方。"
+     ],
+     [
+      2.597,
+      6.611,
+      "它的长度就是定位可能偏差多远。"
+     ]
+    ]
+   },
+   "Narr_Gps_Angle_Part_Satellite": {
+    "duration": 5.832,
+    "hash": "e34ee274b6deedbb",
+    "sentences": [
+     [
+      0.1,
+      3.3,
+      "从你这里看过去它们的方向。"
+     ],
+     [
+      3.25,
+      5.778,
+      "拖动右边那颗绕一绕。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_01": {
+    "duration": 7.488,
+    "hash": "4bae442fdd60c7c1",
+    "sentences": [
+     [
+      0.1,
+      7.467,
+      "接收机的时钟慢了一点，所以每个信号看起来都走得更久，每个圆都太大了。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_02": {
+    "duration": 5.64,
+    "hash": "d0091e44a3bf4c92",
+    "sentences": [
+     [
+      0.1,
+      5.633,
+      "现在三个圆不再交于一点，中间留下了这个小三角形。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_03": {
+    "duration": 5.4,
+    "hash": "3eee3ee933686d57",
+    "sentences": [
+     [
+      0.1,
+      5.397,
+      "轮到你了：把时钟调准，让三角形缩成一个点。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_04": {
+    "duration": 11.592,
+    "hash": "1d446c94d6932a1e",
+    "sentences": [
+     [
+      0.1,
+      7.564,
+      "就这样：只有一种时钟设置能让所有的圆交于一点，那就是正确的时间。"
+     ],
+     [
+      7.514,
+      11.542,
+      "接收机同时找到了自己的时间和位置。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_05": {
+    "duration": 5.376,
+    "hash": "04a4b83d7556878c",
+    "sentences": [
+     [
+      0.1,
+      2.522,
+      "你的手机没有原子钟。"
+     ],
+     [
+      2.472,
+      5.319,
+      "它是怎样得到准确时间的？"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Circles": {
+    "duration": 4.872,
+    "hash": "a3aa8d0f8a36a916",
+    "sentences": [
+     [
+      0.1,
+      4.869,
+      "每个圆都用接收机靠自己的钟算出的距离画成。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Clock": {
+    "duration": 6.168,
+    "hash": "b5ed19343f3be0cf",
+    "sentences": [
+     [
+      0.1,
+      2.05,
+      "一只便宜的钟。"
+     ],
+     [
+      2.0,
+      6.097,
+      "拖动下面的刻度条，把它调快或调慢。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_Gap": {
+    "duration": 6.336,
+    "hash": "8718c2bb6a6f7af8",
+    "sentences": [
+     [
+      0.1,
+      2.481,
+      "每两个圆一致的地方。"
+     ],
+     [
+      2.431,
+      6.278,
+      "只有时钟准确时，它才缩成一个点。"
+     ]
+    ]
+   },
+   "Narr_Gps_Clock_Part_You": {
+    "duration": 4.2,
+    "hash": "85f77ea90f52d767",
+    "sentences": [
+     [
+      0.1,
+      4.189,
+      "只有时钟准确时，圆才在这里相交。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_01": {
+    "duration": 10.056,
+    "hash": "2939d5158ee84f2e",
+    "sentences": [
+     [
+      0.1,
+      5.133,
+      "这只钟在地面上，另一只在 GPS 卫星上。"
+     ],
+     [
+      5.083,
+      10.0,
+      "它们同时启动，指针每转一圈是一百微秒。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_02": {
+    "duration": 7.44,
+    "hash": "2478c6cca4ab5046",
+    "sentences": [
+     [
+      0.1,
+      7.439,
+      "在那么高的地方引力更弱，时间就过得更快：每天大约快四十六微秒。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_03": {
+    "duration": 4.392,
+    "hash": "2d1082a276232065",
+    "sentences": [
+     [
+      0.1,
+      4.383,
+      "轮到你了：在发射前校正卫星的钟。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_04": {
+    "duration": 9.912,
+    "hash": "615947dc04d9ea54",
+    "sentences": [
+     [
+      0.1,
+      5.397,
+      "它的速度起相反的作用，让钟每天慢大约七微秒。"
+     ],
+     [
+      5.347,
+      9.847,
+      "工程师把两者都考虑进去，钟就对得上了。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_05": {
+    "duration": 3.744,
+    "hash": "380703f8eb8ebb4e",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "卫星上的钟跑快，主要是因为什么？"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Gravity": {
+    "duration": 6.48,
+    "hash": "affce298d1a6d3df",
+    "sentences": [
+     [
+      0.1,
+      6.481,
+      "引力越弱，时间过得越快：在那里每天快大约 46 微秒。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Ground": {
+    "duration": 4.632,
+    "hash": "7db26c2deee30fe8",
+    "sentences": [
+     [
+      0.1,
+      4.619,
+      "我们的时间，在地面上完整的地球引力里。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Motion": {
+    "duration": 8.232,
+    "hash": "3fb0f56488c8ab90",
+    "sentences": [
+     [
+      0.1,
+      8.231,
+      "运动得快的东西时间过得慢：以将近每秒 4 公里的速度，每天慢大约 7 微秒。"
+     ]
+    ]
+   },
+   "Narr_Gps_Drift_Part_Orbit": {
+    "duration": 6.864,
+    "hash": "c9b90b7a5b966055",
+    "sentences": [
+     [
+      0.1,
+      2.314,
+      "卫星上的原子钟。"
+     ],
+     [
+      2.264,
+      6.792,
+      "不加校正，它每天都比地面上的钟走得快。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_01": {
+    "duration": 7.512,
+    "hash": "614ca820db5f7249",
+    "sentences": [
+     [
+      0.1,
+      7.508,
+      "一颗 GPS 卫星，在两万零两百公里高处，和地球按同一比例画出。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_02": {
+    "duration": 9.312,
+    "hash": "8822827289f8679c",
+    "sentences": [
+     [
+      0.1,
+      3.869,
+      "它发出一条消息，写着发出的时刻。"
+     ],
+     [
+      3.819,
+      9.25,
+      "无线电以光速传播，所以路上用的时间就是距离。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_03": {
+    "duration": 6.336,
+    "hash": "d87a26cfbb0ab7c8",
+    "sentences": [
+     [
+      0.1,
+      6.314,
+      "轮到你了：调整信号路上用的时间，让卫星正好在你头顶。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_04": {
+    "duration": 15.624,
+    "hash": "4ebc1b48a2bb32a2",
+    "sentences": [
+     [
+      0.1,
+      11.611,
+      "通常，这个球面和地面相交成卫星下方的一整圈；在这张穿过地球中心的剖面图里，那一圈显示成两个点。"
+     ],
+     [
+      11.611,
+      15.569,
+      "一颗卫星没法告诉你在那一圈的哪里。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_05": {
+    "duration": 6.408,
+    "hash": "77fbe5a8a38e5173",
+    "sentences": [
+     [
+      0.1,
+      6.397,
+      "接收机的时钟差了千分之一秒，它算出的距离会差多少？"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Circle": {
+    "duration": 4.56,
+    "hash": "2589e2d60fbe1053",
+    "sentences": [
+     [
+      0.1,
+      4.55,
+      "信号在那段时间里可能到达的所有地方。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Places": {
+    "duration": 3.192,
+    "hash": "05a0d27143a68f71",
+    "sentences": [
+     [
+      0.1,
+      3.175,
+      "那一圈和地面相交的地方。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Pulse": {
+    "duration": 4.68,
+    "hash": "6bf8e66288c572e4",
+    "sentences": [
+     [
+      0.1,
+      4.675,
+      "以光速向外扩散，每秒大约 30 万公里。"
+     ]
+    ]
+   },
+   "Narr_Gps_Echo_Part_Satellite": {
+    "duration": 7.968,
+    "hash": "6b32ec7cc9e9573d",
+    "sentences": [
+     [
+      0.1,
+      3.828,
+      "大约三十颗 GPS 卫星之一。"
+     ],
+     [
+      3.778,
+      7.903,
+      "它不停地发送自己的位置和准确时刻。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_01": {
+    "duration": 4.992,
+    "hash": "86ec93bfcf011436",
+    "sentences": [
+     [
+      0.1,
+      4.981,
+      "知道你离一颗卫星多远，你就在这个圆上的某处。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_02": {
+    "duration": 9.0,
+    "hash": "656c5f42d3bee642",
+    "sentences": [
+     [
+      0.1,
+      2.981,
+      "第二颗卫星再加一个圆。"
+     ],
+     [
+      2.931,
+      8.931,
+      "你必须同时在两个圆上，所以你在它们相交的两处之一。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_03": {
+    "duration": 3.72,
+    "hash": "a71c1acfcd8ab389",
+    "sentences": [
+     [
+      0.1,
+      3.717,
+      "轮到你了：再用上第三颗卫星。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_04": {
+    "duration": 8.952,
+    "hash": "40a962415b3a5844",
+    "sentences": [
+     [
+      0.1,
+      4.981,
+      "只有一个点同时在三个圆上：那就是你的位置。"
+     ],
+     [
+      4.931,
+      8.903,
+      "在地图上拖动你自己，圆会跟着变。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_05": {
+    "duration": 4.56,
+    "hash": "9e131e7ff7ac223c",
+    "sentences": [
+     [
+      0.1,
+      2.647,
+      "两颗卫星的圆相交。"
+     ],
+     [
+      2.597,
+      4.5,
+      "你可能在哪里？"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Circle": {
+    "duration": 4.632,
+    "hash": "3e949bab0bd8f534",
+    "sentences": [
+     [
+      0.1,
+      4.619,
+      "地图上离这颗卫星和你一样远的所有地方。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Crossing": {
+    "duration": 4.608,
+    "hash": "4ea523a876db7c60",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "一个和你真正的位置一样符合已用距离的地方。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_Satellites": {
+    "duration": 6.48,
+    "hash": "e6f2627f3981f5fa",
+    "sentences": [
+     [
+      0.1,
+      4.078,
+      "画在每颗卫星正下方的地图位置上。"
+     ],
+     [
+      4.028,
+      6.417,
+      "每颗给出一个距离。"
+     ]
+    ]
+   },
+   "Narr_Gps_Fix_Part_You": {
+    "duration": 4.92,
+    "hash": "f8aceedd5a0d26f0",
+    "sentences": [
+     [
+      0.1,
+      4.911,
+      "把自己拖到地图上任何地方；圆总会经过你。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_01": {
+    "duration": 7.392,
+    "hash": "a71b5793d7b2b719",
+    "sentences": [
+     [
+      0.1,
+      3.536,
+      "这是空间站的高度，四百公里。"
+     ],
+     [
+      3.486,
+      7.319,
+      "它大约一个半小时就绕地球飞一圈。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_02": {
+    "duration": 7.656,
+    "hash": "74f6be4810a41c1b",
+    "sentences": [
+     [
+      0.1,
+      7.633,
+      "金色的弧是它能看到的地面，在它的地平线以内：只是地球上的一小块。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_03": {
+    "duration": 5.688,
+    "hash": "cb7af6983aa5cb13",
+    "sentences": [
+     [
+      0.1,
+      5.675,
+      "轮到你了：把轨道升高，直到绕一圈要十二个小时。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_04": {
+    "duration": 11.328,
+    "hash": "e043fe9e76468289",
+    "sentences": [
+     [
+      0.1,
+      3.897,
+      "这就是 GPS 卫星飞行的高度。"
+     ],
+     [
+      3.847,
+      11.278,
+      "每颗都能看到地球的三分之一以上，所以几十颗就能覆盖整个地球。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_05": {
+    "duration": 6.0,
+    "hash": "8eae6412451e1245",
+    "sentences": [
+     [
+      0.1,
+      5.994,
+      "为什么 GPS 卫星飞得那么高，而不像空间站那样低？"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Earth": {
+    "duration": 3.072,
+    "hash": "6fbbe8dec50203b1",
+    "sentences": [
+     [
+      0.1,
+      3.064,
+      "和轨道按同一比例画出。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Orbit": {
+    "duration": 5.4,
+    "hash": "ff9ac2383af1732f",
+    "sentences": [
+     [
+      0.1,
+      1.911,
+      "卫星的路径。"
+     ],
+     [
+      1.861,
+      5.333,
+      "拖动刻度条把它升高或降低。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Satellite": {
+    "duration": 5.304,
+    "hash": "85dc10b8c454ebca",
+    "sentences": [
+     [
+      0.1,
+      5.286,
+      "正在绕圈；在这张图里，一秒钟代表半小时。"
+     ]
+    ]
+   },
+   "Narr_Gps_Orbit_Part_Seen": {
+    "duration": 7.056,
+    "hash": "f8102b66ac2d093a",
+    "sentences": [
+     [
+      0.1,
+      2.786,
+      "它的地平线以内的地面。"
+     ],
+     [
+      2.736,
+      6.986,
+      "只有在这里，接收机才能收到它的信号。"
      ]
     ]
    },

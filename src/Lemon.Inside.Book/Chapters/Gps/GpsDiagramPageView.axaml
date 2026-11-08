@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:gps="using:Lemon.Inside.Book.Chapters.Gps"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Gps.GpsDiagramPageView"
+                         x:DataType="gps:GpsDiagramPageViewModel">
+    <!-- A right page of the Gps chapter: the spread's picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="gps:EchoSpread">
+                            <gps:EchoDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Delay="{Binding Delay}" AutomationProperties.Name="{loc:Localize Gps_Echo_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="gps:FixSpread">
+                            <gps:FixDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Count="{Binding Count}" East="{Binding East}" North="{Binding North}" AutomationProperties.Name="{loc:Localize Gps_Fix_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="gps:ClockSpread">
+                            <gps:ClockDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Offset="{Binding Offset}" AutomationProperties.Name="{loc:Localize Gps_Clock_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="gps:DriftSpread">
+                            <gps:DriftDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Days="{Binding Days}" Corrected="{Binding Corrected}" AutomationProperties.Name="{loc:Localize Gps_Drift_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="gps:OrbitSpread">
+                            <gps:OrbitDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Altitude="{Binding Altitude}" AutomationProperties.Name="{loc:Localize Gps_Orbit_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="gps:AngleSpread">
+                            <gps:AngleDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Angle="{Binding Angle}" Error="{Binding Error}" AutomationProperties.Name="{loc:Localize Gps_Angle_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

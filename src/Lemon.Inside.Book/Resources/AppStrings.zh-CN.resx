@@ -9972,4 +9972,610 @@
   <data name="Narr_Tesseract_Net_Part_Opposite" xml:space="preserve">
     <value>无论折不折，它都碰不到的那一个，就像盒子的顶和底。</value>
   </data>
+  <data name="Chapter_Gps" xml:space="preserve">
+    <value>GPS 怎样找到你</value>
+  </data>
+  <data name="Gps_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Gps_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Gps_Km" xml:space="preserve">
+    <value>{0} 公里</value>
+  </data>
+  <data name="Gps_Ms" xml:space="preserve">
+    <value>{0} 毫秒</value>
+  </data>
+  <data name="Gps_Us" xml:space="preserve">
+    <value>{0} 微秒</value>
+  </data>
+  <data name="Gps_Days" xml:space="preserve">
+    <value>{0} 天</value>
+  </data>
+  <data name="Gps_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Gps_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Gps_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Gps_Period" xml:space="preserve">
+    <value>{0} 小时 {1} 分</value>
+  </data>
+  <data name="Gps_Grip_Delay" xml:space="preserve">
+    <value>拖动，改变信号路上用的时间</value>
+  </data>
+  <data name="Gps_Grip_You" xml:space="preserve">
+    <value>拖动，在地图上移动你自己</value>
+  </data>
+  <data name="Gps_Grip_Count" xml:space="preserve">
+    <value>点一下，用一颗、两颗或三颗卫星</value>
+  </data>
+  <data name="Gps_Grip_Offset" xml:space="preserve">
+    <value>拖动，把接收机的钟调快或调慢</value>
+  </data>
+  <data name="Gps_Grip_Days" xml:space="preserve">
+    <value>拖动，让日子过去</value>
+  </data>
+  <data name="Gps_Grip_Corrected" xml:space="preserve">
+    <value>点一下，切换发射前是否校正</value>
+  </data>
+  <data name="Gps_Grip_Height" xml:space="preserve">
+    <value>拖动，升高或降低轨道</value>
+  </data>
+  <data name="Gps_Grip_Satellite" xml:space="preserve">
+    <value>把卫星在天空中拖动</value>
+  </data>
+  <data name="Gps_Grip_Error" xml:space="preserve">
+    <value>拖动，改变误差</value>
+  </data>
+  <data name="Gps_Echo_Title" xml:space="preserve">
+    <value>延迟就是距离</value>
+  </data>
+  <data name="Gps_Echo_P1" xml:space="preserve">
+    <value>GPS 卫星一遍又一遍地做同一件事：发出一条无线电消息，说明自己是哪颗卫星、在什么位置，以及消息发出的准确时刻。你的手机一直在听，记下消息到达的时刻。无线电以光速传播，每秒大约 30 万公里，所以两个时刻之差就告诉你消息走了多远。</value>
+  </data>
+  <data name="Gps_Echo_P2" xml:space="preserve">
+    <value>头顶上的卫星在 20200 公里高处，它的消息要大约 67 毫秒才到你这里；靠近地平线的卫星更远，大约要 86 毫秒。知道了这段距离，你就在以卫星为中心的一个巨大球面上的某处：在地面上，就是球面和地球相交的那一圈上的某个地方。一颗卫星只能说到这里。</value>
+  </data>
+  <data name="Gps_Echo_Deeper" xml:space="preserve">
+    <value>你的手机从来不向卫星发送任何东西，它只是听，所以 GPS 可以同时供无数人使用，没有手机信号也照样能用。因为光实在太快，计时必须极其精确：一百万分之一秒的误差就是 300 米，一千分之一秒就是 300 公里。卫星上装着原子钟，让它们的时间准确到几十亿分之一秒。</value>
+  </data>
+  <data name="Gps_Echo_Delay" xml:space="preserve">
+    <value>信号路上用的时间</value>
+  </data>
+  <data name="Gps_Echo_Readout" xml:space="preserve">
+    <value>信号走了 {0} 毫秒，所以卫星离你 {1}。你就在以它为中心、这么大的一个球面上的某处。</value>
+  </data>
+  <data name="Gps_Echo_Overhead" xml:space="preserve">
+    <value>这正是它的高度：它就在你头顶正上方。</value>
+  </data>
+  <data name="Gps_Echo_Nowhere" xml:space="preserve">
+    <value>地面上没有哪个地方离它这么远。</value>
+  </data>
+  <data name="Gps_Echo_Picture" xml:space="preserve">
+    <value>按比例画的地球上空的 GPS 卫星，和它的信号可能到达的那一圈地方</value>
+  </data>
+  <data name="Gps_Echo_Sent" xml:space="preserve">
+    <value>0 毫秒时发出</value>
+  </data>
+  <data name="Gps_Echo_Arrived" xml:space="preserve">
+    <value>{0} 毫秒后到达</value>
+  </data>
+  <data name="Gps_Echo_Distance" xml:space="preserve">
+    <value>相距 {0}</value>
+  </data>
+  <data name="Gps_Echo_Height" xml:space="preserve">
+    <value>高度 {0}</value>
+  </data>
+  <data name="Gps_Echo_Rule" xml:space="preserve">
+    <value>距离 = 时间 × 光速</value>
+  </data>
+  <data name="Narr_Gps_Echo_01" xml:space="preserve">
+    <value>一颗 GPS 卫星，在两万零两百公里高处，和地球按同一比例画出。</value>
+  </data>
+  <data name="Narr_Gps_Echo_02" xml:space="preserve">
+    <value>它发出一条消息，写着发出的时刻。无线电以光速传播，所以路上用的时间就是距离。</value>
+  </data>
+  <data name="Narr_Gps_Echo_03" xml:space="preserve">
+    <value>轮到你了：调整信号路上用的时间，让卫星正好在你头顶。</value>
+  </data>
+  <data name="Narr_Gps_Echo_04" xml:space="preserve">
+    <value>通常，这个球面和地面相交成卫星下方的一整圈；在这张穿过地球中心的剖面图里，那一圈显示成两个点。一颗卫星没法告诉你在那一圈的哪里。</value>
+  </data>
+  <data name="Narr_Gps_Echo_05" xml:space="preserve">
+    <value>接收机的时钟差了千分之一秒，它算出的距离会差多少？</value>
+  </data>
+  <data name="Gps_Echo_Quiz1" xml:space="preserve">
+    <value>30 米</value>
+  </data>
+  <data name="Gps_Echo_Quiz2" xml:space="preserve">
+    <value>300 米</value>
+  </data>
+  <data name="Gps_Echo_Quiz3" xml:space="preserve">
+    <value>300 公里</value>
+  </data>
+  <data name="Gps_Echo_Part_Satellite" xml:space="preserve">
+    <value>卫星</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Satellite" xml:space="preserve">
+    <value>大约三十颗 GPS 卫星之一。它不停地发送自己的位置和准确时刻。</value>
+  </data>
+  <data name="Gps_Echo_Part_Pulse" xml:space="preserve">
+    <value>信号</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Pulse" xml:space="preserve">
+    <value>以光速向外扩散，每秒大约 30 万公里。</value>
+  </data>
+  <data name="Gps_Echo_Part_Circle" xml:space="preserve">
+    <value>所有这么远的地方</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Circle" xml:space="preserve">
+    <value>信号在那段时间里可能到达的所有地方。</value>
+  </data>
+  <data name="Gps_Echo_Part_Places" xml:space="preserve">
+    <value>你可能在的地方</value>
+  </data>
+  <data name="Narr_Gps_Echo_Part_Places" xml:space="preserve">
+    <value>那一圈和地面相交的地方。</value>
+  </data>
+  <data name="Gps_Fix_Title" xml:space="preserve">
+    <value>圆圈相交</value>
+  </data>
+  <data name="Gps_Fix_P1" xml:space="preserve">
+    <value>把地面想成一张平面地图，卫星在上方。你和一颗卫星的距离，让你落在它周围的一个圆上。第二颗卫星给出第二个圆，你必须同时在两个圆上：两个圆只交于两点。第三个圆只经过其中一点，那就是你的位置。</value>
+  </data>
+  <data name="Gps_Fix_P2" xml:space="preserve">
+    <value>在真实的空间里，这些圆是球面。两个球面交成一个圆，第三个球面和这个圆交于两点；其中一点通常在遥远的太空里或地球深处，接收机可以直接扔掉它。像这样用距离找位置，叫作三边定位。它不需要角度，也不需要指南针，只需要距离。</value>
+  </data>
+  <data name="Gps_Fix_Deeper" xml:space="preserve">
+    <value>早在卫星出现以前，人们就用距离来认路。一艘船如果看到灯塔的闪光、又听到和闪光同时拉响的雾号，就能根据两者的时间差算出离灯塔多远，因为声音比光慢得多；有两座这样的灯塔，就能在海图上定出船的位置。GPS 做的是同样的事，只不过用的是卫星发出的无线电，靠的是比任何雾号都精确得多的时钟。</value>
+  </data>
+  <data name="Gps_Fix_Count" xml:space="preserve">
+    <value>用了几颗卫星</value>
+  </data>
+  <data name="Gps_Fix_East" xml:space="preserve">
+    <value>东西方向</value>
+  </data>
+  <data name="Gps_Fix_North" xml:space="preserve">
+    <value>南北方向</value>
+  </data>
+  <data name="Gps_Fix_One" xml:space="preserve">
+    <value>只知道和一颗卫星的距离，你可能在它周围那个圆上的任何地方。</value>
+  </data>
+  <data name="Gps_Fix_Two" xml:space="preserve">
+    <value>用两颗，两个圆交于两点：你在其中一点上。</value>
+  </data>
+  <data name="Gps_Fix_Three" xml:space="preserve">
+    <value>用三颗，只有一个点同时在三个圆上：你就在这里。</value>
+  </data>
+  <data name="Gps_Fix_Picture" xml:space="preserve">
+    <value>一张平面地图，上面有三颗卫星、每颗用到的卫星周围的圆，以及这些圆相交的地方</value>
+  </data>
+  <data name="Gps_Fix_Using" xml:space="preserve">
+    <value>用了 3 颗中的 {0} 颗</value>
+  </data>
+  <data name="Gps_Fix_ShowOne" xml:space="preserve">
+    <value>圆上任何地方</value>
+  </data>
+  <data name="Gps_Fix_ShowTwo" xml:space="preserve">
+    <value>两点之一</value>
+  </data>
+  <data name="Gps_Fix_ShowThree" xml:space="preserve">
+    <value>只有一个点</value>
+  </data>
+  <data name="Gps_Fix_Rule" xml:space="preserve">
+    <value>每个圆：离那颗卫星和你一样远的所有地方。</value>
+  </data>
+  <data name="Narr_Gps_Fix_01" xml:space="preserve">
+    <value>知道你离一颗卫星多远，你就在这个圆上的某处。</value>
+  </data>
+  <data name="Narr_Gps_Fix_02" xml:space="preserve">
+    <value>第二颗卫星再加一个圆。你必须同时在两个圆上，所以你在它们相交的两处之一。</value>
+  </data>
+  <data name="Narr_Gps_Fix_03" xml:space="preserve">
+    <value>轮到你了：再用上第三颗卫星。</value>
+  </data>
+  <data name="Narr_Gps_Fix_04" xml:space="preserve">
+    <value>只有一个点同时在三个圆上：那就是你的位置。在地图上拖动你自己，圆会跟着变。</value>
+  </data>
+  <data name="Narr_Gps_Fix_05" xml:space="preserve">
+    <value>两颗卫星的圆相交。你可能在哪里？</value>
+  </data>
+  <data name="Gps_Fix_Quiz1" xml:space="preserve">
+    <value>圆上的任何地方</value>
+  </data>
+  <data name="Gps_Fix_Quiz2" xml:space="preserve">
+    <value>两点中的一点</value>
+  </data>
+  <data name="Gps_Fix_Quiz3" xml:space="preserve">
+    <value>恰好一个点</value>
+  </data>
+  <data name="Gps_Fix_Part_Satellites" xml:space="preserve">
+    <value>卫星</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Satellites" xml:space="preserve">
+    <value>画在每颗卫星正下方的地图位置上。每颗给出一个距离。</value>
+  </data>
+  <data name="Gps_Fix_Part_Circle" xml:space="preserve">
+    <value>距离圆</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Circle" xml:space="preserve">
+    <value>地图上离这颗卫星和你一样远的所有地方。</value>
+  </data>
+  <data name="Gps_Fix_Part_You" xml:space="preserve">
+    <value>你</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_You" xml:space="preserve">
+    <value>把自己拖到地图上任何地方；圆总会经过你。</value>
+  </data>
+  <data name="Gps_Fix_Part_Crossing" xml:space="preserve">
+    <value>另一种可能</value>
+  </data>
+  <data name="Narr_Gps_Fix_Part_Crossing" xml:space="preserve">
+    <value>一个和你真正的位置一样符合已用距离的地方。</value>
+  </data>
+  <data name="Gps_Clock_Title" xml:space="preserve">
+    <value>时钟的难题</value>
+  </data>
+  <data name="Gps_Clock_P1" xml:space="preserve">
+    <value>这一切都需要手机知道准确的时间，可它并不知道：手机里的钟很便宜，可能差上千分之一秒。那会让每个距离都差出 300 公里。不过，这个误差对每颗卫星都一样，所以所有的圆一起变大或一起变小，结果它们就不再交于一点了。</value>
+  </data>
+  <data name="Gps_Clock_P2" xml:space="preserve">
+    <value>出路也就在这里。接收机不断调整时钟，直到所有的圆交于一点；能让它们一致的，就是正确的时间。于是接收机在算出位置的同时，也把自己的时间算到了远远不到百万分之一秒的精度。在平面地图上这需要三颗卫星；在真实空间里，三个方向再加上时钟，就需要四颗，所以手机至少要看到四颗卫星。</value>
+  </data>
+  <data name="Gps_Clock_Deeper" xml:space="preserve">
+    <value>这让每台 GPS 接收机都免费成了一台非常准的钟。移动电话网络、电网和银行都用 GPS 时间让各自的设备保持同步。接收机会用上它能看到的所有卫星，常常超过十颗，找出最符合所有距离的位置和时间；多出来的卫星让答案更稳定。</value>
+  </data>
+  <data name="Gps_Clock_Offset" xml:space="preserve">
+    <value>接收机时钟误差</value>
+  </data>
+  <data name="Gps_Clock_Right" xml:space="preserve">
+    <value>时钟是准的：三个圆交于一点。</value>
+  </data>
+  <data name="Gps_Clock_Long" xml:space="preserve">
+    <value>时钟慢了 {0} 微秒，所以每个距离都长了 {1}，三个圆彼此错开 {2}。</value>
+  </data>
+  <data name="Gps_Clock_Short" xml:space="preserve">
+    <value>时钟快了 {0} 微秒，所以每个距离都短了 {1}，三个圆彼此错开 {2}。</value>
+  </data>
+  <data name="Gps_Clock_Picture" xml:space="preserve">
+    <value>只有接收机时钟准确时才交于一点的三个距离圆</value>
+  </data>
+  <data name="Gps_Clock_Here" xml:space="preserve">
+    <value>其实在这里</value>
+  </data>
+  <data name="Gps_Clock_Miss" xml:space="preserve">
+    <value>圆错开 {0}</value>
+  </data>
+  <data name="Gps_Clock_Rule" xml:space="preserve">
+    <value>时钟不准，每个距离就错得一样多。</value>
+  </data>
+  <data name="Narr_Gps_Clock_01" xml:space="preserve">
+    <value>接收机的时钟慢了一点，所以每个信号看起来都走得更久，每个圆都太大了。</value>
+  </data>
+  <data name="Narr_Gps_Clock_02" xml:space="preserve">
+    <value>现在三个圆不再交于一点，中间留下了这个小三角形。</value>
+  </data>
+  <data name="Narr_Gps_Clock_03" xml:space="preserve">
+    <value>轮到你了：把时钟调准，让三角形缩成一个点。</value>
+  </data>
+  <data name="Narr_Gps_Clock_04" xml:space="preserve">
+    <value>就这样：只有一种时钟设置能让所有的圆交于一点，那就是正确的时间。接收机同时找到了自己的时间和位置。</value>
+  </data>
+  <data name="Narr_Gps_Clock_05" xml:space="preserve">
+    <value>你的手机没有原子钟。它是怎样得到准确时间的？</value>
+  </data>
+  <data name="Gps_Clock_Quiz1" xml:space="preserve">
+    <value>它问手机网络</value>
+  </data>
+  <data name="Gps_Clock_Quiz2" xml:space="preserve">
+    <value>它调整自己的钟，直到所有的圆交于一点</value>
+  </data>
+  <data name="Gps_Clock_Quiz3" xml:space="preserve">
+    <value>它不需要准确的时间</value>
+  </data>
+  <data name="Gps_Clock_Part_Circles" xml:space="preserve">
+    <value>距离圆</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Circles" xml:space="preserve">
+    <value>每个圆都用接收机靠自己的钟算出的距离画成。</value>
+  </data>
+  <data name="Gps_Clock_Part_Gap" xml:space="preserve">
+    <value>三角形</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Gap" xml:space="preserve">
+    <value>每两个圆一致的地方。只有时钟准确时，它才缩成一个点。</value>
+  </data>
+  <data name="Gps_Clock_Part_Clock" xml:space="preserve">
+    <value>接收机的时钟</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_Clock" xml:space="preserve">
+    <value>一只便宜的钟。拖动下面的刻度条，把它调快或调慢。</value>
+  </data>
+  <data name="Gps_Clock_Part_You" xml:space="preserve">
+    <value>你真正的位置</value>
+  </data>
+  <data name="Narr_Gps_Clock_Part_You" xml:space="preserve">
+    <value>只有时钟准确时，圆才在这里相交。</value>
+  </data>
+  <data name="Gps_Drift_Title" xml:space="preserve">
+    <value>跑快的钟</value>
+  </data>
+  <data name="Gps_Drift_P1" xml:space="preserve">
+    <value>卫星上的钟有一个奇怪的问题。爱因斯坦算出：引力越弱的地方，时间过得越快一点；运动得越快的东西，时间过得越慢一点。这两件事都发生在 GPS 卫星上：它在 20200 公里高处，地球引力弱得多；它还以将近每秒 4 公里的速度飞行。</value>
+  </data>
+  <data name="Gps_Drift_P2" xml:space="preserve">
+    <value>引力变弱让它的钟每天快大约 46 微秒；速度又让它每天慢大约 7 微秒。合起来，它每天快大约 38 微秒。听起来微不足道，可每一微秒就是 300 米，位置每天会漂移 11 公里以上。所以这些钟在发射前就被调得走慢一点，慢得恰到好处，到了轨道上，它们就和地面上的钟走得一样了。</value>
+  </data>
+  <data name="Gps_Drift_Deeper" xml:space="preserve">
+    <value>卫星上的钟本来设计成每秒振动 1023 万次，但发射前被调成 1022.999999543 万次，慢了不到十亿分之零点五。GPS 是少数几样没有爱因斯坦的相对论就会明显出错的日常事物之一；每次你在手机上打开地图，都在依靠相对论。</value>
+  </data>
+  <data name="Gps_Drift_Days" xml:space="preserve">
+    <value>在轨道上的天数</value>
+  </data>
+  <data name="Gps_Drift_CorrectedLabel" xml:space="preserve">
+    <value>发射前已校正</value>
+  </data>
+  <data name="Gps_Drift_Readout" xml:space="preserve">
+    <value>{0}后，卫星的钟快了 {1} 微秒，用它算出的位置会漂移大约 {2}。</value>
+  </data>
+  <data name="Gps_Drift_Corrected" xml:space="preserve">
+    <value>它的钟在发射前被调得走慢一点，所以在轨道上和地面的钟走得一样。</value>
+  </data>
+  <data name="Gps_Drift_Picture" xml:space="preserve">
+    <value>地面上的钟和轨道上的钟，轨道上的钟慢慢走快了</value>
+  </data>
+  <data name="Gps_Drift_Ground" xml:space="preserve">
+    <value>地面上</value>
+  </data>
+  <data name="Gps_Drift_Orbit" xml:space="preserve">
+    <value>轨道上</value>
+  </data>
+  <data name="Gps_Drift_Ahead" xml:space="preserve">
+    <value>+{0} 微秒</value>
+  </data>
+  <data name="Gps_Drift_PerDay" xml:space="preserve">
+    <value>每天的变化（微秒）</value>
+  </data>
+  <data name="Gps_Drift_Gravity" xml:space="preserve">
+    <value>引力更弱：+{0}</value>
+  </data>
+  <data name="Gps_Drift_Motion" xml:space="preserve">
+    <value>速度：−{0}</value>
+  </data>
+  <data name="Gps_Drift_Net" xml:space="preserve">
+    <value>合起来：每天 +{0} 微秒</value>
+  </data>
+  <data name="Gps_Drift_Kept" xml:space="preserve">
+    <value>位置保持准确（偏差 {0}）</value>
+  </data>
+  <data name="Gps_Drift_Off" xml:space="preserve">
+    <value>位置漂移 {0}</value>
+  </data>
+  <data name="Gps_Drift_SwitchOn" xml:space="preserve">
+    <value>发射前已校正</value>
+  </data>
+  <data name="Gps_Drift_SwitchOff" xml:space="preserve">
+    <value>未校正</value>
+  </data>
+  <data name="Gps_Drift_Rule" xml:space="preserve">
+    <value>指针转一圈：100 微秒。</value>
+  </data>
+  <data name="Narr_Gps_Drift_01" xml:space="preserve">
+    <value>这只钟在地面上，另一只在 GPS 卫星上。它们同时启动，指针每转一圈是一百微秒。</value>
+  </data>
+  <data name="Narr_Gps_Drift_02" xml:space="preserve">
+    <value>在那么高的地方引力更弱，时间就过得更快：每天大约快四十六微秒。</value>
+  </data>
+  <data name="Narr_Gps_Drift_03" xml:space="preserve">
+    <value>轮到你了：在发射前校正卫星的钟。</value>
+  </data>
+  <data name="Narr_Gps_Drift_04" xml:space="preserve">
+    <value>它的速度起相反的作用，让钟每天慢大约七微秒。工程师把两者都考虑进去，钟就对得上了。</value>
+  </data>
+  <data name="Narr_Gps_Drift_05" xml:space="preserve">
+    <value>卫星上的钟跑快，主要是因为什么？</value>
+  </data>
+  <data name="Gps_Drift_Quiz1" xml:space="preserve">
+    <value>它运动得非常快</value>
+  </data>
+  <data name="Gps_Drift_Quiz2" xml:space="preserve">
+    <value>那么高的地方引力更弱</value>
+  </data>
+  <data name="Gps_Drift_Quiz3" xml:space="preserve">
+    <value>太空里更冷</value>
+  </data>
+  <data name="Gps_Drift_Part_Ground" xml:space="preserve">
+    <value>地面上的钟</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Ground" xml:space="preserve">
+    <value>我们的时间，在地面上完整的地球引力里。</value>
+  </data>
+  <data name="Gps_Drift_Part_Orbit" xml:space="preserve">
+    <value>轨道上的钟</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Orbit" xml:space="preserve">
+    <value>卫星上的原子钟。不加校正，它每天都比地面上的钟走得快。</value>
+  </data>
+  <data name="Gps_Drift_Part_Gravity" xml:space="preserve">
+    <value>更弱的引力</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Gravity" xml:space="preserve">
+    <value>引力越弱，时间过得越快：在那里每天快大约 46 微秒。</value>
+  </data>
+  <data name="Gps_Drift_Part_Motion" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="Narr_Gps_Drift_Part_Motion" xml:space="preserve">
+    <value>运动得快的东西时间过得慢：以将近每秒 4 公里的速度，每天慢大约 7 微秒。</value>
+  </data>
+  <data name="Gps_Orbit_Title" xml:space="preserve">
+    <value>为什么那么高</value>
+  </data>
+  <data name="Gps_Orbit_P1" xml:space="preserve">
+    <value>卫星飞得越高，绕一圈就越慢。空间站在 400 公里高处，大约一个半小时绕地球一圈。GPS 卫星在 20200 公里高处，差不多正好要十二个小时。在大约 36000 公里高处，绕一圈要整整一天，所以那里的卫星会随着地球的转动，一直停在同一个地点的上空。</value>
+  </data>
+  <data name="Gps_Orbit_P2" xml:space="preserve">
+    <value>高度还决定了卫星能看到多大一片地球。从空间站的高度只能看到一小块；从 GPS 的高度，能看到整个地表的三分之一以上。所以大约三十颗卫星，分布在六个倾斜的轨道上，就足以让任何人在任何地方同时看到至少四颗。</value>
+  </data>
+  <data name="Gps_Orbit_Deeper" xml:space="preserve">
+    <value>十二小时正好是地球相对恒星自转一圈所需时间的一半，所以每颗 GPS 卫星每天两次经过同样的地方。GPS 由美国运行；欧洲的伽利略、中国的北斗和俄罗斯的格洛纳斯也用同样的办法工作，大多数手机会同时接收其中几个系统，于是头顶上能看到几十颗卫星。</value>
+  </data>
+  <data name="Gps_Orbit_Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="Gps_Orbit_Readout" xml:space="preserve">
+    <value>在 {0} 高处，卫星每 {1} 绕一圈，速度每秒 {2} 公里，能看到地表的 {3}。</value>
+  </data>
+  <data name="Gps_Orbit_Picture" xml:space="preserve">
+    <value>按比例画的地球和卫星轨道，以及卫星能看到的那部分地球</value>
+  </data>
+  <data name="Gps_Orbit_Round" xml:space="preserve">
+    <value>绕一圈：{0}</value>
+  </data>
+  <data name="Gps_Orbit_Station" xml:space="preserve">
+    <value>空间站</value>
+  </data>
+  <data name="Gps_Orbit_Gps" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="Gps_Orbit_Geo" xml:space="preserve">
+    <value>停在一处上空</value>
+  </data>
+  <data name="Gps_Orbit_Rule" xml:space="preserve">
+    <value>金色：卫星地平线以内的地面。</value>
+  </data>
+  <data name="Narr_Gps_Orbit_01" xml:space="preserve">
+    <value>这是空间站的高度，四百公里。它大约一个半小时就绕地球飞一圈。</value>
+  </data>
+  <data name="Narr_Gps_Orbit_02" xml:space="preserve">
+    <value>金色的弧是它能看到的地面，在它的地平线以内：只是地球上的一小块。</value>
+  </data>
+  <data name="Narr_Gps_Orbit_03" xml:space="preserve">
+    <value>轮到你了：把轨道升高，直到绕一圈要十二个小时。</value>
+  </data>
+  <data name="Narr_Gps_Orbit_04" xml:space="preserve">
+    <value>这就是 GPS 卫星飞行的高度。每颗都能看到地球的三分之一以上，所以几十颗就能覆盖整个地球。</value>
+  </data>
+  <data name="Narr_Gps_Orbit_05" xml:space="preserve">
+    <value>为什么 GPS 卫星飞得那么高，而不像空间站那样低？</value>
+  </data>
+  <data name="Gps_Orbit_Quiz1" xml:space="preserve">
+    <value>为了避开空气</value>
+  </data>
+  <data name="Gps_Orbit_Quiz2" xml:space="preserve">
+    <value>每颗都能看到大得多的一片地球，几十颗就能全覆盖</value>
+  </data>
+  <data name="Gps_Orbit_Quiz3" xml:space="preserve">
+    <value>无线电没法从低轨道传下来</value>
+  </data>
+  <data name="Gps_Orbit_Part_Earth" xml:space="preserve">
+    <value>地球</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Earth" xml:space="preserve">
+    <value>和轨道按同一比例画出。</value>
+  </data>
+  <data name="Gps_Orbit_Part_Orbit" xml:space="preserve">
+    <value>轨道</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Orbit" xml:space="preserve">
+    <value>卫星的路径。拖动刻度条把它升高或降低。</value>
+  </data>
+  <data name="Gps_Orbit_Part_Satellite" xml:space="preserve">
+    <value>卫星</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Satellite" xml:space="preserve">
+    <value>正在绕圈；在这张图里，一秒钟代表半小时。</value>
+  </data>
+  <data name="Gps_Orbit_Part_Seen" xml:space="preserve">
+    <value>它能看到的地方</value>
+  </data>
+  <data name="Narr_Gps_Orbit_Part_Seen" xml:space="preserve">
+    <value>它的地平线以内的地面。只有在这里，接收机才能收到它的信号。</value>
+  </data>
+  <data name="Gps_Angle_Title" xml:space="preserve">
+    <value>卫星在哪儿很重要</value>
+  </data>
+  <data name="Gps_Angle_P1" xml:space="preserve">
+    <value>没有哪个距离是完美的。信号会被空气稍稍减慢，钟也从来不会绝对准确，信号还会被楼房反射，所以每个距离只能准确到几米之内。凑近看，每个圆就不再是一条细线，而是一条几米宽的带子，你可能在两条带子重叠的那块地方里的任何位置。</value>
+  </data>
+  <data name="Gps_Angle_P2" xml:space="preserve">
+    <value>这块地方有多大，取决于卫星在天空中的位置。如果从你这里看过去它们互成直角，两条带子正正地交叉，这块地方就很小。如果它们挨得很近，两条带子以很小的角度交叉，这块地方就被拉成一个又长又细的菱形，比任何一个误差都长好多倍。所以接收机会挑选在天空中分布得很开的卫星。</value>
+  </data>
+  <data name="Gps_Angle_Deeper" xml:space="preserve">
+    <value>工程师把这叫作“精度衰减因子”（DOP）：一个说明卫星的分布会把误差放大多少倍的数字。所以在两边都是高楼的街道上，只能看到一窄条天空，GPS 最不准；在开阔的野外最准。高度通常比水平位置更不准，因为所有卫星都在你上方，下方一颗也没有。</value>
+  </data>
+  <data name="Gps_Angle_Angle" xml:space="preserve">
+    <value>两颗卫星之间的夹角</value>
+  </data>
+  <data name="Gps_Angle_Error" xml:space="preserve">
+    <value>每个距离的误差</value>
+  </data>
+  <data name="Gps_Angle_Readout" xml:space="preserve">
+    <value>每个距离准确到 ±{0} 米。以 {1}° 交叉，你可能在一块长 {2} 米的地方里的任何位置。</value>
+  </data>
+  <data name="Gps_Angle_Picture" xml:space="preserve">
+    <value>接收机附近交叉的两条距离带，和它们重叠的菱形</value>
+  </data>
+  <data name="Gps_Angle_Patch" xml:space="preserve">
+    <value>范围长 {0} 米</value>
+  </data>
+  <data name="Gps_Angle_Rule" xml:space="preserve">
+    <value>凑近看，每个距离圆都是一条和误差一样宽的带子。</value>
+  </data>
+  <data name="Narr_Gps_Angle_01" xml:space="preserve">
+    <value>凑近看，每个距离都是一条几米宽的带子，因为没有哪个距离是完美的。</value>
+  </data>
+  <data name="Narr_Gps_Angle_02" xml:space="preserve">
+    <value>你可能在这个金色菱形里的任何地方，也就是两条带子重叠的地方。卫星在天空中挨得近，它就又长又细。</value>
+  </data>
+  <data name="Narr_Gps_Angle_03" xml:space="preserve">
+    <value>轮到你了：把第二颗卫星拖开，直到两颗卫星差不多互成直角。</value>
+  </data>
+  <data name="Narr_Gps_Angle_04" xml:space="preserve">
+    <value>互成直角时，两条带子正正地交叉，菱形小到不能再小。</value>
+  </data>
+  <data name="Narr_Gps_Angle_05" xml:space="preserve">
+    <value>你的手机看到四颗卫星，都低低地挤在天空的同一边。这样好吗？</value>
+  </data>
+  <data name="Gps_Angle_Quiz1" xml:space="preserve">
+    <value>好，四颗就够了</value>
+  </data>
+  <data name="Gps_Angle_Quiz2" xml:space="preserve">
+    <value>不好：它们的带子交叉角度太小，定位很差</value>
+  </data>
+  <data name="Gps_Angle_Quiz3" xml:space="preserve">
+    <value>没有区别</value>
+  </data>
+  <data name="Gps_Angle_Part_Band" xml:space="preserve">
+    <value>距离带</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Band" xml:space="preserve">
+    <value>考虑到误差，离一颗卫星的距离所允许的所有地方。</value>
+  </data>
+  <data name="Gps_Angle_Part_Patch" xml:space="preserve">
+    <value>你可能在的地方</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Patch" xml:space="preserve">
+    <value>两条带子重叠的地方。它的长度就是定位可能偏差多远。</value>
+  </data>
+  <data name="Gps_Angle_Part_Satellite" xml:space="preserve">
+    <value>卫星</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Satellite" xml:space="preserve">
+    <value>从你这里看过去它们的方向。拖动右边那颗绕一绕。</value>
+  </data>
+  <data name="Gps_Angle_Part_Angle" xml:space="preserve">
+    <value>它们之间的夹角</value>
+  </data>
+  <data name="Narr_Gps_Angle_Part_Angle" xml:space="preserve">
+    <value>接近直角最好；角度小了，范围就被拉长。</value>
+  </data>
+  <data name="Gps_Day" xml:space="preserve">
+    <value>1 天</value>
+  </data>
 </root>
