@@ -8709,4 +8709,667 @@
   <data name="Sewing_Feed_Way" xml:space="preserve">
     <value>布往这边走</value>
   </data>
+  <data name="Chapter_Colour" xml:space="preserve">
+    <value>屏幕上的颜色</value>
+  </data>
+  <data name="Colour_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Colour_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Colour_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Colour_Name_Black" xml:space="preserve">
+    <value>黑色</value>
+  </data>
+  <data name="Colour_Name_White" xml:space="preserve">
+    <value>白色</value>
+  </data>
+  <data name="Colour_Name_Grey" xml:space="preserve">
+    <value>灰色</value>
+  </data>
+  <data name="Colour_Name_Red" xml:space="preserve">
+    <value>红色</value>
+  </data>
+  <data name="Colour_Name_Brown" xml:space="preserve">
+    <value>棕色</value>
+  </data>
+  <data name="Colour_Name_Orange" xml:space="preserve">
+    <value>橙色</value>
+  </data>
+  <data name="Colour_Name_Olive" xml:space="preserve">
+    <value>橄榄色</value>
+  </data>
+  <data name="Colour_Name_Yellow" xml:space="preserve">
+    <value>黄色</value>
+  </data>
+  <data name="Colour_Name_Green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="Colour_Name_Cyan" xml:space="preserve">
+    <value>青色</value>
+  </data>
+  <data name="Colour_Name_Blue" xml:space="preserve">
+    <value>蓝色</value>
+  </data>
+  <data name="Colour_Name_Purple" xml:space="preserve">
+    <value>紫色</value>
+  </data>
+  <data name="Colour_Name_Magenta" xml:space="preserve">
+    <value>品红色</value>
+  </data>
+  <data name="Colour_Grip_Lamp" xml:space="preserve">
+    <value>拖动，把这盏灯调亮或调暗</value>
+  </data>
+  <data name="Colour_Grip_Ink" xml:space="preserve">
+    <value>拖动，多用或少用这种墨水</value>
+  </data>
+  <data name="Colour_Grip_Real" xml:space="preserve">
+    <value>点一下，在理想墨水和真实墨水之间切换</value>
+  </data>
+  <data name="Colour_Grip_Number" xml:space="preserve">
+    <value>沿色条拖动，选一个数字</value>
+  </data>
+  <data name="Colour_Grip_Grey" xml:space="preserve">
+    <value>拖动，把这块灰调亮或调暗</value>
+  </data>
+  <data name="Colour_Grip_Position" xml:space="preserve">
+    <value>沿着渐变拖动</value>
+  </data>
+  <data name="Colour_Grip_Opacity" xml:space="preserve">
+    <value>上下拖动，改变这块玻璃的不透明度</value>
+  </data>
+  <data name="Colour_Grip_Swap" xml:space="preserve">
+    <value>点一下，交换两块玻璃的前后</value>
+  </data>
+  <data name="Colour_Grip_Premultiplied" xml:space="preserve">
+    <value>点一下，改变颜色的存法</value>
+  </data>
+  <data name="Colour_Grip_Hidden" xml:space="preserve">
+    <value>拖动，选择藏在透明像素里的颜色</value>
+  </data>
+  <data name="Colour_Grip_Backdrop" xml:space="preserve">
+    <value>拖动，改变背景</value>
+  </data>
+  <data name="Colour_Lamps_Title" xml:space="preserve">
+    <value>三盏灯调出所有颜色</value>
+  </data>
+  <data name="Colour_Lamps_P1" xml:space="preserve">
+    <value>拿一盏红灯和一盏绿灯照在同一块白墙上，那块墙就变成了黄色。再加一盏蓝灯，它就变成白色。光本身并没有变：红光还是红光，绿光还是绿光。黄色是在你的眼睛里产生的。</value>
+  </data>
+  <data name="Colour_Lamps_P2" xml:space="preserve">
+    <value>眼睛深处有三种感光细胞：一种对偏红的光最敏感，一种对偏绿的光，一种对偏蓝的光。你看到的每一种颜色，都是大脑在比较这三种细胞各自被刺激得多强。只要两束光刺激它们的比例相同，看起来就一模一样。所以，三盏能调亮调暗的灯，就足以骗过眼睛，让它看到几乎任何颜色；一块屏幕，就是几百万组这样的三盏小灯。</value>
+  </data>
+  <data name="Colour_Lamps_Deeper" xml:space="preserve">
+    <value>隔着一滴水或一把放大镜看手机屏幕，就能看到每个像素里的三条小灯。大多数屏幕把每盏灯的亮度存成 0 到 255 之间的整数，一共能配出 256 × 256 × 256 种，将近 1700 万种颜色。纯粹的黄光，和红光加绿光配出的黄色，在我们眼里一模一样；可是用一台把光散开成彩虹的仪器一看，马上就能分出来。</value>
+  </data>
+  <data name="Colour_Lamps_Red" xml:space="preserve">
+    <value>红灯</value>
+  </data>
+  <data name="Colour_Lamps_Green" xml:space="preserve">
+    <value>绿灯</value>
+  </data>
+  <data name="Colour_Lamps_Blue" xml:space="preserve">
+    <value>蓝灯</value>
+  </data>
+  <data name="Colour_Lamps_Readout" xml:space="preserve">
+    <value>三盏灯合起来是{0}。文件会把它存成 {1}、{2}、{3}：每盏灯的亮度都是 0 到 255 之间的一个数字。</value>
+  </data>
+  <data name="Colour_Lamps_Picture" xml:space="preserve">
+    <value>红、绿、蓝三盏灯的光在暗墙上重叠，旁边是放大的一个屏幕像素</value>
+  </data>
+  <data name="Colour_Lamps_Rule" xml:space="preserve">
+    <value>光会相加：光斑重叠的地方，光加在一起。</value>
+  </data>
+  <data name="Colour_Lamps_Levels" xml:space="preserve">
+    <value>灯</value>
+  </data>
+  <data name="Colour_Lamps_Close" xml:space="preserve">
+    <value>放大的一个像素</value>
+  </data>
+  <data name="Colour_Lamps_Far" xml:space="preserve">
+    <value>退一步看同一个像素</value>
+  </data>
+  <data name="Colour_Lamps_Count" xml:space="preserve">
+    <value>256 × 256 × 256 = {0} 种颜色</value>
+  </data>
+  <data name="Narr_Colour_Lamps_01" xml:space="preserve">
+    <value>红、绿、蓝三盏灯照在一面暗墙上。两盏灯的光重叠的地方，出现了新的颜色。</value>
+  </data>
+  <data name="Narr_Colour_Lamps_02" xml:space="preserve">
+    <value>三盏灯都照到的地方，墙看起来是白的。那里并没有白灯：是你的眼睛把三种光加在了一起。</value>
+  </data>
+  <data name="Narr_Colour_Lamps_03" xml:space="preserve">
+    <value>轮到你了：调出橙色。把红灯开到最亮，绿灯开一半左右，蓝灯关掉。</value>
+  </data>
+  <data name="Narr_Colour_Lamps_04" xml:space="preserve">
+    <value>屏幕做的正是这件事。上面的每一个点都是三盏小灯，又小又挨得近，眼睛分不开。</value>
+  </data>
+  <data name="Narr_Colour_Lamps_05" xml:space="preserve">
+    <value>红光和绿光加在一起看起来是黄色。为什么？</value>
+  </data>
+  <data name="Colour_Lamps_Quiz1" xml:space="preserve">
+    <value>两种光在空中变成了黄光</value>
+  </data>
+  <data name="Colour_Lamps_Quiz2" xml:space="preserve">
+    <value>它们一起刺激眼睛感光细胞的方式，和黄光一样</value>
+  </data>
+  <data name="Colour_Lamps_Quiz3" xml:space="preserve">
+    <value>墙本来就是黄色的</value>
+  </data>
+  <data name="Colour_Lamps_Part_Lamps" xml:space="preserve">
+    <value>三盏灯</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Lamps" xml:space="preserve">
+    <value>一盏红灯、一盏绿灯、一盏蓝灯，正好分别照顾到眼睛里的三种感光细胞。拖动亮度条，可以把灯调亮或调暗。</value>
+  </data>
+  <data name="Colour_Lamps_Part_Overlap" xml:space="preserve">
+    <value>三盏灯都照到的地方</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Overlap" xml:space="preserve">
+    <value>红、绿、蓝都开到最亮，加在一起看起来就是白色。</value>
+  </data>
+  <data name="Colour_Lamps_Part_Pixel" xml:space="preserve">
+    <value>放大的一个像素</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Pixel" xml:space="preserve">
+    <value>三条细细的灯条，每盏灯一条。正常距离看过去，它们就融成了一个点。</value>
+  </data>
+  <data name="Colour_Lamps_Part_Mix" xml:space="preserve">
+    <value>远看的像素</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Mix" xml:space="preserve">
+    <value>三条灯条融在一起时，你真正看到的颜色。</value>
+  </data>
+  <data name="Colour_Inks_Title" xml:space="preserve">
+    <value>墨水拿走光</value>
+  </data>
+  <data name="Colour_Inks_P1" xml:space="preserve">
+    <value>颜料和墨水跟灯正好相反：它们不发光，只拿走一部分光。白纸几乎把照到它上面的光全部反射回去。在白纸上点一滴黄墨水，它会吞掉光里蓝色的部分，只把红色和绿色送回来，你的眼睛就看到了黄色。</value>
+  </data>
+  <data name="Colour_Inks_P2" xml:space="preserve">
+    <value>打印机用三种墨水，每种正好吞掉屏幕三种光中的一种：青色吞掉红光，品红吞掉绿光，黄色吞掉蓝光。两种墨水叠在一起，就拿走两种光，所以青色加黄色只剩下绿光。三种都叠上，本该把光全部拿走，留下黑色。可真正的墨水从来不够纯，每种都会漏过一点它该吞掉的光，三种叠在一起，得到的是一种浑浊的深棕色。</value>
+  </data>
+  <data name="Colour_Inks_Deeper" xml:space="preserve">
+    <value>所以彩色打印机还有第四个墨盒，装的是黑墨水，印刷行业也把这套墨水叫作 CMYK：青、品红、黄，再加上代表黑色的 K。黑墨水还能省下另外三种：用三层彩色墨水印一个黑字，要用三倍的墨水，纸会被浸湿，三层只要错开一丝，字的边缘就会发虚。屏幕上的图片打印出来常常显得暗淡一些，因为屏幕的灯能发出的一些鲜艳颜色，用任何墨水组合都调不出来。</value>
+  </data>
+  <data name="Colour_Inks_Cyan" xml:space="preserve">
+    <value>青色墨水</value>
+  </data>
+  <data name="Colour_Inks_Magenta" xml:space="preserve">
+    <value>品红墨水</value>
+  </data>
+  <data name="Colour_Inks_Yellow" xml:space="preserve">
+    <value>黄色墨水</value>
+  </data>
+  <data name="Colour_Inks_Real" xml:space="preserve">
+    <value>真实墨水（不够纯）</value>
+  </data>
+  <data name="Colour_Inks_Readout" xml:space="preserve">
+    <value>三种墨水都叠上的地方，纸把 {0} 的光送回来：看起来是{1}。</value>
+  </data>
+  <data name="Colour_Inks_Picture" xml:space="preserve">
+    <value>青色、品红和黄色墨水在白纸上重叠</value>
+  </data>
+  <data name="Colour_Inks_Rule" xml:space="preserve">
+    <value>墨水拿走光：每种墨水吞掉红、绿、蓝中的一种。</value>
+  </data>
+  <data name="Colour_Inks_Levels" xml:space="preserve">
+    <value>墨水</value>
+  </data>
+  <data name="Colour_Inks_Ideal" xml:space="preserve">
+    <value>理想墨水</value>
+  </data>
+  <data name="Colour_Inks_RealLabel" xml:space="preserve">
+    <value>真实墨水</value>
+  </data>
+  <data name="Colour_Inks_Back" xml:space="preserve">
+    <value>中间送回来的光</value>
+  </data>
+  <data name="Colour_Inks_Sum" xml:space="preserve">
+    <value>中间看起来是{0}</value>
+  </data>
+  <data name="Narr_Colour_Inks_01" xml:space="preserve">
+    <value>白纸几乎把照到它上面的光全部送回来：红光、绿光和蓝光。</value>
+  </data>
+  <data name="Narr_Colour_Inks_02" xml:space="preserve">
+    <value>每种墨水拿走其中一种光。青色吞掉红光，品红吞掉绿光，黄色吞掉蓝光。</value>
+  </data>
+  <data name="Narr_Colour_Inks_03" xml:space="preserve">
+    <value>轮到你了：换成真实的墨水，看看三种墨水都叠在一起的中间。</value>
+  </data>
+  <data name="Narr_Colour_Inks_04" xml:space="preserve">
+    <value>真实的墨水都会漏过一点光，叠在一起是浑浊的棕色，而不是黑色。所以打印机还有第四个墨盒，装黑墨水。</value>
+  </data>
+  <data name="Narr_Colour_Inks_05" xml:space="preserve">
+    <value>哪两种墨水叠印在一起会得到绿色？</value>
+  </data>
+  <data name="Colour_Inks_Quiz1" xml:space="preserve">
+    <value>青色和黄色</value>
+  </data>
+  <data name="Colour_Inks_Quiz2" xml:space="preserve">
+    <value>品红和黄色</value>
+  </data>
+  <data name="Colour_Inks_Quiz3" xml:space="preserve">
+    <value>青色和品红</value>
+  </data>
+  <data name="Colour_Inks_Part_Paper" xml:space="preserve">
+    <value>白纸</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Paper" xml:space="preserve">
+    <value>它几乎把照到的光全部送回去，所以看起来是白色。</value>
+  </data>
+  <data name="Colour_Inks_Part_Ink" xml:space="preserve">
+    <value>一滴墨水</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Ink" xml:space="preserve">
+    <value>墨水就像涂在纸上的滤光片：它拿走三种光中的一种，让另外两种反射回来。拖动墨量条，可以多用或少用一些。</value>
+  </data>
+  <data name="Colour_Inks_Part_Middle" xml:space="preserve">
+    <value>三种墨水叠在一起</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Middle" xml:space="preserve">
+    <value>理想的墨水会在这里把光全部拿走，留下黑色；真实的墨水留下的是深棕色。</value>
+  </data>
+  <data name="Colour_Inks_Part_Light" xml:space="preserve">
+    <value>反射回来的光</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Light" xml:space="preserve">
+    <value>中间这块还把多少红光、绿光和蓝光送回你的眼睛。</value>
+  </data>
+  <data name="Colour_Steps_Title" xml:space="preserve">
+    <value>数字翻倍，光不翻倍</value>
+  </data>
+  <data name="Colour_Steps_P1" xml:space="preserve">
+    <value>图片文件把三种光各存成一个 0 到 255 之间的数字。你也许以为 128，大约是 255 的一半，就会发出 255 一半的光。其实不是：屏幕收到 128，只发出大约五分之一的光。可这个灰色在你看来，差不多正好在黑和白的中间。</value>
+  </data>
+  <data name="Colour_Steps_P2" xml:space="preserve">
+    <value>眼睛是靠比较来判断亮暗的。在暗处，一点点差别它都能察觉；在亮处，变化要大得多才看得出来。所以这些数字是按眼睛的感觉来分配的：暗的一头，相邻数字之间光差得很少；亮的一头，差得很多。要是改成按光量平均分配，256 个数字大多会花在你根本分不出来的亮灰色上，从黑到白最暗的那十分之一，只剩下 3 个数字可用。</value>
+  </data>
+  <data name="Colour_Steps_Deeper" xml:space="preserve">
+    <value>把数字变成光是屏幕的工作，它遵守一条大家约定好的规则，这样同一张图在每块屏幕上看起来都一样。这条规则大致是：把数字除以 255，再求它的 2.2 次方。正因为数字都花在了眼睛看得出的地方，256 级就足以画出平滑的傍晚天空；要是按光量平均分配，天空暗的部分就会出现一道道条纹，叫作色带。</value>
+  </data>
+  <data name="Colour_Steps_Number" xml:space="preserve">
+    <value>存的数字</value>
+  </data>
+  <data name="Colour_Steps_Readout" xml:space="preserve">
+    <value>数字 {0}（最大 255）：屏幕发出白色 {1} 的光，看起来有白色 {2} 那么亮。</value>
+  </data>
+  <data name="Colour_Steps_Picture" xml:space="preserve">
+    <value>两条从黑到白的灰色色条，一条按数字均匀递增，一条按光量均匀递增</value>
+  </data>
+  <data name="Colour_Steps_Rule" xml:space="preserve">
+    <value>拖动标记：虚线指出这个数字的光落在哪里。</value>
+  </data>
+  <data name="Colour_Steps_ByNumber" xml:space="preserve">
+    <value>数字均匀递增</value>
+  </data>
+  <data name="Colour_Steps_ByLight" xml:space="preserve">
+    <value>光量均匀递增</value>
+  </data>
+  <data name="Colour_Steps_Light" xml:space="preserve">
+    <value>发出的光</value>
+  </data>
+  <data name="Colour_Steps_Looks" xml:space="preserve">
+    <value>看起来多亮</value>
+  </data>
+  <data name="Colour_Steps_Dark" xml:space="preserve">
+    <value>留给最暗十分之一的数字：按眼睛分配 {0} 个，按光量分配 {1} 个</value>
+  </data>
+  <data name="Narr_Colour_Steps_01" xml:space="preserve">
+    <value>图片文件把每种光存成 0 到 255 的数字。这一条按数字均匀递增，在你看来也是均匀的。</value>
+  </data>
+  <data name="Narr_Colour_Steps_02" xml:space="preserve">
+    <value>这一条按光量均匀递增。它看起来很不均匀：暗的一头跳得很大，亮的一头几乎分不出差别。</value>
+  </data>
+  <data name="Narr_Colour_Steps_03" xml:space="preserve">
+    <value>轮到你了：拖动标记，让屏幕发出的光正好是白色的一半。</value>
+  </data>
+  <data name="Narr_Colour_Steps_04" xml:space="preserve">
+    <value>答案在 188 附近，而不是 128。眼睛在暗处察觉细小变化的本领比在亮处强得多，所以数字都花在了你看得出的地方。</value>
+  </data>
+  <data name="Narr_Colour_Steps_05" xml:space="preserve">
+    <value>为什么这些数字不干脆按光量平均分配？</value>
+  </data>
+  <data name="Colour_Steps_Quiz1" xml:space="preserve">
+    <value>屏幕做不到让光均匀递增</value>
+  </data>
+  <data name="Colour_Steps_Quiz2" xml:space="preserve">
+    <value>光量均匀递增更费电</value>
+  </data>
+  <data name="Colour_Steps_Quiz3" xml:space="preserve">
+    <value>256 个数字大多会花在眼睛分不出的亮灰色上</value>
+  </data>
+  <data name="Colour_Steps_Part_Numbers" xml:space="preserve">
+    <value>数字均匀递增</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Numbers" xml:space="preserve">
+    <value>每一格的数字都比前一格大同样多。在你眼里，这些台阶看起来差不多均匀。</value>
+  </data>
+  <data name="Colour_Steps_Part_Light" xml:space="preserve">
+    <value>光量均匀递增</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Light" xml:space="preserve">
+    <value>每一格都比前一格多发出同样多的光。这在暗处是很大的一跳，在亮处却几乎察觉不到。</value>
+  </data>
+  <data name="Colour_Steps_Part_Marker" xml:space="preserve">
+    <value>你选的数字</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Marker" xml:space="preserve">
+    <value>沿着色条拖动它。虚线指出这个数字发出的光，落在光量均匀的那一条的什么位置。</value>
+  </data>
+  <data name="Colour_Steps_Part_Meter" xml:space="preserve">
+    <value>光量和观感</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Meter" xml:space="preserve">
+    <value>两根条：屏幕为这个数字发出多少光，以及它在你看来有多亮。</value>
+  </data>
+  <data name="Colour_Blend_Title" xml:space="preserve">
+    <value>混错了数字</value>
+  </data>
+  <data name="Colour_Blend_P1" xml:space="preserve">
+    <value>细细的黑白条纹，稍微站远一点看，就融成了一片灰。它一半发出白色的光，一半什么也不发，所以合起来是白色一半的光。这个灰色的数字是 188，而不是 128：旁边放一块 128 的灰，明显要暗一些。</value>
+  </data>
+  <data name="Colour_Blend_P2" xml:space="preserve">
+    <value>电脑无时无刻不在混合颜色：缩小一张照片、把背景虚化、让一种颜色渐变成另一种。省事的做法是把数字直接平均，可这些数字并不是光的多少，所以结果总是偏暗。这样做出的红到绿渐变，中间会塌成一片灰暗的橄榄色。先把数字换成光量，平均之后再换回数字，渐变就会经过明亮的黄色，正像一盏红灯和一盏绿灯混出来的那样。</value>
+  </data>
+  <data name="Colour_Blend_Deeper" xml:space="preserve">
+    <value>缩小一张星空照片时也会出同样的错：直接平均数字，小小的亮星会变得比应有的暗。讲究的程序会先把数字换成光量再混合，混完再换回去。不过，并不是每种混合都该按光来算：一条想让眼睛看着均匀的黑白渐变，按数字均匀递增反而更平滑。</value>
+  </data>
+  <data name="Colour_Blend_Grey" xml:space="preserve">
+    <value>方块的数字</value>
+  </data>
+  <data name="Colour_Blend_Position" xml:space="preserve">
+    <value>渐变上的位置</value>
+  </data>
+  <data name="Colour_Blend_Match" xml:space="preserve">
+    <value>这块灰发出白色 {0} 的光，和条纹一样：亮度对上了。</value>
+  </data>
+  <data name="Colour_Blend_Darker" xml:space="preserve">
+    <value>这块灰发出白色 {0} 的光，比条纹的 50% 少：看起来更暗。</value>
+  </data>
+  <data name="Colour_Blend_Lighter" xml:space="preserve">
+    <value>这块灰发出白色 {0} 的光，比条纹的 50% 多：看起来更亮。</value>
+  </data>
+  <data name="Colour_Blend_MixReadout" xml:space="preserve">
+    <value>在标记处，按数字混合是{0}，按光量混合是{1}。</value>
+  </data>
+  <data name="Colour_Blend_Picture" xml:space="preserve">
+    <value>黑白条纹和一块灰色方块，下面是两条红到绿的渐变</value>
+  </data>
+  <data name="Colour_Blend_Rule" xml:space="preserve">
+    <value>按数字混合会偏暗，按光混合就不会。</value>
+  </data>
+  <data name="Colour_Blend_Stripes" xml:space="preserve">
+    <value>黑白条纹</value>
+  </data>
+  <data name="Colour_Blend_Patch" xml:space="preserve">
+    <value>灰色 {0}</value>
+  </data>
+  <data name="Colour_Blend_Squint" xml:space="preserve">
+    <value>退后或眯起眼睛，让方块和条纹一样亮</value>
+  </data>
+  <data name="Colour_Blend_ByNumbers" xml:space="preserve">
+    <value>红到绿，按数字混合</value>
+  </data>
+  <data name="Colour_Blend_InLight" xml:space="preserve">
+    <value>红到绿，按光量混合</value>
+  </data>
+  <data name="Narr_Colour_Blend_01" xml:space="preserve">
+    <value>这些条纹黑白相间，每条一个像素宽。稍微站远一点，它们就融成了灰色。</value>
+  </data>
+  <data name="Narr_Colour_Blend_02" xml:space="preserve">
+    <value>旁边这块灰的数字是 128，正好是 255 的一半，可它看起来比条纹暗。</value>
+  </data>
+  <data name="Narr_Colour_Blend_03" xml:space="preserve">
+    <value>轮到你了：调整这块灰的数字，让它和条纹一样亮。可以离屏幕远一点，或者眯起眼睛看。</value>
+  </data>
+  <data name="Narr_Colour_Blend_04" xml:space="preserve">
+    <value>条纹发出的是白色一半的光，而一半的光对应的数字是 188。把红色到绿色的数字直接平均，中间会塌暗；按光来混合，中间就是明亮的黄色。</value>
+  </data>
+  <data name="Narr_Colour_Blend_05" xml:space="preserve">
+    <value>想让两种颜色像真实的光那样混合，程序应该先做什么？</value>
+  </data>
+  <data name="Colour_Blend_Quiz1" xml:space="preserve">
+    <value>把它们的数字平均</value>
+  </data>
+  <data name="Colour_Blend_Quiz2" xml:space="preserve">
+    <value>把数字换成光量，再平均</value>
+  </data>
+  <data name="Colour_Blend_Quiz3" xml:space="preserve">
+    <value>把两种颜色都调亮</value>
+  </data>
+  <data name="Colour_Blend_Part_Stripes" xml:space="preserve">
+    <value>黑白条纹</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Stripes" xml:space="preserve">
+    <value>一半黑、一半白，每条一个像素。合起来正好发出白色一半的光。</value>
+  </data>
+  <data name="Colour_Blend_Part_Patch" xml:space="preserve">
+    <value>灰色方块</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Patch" xml:space="preserve">
+    <value>一块纯灰色。拖动它的亮度条，直到它看起来和条纹一样。</value>
+  </data>
+  <data name="Colour_Blend_Part_Numbers" xml:space="preserve">
+    <value>按数字混合</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Numbers" xml:space="preserve">
+    <value>每一条都是红色和绿色数字的平均值，中间是一片暗淡的橄榄色。</value>
+  </data>
+  <data name="Colour_Blend_Part_Light" xml:space="preserve">
+    <value>按光量混合</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Light" xml:space="preserve">
+    <value>每一条都按两种颜色代表的光来混合，中间是明亮的黄色，就像两盏灯混出来的一样。</value>
+  </data>
+  <data name="Colour_Panes_Title" xml:space="preserve">
+    <value>能透过多少</value>
+  </data>
+  <data name="Colour_Panes_P1" xml:space="preserve">
+    <value>一块有色玻璃会让后面的景物透过来一部分，再加上一些它自己的颜色。在屏幕上，半透明的东西也不过如此：每个像素多存一个数字，叫不透明度，说明这个像素里有多少是它自己的颜色，多少是后面的东西。不透明度是 0% 时它就消失了；是 100% 时，后面的东西全被挡住。</value>
+  </data>
+  <data name="Colour_Panes_P2" xml:space="preserve">
+    <value>叠上两块玻璃，光要先穿过一块，再穿过另一块。一块 50% 的玻璃让一半透过，两块叠起来，背景还能露出四分之一：它们一共挡住 75%，而不是 100%。重叠部分的颜色取决于哪块在前面，因为前面那块说了算；可它们挡住多少，却和顺序无关。</value>
+  </data>
+  <data name="Colour_Panes_Deeper" xml:space="preserve">
+    <value>程序就是这样一层层地画出整个屏幕的，从后往前：先是桌面，然后是窗口，再是窗口的阴影，最后是一个背景有点透明的菜单。每个像素都这样算：新一层的颜色乘以它的不透明度，加上原来那里的颜色乘以透过的份额。只要从后往前画，每个窗口、每片阴影都会落在正确的颜色上。</value>
+  </data>
+  <data name="Colour_Panes_Red" xml:space="preserve">
+    <value>红玻璃的不透明度</value>
+  </data>
+  <data name="Colour_Panes_Blue" xml:space="preserve">
+    <value>蓝玻璃的不透明度</value>
+  </data>
+  <data name="Colour_Panes_BlueOnTop" xml:space="preserve">
+    <value>蓝玻璃在前面</value>
+  </data>
+  <data name="Colour_Panes_Readout" xml:space="preserve">
+    <value>两块玻璃重叠的地方，背景被挡住 {0}，还有 {1} 透过来。</value>
+  </data>
+  <data name="Colour_Panes_BlueFront" xml:space="preserve">
+    <value>蓝玻璃在前面，所以重叠处偏蓝。</value>
+  </data>
+  <data name="Colour_Panes_RedFront" xml:space="preserve">
+    <value>红玻璃在前面，所以重叠处偏红。</value>
+  </data>
+  <data name="Colour_Panes_Picture" xml:space="preserve">
+    <value>一块红色、一块蓝色的半透明玻璃挡在条纹背景前</value>
+  </data>
+  <data name="Colour_Panes_Rule" xml:space="preserve">
+    <value>每块玻璃让不透明度没盖住的那部分透过去。</value>
+  </data>
+  <data name="Colour_Panes_Hidden" xml:space="preserve">
+    <value>挡住 {0}</value>
+  </data>
+  <data name="Colour_Panes_Front" xml:space="preserve">
+    <value>在前面</value>
+  </data>
+  <data name="Colour_Panes_Opacity" xml:space="preserve">
+    <value>不透明度</value>
+  </data>
+  <data name="Narr_Colour_Panes_01" xml:space="preserve">
+    <value>后面是黑白相间的竖条和一个黄色的太阳，前面立着两块有色玻璃。</value>
+  </data>
+  <data name="Narr_Colour_Panes_02" xml:space="preserve">
+    <value>这块红玻璃让后面一半的东西透过来，再加上一半它自己的红色。这个份额就是它的不透明度：50%。</value>
+  </data>
+  <data name="Narr_Colour_Panes_03" xml:space="preserve">
+    <value>轮到你了：点一下重叠的地方，把两块玻璃换个位置，让红的在前面。</value>
+  </data>
+  <data name="Narr_Colour_Panes_04" xml:space="preserve">
+    <value>重叠部分变了颜色，因为前面那块占的分量更大。可它挡住的一样多：两块半透明的玻璃挡住四分之三，而不是全部。</value>
+  </data>
+  <data name="Narr_Colour_Panes_05" xml:space="preserve">
+    <value>两块玻璃各让 50% 透过。透过两块之后，背景还能露出多少？</value>
+  </data>
+  <data name="Colour_Panes_Quiz1" xml:space="preserve">
+    <value>一点也没有</value>
+  </data>
+  <data name="Colour_Panes_Quiz2" xml:space="preserve">
+    <value>四分之一</value>
+  </data>
+  <data name="Colour_Panes_Quiz3" xml:space="preserve">
+    <value>一半</value>
+  </data>
+  <data name="Colour_Panes_Part_Behind" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Behind" xml:space="preserve">
+    <value>黑白竖条和黄色太阳，用来看清透过来了多少。</value>
+  </data>
+  <data name="Colour_Panes_Part_Red" xml:space="preserve">
+    <value>红玻璃</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Red" xml:space="preserve">
+    <value>拖动它的不透明度条：它加上多少自己的红色，挡住多少后面的东西。</value>
+  </data>
+  <data name="Colour_Panes_Part_Blue" xml:space="preserve">
+    <value>蓝玻璃</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Blue" xml:space="preserve">
+    <value>和红玻璃一样，有它自己的不透明度。点一下重叠的地方，可以把它换到前面或后面。</value>
+  </data>
+  <data name="Colour_Panes_Part_Overlap" xml:space="preserve">
+    <value>重叠的地方</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Overlap" xml:space="preserve">
+    <value>后面的光要穿过两块玻璃。不管哪块在前，挡住的都一样多；颜色却不一样。</value>
+  </data>
+  <data name="Colour_Halo_Title" xml:space="preserve">
+    <value>抠图边上的一圈</value>
+  </data>
+  <data name="Colour_Halo_P1" xml:space="preserve">
+    <value>图片文件里的一张贴纸，是一个红色图形，四周是透明的像素。透明像素照样存着红、绿、蓝三个数字；不透明度是 0，这些数字永远不会显示出来，所以程序随便填：白色、黑色，或者之前留下的什么颜色。这本来没什么害处，直到图片被放大或缩小，像素要和邻居混合的时候。</value>
+  </data>
+  <data name="Colour_Halo_P2" xml:space="preserve">
+    <value>在边缘上，一个红色像素要和一个看不见的白色像素混合。混出来的颜色一半红一半白，是浅粉色，不透明度是一半。放到深色背景上，边缘就出现了一圈原图里根本没有的浅色。解决办法是：存颜色时先乘上这个像素被覆盖的份额。这样，透明像素就根本不带颜色，边缘会从红色干干净净地过渡到背景。</value>
+  </data>
+  <data name="Colour_Halo_Deeper" xml:space="preserve">
+    <value>这种存颜色的办法叫“预乘 alpha”，显卡和游戏内部常常这样做。它还有一个好处：把一层叠到另一层上时少做一次乘法，因为每个颜色早已乘过自己的不透明度。如果你见过游戏里的树叶、或者一张抠出来的照片，边上有一圈细细的浅色或深色轮廓，那就是这一圈。有些图片编辑软件保存时会把透明像素填成边缘的颜色，也能把它藏起来。</value>
+  </data>
+  <data name="Colour_Halo_Hidden" xml:space="preserve">
+    <value>透明像素里的颜色</value>
+  </data>
+  <data name="Colour_Halo_Backdrop" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="Colour_Halo_Premultiplied" xml:space="preserve">
+    <value>存颜色时先乘不透明度</value>
+  </data>
+  <data name="Colour_Halo_Light" xml:space="preserve">
+    <value>边缘偏亮：一圈浅色，最多偏离应有的颜色 {0}。</value>
+  </data>
+  <data name="Colour_Halo_Dark" xml:space="preserve">
+    <value>边缘偏暗：一圈深色，最多偏离应有的颜色 {0}。</value>
+  </data>
+  <data name="Colour_Halo_Clean" xml:space="preserve">
+    <value>边缘从红色干净地过渡到背景（偏离 {0}）。</value>
+  </data>
+  <data name="Colour_Halo_Picture" xml:space="preserve">
+    <value>一张带透明像素的小红贴纸，和放大五倍的同一张贴纸</value>
+  </data>
+  <data name="Colour_Halo_Rule" xml:space="preserve">
+    <value>放大时，相邻像素会混合：颜色和不透明度都混。</value>
+  </data>
+  <data name="Colour_Halo_Big" xml:space="preserve">
+    <value>放大 {0} 倍</value>
+  </data>
+  <data name="Colour_Halo_Small" xml:space="preserve">
+    <value>贴纸，{0} × {0} 像素</value>
+  </data>
+  <data name="Colour_Halo_Holds" xml:space="preserve">
+    <value>存着一个颜色……</value>
+  </data>
+  <data name="Colour_Halo_Nothing" xml:space="preserve">
+    <value>不带任何颜色</value>
+  </data>
+  <data name="Colour_Halo_Opacity" xml:space="preserve">
+    <value>……不透明度为 0</value>
+  </data>
+  <data name="Colour_Halo_Straight" xml:space="preserve">
+    <value>颜色原样存</value>
+  </data>
+  <data name="Colour_Halo_Multiplied" xml:space="preserve">
+    <value>颜色先乘不透明度</value>
+  </data>
+  <data name="Colour_Halo_ShowLight" xml:space="preserve">
+    <value>边上一圈浅色</value>
+  </data>
+  <data name="Colour_Halo_ShowDark" xml:space="preserve">
+    <value>边上一圈深色</value>
+  </data>
+  <data name="Colour_Halo_ShowClean" xml:space="preserve">
+    <value>边缘干净</value>
+  </data>
+  <data name="Narr_Colour_Halo_01" xml:space="preserve">
+    <value>这张红色贴纸宽八个像素。每个像素要么全红，要么全透明。</value>
+  </data>
+  <data name="Narr_Colour_Halo_02" xml:space="preserve">
+    <value>放大五倍后，每个新像素都由旁边的像素混合而成。在边缘上，红色和藏在透明像素里的白色混在一起，于是出现了一圈浅色。</value>
+  </data>
+  <data name="Narr_Colour_Halo_03" xml:space="preserve">
+    <value>轮到你了：改成存颜色时先乘上不透明度。这样，透明像素就完全不带颜色了。</value>
+  </data>
+  <data name="Narr_Colour_Halo_04" xml:space="preserve">
+    <value>现在边缘从红色直接过渡到背景，不管透明像素原来存的是什么颜色。</value>
+  </data>
+  <data name="Narr_Colour_Halo_05" xml:space="preserve">
+    <value>那一圈浅色是怎么来的？</value>
+  </data>
+  <data name="Colour_Halo_Quiz1" xml:space="preserve">
+    <value>背景太暗了</value>
+  </data>
+  <data name="Colour_Halo_Quiz2" xml:space="preserve">
+    <value>红色太亮了</value>
+  </data>
+  <data name="Colour_Halo_Quiz3" xml:space="preserve">
+    <value>藏在透明像素里的白色被混进了边缘</value>
+  </data>
+  <data name="Colour_Halo_Part_Small" xml:space="preserve">
+    <value>贴纸</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Small" xml:space="preserve">
+    <value>宽八个像素。棋盘格表示透明的像素。</value>
+  </data>
+  <data name="Colour_Halo_Part_Invisible" xml:space="preserve">
+    <value>透明像素里面</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Invisible" xml:space="preserve">
+    <value>它照样存着一个颜色，只是不透明度为 0，你永远看不到。拖动大图下面的色条，可以改变这个颜色。</value>
+  </data>
+  <data name="Colour_Halo_Part_Edge" xml:space="preserve">
+    <value>放大后的边缘</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Edge" xml:space="preserve">
+    <value>每个新像素都由离它最近的四个原像素混合而成，颜色和不透明度都一样。</value>
+  </data>
+  <data name="Colour_Halo_Part_Switch" xml:space="preserve">
+    <value>颜色怎么存</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Switch" xml:space="preserve">
+    <value>原样存，或者先乘上不透明度再存。点一下开关切换。</value>
+  </data>
 </root>

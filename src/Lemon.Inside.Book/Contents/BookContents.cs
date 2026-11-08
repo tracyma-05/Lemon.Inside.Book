@@ -23,6 +23,7 @@ public static class BookContents
         new("Friction", Volume.Machines, Spreads: 6),
         new("Canals", Volume.Machines, Spreads: 6),
         new("Sewing", Volume.Machines, Spreads: 6),
+        new("Colour", Volume.Machines, Spreads: 6),
     ];
 
     public static IReadOnlyList<Volume> Volumes { get; } = Enum.GetValues<Volume>();

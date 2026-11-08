@@ -3567,6 +3567,795 @@
      ]
     ]
    },
+   "Narr_Colour_Blend_01": {
+    "duration": 6.84,
+    "hash": "8dacfaeef0d8f0b9",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "These stripes are black and white, one pixel each."
+     ],
+     [
+      3.889,
+      6.778,
+      "From a little way back they blur into grey."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_02": {
+    "duration": 9.024,
+    "hash": "0e94a3985f16b4ee",
+    "sentences": [
+     [
+      0.05,
+      6.403,
+      "The patch beside them is number 128, half of 255."
+     ],
+     [
+      6.403,
+      8.972,
+      "Yet it looks darker than the stripes."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_03": {
+    "duration": 7.416,
+    "hash": "d515c41b5869921c",
+    "sentences": [
+     [
+      0.05,
+      4.75,
+      "Your turn: change the patch's number until it matches the stripes."
+     ],
+     [
+      4.75,
+      7.361,
+      "Step back from the screen, or squint."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_04": {
+    "duration": 15.12,
+    "hash": "ff3381b23c1b8450",
+    "sentences": [
+     [
+      0.05,
+      6.264,
+      "The stripes give out half of white's light, and half the light is number 188."
+     ],
+     [
+      6.264,
+      15.056,
+      "Blend red into green by averaging numbers and the middle sags dark; blend the light, and it passes through a clear yellow."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_05": {
+    "duration": 5.952,
+    "hash": "0ca622e061c0fb01",
+    "sentences": [
+     [
+      0.05,
+      5.889,
+      "To mix two colours the way light really mixes, what should a program do first?"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Light": {
+    "duration": 8.088,
+    "hash": "10f1d3156f7f4607",
+    "sentences": [
+     [
+      0.05,
+      4.097,
+      "Each band mixes the light the two colours stand for."
+     ],
+     [
+      4.097,
+      8.014,
+      "The middle is a clear yellow, as two lamps would make."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Numbers": {
+    "duration": 6.408,
+    "hash": "9ff7586454253de2",
+    "sentences": [
+     [
+      0.05,
+      3.972,
+      "Each band is the average of red's and green's numbers."
+     ],
+     [
+      3.972,
+      6.333,
+      "The middle comes out a dull olive."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Patch": {
+    "duration": 4.656,
+    "hash": "a61c74bcae0be685",
+    "sentences": [
+     [
+      0.05,
+      1.486,
+      "A plain grey."
+     ],
+     [
+      1.486,
+      4.597,
+      "Drag its level until it looks like the stripes."
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Stripes": {
+    "duration": 7.392,
+    "hash": "77ce0c20479cd35a",
+    "sentences": [
+     [
+      0.05,
+      3.417,
+      "Half black, half white, a pixel each."
+     ],
+     [
+      3.417,
+      7.333,
+      "Together they give out exactly half of white's light."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_01": {
+    "duration": 7.272,
+    "hash": "47a126ac4488ecd2",
+    "sentences": [
+     [
+      0.05,
+      3.194,
+      "This red sticker is eight pixels across."
+     ],
+     [
+      3.194,
+      7.208,
+      "Each pixel is either fully red or fully see-through."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_02": {
+    "duration": 12.336,
+    "hash": "e31010f234e97345",
+    "sentences": [
+     [
+      0.05,
+      5.236,
+      "Made five times bigger, each new pixel is mixed from its neighbours."
+     ],
+     [
+      5.236,
+      12.264,
+      "Along the edge, red is mixed with the white hidden in the see-through pixels, and a pale ring appears."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_03": {
+    "duration": 8.304,
+    "hash": "a5c1e9f1c215652f",
+    "sentences": [
+     [
+      0.05,
+      4.958,
+      "Your turn: switch to keeping each colour multiplied by its opacity."
+     ],
+     [
+      4.958,
+      8.236,
+      "Then a see-through pixel holds no colour at all."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_04": {
+    "duration": 7.08,
+    "hash": "5f3d1058d8d88223",
+    "sentences": [
+     [
+      0.05,
+      7.028,
+      "Now the edge fades from red straight into the background, whatever colour the see-through pixels used to hold."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_05": {
+    "duration": 2.16,
+    "hash": "b293db0ab6163ac1",
+    "sentences": [
+     [
+      0.05,
+      2.111,
+      "Why did the pale ring appear?"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Edge": {
+    "duration": 6.744,
+    "hash": "9d7c5d2c5f725bce",
+    "sentences": [
+     [
+      0.05,
+      6.694,
+      "Every new pixel is mixed from the four stored pixels nearest it, colour and opacity alike."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Invisible": {
+    "duration": 8.856,
+    "hash": "a09c6f4a1ab76c41",
+    "sentences": [
+     [
+      0.05,
+      5.014,
+      "It still stores a colour; with its opacity at zero you never see it."
+     ],
+     [
+      5.014,
+      8.792,
+      "Drag the strip under the big picture to change that colour."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Small": {
+    "duration": 4.8,
+    "hash": "e397b60772d37dd6",
+    "sentences": [
+     [
+      0.05,
+      1.75,
+      "Eight pixels across."
+     ],
+     [
+      1.75,
+      4.736,
+      "The checkerboard marks the see-through pixels."
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Switch": {
+    "duration": 6.456,
+    "hash": "d15b98be2deb8385",
+    "sentences": [
+     [
+      0.05,
+      4.417,
+      "Kept as it is, or already multiplied by its opacity."
+     ],
+     [
+      4.417,
+      6.403,
+      "Tap the switch to change it."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_01": {
+    "duration": 6.576,
+    "hash": "9969e2694cd94dd0",
+    "sentences": [
+     [
+      0.05,
+      6.514,
+      "White paper sends back almost all the light that falls on it: red, green and blue."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_02": {
+    "duration": 8.736,
+    "hash": "5b7f4fb1b37fcdc0",
+    "sentences": [
+     [
+      0.05,
+      3.167,
+      "Each ink takes one of those lights away."
+     ],
+     [
+      3.167,
+      8.667,
+      "Cyan swallows red, magenta swallows green, and yellow swallows blue."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_03": {
+    "duration": 5.736,
+    "hash": "7d317bce93a72d0b",
+    "sentences": [
+     [
+      0.05,
+      5.681,
+      "Your turn: switch to real inks, and watch the middle, where all three overlap."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_04": {
+    "duration": 10.92,
+    "hash": "31be881cf760027e",
+    "sentences": [
+     [
+      0.05,
+      4.028,
+      "Real inks each let a little of their light slip through."
+     ],
+     [
+      4.028,
+      7.111,
+      "Together they make a muddy brown, not black."
+     ],
+     [
+      7.111,
+      10.847,
+      "That's why a printer has a fourth cartridge, of black ink."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_05": {
+    "duration": 4.344,
+    "hash": "47f7ba0f7890b4de",
+    "sentences": [
+     [
+      0.05,
+      4.278,
+      "Which two inks, printed one on top of the other, make green?"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Ink": {
+    "duration": 10.68,
+    "hash": "1ef49e78d6132861",
+    "sentences": [
+     [
+      0.05,
+      7.444,
+      "Ink is like a filter painted on the paper: it takes away one of the three lights and lets the other two bounce back."
+     ],
+     [
+      7.444,
+      10.625,
+      "Drag a bar to use more or less of it."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Light": {
+    "duration": 6.048,
+    "hash": "ac552fb6d78ab937",
+    "sentences": [
+     [
+      0.05,
+      5.986,
+      "How much red, green and blue light the middle still sends back to your eye."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Middle": {
+    "duration": 7.176,
+    "hash": "4ff5c8bcc02ca0f5",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "Ideal inks would take every light away here and leave black."
+     ],
+     [
+      4.472,
+      7.111,
+      "Real ones leave a dark brown."
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Paper": {
+    "duration": 4.56,
+    "hash": "0115cf7369d23d4d",
+    "sentences": [
+     [
+      0.05,
+      4.5,
+      "It sends back nearly all the light that lands on it, so it looks white."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_01": {
+    "duration": 9.432,
+    "hash": "b1cbb2dfb2f9d7e5",
+    "sentences": [
+     [
+      0.05,
+      5.375,
+      "Three lamps, red, green and blue, shine on a dark wall."
+     ],
+     [
+      5.375,
+      9.361,
+      "Where two of them overlap, a new colour appears."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_02": {
+    "duration": 9.12,
+    "hash": "8edfb860788e72d9",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "Where all three overlap, the wall looks white."
+     ],
+     [
+      3.889,
+      9.056,
+      "No white lamp is shining there: your eye adds the three lights up."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_03": {
+    "duration": 6.864,
+    "hash": "b86f31b4cbdfcc30",
+    "sentences": [
+     [
+      0.05,
+      2.457,
+      "Your turn: make orange."
+     ],
+     [
+      2.457,
+      6.806,
+      "Turn red all the way up, green to about half, and blue off."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_04": {
+    "duration": 8.64,
+    "hash": "0192fbe19cb91724",
+    "sentences": [
+     [
+      0.05,
+      2.403,
+      "A screen does exactly this."
+     ],
+     [
+      2.403,
+      8.569,
+      "Every dot on it is three tiny lamps, too small and too close together to see apart."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_05": {
+    "duration": 4.656,
+    "hash": "fc241d43cc43e515",
+    "sentences": [
+     [
+      0.05,
+      3.639,
+      "A red light and a green light together look yellow."
+     ],
+     [
+      3.639,
+      4.597,
+      "Why?"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Lamps": {
+    "duration": 10.656,
+    "hash": "6d7b1610c609414a",
+    "sentences": [
+     [
+      0.05,
+      3.319,
+      "A red, a green and a blue lamp."
+     ],
+     [
+      3.319,
+      7.597,
+      "Between them they reach all three kinds of light sensor in your eye."
+     ],
+     [
+      7.597,
+      10.583,
+      "Drag a bar to turn a lamp up or down."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Mix": {
+    "duration": 4.104,
+    "hash": "6aff48d2497ce2b7",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "The colour you actually see when the three stripes blur together."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Overlap": {
+    "duration": 5.832,
+    "hash": "c5cf3f27c5c065f9",
+    "sentences": [
+     [
+      0.05,
+      5.778,
+      "Red, green and blue at full brightness, added together, look white."
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Pixel": {
+    "duration": 7.152,
+    "hash": "f4c6999a8bae70cb",
+    "sentences": [
+     [
+      0.05,
+      3.556,
+      "Three thin stripes, one for each lamp."
+     ],
+     [
+      3.556,
+      7.083,
+      "From a normal distance they blur into a single dot."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_01": {
+    "duration": 8.304,
+    "hash": "586737aecadb13e6",
+    "sentences": [
+     [
+      0.05,
+      4.431,
+      "Behind are black and white bands and a yellow sun."
+     ],
+     [
+      4.431,
+      8.25,
+      "In front stand two panes of tinted glass."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_02": {
+    "duration": 9.552,
+    "hash": "96252ca20ead2e1d",
+    "sentences": [
+     [
+      0.05,
+      5.847,
+      "This red pane lets half of what's behind it through, and adds half of its own red."
+     ],
+     [
+      5.847,
+      9.5,
+      "That share is its opacity: 50%."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_03": {
+    "duration": 5.424,
+    "hash": "b9ce14360e5d29b9",
+    "sentences": [
+     [
+      0.05,
+      5.361,
+      "Your turn: tap the overlap to swap the panes, so the red one is in front."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_04": {
+    "duration": 10.536,
+    "hash": "bf18914fa878ffba",
+    "sentences": [
+     [
+      0.05,
+      4.361,
+      "The overlap changes colour, because the front pane counts for more."
+     ],
+     [
+      4.361,
+      10.472,
+      "But it hides just as much: two half-clear panes hide three quarters, not all of it."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_05": {
+    "duration": 6.48,
+    "hash": "2966857391932f63",
+    "sentences": [
+     [
+      0.05,
+      3.139,
+      "Two panes each let 50% through."
+     ],
+     [
+      3.139,
+      6.417,
+      "How much of the background still shows through both?"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Behind": {
+    "duration": 4.92,
+    "hash": "718b3b5aa7422ff8",
+    "sentences": [
+     [
+      0.05,
+      4.861,
+      "Bands of black and white and a yellow sun, so you can see how much shows through."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Blue": {
+    "duration": 7.848,
+    "hash": "cb1f1af9e70cae59",
+    "sentences": [
+     [
+      0.05,
+      3.653,
+      "Like the red pane, with an opacity of its own."
+     ],
+     [
+      3.653,
+      7.778,
+      "Tap the overlap to bring it to the front or send it behind."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Overlap": {
+    "duration": 7.968,
+    "hash": "9ac178b2d1c9ff98",
+    "sentences": [
+     [
+      0.05,
+      3.083,
+      "Light from behind goes through both panes."
+     ],
+     [
+      3.083,
+      7.917,
+      "How much they hide is the same either way round; the colour is not."
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Red": {
+    "duration": 8.232,
+    "hash": "2f44f7509c856b99",
+    "sentences": [
+     [
+      0.05,
+      8.167,
+      "Drag its level to change its opacity: how much of its own red it adds, and how much of what's behind it hides."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_01": {
+    "duration": 10.584,
+    "hash": "76852a433c8fbb21",
+    "sentences": [
+     [
+      0.05,
+      5.708,
+      "A picture file stores each light as a number from 0 to 255."
+     ],
+     [
+      5.708,
+      10.514,
+      "This strip goes up in even steps of number, and to you it looks even."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_02": {
+    "duration": 9.864,
+    "hash": "e03d45efc3fab9e8",
+    "sentences": [
+     [
+      0.05,
+      3.431,
+      "This strip goes up in even steps of light."
+     ],
+     [
+      3.431,
+      9.792,
+      "It looks lopsided: big jumps in the dark, and steps you can hardly tell apart in the bright."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_03": {
+    "duration": 6.672,
+    "hash": "007041d4c47c3bb6",
+    "sentences": [
+     [
+      0.05,
+      6.597,
+      "Your turn: slide the marker until the screen gives out half as much light as it does for white."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_04": {
+    "duration": 10.944,
+    "hash": "8aa6dcb685eb04fd",
+    "sentences": [
+     [
+      0.05,
+      4.236,
+      "It's near 188, not 128."
+     ],
+     [
+      4.236,
+      10.875,
+      "Your eye notices small changes in the dark far better than in the bright, so the numbers are spent where you can see them."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_05": {
+    "duration": 3.816,
+    "hash": "d38410d1f5841251",
+    "sentences": [
+     [
+      0.05,
+      3.75,
+      "Why aren't the numbers simply spaced evenly in light?"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Light": {
+    "duration": 8.76,
+    "hash": "845b83ba3f2fa7bb",
+    "sentences": [
+     [
+      0.05,
+      3.889,
+      "Each patch gives out the same amount more light than the last."
+     ],
+     [
+      3.889,
+      8.708,
+      "In the dark that is a big jump; in the bright you hardly notice it."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Marker": {
+    "duration": 7.512,
+    "hash": "ddad5cf7eb1313b7",
+    "sentences": [
+     [
+      0.05,
+      2.153,
+      "Drag it along the strip."
+     ],
+     [
+      2.153,
+      7.444,
+      "The dashed line shows where that number's light falls among the even steps of light."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Meter": {
+    "duration": 5.952,
+    "hash": "150974f0882a2234",
+    "sentences": [
+     [
+      0.05,
+      5.903,
+      "Two bars: how much light the screen gives out for this number, and how bright that looks to you."
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Numbers": {
+    "duration": 6.336,
+    "hash": "7f714f329b579eb8",
+    "sentences": [
+     [
+      0.05,
+      3.75,
+      "Each patch's number is the same amount bigger than the last."
+     ],
+     [
+      3.75,
+      6.278,
+      "To your eye the steps look about even."
+     ]
+    ]
+   },
    "Narr_Common_MoveOn": {
     "duration": 3.168,
     "hash": "7f92fcf16bdadd37",
@@ -13610,6 +14399,760 @@
       2.792,
       8.361,
       "用开放式差速器时，两个轮子的推力都被它限制住。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_01": {
+    "duration": 8.064,
+    "hash": "5c6da16d2b8b5eaa",
+    "sentences": [
+     [
+      0.1,
+      4.258,
+      "这些条纹黑白相间，每条一个像素宽。"
+     ],
+     [
+      4.208,
+      8.0,
+      "稍微站远一点，它们就融成了灰色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_02": {
+    "duration": 8.376,
+    "hash": "0573ac771bfc9723",
+    "sentences": [
+     [
+      0.1,
+      8.356,
+      "旁边这块灰的数字是 128，正好是 255 的一半，可它看起来比条纹暗。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_03": {
+    "duration": 9.504,
+    "hash": "0bfbf888913351db",
+    "sentences": [
+     [
+      0.1,
+      5.536,
+      "轮到你了：调整这块灰的数字，让它和条纹一样亮。"
+     ],
+     [
+      5.486,
+      9.444,
+      "可以离屏幕远一点，或者眯起眼睛看。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_04": {
+    "duration": 16.176,
+    "hash": "f690bbd03b600a9d",
+    "sentences": [
+     [
+      0.1,
+      7.356,
+      "条纹发出的是白色一半的光，而一半的光对应的数字是 188。"
+     ],
+     [
+      7.306,
+      16.111,
+      "把红色到绿色的数字直接平均，中间会塌暗；按光来混合，中间就是明亮的黄色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_05": {
+    "duration": 6.072,
+    "hash": "988ee6ef48430a3e",
+    "sentences": [
+     [
+      0.1,
+      6.05,
+      "想让两种颜色像真实的光那样混合，程序应该先做什么？"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Light": {
+    "duration": 8.496,
+    "hash": "e63979b19e0ce587",
+    "sentences": [
+     [
+      0.1,
+      8.481,
+      "每一条都按两种颜色代表的光来混合，中间是明亮的黄色，就像两盏灯混出来的一样。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Numbers": {
+    "duration": 7.032,
+    "hash": "c7e575ce2fa72cf7",
+    "sentences": [
+     [
+      0.1,
+      7.022,
+      "每一条都是红色和绿色数字的平均值，中间是一片暗淡的橄榄色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Patch": {
+    "duration": 6.552,
+    "hash": "642697ed07ab9c80",
+    "sentences": [
+     [
+      0.1,
+      1.994,
+      "一块纯灰色。"
+     ],
+     [
+      1.944,
+      6.486,
+      "拖动它的亮度条，直到它看起来和条纹一样。"
+     ]
+    ]
+   },
+   "Narr_Colour_Blend_Part_Stripes": {
+    "duration": 7.632,
+    "hash": "e7202afe6a29f6b6",
+    "sentences": [
+     [
+      0.1,
+      4.036,
+      "一半黑、一半白，每条一个像素。"
+     ],
+     [
+      3.986,
+      7.569,
+      "合起来正好发出白色一半的光。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_01": {
+    "duration": 7.32,
+    "hash": "f91ca3a65a75d48b",
+    "sentences": [
+     [
+      0.1,
+      3.508,
+      "这张红色贴纸宽八个像素。"
+     ],
+     [
+      3.458,
+      7.25,
+      "每个像素要么全红，要么全透明。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_02": {
+    "duration": 13.752,
+    "hash": "efb700e65aab6644",
+    "sentences": [
+     [
+      0.1,
+      5.647,
+      "放大五倍后，每个新像素都由旁边的像素混合而成。"
+     ],
+     [
+      5.597,
+      13.681,
+      "在边缘上，红色和藏在透明像素里的白色混在一起，于是出现了一圈浅色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_03": {
+    "duration": 9.072,
+    "hash": "43d1c60c4a0234aa",
+    "sentences": [
+     [
+      0.1,
+      4.953,
+      "轮到你了：改成存颜色时先乘上不透明度。"
+     ],
+     [
+      4.903,
+      9.0,
+      "这样，透明像素就完全不带颜色了。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_04": {
+    "duration": 7.584,
+    "hash": "fbe64812d42477ab",
+    "sentences": [
+     [
+      0.1,
+      7.564,
+      "现在边缘从红色直接过渡到背景，不管透明像素原来存的是什么颜色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_05": {
+    "duration": 3.0,
+    "hash": "211d35856841e796",
+    "sentences": [
+     [
+      0.1,
+      2.994,
+      "那一圈浅色是怎么来的？"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Edge": {
+    "duration": 7.8,
+    "hash": "1bcc8ffac6d5e8d5",
+    "sentences": [
+     [
+      0.1,
+      7.8,
+      "每个新像素都由离它最近的四个原像素混合而成，颜色和不透明度都一样。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Invisible": {
+    "duration": 10.344,
+    "hash": "f1199e04c1e31189",
+    "sentences": [
+     [
+      0.1,
+      5.842,
+      "它照样存着一个颜色，只是不透明度为 0，你永远看不到。"
+     ],
+     [
+      5.792,
+      10.278,
+      "拖动大图下面的色条，可以改变这个颜色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Small": {
+    "duration": 4.944,
+    "hash": "677e145d4842820a",
+    "sentences": [
+     [
+      0.1,
+      1.925,
+      "宽八个像素。"
+     ],
+     [
+      1.875,
+      4.889,
+      "棋盘格表示透明的像素。"
+     ]
+    ]
+   },
+   "Narr_Colour_Halo_Part_Switch": {
+    "duration": 6.504,
+    "hash": "744952f62ffb2bb5",
+    "sentences": [
+     [
+      0.1,
+      4.314,
+      "原样存，或者先乘上不透明度再存。"
+     ],
+     [
+      4.264,
+      6.444,
+      "点一下开关切换。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_01": {
+    "duration": 6.72,
+    "hash": "6824ab07361a3f80",
+    "sentences": [
+     [
+      0.1,
+      6.703,
+      "白纸几乎把照到它上面的光全部送回来：红光、绿光和蓝光。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_02": {
+    "duration": 8.928,
+    "hash": "cf672a0bbb52e56d",
+    "sentences": [
+     [
+      0.1,
+      3.356,
+      "每种墨水拿走其中一种光。"
+     ],
+     [
+      3.306,
+      8.861,
+      "青色吞掉红光，品红吞掉绿光，黄色吞掉蓝光。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_03": {
+    "duration": 7.128,
+    "hash": "a4be9fe1d41ed75c",
+    "sentences": [
+     [
+      0.1,
+      7.119,
+      "轮到你了：换成真实的墨水，看看三种墨水都叠在一起的中间。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_04": {
+    "duration": 11.904,
+    "hash": "4f3db057552bcad7",
+    "sentences": [
+     [
+      0.1,
+      7.286,
+      "真实的墨水都会漏过一点光，叠在一起是浑浊的棕色，而不是黑色。"
+     ],
+     [
+      7.236,
+      11.847,
+      "所以打印机还有第四个墨盒，装黑墨水。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_05": {
+    "duration": 4.272,
+    "hash": "a8ccb5220be00b65",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "哪两种墨水叠印在一起会得到绿色？"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Ink": {
+    "duration": 11.952,
+    "hash": "5fefb45f3d295bd1",
+    "sentences": [
+     [
+      0.1,
+      8.078,
+      "墨水就像涂在纸上的滤光片：它拿走三种光中的一种，让另外两种反射回来。"
+     ],
+     [
+      8.028,
+      11.889,
+      "拖动墨量条，可以多用或少用一些。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Light": {
+    "duration": 5.904,
+    "hash": "74408474aa844468",
+    "sentences": [
+     [
+      0.1,
+      5.883,
+      "中间这块还把多少红光、绿光和蓝光送回你的眼睛。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Middle": {
+    "duration": 8.616,
+    "hash": "509c147a2a6d7605",
+    "sentences": [
+     [
+      0.1,
+      8.606,
+      "理想的墨水会在这里把光全部拿走，留下黑色；真实的墨水留下的是深棕色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Inks_Part_Paper": {
+    "duration": 5.376,
+    "hash": "c9e9dcc8a43e4c3a",
+    "sentences": [
+     [
+      0.1,
+      5.369,
+      "它几乎把照到的光全部送回去，所以看起来是白色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_01": {
+    "duration": 9.048,
+    "hash": "c56f6983b38d5b1a",
+    "sentences": [
+     [
+      0.1,
+      4.592,
+      "红、绿、蓝三盏灯照在一面暗墙上。"
+     ],
+     [
+      4.542,
+      8.986,
+      "两盏灯的光重叠的地方，出现了新的颜色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_02": {
+    "duration": 9.912,
+    "hash": "cef7a6706f875ba2",
+    "sentences": [
+     [
+      0.1,
+      4.467,
+      "三盏灯都照到的地方，墙看起来是白的。"
+     ],
+     [
+      4.417,
+      9.847,
+      "那里并没有白灯：是你的眼睛把三种光加在了一起。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_03": {
+    "duration": 8.064,
+    "hash": "9a3d5818649e60e8",
+    "sentences": [
+     [
+      0.1,
+      2.925,
+      "轮到你了：调出橙色。"
+     ],
+     [
+      2.875,
+      8.014,
+      "把红灯开到最亮，绿灯开一半左右，蓝灯关掉。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_04": {
+    "duration": 9.096,
+    "hash": "5e292a363801aaa2",
+    "sentences": [
+     [
+      0.1,
+      2.689,
+      "屏幕做的正是这件事。"
+     ],
+     [
+      2.639,
+      9.028,
+      "上面的每一个点都是三盏小灯，又小又挨得近，眼睛分不开。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_05": {
+    "duration": 5.568,
+    "hash": "4d2dca90487f393a",
+    "sentences": [
+     [
+      0.1,
+      4.217,
+      "红光和绿光加在一起看起来是黄色。"
+     ],
+     [
+      4.167,
+      5.5,
+      "为什么？"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Lamps": {
+    "duration": 11.664,
+    "hash": "a1919344346b364d",
+    "sentences": [
+     [
+      0.1,
+      7.842,
+      "一盏红灯、一盏绿灯、一盏蓝灯，正好分别照顾到眼睛里的三种感光细胞。"
+     ],
+     [
+      7.792,
+      11.597,
+      "拖动亮度条，可以把灯调亮或调暗。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Mix": {
+    "duration": 4.584,
+    "hash": "e9a51d2dc48d1647",
+    "sentences": [
+     [
+      0.1,
+      4.578,
+      "三条灯条融在一起时，你真正看到的颜色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Overlap": {
+    "duration": 6.168,
+    "hash": "197232ce62934de4",
+    "sentences": [
+     [
+      0.1,
+      6.161,
+      "红、绿、蓝都开到最亮，加在一起看起来就是白色。"
+     ]
+    ]
+   },
+   "Narr_Colour_Lamps_Part_Pixel": {
+    "duration": 7.704,
+    "hash": "022863d0f54cd51f",
+    "sentences": [
+     [
+      0.1,
+      3.731,
+      "三条细细的灯条，每盏灯一条。"
+     ],
+     [
+      3.681,
+      7.653,
+      "正常距离看过去，它们就融成了一个点。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_01": {
+    "duration": 7.152,
+    "hash": "a023e241f0aa8b2e",
+    "sentences": [
+     [
+      0.1,
+      7.133,
+      "后面是黑白相间的竖条和一个黄色的太阳，前面立着两块有色玻璃。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_02": {
+    "duration": 11.4,
+    "hash": "0e1021794caf7f3e",
+    "sentences": [
+     [
+      0.1,
+      6.661,
+      "这块红玻璃让后面一半的东西透过来，再加上一半它自己的红色。"
+     ],
+     [
+      6.611,
+      11.333,
+      "这个份额就是它的不透明度：50%。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_03": {
+    "duration": 7.128,
+    "hash": "2ebbf8254b6d6dc3",
+    "sentences": [
+     [
+      0.1,
+      7.119,
+      "轮到你了：点一下重叠的地方，把两块玻璃换个位置，让红的在前面。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_04": {
+    "duration": 12.624,
+    "hash": "607ae95033a1a170",
+    "sentences": [
+     [
+      0.1,
+      5.342,
+      "重叠部分变了颜色，因为前面那块占的分量更大。"
+     ],
+     [
+      5.292,
+      12.556,
+      "可它挡住的一样多：两块半透明的玻璃挡住四分之三，而不是全部。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_05": {
+    "duration": 7.68,
+    "hash": "af9bef28b7d20057",
+    "sentences": [
+     [
+      0.1,
+      3.703,
+      "两块玻璃各让 50% 透过。"
+     ],
+     [
+      3.653,
+      7.611,
+      "透过两块之后，背景还能露出多少？"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Behind": {
+    "duration": 5.4,
+    "hash": "cf46a9f33ed1677c",
+    "sentences": [
+     [
+      0.1,
+      5.383,
+      "黑白竖条和黄色太阳，用来看清透过来了多少。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Blue": {
+    "duration": 8.664,
+    "hash": "bf20201896e3b890",
+    "sentences": [
+     [
+      0.1,
+      4.022,
+      "和红玻璃一样，有它自己的不透明度。"
+     ],
+     [
+      3.972,
+      8.611,
+      "点一下重叠的地方，可以把它换到前面或后面。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Overlap": {
+    "duration": 8.376,
+    "hash": "4af9f6fed0918b52",
+    "sentences": [
+     [
+      0.1,
+      3.189,
+      "后面的光要穿过两块玻璃。"
+     ],
+     [
+      3.139,
+      8.319,
+      "不管哪块在前，挡住的都一样多；颜色却不一样。"
+     ]
+    ]
+   },
+   "Narr_Colour_Panes_Part_Red": {
+    "duration": 7.224,
+    "hash": "d8aff26899b7e991",
+    "sentences": [
+     [
+      0.1,
+      7.217,
+      "拖动它的不透明度条：它加上多少自己的红色，挡住多少后面的东西。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_01": {
+    "duration": 10.296,
+    "hash": "b2c087930f904167",
+    "sentences": [
+     [
+      0.1,
+      5.161,
+      "图片文件把每种光存成 0 到 255 的数字。"
+     ],
+     [
+      5.111,
+      10.236,
+      "这一条按数字均匀递增，在你看来也是均匀的。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_02": {
+    "duration": 9.864,
+    "hash": "c5cb01b7458f0042",
+    "sentences": [
+     [
+      0.1,
+      2.897,
+      "这一条按光量均匀递增。"
+     ],
+     [
+      2.847,
+      9.792,
+      "它看起来很不均匀：暗的一头跳得很大，亮的一头几乎分不出差别。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_03": {
+    "duration": 6.504,
+    "hash": "2487d7eeb3907bbd",
+    "sentences": [
+     [
+      0.1,
+      6.494,
+      "轮到你了：拖动标记，让屏幕发出的光正好是白色的一半。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_04": {
+    "duration": 13.536,
+    "hash": "ccb83b5a23c0cc75",
+    "sentences": [
+     [
+      0.1,
+      4.619,
+      "答案在 188 附近，而不是 128。"
+     ],
+     [
+      4.569,
+      13.472,
+      "眼睛在暗处察觉细小变化的本领比在亮处强得多，所以数字都花在了你看得出的地方。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_05": {
+    "duration": 4.56,
+    "hash": "d3c8cda31266df2d",
+    "sentences": [
+     [
+      0.1,
+      4.55,
+      "为什么这些数字不干脆按光量平均分配？"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Light": {
+    "duration": 9.648,
+    "hash": "88ab4f8feb18f83f",
+    "sentences": [
+     [
+      0.1,
+      4.3,
+      "每一格都比前一格多发出同样多的光。"
+     ],
+     [
+      4.25,
+      9.597,
+      "这在暗处是很大的一跳，在亮处却几乎察觉不到。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Marker": {
+    "duration": 9.024,
+    "hash": "b1f341c320dba542",
+    "sentences": [
+     [
+      0.1,
+      2.411,
+      "沿着色条拖动它。"
+     ],
+     [
+      2.361,
+      8.972,
+      "虚线指出这个数字发出的光，落在光量均匀的那一条的什么位置。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Meter": {
+    "duration": 6.864,
+    "hash": "591f29322ac33739",
+    "sentences": [
+     [
+      0.1,
+      6.842,
+      "两根条：屏幕为这个数字发出多少光，以及它在你看来有多亮。"
+     ]
+    ]
+   },
+   "Narr_Colour_Steps_Part_Numbers": {
+    "duration": 8.496,
+    "hash": "d321230bf7757778",
+    "sentences": [
+     [
+      0.1,
+      4.064,
+      "每一格的数字都比前一格大同样多。"
+     ],
+     [
+      4.014,
+      8.431,
+      "在你眼里，这些台阶看起来差不多均匀。"
      ]
     ]
    },

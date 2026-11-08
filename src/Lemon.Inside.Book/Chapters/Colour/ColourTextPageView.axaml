@@ -1,0 +1,177 @@
+<shellExplore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:colour="using:Lemon.Inside.Book.Chapters.Colour"
+                              xmlns:shellExplore="using:Lemon.Book.Shell.Controls.Explore"
+                              xmlns:exploreControls="using:Lemon.Inside.Book.Controls.Explore"
+                              xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                              x:Class="Lemon.Inside.Book.Chapters.Colour.ColourTextPageView"
+                              x:DataType="colour:ColourTextPageViewModel">
+    <!-- A left page of the Colour chapter: the spread's words, a closer look, and its picture's settings. -->
+    <shellExplore:ChapterPageView.Styles>
+        <Style Selector=":is(TextBlock).value">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+        <Style Selector=":is(TextBlock).spreadTitle">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource InkBrush}" />
+        </Style>
+    </shellExplore:ChapterPageView.Styles>
+
+    <Grid RowDefinitions="*,Auto,Auto" Margin="44,32,40,20">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Padding="0,0,14,0">
+            <StackPanel>
+                <!-- The chapter's first spread opens it; the others say where they are in it. -->
+                <StackPanel IsVisible="{Binding IsFirstSpread}">
+                    <SelectableTextBlock Classes="kicker" Text="{Binding VolumeTitle}" />
+                    <SelectableTextBlock Classes="chapterNumber" Margin="0,12,0,0" Text="{Binding NumberLabel}" />
+                    <SelectableTextBlock Classes="pageTitle" Margin="0,4,0,14" Text="{Binding Title}" />
+                </StackPanel>
+                <SelectableTextBlock Classes="kicker" Text="{Binding SpreadLabel}" />
+                <SelectableTextBlock Classes="spreadTitle" Margin="0,6,0,10" Text="{Binding Spread.Title}" />
+
+                <ItemsControl ItemsSource="{Binding Spread.Paragraphs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <SelectableTextBlock Classes="text" FontSize="17" LineHeight="26" Margin="0,0,0,10" Text="{Binding}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <Border Margin="0,4,0,6" Padding="14,10" CornerRadius="8" Background="{DynamicResource AccentFaintBrush}"
+                        BorderBrush="{DynamicResource AccentSoftBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Deeper}" />
+                        <SelectableTextBlock Classes="note" Margin="0,4,0,0" Text="{Binding Spread.Deeper}" />
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="colour:LampsSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding RedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Lamps_Red}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Red}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Lamps_Red}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding GreenText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Lamps_Green}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Green}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Lamps_Green}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BlueText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Lamps_Blue}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Blue}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Lamps_Blue}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:InksSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding CyanText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Inks_Cyan}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Cyan}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Inks_Cyan}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding MagentaText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Inks_Magenta}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Magenta}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Inks_Magenta}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding YellowText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Inks_Yellow}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Yellow}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Inks_Yellow}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Real}" Content="{loc:Localize Colour_Inks_Real}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:StepsSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding NumberText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Steps_Number}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="255" Value="{Binding Value}" SmallChange="1" LargeChange="16"
+                                        AutomationProperties.Name="{loc:Localize Colour_Steps_Number}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:BlendSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding GreyText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Blend_Grey}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="255" Value="{Binding Grey}" SmallChange="1" LargeChange="16"
+                                        AutomationProperties.Name="{loc:Localize Colour_Blend_Grey}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding PositionText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Blend_Position}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Position}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Blend_Position}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:PanesSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding RedText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Panes_Red}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Red}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Panes_Red}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BlueText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Panes_Blue}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Blue}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Panes_Blue}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding BlueOnTop}" Content="{loc:Localize Colour_Panes_BlueOnTop}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:HaloSpread">
+                            <StackPanel>
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding HiddenText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Halo_Hidden}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Hidden}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Halo_Hidden}" />
+                                <DockPanel Margin="0,10,0,2">
+                                    <SelectableTextBlock Classes="value" Text="{Binding BackdropText}" />
+                                    <SelectableTextBlock Classes="caption" Margin="0" Text="{loc:Localize Colour_Halo_Backdrop}" />
+                                </DockPanel>
+                                <Slider Minimum="0" Maximum="1" Value="{Binding Backdrop}" SmallChange="0.01" LargeChange="0.1"
+                                        AutomationProperties.Name="{loc:Localize Colour_Halo_Backdrop}" />
+                                <CheckBox Margin="0,10,0,0" IsChecked="{Binding Premultiplied}" Content="{loc:Localize Colour_Halo_Premultiplied}" />
+                                <SelectableTextBlock Classes="note" Text="{Binding ReadoutText}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The part last clicked in the picture, and what it is: kept in view under the scrolling words. -->
+        <exploreControls:ObjectCardView Grid.Row="1" Margin="0,10,14,0" DataContext="{Binding Spread.Card}" />
+
+        <TextBlock Grid.Row="2" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</shellExplore:ChapterPageView>

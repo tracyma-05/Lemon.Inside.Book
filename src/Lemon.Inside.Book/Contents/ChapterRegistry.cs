@@ -4,6 +4,7 @@ using Lemon.Inside.Book.Chapters.Bridges;
 using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Chapters.Canals;
 using Lemon.Inside.Book.Chapters.Sewing;
+using Lemon.Inside.Book.Chapters.Colour;
 using Lemon.Inside.Book.Chapters.Car;
 using Lemon.Inside.Book.Chapters.Friction;
 using Lemon.Inside.Book.Chapters.Gears;
@@ -24,7 +25,7 @@ namespace Lemon.Inside.Book.Contents;
 public static class ChapterRegistry
 {
     /// <summary>Slugs of the chapters that are written (not placeholders).</summary>
-    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting", "Plumbing", "Bridges", "Weighing", "Friction", "Canals", "Sewing" };
+    public static IReadOnlySet<string> Ported { get; } = new HashSet<string>(StringComparer.Ordinal) { "Light-Shadow", "Gears", "Watch", "Bicycle", "Boats", "Car", "Locks", "Lifting", "Plumbing", "Bridges", "Weighing", "Friction", "Canals", "Sewing", "Colour" };
 
     public static IReadOnlyList<(PageViewModel Text, PageViewModel Diagram)> CreatePages(
         Chapter chapter, int number, int textPage, IBookNavigator navigator, BookServices services)
@@ -40,6 +41,7 @@ public static class ChapterRegistry
             "Friction" => FrictionChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Canals" => CanalsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Sewing" => SewingChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
+            "Colour" => ColourChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Locks" => LocksChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Car" => CarChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),
             "Boats" => BoatsChapter.CreatePages(chapter, number, textPage, navigator, services.Narration),

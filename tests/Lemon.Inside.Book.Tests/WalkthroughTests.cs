@@ -8,6 +8,7 @@ using Lemon.Inside.Book.Chapters.Bridges;
 using Lemon.Inside.Book.Chapters.Boats;
 using Lemon.Inside.Book.Chapters.Canals;
 using Lemon.Inside.Book.Chapters.Sewing;
+using Lemon.Inside.Book.Chapters.Colour;
 using Lemon.Inside.Book.Chapters.Car;
 using Lemon.Inside.Book.Chapters.Friction;
 using Lemon.Inside.Book.Chapters.Lifting;
@@ -43,6 +44,7 @@ public sealed class WalkthroughTests
         .. new FrictionViewModel(narration).AllSpreads,
         .. new CanalsViewModel(narration).AllSpreads,
         .. new SewingViewModel(narration).AllSpreads,
+        .. new ColourViewModel(narration).AllSpreads,
     ];
 
     [Fact]
@@ -126,6 +128,7 @@ public sealed class WalkthroughTests
     [InlineData("Friction")]
     [InlineData("Canals")]
     [InlineData("Sewing")]
+    [InlineData("Colour")]
     public void EveryRing_SitsOnAPartThePictureDrew(string slug)
     {
         var (window, model) = OpenAt(slug);
@@ -179,6 +182,7 @@ public sealed class WalkthroughTests
     [InlineData("Friction")]
     [InlineData("Canals")]
     [InlineData("Sewing")]
+    [InlineData("Colour")]
     public void EveryPart_CanBeClicked_AndItsCardShowsOnTheLeftPage(string slug)
     {
         var (window, model) = OpenAt(slug);

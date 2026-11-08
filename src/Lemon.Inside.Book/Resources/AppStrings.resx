@@ -8709,4 +8709,667 @@
   <data name="Sewing_Feed_Way" xml:space="preserve">
     <value>the cloth goes this way</value>
   </data>
+  <data name="Chapter_Colour" xml:space="preserve">
+    <value>Colour on a screen</value>
+  </data>
+  <data name="Colour_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Colour_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Colour_Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="Colour_Name_Black" xml:space="preserve">
+    <value>black</value>
+  </data>
+  <data name="Colour_Name_White" xml:space="preserve">
+    <value>white</value>
+  </data>
+  <data name="Colour_Name_Grey" xml:space="preserve">
+    <value>grey</value>
+  </data>
+  <data name="Colour_Name_Red" xml:space="preserve">
+    <value>red</value>
+  </data>
+  <data name="Colour_Name_Brown" xml:space="preserve">
+    <value>brown</value>
+  </data>
+  <data name="Colour_Name_Orange" xml:space="preserve">
+    <value>orange</value>
+  </data>
+  <data name="Colour_Name_Olive" xml:space="preserve">
+    <value>olive</value>
+  </data>
+  <data name="Colour_Name_Yellow" xml:space="preserve">
+    <value>yellow</value>
+  </data>
+  <data name="Colour_Name_Green" xml:space="preserve">
+    <value>green</value>
+  </data>
+  <data name="Colour_Name_Cyan" xml:space="preserve">
+    <value>cyan</value>
+  </data>
+  <data name="Colour_Name_Blue" xml:space="preserve">
+    <value>blue</value>
+  </data>
+  <data name="Colour_Name_Purple" xml:space="preserve">
+    <value>purple</value>
+  </data>
+  <data name="Colour_Name_Magenta" xml:space="preserve">
+    <value>magenta</value>
+  </data>
+  <data name="Colour_Grip_Lamp" xml:space="preserve">
+    <value>Drag to turn this lamp up or down</value>
+  </data>
+  <data name="Colour_Grip_Ink" xml:space="preserve">
+    <value>Drag to use more or less of this ink</value>
+  </data>
+  <data name="Colour_Grip_Real" xml:space="preserve">
+    <value>Tap to switch between ideal and real inks</value>
+  </data>
+  <data name="Colour_Grip_Number" xml:space="preserve">
+    <value>Drag along the strip to choose a number</value>
+  </data>
+  <data name="Colour_Grip_Grey" xml:space="preserve">
+    <value>Drag to make the patch lighter or darker</value>
+  </data>
+  <data name="Colour_Grip_Position" xml:space="preserve">
+    <value>Drag along the blends</value>
+  </data>
+  <data name="Colour_Grip_Opacity" xml:space="preserve">
+    <value>Drag up or down to change how see-through this pane is</value>
+  </data>
+  <data name="Colour_Grip_Swap" xml:space="preserve">
+    <value>Tap to swap which pane is in front</value>
+  </data>
+  <data name="Colour_Grip_Premultiplied" xml:space="preserve">
+    <value>Tap to change how the colour is kept</value>
+  </data>
+  <data name="Colour_Grip_Hidden" xml:space="preserve">
+    <value>Drag to choose the colour hidden in see-through pixels</value>
+  </data>
+  <data name="Colour_Grip_Backdrop" xml:space="preserve">
+    <value>Drag to change the background</value>
+  </data>
+  <data name="Colour_Lamps_Title" xml:space="preserve">
+    <value>Three lights make every colour</value>
+  </data>
+  <data name="Colour_Lamps_P1" xml:space="preserve">
+    <value>Shine a red lamp and a green lamp on the same patch of white wall and the patch turns yellow. Add a blue lamp and it turns white. Nothing about the light has changed: the red light is still red and the green still green. The yellow is made in your eye.</value>
+  </data>
+  <data name="Colour_Lamps_P2" xml:space="preserve">
+    <value>At the back of your eye are three kinds of light sensor. One answers most to reddish light, one to greenish and one to bluish, and every colour you see is your brain comparing how hard the three are pushed. Any two lights that push them in the same proportions look exactly alike. So three lamps you can turn up and down are enough to fool your eye into seeing nearly any colour, and a screen is millions of such sets of three tiny lamps.</value>
+  </data>
+  <data name="Colour_Lamps_Deeper" xml:space="preserve">
+    <value>Look at a phone screen through a drop of water or a magnifying glass and you can see the three stripes in each pixel. Most screens store each lamp's brightness as a whole number from 0 to 255, which gives 256 × 256 × 256, nearly 17 million, mixes. A yellow of pure yellow light and a yellow made of red and green light look the same to us, yet an instrument that spreads light out into a rainbow tells them apart at once.</value>
+  </data>
+  <data name="Colour_Lamps_Red" xml:space="preserve">
+    <value>Red lamp</value>
+  </data>
+  <data name="Colour_Lamps_Green" xml:space="preserve">
+    <value>Green lamp</value>
+  </data>
+  <data name="Colour_Lamps_Blue" xml:space="preserve">
+    <value>Blue lamp</value>
+  </data>
+  <data name="Colour_Lamps_Readout" xml:space="preserve">
+    <value>Together the three lamps make {0}. A file would store it as {1}, {2}, {3}: each lamp's brightness as a number from 0 to 255.</value>
+  </data>
+  <data name="Colour_Lamps_Picture" xml:space="preserve">
+    <value>Red, green and blue lamps overlapping on a dark wall, with one screen pixel close up</value>
+  </data>
+  <data name="Colour_Lamps_Rule" xml:space="preserve">
+    <value>Light adds up: where pools of light overlap, their light is added together.</value>
+  </data>
+  <data name="Colour_Lamps_Levels" xml:space="preserve">
+    <value>Lamps</value>
+  </data>
+  <data name="Colour_Lamps_Close" xml:space="preserve">
+    <value>One pixel, close up</value>
+  </data>
+  <data name="Colour_Lamps_Far" xml:space="preserve">
+    <value>The same pixel, from a step back</value>
+  </data>
+  <data name="Colour_Lamps_Count" xml:space="preserve">
+    <value>256 × 256 × 256 = {0} mixes</value>
+  </data>
+  <data name="Narr_Colour_Lamps_01" xml:space="preserve">
+    <value>Three lamps, red, green and blue, shine on a dark wall. Where two of them overlap, a new colour appears.</value>
+  </data>
+  <data name="Narr_Colour_Lamps_02" xml:space="preserve">
+    <value>Where all three overlap, the wall looks white. No white lamp is shining there: your eye adds the three lights up.</value>
+  </data>
+  <data name="Narr_Colour_Lamps_03" xml:space="preserve">
+    <value>Your turn: make orange. Turn red all the way up, green to about half, and blue off.</value>
+  </data>
+  <data name="Narr_Colour_Lamps_04" xml:space="preserve">
+    <value>A screen does exactly this. Every dot on it is three tiny lamps, too small and too close together to see apart.</value>
+  </data>
+  <data name="Narr_Colour_Lamps_05" xml:space="preserve">
+    <value>A red light and a green light together look yellow. Why?</value>
+  </data>
+  <data name="Colour_Lamps_Quiz1" xml:space="preserve">
+    <value>In the air the two lights turn into yellow light</value>
+  </data>
+  <data name="Colour_Lamps_Quiz2" xml:space="preserve">
+    <value>Together they push your eye's sensors the way yellow light does</value>
+  </data>
+  <data name="Colour_Lamps_Quiz3" xml:space="preserve">
+    <value>The wall is yellow underneath</value>
+  </data>
+  <data name="Colour_Lamps_Part_Lamps" xml:space="preserve">
+    <value>Three lamps</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Lamps" xml:space="preserve">
+    <value>A red, a green and a blue lamp. Between them they reach all three kinds of light sensor in your eye. Drag a bar to turn a lamp up or down.</value>
+  </data>
+  <data name="Colour_Lamps_Part_Overlap" xml:space="preserve">
+    <value>Where all three meet</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Overlap" xml:space="preserve">
+    <value>Red, green and blue at full brightness, added together, look white.</value>
+  </data>
+  <data name="Colour_Lamps_Part_Pixel" xml:space="preserve">
+    <value>One pixel, close up</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Pixel" xml:space="preserve">
+    <value>Three thin stripes, one for each lamp. From a normal distance they blur into a single dot.</value>
+  </data>
+  <data name="Colour_Lamps_Part_Mix" xml:space="preserve">
+    <value>The pixel from afar</value>
+  </data>
+  <data name="Narr_Colour_Lamps_Part_Mix" xml:space="preserve">
+    <value>The colour you actually see when the three stripes blur together.</value>
+  </data>
+  <data name="Colour_Inks_Title" xml:space="preserve">
+    <value>Ink takes light away</value>
+  </data>
+  <data name="Colour_Inks_P1" xml:space="preserve">
+    <value>Paint and ink work the other way round from lamps. They make no light; they take some away. White paper sends back almost all the light that lands on it. A blot of yellow ink on it swallows the blue part of that light and sends back the red and the green, which your eye sees as yellow.</value>
+  </data>
+  <data name="Colour_Inks_P2" xml:space="preserve">
+    <value>Printers use three inks that each swallow one of a screen's three lights: cyan takes away red, magenta takes away green, and yellow takes away blue. Print two on top of each other and they take away two lights, so cyan and yellow leave only green. All three should take away everything and leave black. Real inks are never quite pure, though: each lets a little of its light slip through, and together they give a muddy dark brown.</value>
+  </data>
+  <data name="Colour_Inks_Deeper" xml:space="preserve">
+    <value>That is why a colour printer has a fourth cartridge, of black ink, and why printers speak of CMYK: cyan, magenta, yellow, and K for the black. Black ink also spares the other three: a black letter printed from three layers of coloured ink takes three times the ink, soaks the paper, and blurs at the edges if the layers are a hair out of line. A picture often looks duller printed than on a screen, because some of the bright colours a screen's lamps can make cannot be reached by any mix of inks.</value>
+  </data>
+  <data name="Colour_Inks_Cyan" xml:space="preserve">
+    <value>Cyan ink</value>
+  </data>
+  <data name="Colour_Inks_Magenta" xml:space="preserve">
+    <value>Magenta ink</value>
+  </data>
+  <data name="Colour_Inks_Yellow" xml:space="preserve">
+    <value>Yellow ink</value>
+  </data>
+  <data name="Colour_Inks_Real" xml:space="preserve">
+    <value>Real inks (not quite pure)</value>
+  </data>
+  <data name="Colour_Inks_Readout" xml:space="preserve">
+    <value>Where all three inks overlap, the paper sends back {0} of the light: it looks {1}.</value>
+  </data>
+  <data name="Colour_Inks_Picture" xml:space="preserve">
+    <value>Cyan, magenta and yellow ink overlapping on white paper</value>
+  </data>
+  <data name="Colour_Inks_Rule" xml:space="preserve">
+    <value>Ink takes light away: each ink swallows one of red, green and blue.</value>
+  </data>
+  <data name="Colour_Inks_Levels" xml:space="preserve">
+    <value>Inks</value>
+  </data>
+  <data name="Colour_Inks_Ideal" xml:space="preserve">
+    <value>Ideal inks</value>
+  </data>
+  <data name="Colour_Inks_RealLabel" xml:space="preserve">
+    <value>Real inks</value>
+  </data>
+  <data name="Colour_Inks_Back" xml:space="preserve">
+    <value>Light the middle sends back</value>
+  </data>
+  <data name="Colour_Inks_Sum" xml:space="preserve">
+    <value>The middle looks {0}</value>
+  </data>
+  <data name="Narr_Colour_Inks_01" xml:space="preserve">
+    <value>White paper sends back almost all the light that falls on it: red, green and blue.</value>
+  </data>
+  <data name="Narr_Colour_Inks_02" xml:space="preserve">
+    <value>Each ink takes one of those lights away. Cyan swallows red, magenta swallows green, and yellow swallows blue.</value>
+  </data>
+  <data name="Narr_Colour_Inks_03" xml:space="preserve">
+    <value>Your turn: switch to real inks, and watch the middle, where all three overlap.</value>
+  </data>
+  <data name="Narr_Colour_Inks_04" xml:space="preserve">
+    <value>Real inks each let a little of their light slip through. Together they make a muddy brown, not black. That's why a printer has a fourth cartridge, of black ink.</value>
+  </data>
+  <data name="Narr_Colour_Inks_05" xml:space="preserve">
+    <value>Which two inks, printed one on top of the other, make green?</value>
+  </data>
+  <data name="Colour_Inks_Quiz1" xml:space="preserve">
+    <value>Cyan and yellow</value>
+  </data>
+  <data name="Colour_Inks_Quiz2" xml:space="preserve">
+    <value>Magenta and yellow</value>
+  </data>
+  <data name="Colour_Inks_Quiz3" xml:space="preserve">
+    <value>Cyan and magenta</value>
+  </data>
+  <data name="Colour_Inks_Part_Paper" xml:space="preserve">
+    <value>White paper</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Paper" xml:space="preserve">
+    <value>It sends back nearly all the light that lands on it, so it looks white.</value>
+  </data>
+  <data name="Colour_Inks_Part_Ink" xml:space="preserve">
+    <value>A blot of ink</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Ink" xml:space="preserve">
+    <value>Ink is like a filter painted on the paper: it takes away one of the three lights and lets the other two bounce back. Drag a bar to use more or less of it.</value>
+  </data>
+  <data name="Colour_Inks_Part_Middle" xml:space="preserve">
+    <value>All three inks</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Middle" xml:space="preserve">
+    <value>Ideal inks would take every light away here and leave black. Real ones leave a dark brown.</value>
+  </data>
+  <data name="Colour_Inks_Part_Light" xml:space="preserve">
+    <value>What comes back</value>
+  </data>
+  <data name="Narr_Colour_Inks_Part_Light" xml:space="preserve">
+    <value>How much red, green and blue light the middle still sends back to your eye.</value>
+  </data>
+  <data name="Colour_Steps_Title" xml:space="preserve">
+    <value>Twice the number, not twice the light</value>
+  </data>
+  <data name="Colour_Steps_P1" xml:space="preserve">
+    <value>A picture file keeps each of the three lights as a number from 0 to 255. You might expect 128, about half of 255, to make half as much light as 255 does. It doesn't: shown 128, a screen gives out only about a fifth of the light. Yet that grey looks to you roughly half-way between black and white.</value>
+  </data>
+  <data name="Colour_Steps_P2" xml:space="preserve">
+    <value>Your eye judges brightness by comparing. In the dark it notices tiny differences; in bright light a change has to be much bigger before you see it. So the numbers are spread out the way the eye sees: close together in light at the dark end, far apart at the bright end. Spread evenly in light instead, most of the 256 numbers would go on bright greys you can't tell apart, and only 3 would be left for the darkest tenth of the way from black to white.</value>
+  </data>
+  <data name="Colour_Steps_Deeper" xml:space="preserve">
+    <value>Turning numbers into light is the screen's job, and it follows an agreed rule, so that a picture looks the same on every screen. The rule is close to taking the number as a share of 255 and raising it to the power 2.2. Because the numbers are spent where the eye can see them, 256 steps are enough for a smooth evening sky; spaced by light, the dark part of that sky would show stripes, called banding.</value>
+  </data>
+  <data name="Colour_Steps_Number" xml:space="preserve">
+    <value>Stored number</value>
+  </data>
+  <data name="Colour_Steps_Readout" xml:space="preserve">
+    <value>Number {0} of 255: the screen gives out {1} of white's light, and it looks {2} as bright as white.</value>
+  </data>
+  <data name="Colour_Steps_Picture" xml:space="preserve">
+    <value>Two strips of greys from black to white, one in even steps of number and one in even steps of light</value>
+  </data>
+  <data name="Colour_Steps_Rule" xml:space="preserve">
+    <value>Drag the marker: the dashed line shows where that number's light falls.</value>
+  </data>
+  <data name="Colour_Steps_ByNumber" xml:space="preserve">
+    <value>Even steps of number</value>
+  </data>
+  <data name="Colour_Steps_ByLight" xml:space="preserve">
+    <value>Even steps of light</value>
+  </data>
+  <data name="Colour_Steps_Light" xml:space="preserve">
+    <value>Light given out</value>
+  </data>
+  <data name="Colour_Steps_Looks" xml:space="preserve">
+    <value>How bright it looks</value>
+  </data>
+  <data name="Colour_Steps_Dark" xml:space="preserve">
+    <value>Numbers left for the darkest tenth: {0} spaced for the eye, {1} spaced by light</value>
+  </data>
+  <data name="Narr_Colour_Steps_01" xml:space="preserve">
+    <value>A picture file stores each light as a number from 0 to 255. This strip goes up in even steps of number, and to you it looks even.</value>
+  </data>
+  <data name="Narr_Colour_Steps_02" xml:space="preserve">
+    <value>This strip goes up in even steps of light. It looks lopsided: big jumps in the dark, and steps you can hardly tell apart in the bright.</value>
+  </data>
+  <data name="Narr_Colour_Steps_03" xml:space="preserve">
+    <value>Your turn: slide the marker until the screen gives out half as much light as it does for white.</value>
+  </data>
+  <data name="Narr_Colour_Steps_04" xml:space="preserve">
+    <value>It's near 188, not 128. Your eye notices small changes in the dark far better than in the bright, so the numbers are spent where you can see them.</value>
+  </data>
+  <data name="Narr_Colour_Steps_05" xml:space="preserve">
+    <value>Why aren't the numbers simply spaced evenly in light?</value>
+  </data>
+  <data name="Colour_Steps_Quiz1" xml:space="preserve">
+    <value>Screens can't make even steps of light</value>
+  </data>
+  <data name="Colour_Steps_Quiz2" xml:space="preserve">
+    <value>Even steps of light would use more electricity</value>
+  </data>
+  <data name="Colour_Steps_Quiz3" xml:space="preserve">
+    <value>Most of the 256 numbers would go on bright greys your eye can't tell apart</value>
+  </data>
+  <data name="Colour_Steps_Part_Numbers" xml:space="preserve">
+    <value>Even steps of number</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Numbers" xml:space="preserve">
+    <value>Each patch's number is the same amount bigger than the last. To your eye the steps look about even.</value>
+  </data>
+  <data name="Colour_Steps_Part_Light" xml:space="preserve">
+    <value>Even steps of light</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Light" xml:space="preserve">
+    <value>Each patch gives out the same amount more light than the last. In the dark that is a big jump; in the bright you hardly notice it.</value>
+  </data>
+  <data name="Colour_Steps_Part_Marker" xml:space="preserve">
+    <value>The number you chose</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Marker" xml:space="preserve">
+    <value>Drag it along the strip. The dashed line shows where that number's light falls among the even steps of light.</value>
+  </data>
+  <data name="Colour_Steps_Part_Meter" xml:space="preserve">
+    <value>Light and looks</value>
+  </data>
+  <data name="Narr_Colour_Steps_Part_Meter" xml:space="preserve">
+    <value>Two bars: how much light the screen gives out for this number, and how bright that looks to you.</value>
+  </data>
+  <data name="Colour_Blend_Title" xml:space="preserve">
+    <value>Mixing the wrong numbers</value>
+  </data>
+  <data name="Colour_Blend_P1" xml:space="preserve">
+    <value>Fine black and white stripes, seen from a little way off, blur into grey. Half of them gives out white's light and half gives out none, so together they make half of white's light. That grey is number 188, not 128: a patch of 128 beside them looks clearly darker.</value>
+  </data>
+  <data name="Colour_Blend_P2" xml:space="preserve">
+    <value>Computers mix colours all the time: when they shrink a photo, blur a background or blend one colour into another. The quick way is to average the numbers, and since the numbers are not amounts of light, the result comes out too dark. A blend from red to green made that way sags into a dull olive in the middle. Turned into amounts of light first, averaged and turned back, it passes through a clear yellow, as a red and a green lamp would.</value>
+  </data>
+  <data name="Colour_Blend_Deeper" xml:space="preserve">
+    <value>The same mistake shows when a photo of a starry sky is shrunk: averaging numbers makes the small bright stars dimmer than they should be. Careful programs turn the numbers into light before mixing and back again afterwards. Not every mix belongs in light, though: a blend from black to white meant to look even to the eye looks smoother in even steps of number.</value>
+  </data>
+  <data name="Colour_Blend_Grey" xml:space="preserve">
+    <value>Patch's number</value>
+  </data>
+  <data name="Colour_Blend_Position" xml:space="preserve">
+    <value>Along the blend</value>
+  </data>
+  <data name="Colour_Blend_Match" xml:space="preserve">
+    <value>The patch gives out {0} of white's light, the same as the stripes: they match.</value>
+  </data>
+  <data name="Colour_Blend_Darker" xml:space="preserve">
+    <value>The patch gives out {0} of white's light, less than the stripes' 50%: it looks darker.</value>
+  </data>
+  <data name="Colour_Blend_Lighter" xml:space="preserve">
+    <value>The patch gives out {0} of white's light, more than the stripes' 50%: it looks lighter.</value>
+  </data>
+  <data name="Colour_Blend_MixReadout" xml:space="preserve">
+    <value>At the marker, the blend by numbers is {0}; the blend as light is {1}.</value>
+  </data>
+  <data name="Colour_Blend_Picture" xml:space="preserve">
+    <value>Black and white stripes beside a grey patch, and two blends from red to green</value>
+  </data>
+  <data name="Colour_Blend_Rule" xml:space="preserve">
+    <value>Mixing numbers comes out too dark; mixing light does not.</value>
+  </data>
+  <data name="Colour_Blend_Stripes" xml:space="preserve">
+    <value>Black and white stripes</value>
+  </data>
+  <data name="Colour_Blend_Patch" xml:space="preserve">
+    <value>Grey number {0}</value>
+  </data>
+  <data name="Colour_Blend_Squint" xml:space="preserve">
+    <value>Step back or squint, and match the patch to the stripes</value>
+  </data>
+  <data name="Colour_Blend_ByNumbers" xml:space="preserve">
+    <value>Red to green, mixed by numbers</value>
+  </data>
+  <data name="Colour_Blend_InLight" xml:space="preserve">
+    <value>Red to green, mixed as light</value>
+  </data>
+  <data name="Narr_Colour_Blend_01" xml:space="preserve">
+    <value>These stripes are black and white, one pixel each. From a little way back they blur into grey.</value>
+  </data>
+  <data name="Narr_Colour_Blend_02" xml:space="preserve">
+    <value>The patch beside them is number 128, half of 255. Yet it looks darker than the stripes.</value>
+  </data>
+  <data name="Narr_Colour_Blend_03" xml:space="preserve">
+    <value>Your turn: change the patch's number until it matches the stripes. Step back from the screen, or squint.</value>
+  </data>
+  <data name="Narr_Colour_Blend_04" xml:space="preserve">
+    <value>The stripes give out half of white's light, and half the light is number 188. Blend red into green by averaging numbers and the middle sags dark; blend the light, and it passes through a clear yellow.</value>
+  </data>
+  <data name="Narr_Colour_Blend_05" xml:space="preserve">
+    <value>To mix two colours the way light really mixes, what should a program do first?</value>
+  </data>
+  <data name="Colour_Blend_Quiz1" xml:space="preserve">
+    <value>Average their numbers</value>
+  </data>
+  <data name="Colour_Blend_Quiz2" xml:space="preserve">
+    <value>Turn the numbers into amounts of light, then average them</value>
+  </data>
+  <data name="Colour_Blend_Quiz3" xml:space="preserve">
+    <value>Make both colours brighter</value>
+  </data>
+  <data name="Colour_Blend_Part_Stripes" xml:space="preserve">
+    <value>Black and white stripes</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Stripes" xml:space="preserve">
+    <value>Half black, half white, a pixel each. Together they give out exactly half of white's light.</value>
+  </data>
+  <data name="Colour_Blend_Part_Patch" xml:space="preserve">
+    <value>The grey patch</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Patch" xml:space="preserve">
+    <value>A plain grey. Drag its level until it looks like the stripes.</value>
+  </data>
+  <data name="Colour_Blend_Part_Numbers" xml:space="preserve">
+    <value>Mixed by numbers</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Numbers" xml:space="preserve">
+    <value>Each band is the average of red's and green's numbers. The middle comes out a dull olive.</value>
+  </data>
+  <data name="Colour_Blend_Part_Light" xml:space="preserve">
+    <value>Mixed as light</value>
+  </data>
+  <data name="Narr_Colour_Blend_Part_Light" xml:space="preserve">
+    <value>Each band mixes the light the two colours stand for. The middle is a clear yellow, as two lamps would make.</value>
+  </data>
+  <data name="Colour_Panes_Title" xml:space="preserve">
+    <value>How much shows through</value>
+  </data>
+  <data name="Colour_Panes_P1" xml:space="preserve">
+    <value>A pane of tinted glass lets part of the scene behind it through and adds some of its own colour. On a screen, that is all a see-through thing is: a fourth number for each pixel, its opacity, saying what share of the pixel is its own colour and what share is whatever lies behind. At 0% it vanishes; at 100% it hides everything behind it.</value>
+  </data>
+  <data name="Colour_Panes_P2" xml:space="preserve">
+    <value>Stack two panes and the light passes through one, then the other. A 50% pane lets half through, so behind two of them a quarter of the background still shows: together they hide 75%, not 100%. The colour of the overlap depends on which pane is in front, because the front one has the last word, but how much they hide does not.</value>
+  </data>
+  <data name="Colour_Panes_Deeper" xml:space="preserve">
+    <value>A program builds a whole screen this way, painting layers from the back to the front: the desktop, then a window, then its shadow, then a menu with a slightly see-through background. Each pixel is worked out as the new layer's colour times its opacity, plus what was already there times the share it lets through. Done back to front, every window and shadow lands on the right colour.</value>
+  </data>
+  <data name="Colour_Panes_Red" xml:space="preserve">
+    <value>Red pane's opacity</value>
+  </data>
+  <data name="Colour_Panes_Blue" xml:space="preserve">
+    <value>Blue pane's opacity</value>
+  </data>
+  <data name="Colour_Panes_BlueOnTop" xml:space="preserve">
+    <value>Blue pane in front</value>
+  </data>
+  <data name="Colour_Panes_Readout" xml:space="preserve">
+    <value>Where the panes overlap, {0} of the background is hidden and {1} still shows through.</value>
+  </data>
+  <data name="Colour_Panes_BlueFront" xml:space="preserve">
+    <value>The blue pane is in front, so the overlap leans blue.</value>
+  </data>
+  <data name="Colour_Panes_RedFront" xml:space="preserve">
+    <value>The red pane is in front, so the overlap leans red.</value>
+  </data>
+  <data name="Colour_Panes_Picture" xml:space="preserve">
+    <value>A red and a blue see-through pane in front of a striped background</value>
+  </data>
+  <data name="Colour_Panes_Rule" xml:space="preserve">
+    <value>Each pane lets through the share its opacity does not cover.</value>
+  </data>
+  <data name="Colour_Panes_Hidden" xml:space="preserve">
+    <value>{0} hidden</value>
+  </data>
+  <data name="Colour_Panes_Front" xml:space="preserve">
+    <value>In front</value>
+  </data>
+  <data name="Colour_Panes_Opacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="Narr_Colour_Panes_01" xml:space="preserve">
+    <value>Behind are black and white bands and a yellow sun. In front stand two panes of tinted glass.</value>
+  </data>
+  <data name="Narr_Colour_Panes_02" xml:space="preserve">
+    <value>This red pane lets half of what's behind it through, and adds half of its own red. That share is its opacity: 50%.</value>
+  </data>
+  <data name="Narr_Colour_Panes_03" xml:space="preserve">
+    <value>Your turn: tap the overlap to swap the panes, so the red one is in front.</value>
+  </data>
+  <data name="Narr_Colour_Panes_04" xml:space="preserve">
+    <value>The overlap changes colour, because the front pane counts for more. But it hides just as much: two half-clear panes hide three quarters, not all of it.</value>
+  </data>
+  <data name="Narr_Colour_Panes_05" xml:space="preserve">
+    <value>Two panes each let 50% through. How much of the background still shows through both?</value>
+  </data>
+  <data name="Colour_Panes_Quiz1" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Colour_Panes_Quiz2" xml:space="preserve">
+    <value>A quarter</value>
+  </data>
+  <data name="Colour_Panes_Quiz3" xml:space="preserve">
+    <value>Half</value>
+  </data>
+  <data name="Colour_Panes_Part_Behind" xml:space="preserve">
+    <value>The background</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Behind" xml:space="preserve">
+    <value>Bands of black and white and a yellow sun, so you can see how much shows through.</value>
+  </data>
+  <data name="Colour_Panes_Part_Red" xml:space="preserve">
+    <value>The red pane</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Red" xml:space="preserve">
+    <value>Drag its level to change its opacity: how much of its own red it adds, and how much of what's behind it hides.</value>
+  </data>
+  <data name="Colour_Panes_Part_Blue" xml:space="preserve">
+    <value>The blue pane</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Blue" xml:space="preserve">
+    <value>Like the red pane, with an opacity of its own. Tap the overlap to bring it to the front or send it behind.</value>
+  </data>
+  <data name="Colour_Panes_Part_Overlap" xml:space="preserve">
+    <value>Where they overlap</value>
+  </data>
+  <data name="Narr_Colour_Panes_Part_Overlap" xml:space="preserve">
+    <value>Light from behind goes through both panes. How much they hide is the same either way round; the colour is not.</value>
+  </data>
+  <data name="Colour_Halo_Title" xml:space="preserve">
+    <value>The ring round a cut-out</value>
+  </data>
+  <data name="Colour_Halo_P1" xml:space="preserve">
+    <value>A sticker in a picture file is a red shape surrounded by see-through pixels. A see-through pixel still has red, green and blue numbers. With its opacity at zero they never show, so programs leave them as anything at all: white, black, or whatever was there before. That does no harm until the picture is made bigger or smaller and pixels are mixed with their neighbours.</value>
+  </data>
+  <data name="Colour_Halo_P2" xml:space="preserve">
+    <value>Along the edge, a red pixel is now mixed with an invisible white one. The colour comes out half red and half white, a pale pink, and the opacity comes out at a half. Laid on a dark background, the edge shows a pale ring that was never in the picture. The cure is to store each colour already multiplied by how much of its pixel it covers. A see-through pixel then holds no colour at all, and the edge fades cleanly from red into the background.</value>
+  </data>
+  <data name="Colour_Halo_Deeper" xml:space="preserve">
+    <value>Keeping colours this way is called premultiplied alpha, and graphics cards and games often use it inside. It has a second gift: laying one layer over another needs one multiplication fewer, since each colour is already scaled by its own opacity. If you have seen a game's leaves or a cut-out photo with a thin pale or dark outline, you have seen this ring. Filling the see-through pixels with the edge's own colour, as some image editors do when they save, hides it too.</value>
+  </data>
+  <data name="Colour_Halo_Hidden" xml:space="preserve">
+    <value>Colour in see-through pixels</value>
+  </data>
+  <data name="Colour_Halo_Backdrop" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="Colour_Halo_Premultiplied" xml:space="preserve">
+    <value>Keep each colour multiplied by its opacity</value>
+  </data>
+  <data name="Colour_Halo_Light" xml:space="preserve">
+    <value>The edge comes out too light: a pale ring, up to {0} off the colour it should be.</value>
+  </data>
+  <data name="Colour_Halo_Dark" xml:space="preserve">
+    <value>The edge comes out too dark: a dark ring, up to {0} off the colour it should be.</value>
+  </data>
+  <data name="Colour_Halo_Clean" xml:space="preserve">
+    <value>The edge fades cleanly from red into the background ({0} off).</value>
+  </data>
+  <data name="Colour_Halo_Picture" xml:space="preserve">
+    <value>A small red sticker with see-through pixels, and the same sticker made five times bigger</value>
+  </data>
+  <data name="Colour_Halo_Rule" xml:space="preserve">
+    <value>Made bigger, neighbouring pixels are mixed: colour and opacity alike.</value>
+  </data>
+  <data name="Colour_Halo_Big" xml:space="preserve">
+    <value>Made {0} times bigger</value>
+  </data>
+  <data name="Colour_Halo_Small" xml:space="preserve">
+    <value>The sticker, {0} × {0} pixels</value>
+  </data>
+  <data name="Colour_Halo_Holds" xml:space="preserve">
+    <value>Holds a colour…</value>
+  </data>
+  <data name="Colour_Halo_Nothing" xml:space="preserve">
+    <value>Holds no colour</value>
+  </data>
+  <data name="Colour_Halo_Opacity" xml:space="preserve">
+    <value>…with opacity 0</value>
+  </data>
+  <data name="Colour_Halo_Straight" xml:space="preserve">
+    <value>Colour kept as it is</value>
+  </data>
+  <data name="Colour_Halo_Multiplied" xml:space="preserve">
+    <value>Colour multiplied by opacity</value>
+  </data>
+  <data name="Colour_Halo_ShowLight" xml:space="preserve">
+    <value>A pale ring round the edge</value>
+  </data>
+  <data name="Colour_Halo_ShowDark" xml:space="preserve">
+    <value>A dark ring round the edge</value>
+  </data>
+  <data name="Colour_Halo_ShowClean" xml:space="preserve">
+    <value>A clean edge</value>
+  </data>
+  <data name="Narr_Colour_Halo_01" xml:space="preserve">
+    <value>This red sticker is eight pixels across. Each pixel is either fully red or fully see-through.</value>
+  </data>
+  <data name="Narr_Colour_Halo_02" xml:space="preserve">
+    <value>Made five times bigger, each new pixel is mixed from its neighbours. Along the edge, red is mixed with the white hidden in the see-through pixels, and a pale ring appears.</value>
+  </data>
+  <data name="Narr_Colour_Halo_03" xml:space="preserve">
+    <value>Your turn: switch to keeping each colour multiplied by its opacity. Then a see-through pixel holds no colour at all.</value>
+  </data>
+  <data name="Narr_Colour_Halo_04" xml:space="preserve">
+    <value>Now the edge fades from red straight into the background, whatever colour the see-through pixels used to hold.</value>
+  </data>
+  <data name="Narr_Colour_Halo_05" xml:space="preserve">
+    <value>Why did the pale ring appear?</value>
+  </data>
+  <data name="Colour_Halo_Quiz1" xml:space="preserve">
+    <value>The background was too dark</value>
+  </data>
+  <data name="Colour_Halo_Quiz2" xml:space="preserve">
+    <value>The red was too bright</value>
+  </data>
+  <data name="Colour_Halo_Quiz3" xml:space="preserve">
+    <value>The white hidden in see-through pixels was mixed into the edge</value>
+  </data>
+  <data name="Colour_Halo_Part_Small" xml:space="preserve">
+    <value>The sticker</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Small" xml:space="preserve">
+    <value>Eight pixels across. The checkerboard marks the see-through pixels.</value>
+  </data>
+  <data name="Colour_Halo_Part_Invisible" xml:space="preserve">
+    <value>Inside a see-through pixel</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Invisible" xml:space="preserve">
+    <value>It still stores a colour; with its opacity at zero you never see it. Drag the strip under the big picture to change that colour.</value>
+  </data>
+  <data name="Colour_Halo_Part_Edge" xml:space="preserve">
+    <value>The edge, made bigger</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Edge" xml:space="preserve">
+    <value>Every new pixel is mixed from the four stored pixels nearest it, colour and opacity alike.</value>
+  </data>
+  <data name="Colour_Halo_Part_Switch" xml:space="preserve">
+    <value>How colour is kept</value>
+  </data>
+  <data name="Narr_Colour_Halo_Part_Switch" xml:space="preserve">
+    <value>Kept as it is, or already multiplied by its opacity. Tap the switch to change it.</value>
+  </data>
 </root>

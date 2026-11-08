@@ -1,0 +1,61 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:colour="using:Lemon.Inside.Book.Chapters.Colour"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Colour.ColourDiagramPageView"
+                         x:DataType="colour:ColourDiagramPageViewModel">
+    <!-- A right page of the Colour chapter: the spread's picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="colour:LampsSpread">
+                            <colour:LampsDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Red="{Binding Red}" Green="{Binding Green}" Blue="{Binding Blue}" AutomationProperties.Name="{loc:Localize Colour_Lamps_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:InksSpread">
+                            <colour:InksDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Cyan="{Binding Cyan}" Magenta="{Binding Magenta}" Yellow="{Binding Yellow}" Real="{Binding Real}"
+                                     AutomationProperties.Name="{loc:Localize Colour_Inks_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:StepsSpread">
+                            <colour:StepsDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Value="{Binding Value}" AutomationProperties.Name="{loc:Localize Colour_Steps_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:BlendSpread">
+                            <colour:BlendDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Grey="{Binding Grey}" Position="{Binding Position}" AutomationProperties.Name="{loc:Localize Colour_Blend_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:PanesSpread">
+                            <colour:PanesDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Red="{Binding Red}" Blue="{Binding Blue}" BlueOnTop="{Binding BlueOnTop}" AutomationProperties.Name="{loc:Localize Colour_Panes_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="colour:HaloSpread">
+                            <colour:HaloDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Hidden="{Binding Hidden}" Backdrop="{Binding Backdrop}" Premultiplied="{Binding Premultiplied}"
+                                     AutomationProperties.Name="{loc:Localize Colour_Halo_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>
