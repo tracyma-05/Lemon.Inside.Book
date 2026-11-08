@@ -1,0 +1,59 @@
+<explore:ChapterPageView xmlns="https://github.com/avaloniaui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:sewing="using:Lemon.Inside.Book.Chapters.Sewing"
+                         xmlns:explore="using:Lemon.Book.Shell.Controls.Explore"
+                         xmlns:loc="using:Lemon.Book.Shell.Infrastructures.Localization"
+                         x:Class="Lemon.Inside.Book.Chapters.Sewing.SewingDiagramPageView"
+                         x:DataType="sewing:SewingDiagramPageViewModel">
+    <!-- A right page of the Sewing chapter: the spread's moving picture on a dark plate. -->
+    <Grid RowDefinitions="*,Auto" Margin="28,28,28,20">
+        <Border Classes="plate" CornerRadius="12" ClipToBounds="True">
+            <Grid>
+                <ContentControl Content="{Binding Spread}">
+                    <ContentControl.DataTemplates>
+                        <DataTemplate DataType="sewing:StitchSpread">
+                            <sewing:StitchDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Chain="{Binding Chain}" Length="{Binding Length}" Pulled="{Binding Pulled}" AutomationProperties.Name="{loc:Localize Sewing_Stitch_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="sewing:NeedleSpread">
+                            <sewing:NeedleDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Angle="{Binding Angle}" HandNeedle="{Binding HandNeedle}" AutomationProperties.Name="{loc:Localize Sewing_Needle_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="sewing:HookSpread">
+                            <sewing:HookDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Timing="{Binding Timing}" AutomationProperties.Name="{loc:Localize Sewing_Hook_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="sewing:TakeUpSpread">
+                            <sewing:TakeUpDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Length="{Binding Length}" Held="{Binding Held}" AutomationProperties.Name="{loc:Localize Sewing_TakeUp_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="sewing:FeedSpread">
+                            <sewing:FeedDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Length="{Binding Length}" Reverse="{Binding Reverse}" AutomationProperties.Name="{loc:Localize Sewing_Feed_Picture}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="sewing:TensionSpread">
+                            <sewing:TensionDiagram Highlight="{Binding Lesson.Highlight}" SelectedPart="{Binding Card.Id}" PartNames="{Binding PartNames}"
+                                     Dial="{Binding Dial}" Bobbin="{Binding Bobbin}" AutomationProperties.Name="{loc:Localize Sewing_Tension_Picture}" />
+                        </DataTemplate>
+                    </ContentControl.DataTemplates>
+                </ContentControl>
+
+                <!-- The spoken walkthrough: started from the corner, its subtitles and controls along the bottom. -->
+                <ToggleButton Classes="space" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"
+                              IsChecked="{Binding Spread.Lesson.IsActive, Mode=OneWay}"
+                              Command="{Binding Spread.Lesson.ToggleCommand}"
+                              ToolTip.Tip="{loc:Localize Lesson_Start_Tooltip}"
+                              AutomationProperties.Name="{loc:Localize Lesson_Start}">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource Icon.Voice}" />
+                        <TextBlock Text="{loc:Localize Lesson_Start}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </ToggleButton>
+                <explore:LessonPanel Margin="12" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                     DataContext="{Binding Spread.Lesson}" />
+            </Grid>
+        </Border>
+
+        <TextBlock Grid.Row="1" Classes="folio" Text="{Binding Folio}" HorizontalAlignment="{Binding FolioAlignment}" />
+    </Grid>
+</explore:ChapterPageView>

@@ -8073,4 +8073,640 @@
   <data name="Weighing_Grip_Travel" xml:space="preserve">
     <value>点一下：到下一个星球去</value>
   </data>
+  <data name="Chapter_Sewing" xml:space="preserve">
+    <value>缝纫机</value>
+  </data>
+  <data name="Sewing_SpreadOf" xml:space="preserve">
+    <value>{0} · 第 {1} / {2} 节</value>
+  </data>
+  <data name="Sewing_Deeper" xml:space="preserve">
+    <value>深入一点</value>
+  </data>
+  <data name="Sewing_Mm" xml:space="preserve">
+    <value>{0} 毫米</value>
+  </data>
+  <data name="Sewing_Cm" xml:space="preserve">
+    <value>{0} 厘米</value>
+  </data>
+  <data name="Sewing_Metres" xml:space="preserve">
+    <value>{0} 米</value>
+  </data>
+  <data name="Sewing_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Sewing_Grams" xml:space="preserve">
+    <value>{0} 克</value>
+  </data>
+  <data name="Sewing_Length" xml:space="preserve">
+    <value>针距</value>
+  </data>
+  <data name="Sewing_Grip_Kind" xml:space="preserve">
+    <value>点一下，在锁式线迹和链式线迹之间切换</value>
+  </data>
+  <data name="Sewing_Grip_Length" xml:space="preserve">
+    <value>拖动，让针距变长或变短</value>
+  </data>
+  <data name="Sewing_Grip_Pull" xml:space="preserve">
+    <value>点一下，拉线头</value>
+  </data>
+  <data name="Sewing_Grip_Wheel" xml:space="preserve">
+    <value>拖着把手转动手轮</value>
+  </data>
+  <data name="Sewing_Grip_Swap" xml:space="preserve">
+    <value>点一下，换一根针</value>
+  </data>
+  <data name="Sewing_Grip_Timing" xml:space="preserve">
+    <value>拖动，让旋梭提前或推迟</value>
+  </data>
+  <data name="Sewing_Grip_Hold" xml:space="preserve">
+    <value>点一下，按住挑线杆或松开</value>
+  </data>
+  <data name="Sewing_Grip_Reverse" xml:space="preserve">
+    <value>点一下，倒着缝或正着缝</value>
+  </data>
+  <data name="Sewing_Grip_Dial" xml:space="preserve">
+    <value>拖动，调高或调低张力</value>
+  </data>
+  <data name="Sewing_Grip_Screw" xml:space="preserve">
+    <value>拖动，拧紧或拧松梭壳螺丝</value>
+  </data>
+  <data name="Sewing_Stitch_Title" xml:space="preserve">
+    <value>一根线还是两根线</value>
+  </data>
+  <data name="Sewing_Stitch_P1" xml:space="preserve">
+    <value>用手缝的时候，你把针整根穿过布，松手，到另一面捏住它，再把整根线拉过去。机器可没法松开它的针：它从同一面把针扎进去、再拔出来，一分钟几百次。所以线得自己留在布的另一面，而能把它留住的办法只有一个：让它绕成圈。</value>
+  </data>
+  <data name="Sewing_Stitch_P2" xml:space="preserve">
+    <value>最简单的是链式线迹：一根线的每个线圈都被下一个线圈套住，就像钩针织的辫子。它缝得快，但只要拉一下最后那个线圈，整条缝线就全散开了。所以几乎所有家用缝纫机缝的都是锁式线迹：从下面一个小梭芯里出来的第二根线，从上线的每个线圈里穿过，两根线在布的中间锁在一起。每一针都各自锁牢，缝线两面看起来也一样。</value>
+  </data>
+  <data name="Sewing_Stitch_Deeper" xml:space="preserve">
+    <value>锁式线迹还更省线。10 厘米长的缝线、针距 2.5 毫米，大约用 28 厘米的线，比缝线长度的三倍少一点，由两根线分摊。同样长的链式线迹，那一根线就要用大约 38 厘米。链式线迹也有它的用处：面粉袋、米袋的袋口常常就是用它缝上的，一拉线头就能打开。</value>
+  </data>
+  <data name="Sewing_Stitch_Chain" xml:space="preserve">
+    <value>缝链式线迹（只用一根线）</value>
+  </data>
+  <data name="Sewing_Stitch_Pull" xml:space="preserve">
+    <value>拉线头</value>
+  </data>
+  <data name="Sewing_Stitch_Readout" xml:space="preserve">
+    <value>10 厘米缝线：{0} 针，用红线 {1}，蓝线 {2}。</value>
+  </data>
+  <data name="Sewing_Stitch_ReadoutChain" xml:space="preserve">
+    <value>10 厘米缝线：{0} 针，只用一根线，共 {1}。</value>
+  </data>
+  <data name="Sewing_Stitch_Undone" xml:space="preserve">
+    <value>一拉，链子就一针接一针地散开了。</value>
+  </data>
+  <data name="Sewing_Stitch_Holds" xml:space="preserve">
+    <value>一拉，只有线头被拉出来：每一针都还锁着。</value>
+  </data>
+  <data name="Sewing_Stitch_Picture" xml:space="preserve">
+    <value>沿缝线剖开的缝口，看线怎样穿过两层布</value>
+  </data>
+  <data name="Sewing_Stitch_Top" xml:space="preserve">
+    <value>布的正面</value>
+  </data>
+  <data name="Sewing_Stitch_Under" xml:space="preserve">
+    <value>布的反面</value>
+  </data>
+  <data name="Sewing_Stitch_RuleChain" xml:space="preserve">
+    <value>一根线：每个线圈只靠下一个线圈套住</value>
+  </data>
+  <data name="Sewing_Stitch_RuleLock" xml:space="preserve">
+    <value>两根线，在布的中间锁在一起</value>
+  </data>
+  <data name="Sewing_Stitch_Thicker" xml:space="preserve">
+    <value>布画得比实际厚很多</value>
+  </data>
+  <data name="Sewing_Stitch_Used" xml:space="preserve">
+    <value>用线：缝线长度的 {0} 倍</value>
+  </data>
+  <data name="Sewing_Stitch_AllUndone" xml:space="preserve">
+    <value>整条缝线都散开了</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_01" xml:space="preserve">
+    <value>这是沿着缝线剖开的缝口。针每隔两毫米半，就在两层布上扎一个孔。</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_02" xml:space="preserve">
+    <value>在每个孔里，上面来的红线和下面来的蓝线互相钩住，锁在布的中间。</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_03" xml:space="preserve">
+    <value>轮到你了：换成只用一根线的链式线迹。</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_04" xml:space="preserve">
+    <value>现在拉一下线头。每个线圈只靠下一个线圈套住，所以缝线一针接一针地散开了。</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_05" xml:space="preserve">
+    <value>为什么锁式线迹不会这样散开？</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz1" xml:space="preserve">
+    <value>它的线更粗</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz2" xml:space="preserve">
+    <value>每一针都被另一根线单独锁住</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz3" xml:space="preserve">
+    <value>机器缝得更慢</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Holes" xml:space="preserve">
+    <value>针孔</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Holes" xml:space="preserve">
+    <value>每一针一个孔，穿透两层布。</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Upper" xml:space="preserve">
+    <value>面线</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Upper" xml:space="preserve">
+    <value>它来自机器顶上的线轴，穿过针眼。</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Lower" xml:space="preserve">
+    <value>底线</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Lower" xml:space="preserve">
+    <value>它来自布下面的一个小梭芯。</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Knots" xml:space="preserve">
+    <value>锁结</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Knots" xml:space="preserve">
+    <value>两根线互相钩住的地方，最好正好在布的中间。</value>
+  </data>
+  <data name="Sewing_Needle_Title" xml:space="preserve">
+    <value>针眼在针尖</value>
+  </data>
+  <data name="Sewing_Needle_P1" xml:space="preserve">
+    <value>机针的针眼长在“错”的一头：就在针尖上面。它把线带下去穿过布，再退回来，把一点线留在布的下面。针的一侧有一条长槽，线就躺在槽里，往下扎的时候不会被布磨着。</value>
+  </data>
+  <data name="Sewing_Needle_P2" xml:space="preserve">
+    <value>妙处在针开始往回升的时候。长槽里的线跟着针一起往上滑，可是另一侧，也就是短槽那一侧的线被布夹住、拖在后面。这段线无处可去，只好往旁边鼓出来，在针眼上方鼓成一个小线圈。针升起大约两毫米半时，线圈鼓得最大，之后又被拉平。机器里其他所有部件，都是按这一刻来配合的。</value>
+  </data>
+  <data name="Sewing_Needle_Deeper" xml:space="preserve">
+    <value>手轮转动一根曲柄，一根短连杆把曲柄的转圈变成针约三厘米的上下行程。在行程最低处附近，曲柄转了，针却几乎不动：转过最低点四十度，针才升起两毫米半左右。这段慢下来的时间，正好让旋梭去找线圈。针眼在顶上的针，比如手缝针，就不会形成线圈：线只是跟着针进进出出。</value>
+  </data>
+  <data name="Sewing_Needle_Angle" xml:space="preserve">
+    <value>手轮</value>
+  </data>
+  <data name="Sewing_Needle_Hand" xml:space="preserve">
+    <value>换成手缝针（针眼在顶上）</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutHand" xml:space="preserve">
+    <value>针眼在顶上，线只是跟着针进进出出：不会形成线圈，下面也就没有东西能钩住它。</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutUp" xml:space="preserve">
+    <value>针正在上升，离最低点 {0}。旁边的线圈宽 {1}。</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutDown" xml:space="preserve">
+    <value>针正在下降，离最低点 {0}。还没有线圈。</value>
+  </data>
+  <data name="Sewing_Needle_Picture" xml:space="preserve">
+    <value>穿过布的机针和它带着的线，以及驱动它的手轮</value>
+  </data>
+  <data name="Sewing_Needle_Cloth" xml:space="preserve">
+    <value>布</value>
+  </data>
+  <data name="Sewing_Needle_HookPath" xml:space="preserve">
+    <value>旋梭的尖从这里经过</value>
+  </data>
+  <data name="Sewing_Needle_Label" xml:space="preserve">
+    <value>针升起 {0} 毫米 · 线圈 {1} 毫米</value>
+  </data>
+  <data name="Sewing_Needle_RuleHand" xml:space="preserve">
+    <value>手缝针：线只是跟着针走</value>
+  </data>
+  <data name="Sewing_Needle_Rule" xml:space="preserve">
+    <value>针往上升时，布拖住线，让它鼓成线圈</value>
+  </data>
+  <data name="Sewing_Needle_Bigger" xml:space="preserve">
+    <value>画得比实际大很多倍</value>
+  </data>
+  <data name="Sewing_Needle_Wheel" xml:space="preserve">
+    <value>手轮</value>
+  </data>
+  <data name="Narr_Sewing_Needle_01" xml:space="preserve">
+    <value>手轮带着针上下运动。现在它正往下扎进布里。</value>
+  </data>
+  <data name="Narr_Sewing_Needle_02" xml:space="preserve">
+    <value>线穿过针眼。机针的针眼就在针尖上面。</value>
+  </data>
+  <data name="Narr_Sewing_Needle_03" xml:space="preserve">
+    <value>轮到你了：把手轮转过最低点，直到针旁边鼓出一个线圈。</value>
+  </data>
+  <data name="Narr_Sewing_Needle_04" xml:space="preserve">
+    <value>针往上升时，布夹住这一侧的线，所以线没有跟上去，而是鼓了出来。</value>
+  </data>
+  <data name="Narr_Sewing_Needle_05" xml:space="preserve">
+    <value>为什么针眼在针尖，而不在顶上？</value>
+  </data>
+  <data name="Sewing_Needle_Quiz1" xml:space="preserve">
+    <value>这样针不离开机器，也能在布下面留下线圈</value>
+  </data>
+  <data name="Sewing_Needle_Quiz2" xml:space="preserve">
+    <value>这样穿针更容易</value>
+  </data>
+  <data name="Sewing_Needle_Quiz3" xml:space="preserve">
+    <value>这样针更结实</value>
+  </data>
+  <data name="Sewing_Needle_Part_Needle" xml:space="preserve">
+    <value>机针</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Needle" xml:space="preserve">
+    <value>它上下移动约三厘米，一分钟几百次。</value>
+  </data>
+  <data name="Sewing_Needle_Part_Eye" xml:space="preserve">
+    <value>针眼</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Eye" xml:space="preserve">
+    <value>线穿过的小孔，就在针尖上面。</value>
+  </data>
+  <data name="Sewing_Needle_Part_Loop" xml:space="preserve">
+    <value>线圈</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Loop" xml:space="preserve">
+    <value>被布拖住的线，在针上升时从针旁鼓出来。</value>
+  </data>
+  <data name="Sewing_Needle_Part_Cloth" xml:space="preserve">
+    <value>布</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Cloth" xml:space="preserve">
+    <value>正在缝合的两层布。针往回升时，它夹住线。</value>
+  </data>
+  <data name="Sewing_Hook_Title" xml:space="preserve">
+    <value>钩住线圈</value>
+  </data>
+  <data name="Sewing_Hook_P1" xml:space="preserve">
+    <value>针板下面转着旋梭：一个围着梭壳的圆环，边上有一个尖。每缝一针，它转两圈。就在针旁的线圈张开的那一刻，梭尖钻进线圈，插在线和针之间，把线圈带着绕梭壳转过去。</value>
+  </data>
+  <data name="Sewing_Hook_P2" xml:space="preserve">
+    <value>线圈绕梭壳转完一整圈，就从梭壳背面滑脱，又被拉上去，这时梭芯的蓝线已经被套在里面。这就是锁结。如果梭尖来得太早，线圈还没张开；来得太晚，线圈又已经被拉平了。不管哪种，梭尖都只擦过一根空针，这一针就跳过去了。</value>
+  </data>
+  <data name="Sewing_Hook_Deeper" xml:space="preserve">
+    <value>梭尖只有大约二十五度手轮转角的时间窗口，全速时它离针只有零点几毫米擦身而过。针弯了、钝了、装反了，或者型号不对，是跳针最常见的原因：线圈在错的地方张开，梭尖就钩不到它。</value>
+  </data>
+  <data name="Sewing_Hook_Timing" xml:space="preserve">
+    <value>旋梭定时</value>
+  </data>
+  <data name="Sewing_Hook_Late" xml:space="preserve">
+    <value>推迟 {0}°</value>
+  </data>
+  <data name="Sewing_Hook_Early" xml:space="preserve">
+    <value>提前 {0}°</value>
+  </data>
+  <data name="Sewing_Hook_OnTime" xml:space="preserve">
+    <value>正好</value>
+  </data>
+  <data name="Sewing_Hook_Readout" xml:space="preserve">
+    <value>梭尖经过时，针已升起 {0}，线圈宽 {1}：够宽，被钩住了。</value>
+  </data>
+  <data name="Sewing_Hook_Missed" xml:space="preserve">
+    <value>梭尖经过时，针已升起 {0}，线圈只有 {1} 宽：梭尖擦了过去，这一针跳过了。</value>
+  </data>
+  <data name="Sewing_Hook_Picture" xml:space="preserve">
+    <value>针板下面：机针、绕着梭壳转动的旋梭，以及已经缝好的缝线</value>
+  </data>
+  <data name="Sewing_Hook_Plate" xml:space="preserve">
+    <value>针板</value>
+  </data>
+  <data name="Sewing_Hook_Seam" xml:space="preserve">
+    <value>已缝好的缝线</value>
+  </data>
+  <data name="Sewing_Hook_ScaleEarly" xml:space="preserve">
+    <value>提前</value>
+  </data>
+  <data name="Sewing_Hook_ScaleLate" xml:space="preserve">
+    <value>推迟</value>
+  </data>
+  <data name="Sewing_Hook_Caught" xml:space="preserve">
+    <value>线圈宽 {0} 毫米：钩住了</value>
+  </data>
+  <data name="Sewing_Hook_Skipped" xml:space="preserve">
+    <value>线圈宽 {0} 毫米：没钩住</value>
+  </data>
+  <data name="Sewing_Hook_Rule" xml:space="preserve">
+    <value>梭尖必须在线圈刚张开时赶到</value>
+  </data>
+  <data name="Sewing_Hook_Slow" xml:space="preserve">
+    <value>时间放慢了很多</value>
+  </data>
+  <data name="Narr_Sewing_Hook_01" xml:space="preserve">
+    <value>这是旋梭。每缝一针，它的尖绕梭壳转两圈。</value>
+  </data>
+  <data name="Narr_Sewing_Hook_02" xml:space="preserve">
+    <value>里面放着梭芯，上面绕着蓝线。</value>
+  </data>
+  <data name="Narr_Sewing_Hook_03" xml:space="preserve">
+    <value>轮到你了：把旋梭推迟到钩不住线圈。</value>
+  </data>
+  <data name="Narr_Sewing_Hook_04" xml:space="preserve">
+    <value>重新调好，梭尖在线圈刚张开时赶到，每一针都钩住了。</value>
+  </data>
+  <data name="Narr_Sewing_Hook_05" xml:space="preserve">
+    <value>梭尖没钩住线圈，会怎样？</value>
+  </data>
+  <data name="Sewing_Hook_Quiz1" xml:space="preserve">
+    <value>针会断</value>
+  </data>
+  <data name="Sewing_Hook_Quiz2" xml:space="preserve">
+    <value>蓝线会用完</value>
+  </data>
+  <data name="Sewing_Hook_Quiz3" xml:space="preserve">
+    <value>这一针被跳过，留下一个长长的线迹</value>
+  </data>
+  <data name="Sewing_Hook_Part_Hook" xml:space="preserve">
+    <value>旋梭</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Hook" xml:space="preserve">
+    <value>带尖的圆环，每针转两圈，把线圈绕着梭芯带过去。</value>
+  </data>
+  <data name="Sewing_Hook_Part_Bobbin" xml:space="preserve">
+    <value>梭芯</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Bobbin" xml:space="preserve">
+    <value>绕着底线的小线轴，静静地待在梭壳里。</value>
+  </data>
+  <data name="Sewing_Hook_Part_Loop" xml:space="preserve">
+    <value>线圈</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Loop" xml:space="preserve">
+    <value>面线的线圈，梭尖必须钩住它。</value>
+  </data>
+  <data name="Sewing_Hook_Part_Seam" xml:space="preserve">
+    <value>缝线</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Seam" xml:space="preserve">
+    <value>每钩住一针就留下一个针孔；跳过一针，就留下一个长线迹。</value>
+  </data>
+  <data name="Sewing_TakeUp_Title" xml:space="preserve">
+    <value>放线与收线</value>
+  </data>
+  <data name="Sewing_TakeUp_P1" xml:space="preserve">
+    <value>线圈要绕过梭壳，需要很多线：大约七厘米，是一针留下的线的二十倍。这些线从针眼里放下去，这时挑线杆，也就是机器正面那根上下摆动的杆子，会落下来把线放出去。</value>
+  </data>
+  <data name="Sewing_TakeUp_P2" xml:space="preserve">
+    <value>线圈一从梭壳上滑脱，挑线杆就往上升，把这些线全都从布里收回来。它把锁结拉紧到布的中间，收紧这一针，再从线轴上经过夹线器只拉出一针所需的新线。穿线时要是漏过了挑线杆，就没有东西把线圈收回去：线会在布下面堆成一团乱麻。</value>
+  </data>
+  <data name="Sewing_TakeUp_Deeper" xml:space="preserve">
+    <value>每一针放下七厘米，却只留下三毫米半，所以一小段线要从针眼里下去又上来大约四十次，才会最终留在缝线里。正因为要磨这么多次，缝纫机线才做得又光滑又结实，针眼毛糙的针也会把线磨毛。</value>
+  </data>
+  <data name="Sewing_TakeUp_Hold" xml:space="preserve">
+    <value>按住挑线杆不动</value>
+  </data>
+  <data name="Sewing_TakeUp_Tangle" xml:space="preserve">
+    <value>挑线杆不动，就没有东西把线圈收回来：线不断从线轴上被拉下来，在布下面堆成一团。</value>
+  </data>
+  <data name="Sewing_TakeUp_Readout" xml:space="preserve">
+    <value>每一针放下 {0} 的线绕过梭芯，再收回来；只有 {1} 留在缝线里。一小段线要穿过针眼大约 {2} 次，才会被缝进去。</value>
+  </data>
+  <data name="Sewing_TakeUp_Picture" xml:space="preserve">
+    <value>缝纫机正面，线从线轴经过挑线杆到针、再绕过梭芯的路线</value>
+  </data>
+  <data name="Sewing_TakeUp_Nest" xml:space="preserve">
+    <value>一团乱线</value>
+  </data>
+  <data name="Sewing_TakeUp_Label" xml:space="preserve">
+    <value>放出 {0} 厘米 · 留下 {1} 毫米 · 穿针眼 {2} 次</value>
+  </data>
+  <data name="Sewing_TakeUp_Rule" xml:space="preserve">
+    <value>挑线杆先把线圈放下去，再收回来</value>
+  </data>
+  <data name="Sewing_TakeUp_Slow" xml:space="preserve">
+    <value>时间放慢了</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_01" xml:space="preserve">
+    <value>这是挑线杆。线从它末端的小孔里穿过。</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_02" xml:space="preserve">
+    <value>针板下面，旋梭要把线圈绕梭壳带上一整圈。</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_03" xml:space="preserve">
+    <value>轮到你了：按住挑线杆不动，看看布下面会发生什么。</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_04" xml:space="preserve">
+    <value>松开它，挑线杆就把每个线圈从针眼里收回来，收紧这一针。</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_05" xml:space="preserve">
+    <value>每一针只留下几毫米线。每次从线轴上拉下来多少线？</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz1" xml:space="preserve">
+    <value>大约七厘米</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz2" xml:space="preserve">
+    <value>正好是这一针留下的那么多</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz3" xml:space="preserve">
+    <value>一点也没有：全由梭芯供线</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Lever" xml:space="preserve">
+    <value>挑线杆</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Lever" xml:space="preserve">
+    <value>它落下来给线圈放线，升上去把线收回来。</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Spool" xml:space="preserve">
+    <value>线轴</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Spool" xml:space="preserve">
+    <value>面线的线轴，每缝一针转一点点。</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Needle" xml:space="preserve">
+    <value>机针</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Needle" xml:space="preserve">
+    <value>线要从它的针眼里上上下下几十次，才会留在缝线里。</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Bobbin" xml:space="preserve">
+    <value>梭壳</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Bobbin" xml:space="preserve">
+    <value>线圈必须绕它一整圈。</value>
+  </data>
+  <data name="Sewing_Feed_Title" xml:space="preserve">
+    <value>把布往前送</value>
+  </data>
+  <data name="Sewing_Feed_P1" xml:space="preserve">
+    <value>两针之间，布必须正好往前挪一个针距，而且挪的时候针不能扎在布里。干这件事的，是布下面几条带齿的小铁条，叫送布牙。它们从针板的槽里升上来，从下面咬住布，带着它往前走，然后沉到针板下面，退回去准备下一针。</value>
+  </data>
+  <data name="Sewing_Feed_P2" xml:space="preserve">
+    <value>上面的压脚把布压在送布牙上，让齿咬住布不打滑；压脚底面很光滑，布能在它下面滑过去。送布牙走的是一个扁扁的圈：上升、前移、下沉、后退。它们只在针离开布的时候升上来；针距旋钮改变的，只是它们前移多远。</value>
+  </data>
+  <data name="Sewing_Feed_Deeper" xml:space="preserve">
+    <value>家用缝纫机常见的速度是一分钟八百针，针距 2.5 毫米时，布一分钟走两米。把针距调到零，送布牙只上下起落，针就在同一个地方反复缝，有些机器就用这个办法给缝线打结。倒缝按钮让送布牙往回送，在缝线末端倒着缝几针，线头就不会松脱。</value>
+  </data>
+  <data name="Sewing_Feed_Reverse" xml:space="preserve">
+    <value>倒缝</value>
+  </data>
+  <data name="Sewing_Feed_OnTheSpot" xml:space="preserve">
+    <value>针距为零，送布牙只上下起落：布不动，针在同一个地方缝。</value>
+  </data>
+  <data name="Sewing_Feed_Readout" xml:space="preserve">
+    <value>每 10 厘米 {0} 针。一分钟 {1} 针时，布一分钟走 {2}。</value>
+  </data>
+  <data name="Sewing_Feed_Backwards" xml:space="preserve">
+    <value>正在倒缝。</value>
+  </data>
+  <data name="Sewing_Feed_Picture" xml:space="preserve">
+    <value>从侧面看针板：压脚压着布，送布牙的齿带着布往前走</value>
+  </data>
+  <data name="Sewing_Feed_RuleBack" xml:space="preserve">
+    <value>倒缝：送布牙把布往你这边送</value>
+  </data>
+  <data name="Sewing_Feed_Rule" xml:space="preserve">
+    <value>针离开布的时候，送布牙把布往前送</value>
+  </data>
+  <data name="Sewing_Feed_Slow" xml:space="preserve">
+    <value>时间放慢了</value>
+  </data>
+  <data name="Sewing_Feed_Label" xml:space="preserve">
+    <value>针距 {0} 毫米 · 全速时每秒 {1} 厘米</value>
+  </data>
+  <data name="Narr_Sewing_Feed_01" xml:space="preserve">
+    <value>这是送布牙。它们的齿在布下面走一个扁扁的圈。</value>
+  </data>
+  <data name="Narr_Sewing_Feed_02" xml:space="preserve">
+    <value>压脚把布压在送布牙上，让齿能咬住布。</value>
+  </data>
+  <data name="Narr_Sewing_Feed_03" xml:space="preserve">
+    <value>轮到你了：让机器倒着缝。</value>
+  </data>
+  <data name="Narr_Sewing_Feed_04" xml:space="preserve">
+    <value>针距调到最长，送布牙每升上来一次，布就走五毫米。</value>
+  </data>
+  <data name="Narr_Sewing_Feed_05" xml:space="preserve">
+    <value>为什么送布牙要先沉到针板下面，再往回退？</value>
+  </data>
+  <data name="Sewing_Feed_Quiz1" xml:space="preserve">
+    <value>这样才不会把布又拖回来</value>
+  </data>
+  <data name="Sewing_Feed_Quiz2" xml:space="preserve">
+    <value>为了让齿保持干净</value>
+  </data>
+  <data name="Sewing_Feed_Quiz3" xml:space="preserve">
+    <value>给梭芯让地方</value>
+  </data>
+  <data name="Sewing_Feed_Part_Dogs" xml:space="preserve">
+    <value>送布牙</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Dogs" xml:space="preserve">
+    <value>带齿的铁条，从针板里升上来，把布送一针，再沉下去。</value>
+  </data>
+  <data name="Sewing_Feed_Part_Foot" xml:space="preserve">
+    <value>压脚</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Foot" xml:space="preserve">
+    <value>它把布压在送布牙上。</value>
+  </data>
+  <data name="Sewing_Feed_Part_Plate" xml:space="preserve">
+    <value>针板</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Plate" xml:space="preserve">
+    <value>一块钢板，上面有给送布牙的槽和给针的孔。</value>
+  </data>
+  <data name="Sewing_Feed_Part_Cloth" xml:space="preserve">
+    <value>布</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Cloth" xml:space="preserve">
+    <value>一次往前送一针，缝好的线迹跟着布一起走。</value>
+  </data>
+  <data name="Sewing_Tension_Title" xml:space="preserve">
+    <value>两根线的拔河</value>
+  </data>
+  <data name="Sewing_Tension_P1" xml:space="preserve">
+    <value>面线和底线互相拉扯，锁结落在哪里，要看哪根线拉得更紧。面线被夹线器拖住：两片夹线盘被一根弹簧压在一起，弹簧的松紧由旋钮来调。底线被梭壳上的一片小弹簧片拖住，松紧由一颗小螺丝来调。</value>
+  </data>
+  <data name="Sewing_Tension_P2" xml:space="preserve">
+    <value>两边的拉力相当时，锁结藏在布的中间，缝线两面看起来一样。把面线调紧，它就把锁结拉到正面，缝线上会露出一个个蓝点。把面线调松，底线就占了上风：红线被拉到反面，在下面堆成一个个线圈。反面出现线圈，几乎总是面线的问题，而不是底线的。</value>
+  </data>
+  <data name="Sewing_Tension_Deeper" xml:space="preserve">
+    <value>旋钮并不能说明一切：面线还要磨过导线钩、挑线杆和针眼，所以它在线迹处的拉力，并不只是夹线盘定的那么多。正因为如此，旋钮上的数字只对同一台机器、同一种线才有意义。还有，如果穿线时压脚是放下的，夹线盘是合上的，线根本进不到两片盘之间，缝起来面线几乎没有拉力：反面会是一大堆线圈。</value>
+  </data>
+  <data name="Sewing_Tension_Dial" xml:space="preserve">
+    <value>面线张力旋钮</value>
+  </data>
+  <data name="Sewing_Tension_Bobbin" xml:space="preserve">
+    <value>底线拉力</value>
+  </data>
+  <data name="Sewing_Tension_Tight" xml:space="preserve">
+    <value>面线拉力 {0}，底线拉力 {1}：面线占上风，把锁结拉到正面，露出蓝线。</value>
+  </data>
+  <data name="Sewing_Tension_Loose" xml:space="preserve">
+    <value>面线拉力 {0}，底线拉力 {1}：底线占上风，把红线拉到反面，堆成线圈。</value>
+  </data>
+  <data name="Sewing_Tension_Even" xml:space="preserve">
+    <value>面线拉力 {0}，底线拉力 {1}：两边平衡，锁结藏在布的中间。</value>
+  </data>
+  <data name="Sewing_Tension_Picture" xml:space="preserve">
+    <value>沿缝线剖开的缝口，画出面线和底线的拉力、张力旋钮和梭壳螺丝</value>
+  </data>
+  <data name="Sewing_Tension_DialLabel" xml:space="preserve">
+    <value>张力旋钮</value>
+  </data>
+  <data name="Sewing_Tension_Looser" xml:space="preserve">
+    <value>松</value>
+  </data>
+  <data name="Sewing_Tension_Tighter" xml:space="preserve">
+    <value>紧</value>
+  </data>
+  <data name="Sewing_Tension_ShowTight" xml:space="preserve">
+    <value>正面露蓝点：面线太紧</value>
+  </data>
+  <data name="Sewing_Tension_ShowLoose" xml:space="preserve">
+    <value>反面堆红圈：面线太松</value>
+  </data>
+  <data name="Sewing_Tension_ShowEven" xml:space="preserve">
+    <value>平衡：锁结藏在布的中间</value>
+  </data>
+  <data name="Sewing_Tension_Rule" xml:space="preserve">
+    <value>锁结偏向拉得更紧的那根线</value>
+  </data>
+  <data name="Narr_Sewing_Tension_01" xml:space="preserve">
+    <value>缝得好的时候，锁结藏在布的中间。</value>
+  </data>
+  <data name="Narr_Sewing_Tension_02" xml:space="preserve">
+    <value>张力旋钮决定面线被拖得多紧。</value>
+  </data>
+  <data name="Narr_Sewing_Tension_03" xml:space="preserve">
+    <value>轮到你了：把旋钮调高，直到正面露出蓝线。</value>
+  </data>
+  <data name="Narr_Sewing_Tension_04" xml:space="preserve">
+    <value>底线的拉力由这颗小螺丝来调，平时很少需要动它。</value>
+  </data>
+  <data name="Narr_Sewing_Tension_05" xml:space="preserve">
+    <value>反面全是红线圈。你先调什么？</value>
+  </data>
+  <data name="Sewing_Tension_Quiz1" xml:space="preserve">
+    <value>拧紧梭壳螺丝</value>
+  </data>
+  <data name="Sewing_Tension_Quiz2" xml:space="preserve">
+    <value>把针距调长</value>
+  </data>
+  <data name="Sewing_Tension_Quiz3" xml:space="preserve">
+    <value>把面线张力旋钮调高</value>
+  </data>
+  <data name="Sewing_Tension_Part_Knots" xml:space="preserve">
+    <value>锁结</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Knots" xml:space="preserve">
+    <value>两根线钩在一起的地方。它们会往拉得更紧的那根线那边移。</value>
+  </data>
+  <data name="Sewing_Tension_Part_Dial" xml:space="preserve">
+    <value>张力旋钮</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Dial" xml:space="preserve">
+    <value>它把面线夹在两片盘之间：数字越大，拉得越紧。</value>
+  </data>
+  <data name="Sewing_Tension_Part_Screw" xml:space="preserve">
+    <value>梭壳螺丝</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Screw" xml:space="preserve">
+    <value>把这颗小螺丝稍微拧一点，底线的拉力就变了。</value>
+  </data>
+  <data name="Sewing_Tension_Part_Cloth" xml:space="preserve">
+    <value>布</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Cloth" xml:space="preserve">
+    <value>两边拉力平衡时，缝线两面看起来一样。</value>
+  </data>
+  <data name="Sewing_Feed_Way" xml:space="preserve">
+    <value>布往这边走</value>
+  </data>
 </root>

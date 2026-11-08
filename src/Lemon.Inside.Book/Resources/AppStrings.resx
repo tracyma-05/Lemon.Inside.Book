@@ -8073,4 +8073,640 @@
   <data name="Weighing_Grip_Travel" xml:space="preserve">
     <value>Tap to travel on to the next world</value>
   </data>
+  <data name="Chapter_Sewing" xml:space="preserve">
+    <value>The sewing machine</value>
+  </data>
+  <data name="Sewing_SpreadOf" xml:space="preserve">
+    <value>{0} · {1} of {2}</value>
+  </data>
+  <data name="Sewing_Deeper" xml:space="preserve">
+    <value>A closer look</value>
+  </data>
+  <data name="Sewing_Mm" xml:space="preserve">
+    <value>{0} mm</value>
+  </data>
+  <data name="Sewing_Cm" xml:space="preserve">
+    <value>{0} cm</value>
+  </data>
+  <data name="Sewing_Metres" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="Sewing_Degrees" xml:space="preserve">
+    <value>{0}°</value>
+  </data>
+  <data name="Sewing_Grams" xml:space="preserve">
+    <value>{0} g</value>
+  </data>
+  <data name="Sewing_Length" xml:space="preserve">
+    <value>Stitch length</value>
+  </data>
+  <data name="Sewing_Grip_Kind" xml:space="preserve">
+    <value>Tap to switch between lockstitch and chain stitch</value>
+  </data>
+  <data name="Sewing_Grip_Length" xml:space="preserve">
+    <value>Drag for longer or shorter stitches</value>
+  </data>
+  <data name="Sewing_Grip_Pull" xml:space="preserve">
+    <value>Tap to pull the loose end</value>
+  </data>
+  <data name="Sewing_Grip_Wheel" xml:space="preserve">
+    <value>Drag the handle round to turn the handwheel</value>
+  </data>
+  <data name="Sewing_Grip_Swap" xml:space="preserve">
+    <value>Tap to swap the needle</value>
+  </data>
+  <data name="Sewing_Grip_Timing" xml:space="preserve">
+    <value>Drag to set the hook earlier or later</value>
+  </data>
+  <data name="Sewing_Grip_Hold" xml:space="preserve">
+    <value>Tap to hold the lever still or let it go</value>
+  </data>
+  <data name="Sewing_Grip_Reverse" xml:space="preserve">
+    <value>Tap to sew backwards or forwards</value>
+  </data>
+  <data name="Sewing_Grip_Dial" xml:space="preserve">
+    <value>Drag to turn the tension up or down</value>
+  </data>
+  <data name="Sewing_Grip_Screw" xml:space="preserve">
+    <value>Drag to tighten or loosen the bobbin screw</value>
+  </data>
+  <data name="Sewing_Stitch_Title" xml:space="preserve">
+    <value>One thread or two</value>
+  </data>
+  <data name="Sewing_Stitch_P1" xml:space="preserve">
+    <value>Sewing by hand, you push the needle right through the cloth, let go of it, take hold of it on the other side and pull the whole thread after it. A machine cannot let go of its needle: it pushes it in and pulls it back out from the same side, hundreds of times a minute. So the thread has to stay behind on the far side by itself, and the only way to hold it there is to loop it.</value>
+  </data>
+  <data name="Sewing_Stitch_P2" xml:space="preserve">
+    <value>The simplest way is a chain stitch: each loop of the one thread is caught by the next, like a crochet chain. It is quick, but pull the last loop and the whole seam runs out. Almost every home machine sews a lockstitch instead: a second thread, from a small bobbin underneath, passes through each loop of the upper thread, and the two lock together inside the cloth. Every stitch holds on its own, and the seam looks the same on both sides.</value>
+  </data>
+  <data name="Sewing_Stitch_Deeper" xml:space="preserve">
+    <value>A lockstitch takes less thread, too. Ten centimetres of seam in stitches two and a half millimetres long use about 28 centimetres of thread, a little under three times the seam's length, shared between the two threads. A chain stitch of the same length uses about 38 centimetres of its one thread. Chain stitches still have their uses: the top of a sack of flour or rice is often closed with one, so that a single pull opens it.</value>
+  </data>
+  <data name="Sewing_Stitch_Chain" xml:space="preserve">
+    <value>Sew a chain stitch (one thread)</value>
+  </data>
+  <data name="Sewing_Stitch_Pull" xml:space="preserve">
+    <value>Pull the loose end</value>
+  </data>
+  <data name="Sewing_Stitch_Readout" xml:space="preserve">
+    <value>Ten centimetres of seam: {0} stitches, {1} of red thread and {2} of blue.</value>
+  </data>
+  <data name="Sewing_Stitch_ReadoutChain" xml:space="preserve">
+    <value>Ten centimetres of seam: {0} stitches, {1} of its one thread.</value>
+  </data>
+  <data name="Sewing_Stitch_Undone" xml:space="preserve">
+    <value>Pulled, the chain runs out stitch after stitch.</value>
+  </data>
+  <data name="Sewing_Stitch_Holds" xml:space="preserve">
+    <value>Pulled, only the free end comes away: every stitch stays locked.</value>
+  </data>
+  <data name="Sewing_Stitch_Picture" xml:space="preserve">
+    <value>A seam cut along its length, showing how the thread goes through two layers of cloth</value>
+  </data>
+  <data name="Sewing_Stitch_Top" xml:space="preserve">
+    <value>top of the cloth</value>
+  </data>
+  <data name="Sewing_Stitch_Under" xml:space="preserve">
+    <value>underside</value>
+  </data>
+  <data name="Sewing_Stitch_RuleChain" xml:space="preserve">
+    <value>one thread: each loop is held only by the next</value>
+  </data>
+  <data name="Sewing_Stitch_RuleLock" xml:space="preserve">
+    <value>two threads, locked together inside the cloth</value>
+  </data>
+  <data name="Sewing_Stitch_Thicker" xml:space="preserve">
+    <value>cloth drawn much thicker than life</value>
+  </data>
+  <data name="Sewing_Stitch_Used" xml:space="preserve">
+    <value>thread used: {0} × the seam's length</value>
+  </data>
+  <data name="Sewing_Stitch_AllUndone" xml:space="preserve">
+    <value>the whole seam has come undone</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_01" xml:space="preserve">
+    <value>This is a seam cut along its length. The needle has made a hole through both layers of cloth every two and a half millimetres.</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_02" xml:space="preserve">
+    <value>At every hole a red thread from above and a blue thread from below hook round each other, inside the cloth.</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_03" xml:space="preserve">
+    <value>Your turn: switch to a chain stitch, which uses only one thread.</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_04" xml:space="preserve">
+    <value>Now the loose end is pulled. Each loop was held only by the next one, so the seam runs out stitch after stitch.</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_05" xml:space="preserve">
+    <value>Why does a lockstitch not come undone like that?</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz1" xml:space="preserve">
+    <value>Its thread is thicker</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz2" xml:space="preserve">
+    <value>Every stitch is locked on its own by the other thread</value>
+  </data>
+  <data name="Sewing_Stitch_Quiz3" xml:space="preserve">
+    <value>The machine sews it more slowly</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Holes" xml:space="preserve">
+    <value>Needle holes</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Holes" xml:space="preserve">
+    <value>One hole for every stitch, through both layers of cloth.</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Upper" xml:space="preserve">
+    <value>Upper thread</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Upper" xml:space="preserve">
+    <value>It comes from the spool on top of the machine, through the needle.</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Lower" xml:space="preserve">
+    <value>Bobbin thread</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Lower" xml:space="preserve">
+    <value>It comes from a small bobbin under the cloth.</value>
+  </data>
+  <data name="Sewing_Stitch_Part_Knots" xml:space="preserve">
+    <value>Locks</value>
+  </data>
+  <data name="Narr_Sewing_Stitch_Part_Knots" xml:space="preserve">
+    <value>Where the two threads hook round each other, best right in the middle of the cloth.</value>
+  </data>
+  <data name="Sewing_Needle_Title" xml:space="preserve">
+    <value>An eye at the point</value>
+  </data>
+  <data name="Sewing_Needle_P1" xml:space="preserve">
+    <value>A machine needle has its eye at the wrong end, just above the point. It carries the thread down through the cloth, comes back up, and leaves a little of it behind underneath. Down one side of the needle runs a long groove for the thread to lie in, so it is not scraped against the cloth on the way down.</value>
+  </data>
+  <data name="Sewing_Needle_P2" xml:space="preserve">
+    <value>The trick happens as the needle starts back up. The thread in the groove slides up with it, but on the other side, the short side, the cloth grips the thread and holds it back. That thread has nowhere to go but sideways, so it bulges out into a small loop just above the eye. The loop is widest when the needle has come up about two and a half millimetres, then it is drawn flat again. Everything else in the machine is timed to that moment.</value>
+  </data>
+  <data name="Sewing_Needle_Deeper" xml:space="preserve">
+    <value>The handwheel turns a crank, and a short rod turns the crank's circle into the needle's stroke of about three centimetres. Near the bottom of the stroke the needle hardly moves while the crank turns: forty degrees past the bottom it has come up only about two and a half millimetres. That slow moment gives the hook time to find the loop. A needle with its eye at the top, like a hand-sewing needle, makes no loop: its thread simply follows it in and out.</value>
+  </data>
+  <data name="Sewing_Needle_Angle" xml:space="preserve">
+    <value>Handwheel</value>
+  </data>
+  <data name="Sewing_Needle_Hand" xml:space="preserve">
+    <value>Use a hand-sewing needle (eye at the top)</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutHand" xml:space="preserve">
+    <value>With the eye at the top the thread just follows the needle in and out: no loop forms, and nothing below could catch it.</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutUp" xml:space="preserve">
+    <value>The needle is coming up, {0} above its lowest point. The loop beside it is {1} wide.</value>
+  </data>
+  <data name="Sewing_Needle_ReadoutDown" xml:space="preserve">
+    <value>The needle is going down, {0} above its lowest point. No loop yet.</value>
+  </data>
+  <data name="Sewing_Needle_Picture" xml:space="preserve">
+    <value>A machine needle going through the cloth with its thread, and the handwheel that drives it</value>
+  </data>
+  <data name="Sewing_Needle_Cloth" xml:space="preserve">
+    <value>cloth</value>
+  </data>
+  <data name="Sewing_Needle_HookPath" xml:space="preserve">
+    <value>the hook's point passes here</value>
+  </data>
+  <data name="Sewing_Needle_Label" xml:space="preserve">
+    <value>needle up {0} mm · loop {1} mm</value>
+  </data>
+  <data name="Sewing_Needle_RuleHand" xml:space="preserve">
+    <value>a hand needle: the thread just follows it</value>
+  </data>
+  <data name="Sewing_Needle_Rule" xml:space="preserve">
+    <value>on the way up, the cloth holds the thread back into a loop</value>
+  </data>
+  <data name="Sewing_Needle_Bigger" xml:space="preserve">
+    <value>drawn many times larger than life</value>
+  </data>
+  <data name="Sewing_Needle_Wheel" xml:space="preserve">
+    <value>handwheel</value>
+  </data>
+  <data name="Narr_Sewing_Needle_01" xml:space="preserve">
+    <value>The handwheel drives the needle up and down. Here it is on its way down into the cloth.</value>
+  </data>
+  <data name="Narr_Sewing_Needle_02" xml:space="preserve">
+    <value>The thread goes through the eye, which on a machine needle is just above the point.</value>
+  </data>
+  <data name="Narr_Sewing_Needle_03" xml:space="preserve">
+    <value>Your turn: turn the handwheel past the bottom until a loop opens beside the needle.</value>
+  </data>
+  <data name="Narr_Sewing_Needle_04" xml:space="preserve">
+    <value>The cloth grips the thread on this side as the needle rises, so the thread bulges out instead of following.</value>
+  </data>
+  <data name="Narr_Sewing_Needle_05" xml:space="preserve">
+    <value>Why is the eye at the point and not at the top?</value>
+  </data>
+  <data name="Sewing_Needle_Quiz1" xml:space="preserve">
+    <value>So a loop can be left under the cloth while the needle stays in the machine</value>
+  </data>
+  <data name="Sewing_Needle_Quiz2" xml:space="preserve">
+    <value>So the needle is easier to thread</value>
+  </data>
+  <data name="Sewing_Needle_Quiz3" xml:space="preserve">
+    <value>So the needle is stronger</value>
+  </data>
+  <data name="Sewing_Needle_Part_Needle" xml:space="preserve">
+    <value>Needle</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Needle" xml:space="preserve">
+    <value>It goes up and down about three centimetres, hundreds of times a minute.</value>
+  </data>
+  <data name="Sewing_Needle_Part_Eye" xml:space="preserve">
+    <value>Eye</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Eye" xml:space="preserve">
+    <value>The hole the thread runs through, just above the point.</value>
+  </data>
+  <data name="Sewing_Needle_Part_Loop" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Loop" xml:space="preserve">
+    <value>Thread held back by the cloth, bulging out beside the needle as it rises.</value>
+  </data>
+  <data name="Sewing_Needle_Part_Cloth" xml:space="preserve">
+    <value>Cloth</value>
+  </data>
+  <data name="Narr_Sewing_Needle_Part_Cloth" xml:space="preserve">
+    <value>Two layers being sewn together. It grips the thread as the needle comes back up.</value>
+  </data>
+  <data name="Sewing_Hook_Title" xml:space="preserve">
+    <value>Catching the loop</value>
+  </data>
+  <data name="Sewing_Hook_P1" xml:space="preserve">
+    <value>Under the needle plate turns the hook: a ring round the bobbin case with a sharp point on its rim. It turns twice for every stitch. Just as the loop opens beside the needle, the point slips into it, between the thread and the needle, and carries it away round the bobbin case.</value>
+  </data>
+  <data name="Sewing_Hook_P2" xml:space="preserve">
+    <value>When the loop has gone all the way round, it slides off the back of the case and is pulled up again, now with the bobbin's blue thread inside it. That is the lock. If the point comes too early, the loop has not opened yet; too late, and it has already been drawn flat. Either way the point slips past an empty needle, and the stitch is skipped.</value>
+  </data>
+  <data name="Sewing_Hook_Deeper" xml:space="preserve">
+    <value>The point has a window of only about twenty-five degrees of the handwheel's turn, and at full speed it passes the needle a fraction of a millimetre away. A bent or blunt needle, one put in back to front, or one of the wrong size is the usual cause of skipped stitches: the loop opens in the wrong place, and the point misses it.</value>
+  </data>
+  <data name="Sewing_Hook_Timing" xml:space="preserve">
+    <value>Hook timing</value>
+  </data>
+  <data name="Sewing_Hook_Late" xml:space="preserve">
+    <value>{0}° late</value>
+  </data>
+  <data name="Sewing_Hook_Early" xml:space="preserve">
+    <value>{0}° early</value>
+  </data>
+  <data name="Sewing_Hook_OnTime" xml:space="preserve">
+    <value>on time</value>
+  </data>
+  <data name="Sewing_Hook_Readout" xml:space="preserve">
+    <value>As the point passes, the needle has come up {0} and the loop is {1} wide: wide enough, so it is caught.</value>
+  </data>
+  <data name="Sewing_Hook_Missed" xml:space="preserve">
+    <value>As the point passes, the needle has come up {0} and the loop is only {1} wide: the point slips past and the stitch is skipped.</value>
+  </data>
+  <data name="Sewing_Hook_Picture" xml:space="preserve">
+    <value>Under the needle plate: the needle, the turning hook round the bobbin case, and the seam sewn so far</value>
+  </data>
+  <data name="Sewing_Hook_Plate" xml:space="preserve">
+    <value>needle plate</value>
+  </data>
+  <data name="Sewing_Hook_Seam" xml:space="preserve">
+    <value>the seam so far</value>
+  </data>
+  <data name="Sewing_Hook_ScaleEarly" xml:space="preserve">
+    <value>early</value>
+  </data>
+  <data name="Sewing_Hook_ScaleLate" xml:space="preserve">
+    <value>late</value>
+  </data>
+  <data name="Sewing_Hook_Caught" xml:space="preserve">
+    <value>loop {0} mm wide: caught</value>
+  </data>
+  <data name="Sewing_Hook_Skipped" xml:space="preserve">
+    <value>loop {0} mm wide: missed</value>
+  </data>
+  <data name="Sewing_Hook_Rule" xml:space="preserve">
+    <value>the point must meet the loop just as it opens</value>
+  </data>
+  <data name="Sewing_Hook_Slow" xml:space="preserve">
+    <value>time slowed down a great deal</value>
+  </data>
+  <data name="Narr_Sewing_Hook_01" xml:space="preserve">
+    <value>This is the hook. Its point turns round the bobbin case twice for every stitch.</value>
+  </data>
+  <data name="Narr_Sewing_Hook_02" xml:space="preserve">
+    <value>Inside it sits the bobbin, wound with the blue thread.</value>
+  </data>
+  <data name="Narr_Sewing_Hook_03" xml:space="preserve">
+    <value>Your turn: set the hook so late that it misses the loop.</value>
+  </data>
+  <data name="Narr_Sewing_Hook_04" xml:space="preserve">
+    <value>Set right again, the point meets the loop just as it opens, and every stitch is caught.</value>
+  </data>
+  <data name="Narr_Sewing_Hook_05" xml:space="preserve">
+    <value>What happens when the point misses the loop?</value>
+  </data>
+  <data name="Sewing_Hook_Quiz1" xml:space="preserve">
+    <value>The needle breaks</value>
+  </data>
+  <data name="Sewing_Hook_Quiz2" xml:space="preserve">
+    <value>The blue thread runs out</value>
+  </data>
+  <data name="Sewing_Hook_Quiz3" xml:space="preserve">
+    <value>That stitch is skipped, leaving one long stitch</value>
+  </data>
+  <data name="Sewing_Hook_Part_Hook" xml:space="preserve">
+    <value>Hook</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Hook" xml:space="preserve">
+    <value>A ring with a point that turns twice a stitch, carrying the loop round the bobbin.</value>
+  </data>
+  <data name="Sewing_Hook_Part_Bobbin" xml:space="preserve">
+    <value>Bobbin</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Bobbin" xml:space="preserve">
+    <value>A small reel of the lower thread, sitting still in its case.</value>
+  </data>
+  <data name="Sewing_Hook_Part_Loop" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Loop" xml:space="preserve">
+    <value>The upper thread's loop, which the point must catch.</value>
+  </data>
+  <data name="Sewing_Hook_Part_Seam" xml:space="preserve">
+    <value>Seam</value>
+  </data>
+  <data name="Narr_Sewing_Hook_Part_Seam" xml:space="preserve">
+    <value>Each caught stitch leaves a hole; a skipped one leaves a long stitch.</value>
+  </data>
+  <data name="Sewing_TakeUp_Title" xml:space="preserve">
+    <value>Lending thread and taking it back</value>
+  </data>
+  <data name="Sewing_TakeUp_P1" xml:space="preserve">
+    <value>To go round the bobbin case, the loop needs a lot of thread: about seven centimetres, twenty times what one stitch keeps. It comes down through the needle while the take-up lever, the arm bobbing up and down on the front of the machine, drops to let it go.</value>
+  </data>
+  <data name="Sewing_TakeUp_P2" xml:space="preserve">
+    <value>As soon as the loop has slipped off the case, the lever climbs and pulls all that thread back up through the cloth. It tightens the lock into the middle of the cloth, sets the stitch, and draws just one stitch's worth of fresh thread off the spool through the tension discs. Thread a machine without passing the lever and nothing takes the loops back: they pile up underneath in a tangle.</value>
+  </data>
+  <data name="Sewing_TakeUp_Deeper" xml:space="preserve">
+    <value>Because each stitch lends seven centimetres and keeps only three and a half millimetres, a bit of thread goes down through the eye and back up about forty times before it ends up in the seam. All that rubbing is why machine thread is made smooth and strong, and why a needle with a rough eye frays it.</value>
+  </data>
+  <data name="Sewing_TakeUp_Hold" xml:space="preserve">
+    <value>Hold the take-up lever still</value>
+  </data>
+  <data name="Sewing_TakeUp_Tangle" xml:space="preserve">
+    <value>With the lever held still nothing pulls the loops back: thread keeps coming off the spool and piles up in a tangle under the cloth.</value>
+  </data>
+  <data name="Sewing_TakeUp_Readout" xml:space="preserve">
+    <value>Each stitch lends {0} of thread to go round the bobbin and takes it back; only {1} stays in the seam. A bit of thread goes through the eye about {2} times before it is sewn in.</value>
+  </data>
+  <data name="Sewing_TakeUp_Picture" xml:space="preserve">
+    <value>The front of a sewing machine, with the thread's path from the spool through the take-up lever to the needle and round the bobbin</value>
+  </data>
+  <data name="Sewing_TakeUp_Nest" xml:space="preserve">
+    <value>a tangle</value>
+  </data>
+  <data name="Sewing_TakeUp_Label" xml:space="preserve">
+    <value>lent {0} cm · kept {1} mm · through the eye ×{2}</value>
+  </data>
+  <data name="Sewing_TakeUp_Rule" xml:space="preserve">
+    <value>the lever lets the loop down, then takes it back</value>
+  </data>
+  <data name="Sewing_TakeUp_Slow" xml:space="preserve">
+    <value>time slowed down</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_01" xml:space="preserve">
+    <value>This is the take-up lever. The thread runs through the eye at its end.</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_02" xml:space="preserve">
+    <value>Below the plate, the hook has to take a loop all the way round the bobbin case.</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_03" xml:space="preserve">
+    <value>Your turn: hold the lever still, and watch what happens under the cloth.</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_04" xml:space="preserve">
+    <value>Let go, and the lever pulls each loop back up through the needle, setting the stitch.</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_05" xml:space="preserve">
+    <value>Each stitch keeps only a few millimetres. How much thread comes off the spool each time?</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz1" xml:space="preserve">
+    <value>About seven centimetres</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz2" xml:space="preserve">
+    <value>Just what the stitch keeps</value>
+  </data>
+  <data name="Sewing_TakeUp_Quiz3" xml:space="preserve">
+    <value>None: the bobbin gives it all</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Lever" xml:space="preserve">
+    <value>Take-up lever</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Lever" xml:space="preserve">
+    <value>It drops to give the loop thread, and climbs to take it back.</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Spool" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Spool" xml:space="preserve">
+    <value>The upper thread's reel, turning a little at each stitch.</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Needle" xml:space="preserve">
+    <value>Needle</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Needle" xml:space="preserve">
+    <value>The thread goes down and up through its eye dozens of times before it stays in the seam.</value>
+  </data>
+  <data name="Sewing_TakeUp_Part_Bobbin" xml:space="preserve">
+    <value>Bobbin case</value>
+  </data>
+  <data name="Narr_Sewing_TakeUp_Part_Bobbin" xml:space="preserve">
+    <value>The loop must go all the way round it.</value>
+  </data>
+  <data name="Sewing_Feed_Title" xml:space="preserve">
+    <value>Moving the cloth on</value>
+  </data>
+  <data name="Sewing_Feed_P1" xml:space="preserve">
+    <value>Between stitches the cloth must move on by exactly one stitch length, and the needle must be out of it while it moves. Underneath, small toothed bars called feed dogs do the moving. They come up through slots in the needle plate, grip the cloth from below, carry it along, then drop below the plate and go back for the next stitch.</value>
+  </data>
+  <data name="Sewing_Feed_P2" xml:space="preserve">
+    <value>From above, the presser foot pushes the cloth down onto the teeth so they grip it without slipping, and it is smooth underneath so the cloth slides along beneath it. The teeth go round a flat loop: up, along, down and back. They rise only while the needle is above the cloth; the stitch length dial just changes how far they go along.</value>
+  </data>
+  <data name="Sewing_Feed_Deeper" xml:space="preserve">
+    <value>At eight hundred stitches a minute, a usual pace for a home machine, stitches two and a half millimetres long move the cloth two metres a minute. With the length set to nought the teeth only rise and sink, and the needle sews over and over in one place, which some machines use to tie off a seam. The reverse button sends the teeth along backwards, to sew a few stitches back over the end of a seam so it cannot come loose.</value>
+  </data>
+  <data name="Sewing_Feed_Reverse" xml:space="preserve">
+    <value>Sew backwards</value>
+  </data>
+  <data name="Sewing_Feed_OnTheSpot" xml:space="preserve">
+    <value>With the length at nought the teeth just rise and sink: the cloth stays put and the needle sews in one place.</value>
+  </data>
+  <data name="Sewing_Feed_Readout" xml:space="preserve">
+    <value>{0} stitches every ten centimetres. At {1} stitches a minute the cloth moves {2} a minute.</value>
+  </data>
+  <data name="Sewing_Feed_Backwards" xml:space="preserve">
+    <value>Going backwards.</value>
+  </data>
+  <data name="Sewing_Feed_Picture" xml:space="preserve">
+    <value>The needle plate from the side: the presser foot holding the cloth, and the feed dogs' teeth carrying it along</value>
+  </data>
+  <data name="Sewing_Feed_RuleBack" xml:space="preserve">
+    <value>reverse: the teeth carry the cloth back towards you</value>
+  </data>
+  <data name="Sewing_Feed_Rule" xml:space="preserve">
+    <value>the teeth carry the cloth on while the needle is out of it</value>
+  </data>
+  <data name="Sewing_Feed_Slow" xml:space="preserve">
+    <value>time slowed down</value>
+  </data>
+  <data name="Sewing_Feed_Label" xml:space="preserve">
+    <value>stitch {0} mm · at full speed {1} cm a second</value>
+  </data>
+  <data name="Narr_Sewing_Feed_01" xml:space="preserve">
+    <value>These are the feed dogs. Their teeth go round a flat loop under the cloth.</value>
+  </data>
+  <data name="Narr_Sewing_Feed_02" xml:space="preserve">
+    <value>The presser foot pushes the cloth down onto them, so the teeth can grip it.</value>
+  </data>
+  <data name="Narr_Sewing_Feed_03" xml:space="preserve">
+    <value>Your turn: make the machine sew backwards.</value>
+  </data>
+  <data name="Narr_Sewing_Feed_04" xml:space="preserve">
+    <value>At the longest stitch the cloth moves five millimetres every time the teeth come up.</value>
+  </data>
+  <data name="Narr_Sewing_Feed_05" xml:space="preserve">
+    <value>Why do the teeth sink below the plate before they go back?</value>
+  </data>
+  <data name="Sewing_Feed_Quiz1" xml:space="preserve">
+    <value>So they do not drag the cloth back again</value>
+  </data>
+  <data name="Sewing_Feed_Quiz2" xml:space="preserve">
+    <value>To keep the teeth clean</value>
+  </data>
+  <data name="Sewing_Feed_Quiz3" xml:space="preserve">
+    <value>To make room for the bobbin</value>
+  </data>
+  <data name="Sewing_Feed_Part_Dogs" xml:space="preserve">
+    <value>Feed dogs</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Dogs" xml:space="preserve">
+    <value>Toothed bars that rise through the plate, carry the cloth a stitch on and sink back.</value>
+  </data>
+  <data name="Sewing_Feed_Part_Foot" xml:space="preserve">
+    <value>Presser foot</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Foot" xml:space="preserve">
+    <value>It presses the cloth down onto the teeth.</value>
+  </data>
+  <data name="Sewing_Feed_Part_Plate" xml:space="preserve">
+    <value>Needle plate</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Plate" xml:space="preserve">
+    <value>A steel plate with slots for the teeth and a hole for the needle.</value>
+  </data>
+  <data name="Sewing_Feed_Part_Cloth" xml:space="preserve">
+    <value>Cloth</value>
+  </data>
+  <data name="Narr_Sewing_Feed_Part_Cloth" xml:space="preserve">
+    <value>Carried on a stitch at a time, with the stitches riding away on it.</value>
+  </data>
+  <data name="Sewing_Tension_Title" xml:space="preserve">
+    <value>A tug of war</value>
+  </data>
+  <data name="Sewing_Tension_P1" xml:space="preserve">
+    <value>The upper and lower threads pull against each other, and where they lock depends on which pulls harder. The upper thread is held back by the tension discs: two discs squeezed together by a spring that the dial sets. The bobbin thread is held back by a small flat spring on the bobbin case, set by a tiny screw.</value>
+  </data>
+  <data name="Sewing_Tension_P2" xml:space="preserve">
+    <value>When the two pulls match, the locks sit inside the cloth and the seam looks the same on both sides. Tighten the upper thread and it drags the locks up to the top, where blue dots show along the seam. Loosen it and the bobbin thread wins: the red thread is dragged through and lies in loops underneath. Loops on the underside are almost always the upper thread's fault, not the bobbin's.</value>
+  </data>
+  <data name="Sewing_Tension_Deeper" xml:space="preserve">
+    <value>The dial is not the whole story: the upper thread also rubs through guides, the lever and the needle's eye, so its pull at the stitch is not just what the discs set. That is why the dial's numbers only mean something for one machine and one thread. And if a machine is threaded with its presser foot down, the discs are shut, the thread never gets between them, and it sews with almost no upper pull: a mass of loops underneath.</value>
+  </data>
+  <data name="Sewing_Tension_Dial" xml:space="preserve">
+    <value>Upper tension dial</value>
+  </data>
+  <data name="Sewing_Tension_Bobbin" xml:space="preserve">
+    <value>Bobbin thread's pull</value>
+  </data>
+  <data name="Sewing_Tension_Tight" xml:space="preserve">
+    <value>Upper pull {0} against {1} from the bobbin: the upper thread wins and drags the locks to the top, where the blue thread shows.</value>
+  </data>
+  <data name="Sewing_Tension_Loose" xml:space="preserve">
+    <value>Upper pull {0} against {1} from the bobbin: the bobbin thread wins and drags the red thread through into loops underneath.</value>
+  </data>
+  <data name="Sewing_Tension_Even" xml:space="preserve">
+    <value>Upper pull {0} against {1} from the bobbin: they balance, and the locks sit inside the cloth.</value>
+  </data>
+  <data name="Sewing_Tension_Picture" xml:space="preserve">
+    <value>A seam cut along its length with the pulls of the upper and lower threads, the tension dial and the bobbin case's screw</value>
+  </data>
+  <data name="Sewing_Tension_DialLabel" xml:space="preserve">
+    <value>tension dial</value>
+  </data>
+  <data name="Sewing_Tension_Looser" xml:space="preserve">
+    <value>looser</value>
+  </data>
+  <data name="Sewing_Tension_Tighter" xml:space="preserve">
+    <value>tighter</value>
+  </data>
+  <data name="Sewing_Tension_ShowTight" xml:space="preserve">
+    <value>blue dots on top: upper thread too tight</value>
+  </data>
+  <data name="Sewing_Tension_ShowLoose" xml:space="preserve">
+    <value>red loops underneath: upper thread too loose</value>
+  </data>
+  <data name="Sewing_Tension_ShowEven" xml:space="preserve">
+    <value>balanced: the locks hide inside the cloth</value>
+  </data>
+  <data name="Sewing_Tension_Rule" xml:space="preserve">
+    <value>the locks go to whichever thread pulls harder</value>
+  </data>
+  <data name="Narr_Sewing_Tension_01" xml:space="preserve">
+    <value>When the seam is right, the locks hide inside the cloth.</value>
+  </data>
+  <data name="Narr_Sewing_Tension_02" xml:space="preserve">
+    <value>The tension dial sets how hard the upper thread is held back.</value>
+  </data>
+  <data name="Narr_Sewing_Tension_03" xml:space="preserve">
+    <value>Your turn: turn the dial up until the blue thread shows on top.</value>
+  </data>
+  <data name="Narr_Sewing_Tension_04" xml:space="preserve">
+    <value>The bobbin thread's pull is set by this tiny screw, and it rarely needs touching.</value>
+  </data>
+  <data name="Narr_Sewing_Tension_05" xml:space="preserve">
+    <value>There are red loops all along the underside. What do you change first?</value>
+  </data>
+  <data name="Sewing_Tension_Quiz1" xml:space="preserve">
+    <value>Tighten the bobbin screw</value>
+  </data>
+  <data name="Sewing_Tension_Quiz2" xml:space="preserve">
+    <value>Use a longer stitch</value>
+  </data>
+  <data name="Sewing_Tension_Quiz3" xml:space="preserve">
+    <value>Turn the upper tension dial up</value>
+  </data>
+  <data name="Sewing_Tension_Part_Knots" xml:space="preserve">
+    <value>Locks</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Knots" xml:space="preserve">
+    <value>Where the two threads hook together. They move towards the thread that pulls harder.</value>
+  </data>
+  <data name="Sewing_Tension_Part_Dial" xml:space="preserve">
+    <value>Tension dial</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Dial" xml:space="preserve">
+    <value>It squeezes the upper thread between two discs: a higher number, a harder pull.</value>
+  </data>
+  <data name="Sewing_Tension_Part_Screw" xml:space="preserve">
+    <value>Bobbin case screw</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Screw" xml:space="preserve">
+    <value>A small turn of this tiny screw changes the bobbin thread's pull.</value>
+  </data>
+  <data name="Sewing_Tension_Part_Cloth" xml:space="preserve">
+    <value>Cloth</value>
+  </data>
+  <data name="Narr_Sewing_Tension_Part_Cloth" xml:space="preserve">
+    <value>When the pulls balance, the seam looks the same on both sides.</value>
+  </data>
+  <data name="Sewing_Feed_Way" xml:space="preserve">
+    <value>the cloth goes this way</value>
+  </data>
 </root>

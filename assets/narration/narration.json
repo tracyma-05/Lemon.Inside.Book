@@ -8052,6 +8052,650 @@
      ]
     ]
    },
+   "Narr_Sewing_Feed_01": {
+    "duration": 5.304,
+    "hash": "20e3f0efc71cd605",
+    "sentences": [
+     [
+      0.05,
+      1.761,
+      "These are the feed dogs."
+     ],
+     [
+      1.761,
+      5.236,
+      "Their teeth go round a flat loop under the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_02": {
+    "duration": 4.536,
+    "hash": "5dabc73dd53fe6cd",
+    "sentences": [
+     [
+      0.05,
+      4.472,
+      "The presser foot pushes the cloth down onto them, so the teeth can grip it."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_03": {
+    "duration": 3.672,
+    "hash": "0f26f46c7999b5bc",
+    "sentences": [
+     [
+      0.05,
+      3.611,
+      "Your turn: make the machine sew backwards."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_04": {
+    "duration": 5.496,
+    "hash": "b9e07d59dfaee2d2",
+    "sentences": [
+     [
+      0.05,
+      5.444,
+      "At the longest stitch the cloth moves five millimetres every time the teeth come up."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_05": {
+    "duration": 3.984,
+    "hash": "364200831665641f",
+    "sentences": [
+     [
+      0.05,
+      3.931,
+      "Why do the teeth sink below the plate before they go back?"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Cloth": {
+    "duration": 4.68,
+    "hash": "bccaf69548a48046",
+    "sentences": [
+     [
+      0.05,
+      4.625,
+      "Carried on a stitch at a time, with the stitches riding away on it."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Dogs": {
+    "duration": 6.024,
+    "hash": "3f0d55ab11fdfba7",
+    "sentences": [
+     [
+      0.05,
+      5.972,
+      "Toothed bars that rise through the plate, carry the cloth a stitch on and sink back."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Foot": {
+    "duration": 2.688,
+    "hash": "414e22c439ce0331",
+    "sentences": [
+     [
+      0.05,
+      2.639,
+      "It presses the cloth down onto the teeth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Plate": {
+    "duration": 4.344,
+    "hash": "c26358441dee4dde",
+    "sentences": [
+     [
+      0.05,
+      4.292,
+      "A steel plate with slots for the teeth and a hole for the needle."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_01": {
+    "duration": 5.856,
+    "hash": "7751ef428100a173",
+    "sentences": [
+     [
+      0.05,
+      1.556,
+      "This is the hook."
+     ],
+     [
+      1.556,
+      5.792,
+      "Its point turns round the bobbin case twice for every stitch."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_02": {
+    "duration": 3.912,
+    "hash": "001b45ce0be95699",
+    "sentences": [
+     [
+      0.05,
+      3.861,
+      "Inside it sits the bobbin, wound with the blue thread."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_03": {
+    "duration": 4.152,
+    "hash": "56ffb6f483d84601",
+    "sentences": [
+     [
+      0.05,
+      4.097,
+      "Your turn: set the hook so late that it misses the loop."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_04": {
+    "duration": 5.64,
+    "hash": "892bfc4f83a817de",
+    "sentences": [
+     [
+      0.05,
+      5.569,
+      "Set right again, the point meets the loop just as it opens, and every stitch is caught."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_05": {
+    "duration": 2.784,
+    "hash": "a71c96b857db463b",
+    "sentences": [
+     [
+      0.05,
+      2.722,
+      "What happens when the point misses the loop?"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Bobbin": {
+    "duration": 4.608,
+    "hash": "9e3bbabfbaec47f2",
+    "sentences": [
+     [
+      0.05,
+      4.556,
+      "A small reel of the lower thread, sitting still in its case."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Hook": {
+    "duration": 5.136,
+    "hash": "c6a9557637ac6b48",
+    "sentences": [
+     [
+      0.05,
+      5.069,
+      "A ring with a point that turns twice a stitch, carrying the loop round the bobbin."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Loop": {
+    "duration": 3.648,
+    "hash": "5a50dfc60dfff36a",
+    "sentences": [
+     [
+      0.05,
+      3.583,
+      "The upper thread's loop, which the point must catch."
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Seam": {
+    "duration": 5.328,
+    "hash": "b55c0abbacd7c7e2",
+    "sentences": [
+     [
+      0.05,
+      5.264,
+      "Each caught stitch leaves a hole; a skipped one leaves a long stitch."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_01": {
+    "duration": 5.976,
+    "hash": "e36e51eb789fec64",
+    "sentences": [
+     [
+      0.05,
+      2.944,
+      "The handwheel drives the needle up and down."
+     ],
+     [
+      2.944,
+      5.917,
+      "Here it is on its way down into the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_02": {
+    "duration": 4.872,
+    "hash": "f8eb653e531e6d19",
+    "sentences": [
+     [
+      0.05,
+      4.819,
+      "The thread goes through the eye, which on a machine needle is just above the point."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_03": {
+    "duration": 5.832,
+    "hash": "5cae9c897256e86a",
+    "sentences": [
+     [
+      0.05,
+      5.764,
+      "Your turn: turn the handwheel past the bottom until a loop opens beside the needle."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_04": {
+    "duration": 6.72,
+    "hash": "2ab1a30d4b836a0e",
+    "sentences": [
+     [
+      0.05,
+      6.667,
+      "The cloth grips the thread on this side as the needle rises, so the thread bulges out instead of following."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_05": {
+    "duration": 3.888,
+    "hash": "cb3f892485951553",
+    "sentences": [
+     [
+      0.05,
+      3.819,
+      "Why is the eye at the point and not at the top?"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Cloth": {
+    "duration": 5.904,
+    "hash": "8700063b1559a6ba",
+    "sentences": [
+     [
+      0.05,
+      2.458,
+      "Two layers being sewn together."
+     ],
+     [
+      2.458,
+      5.847,
+      "It grips the thread as the needle comes back up."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Eye": {
+    "duration": 3.6,
+    "hash": "fe46316c68b5de83",
+    "sentences": [
+     [
+      0.05,
+      3.528,
+      "The hole the thread runs through, just above the point."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Loop": {
+    "duration": 5.376,
+    "hash": "c6ee17903e8e84a7",
+    "sentences": [
+     [
+      0.05,
+      5.319,
+      "Thread held back by the cloth, bulging out beside the needle as it rises."
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Needle": {
+    "duration": 4.536,
+    "hash": "199e161ef72b98ac",
+    "sentences": [
+     [
+      0.05,
+      4.486,
+      "It goes up and down about three centimetres, hundreds of times a minute."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_01": {
+    "duration": 9.24,
+    "hash": "498c5b002be93831",
+    "sentences": [
+     [
+      0.05,
+      3.292,
+      "This is a seam cut along its length."
+     ],
+     [
+      3.292,
+      9.181,
+      "The needle has made a hole through both layers of cloth every two and a half millimetres."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_02": {
+    "duration": 7.632,
+    "hash": "620e6dc5d3b4b6d8",
+    "sentences": [
+     [
+      0.05,
+      7.569,
+      "At every hole a red thread from above and a blue thread from below hook round each other, inside the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_03": {
+    "duration": 5.568,
+    "hash": "1cc13f710aa3cd37",
+    "sentences": [
+     [
+      0.05,
+      5.526,
+      "Your turn: switch to a chain stitch, which uses only one thread."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_04": {
+    "duration": 7.704,
+    "hash": "93b0082db798bea6",
+    "sentences": [
+     [
+      0.05,
+      2.236,
+      "Now the loose end is pulled."
+     ],
+     [
+      2.236,
+      7.639,
+      "Each loop was held only by the next one, so the seam runs out stitch after stitch."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_05": {
+    "duration": 3.696,
+    "hash": "b36d5e238cddaa9c",
+    "sentences": [
+     [
+      0.05,
+      3.639,
+      "Why does a lockstitch not come undone like that?"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Holes": {
+    "duration": 4.392,
+    "hash": "d9b9b97bcf2ff678",
+    "sentences": [
+     [
+      0.05,
+      4.333,
+      "One hole for every stitch, through both layers of cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Knots": {
+    "duration": 4.704,
+    "hash": "aae42cb34bb292f9",
+    "sentences": [
+     [
+      0.05,
+      4.653,
+      "Where the two threads hook round each other, best right in the middle of the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Lower": {
+    "duration": 3.12,
+    "hash": "c979eb89bf413db1",
+    "sentences": [
+     [
+      0.05,
+      3.069,
+      "It comes from a small bobbin under the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Upper": {
+    "duration": 3.792,
+    "hash": "cff0f4a96995a0c7",
+    "sentences": [
+     [
+      0.05,
+      3.722,
+      "It comes from the spool on top of the machine, through the needle."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_01": {
+    "duration": 4.968,
+    "hash": "2b433a67188c885d",
+    "sentences": [
+     [
+      0.05,
+      1.861,
+      "This is the take-up lever."
+     ],
+     [
+      1.861,
+      4.903,
+      "The thread runs through the eye at its end."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_02": {
+    "duration": 5.064,
+    "hash": "4b39258a2d471c39",
+    "sentences": [
+     [
+      0.05,
+      5.0,
+      "Below the plate, the hook has to take a loop all the way round the bobbin case."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_03": {
+    "duration": 5.712,
+    "hash": "1268f9d70eeb9d37",
+    "sentences": [
+     [
+      0.05,
+      5.665,
+      "Your turn: hold the lever still, and watch what happens under the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_04": {
+    "duration": 5.352,
+    "hash": "07d9b87752f92648",
+    "sentences": [
+     [
+      0.05,
+      5.292,
+      "Let go, and the lever pulls each loop back up through the needle, setting the stitch."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_05": {
+    "duration": 6.6,
+    "hash": "e6b2607623a74ec3",
+    "sentences": [
+     [
+      0.05,
+      3.403,
+      "Each stitch keeps only a few millimetres."
+     ],
+     [
+      3.403,
+      6.528,
+      "How much thread comes off the spool each time?"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Bobbin": {
+    "duration": 2.808,
+    "hash": "f25a8e51488d7f8d",
+    "sentences": [
+     [
+      0.05,
+      2.736,
+      "The loop must go all the way round it."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Lever": {
+    "duration": 4.224,
+    "hash": "986e6c6f24d7a9cc",
+    "sentences": [
+     [
+      0.05,
+      4.167,
+      "It drops to give the loop thread, and climbs to take it back."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Needle": {
+    "duration": 5.4,
+    "hash": "0620b7ad9418c173",
+    "sentences": [
+     [
+      0.05,
+      5.347,
+      "The thread goes down and up through its eye dozens of times before it stays in the seam."
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Spool": {
+    "duration": 4.104,
+    "hash": "22fd9e159d1e230b",
+    "sentences": [
+     [
+      0.05,
+      4.042,
+      "The upper thread's reel, turning a little at each stitch."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_01": {
+    "duration": 4.056,
+    "hash": "b7758ac824c8347c",
+    "sentences": [
+     [
+      0.05,
+      3.986,
+      "When the seam is right, the locks hide inside the cloth."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_02": {
+    "duration": 4.44,
+    "hash": "d3012f522c2cd869",
+    "sentences": [
+     [
+      0.05,
+      4.389,
+      "The tension dial sets how hard the upper thread is held back."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_03": {
+    "duration": 4.776,
+    "hash": "c9be3002b83bf2f9",
+    "sentences": [
+     [
+      0.05,
+      4.708,
+      "Your turn: turn the dial up until the blue thread shows on top."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_04": {
+    "duration": 5.64,
+    "hash": "5cc81d1d7f8b04a9",
+    "sentences": [
+     [
+      0.05,
+      5.583,
+      "The bobbin thread's pull is set by this tiny screw, and it rarely needs touching."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_05": {
+    "duration": 4.584,
+    "hash": "18c5f60e8ba6e440",
+    "sentences": [
+     [
+      0.05,
+      2.806,
+      "There are red loops all along the underside."
+     ],
+     [
+      2.806,
+      4.514,
+      "What do you change first?"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Cloth": {
+    "duration": 4.872,
+    "hash": "8d5fbaeffdf86084",
+    "sentences": [
+     [
+      0.05,
+      4.819,
+      "When the pulls balance, the seam looks the same on both sides."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Dial": {
+    "duration": 5.76,
+    "hash": "7fa5031060aa7a60",
+    "sentences": [
+     [
+      0.05,
+      5.694,
+      "It squeezes the upper thread between two discs: a higher number, a harder pull."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Knots": {
+    "duration": 5.4,
+    "hash": "5ed7b1f47b479d7b",
+    "sentences": [
+     [
+      0.05,
+      2.417,
+      "Where the two threads hook together."
+     ],
+     [
+      2.417,
+      5.347,
+      "They move towards the thread that pulls harder."
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Screw": {
+    "duration": 4.704,
+    "hash": "f575aa8e72d3dd81",
+    "sentences": [
+     [
+      0.05,
+      4.639,
+      "A small turn of this tiny screw changes the bobbin thread's pull."
+     ]
+    ]
+   },
    "Narr_Watch_Balance_01": {
     "duration": 6.456,
     "hash": "da5f7a0c7f651281",
@@ -17396,6 +18040,655 @@
       2.569,
       8.083,
       "它让外面的空气进入下水道，吸力就吸不空存水弯。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_01": {
+    "duration": 5.784,
+    "hash": "753e56503c8eb99f",
+    "sentences": [
+     [
+      0.1,
+      1.814,
+      "这是送布牙。"
+     ],
+     [
+      1.764,
+      5.722,
+      "它们的齿在布下面走一个扁扁的圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_02": {
+    "duration": 4.704,
+    "hash": "56f666cdbbd01357",
+    "sentences": [
+     [
+      0.1,
+      4.703,
+      "压脚把布压在送布牙上，让齿能咬住布。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_03": {
+    "duration": 3.264,
+    "hash": "0a3330340bde6f25",
+    "sentences": [
+     [
+      0.1,
+      3.258,
+      "轮到你了：让机器倒着缝。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_04": {
+    "duration": 5.712,
+    "hash": "1a55657399b7f46f",
+    "sentences": [
+     [
+      0.1,
+      5.689,
+      "针距调到最长，送布牙每升上来一次，布就走五毫米。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_05": {
+    "duration": 4.752,
+    "hash": "187458107c71fb73",
+    "sentences": [
+     [
+      0.1,
+      4.731,
+      "为什么送布牙要先沉到针板下面，再往回退？"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Cloth": {
+    "duration": 5.04,
+    "hash": "b8f28bd2925b7f89",
+    "sentences": [
+     [
+      0.1,
+      5.036,
+      "一次往前送一针，缝好的线迹跟着布一起走。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Dogs": {
+    "duration": 6.168,
+    "hash": "c169ee4bc2c79361",
+    "sentences": [
+     [
+      0.1,
+      6.161,
+      "带齿的铁条，从针板里升上来，把布送一针，再沉下去。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Foot": {
+    "duration": 2.568,
+    "hash": "505313b7d442bed2",
+    "sentences": [
+     [
+      0.1,
+      2.564,
+      "它把布压在送布牙上。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Feed_Part_Plate": {
+    "duration": 5.28,
+    "hash": "c30225fc6213cf1d",
+    "sentences": [
+     [
+      0.1,
+      5.258,
+      "一块钢板，上面有给送布牙的槽和给针的孔。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_01": {
+    "duration": 5.928,
+    "hash": "2a3be3a7b4a11c3a",
+    "sentences": [
+     [
+      0.1,
+      1.758,
+      "这是旋梭。"
+     ],
+     [
+      1.708,
+      5.875,
+      "每缝一针，它的尖绕梭壳转两圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_02": {
+    "duration": 3.696,
+    "hash": "688bbd7a4bb4318d",
+    "sentences": [
+     [
+      0.1,
+      3.675,
+      "里面放着梭芯，上面绕着蓝线。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_03": {
+    "duration": 4.344,
+    "hash": "8b8ff1af2abe61df",
+    "sentences": [
+     [
+      0.1,
+      4.328,
+      "轮到你了：把旋梭推迟到钩不住线圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_04": {
+    "duration": 6.096,
+    "hash": "97536656ea3c0ba6",
+    "sentences": [
+     [
+      0.1,
+      6.092,
+      "重新调好，梭尖在线圈刚张开时赶到，每一针都钩住了。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_05": {
+    "duration": 3.36,
+    "hash": "d9948acf1b1ff281",
+    "sentences": [
+     [
+      0.1,
+      3.342,
+      "梭尖没钩住线圈，会怎样？"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Bobbin": {
+    "duration": 4.536,
+    "hash": "18bb80cec021b955",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "绕着底线的小线轴，静静地待在梭壳里。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Hook": {
+    "duration": 5.736,
+    "hash": "ecc182ea62ebea4c",
+    "sentences": [
+     [
+      0.1,
+      5.717,
+      "带尖的圆环，每针转两圈，把线圈绕着梭芯带过去。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Loop": {
+    "duration": 3.672,
+    "hash": "c03909c3b1657547",
+    "sentences": [
+     [
+      0.1,
+      3.661,
+      "面线的线圈，梭尖必须钩住它。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Hook_Part_Seam": {
+    "duration": 6.672,
+    "hash": "f7ee239b4dc86320",
+    "sentences": [
+     [
+      0.1,
+      6.647,
+      "每钩住一针就留下一个针孔；跳过一针，就留下一个长线迹。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_01": {
+    "duration": 5.856,
+    "hash": "026d2e86a500f13c",
+    "sentences": [
+     [
+      0.1,
+      2.814,
+      "手轮带着针上下运动。"
+     ],
+     [
+      2.764,
+      5.792,
+      "现在它正往下扎进布里。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_02": {
+    "duration": 5.352,
+    "hash": "58fe97263187e742",
+    "sentences": [
+     [
+      0.1,
+      2.106,
+      "线穿过针眼。"
+     ],
+     [
+      2.056,
+      5.292,
+      "机针的针眼就在针尖上面。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_03": {
+    "duration": 6.36,
+    "hash": "1ca75b219dbbadee",
+    "sentences": [
+     [
+      0.1,
+      6.342,
+      "轮到你了：把手轮转过最低点，直到针旁边鼓出一个线圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_04": {
+    "duration": 7.416,
+    "hash": "004354db5318075e",
+    "sentences": [
+     [
+      0.1,
+      7.411,
+      "针往上升时，布夹住这一侧的线，所以线没有跟上去，而是鼓了出来。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_05": {
+    "duration": 3.792,
+    "hash": "c3494e77d68f3875",
+    "sentences": [
+     [
+      0.1,
+      3.772,
+      "为什么针眼在针尖，而不在顶上？"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Cloth": {
+    "duration": 5.52,
+    "hash": "679eedd373ed7b75",
+    "sentences": [
+     [
+      0.1,
+      2.522,
+      "正在缝合的两层布。"
+     ],
+     [
+      2.472,
+      5.458,
+      "针往回升时，它夹住线。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Eye": {
+    "duration": 3.648,
+    "hash": "ab12db9e2aac5401",
+    "sentences": [
+     [
+      0.1,
+      3.647,
+      "线穿过的小孔，就在针尖上面。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Loop": {
+    "duration": 5.064,
+    "hash": "9620530a9c486345",
+    "sentences": [
+     [
+      0.1,
+      5.064,
+      "被布拖住的线，在针上升时从针旁鼓出来。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Needle_Part_Needle": {
+    "duration": 4.272,
+    "hash": "5b66e95d8518d861",
+    "sentences": [
+     [
+      0.1,
+      4.272,
+      "它上下移动约三厘米，一分钟几百次。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_01": {
+    "duration": 7.896,
+    "hash": "16700cfa75a73987",
+    "sentences": [
+     [
+      0.1,
+      3.064,
+      "这是沿着缝线剖开的缝口。"
+     ],
+     [
+      3.014,
+      7.847,
+      "针每隔两毫米半，就在两层布上扎一个孔。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_02": {
+    "duration": 7.608,
+    "hash": "3eb292351dd998e7",
+    "sentences": [
+     [
+      0.1,
+      7.592,
+      "在每个孔里，上面来的红线和下面来的蓝线互相钩住，锁在布的中间。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_03": {
+    "duration": 4.368,
+    "hash": "1dfd57e4fe4b0ac0",
+    "sentences": [
+     [
+      0.1,
+      4.369,
+      "轮到你了：换成只用一根线的链式线迹。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_04": {
+    "duration": 8.976,
+    "hash": "f0b365d98527f79d",
+    "sentences": [
+     [
+      0.1,
+      2.397,
+      "现在拉一下线头。"
+     ],
+     [
+      2.347,
+      8.917,
+      "每个线圈只靠下一个线圈套住，所以缝线一针接一针地散开了。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_05": {
+    "duration": 3.48,
+    "hash": "d14cf51f28b9eddf",
+    "sentences": [
+     [
+      0.1,
+      3.467,
+      "为什么锁式线迹不会这样散开？"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Holes": {
+    "duration": 3.432,
+    "hash": "75da8b09df249b4a",
+    "sentences": [
+     [
+      0.1,
+      3.411,
+      "每一针一个孔，穿透两层布。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Knots": {
+    "duration": 5.184,
+    "hash": "bc64d76b0a9bd19a",
+    "sentences": [
+     [
+      0.1,
+      5.175,
+      "两根线互相钩住的地方，最好正好在布的中间。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Lower": {
+    "duration": 3.096,
+    "hash": "1790881fee9e0f30",
+    "sentences": [
+     [
+      0.1,
+      3.078,
+      "它来自布下面的一个小梭芯。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Stitch_Part_Upper": {
+    "duration": 4.152,
+    "hash": "0887bf3980da62bc",
+    "sentences": [
+     [
+      0.1,
+      4.133,
+      "它来自机器顶上的线轴，穿过针眼。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_01": {
+    "duration": 5.064,
+    "hash": "d61b45e17d4d4c3c",
+    "sentences": [
+     [
+      0.1,
+      1.953,
+      "这是挑线杆。"
+     ],
+     [
+      1.903,
+      5.0,
+      "线从它末端的小孔里穿过。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_02": {
+    "duration": 5.328,
+    "hash": "33994df42e1622bb",
+    "sentences": [
+     [
+      0.1,
+      5.328,
+      "针板下面，旋梭要把线圈绕梭壳带上一整圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_03": {
+    "duration": 5.832,
+    "hash": "430c1eaff3d8c8d3",
+    "sentences": [
+     [
+      0.1,
+      5.828,
+      "轮到你了：按住挑线杆不动，看看布下面会发生什么。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_04": {
+    "duration": 6.552,
+    "hash": "18e9c05bcde12f44",
+    "sentences": [
+     [
+      0.1,
+      6.55,
+      "松开它，挑线杆就把每个线圈从针眼里收回来，收紧这一针。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_05": {
+    "duration": 6.432,
+    "hash": "b788a9aa2a1cdb9d",
+    "sentences": [
+     [
+      0.1,
+      2.967,
+      "每一针只留下几毫米线。"
+     ],
+     [
+      2.917,
+      6.375,
+      "每次从线轴上拉下来多少线？"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Bobbin": {
+    "duration": 2.928,
+    "hash": "f97f1265ed052c9c",
+    "sentences": [
+     [
+      0.1,
+      2.925,
+      "线圈必须绕它一整圈。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Lever": {
+    "duration": 4.968,
+    "hash": "4c0b2b198265c76b",
+    "sentences": [
+     [
+      0.1,
+      4.967,
+      "它落下来给线圈放线，升上去把线收回来。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Needle": {
+    "duration": 6.072,
+    "hash": "47c81fc8dbaf4af4",
+    "sentences": [
+     [
+      0.1,
+      6.064,
+      "线要从它的针眼里上上下下几十次，才会留在缝线里。"
+     ]
+    ]
+   },
+   "Narr_Sewing_TakeUp_Part_Spool": {
+    "duration": 3.84,
+    "hash": "502fb6825eafffec",
+    "sentences": [
+     [
+      0.1,
+      3.828,
+      "面线的线轴，每缝一针转一点点。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_01": {
+    "duration": 3.984,
+    "hash": "3fe66a8b942359f6",
+    "sentences": [
+     [
+      0.1,
+      3.981,
+      "缝得好的时候，锁结藏在布的中间。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_02": {
+    "duration": 3.744,
+    "hash": "65f88d1189268123",
+    "sentences": [
+     [
+      0.1,
+      3.744,
+      "张力旋钮决定面线被拖得多紧。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_03": {
+    "duration": 5.04,
+    "hash": "72154016dce21226",
+    "sentences": [
+     [
+      0.1,
+      5.036,
+      "轮到你了：把旋钮调高，直到正面露出蓝线。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_04": {
+    "duration": 5.712,
+    "hash": "ae70683c0d2cdaa5",
+    "sentences": [
+     [
+      0.1,
+      5.703,
+      "底线的拉力由这颗小螺丝来调，平时很少需要动它。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_05": {
+    "duration": 4.272,
+    "hash": "6b97b17eef4af681",
+    "sentences": [
+     [
+      0.1,
+      2.508,
+      "反面全是红线圈。"
+     ],
+     [
+      2.458,
+      4.208,
+      "你先调什么？"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Cloth": {
+    "duration": 4.536,
+    "hash": "441ae6f5c5bb5cbb",
+    "sentences": [
+     [
+      0.1,
+      4.536,
+      "两边拉力平衡时，缝线两面看起来一样。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Dial": {
+    "duration": 5.592,
+    "hash": "9da026f84db0c402",
+    "sentences": [
+     [
+      0.1,
+      5.578,
+      "它把面线夹在两片盘之间：数字越大，拉得越紧。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Knots": {
+    "duration": 6.384,
+    "hash": "4201927e79c111cc",
+    "sentences": [
+     [
+      0.1,
+      2.842,
+      "两根线钩在一起的地方。"
+     ],
+     [
+      2.792,
+      6.333,
+      "它们会往拉得更紧的那根线那边移。"
+     ]
+    ]
+   },
+   "Narr_Sewing_Tension_Part_Screw": {
+    "duration": 4.944,
+    "hash": "92b4912ae4dc85e2",
+    "sentences": [
+     [
+      0.1,
+      4.925,
+      "把这颗小螺丝稍微拧一点，底线的拉力就变了。"
      ]
     ]
    },
