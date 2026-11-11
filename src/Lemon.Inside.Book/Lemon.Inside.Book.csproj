@@ -3,7 +3,7 @@
   <!-- Everything the desktop and browser heads share: the book, its pages, localization and settings. -->
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <RootNamespace>Lemon.Inside.Book</RootNamespace>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <!-- The sphere renderer and starfield copy pixel rows straight into bitmap memory. -->

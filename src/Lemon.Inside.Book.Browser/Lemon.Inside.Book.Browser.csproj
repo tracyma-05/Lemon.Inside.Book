@@ -3,7 +3,7 @@
   <!-- Web head: Avalonia on WebAssembly, served as an installable, offline-capable PWA (see wwwroot). -->
 
   <PropertyGroup>
-    <TargetFramework>net10.0-browser</TargetFramework>
+    <TargetFramework>net11.0-browser</TargetFramework>
     <OutputType>Exe</OutputType>
     <RootNamespace>Lemon.Inside.Book.Browser</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -70,6 +70,11 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Browser" />
+    <!-- Emscripten 6.0.2 native Skia and HarfBuzz for .NET 11 (see Directory.Packages.props). -->
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" />
+    <PackageReference Include="HarfBuzzSharp" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" />
     <!-- The shell's web pieces, and its scripts at _content/Lemon.Book.Shell.Browser/. -->
     <PackageReference Include="Lemon.Book.Shell.Browser" />
   </ItemGroup>

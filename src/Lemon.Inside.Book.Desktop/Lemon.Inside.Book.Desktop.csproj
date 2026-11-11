@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <AssemblyName>InsideBook</AssemblyName>
     <RootNamespace>Lemon.Inside.Book.Desktop</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>

@@ -1,6 +1,6 @@
 # Lemon.Inside.Book
 
-Cross-platform (Avalonia 12, .NET 10) interactive book on how things work (light, gears, machines), explained with
+Cross-platform (Avalonia 12, .NET 11) interactive book on how things work (light, gears, machines), explained with
 pictures the reader turns, drags and takes apart: Windows/macOS desktop and a WebAssembly PWA from one shared
 project. It started as a copy of Lemon.Explore.Book's skeleton. Its shell (book, page turning, lessons, narration, bookmarks, notes, settings, localization,
 themes, updates, the book's clock) is the Lemon.Book.Shell package (a sibling repository, shared with the other Lemon

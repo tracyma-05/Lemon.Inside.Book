@@ -10,7 +10,7 @@ watch what changes. English and Chinese.
 
 ## Build and run
 
-Needs the .NET 10 SDK (and the `wasm-tools` workload for the web edition).
+Needs the .NET 11 SDK (and the `wasm-tools` workload for the web edition).
 
 ```bash
 dotnet run --project src/Lemon.Inside.Book.Desktop
@@ -28,7 +28,7 @@ dotnet publish src/Lemon.Inside.Book.Browser -c Release -o artifacts/web
 
 ## How it is made
 
-- [Avalonia 12](https://avaloniaui.net/) on .NET 10: one code base for Windows, macOS and the browser.
+- [Avalonia 12](https://avaloniaui.net/) on .NET 11: one code base for Windows, macOS and the browser.
 - The book itself (pages, page turning, narration, bookmarks, notes, settings, themes, updates) is the
   `Lemon.Book.Shell` package, shared with the other Lemon books.
 - The 3D pictures are drawn on the CPU (`src/Lemon.Inside.Book/Controls/Scene`): a small software rasterizer and a

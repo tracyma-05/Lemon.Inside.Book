@@ -111,7 +111,7 @@ if ($LASTEXITCODE -ne 0) { throw "dotnet publish failed (exit code $LASTEXITCODE
 # The pages are XAML compiled into the shared assembly by Avalonia's build step. A Release build once came out without
 # it and was then reused as up to date: the exe started and died at once ("No precompiled XAML found"). Nothing of that
 # shows in the exe, so check the assembly it was linked from.
-$built = Join-Path $library 'obj\Release\net10.0\Lemon.Inside.Book.dll'
+$built = Join-Path $library 'obj\Release\net11.0\Lemon.Inside.Book.dll'
 if (-not [Text.Encoding]::ASCII.GetString([IO.File]::ReadAllBytes($built)).Contains('CompiledAvaloniaXaml')) {
     throw "Lemon.Inside.Book.dll was built without its compiled XAML; the app would not start. Run again with -Clean."
 }
