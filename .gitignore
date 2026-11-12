@@ -522,3 +522,6 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# The local CodeGraph index (codegraph init).
+.codegraph/

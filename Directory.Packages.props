@@ -19,11 +19,11 @@
     <!--
       The web head only. .NET 11 links WebAssembly with Emscripten 6.0.2; Avalonia 12.1.x still brings SkiaSharp 3.119.4,
       whose native archive is built for Emscripten 3.1.56 and no longer links (undefined saveSetjmp/testSetjmp).
-      SkiaSharp is first released with 6.0.2 archives in 4.156 (a release candidate for now); HarfBuzzSharp in
-      14.4.0.100. Drop these once Avalonia brings them itself.
+      SkiaSharp has 6.0.2 archives from 4.156.0, HarfBuzzSharp from 14.4.0.100. Drop these once Avalonia brings them
+      itself.
     -->
-    <PackageVersion Include="SkiaSharp" Version="4.156.0-rc.1.26553.11" />
-    <PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="4.156.0-rc.1.26553.11" />
+    <PackageVersion Include="SkiaSharp" Version="4.156.0" />
+    <PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="4.156.0" />
     <PackageVersion Include="HarfBuzzSharp" Version="14.4.0.100" />
     <PackageVersion Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="14.4.0.100" />
   </ItemGroup>
@@ -35,7 +35,7 @@
     <PackageVersion Include="Lemon.Book.Shell.Desktop" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup Label="Tests">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.12.0" />
     <!-- Avalonia.Headless.XUnit 12 is built on xunit v3 (3.x): xunit 4 breaks its [AvaloniaFact] discovery. -->
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
